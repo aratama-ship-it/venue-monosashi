@@ -3,49 +3,115 @@
 import { useMemo, useState } from "react";
 import { venueData } from "./generated-data";
 
-type Preset = "all" | "jjf" | "jyyf" | "wyyc";
-type SortKey = "evidence" | "price" | "capacity" | "area" | "booking";
+type Preset =
+  | "all"
+  | "jjf"
+  | "jyyf"
+  | "wyyc"
+  | "diabolo"
+  | "kendama"
+  | "small_theater";
+type SortKey =
+  | "evidence"
+  | "price"
+  | "capacity"
+  | "capacity_small"
+  | "area"
+  | "booking";
+type VenueType = "all" | "small_theater";
 type HistoricalSeries =
   | "all"
   | "JJF"
   | "JYYF_NATIONAL"
   | "JYYF_REGIONAL"
   | "JYYF_JUNIOR"
-  | "WYYC";
+  | "WYYC"
+  | "DIABOLO_AJDC"
+  | "DIABOLO_OIDC"
+  | "KENDAMA_KWC"
+  | "KENDAMA_JKA_YOUTH";
 type PriceUse =
   | "any"
   | "amateur_sports"
   | "event"
+  | "performance"
   | "no_admission_nonprofit"
   | "admission";
 
 const presets: Record<
   Preset,
-  { label: string; capacity: number; ceiling: number; description: string }
+  {
+    label: string;
+    capacityMin: number;
+    capacityMax: number;
+    ceiling: number;
+    venueType: VenueType;
+    priceUse: PriceUse;
+    description: string;
+  }
 > = {
   all: {
     label: "条件なし",
-    capacity: 0,
+    capacityMin: 0,
+    capacityMax: 0,
     ceiling: 0,
+    venueType: "all",
+    priceUse: "any",
     description: "全国候補を広く見る",
   },
   jjf: {
     label: "JJF型",
-    capacity: 650,
+    capacityMin: 650,
+    capacityMax: 0,
     ceiling: 8,
+    venueType: "all",
+    priceUse: "any",
     description: "練習空間＋舞台",
   },
   jyyf: {
     label: "国内ヨーヨー型",
-    capacity: 600,
+    capacityMin: 600,
+    capacityMax: 0,
     ceiling: 4,
+    venueType: "all",
+    priceUse: "any",
     description: "舞台・客席・物販",
   },
   wyyc: {
     label: "世界大会型",
-    capacity: 1000,
+    capacityMin: 1000,
+    capacityMax: 0,
     ceiling: 7,
+    venueType: "all",
+    priceUse: "any",
     description: "配信・会議・宿泊",
+  },
+  diabolo: {
+    label: "ディアボロ型",
+    capacityMin: 300,
+    capacityMax: 0,
+    ceiling: 4,
+    venueType: "all",
+    priceUse: "any",
+    description: "AJDC・OIDC実績",
+  },
+  kendama: {
+    label: "けん玉大会型",
+    capacityMin: 100,
+    capacityMax: 0,
+    ceiling: 3,
+    venueType: "all",
+    priceUse: "any",
+    description: "KWC・全日本実績",
+  },
+  small_theater: {
+    label: "小劇場型",
+    capacityMin: 0,
+    capacityMax: 150,
+    ceiling: 0,
+    venueType: "small_theater",
+    priceUse: "performance",
+    description: "150席以下・公演料金",
   },
 };
 
@@ -90,6 +156,7 @@ const useCaseLabels: Record<string, string> = {
   all: "用途共通",
   amateur_sports: "アマチュアスポーツ",
   event: "展示・イベント",
+  performance: "舞台公演",
   展示場: "展示場",
   non_profit: "非営利",
   non_sports_no_admission_nonprofit: "スポーツ以外・入場料なし・非営利",
@@ -112,6 +179,10 @@ const historicalSeriesLabels: Record<string, string> = {
   JYYF_REGIONAL: "JYYF 地区",
   JYYF_JUNIOR: "JYYF ジュニア",
   WYYC: "世界大会",
+  DIABOLO_AJDC: "全日本ディアボロ",
+  DIABOLO_OIDC: "大阪国際ディアボロ",
+  KENDAMA_KWC: "けん玉ワールドカップ",
+  KENDAMA_JKA_YOUTH: "全日本少年少女けん玉",
 };
 
 const eventStatusLabels: Record<string, string> = {
@@ -146,6 +217,9 @@ const categoryWordLabels: Record<string, string> = {
   mice: "MICE",
   multi: "複数",
   multipurpose: "多目的",
+  black: "ブラック",
+  box: "ボックス",
+  small: "小規模",
   onsite: "同一敷地",
   rehearsal: "リハーサル",
   resort: "リゾート",
@@ -177,6 +251,7 @@ function matchesPriceUse(useCase: string, selected: PriceUse) {
   if (selected === "event") {
     return ["event", "展示場", "combined_same_purpose"].includes(useCase);
   }
+  if (selected === "performance") return useCase === "performance";
   if (selected === "no_admission_nonprofit") {
     return [
       "non_profit",
@@ -216,8 +291,10 @@ export function VenueSearch() {
   const [prefecture, setPrefecture] = useState("全国");
   const [keyword, setKeyword] = useState("");
   const [capacity, setCapacity] = useState(0);
+  const [capacityMax, setCapacityMax] = useState(0);
   const [area, setArea] = useState(0);
   const [ceiling, setCeiling] = useState(0);
+  const [venueType, setVenueType] = useState<VenueType>("all");
   const [budget, setBudget] = useState(0);
   const [priceUse, setPriceUse] = useState<PriceUse>("any");
   const [includeBudgetScenarios, setIncludeBudgetScenarios] = useState(false);
@@ -301,7 +378,12 @@ export function VenueSearch() {
     return venueData.venues
       .map((venue) => {
         const hasSpaceCondition =
-          capacity > 0 || area > 0 || ceiling > 0 || fixedStage || practice;
+          capacity > 0 ||
+          capacityMax > 0 ||
+          area > 0 ||
+          ceiling > 0 ||
+          fixedStage ||
+          practice;
         const matchingSpaces = venue.spaces.filter((space) => {
           const observedCapacity = Math.max(
             space.capacityTheater ?? -1,
@@ -315,6 +397,16 @@ export function VenueSearch() {
             return false;
           }
           if (capacity > 0 && observedCapacity < 0 && !keepUnknown) return false;
+          if (
+            capacityMax > 0 &&
+            observedCapacity >= 0 &&
+            observedCapacity > capacityMax
+          ) {
+            return false;
+          }
+          if (capacityMax > 0 && observedCapacity < 0 && !keepUnknown) {
+            return false;
+          }
           if (area > 0 && space.area !== null && space.area < area) return false;
           if (area > 0 && space.area === null && !keepUnknown) return false;
           if (
@@ -402,6 +494,10 @@ export function VenueSearch() {
       })
       .filter((venue) => region === "全国" || venue.region === region)
       .filter((venue) => prefecture === "全国" || venue.prefecture === prefecture)
+      .filter(
+        (venue) =>
+          venueType === "all" || venue.category.includes("small_theater"),
+      )
       .filter((venue) => {
         if (!normalized) return true;
         return [
@@ -421,6 +517,19 @@ export function VenueSearch() {
         if (capacity <= 0) return true;
         if (venue.maxCapacity === null) return keepUnknown;
         return venue.maxCapacity >= capacity;
+      })
+      .filter((venue) => {
+        if (sameSpace || capacityMax <= 0) return true;
+        if (venue.spaces.length === 0) return keepUnknown;
+        return venue.spaces.some((space) => {
+          const observedCapacity = Math.max(
+            space.capacityTheater ?? -1,
+            space.capacityFixed ?? -1,
+          );
+          return observedCapacity < 0
+            ? keepUnknown
+            : observedCapacity <= capacityMax;
+        });
       })
       .filter((venue) => {
         if (sameSpace) return true;
@@ -480,6 +589,13 @@ export function VenueSearch() {
             a.name.localeCompare(b.name, "ja")
           );
         }
+        if (sortKey === "capacity_small") {
+          return (
+            (a.maxCapacity ?? Number.POSITIVE_INFINITY) -
+              (b.maxCapacity ?? Number.POSITIVE_INFINITY) ||
+            a.name.localeCompare(b.name, "ja")
+          );
+        }
         if (sortKey === "area") {
           return (
             (b.maxArea ?? -1) - (a.maxArea ?? -1) ||
@@ -511,6 +627,7 @@ export function VenueSearch() {
     area,
     budget,
     capacity,
+    capacityMax,
     ceiling,
     fixedStage,
     historicalOnly,
@@ -525,12 +642,16 @@ export function VenueSearch() {
     region,
     sameSpace,
     sortKey,
+    venueType,
   ]);
 
   function choosePreset(next: Preset) {
     setPreset(next);
-    setCapacity(presets[next].capacity);
+    setCapacity(presets[next].capacityMin);
+    setCapacityMax(presets[next].capacityMax);
     setCeiling(presets[next].ceiling);
+    setVenueType(presets[next].venueType);
+    setPriceUse(presets[next].priceUse);
   }
 
   function reset() {
@@ -539,8 +660,10 @@ export function VenueSearch() {
     setPrefecture("全国");
     setKeyword("");
     setCapacity(0);
+    setCapacityMax(0);
     setArea(0);
     setCeiling(0);
+    setVenueType("all");
     setBudget(0);
     setPriceUse("any");
     setIncludeBudgetScenarios(false);
@@ -642,8 +765,9 @@ export function VenueSearch() {
 
           <div className="hero-summary">
             <p className="hero-copy">
-              JJF、日本ヨーヨー連盟、世界大会の過去会場を基準に、
+              JJF、日本ヨーヨー連盟、世界大会、ディアボロ、けん玉の過去会場を基準に、
               全国の候補を面積・天井・客席・予算・搬入・アクセスで見比べます。
+              150席以下の小劇場も、平土間・公演料金・利用条件から探せます。
               未確認の費用は0円にせず、問い合せが必要な条件として残します。
             </p>
             <aside className="reference-block" aria-label="収録範囲">
@@ -685,7 +809,7 @@ export function VenueSearch() {
 
           <div className="filter-body">
             <div className="field preset-field">
-              <span className="field-label">過去大会の型</span>
+              <span className="field-label">会場の型</span>
               <div className="preset-grid">
                 {(Object.keys(presets) as Preset[]).map((key) => (
                   <button
@@ -702,6 +826,20 @@ export function VenueSearch() {
                 ))}
               </div>
             </div>
+
+            <label className="field">
+              <span className="field-label">会場タイプ</span>
+              <select
+                value={venueType}
+                onChange={(event) => {
+                  setPreset("all");
+                  setVenueType(event.target.value as VenueType);
+                }}
+              >
+                <option value="all">指定なし</option>
+                <option value="small_theater">小劇場・ブラックボックス</option>
+              </select>
+            </label>
 
             <label className="field">
               <span className="field-label">地方</span>
@@ -765,12 +903,31 @@ export function VenueSearch() {
                 className="range"
                 max="5000"
                 min="0"
-                step="100"
+                step="50"
                 type="range"
                 value={capacity}
                 onChange={(event) => {
                   setPreset("all");
                   setCapacity(Number(event.target.value));
+                }}
+              />
+            </label>
+
+            <label className="field">
+              <span className="field-label">
+                最大収容人数{" "}
+                <output>{capacityMax || "指定なし"}</output>
+              </span>
+              <input
+                className="range"
+                max="2000"
+                min="0"
+                step="50"
+                type="range"
+                value={capacityMax}
+                onChange={(event) => {
+                  setPreset("all");
+                  setCapacityMax(Number(event.target.value));
                 }}
               />
             </label>
@@ -820,6 +977,7 @@ export function VenueSearch() {
                 <option value="any">指定なし（全観測）</option>
                 <option value="amateur_sports">アマチュアスポーツ</option>
                 <option value="event">展示・イベント</option>
+                <option value="performance">舞台公演</option>
                 <option value="no_admission_nonprofit">
                   入場料なし・非営利
                 </option>
@@ -888,7 +1046,7 @@ export function VenueSearch() {
                 onChange={(event) => setHistoricalOnly(event.target.checked)}
                 type="checkbox"
               />
-              <span>JJF・JYYF・世界大会の開催実績と照合済み</span>
+              <span>収録大会の開催実績と照合済み</span>
             </label>
 
             <label className="check-field">
@@ -933,6 +1091,7 @@ export function VenueSearch() {
                   <option value="evidence">観測の厚さ</option>
                   <option value="price">確認済み日額が低い順</option>
                   <option value="capacity">収容が大きい順</option>
+                  <option value="capacity_small">収容が小さい順</option>
                   <option value="area">面積が大きい順</option>
                   <option value="booking">予約開始が早い順</option>
                 </select>
@@ -1220,7 +1379,7 @@ export function VenueSearch() {
             <p className="eyebrow">HISTORICAL VENUE LEDGER</p>
             <h2 id="archive-title">過去会場台帳をたどる</h2>
             <p>
-              候補の基準になったJJF・JYYF・世界大会を、系列、年、会場名から確認できます。
+              候補の基準になったJJF・JYYF・世界大会・ディアボロ・けん玉大会を、系列、年、会場名から確認できます。
               開催実績と現在の貸出可否は別です。
             </p>
           </div>
@@ -1248,6 +1407,12 @@ export function VenueSearch() {
               <option value="JYYF_REGIONAL">JYYF 地区</option>
               <option value="JYYF_JUNIOR">JYYF ジュニア</option>
               <option value="WYYC">世界大会</option>
+              <option value="DIABOLO_AJDC">全日本ディアボロ</option>
+              <option value="DIABOLO_OIDC">大阪国際ディアボロ</option>
+              <option value="KENDAMA_KWC">けん玉ワールドカップ</option>
+              <option value="KENDAMA_JKA_YOUTH">
+                全日本少年少女けん玉
+              </option>
             </select>
           </label>
           <label className="field">
