@@ -1,0 +1,48 @@
+prefecture,region,representative_candidate_id,facility_name,verification_status
+北海道,北海道,CAND-001,函館アリーナ＋函館市民会館,verified
+青森県,東北,CAND-021,オカでんアリーナ（新青森県総合運動公園）,verified
+岩手県,東北,CAND-022,トーサイクラシックホール岩手（岩手県民会館）,verified
+宮城県,東北,CAND-002,夢メッセみやぎ,verified
+秋田県,東北,CAND-023,あきた芸術劇場ミルハス,verified
+山形県,東北,CAND-024,山形ビッグウイング,verified
+福島県,東北,CAND-025,ビッグパレットふくしま,verified
+茨城県,関東,CAND-026,つくばカピオ,verified
+栃木県,関東,CAND-005,ライトキューブ宇都宮,verified
+群馬県,関東,CAND-027,Gメッセ群馬,verified
+埼玉県,関東,CAND-004,大宮ソニックシティ,verified
+千葉県,関東,CAND-028,幕張メッセ,verified
+東京都,関東,CAND-029,東京ビッグサイト,verified
+神奈川県,関東,CAND-030,パシフィコ横浜,verified
+新潟県,甲信越,CAND-006,朱鷺メッセ 新潟コンベンションセンター,needs_check
+富山県,北陸,CAND-031,富山産業展示館 テクノホール,verified
+石川県,北陸,CAND-032,石川県産業展示館,verified
+福井県,北陸,CAND-007,フェニックス・プラザ,verified
+山梨県,甲信越,CAND-033,アイメッセ山梨,verified
+長野県,甲信越,CAND-034,エア・ウォーターアリーナ松本＋キッセイ文化ホール,verified
+岐阜県,東海,CAND-035,長良川国際会議場＋岐阜メモリアルセンター,verified
+静岡県,東海,CAND-008,アクトシティ浜松,verified
+愛知県,東海,CAND-036,ポートメッセなごや,verified
+三重県,東海,CAND-037,津市産業・スポーツセンター,verified
+滋賀県,近畿,CAND-038,滋賀ダイハツアリーナ,verified
+京都府,近畿,CAND-039,京都市勧業館みやこめっせ,verified
+大阪府,近畿,CAND-040,インテックス大阪,verified
+兵庫県,近畿,CAND-041,アクリエひめじ,verified
+奈良県,近畿,CAND-010,奈良県コンベンションセンター,verified
+和歌山県,近畿,CAND-042,和歌山ビッグホエール,verified
+鳥取県,中国,CAND-043,米子コンベンションセンター ビッグシップ,verified
+島根県,中国,CAND-012,くにびきメッセ,verified
+岡山県,中国,CAND-011,岡山コンベンションセンター,needs_check
+広島県,中国,CAND-044,広島県立広島産業会館,verified
+山口県,中国,CAND-013,KDDI維新ホール,verified
+徳島県,四国,CAND-045,アスティとくしま,verified
+香川県,四国,CAND-046,サンメッセ香川,verified
+愛媛県,四国,CAND-014,松山市総合コミュニティセンター,verified
+高知県,四国,CAND-015,高知市文化プラザかるぽーと,verified
+福岡県,九州,CAND-016,サンレイクかすや,verified
+佐賀県,九州,CAND-047,SAGAアリーナ,verified
+長崎県,九州,CAND-018,出島メッセ長崎,verified
+熊本県,九州,CAND-017,熊本城ホール,verified
+大分県,九州,CAND-019,別府国際コンベンションセンター ビーコンプラザ,verified
+宮崎県,九州,CAND-048,シーガイアコンベンションセンター,verified
+鹿児島県,九州,CAND-049,西原商会アリーナ（鹿児島アリーナ）,verified
+沖縄県,沖縄,CAND-020,沖縄コンベンションセンター,verified

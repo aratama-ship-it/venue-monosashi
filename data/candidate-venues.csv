@@ -1,0 +1,59 @@
+candidate_id,region,prefecture,city,facility_name,facility_pattern,fit_level,verified_public_facts,inference_or_risk,verification_status,official_url
+CAND-001,北海道,北海道,函館市,函館アリーナ＋函館市民会館,adjacent_sports_and_stage,A,"メインアリーナ44×65m・天井12.5m。市民会館が隣接","JJF型の練習・舞台分離に強いと推定。連続日程と同時予約は要確認",verified,https://www.city.hakodate.hokkaido.jp/docs/2014040900082/
+CAND-002,東北,宮城県,仙台市,夢メッセみやぎ,exhibition_complex,B,"展示ホール7500㎡。東北最大級と施設公式資料に記載","舞台審査は仮設前提。市街地アクセスと宿泊動線を追加評価",verified,https://www.yumemesse.or.jp/
+CAND-003,東北,宮城県,仙台市,仙台国際センター,conference_and_exhibition,B,"大ホール固定1000席、展示棟3000㎡・天井9m・シアター2560","会議棟は2027年10月末まで大規模改修予定。体育用途・床保護は要確認",verified,https://www.aobayama.jp/
+CAND-004,関東,埼玉県,さいたま市,大宮ソニックシティ,stage_and_exhibition,B,"大・小ホール、国際会議室、展示場、会議室、ホテルを複合。大宮駅徒歩約3分","高天井練習の可否と展示場の競技利用条件を追加確認",verified,https://www.sonic-city.or.jp/
+CAND-005,関東,栃木県,宇都宮市,ライトキューブ宇都宮,flat_hall_and_meetings,A,"駅東口徒歩約2分、最大約2000人の大ホールと中ホール・会議室","固定舞台ではなく仮設設計。高さ・吊物・床材を追加確認",verified,https://u-koryukyoten.jp/
+CAND-006,甲信越,新潟県,新潟市,朱鷺メッセ 新潟コンベンションセンター,convention_complex,B,"展示・会議・ホテルを含む複合施設","今回の初期調査では各ホールの最新寸法を公式ページで再取得できていない",needs_check,https://www.tokimesse.com/
+CAND-007,北陸,福井県,福井市,フェニックス・プラザ,stage_and_meetings,B,"大ホール2000人、小ホール500人、各種会議室","大ホールの平土間転換・練習利用可否と天井条件を追加確認",verified,https://www.city.fukui.lg.jp/sisei/plan/sonota/sisetu.html
+CAND-008,東海,静岡県,浜松市,アクトシティ浜松,integrated_convention,A,"大・中ホール、コングレスセンター、研修交流センター、約3500㎡・天井12mの展示イベントホール、ホテル、駅直結","JJF型とWYYC型の両方に強いと推定。全館費用と同時確保可能性が主要リスク",verified,https://www.actcity.jp/
+CAND-009,東海,静岡県,静岡市,グランシップ,stage_and_event_halls,B,"大ホール・中ホール・会議ホールなどを持つ複合文化施設","床面・練習用途・最新寸法を再確認してからA判定を検討",needs_check,https://www.granship.or.jp/
+CAND-010,近畿,奈良県,奈良市,奈良県コンベンションセンター,convention_complex,A,"約2100㎡の無柱コンベンションホール、天井約9.9m、シアター約2000","固定舞台を要する演目は仮設。ヨーヨー世界大会型に特に適合と推定",verified,https://www.nara-cc.jp/
+CAND-011,中国,岡山県,岡山市,岡山コンベンションセンター,conference_and_event_hall,B,"イベントホールと複数会議室を備え、岡山駅西口から近い","高天井練習と大型舞台の両立条件を追加確認",needs_check,https://www.mamakari.net/
+CAND-012,中国,島根県,松江市,くにびきメッセ,exhibition_complex,A,"大展示場4018㎡・天井10.4m・シアター5000、別に686㎡・天井8.4mの多目的ホール","大展示場の舞台演出は仮設。床面とボール・クラブ落下時の扱いを確認",verified,https://www.kunibikimesse.jp/facilitys/floorguide_u/1
+CAND-013,中国,山口県,山口市,KDDI維新ホール,flat_hall_and_meetings,A,"多目的メインホール、会議室、スタジオを同一施設に備える","JJF 2010の旧会場組合せの現代的代替候補と推定。ホール寸法を再取得予定",verified,https://ishinhall.com/hall/
+CAND-014,四国,愛媛県,松山市,松山市総合コミュニティセンター,sports_stage_complex,A,"2038㎡メインアリーナ、670㎡サブアリーナ、988席の可動席キャメリアホール、会議・展示施設を同一敷地に備える","体育館大会と文化ホールは申込窓口・予約時期が異なる。棟間実移動、同時確保、投擲・床養生、催事回線、搬入、総額は個別確認",verified,https://www.cul-spo.or.jp/comcen/
+CAND-015,四国,高知県,高知市,高知市文化プラザかるぽーと,stage_gallery_learning,B,"大・小ホール、市民ギャラリー、スタジオ、中央公民館を併用可能。コンベンション利用も公式記載","競技・高天井練習に使える平土間の面積と床条件を追加確認",verified,https://www.bunkaplaza.or.jp/facility/
+CAND-016,九州,福岡県,糟屋郡粕屋町,サンレイクかすや,community_stage_complex,B,"JYYF地区大会の開催実績あり","地域大会規模の再利用候補。全国大会規模への拡張性は要確認",verified,https://www.town.kasuya.fukuoka.jp/s037/040/010/010/010/20191115151740.html
+CAND-017,九州,熊本県,熊本市,熊本城ホール,integrated_convention,A,"固定2304席メインホール、約840㎡可変シビックホール、約1630㎡展示ホール、19会議室","WYYC型に強く、JJF型は展示ホールの投擲・床保護条件を要確認",verified,https://www.kumamoto-jo-hall.jp/facility/
+CAND-018,九州,長崎県,長崎市,出島メッセ長崎,convention_and_exhibition,A,"コンベンションホール2700㎡・天井10m、展示ホール3800㎡・天井12m、会議室24室、長崎駅直結","固定劇場を持たないため舞台は仮設。国際大会・多日程運営に強いと推定",verified,https://dejima-messe.jp/facility
+CAND-019,九州,大分県,別府市,別府国際コンベンションセンター ビーコンプラザ,arena_and_stage_complex,A,"アリーナ型コンベンションホールと約1200席のフィルハーモニアホール、会議室群を同一施設に持つ","JJF型の練習・舞台同居に強いと推定。最新の利用休止区画・日程を要確認",verified,https://www.b-conplaza.jp/
+CAND-020,沖縄,沖縄県,宜野湾市,沖縄コンベンションセンター,exhibition_theater_complex,A,"展示棟約7464㎡・最大約5000、劇場棟約1709席、会議棟を複合","全国参加者の航空費が主要リスク。一方で合宿・国際大会化には適性が高いと推定",verified,https://www.oki-conven.jp/
+CAND-021,東北,青森県,青森市,オカでんアリーナ（新青森県総合運動公園）,arena_and_meetings,B,"メイン・サブアリーナと60人規模の研修室を備え、展示・コンサート等の文化イベント利用も案内","命名権名称と料金・大会利用条件は利用時点で再確認。固定舞台は持たない",verified,https://aomori-sportspark.jp/
+CAND-022,東北,岩手県,盛岡市,トーサイクラシックホール岩手（岩手県民会館）,stage_exhibition_meetings,B,"大・中ホール、展示室、複数会議室を備える。第1会議室は96.8㎡・66人","投擲練習に適する高天井空間の確保と命名権名称の有効期間を要確認",verified,https://www.iwate-kenmin.jp/facility/
+CAND-023,東北,秋田県,秋田市,あきた芸術劇場ミルハス,multi_stage_and_rehearsal,B,"大ホール2007席、中ホール800席、小ホール2室、練習室・研修室・創作室を備える","平土間の大規模練習空間が限られるため舞台大会寄り。投擲可否を要確認",verified,https://akiat.jp/venue/
+CAND-024,東北,山形県,山形市,山形ビッグウイング,exhibition_and_conference,B,"多目的な集会・展示施設と会議・研修室を備える","舞台審査は仮設前提。展示場の最新面積・天井・床保護条件を区画単位で追加取得",verified,https://www.convention.or.jp/bigwing/
+CAND-025,東北,福島県,郡山市,ビッグパレットふくしま,exhibition_and_conference,A,"無柱の多目的展示ホールとコンベンションホール・会議室を備える。JJF 2015会場","現在料金・予約・搬入・回線を一次情報で確認。ジャグリング器具の投擲、床保護、物販、連続日程の催事別可否は打合せが必要",verified,https://big-palette.jp/promotor/room/exhibition-hall.html
+CAND-026,関東,茨城県,つくば市,つくばカピオ,arena_theater_meetings,A,"アリーナ1360㎡、固定席1036、仮設舞台20×6m。384席ホールとリハーサル・会議室を併設","アリーナの天井高・床養生・器具落下条件を追加確認",verified,https://www.tcf.or.jp/capio/facility/
+CAND-027,関東,群馬県,高崎市,Gメッセ群馬,exhibition_and_conference,A,"展示ホール10000㎡・天井21m、メインホール1000人、計13の会議空間。高崎駅から徒歩約15分","4階施設は利用停止情報があるため対象区画を都度確認。舞台は仮設前提",verified,https://www.g-messe-gunma.jp/visitor-facilities-outline.html
+CAND-028,関東,千葉県,千葉市,幕張メッセ,exhibition_conference_event_hall,A,"国際展示場は合計75000㎡、国際会議場・イベントホールを複合。駅から徒歩約5分で周辺に宿泊施設","小中規模利用では分割区画と総付帯費用の適合性が主要課題",verified,https://www.m-messe.co.jp/organizers/guide/
+CAND-029,関東,東京都,江東区,東京ビッグサイト,exhibition_and_conference,A,"東・西・南展示棟の総展示面積115420㎡。1000人国際会議場と大小22会議室・レセプションホール","大規模案件向け。小中規模では区画費・設営費・導線距離が過大にならないか要比較",verified,https://www.bigsight.jp/organizer/facilities/
+CAND-030,関東,神奈川県,横浜市,パシフィコ横浜,integrated_mice_complex,A,"5000人超の国立大ホール、約50会議室、20000㎡無柱展示ホール、6300㎡多目的ホール、約600室ホテルを複合","世界大会型に強いが、全館費用・同時開催・搬入時間帯の条件確認が必要",verified,https://plan.pacifico.co.jp/
+CAND-031,北陸,富山県,富山市,富山産業展示館 テクノホール,exhibition_and_meetings,A,"西館展示場3634㎡・天井9m、東館展示場3363㎡・天井12m、床荷重5t/㎡。会議・控室あり","固定舞台はない。公共交通アクセスと大会時の臨時輸送を追加評価",verified,https://www.technohall.or.jp/facility.html
+CAND-032,北陸,石川県,金沢市,石川県産業展示館,multi_exhibition_complex,B,"規模の異なる4つの展示館と屋外展示場を備え、全体展示面積は約17700㎡","各号館で天井・空調・固定席・料金条件が異なるため区画単位で比較が必要",verified,https://www.pref.ishikawa.lg.jp/tenjikan/
+CAND-033,甲信越,山梨県,甲府市,アイメッセ山梨,exhibition_and_conference,B,"大型展示場と会議室を備え、設営・ケータリング・宿泊・送迎手配の支援を公式案内","駅からの距離と臨時交通、仮設舞台費、最新寸法を追加確認",verified,https://www.pref.yamanashi.jp/shisetsu/shouko-kik/messe.html
+CAND-034,甲信越,長野県,松本市,エア・ウォーターアリーナ松本＋キッセイ文化ホール,adjacent_arena_and_stage,A,"JJF 2025会場セット。2535㎡メインアリーナと、固定2000席大ホール・可動746席中ホールが隣接し、駐車場を共用","2施設は別運営・別予約。大会優先調整とホール抽選を組み合わせる必要があり、同時確保・投擲・床養生・搬入・総額は個別確認",verified,https://www.city.matsumoto.nagano.jp/soshiki/239/5722.html
+CAND-035,東海,岐阜県,岐阜市,長良川国際会議場＋岐阜メモリアルセンター,adjacent_conference_arena_stage,A,"会議場とアリーナ・ドーム群を近接利用可能。で愛ドーム約2200㎡、ふれ愛ドーム約1687.5㎡","別管理施設の同時予約・精算・搬入導線を要確認",verified,https://www.city.gifu.lg.jp/kankoubunka/kankou/1005142/1010716.html
+CAND-036,東海,愛知県,名古屋市,ポートメッセなごや,exhibition_and_conference,A,"展示面積合計約34000㎡と約1300㎡のコンベンションセンターを備える","大規模展示型。小中規模では分割可能性・仮設舞台・総付帯費用を要比較",verified,https://portmesse.com/
+CAND-037,東海,三重県,津市,津市産業・スポーツセンター,arena_exhibition_complex,A,"日硝ハイウエーアリーナ、NHW三重武道館、メッセウイングNHWを一体利用可能。共用駐車場1848台","複数棟の同時予約・最新命名権名称・区画間移動時間を確認",verified,https://www.info.city.tsu.mie.jp/shisetsu/sportsshisetsu/1010298/1010349.html
+CAND-038,近畿,滋賀県,大津市,滋賀ダイハツアリーナ,arena_and_meetings,B,"メイン・サブアリーナと会議室を備え、大会・イベント利用を案内。大会議室は120人","固定舞台を持たず舞台審査は仮設。公共交通と床保護条件を追加確認",verified,https://shiga-arena.jp/gallery
+CAND-039,近畿,京都府,京都市,京都市勧業館みやこめっせ,exhibition_and_meetings,A,"展示場約1480㎡・3800㎡・4000㎡と会議室を備える","観光繁忙期の宿泊費と搬入車両条件、舞台仮設費を要確認",verified,https://www.miyakomesse.jp/planner/
+CAND-040,近畿,大阪府,大阪市,インテックス大阪,exhibition_and_conference,A,"総展示面積約70000㎡の展示場と会議室群を備える","大規模展示型。小中規模での分割利用、周辺宿泊、仮設舞台を含む総費用を要比較",verified,https://www.intex-osaka.com/jp/organizer/hall/conference/
+CAND-041,近畿,兵庫県,姫路市,アクリエひめじ,stage_exhibition_conference,A,"大ホール2010席、中ホール693席、小ホール164席、分割可能な展示場、約690㎡会議室を備える","JJF・WYYC実績を持つ有力基準会場。現在料金と同時確保条件を再確認",verified,https://www.city.himeji.lg.jp/kanko/0000006638.html
+CAND-042,近畿,和歌山県,和歌山市,和歌山ビッグホエール,arena_and_meetings,B,"アリーナ3280㎡・最大8500人。軽運動場420㎡と会議室等を備える","大規模アリーナ寄り。小中規模での半面・分割利用と固定舞台条件を確認",verified,https://www.wakayamasposhin.or.jp/big-whale/
+CAND-043,中国,鳥取県,米子市,米子コンベンションセンター ビッグシップ,multipurpose_stage_conference,A,"可動席の多目的ホール約2000人、小ホール約300人、国際会議室と8会議室を備える","平土間時の天井・床・投擲条件と周辺宿泊供給を追加確認",verified,https://www.bigship.or.jp/bigship/
+CAND-044,中国,広島県,広島市,広島県立広島産業会館,exhibition_and_meetings,B,"西展示館に約2565㎡の展示場と約377㎡の区画、会議・事務室を備える","固定舞台はない。天井高・空調・搬入・大会時の仮設費を追加確認",verified,https://sangyoukaikan.jp/organizer/facilities/
+CAND-045,四国,徳島県,徳島市,アスティとくしま,variable_arena_conference,A,"多目的ホール3000㎡・天井18m・最大5000人。控室7室、会議室群、11tトラック乗入対応","高天井競技に強い。床養生、仮設舞台、冷暖房・付帯設備費を含む総額確認が必要",verified,https://www.asty-tokushima.jp/organizer/facility/hall/
+CAND-046,四国,香川県,高松市,サンメッセ香川,exhibition_and_conference,A,"大展示場4015㎡・シアター4000、小展示場1022㎡・シアター800、大会議室400人。会場費・冷暖房費を公式掲載","公共交通、展示場の床・天井、電気水道・設営撤去を含む総額比較が必要",verified,https://www.sunmesse.com/organizer/price.php
+CAND-047,九州,佐賀県,佐賀市,SAGAアリーナ,arena_and_business_events,A,"メイン・サブアリーナを備え、スポーツ・コンサートから国際会議・展示会を組み合わせた催事まで公式案内","固定舞台・料金・搬入・同時利用できる会議室の詳細を追加取得",verified,https://saga-sunrisepark.com/arena_facilityInfo/
+CAND-048,九州,宮崎県,宮崎市,シーガイアコンベンションセンター,resort_convention_complex,A,"サミットホール2603㎡・天井9m・シアター3300・立食5000。複数会議室と宿泊施設を複合","滞在型世界大会に強いが航空費・宿泊費・市街地移動を含む参加者総費用が主要リスク",verified,https://www.seagaia-mice.jp/facilities/convention-center/
+CAND-049,九州,鹿児島県,鹿児島市,西原商会アリーナ（鹿児島アリーナ）,arena_and_meetings,A,"メインアリーナ4486㎡・最大5700席、サブアリーナ約1008㎡・天井15m、会議室等を備える","命名権名称と料金、固定舞台・搬入・床養生条件を利用時点で確認",verified,https://nishihara-shokai-arena.jp/guide/outline
+CAND-050,北海道,北海道,札幌市,札幌コンベンションセンター,integrated_convention,A,"大ホール2607㎡・天井最高12m・最大2500人。昇降式舞台、3分割、同時通訳ブース、中小ホール・会議室を備える","JJF・国内大会・国際会議の複合運営に適すると推定。高投げは最低天井高と照明位置、冬季交通を要確認",verified,https://www.sora-scc.jp/organizer/venue/
+CAND-051,九州,福岡県,福岡市,マリンメッセ福岡A館,arena_exhibition_complex,A,"多目的展示室1階8000㎡・最低天井20m・最大15000人・床荷重5t/㎡。1400㎡サブアリーナをスポーツ競技のウォームアップに利用可能","大規模JJF型と世界大会型に強いと推定。小中規模では全面料金、仮設舞台、警備・清掃、公共交通の総負担を要比較",verified,https://www.marinemesse.or.jp/messe/
+CAND-052,近畿,大阪府,大阪市,大阪市立北区民センター,community_hall,A,"舞台付きホールは椅子席700人・机使用時約300人。扇町駅と天満駅から各徒歩3分","JYYF全国・地区大会の反復実績に近い中規模基準。面積・天井高・競技床面積、舞台前の安全離隔は要確認",verified,https://www.osakacommunity.jp/kita-center/guide/fee/
+CAND-053,関東,神奈川県,横浜市,横浜市教育会館 サンライズホール,transformable_stage_hall,A,"ホール579㎡・506席。前方242席は平置き可動、後方264席はひな壇固定で収納でき、全面フラットや半分仕切りにも対応","JYYF全国・地区・ジュニア大会の反復実績に近い基準。高投げに必要な有効天井高、舞台上空、配信回線は要確認",verified,https://www.hall-ecole.org/files/libs/641/202401111622502130.pdf
+CAND-054,東海,愛知県,岩倉市,アデリア総合体育文化センター（岩倉市総合体育文化センター）,sports_and_culture_complex,A,"総合体育館、多目的ホール、ふれあい会館を備える。多目的ホールは音響・照明・冷暖房等の付帯設備がある","JYYF全国・地区・ジュニア大会の反復実績に近い複合型。多目的ホールの面積・定員・天井高と体育館との同時予約は要確認",verified,https://www.city.iwakura.aichi.jp/0000000028.html
+CAND-055,関東,東京都,江東区,江東区砂町文化センター,community_culture_center,A,"第1研修室は225.2㎡・定員200人・フローリングで、第2研修室と連結可能。舞台・照明・音響卓を別料金で利用できる","JYYF地区大会の反復実績に近い小規模基準。天井高、連結時面積、舞台前の競技範囲、搬入条件は要確認",verified,https://www.kcf.or.jp/sunamachi/shisetsu/ichiran/detail/?id=123
+CAND-056,関東,東京都,渋谷区,国立オリンピック記念青少年総合センター,onsite_hall_sports_lodging,A,"カルチャー棟大ホール758席、約300㎡リハーサル室、約816〜851㎡の中体育室群、研修室、宿泊棟を同一敷地に備える","JJFの反復実績に近い複合型。体育室の天井高、複数棟の同時確保、音出し・高投げ条件、一般団体区分を要確認",verified,https://nyc.niye.go.jp/facilities/culture
+CAND-057,関東,神奈川県,横浜市中区,横浜市技能文化会館,divisible_community_hall,B,"多目的ホール全面412㎡・シアター370人、201㎡と211㎡に分割可能。全館Wi-Fi、60台立体駐車場、関内駅徒歩5分","JYYF地区・ジュニア大会の反復会場。天井高・舞台条件・大型搬入・競技中の専用回線品質は要確認",verified,https://gibun.jp/facility/
+CAND-058,関東,東京都,千代田区,ベルサール秋葉原,commercial_event_hall,B,"B1・1F・2Fの3ホールを一体利用すると約2300㎡。2F HALL Bは313㎡・天井6m・シアター308席・専有回線あり。JR秋葉原駅徒歩3分","JYYF全国大会・WYYC実績のある都市型民間会場。利用した階・区画、開催日見積、空き、搬入、音楽・競技条件は個別確認",verified,https://www.bellesalle.co.jp/shisetsu/tokyo/bs_akihabara/

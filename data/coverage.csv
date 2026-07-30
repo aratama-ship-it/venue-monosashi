@@ -1,0 +1,6 @@
+series,requested_scope,years_in_initial_ledger,coverage_status,known_gap,next_action
+JJF,"全開催年と全会場","1999-2026","complete_years_needs_subvenue_audit","一部年の併催会場・現名称","公式の各年ページとパンフレットで施設単位を再監査"
+JYYF_NATIONAL,"JYYF全国大会と前身大会","1999-2026","complete_years","一部施設の現名称・現存状況","旧施設名と現名称を施設マスタで対応付け"
+JYYF_REGIONAL,"JYYF地区大会と前身地域大会","2007-2026","complete_jyyf_era","2001-2006のUTYJ・JYCC地域大会の施設名","前身団体の保存ページ・一次資料を追加探索"
+JYYF_JUNIOR,"全ジュニア大会","2018-2026","complete_from_first_edition","2026年は開催予定","開催後に2026年の実施結果を更新"
+WYYC,"World Yo-Yo Contest全開催年","1999-2026","complete_years_one_venue_gap","1999年ホノルルの正確な施設名","HPK・Bandai関連の当時資料と現地公文書・新聞アーカイブを照合"
