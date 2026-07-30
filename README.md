@@ -34,6 +34,15 @@ node --test tests/rendered-html.test.mjs
 
 ## 状態
 
-- ローカルのみ
+- ChatGPT Sitesで所有者限定公開（一般公開前）
 - 空き状況、予約可否、正式見積は未確認
 - 一次情報の観測日は2026-07-30
+
+## シリーズ運用
+
+- GitHub: `aratama-ship-it/venue-monosashi`
+- 現在の段階: `TEAM_REVIEW`
+- 一般公開前の確認先: ChatGPT Sites限定公開
+- シリーズ台帳: `aratama-ship-it/monosashi-series`
+
+GitHubへのpushと一般公開は分けて扱います。`PUBLIC`への移行と`art-monosashi.com`配下への公開は、開発者の明示確認後に行います。
