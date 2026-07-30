@@ -1545,6 +1545,12 @@ export function VenueSearch() {
               JJF型では練習空間と舞台空間が別施設になる場合もあるため、将来は徒歩圏の組合せも検索します。
             </p>
           </div>
+          <div className="method-item">
+            <strong>04　候補発見と確認を分ける</strong>
+            <p>
+              LaSens等の索引で小劇場を見つけ、面積・客席・料金は各劇場や運営団体の公式情報へ戻って確認します。
+            </p>
+          </div>
         </div>
       </section>
 

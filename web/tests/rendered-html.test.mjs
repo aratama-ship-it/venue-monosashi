@@ -34,9 +34,9 @@ test("server-renders the venue search shell", async () => {
   assert.match(html, /条件を置く/);
   assert.match(html, /同じ目盛りで見る/);
   assert.match(html, />225<[\s\S]*過去大会記録/);
-  assert.match(html, />68<[\s\S]*全国候補施設/);
-  assert.match(html, />296<[\s\S]*条件付き料金観測/);
-  assert.match(html, />11<[\s\S]*区分合計の参考額/);
+  assert.match(html, />74<[\s\S]*全国候補施設/);
+  assert.match(html, />311<[\s\S]*条件付き料金観測/);
+  assert.match(html, />13<[\s\S]*区分合計の参考額/);
   assert.match(html, /最低観測面積/);
   assert.match(html, /固定舞台が確認できた候補/);
   assert.match(html, /予約・搬入・交通の運用観測あり/);
@@ -61,6 +61,7 @@ test("server-renders the venue search shell", async () => {
   assert.match(html, /全日本ディアボロ/);
   assert.match(html, /けん玉ワールドカップ/);
   assert.match(html, /開催実績と現在の貸出可否は別/);
+  assert.match(html, /LaSens等の索引で小劇場を見つけ/);
   assert.match(html, /過去実績[\s\S]{0,40}21[\s\S]{0,40}件/);
   assert.match(html, /確認済み日額が低い順/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);

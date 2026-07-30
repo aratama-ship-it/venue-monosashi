@@ -811,7 +811,7 @@ a {
 
 .method-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   border: 1px solid var(--ink);
   background: var(--white);
 }
