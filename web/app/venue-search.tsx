@@ -1550,7 +1550,7 @@ export function VenueSearch() {
 
       <footer className="site-footer">
         <div className="site-footer-inner">
-          <span>会場ものさし — 公開前・ローカル調査版</span>
+          <span>会場ものさし — 全国公開調査版</span>
           <span>
             開催可否、空き状況、正式見積は各施設への確認が必要です
           </span>
