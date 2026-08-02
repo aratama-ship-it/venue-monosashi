@@ -27,7 +27,7 @@
 
 ## Current Wave
 
-- CAND-037 data is validated and the public generated data is rebuilt. The next wave should add the first new candidate ID for the +100 roster.
+- CAND-037 data is validated, publicly deployed as site version 8, and the public generated data is rebuilt. The next wave should add the first new candidate ID for the +100 roster.
 
 ## Next Action
 

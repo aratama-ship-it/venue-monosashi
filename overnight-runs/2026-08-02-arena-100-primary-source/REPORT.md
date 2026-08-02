@@ -16,6 +16,7 @@
 - The CAND-037 fee table was visually inspected from the official PDF before values were transcribed.
 - The first test run exposed a stale 317-price HTML assertion after the dataset reached 321; the assertion was corrected and must pass on rerun.
 - Rerun passed: `npm run audit` errors=0 (one existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation.
+- Published version 8 successfully at https://venue-monosashi.juggler-arata.chatgpt.site.
 
 ## Pre-existing State Preserved
 
