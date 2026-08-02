@@ -7,7 +7,17 @@ export const venueData = {
     "details": 116,
     "prices": 311,
     "operations": 56,
-    "budgetScenarios": 13
+    "budgetScenarios": 13,
+    "smallTheaterCensus": {
+      "total": 594,
+      "verificationCounts": {
+        "verified_primary": 387,
+        "primary_partial": 96,
+        "official_not_found": 68,
+        "ambiguous": 19,
+        "blocked": 24
+      }
+    }
   },
   "venues": [
     {

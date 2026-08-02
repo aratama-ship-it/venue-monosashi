@@ -793,6 +793,14 @@ export function VenueSearch() {
                   <strong>{venueData.stats.budgetScenarios}</strong>
                   <span>区分合計の参考額</span>
                 </div>
+                <div className="reference-row">
+                  <strong>{venueData.stats.smallTheaterCensus.total}</strong>
+                  <span>
+                    <a href="/data/small-theater-research.csv">
+                      小劇場一次情報台帳 ↓
+                    </a>
+                  </span>
+                </div>
               </div>
             </aside>
           </div>
@@ -1549,6 +1557,7 @@ export function VenueSearch() {
             <strong>04　候補発見と確認を分ける</strong>
             <p>
               LaSens等の索引で小劇場を見つけ、面積・客席・料金は各劇場や運営団体の公式情報へ戻って確認します。
+              現在の594件の確認台帳は、CSVとして公開しています。
             </p>
           </div>
         </div>

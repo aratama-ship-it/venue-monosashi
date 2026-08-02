@@ -1,4 +1,4 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -63,6 +63,7 @@ const [
   historical,
   historicalVenueAliases,
   budgetScenarios,
+  smallTheaters,
 ] = await Promise.all([
   load("candidate-venues.csv"),
   load("venue-details.csv"),
@@ -71,7 +72,22 @@ const [
   load("historical-events.csv"),
   load("historical-venue-aliases.csv"),
   load("budget-scenarios.csv"),
+  load("small-theater-research.csv"),
 ]);
+
+const smallTheaterVerificationCounts = Object.fromEntries(
+  [
+    "verified_primary",
+    "primary_partial",
+    "official_not_found",
+    "ambiguous",
+    "blocked",
+  ].map((status) => [
+    status,
+    smallTheaters.filter((theater) => theater.verification_status === status)
+      .length,
+  ]),
+);
 
 const venues = candidates.map((candidate) => {
   const venueDetails = details.filter(
@@ -282,6 +298,10 @@ export const venueData = ${JSON.stringify(
       prices: prices.length,
       operations: operations.length,
       budgetScenarios: budgetScenarios.length,
+      smallTheaterCensus: {
+        total: smallTheaters.length,
+        verificationCounts: smallTheaterVerificationCounts,
+      },
     },
     venues,
     historicalEvents,
@@ -292,6 +312,11 @@ export const venueData = ${JSON.stringify(
 `;
 
 await writeFile(resolve(scriptDir, "..", "app", "generated-data.ts"), output);
+await mkdir(resolve(scriptDir, "..", "public", "data"), { recursive: true });
+await writeFile(
+  resolve(scriptDir, "..", "public", "data", "small-theater-research.csv"),
+  await readFile(resolve(projectDir, "data", "small-theater-research.csv")),
+);
 console.log(
   `generated app/generated-data.ts: ${venues.length} venues, ${prices.length} prices`,
 );
