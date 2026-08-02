@@ -36,7 +36,7 @@ test("server-renders the venue search shell", async () => {
   assert.match(html, /同じ目盛りで見る/);
   assert.match(html, />225<[\s\S]*過去大会記録/);
   assert.match(html, />74<[\s\S]*全国候補施設/);
-  assert.match(html, />311<[\s\S]*条件付き料金観測/);
+  assert.match(html, />317<[\s\S]*条件付き料金観測/);
   assert.match(html, />13<[\s\S]*区分合計の参考額/);
   assert.match(html, />594<[\s\S]*小劇場一次情報台帳/);
   assert.match(html, /最低観測面積/);
