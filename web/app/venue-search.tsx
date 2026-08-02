@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { venueData } from "./generated-data";
 
 type Preset =
@@ -19,6 +19,23 @@ type SortKey =
   | "area"
   | "booking";
 type VenueType = "all" | "small_theater";
+type SmallTheaterLedgerItem = {
+  id: string;
+  indexName: string;
+  indexUrl: string;
+  indexedPrefecture: string | null;
+  officialName: string | null;
+  officialUrl: string | null;
+  officialStatus: string | null;
+  capacity: number | null;
+  area: number | null;
+  priceUrl: string | null;
+  accessUrl: string | null;
+  conditionsUrl: string | null;
+  observedAt: string | null;
+  verificationStatus: string;
+  note: string | null;
+};
 type HistoricalSeries =
   | "all"
   | "JJF"
@@ -193,6 +210,21 @@ const eventStatusLabels: Record<string, string> = {
   partially_cancelled: "一部中止",
 };
 
+const smallTheaterVerificationLabels: Record<string, string> = {
+  verified_primary: "公式確認済み",
+  primary_partial: "公式一部確認",
+  official_not_found: "公式未発見",
+  ambiguous: "同定保留",
+  blocked: "取得保留",
+};
+
+const smallTheaterOfficialStatusLabels: Record<string, string> = {
+  current: "現行（公式確認）",
+  closed: "閉館（公式確認）",
+  renamed: "改称（公式確認）",
+  unknown: "現行性要確認",
+};
+
 const categoryWordLabels: Record<string, string> = {
   adjacent: "隣接",
   arena: "アリーナ",
@@ -311,6 +343,35 @@ export function VenueSearch() {
   const [historicalYear, setHistoricalYear] = useState("all");
   const [historicalQuery, setHistoricalQuery] = useState("");
   const [showAllHistorical, setShowAllHistorical] = useState(false);
+  const [smallTheaterPrefecture, setSmallTheaterPrefecture] = useState("全国");
+  const [smallTheaterStatus, setSmallTheaterStatus] = useState("all");
+  const [smallTheaterQuery, setSmallTheaterQuery] = useState("");
+  const [smallTheaterCapacity, setSmallTheaterCapacity] = useState(0);
+  const [showAllSmallTheaters, setShowAllSmallTheaters] = useState(false);
+  const [smallTheaters, setSmallTheaters] = useState<SmallTheaterLedgerItem[]>([]);
+  const [smallTheaterLoadState, setSmallTheaterLoadState] = useState<
+    "loading" | "ready" | "failed"
+  >("loading");
+
+  useEffect(() => {
+    let active = true;
+    fetch("/data/small-theater-ledger.json")
+      .then((response) => {
+        if (!response.ok) throw new Error("small theater ledger unavailable");
+        return response.json() as Promise<SmallTheaterLedgerItem[]>;
+      })
+      .then((payload) => {
+        if (!active || !Array.isArray(payload)) return;
+        setSmallTheaters(payload);
+        setSmallTheaterLoadState("ready");
+      })
+      .catch(() => {
+        if (active) setSmallTheaterLoadState("failed");
+      });
+    return () => {
+      active = false;
+    };
+  }, []);
 
   const regions = useMemo(
     () =>
@@ -372,6 +433,64 @@ export function VenueSearch() {
   const visibleHistorical = showAllHistorical
     ? historicalResults
     : historicalResults.slice(0, 24);
+
+  const smallTheaterPrefectures = useMemo(
+    () =>
+      Array.from(
+        new Set(
+          smallTheaters
+            .map((theater) => theater.indexedPrefecture)
+            .filter((prefecture): prefecture is string => prefecture !== null),
+        ),
+      ).sort((a, b) => a.localeCompare(b, "ja")),
+    [smallTheaters],
+  );
+  const smallTheaterResults = useMemo(() => {
+    const normalized = smallTheaterQuery.trim().toLocaleLowerCase("ja");
+    return [...smallTheaters]
+      .filter(
+        (theater) =>
+          smallTheaterPrefecture === "全国" ||
+          theater.indexedPrefecture === smallTheaterPrefecture,
+      )
+      .filter(
+        (theater) =>
+          smallTheaterStatus === "all" ||
+          theater.verificationStatus === smallTheaterStatus,
+      )
+      .filter(
+        (theater) =>
+          smallTheaterCapacity <= 0 ||
+          (theater.capacity !== null && theater.capacity >= smallTheaterCapacity),
+      )
+      .filter((theater) => {
+        if (!normalized) return true;
+        return [
+          theater.indexName,
+          theater.officialName ?? "",
+          theater.indexedPrefecture ?? "",
+          theater.note ?? "",
+        ]
+          .join(" ")
+          .toLocaleLowerCase("ja")
+          .includes(normalized);
+      })
+      .sort(
+        (a, b) =>
+          Number(b.verificationStatus === "verified_primary") -
+            Number(a.verificationStatus === "verified_primary") ||
+          a.indexName.localeCompare(b.indexName, "ja"),
+      );
+  }, [
+    smallTheaterCapacity,
+    smallTheaters,
+    smallTheaterPrefecture,
+    smallTheaterQuery,
+    smallTheaterStatus,
+  ]);
+  const visibleSmallTheaters = showAllSmallTheaters
+    ? smallTheaterResults
+    : smallTheaterResults.slice(0, 40);
 
   const results = useMemo(() => {
     const normalized = keyword.trim().toLocaleLowerCase("ja");
@@ -707,6 +826,10 @@ export function VenueSearch() {
             <a href="#past-venues">
               <span aria-hidden="true">▤</span>
               過去会場台帳
+            </a>
+            <a href="#small-theater-ledger">
+              <span aria-hidden="true">⌘</span>
+              小劇場台帳
             </a>
             <a href="#method">
               <span aria-hidden="true">↳</span>
@@ -1525,6 +1648,219 @@ export function VenueSearch() {
             {showAllHistorical
               ? "先頭24件に戻す"
               : `残り${historicalResults.length - 24}件も表示`}
+          </button>
+        )}
+      </section>
+
+      <section
+        className="archive-section"
+        id="small-theater-ledger"
+        aria-labelledby="small-theater-ledger-title"
+      >
+        <div className="archive-head">
+          <div>
+            <p className="eyebrow">SMALL THEATER RESEARCH LEDGER</p>
+            <h2 id="small-theater-ledger-title">小劇場台帳から探す</h2>
+            <p>
+              594件を候補発見情報と公式確認情報に分けて検索します。客席数・面積・料金・アクセス・利用条件は、公式URLがある行だけに表示します。
+              索引に載っていても、現行性や公式情報を確認できない行は、その状態のまま残します。
+            </p>
+          </div>
+          <div className="archive-total">
+            <strong>
+              {smallTheaterLoadState === "ready"
+                ? smallTheaterResults.length
+                : "—"}
+            </strong>
+            <span> / {venueData.stats.smallTheaterCensus.total}件</span>
+          </div>
+        </div>
+
+        <div className="archive-controls">
+          <label className="field">
+            <span className="field-label">索引上の都道府県</span>
+            <select
+              value={smallTheaterPrefecture}
+              onChange={(event) => {
+                setSmallTheaterPrefecture(event.target.value);
+                setShowAllSmallTheaters(false);
+              }}
+            >
+              <option value="全国">全国</option>
+              {smallTheaterPrefectures.map((prefecture) => (
+                <option key={prefecture} value={prefecture}>
+                  {prefecture}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="field">
+            <span className="field-label">確認状態</span>
+            <select
+              value={smallTheaterStatus}
+              onChange={(event) => {
+                setSmallTheaterStatus(event.target.value);
+                setShowAllSmallTheaters(false);
+              }}
+            >
+              <option value="all">すべて</option>
+              {Object.entries(smallTheaterVerificationLabels).map(
+                ([value, label]) => (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                ),
+              )}
+            </select>
+          </label>
+          <label className="field">
+            <span className="field-label">公式確認済みの最低客席数</span>
+            <input
+              min="0"
+              placeholder="例：80"
+              type="number"
+              value={smallTheaterCapacity || ""}
+              onChange={(event) => {
+                setSmallTheaterCapacity(Number(event.target.value) || 0);
+                setShowAllSmallTheaters(false);
+              }}
+            />
+          </label>
+          <label className="field">
+            <span className="field-label">劇場名・メモ</span>
+            <input
+              type="search"
+              placeholder="例：ブラックボックス、横浜、ダンス"
+              value={smallTheaterQuery}
+              onChange={(event) => {
+                setSmallTheaterQuery(event.target.value);
+                setShowAllSmallTheaters(false);
+              }}
+            />
+          </label>
+        </div>
+
+        <div className="archive-table-wrap" aria-live="polite">
+          <table className="archive-table">
+            <thead>
+              <tr>
+                <th>劇場</th>
+                <th>索引上の地域</th>
+                <th>公式確認済みの規模</th>
+                <th>確認状態</th>
+                <th>一次情報</th>
+              </tr>
+            </thead>
+            <tbody>
+              {visibleSmallTheaters.map((theater) => {
+                const verificationLabel =
+                  smallTheaterVerificationLabels[theater.verificationStatus] ??
+                  theater.verificationStatus;
+                const officialStatusLabel = theater.officialStatus
+                  ? (smallTheaterOfficialStatusLabels[theater.officialStatus] ??
+                    theater.officialStatus)
+                  : null;
+                return (
+                  <tr key={theater.id}>
+                    <td>
+                      <strong>{theater.officialName ?? theater.indexName}</strong>
+                      {theater.officialName &&
+                        theater.officialName !== theater.indexName && (
+                          <small>索引名：{theater.indexName}</small>
+                        )}
+                      {theater.observedAt && (
+                        <small>公式確認日：{theater.observedAt}</small>
+                      )}
+                    </td>
+                    <td>{theater.indexedPrefecture ?? "索引記載なし"}</td>
+                    <td>
+                      <strong>{numberLabel(theater.capacity, "席")}</strong>
+                      <small>面積：{numberLabel(theater.area, "㎡")}</small>
+                    </td>
+                    <td>
+                      <span
+                        className={`archive-status ${
+                          theater.verificationStatus === "verified_primary"
+                            ? ""
+                            : "unverified"
+                        }`}
+                      >
+                        {verificationLabel}
+                      </span>
+                      {officialStatusLabel && <small>{officialStatusLabel}</small>}
+                    </td>
+                    <td>
+                      {theater.officialUrl ? (
+                        <a
+                          href={theater.officialUrl}
+                          rel="noreferrer"
+                          target="_blank"
+                        >
+                          公式 ↗
+                        </a>
+                      ) : (
+                        <span>公式URL未確認</span>
+                      )}
+                      {theater.priceUrl && (
+                        <small>
+                          <a href={theater.priceUrl} rel="noreferrer" target="_blank">
+                            料金 ↗
+                          </a>
+                        </small>
+                      )}
+                      {theater.accessUrl && (
+                        <small>
+                          <a href={theater.accessUrl} rel="noreferrer" target="_blank">
+                            アクセス ↗
+                          </a>
+                        </small>
+                      )}
+                      {theater.conditionsUrl && (
+                        <small>
+                          <a
+                            href={theater.conditionsUrl}
+                            rel="noreferrer"
+                            target="_blank"
+                          >
+                            利用条件 ↗
+                          </a>
+                        </small>
+                      )}
+                      <small>
+                        <a href={theater.indexUrl} rel="noreferrer" target="_blank">
+                          索引 ↗
+                        </a>
+                      </small>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+          {smallTheaterLoadState === "loading" && (
+            <div className="archive-empty">台帳を読み込んでいます。</div>
+          )}
+          {smallTheaterLoadState === "failed" && (
+            <div className="archive-empty">
+              台帳を読み込めませんでした。<a href="/data/small-theater-research.csv">CSVを直接開く</a>
+            </div>
+          )}
+          {smallTheaterLoadState === "ready" &&
+            smallTheaterResults.length === 0 && (
+            <div className="archive-empty">一致する小劇場はありません。</div>
+          )}
+        </div>
+
+        {smallTheaterLoadState === "ready" &&
+          smallTheaterResults.length > 40 && (
+          <button
+            className="archive-more"
+            type="button"
+            onClick={() => setShowAllSmallTheaters((current) => !current)}
+          >
+            {showAllSmallTheaters
+              ? "先頭40件に戻す"
+              : `残り${smallTheaterResults.length - 40}件も表示`}
           </button>
         )}
       </section>

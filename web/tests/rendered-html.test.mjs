@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 async function render() {
@@ -64,7 +65,19 @@ test("server-renders the venue search shell", async () => {
   assert.match(html, /開催実績と現在の貸出可否は別/);
   assert.match(html, /LaSens等の索引で小劇場を見つけ/);
   assert.match(html, /現在の594件の確認台帳は、CSVとして公開しています/);
+  assert.match(html, /小劇場台帳から探す/);
+  assert.match(html, /SMALL THEATER RESEARCH LEDGER/);
+  assert.match(html, /台帳を読み込んでいます/);
   assert.match(html, /過去実績[\s\S]{0,40}21[\s\S]{0,40}件/);
   assert.match(html, /確認済み日額が低い順/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
+});
+
+test("ships the small theater ledger as a separate data asset", async () => {
+  const ledgerUrl = new URL("../public/data/small-theater-ledger.json", import.meta.url);
+  const ledger = JSON.parse(await readFile(ledgerUrl, "utf8"));
+
+  assert.equal(ledger.length, 594);
+  assert.equal(ledger.some((theater) => theater.verificationStatus === "pending"), false);
+  assert.ok(ledger.some((theater) => theater.officialUrl));
 });

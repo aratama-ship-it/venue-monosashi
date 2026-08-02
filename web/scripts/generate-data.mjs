@@ -55,6 +55,10 @@ function nullableNumber(value) {
   return Number.isFinite(number) ? number : null;
 }
 
+function nullableUrl(value) {
+  return value || null;
+}
+
 const [
   candidates,
   details,
@@ -88,6 +92,24 @@ const smallTheaterVerificationCounts = Object.fromEntries(
       .length,
   ]),
 );
+
+const smallTheaterLedger = smallTheaters.map((theater) => ({
+  id: theater.source_id,
+  indexName: theater.source_name,
+  indexUrl: theater.source_url,
+  indexedPrefecture: theater.source_prefecture || null,
+  officialName: theater.official_name || null,
+  officialUrl: nullableUrl(theater.official_url),
+  officialStatus: theater.official_status || null,
+  capacity: nullableNumber(theater.official_capacity),
+  area: nullableNumber(theater.official_area_m2),
+  priceUrl: nullableUrl(theater.official_price_url),
+  accessUrl: nullableUrl(theater.official_access_url),
+  conditionsUrl: nullableUrl(theater.official_conditions_url),
+  observedAt: theater.official_observed_at || null,
+  verificationStatus: theater.verification_status,
+  note: theater.notes || null,
+}));
 
 const venues = candidates.map((candidate) => {
   const venueDetails = details.filter(
@@ -316,6 +338,10 @@ await mkdir(resolve(scriptDir, "..", "public", "data"), { recursive: true });
 await writeFile(
   resolve(scriptDir, "..", "public", "data", "small-theater-research.csv"),
   await readFile(resolve(projectDir, "data", "small-theater-research.csv")),
+);
+await writeFile(
+  resolve(scriptDir, "..", "public", "data", "small-theater-ledger.json"),
+  `${JSON.stringify(smallTheaterLedger)}\n`,
 );
 console.log(
   `generated app/generated-data.ts: ${venues.length} venues, ${prices.length} prices`,
