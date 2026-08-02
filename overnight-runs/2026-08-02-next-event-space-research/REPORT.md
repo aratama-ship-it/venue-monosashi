@@ -29,7 +29,7 @@
 ## Unverified States
 
 - CAND-035 simultaneous booking, event-specific throwing clearance, floor protection, vehicle/loading route, availability, and final event classification require explicit facility confirmation; they are not assumed.
-- The public service has not yet been republished with this wave at the time of this report update.
+- The validated update was published as version 7 at https://venue-monosashi.juggler-arata.chatgpt.site on 2026-08-02 JST.
 
 ## Blockers
 

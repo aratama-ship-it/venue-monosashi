@@ -25,11 +25,11 @@
 
 ## Current Wave
 
-- Completed; publication packaging and source-controlled commit are the next bounded action.
+- Wave 1 is committed and publicly deployed as version 7 of the existing 会場ものさし site.
 
 ## Next Action
 
-- Commit the named CAND-035 data, generated data, test expectation, and this ledger; then publish the validated static site under the user's existing deployment approval. After publication, proceed to CAND-037 (津市産業・スポーツセンター) in a new wave.
+- Proceed to CAND-037 (津市産業・スポーツセンター) in a new bounded primary-source research wave.
 
 ## Blockers
 
