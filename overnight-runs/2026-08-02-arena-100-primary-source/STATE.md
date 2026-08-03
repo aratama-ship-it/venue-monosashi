@@ -3,8 +3,8 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-03 19:59 JST
-- Current wave: 3 — CAND-076 added and validated locally; read-only official-source scouts are tracing the next two candidates
+- Last updated: 2026-08-03 20:03 JST
+- Current wave: 5 — CAND-077 and CAND-078 added and validated locally after coordinator-side primary-source checks
 
 ## Baseline
 
@@ -27,14 +27,17 @@
 - Wave 2 — added CAND-075, 北海道立総合体育センター 北海きたえーる, as the first new large-arena candidate. Official facility pages confirm the 3,886㎡ / highest 26m / maximum 10,000 main arena and the 1,647㎡ / highest 22m sub arena. The currently published official fee PDF, marked effective 2026-04-01, was rendered and visually inspected before recording four full-day amateur-sports observations. Access, parking restriction, booking priority, setup/teardown, ticketing, food, and merchandise conditions are captured only where the official guidance states them.
 - Wave 3 — added CAND-076, YSアリーナ八戸（八戸市長根屋内スケート場）, from Hachinohe City official pages. The main arena is recorded as approximately 14,000㎡ / approximately 15m / maximum 9,000 / fixed 3,045 seats, with its seasonal restriction stated explicitly: full-arena use is only from mid-March through mid-June; during the rink period only the approximately 5,600㎡ inner field and spectator seating are usable. The official fee PDF is retained as a source URL but no fee values were transcribed because its tables were not visually inspected in this wave.
 - Wave 3 verification — `npm run audit` errors=0 (one existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation all passed.
+- Wave 4 — added CAND-077, 盛岡タカヤアリーナ（盛岡市総合アリーナ）, from a Morioka City facility page, designated-manager facility page, and official use regulations. The city total of 5,058 seats and the manager's arena viewing-seat count of 3,098 are kept as separate facts; the fixed-seat field is not populated because the city total includes movable seats and standing room. No fee-table value was transcribed without visual inspection.
+- Wave 5 — added CAND-078, 山形国際交流プラザ 山形ビッグウイング, from the official operator pages. The four exhibition rooms are entered individually at their official 935.28㎡ or 980.39㎡ areas, and the official HTML rate for the entire exhibition hall, 09:00–17:00, is recorded. The total 3,500 chair capacity is marked as an official comfort-layout value, not a guaranteed real-event capacity.
+- Wave 5 verification — `npm run audit` errors=0 (one existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation all passed.
 
 ## Current Wave
 
-- CAND-075 is validated and publicly deployed as site version 9. CAND-076 is validated locally and committed in the current checkout but is not yet in the public site, so the public site remains at 75 candidates while the local catalogue has 76 candidates, 125 space details, 325 price observations, and 61 operation observations. Two new candidates toward the +100 target are complete locally. Public URL: https://venue-monosashi.juggler-arata.chatgpt.site
+- CAND-075 is validated and publicly deployed as site version 9. CAND-076 through CAND-078 are validated locally and committed in the current checkout but are not yet in the public site, so the public site remains at 75 candidates while the local catalogue has 78 candidates, 131 space details, 326 price observations, and 63 operation observations. Four new candidates toward the +100 target are complete locally. Public URL: https://venue-monosashi.juggler-arata.chatgpt.site
 
 ## Next Action
 
-- Verify and add the next non-duplicate official-source candidate proposed by the read-only scouts, starting with 盛岡タカヤアリーナ（盛岡市総合アリーナ） if its official pages remain accessible. Batch publication remains deferred until at least five newly validated arena candidates are ready.
+- Select CAND-079 from an underrepresented prefecture, verify it independently against official sources, and add it only after a schema/deduplication check. CAND-075 through CAND-079 will form the first meaningful five-candidate deployment batch if all validate.
 
 ## Blockers
 

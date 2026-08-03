@@ -3,10 +3,10 @@
 export const venueData = {
   "stats": {
     "historical": 225,
-    "venues": 76,
-    "details": 125,
-    "prices": 325,
-    "operations": 61,
+    "venues": 78,
+    "details": 131,
+    "prices": 326,
+    "operations": 63,
     "budgetScenarios": 13,
     "smallTheaterCensus": {
       "total": 594,
@@ -10571,6 +10571,187 @@ export const venueData = {
         "id": "ys-arena-main",
         "name": "アリーナ（リンク解氷時）",
         "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-077",
+      "region": "東北",
+      "prefecture": "岩手県",
+      "city": "盛岡市",
+      "name": "盛岡タカヤアリーナ（盛岡市総合アリーナ）",
+      "category": "arena_and_meetings",
+      "fitLevel": "A",
+      "strengths": "市公式はフロア面積3,234㎡、固定席・ロイヤルボックス・移動席・立見席を含む観客席5,058席を掲載。指定管理者はアリーナ約3,200㎡、舞台・音響・照明設備、会議室2室、催事利用を案内",
+      "cautions": "市公式の5,058席と指定管理者掲載のアリーナ観覧席3,098席は対象範囲が異なるため混同しない。投擲、床養生、搬入、回線、同時利用は要確認",
+      "sourceUrl": "https://www.city.morioka.iwate.jp/shisetsu/sports/gim/1006882.html",
+      "detailCount": 1,
+      "priceCount": 0,
+      "operationCount": 1,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": 5058,
+      "maxArea": 3234,
+      "maxCeiling": null,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [],
+      "budgetScenarios": [],
+      "operation": {
+        "station": null,
+        "walkMinutes": null,
+        "stationAccess": null,
+        "airportAccess": null,
+        "parkingSpaces": 476,
+        "largeVehicleAccess": "unknown",
+        "loadingAccess": "大型車・搬入口・荷降ろし・養生の公開寸法と条件は未観測",
+        "bookingOpenMonths": 12,
+        "setupPolicy": "利用日の初日が属する月の1年前の1日（1月は2日）から予約受付。全国大会・興行等は期間外予約も受付可能。原則として利用予定日の2か月前までに本申込。準備・撤去の利用料区分と時間外の実質貸切扱いを公式規程に記載",
+        "networkPolicy": "unknown",
+        "note": "駐車場は476台（車いす用9台）だが、市公式は大きなイベント・大会時に駐車できない場合があるため公共交通利用を案内。盛岡駅からバスで総合アリーナ前へ約11分、タクシー約10分。大会・催事のキャンセル期限は利用予定日の2か月前。入場料徴収または営業宣伝目的の催しはアリーナ利用料が料金表の1.5倍。投擲、物販、飲食、催事回線、同時利用は要確認"
+      },
+      "spaces": [
+        {
+          "id": "takaya-main",
+          "name": "アリーナ",
+          "type": "arena",
+          "area": 3234,
+          "ceiling": null,
+          "capacityTheater": 5058,
+          "capacityFixed": null,
+          "stageType": "",
+          "practiceUse": "yes"
+        }
+      ],
+      "bestSpace": {
+        "id": "takaya-main",
+        "name": "アリーナ",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-078",
+      "region": "東北",
+      "prefecture": "山形県",
+      "city": "山形市",
+      "name": "山形国際交流プラザ 山形ビッグウイング",
+      "category": "exhibition_and_meetings",
+      "fitLevel": "A",
+      "strengths": "第1〜4集会展示場は各935.28〜980.39㎡、全体で椅子3,500席または机・椅子2,200席。会議室群と普通車1,000台・大型車20台の無料駐車場を備え、あらゆる催事・展示への対応を公式に案内",
+      "cautions": "天井高、床荷重、投擲、搬入、催事回線、全区画同時確保は要確認。収容席数は公式が「若干のゆとりのある」設定とするため、実レイアウトは別途確認",
+      "sourceUrl": "https://www.convention.or.jp/bigwing/shisetsu/",
+      "detailCount": 5,
+      "priceCount": 1,
+      "operationCount": 1,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": 3500,
+      "maxArea": 980.39,
+      "maxCeiling": null,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "conditional",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [
+        {
+          "id": "PRICE-326",
+          "spaceId": "bigwing-exhibition-all",
+          "category": "facility",
+          "useCase": "exhibition",
+          "dayType": "all",
+          "timeBand": "09:00-17:00",
+          "amount": 384000,
+          "taxStatus": "not_stated",
+          "unit": "per_time_band",
+          "basis": "多目的集会展示場・全部・全日（9時〜17時）",
+          "validFrom": null,
+          "exclusions": "付属設備、冷暖房、特別電気・水道、入場料徴収時の加算、時間外利用、準備・撤去の別区分",
+          "note": "公式HTML料金表を確認。税の扱いは料金ページ上で明示されない。準備・撤去は施設使用料の70％（屋外は35％）",
+          "sourceUrl": "https://www.convention.or.jp/bigwing/ryokin/"
+        }
+      ],
+      "budgetScenarios": [],
+      "operation": {
+        "station": null,
+        "walkMinutes": null,
+        "stationAccess": null,
+        "airportAccess": null,
+        "parkingSpaces": 1020,
+        "largeVehicleAccess": "unknown",
+        "loadingAccess": "大型車・搬入口・荷降ろし・養生の公開寸法と条件は未観測",
+        "bookingOpenMonths": 12,
+        "setupPolicy": "使用開始日の1年前の午前8時30分から受付。空き状況確認後に利用確認書、使用許可申請書を提出。施設使用料は前納で、予約金20％を請求書発行から30日以内、残金を使用日の14日前までに納入。使用後は原状回復",
+        "networkPolicy": "unknown",
+        "note": "無料駐車場は普通車1,000台・大型車20台（ほか臨時約230台）で、候補比較欄には通常分1,020台を記録。全国大会・東北大会・大規模利用は別途問い合わせを公式案内。施設変更・取消は使用日の14日前まで。搬入、投擲、物販飲食、催事回線、全区画同時利用は要確認"
+      },
+      "spaces": [
+        {
+          "id": "bigwing-exhibition-all",
+          "name": "多目的集会展示場（第1〜4）",
+          "type": "exhibition",
+          "area": null,
+          "ceiling": null,
+          "capacityTheater": 3500,
+          "capacityFixed": null,
+          "stageType": "temporary",
+          "practiceUse": "conditional"
+        },
+        {
+          "id": "bigwing-exhibition-1",
+          "name": "第1集会展示場",
+          "type": "exhibition",
+          "area": 935.28,
+          "ceiling": null,
+          "capacityTheater": 850,
+          "capacityFixed": null,
+          "stageType": "temporary",
+          "practiceUse": "conditional"
+        },
+        {
+          "id": "bigwing-exhibition-2",
+          "name": "第2集会展示場",
+          "type": "exhibition",
+          "area": 980.39,
+          "ceiling": null,
+          "capacityTheater": 850,
+          "capacityFixed": null,
+          "stageType": "temporary",
+          "practiceUse": "conditional"
+        },
+        {
+          "id": "bigwing-exhibition-3",
+          "name": "第3集会展示場",
+          "type": "exhibition",
+          "area": 980.39,
+          "ceiling": null,
+          "capacityTheater": 850,
+          "capacityFixed": null,
+          "stageType": "temporary",
+          "practiceUse": "conditional"
+        },
+        {
+          "id": "bigwing-exhibition-4",
+          "name": "第4集会展示場",
+          "type": "exhibition",
+          "area": 935.28,
+          "ceiling": null,
+          "capacityTheater": 850,
+          "capacityFixed": null,
+          "stageType": "temporary",
+          "practiceUse": "conditional"
+        }
+      ],
+      "bestSpace": {
+        "id": "bigwing-exhibition-all",
+        "name": "多目的集会展示場（第1〜4）",
+        "type": "exhibition"
       }
     }
   ],
