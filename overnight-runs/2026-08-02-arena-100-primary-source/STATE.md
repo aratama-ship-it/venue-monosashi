@@ -38,10 +38,11 @@
 - Wave 9 publication — deployed the validated CAND-080 source as site version 17. A cache-busted public-page check returned 80 candidate facilities and 334 price observations.
 - Wave 10 — added CAND-081, Aichi Sky Expo（愛知県国際展示場）, from the official facility, rate, access, and use-flow pages. Hall A and halls B–F are recorded separately at their public 10,000㎡ areas, with 20m and 14m clear heights respectively; the outdoor multipurpose area A is 33,000㎡. Three direct fee observations, including the tax-included outdoor full-site fee, and one operation row retain only published loading, payment, food-notice, access, and parking facts.
 - Wave 10 verification — `npm run audit` errors=0 (one existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation all passed. Generated catalogue counts are 81 candidates, 139 details, 337 price observations, and 67 operation observations.
+- Wave 10 publication — deployed the validated CAND-081 source as site version 18. A cache-busted public-page check returned 81 candidate facilities and 337 price observations.
 
 ## Current Wave
 
-- CAND-075 through CAND-080 and the CAND-024 enrichment are publicly deployed. CAND-081 is locally validated and awaits the next meaningful public batch. The local catalogue now has 81 candidates, 139 space details, 337 price observations, and 67 operation observations. Seven new candidates toward the +100 target are complete locally, six of them public. Public URL: https://venue-monosashi.juggler-arata.chatgpt.site
+- CAND-075 through CAND-081 and the CAND-024 enrichment are publicly deployed. The catalogue has 81 candidates, 139 space details, 337 price observations, and 67 operation observations. Seven new candidates toward the +100 target are complete and public. Public URL: https://venue-monosashi.juggler-arata.chatgpt.site
 
 ## Next Action
 

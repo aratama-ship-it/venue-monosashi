@@ -2,7 +2,7 @@
 
 ## Outcome
 
-- Active run established to add 100 additional, official-source-backed large-arena or arena-compatible venue candidates nationwide. CAND-075 through CAND-080 are publicly deployed, CAND-024 is enriched, and CAND-081 is locally validated. The public catalogue has progressed from 74 to 80 candidates; the local validated catalogue has 81.
+- Active run established to add 100 additional, official-source-backed large-arena or arena-compatible venue candidates nationwide. CAND-075 through CAND-081 are publicly deployed and CAND-024 is enriched. The public catalogue has progressed from 74 to 81 candidates.
 
 ## Changes
 
@@ -35,6 +35,7 @@
 - CAND-080 passed 2026-08-03 validation: `npm run audit` errors=0 (the same pre-existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation. The local catalogue now has 80 candidates, 136 details, 334 price observations, and 66 operation rows. It is staged for the next public batch rather than claiming that the current public site has it.
 - CAND-080 was subsequently published as site version 17. A cache-busted public-page verification returned 80 candidate facilities and 334 price observations.
 - CAND-081 passed 2026-08-03 validation: `npm run audit` errors=0 (the same pre-existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation. The local catalogue now has 81 candidates, 139 details, 337 price observations, and 67 operation rows.
+- Published site version 18 successfully at https://venue-monosashi.juggler-arata.chatgpt.site. A cache-busted public-page verification returned 81 candidate facilities and 337 price observations.
 
 ## Pre-existing State Preserved
 
