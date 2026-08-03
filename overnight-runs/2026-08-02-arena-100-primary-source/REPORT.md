@@ -2,7 +2,7 @@
 
 ## Outcome
 
-- Active run established to add 100 additional, official-source-backed large-arena or arena-compatible venue candidates nationwide. CAND-075 through CAND-079 are publicly deployed, and CAND-024 is enriched. The public catalogue has progressed from 74 to 79 candidates.
+- Active run established to add 100 additional, official-source-backed large-arena or arena-compatible venue candidates nationwide. CAND-075 through CAND-080 are publicly deployed, CAND-024 is enriched, and CAND-081 is locally validated. The public catalogue has progressed from 74 to 80 candidates; the local validated catalogue has 81.
 
 ## Changes
 
@@ -16,6 +16,7 @@
 - Added CAND-078, セーレン・ドリームアリーナ（福井県営体育館）, with main and sub arena details and its current official booking, payment, and Wi-Fi conditions. The 17m building height is deliberately excluded from ceiling-height comparison because the official page does not identify it as the clear height.
 - Added CAND-079, サンドーム福井, with its official 8,000㎡ / 55m / 9,000-seat event hall, access information, and four full-day conditions covering in-prefecture/out-of-prefecture and weekday/weekend no-admission rates. Those rates are explicitly tax-inclusive on the official HTML page.
 - Added CAND-080, 三重県営サンアリーナ, with separate main and sub-arena details, four tax-included performance-rate observations, and an operation row. The main arena is recorded at 3,489㎡ / approximately 21m / 11,000 seats / 4,980 fixed seats / 5,000kg/㎡ floor load; the sub arena is 1,746㎡ / approximately 17m / 3,000 seats / 1,002 fixed seats / 3,000kg/㎡. Publicly stated booking, application, payment, preparation and food-service rules are recorded; loading, parking count, event network, and simultaneous use remain unknown.
+- Added CAND-081, Aichi Sky Expo（愛知県国際展示場）, with details for exhibition hall A, one hall of B–F, and the 33,000㎡ outdoor multipurpose area A. Hall A is 10,000㎡ / 20m / 5,000kg/㎡ and each B–F hall is 10,000㎡ / 14m / 5,000kg/㎡. Three direct fee observations cover one full day of hall A, one B–F hall, and the outdoor area A full site. Officially published station/airport access, 3,447 parking spaces, loading entrances, application/payment flow and food-event notice are recorded; capacity, throwing clearance, availability and exclusive event-network terms remain unknown.
 - Updated the public observation date to 2026.08.03 and the rendered count checks to 79 candidates and 330 price observations.
 
 ## Verification
@@ -32,6 +33,8 @@
 - CAND-078 and CAND-079 passed 2026-08-03 validation: `npm run audit` errors=0 (the same pre-existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation. The local catalogue now has 79 candidates, 134 details, 330 price observations, and 65 operation rows; it is ready for the next public batch.
 - Published site version 15 successfully at https://venue-monosashi.juggler-arata.chatgpt.site. The public URL returned the updated 79-candidate and 330-price counts after deployment. The hosting build required a root workspace configuration and a packaged, locally validated web build because the provider's Linux dependency installation omitted optional native bindings; the deployed package contains the same build that passed the local rendered HTML tests.
 - CAND-080 passed 2026-08-03 validation: `npm run audit` errors=0 (the same pre-existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation. The local catalogue now has 80 candidates, 136 details, 334 price observations, and 66 operation rows. It is staged for the next public batch rather than claiming that the current public site has it.
+- CAND-080 was subsequently published as site version 17. A cache-busted public-page verification returned 80 candidate facilities and 334 price observations.
+- CAND-081 passed 2026-08-03 validation: `npm run audit` errors=0 (the same pre-existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation. The local catalogue now has 81 candidates, 139 details, 337 price observations, and 67 operation rows.
 
 ## Pre-existing State Preserved
 
@@ -47,6 +50,7 @@
 - CAND-024 has no official public confirmation for height, floor load, loading dimensions, throwing clearance, food, merchandise, event network, or simultaneous use of every exhibition and meeting space. Its pricing tax treatment is not stated on the current official HTML fee page.
 - CAND-078 has no official public confirmation for clear arena height, floor load, loading dimensions, throwing clearance, food, merchandise, event-network capacity, or simultaneous use.
 - CAND-079 has no official public confirmation for fixed-seat count, floor load, loading dimensions, throwing clearance, food, merchandise, event-network capacity, parking capacity, or simultaneous use. Its rate depends on user location, intended use, and admission conditions.
+- CAND-081 has no official public confirmation for exhibition-hall capacity, throwing clearance, simultaneous booking, dedicated event-network terms, or availability. Hall fees are recorded with `not_stated` tax treatment because the displayed hall-fee section did not state tax treatment; the outdoor-area fee explicitly states tax inclusion.
 
 ## Blockers
 

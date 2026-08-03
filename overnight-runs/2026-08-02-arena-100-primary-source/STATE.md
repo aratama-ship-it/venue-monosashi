@@ -3,8 +3,8 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-03 20:45 JST
-- Current wave: 9 — CAND-080, 三重県営サンアリーナ, added and validated locally from official facility, rate, and use-rule pages
+- Last updated: 2026-08-03 JST
+- Current wave: 10 — CAND-081, Aichi Sky Expo（愛知県国際展示場）, added and validated locally from official facility, rate, access, and use-flow pages
 
 ## Baseline
 
@@ -35,14 +35,17 @@
 - Wave 7 verification — `npm run audit` errors=0 (one existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation all passed.
 - Wave 9 — added CAND-080, 三重県営サンアリーナ, from the official facility, rate, access, and use-rule pages. Main and sub-arena facts are recorded separately: 3,489㎡ / approximately 21m / 11,000 seats and 1,746㎡ / approximately 17m / 3,000 seats. Four tax-included, direct performance-rate observations and the published application, reservation, payment, preparation, and food-service conditions are recorded without inferring access or loading facts.
 - Wave 9 verification — `npm run audit` errors=0 (one existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation all passed. Generated catalogue counts are 80 candidates, 136 details, 334 price observations, and 66 operation observations.
+- Wave 9 publication — deployed the validated CAND-080 source as site version 17. A cache-busted public-page check returned 80 candidate facilities and 334 price observations.
+- Wave 10 — added CAND-081, Aichi Sky Expo（愛知県国際展示場）, from the official facility, rate, access, and use-flow pages. Hall A and halls B–F are recorded separately at their public 10,000㎡ areas, with 20m and 14m clear heights respectively; the outdoor multipurpose area A is 33,000㎡. Three direct fee observations, including the tax-included outdoor full-site fee, and one operation row retain only published loading, payment, food-notice, access, and parking facts.
+- Wave 10 verification — `npm run audit` errors=0 (one existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation all passed. Generated catalogue counts are 81 candidates, 139 details, 337 price observations, and 67 operation observations.
 
 ## Current Wave
 
-- CAND-075 through CAND-079 and the CAND-024 enrichment are publicly deployed. CAND-080 is locally validated and committed after this wave; it awaits the next meaningful public batch. The local catalogue now has 80 candidates, 136 space details, 334 price observations, and 66 operation observations. Six new candidates toward the +100 target are complete locally, five of them public. Public URL: https://venue-monosashi.juggler-arata.chatgpt.site
+- CAND-075 through CAND-080 and the CAND-024 enrichment are publicly deployed. CAND-081 is locally validated and awaits the next meaningful public batch. The local catalogue now has 81 candidates, 139 space details, 337 price observations, and 67 operation observations. Seven new candidates toward the +100 target are complete locally, six of them public. Public URL: https://venue-monosashi.juggler-arata.chatgpt.site
 
 ## Next Action
 
-- Select CAND-081 from an underrepresented prefecture after a canonical name/address/official-URL deduplication check. Continue only through an explicit turn or a repaired scheduler.
+- Select CAND-082 after a canonical name/address/official-URL deduplication check. Continue only through an explicit turn or a repaired scheduler.
 
 ## Blockers
 

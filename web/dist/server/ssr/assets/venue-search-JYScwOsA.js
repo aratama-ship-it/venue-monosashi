@@ -4,10 +4,10 @@ var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
 var venueData = {
 	"stats": {
 		"historical": 225,
-		"venues": 80,
-		"details": 136,
-		"prices": 334,
-		"operations": 66,
+		"venues": 81,
+		"details": 139,
+		"prices": 337,
+		"operations": 67,
 		"budgetScenarios": 13,
 		"smallTheaterCensus": {
 			"total": 594,
@@ -10811,6 +10811,137 @@ var venueData = {
 				"id": "sun-main",
 				"name": "メインアリーナ",
 				"type": "arena"
+			}
+		},
+		{
+			"id": "CAND-081",
+			"region": "東海",
+			"prefecture": "愛知県",
+			"city": "常滑市",
+			"name": "Aichi Sky Expo（愛知県国際展示場）",
+			"category": "exhibition_and_conference",
+			"fitLevel": "A",
+			"strengths": "展示ホールA〜Fは各10,000㎡で総展示面積50,000㎡。ホールAは梁下20m、B〜Fは14m、屋外多目的利用地Aは33,000㎡。大規模コンサート、フェス、スポーツ・eスポーツ大会、展示会、試験会場への利用を公式掲載",
+			"cautions": "展示ホールの収容人数、投擲、同時利用、屋内イベント回線の可用性、全区画の空き状況は要確認。展示ホールは複数主催者による分割利用を原則不可としている",
+			"sourceUrl": "https://www.aichiskyexpo.com/organizer-top/intro-shisetsu/",
+			"detailCount": 3,
+			"priceCount": 3,
+			"operationCount": 1,
+			"historicalCompletedCount": 0,
+			"historicalPlannedCount": 0,
+			"historicalSeries": [],
+			"historicalEventIds": [],
+			"maxCapacity": null,
+			"maxArea": 33e3,
+			"maxCeiling": 20,
+			"maxFloorLoad": 5e3,
+			"hasFixedStage": false,
+			"practiceUse": "conditional",
+			"streamingReady": "unknown",
+			"minDailyFacilityPrice": 1716e3,
+			"priceObservations": [
+				{
+					"id": "PRICE-335",
+					"spaceId": "skyexpo-hall-a",
+					"category": "facility",
+					"useCase": "event",
+					"dayType": "all",
+					"timeBand": "00:00-24:00",
+					"amount": 2954640,
+					"taxStatus": "not_stated",
+					"unit": "per_day",
+					"basis": "展示ホールA・利用面積8,000㎡超10,000㎡以下・1ホール・全日",
+					"validFrom": null,
+					"exclusions": "付帯設備、電気・空調・水道等の使用料、設営撤去、警備、清掃、イベント回線",
+					"note": "公式HTML料金表の展示施設欄を直接記録。ページ上の当該展示ホール料金について税込表記は確認できないためtax_statusはnot_stated",
+					"sourceUrl": "https://www.aichiskyexpo.com/organizer-top/forusecharge/"
+				},
+				{
+					"id": "PRICE-336",
+					"spaceId": "skyexpo-halls-b-f",
+					"category": "facility",
+					"useCase": "event",
+					"dayType": "all",
+					"timeBand": "00:00-24:00",
+					"amount": 2477280,
+					"taxStatus": "not_stated",
+					"unit": "per_day",
+					"basis": "展示ホールB〜F・利用面積6,000㎡超10,000㎡以下・1ホール・全日",
+					"validFrom": null,
+					"exclusions": "付帯設備、電気・空調・水道等の使用料、設営撤去、警備、清掃、イベント回線",
+					"note": "公式HTML料金表の展示施設欄を直接記録。ページ上の当該展示ホール料金について税込表記は確認できないためtax_statusはnot_stated",
+					"sourceUrl": "https://www.aichiskyexpo.com/organizer-top/forusecharge/"
+				},
+				{
+					"id": "PRICE-337",
+					"spaceId": "skyexpo-outdoor-a",
+					"category": "facility",
+					"useCase": "event",
+					"dayType": "all",
+					"timeBand": "per_day",
+					"amount": 1716e3,
+					"taxStatus": "included",
+					"unit": "per_day",
+					"basis": "多目的利用地A・全面33,000㎡・1日",
+					"validFrom": null,
+					"exclusions": "付帯設備、電気・空調・水道等の使用料、設営撤去、警備、清掃、イベント回線",
+					"note": "公式HTML料金表は多目的利用地Aの1日利用料金を税込と明記",
+					"sourceUrl": "https://www.aichiskyexpo.com/organizer-top/forusecharge/"
+				}
+			],
+			"budgetScenarios": [],
+			"operation": {
+				"station": "中部国際空港駅",
+				"walkMinutes": 5,
+				"stationAccess": "中部国際空港セントレアから徒歩5分。名鉄名古屋駅から中部国際空港駅までミュースカイで最速28分",
+				"airportAccess": "中部国際空港セントレアから徒歩5分",
+				"parkingSpaces": 3447,
+				"largeVehicleAccess": "conditional",
+				"loadingAccess": "展示ホールAは搬出入口2箇所（各W8.9m×H5.0m）。B〜Fは公式の搬出入口寸法を施設案内に掲載。多目的利用地Aの①②は大型車対応スペース",
+				"bookingOpenMonths": 18,
+				"setupPolicy": "利用照会後、利用許可申請書の受理日翌日から原則14日以内に可否連絡。利用料金は前納で、利用開始3か月前までに100%支払い。利用計画打合せ・付帯設備申込・催物開催届等が必要",
+				"networkPolicy": "unknown",
+				"note": "主催者向け公式ページは駐車場3,447台を掲載。展示ホールは複数主催者による分割利用を原則不可。飲食行為は保健所への催物開催届が必要。投擲、物販、専有回線、同時利用、空き状況は要確認"
+			},
+			"spaces": [
+				{
+					"id": "skyexpo-hall-a",
+					"name": "展示ホールA",
+					"type": "exhibition",
+					"area": 1e4,
+					"ceiling": 20,
+					"capacityTheater": null,
+					"capacityFixed": null,
+					"stageType": "temporary",
+					"practiceUse": "conditional"
+				},
+				{
+					"id": "skyexpo-halls-b-f",
+					"name": "展示ホールB〜F（各1ホール）",
+					"type": "exhibition",
+					"area": 1e4,
+					"ceiling": 14,
+					"capacityTheater": null,
+					"capacityFixed": null,
+					"stageType": "temporary",
+					"practiceUse": "conditional"
+				},
+				{
+					"id": "skyexpo-outdoor-a",
+					"name": "多目的利用地A（全面）",
+					"type": "outdoor",
+					"area": 33e3,
+					"ceiling": null,
+					"capacityTheater": null,
+					"capacityFixed": null,
+					"stageType": "",
+					"practiceUse": "conditional"
+				}
+			],
+			"bestSpace": {
+				"id": "skyexpo-outdoor-a",
+				"name": "多目的利用地A（全面）",
+				"type": "outdoor"
 			}
 		}
 	],
