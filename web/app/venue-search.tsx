@@ -845,7 +845,7 @@ export function VenueSearch() {
           </p>
           <p>
             <span>OBSERVED</span>
-            2026.07.30
+            2026.08.03
           </p>
           <a className="rail-action" href="#search">
             候補を測りはじめる
@@ -862,7 +862,7 @@ export function VenueSearch() {
               <span className="edition">全国調査版 0.1</span>
             </div>
             <div className="masthead-note">
-              一次情報観測日 2026.07.30
+              一次情報観測日 2026.08.03
               <br />
               空き状況・見積は未確認
             </div>
