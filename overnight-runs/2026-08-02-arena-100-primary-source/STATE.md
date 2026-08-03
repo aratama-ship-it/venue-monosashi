@@ -3,8 +3,8 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-03 20:30 JST
-- Current wave: 8 — CAND-075 through CAND-079 and the CAND-024 enrichment are publicly deployed after source, package, and deployment verification
+- Last updated: 2026-08-03 20:45 JST
+- Current wave: 9 — CAND-080, 三重県営サンアリーナ, added and validated locally from official facility, rate, and use-rule pages
 
 ## Baseline
 
@@ -33,14 +33,16 @@
 - Wave 6 — added CAND-078, セーレン・ドリームアリーナ（福井県営体育館）, from the current Fukui Prefecture facility page. Main and sub arena facts are entered separately. The published 17m building height is deliberately not mapped to an arena-ceiling value.
 - Wave 7 — added CAND-079, サンドーム福井, from the official operator and Fukui Prefecture pages. The official 8,000㎡ / 55m / 9,000-seat event-hall facts and four directly observed, tax-included full-day rate observations are recorded. The city-specific parking, floor-load, loading, network, and concurrent-use details remain unknown.
 - Wave 7 verification — `npm run audit` errors=0 (one existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation all passed.
+- Wave 9 — added CAND-080, 三重県営サンアリーナ, from the official facility, rate, access, and use-rule pages. Main and sub-arena facts are recorded separately: 3,489㎡ / approximately 21m / 11,000 seats and 1,746㎡ / approximately 17m / 3,000 seats. Four tax-included, direct performance-rate observations and the published application, reservation, payment, preparation, and food-service conditions are recorded without inferring access or loading facts.
+- Wave 9 verification — `npm run audit` errors=0 (one existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation all passed. Generated catalogue counts are 80 candidates, 136 details, 334 price observations, and 66 operation observations.
 
 ## Current Wave
 
-- CAND-075 through CAND-079 and the CAND-024 enrichment are publicly deployed. The public catalogue now has 79 candidates, 134 space details, 330 price observations, and 65 operation observations. Five new candidates toward the +100 target are complete and public. Public URL: https://venue-monosashi.juggler-arata.chatgpt.site
+- CAND-075 through CAND-079 and the CAND-024 enrichment are publicly deployed. CAND-080 is locally validated and committed after this wave; it awaits the next meaningful public batch. The local catalogue now has 80 candidates, 136 space details, 334 price observations, and 66 operation observations. Six new candidates toward the +100 target are complete locally, five of them public. Public URL: https://venue-monosashi.juggler-arata.chatgpt.site
 
 ## Next Action
 
-- Select CAND-080 from an underrepresented prefecture after a canonical name/address/official-URL deduplication check. Continue only through an explicit turn or a repaired scheduler.
+- Select CAND-081 from an underrepresented prefecture after a canonical name/address/official-URL deduplication check. Continue only through an explicit turn or a repaired scheduler.
 
 ## Blockers
 
