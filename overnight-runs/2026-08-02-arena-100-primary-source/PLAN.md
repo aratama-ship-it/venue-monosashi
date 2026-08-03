@@ -39,7 +39,8 @@ Expand the nationwide event-space catalogue by 100 additional large-arena or are
 
 ## Team
 
-- Coordinator/explorer/writer/verifier: one agent, sequential roles; no concurrent writers.
+- Coordinator/writer/verifier: root agent owns the canonical CSVs, ledger, audit, and commits.
+- Explorers: up to two read-only agents may independently trace official sources and propose non-duplicate candidates. They never edit canonical files or the ledger.
 
 ## Verification
 

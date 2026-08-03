@@ -3,10 +3,10 @@
 export const venueData = {
   "stats": {
     "historical": 225,
-    "venues": 75,
-    "details": 124,
+    "venues": 76,
+    "details": 125,
     "prices": 325,
-    "operations": 60,
+    "operations": 61,
     "budgetScenarios": 13,
     "smallTheaterCensus": {
       "total": 594,
@@ -10510,6 +10510,66 @@ export const venueData = {
       "bestSpace": {
         "id": "kitayell-main",
         "name": "メインアリーナ",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-076",
+      "region": "東北",
+      "prefecture": "青森県",
+      "city": "八戸市",
+      "name": "YSアリーナ八戸（八戸市長根屋内スケート場）",
+      "category": "arena_and_meetings",
+      "fitLevel": "A",
+      "strengths": "アリーナ床約14,000㎡・天井高約15m・最大9,000人、固定3,045席。会議室群、600台の普通車駐車場を備え、コンサート・コンベンション等のイベント会場利用を八戸市が案内",
+      "cautions": "アリーナ全面利用は3月中旬〜6月中旬のみで、リンク開設期はリンク内側フィールド約5,600㎡と観客席の利用に限られる。投擲、回線、同時利用は要確認",
+      "sourceUrl": "https://www.city.hachinohe.aomori.jp/soshikikarasagasu/naganeokunaiskatejo/bunka_sports/2/14957.html",
+      "detailCount": 1,
+      "priceCount": 0,
+      "operationCount": 1,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": 9000,
+      "maxArea": 14000,
+      "maxCeiling": 15,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "conditional",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [],
+      "budgetScenarios": [],
+      "operation": {
+        "station": null,
+        "walkMinutes": null,
+        "stationAccess": null,
+        "airportAccess": null,
+        "parkingSpaces": 608,
+        "largeVehicleAccess": "unknown",
+        "loadingAccess": "資材搬入口1箇所は縦3.7m×横6m。大型車の乗入れ・留置・養生導線・床荷重は未観測",
+        "bookingOpenMonths": null,
+        "setupPolicy": "国際・全国競技会の貸切使用は使用日の18か月前から8日前まで、その他イベントは3か月前から8日前までに許可申請。イベント概要・図面は1か月前までに提出。アリーナ利用時は床養生が必要で費用は使用者負担",
+        "networkPolicy": "unknown",
+        "note": "駐車場は普通車600台・車いす用8台に加え大型バス6台。アリーナ全面使用は3月中旬から6月中旬、8月から3月上旬はリンク内側フィールドと観客席のみ使用可能。予約の空き状況は事前確認が必要。投擲、物販、飲食、催事回線、同時利用は要確認"
+      },
+      "spaces": [
+        {
+          "id": "ys-arena-main",
+          "name": "アリーナ（リンク解氷時）",
+          "type": "arena",
+          "area": 14000,
+          "ceiling": 15,
+          "capacityTheater": 9000,
+          "capacityFixed": 3045,
+          "stageType": "",
+          "practiceUse": "conditional"
+        }
+      ],
+      "bestSpace": {
+        "id": "ys-arena-main",
+        "name": "アリーナ（リンク解氷時）",
         "type": "arena"
       }
     }

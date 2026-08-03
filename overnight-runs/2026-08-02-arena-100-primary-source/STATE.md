@@ -3,8 +3,8 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-03 11:31 JST
-- Current wave: 2 — CAND-075 first new arena candidate added and validated
+- Last updated: 2026-08-03 19:59 JST
+- Current wave: 3 — CAND-076 added and validated locally; read-only official-source scouts are tracing the next two candidates
 
 ## Baseline
 
@@ -25,15 +25,18 @@
 - Wave 1 — confirmed the current naming-rights names and three spaces via the municipal and designated-manager pages. Recorded three details, four directly observed full-day sports-use price observations, and one operation row. The fee PDF table was visually inspected; its 2020-04 revision marker and absent tax statement are retained rather than assumed.
 - Verification finding: the rendered HTML test held the prior 317-price count and failed after the validated data reached 321. This is a stale assertion, not an audit error; it is updated to the generated count before rerunning validation.
 - Wave 2 — added CAND-075, 北海道立総合体育センター 北海きたえーる, as the first new large-arena candidate. Official facility pages confirm the 3,886㎡ / highest 26m / maximum 10,000 main arena and the 1,647㎡ / highest 22m sub arena. The currently published official fee PDF, marked effective 2026-04-01, was rendered and visually inspected before recording four full-day amateur-sports observations. Access, parking restriction, booking priority, setup/teardown, ticketing, food, and merchandise conditions are captured only where the official guidance states them.
+- Wave 3 — added CAND-076, YSアリーナ八戸（八戸市長根屋内スケート場）, from Hachinohe City official pages. The main arena is recorded as approximately 14,000㎡ / approximately 15m / maximum 9,000 / fixed 3,045 seats, with its seasonal restriction stated explicitly: full-arena use is only from mid-March through mid-June; during the rink period only the approximately 5,600㎡ inner field and spectator seating are usable. The official fee PDF is retained as a source URL but no fee values were transcribed because its tables were not visually inspected in this wave.
+- Wave 3 verification — `npm run audit` errors=0 (one existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation all passed.
 
 ## Current Wave
 
-- CAND-075 is validated and publicly deployed as site version 9. The catalogue now has 75 candidates, 124 space details, 325 price observations, and 60 operation observations; one new candidate toward the +100 target is complete. Public URL: https://venue-monosashi.juggler-arata.chatgpt.site
+- CAND-075 is validated and publicly deployed as site version 9. CAND-076 is validated locally and committed in the current checkout but is not yet in the public site, so the public site remains at 75 candidates while the local catalogue has 76 candidates, 125 space details, 325 price observations, and 61 operation observations. Two new candidates toward the +100 target are complete locally. Public URL: https://venue-monosashi.juggler-arata.chatgpt.site
 
 ## Next Action
 
-- Publish this validated update, then add the next official-source large-arena candidate (CAND-076), prioritizing a prefecture that currently has only one representative.
+- Verify and add the next non-duplicate official-source candidate proposed by the read-only scouts, starting with 盛岡タカヤアリーナ（盛岡市総合アリーナ） if its official pages remain accessible. Batch publication remains deferred until at least five newly validated arena candidates are ready.
 
 ## Blockers
 
 - No data blocker. Operational issue recorded: recurring instructions that reference the former `app-dev` path will fail after the workspace reorganization unless updated to this project path.
+- A runtime attempt to register or update the continuation automation returned `No handler registered for tool: codex_app.automation_update`; therefore no independently scheduled background worker is confirmed active from this session. Continue only through explicit turns or a repaired scheduler, and do not claim that research is running while idle.
