@@ -28,7 +28,7 @@
 
 ## Current Wave
 
-- CAND-075 is validated locally. The catalogue now has 75 candidates, 124 space details, 325 price observations, and 60 operation observations; one new candidate toward the +100 target is complete. Publication is pending this wave's deployment.
+- CAND-075 is validated and publicly deployed as site version 9. The catalogue now has 75 candidates, 124 space details, 325 price observations, and 60 operation observations; one new candidate toward the +100 target is complete. Public URL: https://venue-monosashi.juggler-arata.chatgpt.site
 
 ## Next Action
 

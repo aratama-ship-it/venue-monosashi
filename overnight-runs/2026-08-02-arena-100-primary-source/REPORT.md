@@ -20,6 +20,7 @@
 - Rerun passed: `npm run audit` errors=0 (one existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation.
 - Published version 8 successfully at https://venue-monosashi.juggler-arata.chatgpt.site.
 - CAND-075's current official fee PDF (effective 2026-04-01) was rendered and visually reviewed before transcription. The 2026-08-03 validation passed: `npm run audit` errors=0 (the same pre-existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), and `git diff --check`.
+- Published site version 9 successfully at https://venue-monosashi.juggler-arata.chatgpt.site after pushing the validated source commit and saving the matching build archive.
 
 ## Pre-existing State Preserved
 
