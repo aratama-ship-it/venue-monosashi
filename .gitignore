@@ -10,6 +10,7 @@
 /web/.next/
 /web/.vinext/
 /web/dist/
+/dist/
 /web/.wrangler/
 /web/out/
 /web/outputs/
@@ -20,4 +21,3 @@
 /web/README 2.md
 /web/app/globals 2.css
 /web/tests/rendered-html.test 2.mjs
-
