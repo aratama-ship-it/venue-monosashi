@@ -5,6 +5,7 @@
   "scripts": {
     "audit": "node scripts/audit-data.mjs",
     "audit-small-theaters": "node scripts/small-theater-research.mjs audit",
+    "build": "npm --prefix web run build",
     "next-small-theaters": "node scripts/small-theater-research.mjs next --limit 8",
     "audit-urls": "node scripts/audit-urls.mjs",
     "rebuild-db": "sh scripts/rebuild-sqlite.sh",
