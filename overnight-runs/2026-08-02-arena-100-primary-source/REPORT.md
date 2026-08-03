@@ -13,6 +13,8 @@
 - Added CAND-076 with its main arena space-detail row and an operation row from Hachinohe City official pages. The 14,000㎡ arena, approximately 15m ceiling, maximum 9,000 capacity, fixed 3,045 seats, 608 accessible parking spaces, loading-door dimensions, booking windows, floor-protection requirement, and seasonal use restriction are recorded only where the city states them. Fee-table values were intentionally not transcribed without visual PDF inspection.
 - Added CAND-077, 盛岡タカヤアリーナ（盛岡市総合アリーナ）, with a detail and operation row sourced from Morioka City, the designated manager, and the manager's official regulations. Its total 5,058-seat city figure is not misrepresented as fixed seating, because the same page says it includes fixed seats, a royal box, movable seats, and standing room.
 - Enriched existing CAND-024, 山形国際交流プラザ 山形ビッグウイング, with five exhibition details, one official HTML fee observation, and one operation row. The four official room areas are preserved separately; all-hall seating is a stated comfort-layout capacity. Booking, deposit, cancellation, 24-hour use, and parking facts are taken from the operator's published guidance. A proposed CAND-078 row was removed before publication because it duplicated CAND-024 by official facility identity; it is not counted toward the target.
+- Added CAND-078, セーレン・ドリームアリーナ（福井県営体育館）, with main and sub arena details and its current official booking, payment, and Wi-Fi conditions. The 17m building height is deliberately excluded from ceiling-height comparison because the official page does not identify it as the clear height.
+- Added CAND-079, サンドーム福井, with its official 8,000㎡ / 55m / 9,000-seat event hall, access information, and four full-day conditions covering in-prefecture/out-of-prefecture and weekday/weekend no-admission rates. Those rates are explicitly tax-inclusive on the official HTML page.
 - Updated the public observation date to 2026.08.03 and the rendered count checks to 75 candidates and 325 price observations.
 
 ## Verification
@@ -26,6 +28,7 @@
 - Published site version 9 successfully at https://venue-monosashi.juggler-arata.chatgpt.site after pushing the validated source commit and saving the matching build archive.
 - CAND-076 passed 2026-08-03 validation: `npm run audit` errors=0 (the same pre-existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation. It is held for the next meaningful batch deployment; the public site still displays version 9 / 75 candidates.
 - CAND-077 and the CAND-024 enrichment passed 2026-08-03 validation: `npm run audit` errors=0 (the same pre-existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation. CAND-076 and CAND-077 are held for the first five-candidate deployment batch; the public site remains version 9 / 75 candidates.
+- CAND-078 and CAND-079 passed 2026-08-03 validation: `npm run audit` errors=0 (the same pre-existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation. The local catalogue now has 79 candidates, 134 details, 330 price observations, and 65 operation rows; it is ready for the next public batch.
 
 ## Pre-existing State Preserved
 
@@ -39,6 +42,8 @@
 - CAND-076 has no official public confirmation for throwing clearance, floor load, large-vehicle route/holding, event network, food, merchandise, or simultaneous use. Its approximately 14,000㎡ full-arena configuration is seasonal, not treated as year-round availability.
 - CAND-077 has no official public confirmation for height, floor load, loading dimensions, throwing clearance, food, merchandise, event network, or simultaneous use of meeting spaces.
 - CAND-024 has no official public confirmation for height, floor load, loading dimensions, throwing clearance, food, merchandise, event network, or simultaneous use of every exhibition and meeting space. Its pricing tax treatment is not stated on the current official HTML fee page.
+- CAND-078 has no official public confirmation for clear arena height, floor load, loading dimensions, throwing clearance, food, merchandise, event-network capacity, or simultaneous use.
+- CAND-079 has no official public confirmation for fixed-seat count, floor load, loading dimensions, throwing clearance, food, merchandise, event-network capacity, parking capacity, or simultaneous use. Its rate depends on user location, intended use, and admission conditions.
 
 ## Blockers
 
