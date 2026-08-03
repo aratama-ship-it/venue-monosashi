@@ -2,6 +2,9 @@
   "name": "venue-monosashi",
   "private": true,
   "type": "module",
+  "workspaces": [
+    "web"
+  ],
   "scripts": {
     "audit": "node scripts/audit-data.mjs",
     "audit-small-theaters": "node scripts/small-theater-research.mjs audit",
