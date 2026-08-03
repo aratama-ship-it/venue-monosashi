@@ -2,9 +2,9 @@
 
 ## Status
 
-- Status: ACTIVE
-- Last updated: 2026-08-03 JST
-- Current wave: 10 — CAND-081, Aichi Sky Expo（愛知県国際展示場）, added and validated locally from official facility, rate, access, and use-flow pages
+- Status: COMPLETE
+- Last updated: 2026-08-04 JST
+- Current wave: 43 — +100 target reached; final validation completed
 
 ## Baseline
 
@@ -39,16 +39,37 @@
 - Wave 10 — added CAND-081, Aichi Sky Expo（愛知県国際展示場）, from the official facility, rate, access, and use-flow pages. Hall A and halls B–F are recorded separately at their public 10,000㎡ areas, with 20m and 14m clear heights respectively; the outdoor multipurpose area A is 33,000㎡. Three direct fee observations, including the tax-included outdoor full-site fee, and one operation row retain only published loading, payment, food-notice, access, and parking facts.
 - Wave 10 verification — `npm run audit` errors=0 (one existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation all passed. Generated catalogue counts are 81 candidates, 139 details, 337 price observations, and 67 operation observations.
 - Wave 10 publication — deployed the validated CAND-081 source as site version 18. A cache-busted public-page check returned 81 candidate facilities and 337 price observations.
+- Waves 11–32 recovery — primary-source rows CAND-082 through CAND-103, their 33 space details, 16 price observations, and 17 operation observations were preserved from the isolated staging ledger into this iCloud worktree. The source facts remain unmodified; their full per-candidate notes remain in the isolated ledger until the two staging copies are formally reconciled.
+- Wave 33 — staged CAND-104, グランメッセ熊本（熊本産業展示場）, from the operator's current official facility, rate, application, and access pages. The 8,000㎡ whole exhibition hall, 14.5–16.4m ceiling range, 5,000kg/㎡ floor load, four-zone configuration, concert usability, direct weekday full-hall rate, cancellation schedule, loading entrance dimensions, 2,200-space parking caveat, and airport/IC access are retained. The conditional D-hall sliding-seat values are not treated as whole-hall fixed seating.
+- Wave 33 verification — audit-small-theaters, audit, rebuild-db, validate, diff check, and active-ledger validation passed. Generated catalogue counts are 104 candidates, 173 details, 354 price observations, and 85 operation observations.
+- Wave 34 — staged CAND-105, 大和ハウス プレミストドーム（札幌ドーム）, from current operator facility and event-use pages. Closed-arena 14,460㎡ / fixed 41,566 / maximum 53,820 and a direct full-arena exhibition-event daily rate are recorded. The 68m structure height is deliberately not treated as clear height.
+- Wave 34 verification — audit-small-theaters, audit, rebuild-db, validate, and diff check passed. Generated catalogue counts are 105 candidates, 174 details, 355 price observations, and 86 operation observations.
+- Wave 35 — staged CAND-106 つどーむ, CAND-107 真駒内セキスイハイムアイスアリーナ, CAND-108 セキスイハイムスーパーアリーナ, CAND-109 あづま総合体育館, and CAND-110 高崎アリーナ from municipal or designated-manager official sources. Eight venue details, two directly observed official fee observations, and five operation rows preserve only public facts; ambiguous building-height ranges remain notes rather than single height values.
+- Wave 35 verification — audit-small-theaters, audit, rebuild-db, validate, and diff check passed. Generated catalogue counts are 110 candidates, 183 details, 357 price observations, and 91 operation observations.
+- Wave 36 — staged CAND-111 静岡アリーナ（エコパアリーナ）and CAND-112 長野市多目的スポーツアリーナ ビッグハット from their designated-manager official pages. Three venue details, one directly observed official fee observation, and two operation rows preserve only public facts; the Big Hat highest roof height is not represented as a separate clear-height guarantee.
+- Wave 36 verification — audit-small-theaters, audit, rebuild-db, validate, and diff check passed. Generated catalogue counts are 112 candidates, 186 details, 358 price observations, and 93 operation observations.
+- Wave 37 — staged CAND-113 北九州メディアドーム from current operator facility, rate, application, and access pages. The 5,000㎡ event arena, maximum capacity including standing, direct tax-included rate, station access, reservation, payment, and setup/teardown conditions are recorded without inferring unobserved height, floor load, loading, parking, or availability facts.
+- Wave 37 verification — audit-small-theaters, audit, rebuild-db, validate, and diff check passed. Generated catalogue counts are 113 candidates, 187 details, 359 price observations, and 94 operation observations.
+- Wave 38 — staged CAND-114 through CAND-123 from official operator, municipality, prefecture, or designated-manager sources: 国立代々木競技場第一体育館, 日本ガイシ スポーツプラザ, 浜松アリーナ, 神戸国際展示場, ATCホール, 滋賀ダイハツアリーナ, カミアリーナ, SHOWAグループ総合体育館, 福岡市総合体育館, and 愛媛県武道館. Seventeen venue details and six direct fee observations retain only the published conditions; stale fee tables and unobserved fields remain excluded.
+- Wave 38 verification — audit-small-theaters, audit, rebuild-db, validate, and diff check passed. Generated catalogue counts are 123 candidates, 204 details, 365 price observations, and 94 operation observations.
+- Wave 39 — staged CAND-124 through CAND-130 from official municipal or designated-manager sources: 熊本県立総合体育館, 東京ガーデンシアター, 東京体育館, アオーレ長岡, 東京国際フォーラム, 新潟市産業振興センター, and スカイホール豊田. Seven venue candidates, nine space details, four directly observed fee observations, and five access/use-condition rows are retained; the old official Tokyo International Forum price PDF is marked `needs_check` rather than represented as current.
+- Wave 40 — staged CAND-131 through CAND-143 from official operator, municipality, prefecture, or designated-manager sources: EDION ARENA OSAKA, Asueアリーナ大阪, 東和薬品RACTABドーム, 京都パルスプラザ, コンベックス岡山, 京セラドーム大阪, 広島市中小企業会館, 北ガスアリーナ札幌46, マエダアリーナ, 福岡国際センター, パークドーム熊本, クラサス武道スポーツセンター, and 高知県立県民体育館. Seasonal surface restrictions and unconfirmed public rate tables remain explicitly scoped or blank.
+- Wave 40 verification — audit-small-theaters, audit, rebuild-db, validate, and diff check passed. Generated catalogue counts are 143 candidates, 228 venue details, 378 price observations, and 102 operation observations.
+- Wave 41 — staged CAND-144 through CAND-156 from official municipal, prefectural, operator, or designated-manager sources: 佐世保市体育文化館, レクザムホール, Panasonic Stadium Suita, サンガスタジアム, ノエビアスタジアム神戸, ヤンマースタジアム長居, YANMAR HANASAKA STADIUM, グランキューブ大阪, フェスティバルホール, オリックス劇場, 神戸国際会館こくさいホール, エディオンピースウイング広島, and 広島サンプラザホール. Outdoor and grass-field candidates are explicitly marked as conditional rather than treated as year-round indoor arenas.
+- Wave 42 — staged CAND-157 through CAND-168 from official primary sources: 日産スタジアム, 横浜スタジアム, 東京武道館, アダストリアみとアリーナ, マロニエプラザ, エムウェーブ, ホワイトリング, ツインメッセ静岡, このはなアリーナ, プリズムホール, よつ葉アリーナ十勝, and CNAアリーナ★あきた. Historic/stale fee tables remain excluded or marked `needs_check`.
+- Wave 43 — staged CAND-169 through CAND-174 from official primary sources: 愛媛県県民文化会館, 岡山シンフォニーホール, 広島国際会議場フェニックスホール, ロームシアター京都, 京都コンサートホール, and ふくやま芸術文化ホール リーデンローズ. This brings the staged catalogue to the explicit +100 target.
+- Wave 43 final verification — audit-small-theaters, audit, rebuild-db, validate (lint, production build, rendered HTML tests), and diff check passed. Generated catalogue counts are 174 candidates, 262 venue details, 387 price observations, and 102 operation observations.
 
 ## Current Wave
 
-- CAND-075 through CAND-081 and the CAND-024 enrichment are publicly deployed. The catalogue has 81 candidates, 139 space details, 337 price observations, and 67 operation observations. Seven new candidates toward the +100 target are complete and public. Public URL: https://venue-monosashi.juggler-arata.chatgpt.site
+- CAND-075 through CAND-081 and the CAND-024 enrichment are publicly deployed. CAND-082 through CAND-174 are in the iCloud staging worktree while the canonical worktree's package-lock change remains untouched. The staged catalogue has 174 candidates, 262 space details, 387 price observations, and 102 operation observations. Exactly one hundred new candidates relative to the 74-candidate baseline are source-complete; seven are public. Public URL: https://venue-monosashi.juggler-arata.chatgpt.site
 
 ## Next Action
 
-- Select CAND-082 after a canonical name/address/official-URL deduplication check. Continue only through an explicit turn or a repaired scheduler.
+- Stop new research: the requested +100 large-event candidate target is reached. Preserve the staging worktree and canonical-worktree package-lock change; reconciliation, commit, and deployment require a separate owner-directed publication step.
 
 ## Blockers
 
 - No data blocker. Operational issue recorded: recurring instructions that reference the former `app-dev` path will fail after the workspace reorganization unless updated to this project path.
 - A runtime attempt to register or update the continuation automation returned `No handler registered for tool: codex_app.automation_update`; therefore no independently scheduled background worker is confirmed active from this session. Continue only through explicit turns or a repaired scheduler, and do not claim that research is running while idle.
+- Public deployment remains a separate, unperformed step. The current public site is still the earlier 81-candidate version and must not be represented as containing CAND-082 through CAND-174.
