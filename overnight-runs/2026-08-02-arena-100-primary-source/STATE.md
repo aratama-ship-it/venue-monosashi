@@ -3,8 +3,8 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-03 20:09 JST
-- Current wave: 7 — CAND-078 and CAND-079 added and validated locally after coordinator-side primary-source checks
+- Last updated: 2026-08-03 20:30 JST
+- Current wave: 8 — CAND-075 through CAND-079 and the CAND-024 enrichment are publicly deployed after source, package, and deployment verification
 
 ## Baseline
 
@@ -36,11 +36,11 @@
 
 ## Current Wave
 
-- CAND-075 is validated and publicly deployed as site version 9. CAND-076 through CAND-079 plus the CAND-024 enrichment are validated locally and committed in the current checkout but are not yet in the public site, so the public site remains at 75 candidates while the local catalogue has 79 candidates, 134 space details, 330 price observations, and 65 operation observations. Five new candidates toward the +100 target are complete locally. Public URL: https://venue-monosashi.juggler-arata.chatgpt.site
+- CAND-075 through CAND-079 and the CAND-024 enrichment are publicly deployed. The public catalogue now has 79 candidates, 134 space details, 330 price observations, and 65 operation observations. Five new candidates toward the +100 target are complete and public. Public URL: https://venue-monosashi.juggler-arata.chatgpt.site
 
 ## Next Action
 
-- Publish the now-validated CAND-075 through CAND-079 batch, including the CAND-024 primary-source enrichment, then select CAND-080 from an underrepresented prefecture after a canonical name/address/official-URL deduplication check.
+- Select CAND-080 from an underrepresented prefecture after a canonical name/address/official-URL deduplication check. Continue only through an explicit turn or a repaired scheduler.
 
 ## Blockers
 

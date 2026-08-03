@@ -2,7 +2,7 @@
 
 ## Outcome
 
-- Active run established to add 100 additional, official-source-backed large-arena or arena-compatible venue candidates nationwide. CAND-075, 北海道立総合体育センター 北海きたえーる, is publicly deployed; CAND-076 and CAND-077 are locally validated, and CAND-024 is enriched. The local catalogue has progressed from 74 to 77 candidates.
+- Active run established to add 100 additional, official-source-backed large-arena or arena-compatible venue candidates nationwide. CAND-075 through CAND-079 are publicly deployed, and CAND-024 is enriched. The public catalogue has progressed from 74 to 79 candidates.
 
 ## Changes
 
@@ -15,7 +15,7 @@
 - Enriched existing CAND-024, 山形国際交流プラザ 山形ビッグウイング, with five exhibition details, one official HTML fee observation, and one operation row. The four official room areas are preserved separately; all-hall seating is a stated comfort-layout capacity. Booking, deposit, cancellation, 24-hour use, and parking facts are taken from the operator's published guidance. A proposed CAND-078 row was removed before publication because it duplicated CAND-024 by official facility identity; it is not counted toward the target.
 - Added CAND-078, セーレン・ドリームアリーナ（福井県営体育館）, with main and sub arena details and its current official booking, payment, and Wi-Fi conditions. The 17m building height is deliberately excluded from ceiling-height comparison because the official page does not identify it as the clear height.
 - Added CAND-079, サンドーム福井, with its official 8,000㎡ / 55m / 9,000-seat event hall, access information, and four full-day conditions covering in-prefecture/out-of-prefecture and weekday/weekend no-admission rates. Those rates are explicitly tax-inclusive on the official HTML page.
-- Updated the public observation date to 2026.08.03 and the rendered count checks to 75 candidates and 325 price observations.
+- Updated the public observation date to 2026.08.03 and the rendered count checks to 79 candidates and 330 price observations.
 
 ## Verification
 
@@ -29,6 +29,7 @@
 - CAND-076 passed 2026-08-03 validation: `npm run audit` errors=0 (the same pre-existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation. It is held for the next meaningful batch deployment; the public site still displays version 9 / 75 candidates.
 - CAND-077 and the CAND-024 enrichment passed 2026-08-03 validation: `npm run audit` errors=0 (the same pre-existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation. CAND-076 and CAND-077 are held for the first five-candidate deployment batch; the public site remains version 9 / 75 candidates.
 - CAND-078 and CAND-079 passed 2026-08-03 validation: `npm run audit` errors=0 (the same pre-existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation. The local catalogue now has 79 candidates, 134 details, 330 price observations, and 65 operation rows; it is ready for the next public batch.
+- Published site version 15 successfully at https://venue-monosashi.juggler-arata.chatgpt.site. The public URL returned the updated 79-candidate and 330-price counts after deployment. The hosting build required a root workspace configuration and a packaged, locally validated web build because the provider's Linux dependency installation omitted optional native bindings; the deployed package contains the same build that passed the local rendered HTML tests.
 
 ## Pre-existing State Preserved
 
