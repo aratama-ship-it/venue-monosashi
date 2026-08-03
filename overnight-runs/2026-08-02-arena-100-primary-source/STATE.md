@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-03 20:03 JST
-- Current wave: 5 — CAND-077 and CAND-078 added and validated locally after coordinator-side primary-source checks
+- Current wave: 5 — CAND-077 added and CAND-024 (existing 山形ビッグウイング) enriched after coordinator-side primary-source checks
 
 ## Baseline
 
@@ -28,16 +28,16 @@
 - Wave 3 — added CAND-076, YSアリーナ八戸（八戸市長根屋内スケート場）, from Hachinohe City official pages. The main arena is recorded as approximately 14,000㎡ / approximately 15m / maximum 9,000 / fixed 3,045 seats, with its seasonal restriction stated explicitly: full-arena use is only from mid-March through mid-June; during the rink period only the approximately 5,600㎡ inner field and spectator seating are usable. The official fee PDF is retained as a source URL but no fee values were transcribed because its tables were not visually inspected in this wave.
 - Wave 3 verification — `npm run audit` errors=0 (one existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation all passed.
 - Wave 4 — added CAND-077, 盛岡タカヤアリーナ（盛岡市総合アリーナ）, from a Morioka City facility page, designated-manager facility page, and official use regulations. The city total of 5,058 seats and the manager's arena viewing-seat count of 3,098 are kept as separate facts; the fixed-seat field is not populated because the city total includes movable seats and standing room. No fee-table value was transcribed without visual inspection.
-- Wave 5 — added CAND-078, 山形国際交流プラザ 山形ビッグウイング, from the official operator pages. The four exhibition rooms are entered individually at their official 935.28㎡ or 980.39㎡ areas, and the official HTML rate for the entire exhibition hall, 09:00–17:00, is recorded. The total 3,500 chair capacity is marked as an official comfort-layout value, not a guaranteed real-event capacity.
+- Wave 5 — enriched existing CAND-024, 山形国際交流プラザ 山形ビッグウイング, from the official operator pages. The four exhibition rooms are entered individually at their official 935.28㎡ or 980.39㎡ areas, and the official HTML rate for the entire exhibition hall, 09:00–17:00, is recorded. The total 3,500 chair capacity is marked as an official comfort-layout value, not a guaranteed real-event capacity. An attempted duplicate CAND-078 was detected by canonical-name matching before publication and removed; this is not counted as a new candidate.
 - Wave 5 verification — `npm run audit` errors=0 (one existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation all passed.
 
 ## Current Wave
 
-- CAND-075 is validated and publicly deployed as site version 9. CAND-076 through CAND-078 are validated locally and committed in the current checkout but are not yet in the public site, so the public site remains at 75 candidates while the local catalogue has 78 candidates, 131 space details, 326 price observations, and 63 operation observations. Four new candidates toward the +100 target are complete locally. Public URL: https://venue-monosashi.juggler-arata.chatgpt.site
+- CAND-075 is validated and publicly deployed as site version 9. CAND-076 and CAND-077 plus the CAND-024 enrichment are validated locally and committed in the current checkout but are not yet in the public site, so the public site remains at 75 candidates while the local catalogue has 77 candidates, 131 space details, 326 price observations, and 63 operation observations. Three new candidates toward the +100 target are complete locally. Public URL: https://venue-monosashi.juggler-arata.chatgpt.site
 
 ## Next Action
 
-- Select CAND-079 from an underrepresented prefecture, verify it independently against official sources, and add it only after a schema/deduplication check. CAND-075 through CAND-079 will form the first meaningful five-candidate deployment batch if all validate.
+- Select CAND-078 from an underrepresented prefecture, verify it independently against official sources, and add it only after a canonical name/address/official-URL deduplication check. CAND-075 through CAND-079 will form the first meaningful five-candidate deployment batch if all validate.
 
 ## Blockers
 

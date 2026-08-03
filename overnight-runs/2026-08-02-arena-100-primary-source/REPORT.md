@@ -2,7 +2,7 @@
 
 ## Outcome
 
-- Active run established to add 100 additional, official-source-backed large-arena or arena-compatible venue candidates nationwide. CAND-075, 北海道立総合体育センター 北海きたえーる, is publicly deployed; CAND-076 through CAND-078 are locally validated. The local catalogue has progressed from 74 to 78 candidates.
+- Active run established to add 100 additional, official-source-backed large-arena or arena-compatible venue candidates nationwide. CAND-075, 北海道立総合体育センター 北海きたえーる, is publicly deployed; CAND-076 and CAND-077 are locally validated, and CAND-024 is enriched. The local catalogue has progressed from 74 to 77 candidates.
 
 ## Changes
 
@@ -12,7 +12,7 @@
 - Added CAND-075 with two arena space-detail rows, four current full-day amateur-sports fee observations, and one access/booking/operation row. Official facts include main arena 3,886㎡ / highest 26m / maximum 10,000 and sub arena 1,647㎡ / highest 22m.
 - Added CAND-076 with its main arena space-detail row and an operation row from Hachinohe City official pages. The 14,000㎡ arena, approximately 15m ceiling, maximum 9,000 capacity, fixed 3,045 seats, 608 accessible parking spaces, loading-door dimensions, booking windows, floor-protection requirement, and seasonal use restriction are recorded only where the city states them. Fee-table values were intentionally not transcribed without visual PDF inspection.
 - Added CAND-077, 盛岡タカヤアリーナ（盛岡市総合アリーナ）, with a detail and operation row sourced from Morioka City, the designated manager, and the manager's official regulations. Its total 5,058-seat city figure is not misrepresented as fixed seating, because the same page says it includes fixed seats, a royal box, movable seats, and standing room.
-- Added CAND-078, 山形国際交流プラザ 山形ビッグウイング, with five exhibition details, one official HTML fee observation, and one operation row. The four official room areas are preserved separately; all-hall seating is a stated comfort-layout capacity. Booking, deposit, cancellation, 24-hour use, and parking facts are taken from the operator's published guidance.
+- Enriched existing CAND-024, 山形国際交流プラザ 山形ビッグウイング, with five exhibition details, one official HTML fee observation, and one operation row. The four official room areas are preserved separately; all-hall seating is a stated comfort-layout capacity. Booking, deposit, cancellation, 24-hour use, and parking facts are taken from the operator's published guidance. A proposed CAND-078 row was removed before publication because it duplicated CAND-024 by official facility identity; it is not counted toward the target.
 - Updated the public observation date to 2026.08.03 and the rendered count checks to 75 candidates and 325 price observations.
 
 ## Verification
@@ -25,7 +25,7 @@
 - CAND-075's current official fee PDF (effective 2026-04-01) was rendered and visually reviewed before transcription. The 2026-08-03 validation passed: `npm run audit` errors=0 (the same pre-existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), and `git diff --check`.
 - Published site version 9 successfully at https://venue-monosashi.juggler-arata.chatgpt.site after pushing the validated source commit and saving the matching build archive.
 - CAND-076 passed 2026-08-03 validation: `npm run audit` errors=0 (the same pre-existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation. It is held for the next meaningful batch deployment; the public site still displays version 9 / 75 candidates.
-- CAND-077 and CAND-078 passed 2026-08-03 validation: `npm run audit` errors=0 (the same pre-existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation. All three local candidates are held for the first five-candidate deployment batch; the public site remains version 9 / 75 candidates.
+- CAND-077 and the CAND-024 enrichment passed 2026-08-03 validation: `npm run audit` errors=0 (the same pre-existing historical warning), `npm run rebuild-db`, `npm run validate` (lint, production build, two rendered HTML tests), `git diff --check`, and active-ledger validation. CAND-076 and CAND-077 are held for the first five-candidate deployment batch; the public site remains version 9 / 75 candidates.
 
 ## Pre-existing State Preserved
 
@@ -38,7 +38,7 @@
 - CAND-075 has no official public confirmation for throwing clearance, floor protection, loading dimensions, event-network specifications, or simultaneous use of the arena and meeting spaces. Its parking total is recorded with the official spectator/visitor restriction rather than treated as general event parking.
 - CAND-076 has no official public confirmation for throwing clearance, floor load, large-vehicle route/holding, event network, food, merchandise, or simultaneous use. Its approximately 14,000㎡ full-arena configuration is seasonal, not treated as year-round availability.
 - CAND-077 has no official public confirmation for height, floor load, loading dimensions, throwing clearance, food, merchandise, event network, or simultaneous use of meeting spaces.
-- CAND-078 has no official public confirmation for height, floor load, loading dimensions, throwing clearance, food, merchandise, event network, or simultaneous use of every exhibition and meeting space. Its pricing tax treatment is not stated on the current official HTML fee page.
+- CAND-024 has no official public confirmation for height, floor load, loading dimensions, throwing clearance, food, merchandise, event network, or simultaneous use of every exhibition and meeting space. Its pricing tax treatment is not stated on the current official HTML fee page.
 
 ## Blockers
 
