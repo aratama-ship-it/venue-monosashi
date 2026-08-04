@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 05:16 JST
+- Last updated: 2026-08-05 05:22 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `a8b8001` (ledger-only commits may follow it)
+- Last data commit: `4f56fdc` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -71,16 +71,17 @@
 | 25 | 2026-08-05 05:05 JST | 奈良・山口・山形・栃木4候補の運用深掘り | 4 operations / 1 detail precision fix | audit 0 errors; generated 230/560 | `0412425` | 奈良の3か月前抽選と9月休止、維新の1,251台・14日前手続・2026年8月から約1年休止、山形の1,200台・120名合宿、日環のWEB予約・時間内撤収を追加。山形を2,200㎡へ精密化 |
 | 26 | 2026-08-05 05:10 JST | 奈良・山形・栃木3候補の現行料金比較深掘り | 21 prices | audit 0 errors; generated 230/581 | `7947160` | 奈良の2026年4月改定、山形の用途・入場料別、日環の税込用途別と照明・空調・放送を追加。日環PDFは画像照合し、休止中の維新は比較対象から除外 |
 | 27 | 2026-08-05 05:16 JST | 茨城・長野・北海道・福島4候補の運用深掘り | 4 operations / 1 candidate risk precision fix | audit 0 errors; generated 230/581; lint OK; tests 3/3 | `a8b8001` | 水戸603台、長野500台・1か月前打合せ、旭川339台・翌月抽選、郡山153台・1か月前予約を追加。水戸・長野PDFは画像照合し、郡山の9月10日までの一般利用中止を明記 |
+| 28 | 2026-08-05 05:22 JST | 長野・北海道2候補の料金比較深掘り | 13 prices / 2 candidate risk precision fixes | audit 0 errors; generated 230/594; duplicate price IDs 0 | `4f56fdc` | ホワイトリングのメイン・サブ・空調・照明・音響、旭川の用途・入場料・営利別を追加。長野は現行公式ページが案内する2019年10月開始表、旭川は2026年9月30日までの現行欄をPDF画像照合。水戸は現行の専用料金表を確認できず数値追加を保留 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 27
+- Last verified wave: wave 28
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `a8b8001` and the worktree contains only known untracked paths, then add current official price comparisons for CAND-160, CAND-163, and CAND-188, which still have no price observations. Preserve effective dates and current-versus-old notices; if current applicability is unclear, hold the numeric value rather than infer it.
+- At the next heartbeat, confirm the current HEAD descends from data commit `4f56fdc` and the worktree contains only known untracked paths, then add official operations observations for 3–5 high-fit candidates that still lack them. Prioritize reservation lead time, parking, load-in, food/retail, connectivity, and temporary closure facts; record only facts supported by current primary sources.
 
 ## Blockers
 
