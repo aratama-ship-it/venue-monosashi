@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 79完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 80完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -172,8 +172,10 @@ ACTIVE — wave 79完了。全国47都道府県・候補230件の目標を達成
 - Wave 78の3波ごとのlintと表示テスト3件は合格したが、同一ページに複数施設の料金表が連続する構造に対し、見出し境界の照合が不足していた。このため大・中・小区分と午前/午後/昼間/夜間料金は東町運動公園のデータとして採用しない。
 - Wave 79: 水戸市スポーツ施設料金ページの施設境界を再監査し、誤帰属3区画・24料金を除去して、東町運動公園の正しい多目的室・会議室18料金へ差し替え（`c28a7ed`）。
 - Wave 79ではHTMLの `block1514` が東町運動公園区画で、`block1514-347` が「多目的室及び会議室」であることを確認。各室種別に1室/2分の1室/4分の1室、アマチュアスポーツ高校生以下/一般、アマチュアスポーツ以外の1時間額を関連付けた。履歴は消さず訂正コミットを追加し、audit 0 errors、生成230/1297、重複ID 0を再確認した。
-- Current local totals: candidates 230 / details 385 / prices 1297 / operations 217.
-- Overnight additions from baseline: candidates +47 / details +114 / prices +907 / operations +115.
+- Wave 80: アダストリアみとアリーナの支援室・照明・放送22料金観測を追加（`f31752f`）。
+- Wave 80では東町運動公園区画内のレスリング/ボクシング/フェンシング場を高校生以下/一般で分離し、放送設備、メインアリーナ11照明区分、サブアリーナ4照明区分を1時間額で追加。観客席欄の「全面半灯」は不自然な原文表記のため意図を補正せず要確認として保持した。
+- Current local totals: candidates 230 / details 385 / prices 1319 / operations 217.
+- Overnight additions from baseline: candidates +47 / details +114 / prices +929 / operations +115.
 
 ## Verification
 
