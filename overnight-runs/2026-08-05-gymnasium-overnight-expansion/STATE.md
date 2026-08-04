@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 07:20 JST
+- Last updated: 2026-08-05 07:26 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `d4d088c` (ledger-only commits may follow it)
+- Last data commit: `82dc190` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -96,16 +96,17 @@
 | 50 | 2026-08-05 07:10 JST | YANMAR HANASAKA STADIUMの現行料金・スタンド区画深掘り | 18 prices / 4 details | audit 0 errors; generated 230/848; duplicate price/detail IDs 0 | `ebeaa45` | グラウンド、4スタンド、映像・音響・照明・競技用具、南北練習室を分離。倍率派生額は作らず公式規定を注記 |
 | 51 | 2026-08-05 07:19 JST | 八戸・盛岡2アリーナの現行料金深掘り | 25 prices | audit 0 errors; generated 230/873; duplicate price IDs 0; lint OK; tests 3/3 | `8930da0` | 八戸2026年7月改定と盛岡2026年4月改定をPDF画像照合。用途・入場料・市内外・曜日・時間帯・附属設備を分離 |
 | 52 | 2026-08-05 07:20 JST | 横浜・広島2大規模アリーナの現行料金深掘り | 25 prices / 2 candidate precision fixes | audit 0 errors; generated 230/898; duplicate price IDs 0 | `d4d088c` | 横浜2026年4月現在表と広島2024年4月施行現行表を画像照合。税別/税込、用途、入場料、時間帯を分離 |
+| 53 | 2026-08-05 07:26 JST | 横浜BUNTAIの現行料金深掘り | 19 prices / 1 candidate precision fix | audit 0 errors; generated 230/917; duplicate price IDs 0 | `82dc190` | 2026年1月版A/B/C区分の本番・準備と空調・音響・照明・大型映像を追加。沖縄・TOYOTAの非公開料金は保留 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 52
+- Last verified wave: wave 53
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `d4d088c` and the worktree contains only known untracked paths, then run wave 53 against the next high-fit arena price gaps, prioritizing 沖縄サントリーアリーナ, TOYOTA ARENA TOKYO and 横浜BUNTAI. Use only current official public rate tables, and record inquiry-only or stale rates as holds rather than numeric observations. Finish with audit and generated-data verification.
+- At the next heartbeat, confirm the current HEAD descends from data commit `82dc190` and the worktree contains only known untracked paths, then run wave 54 against the next high-fit arena price gaps, prioritizing 京王アリーナTOKYO, GLION ARENA KOBE and 島津アリーナ京都. Use current operator or municipality rate tables only, preserve certificate or stale-document issues as holds, and finish with audit, generated-data verification and the 3-wave lint/test checkpoint.
 
 ## Blockers
 

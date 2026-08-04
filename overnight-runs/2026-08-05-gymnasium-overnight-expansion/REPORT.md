@@ -118,8 +118,10 @@ ACTIVE — wave 48完了。全国47都道府県・候補230件の目標を達成
 - Wave 51では八戸市の2026年7月1日現在表から、リンク解氷時アリーナのアマチュア/催物/興行、入場料有無、放送・競技用具を分離。盛岡は2026年4月1日改定表から、全面アマチュアの市民/市民以外・曜日・時間帯、集会等、興行、冷暖房を分離した。両PDFをページ画像で照合し、盛岡の税表記は推測せず `not_stated` を保持。3波ごとのlint・表示テストも合格した。
 - Wave 52: 横浜アリーナ7件、広島グリーンアリーナ18件、計25料金観測と2候補の現行性注意を更新（`d4d088c`）。
 - Wave 52では横浜の2026年4月1日現在表から、本番/設営撤去/休演の平日・土日祝12時間と延長を税別で分離。広島は現行掲載中の2024年4月施行表から、大・小アリーナのアマチュア/非アマチュア、入場料有無、時間帯、9〜21時参考額を税込で分離した。抽出テキストの行順混線を採用せず、macOS標準レンダリング画像で金額対応を照合した。
-- Current local totals: candidates 230 / details 360 / prices 898 / operations 216.
-- Overnight additions from baseline: candidates +47 / details +89 / prices +508 / operations +114.
+- Wave 53: 横浜BUNTAIの19料金観測と候補精度を更新（`82dc190`）。
+- Wave 53では2026年1月版公式ガイドから、A区分（非営利・入場無料）、B区分（非興行）、C区分（営利興行）の平日/土日祝、本番/準備を分離し、空調、常設音響、常設照明、大型映像も用途区分別に追加した。搬入口4m×4m・11t車対応も候補へ反映。沖縄サントリーアリーナとTOYOTA ARENA TOKYOは料金が問い合わせ又は資料パスワード制のため数値追加を保留した。
+- Current local totals: candidates 230 / details 360 / prices 917 / operations 216.
+- Overnight additions from baseline: candidates +47 / details +89 / prices +527 / operations +114.
 
 ## Verification
 
