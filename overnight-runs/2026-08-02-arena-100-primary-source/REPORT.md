@@ -2,7 +2,7 @@
 
 ## Outcome
 
-- Complete. One hundred additional, official-source-backed large-arena or arena-compatible venue candidates were added nationwide. On 2026-08-05 the 174-candidate catalogue and finalized 594-row small-theater ledger were integrated into the canonical local branch. A cache-busted public check already returned 174 candidates and 387 price observations; the finalized small-theater asset remains a separate publication step.
+- Complete. One hundred additional, official-source-backed large-arena or arena-compatible venue candidates were added nationwide. On 2026-08-05 the 174-candidate catalogue and finalized 594-row small-theater ledger were integrated, pushed, and published. Content-hashed small-theater assets prevent the prior stable-path CDN cache from serving an older ledger.
 
 ## Changes
 
@@ -51,6 +51,7 @@
 - CAND-144 through CAND-174 passed final validation in the iCloud staging worktree on 2026-08-04. The staged generated catalogue is 174 candidates, 262 venue details, 387 price observations, and 102 operation observations: exactly +100 candidates from the 74-candidate baseline. `npm run audit-small-theaters`, `npm run audit`, SQLite rebuild, lint, production build, both rendered HTML tests, and `git diff --check` all passed; the only audit warning remains the pre-existing `historical-events.csv:173` planned row with no venue name. New venue research stops at this requested target. The current public site is not updated by this result.
 - Published site version 18 successfully at https://venue-monosashi.juggler-arata.chatgpt.site. A cache-busted public-page verification returned 81 candidate facilities and 337 price observations.
 - On 2026-08-05 the canonical local branch was fast-forwarded to the 174-candidate and finalized small-theater commits while preserving the pre-existing `package-lock.json` change. The canonical rerun passed both audits, SQLite rebuild, lint, production build, both rendered HTML tests, `git diff --check`, and final run-ledger validation.
+- Sites publication completed on 2026-08-05. Anonymous verification returned 174 candidates, 387 price observations, the versioned 594-row small-theater CSV hash `b5d4ca3c3b10f24570991ad9617b9958f67114db83267cfd531dda31a8d7edd0`, and the final status counts 433/20/89/24/28 with `pending=0`.
 
 ## Pre-existing State Preserved
 
@@ -72,7 +73,7 @@
 
 - Previous run documents retain a former project location. The repository itself was found and is healthy at `web-projects/monosashi/venue-monosashi`; future scheduled prompts must use that path.
 - The runtime returned `No handler registered for tool: codex_app.automation_update` when attempting to create or update the continuation automation. No independent background execution is confirmed from this session; work must resume through an explicit turn or a repaired scheduler.
-- On 2026-08-04 an unrecorded `package-lock.json` change removed the explicit Linux `@rolldown/binding-linux-x64-gnu` optional package entry used by the known Sites build workaround. The 2026-08-05 canonical integration preserved that change without modification; local validation passes, but a future Sites build should resolve the lockfile ownership and intended Linux binding first.
+- The Linux `@rolldown/binding-linux-x64-gnu` lockfile entry was restored on 2026-08-05 to match the declared optional dependency. The subsequent local and Sites builds succeeded.
 
 ## Morning Decisions
 

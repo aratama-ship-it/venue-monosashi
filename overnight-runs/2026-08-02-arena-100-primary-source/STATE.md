@@ -62,14 +62,14 @@
 
 ## Current Wave
 
-- 2026-08-05 reconciliation: CAND-075 through CAND-174 are integrated into the canonical local branch. The catalogue has 174 candidates, 262 space details, 387 price observations, and 102 operation observations. A cache-busted public check already returned 174 candidates and 387 price observations before this reconciliation. The finalized small-theater ledger is integrated locally but still requires a separate public asset update.
+- 2026-08-05 reconciliation and publication complete: CAND-075 through CAND-174 are integrated into the canonical branch and published. The public catalogue has 174 candidates, 262 space details, 387 price observations, and 102 operation observations. The finalized 594-row small-theater ledger is published through content-hashed CSV and JSON assets; anonymous verification returned `verified_primary=433`, `primary_partial=20`, `official_not_found=89`, `ambiguous=24`, `blocked=28`, and `pending=0`.
 
 ## Next Action
 
-- Stop new research: the requested +100 large-event candidate target is reached and canonical validation is complete. Preserve the pre-existing `package-lock.json` change, then treat publication of the finalized small-theater asset as a separate owner-directed step.
+- Complete. Stop new research: the requested +100 large-event candidate target, canonical integration, validation, source push, and public deployment are complete.
 
 ## Blockers
 
 - No data blocker. Operational issue recorded: recurring instructions that reference the former `app-dev` path will fail after the workspace reorganization unless updated to this project path.
 - A runtime attempt to register or update the continuation automation returned `No handler registered for tool: codex_app.automation_update`; therefore no independently scheduled background worker is confirmed active from this session. Continue only through explicit turns or a repaired scheduler, and do not claim that research is running while idle.
-- 2026-08-04: `package-lock.json` differs from the last committed wave by removing the explicit Linux `@rolldown/binding-linux-x64-gnu` optional package entry. This change was not recorded by this run and affects the known Sites build workaround. It is preserved without modification pending an ownership decision.
+- 2026-08-05: the Linux `@rolldown/binding-linux-x64-gnu` lockfile entry was restored to match the declared optional dependency before the successful Sites build.
