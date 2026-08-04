@@ -126,8 +126,10 @@ ACTIVE — wave 48完了。全国47都道府県・候補230件の目標を達成
 - Wave 55では体育館公式の2025年4月1日改定表から、第1・第2競技場の全面全日額を、非営利の入場料なし/あり、アマチュアスポーツ/その他催物、営利目的、平日/土日休日で分離した。PDF画像と抽出テキストを照合し、準備撤去は該当額の2分の1、冷暖房は実費加算と注記。税表記は推測せず `not_stated` とし、公式サイトのHTTPS証明書ホスト名不一致は候補注意に明記した。
 - Wave 56: 島津アリーナ京都の13附属設備料金観測を追加（`02684cf`）。
 - Wave 56では同じ2025年4月1日改定の公式附属設備表から、バスケット・バレーボール・ハンドボール用具、得点表示器、舞台、拡声装置、マイク、大型映像の全日/時間額、移動観覧席、第1・第2競技場冷暖房を分離した。PDF画像と抽出テキストを照合し、税表記と操作人件費は推測せず注記・除外に保持した。
-- Current local totals: candidates 230 / details 360 / prices 982 / operations 216.
-- Overnight additions from baseline: candidates +47 / details +89 / prices +592 / operations +114.
+- Wave 57: 京王アリーナTOKYOの24スポーツ料金観測を追加（`0e2b5d2`）。
+- Wave 57ではメインアリーナのスポーツ区分A/B・有料入場・7,000円未満/以上・平日/土日祝の全日額を補完し、サブアリーナはA/B区分の入場無料全面/半面と有料入場帯を追加した。現行公式PDF画像との照合を再利用し、料金観測は1,006件に到達。3波ごとのlintと表示テスト3件も合格した。
+- Current local totals: candidates 230 / details 360 / prices 1006 / operations 216.
+- Overnight additions from baseline: candidates +47 / details +89 / prices +616 / operations +114.
 
 ## Verification
 

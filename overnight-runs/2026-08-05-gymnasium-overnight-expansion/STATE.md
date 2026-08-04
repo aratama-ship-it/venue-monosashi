@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 07:33 JST
+- Last updated: 2026-08-05 07:36 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `02684cf` (ledger-only commits may follow it)
+- Last data commit: `0e2b5d2` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -100,16 +100,17 @@
 | 54 | 2026-08-05 07:27 JST | 京王アリーナTOKYOの現行料金深掘り | 32 prices / 1 candidate precision fix | audit 0 errors; generated 230/949; duplicate price IDs 0; lint OK; tests 3/3 | `90558dc` | メイン/サブのスポーツ・商業イベント全日と映像・音響・照明・仮設席等を公式PDF画像で照合。税込表記を反映 |
 | 55 | 2026-08-05 07:31 JST | 島津アリーナ京都の現行料金深掘り | 20 prices / 1 candidate / 1 operation precision fix | audit 0 errors; generated 230/969; duplicate price IDs 0 | `3a58917` | 2025年4月改定表を画像照合。第1/第2競技場の用途・入場料・営利・曜日別全日額を分離し、証明書不整合を注意として保持 |
 | 56 | 2026-08-05 07:33 JST | 島津アリーナ京都の現行附属設備料金深掘り | 13 prices | audit 0 errors; generated 230/982; duplicate price IDs 0 | `02684cf` | 2025年4月改定表から競技用具・舞台・音響・映像・移動席・第1/第2冷暖房を画像照合して追加 |
+| 57 | 2026-08-05 07:36 JST | 京王アリーナTOKYOのスポーツ料金補完 | 24 prices | audit 0 errors; generated 230/1006; duplicate price IDs 0; lint OK; tests 3/3 | `0e2b5d2` | メイン有料観戦スポーツとサブのA/B区分・全面/半面・入場料帯を補完し、料金観測1000件を突破 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 56
+- Last verified wave: wave 57
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `02684cf` and the worktree contains only known untracked paths, then run wave 57 against the remaining high-value all-day sports admission and sub-arena benchmarks in 京王アリーナTOKYO's current official rate table. Finish with audit, generated-data verification, and the 3-wave lint/test checkpoint. Keep GLION ARENA KOBE on hold unless a clearly current public rate table is found.
+- At the next heartbeat, confirm the current HEAD descends from data commit `0e2b5d2` and the worktree contains only known untracked paths, then identify the next A-ranked arena/sports candidates without price observations and run wave 58 against the best current primary-source rate table. Prefer a new venue over further time-band expansion, and finish with audit and generated-data verification.
 
 ## Blockers
 
