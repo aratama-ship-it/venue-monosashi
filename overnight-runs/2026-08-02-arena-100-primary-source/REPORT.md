@@ -2,7 +2,7 @@
 
 ## Outcome
 
-- Active run established to add 100 additional, official-source-backed large-arena or arena-compatible venue candidates nationwide. CAND-075 through CAND-081 are publicly deployed and CAND-024 is enriched. The public catalogue has progressed from 74 to 81 candidates.
+- Complete. One hundred additional, official-source-backed large-arena or arena-compatible venue candidates were added nationwide. On 2026-08-05 the 174-candidate catalogue and finalized 594-row small-theater ledger were integrated into the canonical local branch. A cache-busted public check already returned 174 candidates and 387 price observations; the finalized small-theater asset remains a separate publication step.
 
 ## Changes
 
@@ -50,6 +50,7 @@
 - CAND-124 through CAND-143 passed in the iCloud staging worktree on 2026-08-04: small-theater audit errors=0, venue audit errors=0 (one pre-existing historical warning), SQLite rebuild, lint, production build, two rendered HTML tests, and git diff --check all passed. The staged generated catalogue is now 143 candidates, 228 venue details, 378 price observations, and 102 operation observations. The 2023-start Tokyo International Forum price PDF is retained as `needs_check`, and no fee was transcribed for the inaccessible current fee download at 福岡国際センター.
 - CAND-144 through CAND-174 passed final validation in the iCloud staging worktree on 2026-08-04. The staged generated catalogue is 174 candidates, 262 venue details, 387 price observations, and 102 operation observations: exactly +100 candidates from the 74-candidate baseline. `npm run audit-small-theaters`, `npm run audit`, SQLite rebuild, lint, production build, both rendered HTML tests, and `git diff --check` all passed; the only audit warning remains the pre-existing `historical-events.csv:173` planned row with no venue name. New venue research stops at this requested target. The current public site is not updated by this result.
 - Published site version 18 successfully at https://venue-monosashi.juggler-arata.chatgpt.site. A cache-busted public-page verification returned 81 candidate facilities and 337 price observations.
+- On 2026-08-05 the canonical local branch was fast-forwarded to the 174-candidate and finalized small-theater commits while preserving the pre-existing `package-lock.json` change. The canonical rerun passed both audits, SQLite rebuild, lint, production build, both rendered HTML tests, `git diff --check`, and final run-ledger validation.
 
 ## Pre-existing State Preserved
 
@@ -71,6 +72,7 @@
 
 - Previous run documents retain a former project location. The repository itself was found and is healthy at `web-projects/monosashi/venue-monosashi`; future scheduled prompts must use that path.
 - The runtime returned `No handler registered for tool: codex_app.automation_update` when attempting to create or update the continuation automation. No independent background execution is confirmed from this session; work must resume through an explicit turn or a repaired scheduler.
+- On 2026-08-04 an unrecorded `package-lock.json` change removed the explicit Linux `@rolldown/binding-linux-x64-gnu` optional package entry used by the known Sites build workaround. The 2026-08-05 canonical integration preserved that change without modification; local validation passes, but a future Sites build should resolve the lockfile ownership and intended Linux binding first.
 
 ## Morning Decisions
 

@@ -62,14 +62,14 @@
 
 ## Current Wave
 
-- CAND-075 through CAND-081 and the CAND-024 enrichment are publicly deployed. CAND-082 through CAND-174 are in the iCloud staging worktree while the canonical worktree's package-lock change remains untouched. The staged catalogue has 174 candidates, 262 space details, 387 price observations, and 102 operation observations. Exactly one hundred new candidates relative to the 74-candidate baseline are source-complete; seven are public. Public URL: https://venue-monosashi.juggler-arata.chatgpt.site
+- 2026-08-05 reconciliation: CAND-075 through CAND-174 are integrated into the canonical local branch. The catalogue has 174 candidates, 262 space details, 387 price observations, and 102 operation observations. A cache-busted public check already returned 174 candidates and 387 price observations before this reconciliation. The finalized small-theater ledger is integrated locally but still requires a separate public asset update.
 
 ## Next Action
 
-- Stop new research: the requested +100 large-event candidate target is reached. Preserve the staging worktree and canonical-worktree package-lock change; reconciliation, commit, and deployment require a separate owner-directed publication step.
+- Stop new research: the requested +100 large-event candidate target is reached and canonical validation is complete. Preserve the pre-existing `package-lock.json` change, then treat publication of the finalized small-theater asset as a separate owner-directed step.
 
 ## Blockers
 
 - No data blocker. Operational issue recorded: recurring instructions that reference the former `app-dev` path will fail after the workspace reorganization unless updated to this project path.
 - A runtime attempt to register or update the continuation automation returned `No handler registered for tool: codex_app.automation_update`; therefore no independently scheduled background worker is confirmed active from this session. Continue only through explicit turns or a repaired scheduler, and do not claim that research is running while idle.
-- Public deployment remains a separate, unperformed step. The current public site is still the earlier 81-candidate version and must not be represented as containing CAND-082 through CAND-174.
+- 2026-08-04: `package-lock.json` differs from the last committed wave by removing the explicit Linux `@rolldown/binding-linux-x64-gnu` optional package entry. This change was not recorded by this run and affects the known Sites build workaround. It is preserved without modification pending an ownership decision.
