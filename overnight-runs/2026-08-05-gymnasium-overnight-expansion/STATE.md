@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 07:10 JST
+- Last updated: 2026-08-05 07:19 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `ebeaa45` (ledger-only commits may follow it)
+- Last data commit: `8930da0` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -94,16 +94,17 @@
 | 48 | 2026-08-05 06:58 JST | 青森・滋賀・和歌山・広島4アリーナの現行料金深掘り | 37 prices / 1 detail | audit 0 errors; generated 230/830; duplicate price IDs 0; lint OK; tests 3/3 | `4cc8c7a` | 青森の合算料金、滋賀の時間帯別、和歌山の2022適用現行案内、サンチェリーの分割・附属設備を追加 |
 | 49 | 2026-08-05 07:04 JST | 東京・兵庫・大阪・広島4ドーム/スタジアムの運用・区画深掘り | 4 operations / 3 details / 2 candidate precision fixes | audit 0 errors; generated 230/830; duplicate detail/operation IDs 0 | `402e4eb` | arena/sports-pattern未整備4候補を補完。長居24,665/20,000人の公式内不一致と広島利用案内の古さを保持 |
 | 50 | 2026-08-05 07:10 JST | YANMAR HANASAKA STADIUMの現行料金・スタンド区画深掘り | 18 prices / 4 details | audit 0 errors; generated 230/848; duplicate price/detail IDs 0 | `ebeaa45` | グラウンド、4スタンド、映像・音響・照明・競技用具、南北練習室を分離。倍率派生額は作らず公式規定を注記 |
+| 51 | 2026-08-05 07:19 JST | 八戸・盛岡2アリーナの現行料金深掘り | 25 prices | audit 0 errors; generated 230/873; duplicate price IDs 0; lint OK; tests 3/3 | `8930da0` | 八戸2026年7月改定と盛岡2026年4月改定をPDF画像照合。用途・入場料・市内外・曜日・時間帯・附属設備を分離 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 50
+- Last verified wave: wave 51
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `ebeaa45` and the worktree contains only known untracked paths, then run wave 51 against high-fit arena candidates that still lack price observations, beginning with YSアリーナ八戸 and 盛岡タカヤアリーナ. Use only current city or designated-manager rate tables; hold HAPPINESS ARENA and 東京有明アリーナ if public external-hire rates are absent or stale. Finish with audit, generated-data verification and the 3-wave lint/test checkpoint.
+- At the next heartbeat, confirm the current HEAD descends from data commit `8930da0` and the worktree contains only known untracked paths, then run wave 52 against high-fit arena candidates that still lack price observations, prioritizing 横浜アリーナ and 広島グリーンアリーナ where current official public rate tables can be found. Check HAPPINESS ARENA and 東京有明アリーナ only for current public external-hire rates; do not reuse stale or inquiry-only values. Finish with audit and generated-data verification.
 
 ## Blockers
 
