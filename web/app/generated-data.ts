@@ -6,13 +6,13 @@ export const venueData = {
     "venues": 230,
     "details": 318,
     "prices": 479,
-    "operations": 145,
+    "operations": 149,
     "budgetScenarios": 13,
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-05",
-      "observationCount": 1542,
-      "venueObservationCount": 955,
+      "observationCount": 1546,
+      "venueObservationCount": 959,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -14425,10 +14425,10 @@ export const venueData = {
       "strengths": "指定管理者の公式案内はメインアリーナ約3,160㎡・固定3,176席・移動1,824席・車いす42席、サブアリーナ約1,730㎡・固定696席、駐車約500台、現行の専用利用料金と予約手順を掲載",
       "cautions": "天井高、床荷重、搬入寸法、投擲、催事専有回線、空き状況は要確認。非スポーツ利用は別区分・倍率の確認が必要",
       "sourceUrl": "https://www.fukuoka-city-arena.jp/about/index.html",
-      "observedAt": "2026-08-04",
+      "observedAt": "2026-08-05",
       "detailCount": 2,
       "priceCount": 1,
-      "operationCount": 0,
+      "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
       "historicalSeries": [],
@@ -14460,7 +14460,19 @@ export const venueData = {
         }
       ],
       "budgetScenarios": [],
-      "operation": null,
+      "operation": {
+        "station": "福岡市総合体育館バス停",
+        "walkMinutes": 1,
+        "stationAccess": "西鉄バス福岡市総合体育館バス停から徒歩約1分。JR千早駅からバス約15分、天神から約25分、博多バスターミナルから約30〜45分",
+        "airportAccess": "福岡空港から地下鉄空港線で博多駅まで約5分、その後バス等を利用",
+        "parkingSpaces": 500,
+        "largeVehicleAccess": "yes",
+        "loadingAccess": "conditional",
+        "bookingOpenMonths": null,
+        "setupPolicy": "専用利用は利用者登録・抽選・許可申請・支払・事前打合せを経る。大会・イベント・興行は搬入出口と持込機材を含め、企画確定前に施設スタッフと打合せ。多数来場時は主催者側で警備を行う",
+        "networkPolicy": "unknown",
+        "note": "駐車場は一般489台・障がい者用7台・おもいやり4台の計500台。バス駐車料金あり。駐車場専用利用と大会・イベント時は事前打合せ。連続利用は利用日ごとの受付が必要。飲食、催事専有回線、予約開始時期は要確認"
+      },
       "spaces": [
         {
           "id": "fukuoka-main",
@@ -15809,10 +15821,10 @@ export const venueData = {
       "strengths": "指定管理者の公式案内はメイン競技場約3,570㎡・有効天井高12.5m（中央19m）・定員4,048（固定2,028・車いす20・可動2,000）、コンサート・各種イベント対応、現行料金・予約条件を掲載",
       "cautions": "中央19mは有効天井高12.5mと区別する。最大5,000人の別表記、床荷重、搬入寸法、投擲、催事専有回線、空き状況は要確認",
       "sourceUrl": "https://budo.oita-sportspark.jp/facility/",
-      "observedAt": "2026-08-04",
+      "observedAt": "2026-08-05",
       "detailCount": 1,
       "priceCount": 1,
-      "operationCount": 0,
+      "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
       "historicalSeries": [],
@@ -15844,7 +15856,19 @@ export const venueData = {
         }
       ],
       "budgetScenarios": [],
-      "operation": null,
+      "operation": {
+        "station": "大分駅",
+        "walkMinutes": null,
+        "stationAccess": "大分駅からタクシー約25分、高城駅から約15分。大分スポーツ公園内",
+        "airportAccess": "大分空港から空港特急バス等で大分方面へ。公式ページに交通機関別ルート案内あり",
+        "parkingSpaces": 5000,
+        "largeVehicleAccess": "yes",
+        "loadingAccess": "unknown",
+        "bookingOpenMonths": 3,
+        "setupPolicy": "地域・学校のスポーツ大会やその他イベントは利用日の3か月前から受付。大規模大会は規模により受付時期が異なるため日程決定時に問い合わせ。準備・片付け・モップ掛けも利用時間に含む",
+        "networkPolicy": "unknown",
+        "note": "大分スポーツ公園内に約5,000台分の駐車場。D駐車場は普通車・バス用。閉館後は公園門扉施錠前に速やかな出庫が必要。搬入、飲食、物販、催事専有回線、連続利用は要確認"
+      },
       "spaces": [
         {
           "id": "oita-main",
@@ -16723,10 +16747,10 @@ export const venueData = {
       "strengths": "指定管理者の公式案内は大武道場1,972㎡・観覧席3,728席（固定1,728・フロア2,000）、全日料金、団体登録・準備片付けを含む利用条件を掲載",
       "cautions": "3,728席は固定席とフロア席を含む。天井高、床荷重、投擲、搬入寸法、催事専有回線、空き状況は要確認",
       "sourceUrl": "https://www.tef.or.jp/tb/budo/",
-      "observedAt": "2026-08-04",
+      "observedAt": "2026-08-05",
       "detailCount": 1,
       "priceCount": 1,
-      "operationCount": 0,
+      "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
       "historicalSeries": [],
@@ -16758,7 +16782,19 @@ export const venueData = {
         }
       ],
       "budgetScenarios": [],
-      "operation": null,
+      "operation": {
+        "station": "東京メトロ綾瀬駅",
+        "walkMinutes": 5,
+        "stationAccess": "東京メトロ千代田線綾瀬駅東口から徒歩約5分。京成タウンバス綾瀬駅停留所からも徒歩約5分",
+        "airportAccess": null,
+        "parkingSpaces": 70,
+        "largeVehicleAccess": "no",
+        "loadingAccess": "unknown",
+        "bookingOpenMonths": null,
+        "setupPolicy": "初回は5名以上で利用団体登録。施設予約システムで申込み、一部施設は窓口抽選。国際・全国・全都的なスポーツ大会やイベントには優先受付あり。利用1か月前以降の申込みは申込日から1週間以内に全額支払",
+        "networkPolicy": "unknown",
+        "note": "地下駐車場70台。車長5mまたは車高2.6m超の車両は駐車不可で、貸切や満車の場合あり。大会主催者の駐車割引は事前相談。搬入、飲食、物販、催事専有回線、連続利用は要確認"
+      },
       "spaces": [
         {
           "id": "tokyo-budo-main",
@@ -17989,7 +18025,7 @@ export const venueData = {
       "observedAt": "2026-08-05",
       "detailCount": 1,
       "priceCount": 1,
-      "operationCount": 0,
+      "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
       "historicalSeries": [],
@@ -18021,7 +18057,19 @@ export const venueData = {
         }
       ],
       "budgetScenarios": [],
-      "operation": null,
+      "operation": {
+        "station": "総合スポーツセンター前バス停",
+        "walkMinutes": null,
+        "stationAccess": "金沢駅から北陸鉄道バスで総合スポーツセンター前下車",
+        "airportAccess": "金沢駅金沢港口から車で約20分",
+        "parkingSpaces": null,
+        "largeVehicleAccess": "unknown",
+        "loadingAccess": "unknown",
+        "bookingOpenMonths": 3,
+        "setupPolicy": "窓口予約は電話不可。団体ID取得後に施設予約サービスから申込み可能。インターネット予約は利用月3か月前の22日から。大会・イベントは遅くとも3週間前までに打合せし、終了後は全使用エリアを清掃して施設スタッフの点検を受ける",
+        "networkPolicy": "unknown",
+        "note": "施設内無料駐車場あり、満車時は西部緑地公園内駐車場を利用。臨時店舗は県スポーツ振興課への申請と平面図・レイアウト添付が必要。駐車台数、大型車、搬入、飲食、催事専有回線、連続利用は要確認"
+      },
       "spaces": [
         {
           "id": "ishikawa-main",
