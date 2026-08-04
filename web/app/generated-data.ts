@@ -4,15 +4,15 @@ export const venueData = {
   "stats": {
     "historical": 225,
     "venues": 230,
-    "details": 376,
+    "details": 382,
     "prices": 1241,
     "operations": 217,
     "budgetScenarios": 13,
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-05",
-      "observationCount": 2434,
-      "venueObservationCount": 1847,
+      "observationCount": 2440,
+      "venueObservationCount": 1853,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -27067,7 +27067,7 @@ export const venueData = {
       "cautions": "収容5,000人は固定・電動式可動・手動式可動席等を含む。追加料金はメイン全面1時間額とスイートルームのみ。改正条例の正確な施行日は未観測だが公布後4か月以内の規則指定。床荷重、投擲、搬入寸法、催事専有回線、空き状況は要確認",
       "sourceUrl": "https://www.city.mito.lg.jp/page/1015.html",
       "observedAt": "2026-08-05",
-      "detailCount": 5,
+      "detailCount": 11,
       "priceCount": 9,
       "operationCount": 1,
       "historicalCompletedCount": 0,
@@ -27260,8 +27260,8 @@ export const venueData = {
           "type": "arena",
           "area": 997,
           "ceiling": 12.5,
-          "capacityTheater": null,
-          "capacityFixed": null,
+          "capacityTheater": 198,
+          "capacityFixed": 192,
           "stageType": "",
           "practiceUse": "yes"
         },
@@ -27294,6 +27294,72 @@ export const venueData = {
           "area": null,
           "ceiling": null,
           "capacityTheater": 9,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "no"
+        },
+        {
+          "id": "mito-wrestling",
+          "name": "レスリング場",
+          "type": "studio",
+          "area": 410,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes"
+        },
+        {
+          "id": "mito-fencing",
+          "name": "フェンシング場",
+          "type": "studio",
+          "area": 261,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes"
+        },
+        {
+          "id": "mito-boxing",
+          "name": "ボクシング場",
+          "type": "studio",
+          "area": 317,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes"
+        },
+        {
+          "id": "mito-training",
+          "name": "トレーニング室",
+          "type": "studio",
+          "area": 331,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes"
+        },
+        {
+          "id": "mito-multipurpose",
+          "name": "多目的室",
+          "type": "meeting_room",
+          "area": 377,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "conditional"
+        },
+        {
+          "id": "mito-meeting",
+          "name": "会議室",
+          "type": "meeting_room",
+          "area": 400,
+          "ceiling": null,
+          "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
           "practiceUse": "no"
