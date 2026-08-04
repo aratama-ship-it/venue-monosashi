@@ -6,13 +6,13 @@ export const venueData = {
     "venues": 230,
     "details": 318,
     "prices": 511,
-    "operations": 153,
+    "operations": 157,
     "budgetScenarios": 13,
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-05",
-      "observationCount": 1582,
-      "venueObservationCount": 995,
+      "observationCount": 1586,
+      "venueObservationCount": 999,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -15639,10 +15639,10 @@ export const venueData = {
       "strengths": "札幌市・指定管理者の公式案内はアリーナ2,612㎡・固定1,356席・可動1,104席、平日全面専用料金、事前申込・抽選・設営撤去を含む利用条件を掲載",
       "cautions": "市の2,500席表記は可動席等を含むため固定席数とは区別する。天井高、床荷重、搬入寸法、投擲、催事専有回線、空き状況は要確認",
       "sourceUrl": "https://www.city.sapporo.jp/sports/sisetsu/institution/gym/chuo.html",
-      "observedAt": "2026-08-04",
+      "observedAt": "2026-08-05",
       "detailCount": 1,
       "priceCount": 1,
-      "operationCount": 0,
+      "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
       "historicalSeries": [],
@@ -15674,7 +15674,19 @@ export const venueData = {
         }
       ],
       "budgetScenarios": [],
-      "operation": null,
+      "operation": {
+        "station": "地下鉄バスセンター前駅",
+        "walkMinutes": 10,
+        "stationAccess": "地下鉄東西線バスセンター前駅8番出口から徒歩約10分。地下鉄さっぽろ駅22番出口から徒歩約12分、JR札幌駅南口から徒歩約18分",
+        "airportAccess": null,
+        "parkingSpaces": 100,
+        "largeVehicleAccess": "unknown",
+        "loadingAccess": "unknown",
+        "bookingOpenMonths": null,
+        "setupPolicy": "unknown",
+        "networkPolicy": "unknown",
+        "note": "札幌市公式案内は駐車場約100台。専用利用は公共施設予約情報システムまたは施設窓口で抽選申込み・利用申込み。大型車、搬入、設営撤去、飲食、物販、催事専有回線、連続利用、予約開始時期は要確認"
+      },
       "spaces": [
         {
           "id": "sapporo46-main",
@@ -16103,10 +16115,10 @@ export const venueData = {
       "strengths": "指定管理者の公式案内は主競技場1階1,945.30㎡・移動3,072席・2階固定1,572席・定員4,644・ステージ109.20㎡、各種催物利用、現行用途別料金・物販申請・Wi-Fi申請を掲載",
       "cautions": "定員4,644の構成には移動席を含む。天井高、床荷重、搬入寸法、投擲、催事専有回線の性能、空き状況は要確認",
       "sourceUrl": "https://www.kochi-kenmin.org/faci_1/",
-      "observedAt": "2026-08-04",
+      "observedAt": "2026-08-05",
       "detailCount": 1,
       "priceCount": 1,
-      "operationCount": 0,
+      "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
       "historicalSeries": [],
@@ -16138,7 +16150,19 @@ export const venueData = {
         }
       ],
       "budgetScenarios": [],
-      "operation": null,
+      "operation": {
+        "station": "桟橋通二丁目停留所",
+        "walkMinutes": 1,
+        "stationAccess": "JR高知駅から路面電車で約8分、桟橋通二丁目下車徒歩約1分",
+        "airportAccess": "高知龍馬空港から空港連絡バスで約40分、はりまや橋で路面電車に乗換",
+        "parkingSpaces": 82,
+        "largeVehicleAccess": "conditional",
+        "loadingAccess": "unknown",
+        "bookingOpenMonths": 2,
+        "setupPolicy": "unknown",
+        "networkPolicy": "yes",
+        "note": "普通車82台（身体障害者用3台）。マイクロバスは要予約で通常3台、詰めて6台まで。より大きいバスは駐車不可。通常予約は当月・翌月を先着、翌々月を抽選し、主競技場2区分以上と大会・催物・年間利用調整は電話相談。物品販売とWi-Fiは申請制。館内販売の弁当は利用者・関係者限定。搬入、連続利用は要確認"
+      },
       "spaces": [
         {
           "id": "kochi-main",
@@ -16169,10 +16193,10 @@ export const venueData = {
       "strengths": "佐世保市の公式案内と料金PDFは大体育室1,920㎡・固定2,058席・移動3,000席、サブ体育室768㎡、2024年4月1日現在の専用利用料金、準備・後片付けの減額条件を掲載",
       "cautions": "固定2,058席と移動3,000席は区別する。天井高、床荷重、搬入寸法、投擲、催事専有回線、空き状況は要確認。入場料・営利目的は別区分・加算",
       "sourceUrl": "https://www.city.sasebo.lg.jp/bunsupo/sports/taikukan.html",
-      "observedAt": "2026-08-04",
+      "observedAt": "2026-08-05",
       "detailCount": 1,
       "priceCount": 1,
-      "operationCount": 0,
+      "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
       "historicalSeries": [],
@@ -16204,7 +16228,19 @@ export const venueData = {
         }
       ],
       "budgetScenarios": [],
-      "operation": null,
+      "operation": {
+        "station": "島瀬町バス停",
+        "walkMinutes": 5,
+        "stationAccess": "島瀬町バス停から徒歩約5分。佐世保駅から車で約3分",
+        "airportAccess": null,
+        "parkingSpaces": 165,
+        "largeVehicleAccess": "unknown",
+        "loadingAccess": "unknown",
+        "bookingOpenMonths": null,
+        "setupPolicy": "unknown",
+        "networkPolicy": "unknown",
+        "note": "地下駐車場165台。体育文化館は利用者登録・インターネット予約・空き状況照会に対応するが、コミュニティセンターホールは照会のみ。予約・キャンセルの詳細は施設へ直接確認。大型車、搬入、設営撤去、飲食、物販、催事専有回線、連続利用、予約開始時期は要確認"
+      },
       "spaces": [
         {
           "id": "sasebo-main",
@@ -18222,7 +18258,7 @@ export const venueData = {
       "observedAt": "2026-08-05",
       "detailCount": 1,
       "priceCount": 1,
-      "operationCount": 0,
+      "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
       "historicalSeries": [],
@@ -18254,7 +18290,19 @@ export const venueData = {
         }
       ],
       "budgetScenarios": [],
-      "operation": null,
+      "operation": {
+        "station": "小瀬スポーツ公園正門バス停",
+        "walkMinutes": null,
+        "stationAccess": "JR甲府駅南口から70系統バスで約30分、小瀬スポーツ公園正門または小瀬スポーツ公園下車。南甲府駅からタクシー約10分",
+        "airportAccess": null,
+        "parkingSpaces": 2088,
+        "largeVehicleAccess": "yes",
+        "loadingAccess": "unknown",
+        "bookingOpenMonths": null,
+        "setupPolicy": "一般利用は利用者ID登録後にやまなしくらしねっとから予約。大会等は二次予約申込用紙をメールまたはFAXで提出。利用時間に準備・片付けを含む",
+        "networkPolicy": "unknown",
+        "note": "第1〜第5駐車場の普通車欄は計2,088台で、別にアイスアリーナ前の身障者専用6台を案内。大型車は第1に34台、第3に59台。大会等は一般予約と別手続き。搬入、飲食、物販、催事専有回線、連続利用、予約開始時期は要確認"
+      },
       "spaces": [
         {
           "id": "kose-main",
