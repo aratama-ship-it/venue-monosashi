@@ -1,4 +1,5 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -110,6 +111,17 @@ const smallTheaterLedger = smallTheaters.map((theater) => ({
   verificationStatus: theater.verification_status,
   note: theater.notes || null,
 }));
+const smallTheaterCsv = await readFile(
+  resolve(projectDir, "data", "small-theater-research.csv"),
+);
+const smallTheaterAssetHash = createHash("sha256")
+  .update(smallTheaterCsv)
+  .digest("hex")
+  .slice(0, 12);
+const smallTheaterAssets = {
+  csv: `small-theater-research.${smallTheaterAssetHash}.csv`,
+  ledger: `small-theater-ledger.${smallTheaterAssetHash}.json`,
+};
 
 const venues = candidates.map((candidate) => {
   const venueDetails = details.filter(
@@ -323,6 +335,7 @@ export const venueData = ${JSON.stringify(
       smallTheaterCensus: {
         total: smallTheaters.length,
         verificationCounts: smallTheaterVerificationCounts,
+        assets: smallTheaterAssets,
       },
     },
     venues,
@@ -337,11 +350,20 @@ await writeFile(resolve(scriptDir, "..", "app", "generated-data.ts"), output);
 await mkdir(resolve(scriptDir, "..", "public", "data"), { recursive: true });
 await writeFile(
   resolve(scriptDir, "..", "public", "data", "small-theater-research.csv"),
-  await readFile(resolve(projectDir, "data", "small-theater-research.csv")),
+  smallTheaterCsv,
 );
 await writeFile(
+  resolve(scriptDir, "..", "public", "data", smallTheaterAssets.csv),
+  smallTheaterCsv,
+);
+const smallTheaterLedgerJson = `${JSON.stringify(smallTheaterLedger)}\n`;
+await writeFile(
   resolve(scriptDir, "..", "public", "data", "small-theater-ledger.json"),
-  `${JSON.stringify(smallTheaterLedger)}\n`,
+  smallTheaterLedgerJson,
+);
+await writeFile(
+  resolve(scriptDir, "..", "public", "data", smallTheaterAssets.ledger),
+  smallTheaterLedgerJson,
 );
 console.log(
   `generated app/generated-data.ts: ${venues.length} venues, ${prices.length} prices`,

@@ -55,6 +55,9 @@ type PriceUse =
   | "no_admission_nonprofit"
   | "admission";
 
+const smallTheaterCsvUrl = `/data/${venueData.stats.smallTheaterCensus.assets.csv}`;
+const smallTheaterLedgerUrl = `/data/${venueData.stats.smallTheaterCensus.assets.ledger}`;
+
 const presets: Record<
   Preset,
   {
@@ -355,7 +358,7 @@ export function VenueSearch() {
 
   useEffect(() => {
     let active = true;
-    fetch("/data/small-theater-ledger.json")
+    fetch(smallTheaterLedgerUrl)
       .then((response) => {
         if (!response.ok) throw new Error("small theater ledger unavailable");
         return response.json() as Promise<SmallTheaterLedgerItem[]>;
@@ -919,7 +922,7 @@ export function VenueSearch() {
                 <div className="reference-row">
                   <strong>{venueData.stats.smallTheaterCensus.total}</strong>
                   <span>
-                    <a href="/data/small-theater-research.csv">
+                    <a href={smallTheaterCsvUrl}>
                       小劇場一次情報台帳 ↓
                     </a>
                   </span>
@@ -1842,7 +1845,7 @@ export function VenueSearch() {
           )}
           {smallTheaterLoadState === "failed" && (
             <div className="archive-empty">
-              台帳を読み込めませんでした。<a href="/data/small-theater-research.csv">CSVを直接開く</a>
+              台帳を読み込めませんでした。<a href={smallTheaterCsvUrl}>CSVを直接開く</a>
             </div>
           )}
           {smallTheaterLoadState === "ready" &&

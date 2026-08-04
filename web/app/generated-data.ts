@@ -16,6 +16,10 @@ export const venueData = {
         "official_not_found": 89,
         "ambiguous": 24,
         "blocked": 28
+      },
+      "assets": {
+        "csv": "small-theater-research.b5d4ca3c3b10.csv",
+        "ledger": "small-theater-ledger.b5d4ca3c3b10.json"
       }
     }
   },

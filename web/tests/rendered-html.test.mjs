@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 
 async function render() {
@@ -39,6 +39,7 @@ test("server-renders the venue search shell", async () => {
   assert.match(html, />387<[\s\S]*条件付き料金観測/);
   assert.match(html, />13<[\s\S]*区分合計の参考額/);
   assert.match(html, />594<[\s\S]*小劇場一次情報台帳/);
+  assert.match(html, /small-theater-research\.[a-f0-9]{12}\.csv/);
   assert.match(html, /最低観測面積/);
   assert.match(html, /固定舞台が確認できた候補/);
   assert.match(html, /予約・搬入・交通の運用観測あり/);
@@ -74,7 +75,13 @@ test("server-renders the venue search shell", async () => {
 });
 
 test("ships the small theater ledger as a separate data asset", async () => {
-  const ledgerUrl = new URL("../public/data/small-theater-ledger.json", import.meta.url);
+  const dataUrl = new URL("../public/data/", import.meta.url);
+  const entries = await readdir(dataUrl);
+  const versionedLedgers = entries.filter((name) =>
+    /^small-theater-ledger\.[a-f0-9]{12}\.json$/.test(name),
+  );
+  assert.equal(versionedLedgers.length, 1);
+  const ledgerUrl = new URL(versionedLedgers[0], dataUrl);
   const ledger = JSON.parse(await readFile(ledgerUrl, "utf8"));
 
   assert.equal(ledger.length, 594);
