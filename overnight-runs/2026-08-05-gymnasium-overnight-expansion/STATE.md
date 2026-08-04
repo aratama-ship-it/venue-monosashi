@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 08:39 JST
+- Last updated: 2026-08-05 08:40 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `f31752f` (ledger-only commits may follow it)
+- Last data commit: `4d0846d` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -124,16 +124,17 @@
 | 78 | 2026-08-05 08:31 JST | アダストリアみとアリーナの多目的室深掘り | 3 details / 24 prices | audit 0 errors; generated 230/1303; duplicate IDs 0; lint OK; tests 3/3 | `6b5b220` | 料金ページ内の別施設区画を東町運動公園へ誤帰属。wave 79で出典境界を再監査し訂正済み。3波チェック自体は合格 |
 | 79 | 2026-08-05 08:37 JST | 水戸料金ページの施設境界監査・訂正 | -3 details / -6 net prices（24誤帰属を除去・18正規料金を追加） | audit 0 errors; generated 230/1297; duplicate IDs 0 | `c28a7ed` | 東町運動公園のHTMLブロック1514を特定。誤った主競技場の大/中/小料金を除き、多目的室・会議室の1室/1/2室/1/4室・1時間料金へ差替え |
 | 80 | 2026-08-05 08:39 JST | アダストリアみとアリーナの支援室・照明料金深掘り | 22 prices | audit 0 errors; generated 230/1319; duplicate IDs 0 | `f31752f` | レスリング/ボクシング/フェンシング6件、放送1件、メイン/サブ照明15件を東町運動公園区画から追加。原文の不自然な表記1件は要確認付きで保持 |
+| 81 | 2026-08-05 08:40 JST | アダストリアみとアリーナのサブ・個人料金深掘り | 9 prices | audit 0 errors; generated 230/1328; duplicate IDs 0; lint OK; tests 3/3 | `4d0846d` | サブのバドミントン1面・全面を用途/入場料で7件、トレーニング高校生以下/一般を2件追加。3波チェック合格 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 80
+- Last verified wave: wave 81
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `f31752f` and the worktree contains only known untracked paths, then continue with current official support-space rates or newly verifiable arena rates. Wave 81 must run the full lint and three display tests. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
+- At the next heartbeat, confirm the current HEAD descends from data commit `4d0846d` and the worktree contains only known untracked paths, then continue with newly verifiable arena and support-space rates. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
 
 ## Blockers
 
