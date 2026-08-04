@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 13完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 14完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -40,8 +40,10 @@ ACTIVE — wave 13完了。全国47都道府県・候補230件の目標を達成
 - Wave 12では宮崎市総合体育館、サンアリーナせんだい、沖縄県立武道館アリーナを追加。宮崎市の2026年改定料金と薩摩川内の専用使用料金をPDF画像で目視照合し、沖縄の競技フロア2,142㎡・最大約3,500席、予約6か月前・普通車408台を区別して記録した。
 - Wave 13: 国立代々木競技場第一体育館、日本ガイシ スポーツプラザ クロコくんホール、滋賀ダイハツアリーナ、SHOWAグループ総合体育館の4運用観測を追加（`69ebe42`）。
 - Wave 13では代々木の2026年度公式利用案内をページ画像で目視照合し、次年度申込日程・10日前支払・原状回復を記録。日本ガイシの大型車・搬入・物販・アリーナ内飲食禁止、滋賀のWEB予約・時間区分・物販許可・Wi-Fi、加古川の4か月前抽選と附属設備同時申込を追加した。
-- Current local totals: candidates 230 / details 318 / prices 468 / operations 145.
-- Overnight additions from baseline: candidates +47 / details +47 / prices +78 / operations +43.
+- Wave 14: 高崎アリーナ、東京体育館、セキスイハイムスーパーアリーナの11料金観測を追加（`7ea4077`）。
+- Wave 14では東京体育館とセキスイハイムスーパーアリーナの現行公式料金PDFをページ画像で目視照合し、平日・平日以外、非スポーツ用途、冷暖房を区別して記録した。高崎アリーナは公式HTML料金表を確認。島津アリーナ京都は公式サイトの証明書不整合により現行表を安全に取得できず、推測追加せず保留した。
+- Current local totals: candidates 230 / details 318 / prices 479 / operations 145.
+- Overnight additions from baseline: candidates +47 / details +47 / prices +89 / operations +43.
 
 ## Verification
 
