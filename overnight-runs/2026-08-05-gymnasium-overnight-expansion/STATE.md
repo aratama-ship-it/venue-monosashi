@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 07:27 JST
+- Last updated: 2026-08-05 07:31 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `90558dc` (ledger-only commits may follow it)
+- Last data commit: `3a58917` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -98,16 +98,17 @@
 | 52 | 2026-08-05 07:20 JST | 横浜・広島2大規模アリーナの現行料金深掘り | 25 prices / 2 candidate precision fixes | audit 0 errors; generated 230/898; duplicate price IDs 0 | `d4d088c` | 横浜2026年4月現在表と広島2024年4月施行現行表を画像照合。税別/税込、用途、入場料、時間帯を分離 |
 | 53 | 2026-08-05 07:26 JST | 横浜BUNTAIの現行料金深掘り | 19 prices / 1 candidate precision fix | audit 0 errors; generated 230/917; duplicate price IDs 0 | `82dc190` | 2026年1月版A/B/C区分の本番・準備と空調・音響・照明・大型映像を追加。沖縄・TOYOTAの非公開料金は保留 |
 | 54 | 2026-08-05 07:27 JST | 京王アリーナTOKYOの現行料金深掘り | 32 prices / 1 candidate precision fix | audit 0 errors; generated 230/949; duplicate price IDs 0; lint OK; tests 3/3 | `90558dc` | メイン/サブのスポーツ・商業イベント全日と映像・音響・照明・仮設席等を公式PDF画像で照合。税込表記を反映 |
+| 55 | 2026-08-05 07:31 JST | 島津アリーナ京都の現行料金深掘り | 20 prices / 1 candidate / 1 operation precision fix | audit 0 errors; generated 230/969; duplicate price IDs 0 | `3a58917` | 2025年4月改定表を画像照合。第1/第2競技場の用途・入場料・営利・曜日別全日額を分離し、証明書不整合を注意として保持 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 54
+- Last verified wave: wave 55
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `90558dc` and the worktree contains only known untracked paths, then run wave 55 against 島津アリーナ京都's official 2025-04-01 rate table already acquired and visually checked. Add main/second arena full-day benchmarks by use and day type, preserve the official site's certificate mismatch in notes, and finish with audit and generated-data verification. Keep GLION ARENA KOBE on hold unless a clearly current public rate table is found.
+- At the next heartbeat, confirm the current HEAD descends from data commit `3a58917` and the worktree contains only known untracked paths, then run wave 56 against 島津アリーナ京都's official equipment rate page and remaining main-arena time-band benchmarks. Use only rates traceable to the current 2025-04-01 tables, keep the HTTPS certificate mismatch explicit, and finish with audit and generated-data verification. Keep GLION ARENA KOBE on hold unless a clearly current public rate table is found.
 
 ## Blockers
 

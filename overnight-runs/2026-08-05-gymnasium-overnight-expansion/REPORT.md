@@ -122,8 +122,10 @@ ACTIVE — wave 48完了。全国47都道府県・候補230件の目標を達成
 - Wave 53では2026年1月版公式ガイドから、A区分（非営利・入場無料）、B区分（非興行）、C区分（営利興行）の平日/土日祝、本番/準備を分離し、空調、常設音響、常設照明、大型映像も用途区分別に追加した。搬入口4m×4m・11t車対応も候補へ反映。沖縄サントリーアリーナとTOYOTA ARENA TOKYOは料金が問い合わせ又は資料パスワード制のため数値追加を保留した。
 - Wave 54: 京王アリーナTOKYOの32料金観測と候補精度を更新（`90558dc`）。
 - Wave 54では指定管理者公式の現行料金表から、メインアリーナのスポーツ区分A/Bと商業系イベント、スタンド使用有無、平日/土日祝、有料入場7,000円未満/以上の全日額を分離。サブアリーナも商業系イベントの全面/半面と有料入場区分を追加し、大型映像、放送、音響、特別照明、仮設席、競技設備を別料金として記録した。PDF2ページを画像照合し、税込、設営撤去50%、延長3割増、直前割引50%の条件は派生額を作らず公式規定として保持。GLION ARENA KOBEは明確に現行と判断できる公開料金表を確認できず保留した。
-- Current local totals: candidates 230 / details 360 / prices 949 / operations 216.
-- Overnight additions from baseline: candidates +47 / details +89 / prices +559 / operations +114.
+- Wave 55: 島津アリーナ京都の20料金観測と候補・運用精度を更新（`3a58917`）。
+- Wave 55では体育館公式の2025年4月1日改定表から、第1・第2競技場の全面全日額を、非営利の入場料なし/あり、アマチュアスポーツ/その他催物、営利目的、平日/土日休日で分離した。PDF画像と抽出テキストを照合し、準備撤去は該当額の2分の1、冷暖房は実費加算と注記。税表記は推測せず `not_stated` とし、公式サイトのHTTPS証明書ホスト名不一致は候補注意に明記した。
+- Current local totals: candidates 230 / details 360 / prices 969 / operations 216.
+- Overnight additions from baseline: candidates +47 / details +89 / prices +579 / operations +114.
 
 ## Verification
 
