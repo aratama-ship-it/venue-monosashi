@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 18完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 19完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -50,8 +50,10 @@ ACTIVE — wave 18完了。全国47都道府県・候補230件の目標を達成
 - Wave 17ではマエダの次年度・年度途中貸切、1か月前打合せ、最寄り普通・身障者1,015台と大型11台、草薙の『とれるnet』予約と駐車制限、米子の前年同月調整と無料380台、群馬の2025年以降のWEB予約、計1,643台、物販・飲食申請を記録した。
 - Wave 18: マエダアリーナ、このはなアリーナ、鳥取県立米子産業体育館、ALSOKぐんまアリーナの16料金観測を追加（`1578ad8`）。
 - Wave 18ではマエダの照明・冷暖房・大型映像、草薙の2026年4月改定時間区分、米子の営利・入場料・冷暖房、群馬の用途・入場料・照明を分離。草薙と群馬の現行公式PDFをページ画像で目視照合した。
-- Current local totals: candidates 230 / details 318 / prices 511 / operations 153.
-- Overnight additions from baseline: candidates +47 / details +47 / prices +121 / operations +51.
+- Wave 19: 北ガスアリーナ札幌46、高知県立県民体育館、佐世保市体育文化館、小瀬スポーツ公園体育館の4運用観測を追加（`626c0af`）。
+- Wave 19では札幌の駅・約100台・抽選申込、高知の通常予約と年間調整の区別・普通82台・マイクロバス条件・物販/Wi-Fi申請、佐世保の地下165台・利用者登録制オンライン予約、小瀬の普通2,088台・大型93台・大会別申込・準備片付け込みを一次情報から記録した。
+- Current local totals: candidates 230 / details 318 / prices 511 / operations 157.
+- Overnight additions from baseline: candidates +47 / details +47 / prices +121 / operations +55.
 
 ## Verification
 
