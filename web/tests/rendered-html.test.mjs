@@ -35,7 +35,7 @@ test("server-renders the venue search shell", async () => {
     /<link rel="canonical" href="https:\/\/venue-monosashi\.juggler-arata\.chatgpt\.site\/"/,
   );
   assert.match(html, /property="og:title"/);
-  assert.match(html, /property="og:image" content="https:\/\/venue-monosashi\.juggler-arata\.chatgpt\.site\/og-card\.png"/);
+  assert.match(html, /property="og:image" content="https:\/\/venue-monosashi\.juggler-arata\.chatgpt\.site\/og\.png"/);
   assert.match(html, /name="twitter:card" content="summary_large_image"/);
   assert.match(html, /rel="icon" href="https:\/\/venue-monosashi\.juggler-arata\.chatgpt\.site\/favicon\.svg"/);
   assert.match(html, /application\/ld\+json/);
@@ -101,7 +101,7 @@ test("publishes crawler routes and a share image", async () => {
   assert.equal(sitemapResponse.status, 200);
   assert.match(await sitemapResponse.text(), /venue-monosashi\.juggler-arata\.chatgpt\.site/);
 
-  const image = await readFile(new URL("../public/og-card.png", import.meta.url));
+  const image = await readFile(new URL("../public/og.png", import.meta.url));
   assert.ok(image.length > 20_000);
   assert.deepEqual([...image.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
 });

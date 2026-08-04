@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: publication.description,
     images: [
       {
-        url: "/og-card.png",
+        url: "/og.png",
         width: 1200,
         height: 630,
         alt: "会場ものさし — 全国の会場を同じ条件で比較する公開調査版",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: publication.title,
     description: publication.description,
-    images: ["/og-card.png"],
+    images: ["/og.png"],
   },
   robots: {
     index: true,
