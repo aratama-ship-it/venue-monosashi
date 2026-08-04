@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 08:23 JST
+- Last updated: 2026-08-05 08:25 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `373f8ae` (ledger-only commits may follow it)
+- Last data commit: `679d184` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -118,16 +118,17 @@
 | 72 | 2026-08-05 08:16 JST | サンガスタジアム貸会議室群の比較深掘り | 7 details / 37 prices | audit 0 errors; generated 230/1232; duplicate IDs 0; lint OK; tests 3/3 | `99eca09` | B-1/D-1/F-1/G/H-1/I-1/J-1の面積・定員と午前/午後/夜/全日/区分外料金を現行公式HTMLから追加。大中小会議室を同軸化 |
 | 73 | 2026-08-05 08:21 JST | アダストリアみとアリーナの現行条例料金深掘り | 3 details / 9 prices / 1 candidate / 1 detail precision fix | audit 0 errors; generated 230/1241; duplicate IDs 0 | `4787066` | 市議会の原案可決結果と条例改正議案を照合。全面1時間の用途・入場料・スイート有無と6/8/9人部屋料金を追加し、固定席内訳を市資料へ精密化 |
 | 74 | 2026-08-05 08:23 JST | アダストリアみとアリーナの支援区画深掘り | 6 details / 1 detail precision fix | audit 0 errors; generated 230/1241; duplicate IDs 0 | `373f8ae` | 市公式施設概要PDFを画像照合。レスリング/フェンシング/ボクシング/トレーニング/多目的/会議室を追加し、サブ席数を198（固定192）へ補完 |
+| 75 | 2026-08-05 08:25 JST | サンガスタジアムVIP・スカイボックス深掘り | 3 details / 18 prices / 1 candidate precision fix | audit 0 errors; generated 230/1259; duplicate IDs 0; lint OK; tests 3/3 | `679d184` | VIPエリアとスカイボックスA/Bの面積・定員、午前/午後/夜/全日/区分外/通常時間外を現行公式HTMLから追加。接遇区画と通常会議室を分離 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 74
+- Last verified wave: wave 75
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `373f8ae` and the worktree contains only known untracked paths, then continue with current official support-space rates or newly verifiable arena rates. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held. Wave 75 requires full lint/test.
+- At the next heartbeat, confirm the current HEAD descends from data commit `679d184` and the worktree contains only known untracked paths, then continue with current official support-space rates or newly verifiable arena rates. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
 
 ## Blockers
 
