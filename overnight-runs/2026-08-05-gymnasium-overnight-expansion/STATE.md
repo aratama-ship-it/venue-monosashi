@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 05:10 JST
+- Last updated: 2026-08-05 05:16 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `7947160` (ledger-only commits may follow it)
+- Last data commit: `a8b8001` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -70,16 +70,17 @@
 | 24 | 2026-08-05 05:02 JST | 北海道・秋田・宮崎・富山4候補の現行料金深掘り | 22 prices | audit 0 errors; generated 230/560; duplicate price IDs 0; lint OK; tests 3/3 | `dd376e3` | 帯広の用途・入場料・放送、秋田の2024年改定用途別、延岡の現行料金PDF、富山の2026年7月改定と照明・空調・映像を追加。秋田・延岡PDFは画像照合 |
 | 25 | 2026-08-05 05:05 JST | 奈良・山口・山形・栃木4候補の運用深掘り | 4 operations / 1 detail precision fix | audit 0 errors; generated 230/560 | `0412425` | 奈良の3か月前抽選と9月休止、維新の1,251台・14日前手続・2026年8月から約1年休止、山形の1,200台・120名合宿、日環のWEB予約・時間内撤収を追加。山形を2,200㎡へ精密化 |
 | 26 | 2026-08-05 05:10 JST | 奈良・山形・栃木3候補の現行料金比較深掘り | 21 prices | audit 0 errors; generated 230/581 | `7947160` | 奈良の2026年4月改定、山形の用途・入場料別、日環の税込用途別と照明・空調・放送を追加。日環PDFは画像照合し、休止中の維新は比較対象から除外 |
+| 27 | 2026-08-05 05:16 JST | 茨城・長野・北海道・福島4候補の運用深掘り | 4 operations / 1 candidate risk precision fix | audit 0 errors; generated 230/581; lint OK; tests 3/3 | `a8b8001` | 水戸603台、長野500台・1か月前打合せ、旭川339台・翌月抽選、郡山153台・1か月前予約を追加。水戸・長野PDFは画像照合し、郡山の9月10日までの一般利用中止を明記 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 26
+- Last verified wave: wave 27
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `7947160` and the worktree contains only known untracked paths, then add official operations for another 3-5 high-fit candidates that still have no operation observation. Keep the source scope current and primary, retain unknown fields as unknown, and run the wave 27 full lint/test checkpoint after audit and generation.
+- At the next heartbeat, confirm the current HEAD descends from data commit `a8b8001` and the worktree contains only known untracked paths, then add current official price comparisons for CAND-160, CAND-163, and CAND-188, which still have no price observations. Preserve effective dates and current-versus-old notices; if current applicability is unclear, hold the numeric value rather than infer it.
 
 ## Blockers
 
