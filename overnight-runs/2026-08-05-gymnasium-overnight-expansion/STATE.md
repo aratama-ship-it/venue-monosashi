@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 06:10 JST
+- Last updated: 2026-08-05 06:15 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `31adb25` (ledger-only commits may follow it)
+- Last data commit: `9588cc0` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -80,16 +80,17 @@
 | 34 | 2026-08-05 05:51 JST | 茨城・広島2候補の現行料金比較深掘り | 12 prices | audit 0 errors; generated 230/637; duplicate price IDs 0 | `f6fa725` | つくばの大会/非スポーツ・入場料・冷暖房・可動舞台と、福山のアマチュア/非営利/その他催物の日額・時間額を追加。閉館中EDIONと更新日不明GLION料金は保留 |
 | 35 | 2026-08-05 06:01 JST | 愛媛・福岡・大阪・栃木4候補の運用・区画精度深掘り | 4 operations / 3 detail precision fixes | audit 0 errors; generated 230/637; duplicate operation/detail IDs 0 | `fd3c81a` | 愛媛の3か月前予約・219台、福岡国際センターの12か月前受付・搬入・夜間制約、グランキューブの2年前受付・304台・LAN、マロニエの2年前条件・450台・車両直接搬入を追加。福岡現行手引きを画像照合し、グランキューブの別区画席数混入を修正 |
 | 36 | 2026-08-05 06:10 JST | 愛媛・大阪・栃木3候補の現行料金・分割区画深掘り | 31 prices / 9 details / 3 candidate-operation precision fixes | audit 0 errors; generated 230/668; duplicate IDs 0; lint OK; tests 3/3 | `31adb25` | 愛媛の2025年改定用途別、グランキューブの2025年適用興行・展示、マロニエの現行掲載料金を追加。公式料金表を画像照合し、古い改定表示は実予約時再確認を保持 |
+| 37 | 2026-08-05 06:15 JST | 福岡・熊本・長野・静岡4候補の運用・仕様深掘り | 4 operations / 3 detail / 4 candidate precision fixes | audit 0 errors; generated 230/668; duplicate operation IDs 0 | `9588cc0` | 西日本総合展示場、パークドーム、エムウェーブ、ツインメッセの予約・搬入・駐車・通信等を追加。パークドーム専用約530台と公園約1,000台を分離し、M-Wave 2026年版手引きを照合 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 36
+- Last verified wave: wave 37
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `31adb25` and the worktree contains only known untracked paths, then run wave 37 against existing candidates with missing operations or current pricing. Prefer current official HTML or clearly dated official PDFs; retain stale or ambiguous rates as unverified rather than promoting them. Finish with audit and generated-data verification.
+- At the next heartbeat, confirm the current HEAD descends from data commit `9588cc0` and the worktree contains only known untracked paths, then run wave 38 as a current-pricing checkpoint for the newly deepened exhibition/sports facilities. Prefer current official HTML or clearly dated official PDFs; retain stale or ambiguous rates as unverified rather than promoting them. Finish with audit and generated-data verification.
 
 ## Blockers
 
