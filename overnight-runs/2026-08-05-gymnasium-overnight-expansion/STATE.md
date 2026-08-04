@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 05:34 JST
+- Last updated: 2026-08-05 05:41 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `7e02376` (ledger-only commits may follow it)
+- Last data commit: `06743ee` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -74,16 +74,17 @@
 | 28 | 2026-08-05 05:22 JST | 長野・北海道2候補の料金比較深掘り | 13 prices / 2 candidate risk precision fixes | audit 0 errors; generated 230/594; duplicate price IDs 0 | `4f56fdc` | ホワイトリングのメイン・サブ・空調・照明・音響、旭川の用途・入場料・営利別を追加。長野は現行公式ページが案内する2019年10月開始表、旭川は2026年9月30日までの現行欄をPDF画像照合。水戸は現行の専用料金表を確認できず数値追加を保留 |
 | 29 | 2026-08-05 05:29 JST | 岡山・静岡・愛知3候補の運用・区画深掘り | 3 operations / 1 detail / 2 detail-candidate precision fixes | audit 0 errors; generated 230/594; duplicate operation/detail IDs 0 | `52ae4b4` | 岡山の事前相談・清掃・Wi-Fi、浜松の12か月前抽選・30日前取消・650台、豊田の1か月前予約・543台を追加。浜松PDFは画像照合。豊田は固定3,440席・移動980席とサブ1,745㎡・550席へ精密化 |
 | 30 | 2026-08-05 05:34 JST | 岡山・愛知2候補の現行料金比較深掘り | 14 prices / 4 source-conflict precision fixes | audit 0 errors; generated 230/608; duplicate price IDs 0; lint OK; tests 3/3 | `7e02376` | 岡山の2026年8月31日までの用途・曜日・空調・照明・音響と、豊田市の2026年3月更新料金を追加。豊田の市と指定管理者の席数・サブ面積・駐車台数の不一致を明記。浜松は2019年改正表のため数値追加を保留 |
+| 31 | 2026-08-05 05:41 JST | 神戸・大阪・東京・岡山4候補の展示場運用深掘り | 4 operations | audit 0 errors; generated 230/608; duplicate operation IDs 0 | `06743ee` | 神戸・ATC・東京国際フォーラム・コンベックスの申込開始、搬入、駐車、設営撤去、飲食・通信を追加。神戸・ATC・コンベックスの現行PDFを画像照合 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 30
+- Last verified wave: wave 31
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `7e02376` and the worktree contains only known untracked paths, then select 3–4 additional high-fit candidates without operations observations. Prioritize current official reservation, parking, access, load-in, setup/teardown, food/retail, and network facts, and record explicit source conflicts instead of choosing silently.
+- At the next heartbeat, confirm the current HEAD descends from data commit `06743ee` and the worktree contains only known untracked paths, then deepen current official price observations for the same exhibition/convention candidates where valid current tables are available. Keep dated or superseded tables out of current comparison and run the wave 33 full lint/test checkpoint on schedule.
 
 ## Blockers
 
