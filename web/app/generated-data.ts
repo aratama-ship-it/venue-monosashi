@@ -6,13 +6,13 @@ export const venueData = {
     "venues": 230,
     "details": 320,
     "prices": 608,
-    "operations": 176,
+    "operations": 180,
     "budgetScenarios": 13,
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-05",
-      "observationCount": 1704,
-      "venueObservationCount": 1117,
+      "observationCount": 1708,
+      "venueObservationCount": 1121,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -14257,10 +14257,10 @@ export const venueData = {
       "strengths": "指定管理者の公式案内は展示面積合計13,600㎡、2号館1階コンベンションホール3,800㎡・天井12m・床荷重5t/㎡・天井吊物1t×28、展示・興行用の現行料金を掲載",
       "cautions": "料金表の全施設面積14,812㎡は案内の展示面積13,600㎡と定義が異なるため混同しない。収容人数、投擲、催事専有回線、空き状況は要確認",
       "sourceUrl": "https://kobe-cc.jp/ja/facilities/exhibition-hall/",
-      "observedAt": "2026-08-04",
+      "observedAt": "2026-08-05",
       "detailCount": 1,
       "priceCount": 0,
-      "operationCount": 0,
+      "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
       "historicalSeries": [],
@@ -14275,7 +14275,19 @@ export const venueData = {
       "minDailyFacilityPrice": null,
       "priceObservations": [],
       "budgetScenarios": [],
-      "operation": null,
+      "operation": {
+        "station": "ポートライナー市民広場駅",
+        "walkMinutes": null,
+        "stationAccess": "三宮駅からポートライナーで約10分",
+        "airportAccess": "神戸空港からポートライナーで約8分",
+        "parkingSpaces": 200,
+        "largeVehicleAccess": "yes",
+        "loadingAccess": "2号館1階は搬入車が所定線まで進入可。10tトラック可、床荷重5t/㎡。宅配便の到着・回収は使用時間内かつ主催者在館時",
+        "bookingOpenMonths": 12,
+        "setupPolicy": "基本使用時間9:00〜17:00。深夜・早朝22:00〜6:00は2か月前までに相談。使用後は原状回復",
+        "networkPolicy": "yes",
+        "note": "2025年7月28日改訂の公式利用案内を画像照合。2号館1階3,800㎡は3,000㎡以上のため受付は1年前。地下駐車場は200台・7:00〜22:00。飲食提供・調理は床養生、食品販売等は条件により届出が必要。共用部での展示・販売等は別途使用料。有線・無線LANは事前打合せ・有料。連続利用日数は要確認"
+      },
       "spaces": [
         {
           "id": "kobe-hall2",
@@ -14306,10 +14318,10 @@ export const venueData = {
       "strengths": "運営者の公式案内はAホール2,900㎡（1,600㎡と1,300㎡に分割可）・天井8m・床荷重2,000kg/㎡、ATC全体最大総ホール面積7,000㎡、ライブ・コンサート・展示会利用、現行利用規定を掲載",
       "cautions": "シアター最大3,600席はレイアウト例で固定席数ではない。投擲、搬入寸法、催事専有回線、空き状況は要確認",
       "sourceUrl": "https://atchall.com/howto/hall/atchall/ahall/",
-      "observedAt": "2026-08-04",
+      "observedAt": "2026-08-05",
       "detailCount": 1,
       "priceCount": 1,
-      "operationCount": 0,
+      "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
       "historicalSeries": [],
@@ -14341,7 +14353,19 @@ export const venueData = {
         }
       ],
       "budgetScenarios": [],
-      "operation": null,
+      "operation": {
+        "station": "ニュートラム・トレードセンター前駅",
+        "walkMinutes": 5,
+        "stationAccess": "トレードセンター前駅から徒歩約5分",
+        "airportAccess": "関西国際空港から直行リムジンバス利用可",
+        "parkingSpaces": 1200,
+        "largeVehicleAccess": "yes",
+        "loadingAccess": "搬入計画を2週間前までに提出。搬入車は高さ3.5m未満・幅2.2m以下・概ね4tまで。待機場所は早めに相談",
+        "bookingOpenMonths": 12,
+        "setupPolicy": "催事開催日9:00〜17:00、準備・撤去のみ9:00〜20:00。原状復帰と清掃は利用者負担。利用計画書は1か月前、搬入計画は2週間前まで",
+        "networkPolicy": "yes",
+        "note": "2026年4月1日改定の公式利用規程を画像照合。Aホールは1年前から受付。一般駐車場はITM800台＋O's400台、7:00〜24:00。大型車用は南駐車場バス10台・ピロティ駐車場バス30台で事前申請制。全ホール・控室・会議室にWi-Fi。ケータリング手配可。連続利用、物販の条件は要確認"
+      },
       "spaces": [
         {
           "id": "atc-a",
@@ -15134,10 +15158,10 @@ export const venueData = {
       "strengths": "運営者の主催者向け公式案内はホールA固定5,012席、ホールE平土間5,000㎡・天井9m・立食3,000人（3,000㎡・2,000㎡に分割可）、31会議室を掲載。主催者申込み、準備撤去を含む利用時間、料金表を公開",
       "cautions": "料金PDFの適用開始は2023年10月で公開終了日は未確認のため、金額はprimary_partialとして記録し実利用時の改定確認が必要。投擲、催事専有回線、空き状況は要確認",
       "sourceUrl": "https://www.t-i-forum.co.jp/organizer/facilities/",
-      "observedAt": "2026-08-04",
+      "observedAt": "2026-08-05",
       "detailCount": 2,
       "priceCount": 1,
-      "operationCount": 0,
+      "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
       "historicalSeries": [],
@@ -15169,7 +15193,19 @@ export const venueData = {
         }
       ],
       "budgetScenarios": [],
-      "operation": null,
+      "operation": {
+        "station": "JR有楽町駅",
+        "walkMinutes": 1,
+        "stationAccess": "JR有楽町駅から徒歩1分。JR東京駅から徒歩5分。東京メトロ有楽町駅D5出口から地下連絡",
+        "airportAccess": "羽田空港からモノレールで浜松町23分、JRで有楽町4分",
+        "parkingSpaces": 417,
+        "largeVehicleAccess": "conditional",
+        "loadingAccess": "搬入車は1階入口から入場し地下2階で一般車と分岐。搬入出車両証が必要",
+        "bookingOpenMonths": 24,
+        "setupPolicy": "ホールEは基本9:00〜22:00。利用時間には準備・撤去を含む。連続利用は原則10日以内",
+        "networkPolicy": "yes",
+        "note": "2025年9月現在の公式施設利用案内でホールEは2年前から受付、1か月前までに詳細打合せ。地下駐車場は普通車417台。食品衛生上、飲食物の持込は不可で指定サービスを利用する一方、ホールEの食品展示・調理は施設ルールと保健所指導下で可能。LANサービスあり。荷捌場は高さ等の車両制限があるため大型車欄はconditional。物販の詳細は要確認"
+      },
       "spaces": [
         {
           "id": "forum-a",
@@ -15680,10 +15716,10 @@ export const venueData = {
       "strengths": "運営者の公式案内は大展示場3,797㎡・収容4,300人、中展示場2,571㎡・3,000人、小展示場1,415㎡・1,000人、屋外5,400㎡、現行料金を掲載",
       "cautions": "収容人数は展示場ごとの公開値で固定席数ではない。天井高、床荷重、投擲、搬入寸法、催事専有回線、空き状況は要確認",
       "sourceUrl": "https://www.convex-okayama.co.jp/facility/",
-      "observedAt": "2026-08-04",
+      "observedAt": "2026-08-05",
       "detailCount": 3,
       "priceCount": 1,
-      "operationCount": 0,
+      "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
       "historicalSeries": [],
@@ -15715,7 +15751,19 @@ export const venueData = {
         }
       ],
       "budgetScenarios": [],
-      "operation": null,
+      "operation": {
+        "station": "JR中庄駅",
+        "walkMinutes": null,
+        "stationAccess": "中庄駅から車で約10分。JR岡山駅からバスで約30分",
+        "airportAccess": "岡山空港から車で約30分",
+        "parkingSpaces": 1500,
+        "largeVehicleAccess": "unknown",
+        "loadingAccess": "大展示場は早朝搬入・設営、深夜撤去を含む24時間運用に対応。公式パンフレットはワイドな搬出入口とクレーン荷下ろし対応を案内",
+        "bookingOpenMonths": 24,
+        "setupPolicy": "大・中・小展示場は24時間利用可。利用計画書等を1か月前までに提出し、予約時間内に原状復帰",
+        "networkPolicy": "unknown",
+        "note": "2026年4月9日版の公式利用手引きを画像照合。展示場は利用開始2年前の月初から受付（大・小展示場の分割利用は1年前、1日以内利用は6か月前）。無料駐車場約1,500台。仮予約後2週間以内に申請、残金70%は10日前まで。ケータリングと会場設営の手配可。大型車寸法、物販、催事専有回線、連続利用は要確認"
+      },
       "spaces": [
         {
           "id": "convex-large",
