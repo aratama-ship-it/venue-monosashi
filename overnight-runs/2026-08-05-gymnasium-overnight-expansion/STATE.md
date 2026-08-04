@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 06:39 JST
+- Last updated: 2026-08-05 06:42 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `69ba924` (ledger-only commits may follow it)
+- Last data commit: `cf03ea0` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -87,16 +87,17 @@
 | 41 | 2026-08-05 06:33 JST | 広島・京都4ホールの予約・搬入・配信運用深掘り | 4 operations / 3 detail precision fixes / 4 candidate precision fixes | audit 0 errors; generated 230/717; duplicate operation/detail IDs 0 | `8bb5e71` | 広島国際会議場、ロームシアター、京都コンサートホール、リーデンローズの受付・駐車・搬入・物販・回線を追加。専用/隣接駐車と共用/専用回線を分離 |
 | 42 | 2026-08-05 06:36 JST | 京都2ホールの現行掲載料金比較深掘り | 32 prices / 2 candidate precision fixes | audit 0 errors; generated 230/749; duplicate price IDs 0; lint OK; tests 3/3 | `fcc1c87` | ロームシアターのメイン・サウス・ノース・専用回線、京都コンサートホールの曜日・入場料帯・配信回線を追加。古い又は施行日不明資料は注意を保持 |
 | 43 | 2026-08-05 06:39 JST | 島根・大阪・栃木4アリーナ/スタジアムの運用深掘り | 4 operations / 4 candidate precision fixes | audit 0 errors; generated 230/749; duplicate operation IDs 0 | `69ba924` | カミアリーナ、Panasonic Stadium、ヤンマースタジアム、足利の予約・駐車・搬入を追加。公園共用駐車を専用欄から除外し長居の現行規制を反映 |
+| 44 | 2026-08-05 06:42 JST | 島根・大阪3スポーツ施設の現行料金深掘り | 28 prices / 1 price precision fix / 2 candidate precision fixes | audit 0 errors; generated 230/777; duplicate price IDs 0 | `cf03ea0` | カミアリーナ2026改定、長居の用途・スタンド・入場料・曜日、Panasonic Stadium附属設備を追加。倍率計算と税不明を明示 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 43
+- Last verified wave: wave 44
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `69ba924` and the worktree contains only known untracked paths, then run wave 44 as a current-pricing follow-up for the newly deepened sports facilities. Prioritize the clearly effective 2026 Kamia Arena table and current official stadium tables; keep multiplicative admission surcharges explicit. Finish with audit and generated-data verification.
+- At the next heartbeat, confirm the current HEAD descends from data commit `cf03ea0` and the worktree contains only known untracked paths, then run wave 45 as an operations and precision follow-up for verified arena/stadium candidates that still lack an operations row. Prioritize current official booking, access, parking and loading guidance, keep shared parking out of facility-only counts, and finish with audit plus the three-wave lint/test checkpoint.
 
 ## Blockers
 
