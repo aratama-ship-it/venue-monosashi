@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 16完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 17完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -46,8 +46,10 @@ ACTIVE — wave 16完了。全国47都道府県・候補230件の目標を達成
 - Wave 15では福岡の大会・興行事前打合せ、搬入、駐車500台、クラサスのイベント3か月前受付と公園内約5,000台、東京武道館の5名以上団体登録と地下70台、石川の3週間前打合せ・清掃点検・臨時店舗申請を記録した。
 - Wave 16: 福岡市総合体育館、クラサス武道スポーツセンター、東京武道館、いしかわ総合スポーツセンターの16料金観測を追加し、東京武道館の既存1件の用途誤分類を訂正（`ab3c317`）。
 - Wave 16では曜日、スポーツ・非スポーツ、スタンド使用、入場料、照明、音響、冷暖房を分離し、比較時に別条件が混ざらないよう補強した。
-- Current local totals: candidates 230 / details 318 / prices 495 / operations 149.
-- Overnight additions from baseline: candidates +47 / details +47 / prices +105 / operations +47.
+- Wave 17: マエダアリーナ、このはなアリーナ、鳥取県立米子産業体育館、ALSOKぐんまアリーナの4運用観測を追加（`2e5e4fb`）。
+- Wave 17ではマエダの次年度・年度途中貸切、1か月前打合せ、最寄り普通・身障者1,015台と大型11台、草薙の『とれるnet』予約と駐車制限、米子の前年同月調整と無料380台、群馬の2025年以降のWEB予約、計1,643台、物販・飲食申請を記録した。
+- Current local totals: candidates 230 / details 318 / prices 495 / operations 153.
+- Overnight additions from baseline: candidates +47 / details +47 / prices +105 / operations +51.
 
 ## Verification
 
