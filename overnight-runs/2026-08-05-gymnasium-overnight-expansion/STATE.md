@@ -5,7 +5,7 @@
 - Status: ACTIVE
 - Last updated: 2026-08-05 02:56 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Current HEAD: `7173a85`
+- Last data commit: `7173a85` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -53,7 +53,7 @@
 
 ## Next Action
 
-- At the next heartbeat, confirm HEAD `7173a85`, then continue with 北海道・山形・福島 and the first Kanto prefectures.
+- At the next heartbeat, confirm the current HEAD descends from data commit `7173a85` and the worktree contains only known untracked paths, then continue with 北海道・山形・福島 and the first Kanto prefectures.
 
 ## Blockers
 
