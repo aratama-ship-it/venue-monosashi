@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 05:49 JST
+- Last updated: 2026-08-05 05:51 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `d482921` (ledger-only commits may follow it)
+- Last data commit: `f6fa725` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -77,16 +77,17 @@
 | 31 | 2026-08-05 05:41 JST | 神戸・大阪・東京・岡山4候補の展示場運用深掘り | 4 operations | audit 0 errors; generated 230/608; duplicate operation IDs 0 | `06743ee` | 神戸・ATC・東京国際フォーラム・コンベックスの申込開始、搬入、駐車、設営撤去、飲食・通信を追加。神戸・ATC・コンベックスの現行PDFを画像照合 |
 | 32 | 2026-08-05 05:44 JST | 神戸・大阪・岡山3候補の展示場料金深掘り | 17 prices / 4 details / 1 price precision fix | audit 0 errors; generated 230/625; duplicate price/detail IDs 0 | `0520d70` | 神戸の展示/集会/準備/時間外、ATCの分割/時間外、コンベックスの分割/時間帯/冷暖房を追加。ATC既存行の基本時間を9〜17時へ訂正。東京フォーラムは2023年適用表の現行性未解消のため保留 |
 | 33 | 2026-08-05 05:49 JST | 茨城・兵庫・広島・大阪4候補の運用・休館深掘り | 4 operations / 1 detail / 2 detail-candidate precision fixes | audit 0 errors; generated 230/625; duplicate operation/detail IDs 0; lint OK; tests 3/3 | `d482921` | つくばの12か月前申込・5日上限、GLIONの大型搬入・来場者駐車なし、福山の6か月前予約・360台、EDIONの2026年4月〜2027年1月末予定全館休館を追加。EDION休館PDFを画像照合 |
+| 34 | 2026-08-05 05:51 JST | 茨城・広島2候補の現行料金比較深掘り | 12 prices | audit 0 errors; generated 230/637; duplicate price IDs 0 | `f6fa725` | つくばの大会/非スポーツ・入場料・冷暖房・可動舞台と、福山のアマチュア/非営利/その他催物の日額・時間額を追加。閉館中EDIONと更新日不明GLION料金は保留 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 33
+- Last verified wave: wave 34
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `d482921` and the worktree contains only known untracked paths, then deepen current official prices for Tsukuba Capio and EfPico Arena Fukuyama; evaluate GLION only if its public organizer rate sheet is clearly current. Exclude EDION while the whole building is closed, and do not mix post-reopening assumptions into current comparison.
+- At the next heartbeat, confirm the current HEAD descends from data commit `f6fa725` and the worktree contains only known untracked paths, then select 3–4 further high-fit candidates without operations observations. Prefer facilities with current official booking, parking, load-in, setup, food/retail, network, or closure data, and leave stale rate sheets outside current price comparison.
 
 ## Blockers
 
