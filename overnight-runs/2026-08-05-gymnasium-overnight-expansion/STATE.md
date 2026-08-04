@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 04:19 JST
+- Last updated: 2026-08-05 04:24 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `cd2136c` (ledger-only commits may follow it)
+- Last data commit: `69ebe42` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -56,16 +56,17 @@
 | 10 | 2026-08-05 04:05 JST | 香川・愛媛・高知・福岡 | 4 candidates / 4 details / 9 prices / 4 operations | audit 0 errors; lint OK; tests 3/3 | `6756506` | 愛媛の公式料金PDFを目視照合。春野の6,630席内訳、福岡の競技場限定運用と出店事前承認を明記 |
 | 11 | 2026-08-05 04:11 JST | 佐賀・長崎・熊本・大分 | 4 candidates / 4 details / 9 prices / 4 operations | audit 0 errors; lint OK; tests 3/3 | `70dc417` | 佐賀・大分の2026料金PDFを目視照合。長崎の5,600席構成と熊本の営利・不特定多数利用条件を明記 |
 | 12 | 2026-08-05 04:19 JST | 宮崎・鹿児島・沖縄 | 3 candidates / 3 details / 10 prices / 3 operations | audit 0 errors; lint OK; tests 3/3 | `cd2136c` | 全国47都道府県・候補230件に到達。宮崎・薩摩川内の料金PDFを目視照合し、沖縄の3,500席構成・6か月前予約・普通車408台を明記 |
+| 13 | 2026-08-05 04:24 JST | 既存高評価4候補の運用深掘り | 4 operations | audit 0 errors; lint OK; tests 3/3 | `69ebe42` | 代々木の2026年度利用案内を目視照合。日本ガイシの搬入・物販・飲食、滋賀のWEB予約・Wi-Fi、加古川の4か月前抽選を明記 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 12
+- Last verified wave: wave 13
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `cd2136c` and the worktree contains only known untracked paths, then identify high-fit arena/sports candidates missing price or operation observations and deepen 3–5 records from current official sources.
+- At the next heartbeat, confirm the current HEAD descends from data commit `69ebe42` and the worktree contains only known untracked paths, then continue with 3–5 high-fit candidates missing operations or current price observations, prioritizing official HTML and current-dated fee tables.
 
 ## Blockers
 

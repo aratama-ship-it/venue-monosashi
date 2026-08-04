@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 12完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 13完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -38,8 +38,10 @@ ACTIVE — wave 12完了。全国47都道府県・候補230件の目標を達成
 - Wave 11ではSAGAプラザ、長崎県立総合体育館、ナースパワーアリーナ、サイクルショップコダマ大洲アリーナを追加。佐賀・大分の2026年料金PDFをページ画像でも目視照合し、長崎の固定・可動・移動席内訳、熊本の専用利用打合せと営利・不特定多数利用条件、大分の天井高13.8mと5,088席構成を区別して記録した。
 - Wave 12: 宮崎・鹿児島・沖縄の3候補、3施設区画、10料金、3運用観測を追加（`cd2136c`）。
 - Wave 12では宮崎市総合体育館、サンアリーナせんだい、沖縄県立武道館アリーナを追加。宮崎市の2026年改定料金と薩摩川内の専用使用料金をPDF画像で目視照合し、沖縄の競技フロア2,142㎡・最大約3,500席、予約6か月前・普通車408台を区別して記録した。
-- Current local totals: candidates 230 / details 318 / prices 468 / operations 141.
-- Overnight additions from baseline: candidates +47 / details +47 / prices +78 / operations +39.
+- Wave 13: 国立代々木競技場第一体育館、日本ガイシ スポーツプラザ クロコくんホール、滋賀ダイハツアリーナ、SHOWAグループ総合体育館の4運用観測を追加（`69ebe42`）。
+- Wave 13では代々木の2026年度公式利用案内をページ画像で目視照合し、次年度申込日程・10日前支払・原状回復を記録。日本ガイシの大型車・搬入・物販・アリーナ内飲食禁止、滋賀のWEB予約・時間区分・物販許可・Wi-Fi、加古川の4か月前抽選と附属設備同時申込を追加した。
+- Current local totals: candidates 230 / details 318 / prices 468 / operations 145.
+- Overnight additions from baseline: candidates +47 / details +47 / prices +78 / operations +43.
 
 ## Verification
 
