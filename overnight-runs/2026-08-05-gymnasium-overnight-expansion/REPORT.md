@@ -134,8 +134,10 @@ ACTIVE — wave 48完了。全国47都道府県・候補230件の目標を達成
 - Wave 59ではサブアリーナ全面の全日額を、スポーツ入場無料/有料、式典・集会・展示会、物販、本番/準備日、平日/土日祝で分離した。スポーツ以外の催事本番は原則10〜22時という条件を注記し、表の9〜21時基本区分と区別した。
 - Wave 60: 東京有明アリーナの20設備料金観測を追加（`f97e9d1`）。
 - Wave 60では常設音響と放送設備、センターハング4面、据置型大型ビジョン、仮設フローリング、メイン/サブ空調、基本照明を用途別に追加した。別途必要な信号回線、保守管理・オペレーター、撤去・養生は除外として明記し、税込の公開料金だけを記録。3波ごとのlintと表示テスト3件も合格した。
-- Current local totals: candidates 230 / details 360 / prices 1066 / operations 216.
-- Overnight additions from baseline: candidates +47 / details +89 / prices +676 / operations +114.
+- Wave 61: 真駒内セキスイハイムアイスアリーナの16夏期料金観測と候補精度を更新（`b27cea8`）。
+- Wave 61では2026年7月に更新された指定管理者公式サイトが全館料金表をHTML再掲していることを確認。夏期9〜21時全館額をスポーツ、研修・集会、展示会、その他催物、入場料有無、平日/土日休日で分離した。金額の基準日は2023年4月1日現在のため、現行掲載であることと実予約時の改定再確認を併記した。
+- Current local totals: candidates 230 / details 360 / prices 1082 / operations 216.
+- Overnight additions from baseline: candidates +47 / details +89 / prices +692 / operations +114.
 
 ## Verification
 
