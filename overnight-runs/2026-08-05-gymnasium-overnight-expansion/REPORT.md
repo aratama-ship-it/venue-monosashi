@@ -132,8 +132,10 @@ ACTIVE — wave 48完了。全国47都道府県・候補230件の目標を達成
 - Wave 58では主催者向け公式ページの料金資料が2026年2月現在Ver.8.0へ更新されていることを確認し、従来の2022年版保留を解消。メインアリーナの12時間本番/準備を、スポーツ入場無料、7,000円未満/以上、興行スポーツ、式典・集会・展示会、コンサート・ショー、平日/土日祝で分離した。PDF画像を照合し税込を反映、関係者駐車70台まで基本料に含む現行条件も運用欄へ更新した。
 - Wave 59: 東京有明アリーナの16サブ料金観測を追加（`936f2a2`）。
 - Wave 59ではサブアリーナ全面の全日額を、スポーツ入場無料/有料、式典・集会・展示会、物販、本番/準備日、平日/土日祝で分離した。スポーツ以外の催事本番は原則10〜22時という条件を注記し、表の9〜21時基本区分と区別した。
-- Current local totals: candidates 230 / details 360 / prices 1046 / operations 216.
-- Overnight additions from baseline: candidates +47 / details +89 / prices +656 / operations +114.
+- Wave 60: 東京有明アリーナの20設備料金観測を追加（`f97e9d1`）。
+- Wave 60では常設音響と放送設備、センターハング4面、据置型大型ビジョン、仮設フローリング、メイン/サブ空調、基本照明を用途別に追加した。別途必要な信号回線、保守管理・オペレーター、撤去・養生は除外として明記し、税込の公開料金だけを記録。3波ごとのlintと表示テスト3件も合格した。
+- Current local totals: candidates 230 / details 360 / prices 1066 / operations 216.
+- Overnight additions from baseline: candidates +47 / details +89 / prices +676 / operations +114.
 
 ## Verification
 
