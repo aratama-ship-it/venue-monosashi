@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 06:54 JST
+- Last updated: 2026-08-05 06:58 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `2dd6748` (ledger-only commits may follow it)
+- Last data commit: `4cc8c7a` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -91,16 +91,17 @@
 | 45 | 2026-08-05 06:46 JST | 京都・広島・神奈川4スタジアムの運用深掘り | 4 operations / 1 detail precision fix / 1 candidate precision fix | audit 0 errors; generated 230/777; duplicate operation IDs 0; lint OK; tests 3/3 | `1188623` | サンガ、ピースウイング、日産、横浜のアクセス・予約・駐車を追加。横浜のコンサート最大32,000人を固定席と分離して反映 |
 | 46 | 2026-08-05 06:50 JST | 広島サッカースタジアムの現行料金深掘り | 16 prices / 1 operation precision fix / 1 candidate precision fix | audit 0 errors; generated 230/793; duplicate price IDs 0 | `ef0d9f2` | ピースウイングのフィールド・スタンド、照明・音響・映像・総合演出・駐車場専有を公式画像で目視照合。施行日・税不明を保持 |
 | 47 | 2026-08-05 06:54 JST | 青森・滋賀・和歌山・広島4アリーナの運用・区画深掘り | 4 operations / 5 details / 4 candidate precision fixes / 1 coverage snapshot fix | audit 0 errors; generated 230/793; duplicate detail/operation IDs 0 | `2dd6748` | オカでん/マエダの名称混同を解消し、区画・予約・駐車・床保護を追加。青森の2026国スポ一般利用停止も反映 |
+| 48 | 2026-08-05 06:58 JST | 青森・滋賀・和歌山・広島4アリーナの現行料金深掘り | 37 prices / 1 detail | audit 0 errors; generated 230/830; duplicate price IDs 0; lint OK; tests 3/3 | `4cc8c7a` | 青森の合算料金、滋賀の時間帯別、和歌山の2022適用現行案内、サンチェリーの分割・附属設備を追加 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 47
+- Last verified wave: wave 48
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `2dd6748` and the worktree contains only known untracked paths, then run wave 48 as a current-pricing follow-up for the newly deepened regional arenas. Prioritize current official HTML and active linked tables; do not reuse stale PDFs unless the current official page explicitly presents them as the operative table, and retain the displayed effective date. Finish with audit plus the three-wave lint/test checkpoint.
+- At the next heartbeat, confirm the current HEAD descends from data commit `4cc8c7a` and the worktree contains only known untracked paths, then run wave 49 as an operations follow-up for the final four arena, dome and sports-pattern candidates without an operations row: Tokyo Dome, Noevir Stadium, YANMAR HANASAKA STADIUM and Hiroshima Sunplaza Hall. Prefer current official organizer guidance and keep inquiry-only booking or loading fields unknown. Finish with audit and generated-data verification.
 
 ## Blockers
 
