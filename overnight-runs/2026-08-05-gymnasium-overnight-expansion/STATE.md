@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 07:36 JST
+- Last updated: 2026-08-05 07:40 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `0e2b5d2` (ledger-only commits may follow it)
+- Last data commit: `11a815f` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -101,16 +101,17 @@
 | 55 | 2026-08-05 07:31 JST | 島津アリーナ京都の現行料金深掘り | 20 prices / 1 candidate / 1 operation precision fix | audit 0 errors; generated 230/969; duplicate price IDs 0 | `3a58917` | 2025年4月改定表を画像照合。第1/第2競技場の用途・入場料・営利・曜日別全日額を分離し、証明書不整合を注意として保持 |
 | 56 | 2026-08-05 07:33 JST | 島津アリーナ京都の現行附属設備料金深掘り | 13 prices | audit 0 errors; generated 230/982; duplicate price IDs 0 | `02684cf` | 2025年4月改定表から競技用具・舞台・音響・映像・移動席・第1/第2冷暖房を画像照合して追加 |
 | 57 | 2026-08-05 07:36 JST | 京王アリーナTOKYOのスポーツ料金補完 | 24 prices | audit 0 errors; generated 230/1006; duplicate price IDs 0; lint OK; tests 3/3 | `0e2b5d2` | メイン有料観戦スポーツとサブのA/B区分・全面/半面・入場料帯を補完し、料金観測1000件を突破 |
+| 58 | 2026-08-05 07:40 JST | 東京有明アリーナの現行メイン料金深掘り | 24 prices / 1 candidate / 1 operation precision fix | audit 0 errors; generated 230/1030; duplicate price IDs 0 | `11a815f` | 旧2022年版を2026年2月現在Ver.8.0へ更新。本番/準備、スポーツ/興行/式典展示/コンサート、曜日別を画像照合 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 57
+- Last verified wave: wave 58
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `0e2b5d2` and the worktree contains only known untracked paths, then identify the next A-ranked arena/sports candidates without price observations and run wave 58 against the best current primary-source rate table. Prefer a new venue over further time-band expansion, and finish with audit and generated-data verification.
+- At the next heartbeat, confirm the current HEAD descends from data commit `11a815f` and the worktree contains only known untracked paths, then run wave 59 against the sub-arena and high-value equipment/utility sections in the same current 2026-02 Ariake official rate table. Keep only directly comparable published values, and finish with audit and generated-data verification.
 
 ## Blockers
 

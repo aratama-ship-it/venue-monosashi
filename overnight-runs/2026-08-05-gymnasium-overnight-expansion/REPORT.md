@@ -128,8 +128,10 @@ ACTIVE — wave 48完了。全国47都道府県・候補230件の目標を達成
 - Wave 56では同じ2025年4月1日改定の公式附属設備表から、バスケット・バレーボール・ハンドボール用具、得点表示器、舞台、拡声装置、マイク、大型映像の全日/時間額、移動観覧席、第1・第2競技場冷暖房を分離した。PDF画像と抽出テキストを照合し、税表記と操作人件費は推測せず注記・除外に保持した。
 - Wave 57: 京王アリーナTOKYOの24スポーツ料金観測を追加（`0e2b5d2`）。
 - Wave 57ではメインアリーナのスポーツ区分A/B・有料入場・7,000円未満/以上・平日/土日祝の全日額を補完し、サブアリーナはA/B区分の入場無料全面/半面と有料入場帯を追加した。現行公式PDF画像との照合を再利用し、料金観測は1,006件に到達。3波ごとのlintと表示テスト3件も合格した。
-- Current local totals: candidates 230 / details 360 / prices 1006 / operations 216.
-- Overnight additions from baseline: candidates +47 / details +89 / prices +616 / operations +114.
+- Wave 58: 東京有明アリーナの24メイン料金観測と候補・運用精度を更新（`11a815f`）。
+- Wave 58では主催者向け公式ページの料金資料が2026年2月現在Ver.8.0へ更新されていることを確認し、従来の2022年版保留を解消。メインアリーナの12時間本番/準備を、スポーツ入場無料、7,000円未満/以上、興行スポーツ、式典・集会・展示会、コンサート・ショー、平日/土日祝で分離した。PDF画像を照合し税込を反映、関係者駐車70台まで基本料に含む現行条件も運用欄へ更新した。
+- Current local totals: candidates 230 / details 360 / prices 1030 / operations 216.
+- Overnight additions from baseline: candidates +47 / details +89 / prices +640 / operations +114.
 
 ## Verification
 
