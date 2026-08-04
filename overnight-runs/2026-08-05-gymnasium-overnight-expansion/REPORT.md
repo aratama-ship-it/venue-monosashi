@@ -138,8 +138,10 @@ ACTIVE — wave 48完了。全国47都道府県・候補230件の目標を達成
 - Wave 61では2026年7月に更新された指定管理者公式サイトが全館料金表をHTML再掲していることを確認。夏期9〜21時全館額をスポーツ、研修・集会、展示会、その他催物、入場料有無、平日/土日休日で分離した。金額の基準日は2023年4月1日現在のため、現行掲載であることと実予約時の改定再確認を併記した。
 - Wave 62: 真駒内セキスイハイムアイスアリーナの16冬期料金観測を追加（`0ece006`）。
 - Wave 62では夏期と同じスポーツ、研修・集会、展示会、その他催物、入場料有無、平日/土日休日の軸で冬期9〜21時全館額を追加し、製氷期を含む季節差を比較可能にした。基準日と再確認注意は夏期同様に保持した。
-- Current local totals: candidates 230 / details 360 / prices 1098 / operations 216.
-- Overnight additions from baseline: candidates +47 / details +89 / prices +708 / operations +114.
+- Wave 63: 真駒内セキスイハイムアイスアリーナの8設備料金観測を追加（`823ef7d`）。
+- Wave 63では放送室・拡声装置、電光掲示盤・計測器、フロア用じゅうたん、バスケット/バレー/ハンド/アイスホッケー用具を税込で追加。HAPPINESS ARENAは公式ページ内に現行貸館料金を確認できず、問い合わせ制として推測追加を保留した。3波ごとのlintと表示テスト3件も合格した。
+- Current local totals: candidates 230 / details 360 / prices 1106 / operations 216.
+- Overnight additions from baseline: candidates +47 / details +89 / prices +716 / operations +114.
 
 ## Verification
 
