@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 04:26 JST
+- Last updated: 2026-08-05 04:29 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `7ea4077` (ledger-only commits may follow it)
+- Last data commit: `3b37cd6` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -58,16 +58,17 @@
 | 12 | 2026-08-05 04:19 JST | 宮崎・鹿児島・沖縄 | 3 candidates / 3 details / 10 prices / 3 operations | audit 0 errors; lint OK; tests 3/3 | `cd2136c` | 全国47都道府県・候補230件に到達。宮崎・薩摩川内の料金PDFを目視照合し、沖縄の3,500席構成・6か月前予約・普通車408台を明記 |
 | 13 | 2026-08-05 04:24 JST | 既存高評価4候補の運用深掘り | 4 operations | audit 0 errors; lint OK; tests 3/3 | `69ebe42` | 代々木の2026年度利用案内を目視照合。日本ガイシの搬入・物販・飲食、滋賀のWEB予約・Wi-Fi、加古川の4か月前抽選を明記 |
 | 14 | 2026-08-05 04:26 JST | 既存高評価3候補の料金深掘り | 11 prices | audit 0 errors; lint OK; tests 3/3 | `7ea4077` | 東京体育館とセキスイハイムスーパーアリーナの料金PDFを目視照合。高崎アリーナの公式HTML料金表も確認。島津アリーナ京都は公式サイトの証明書不整合で保留 |
+| 15 | 2026-08-05 04:29 JST | 既存高評価4候補の運用深掘り | 4 operations | audit 0 errors; lint OK; tests 3/3 | `3b37cd6` | 福岡の搬入・500台駐車、クラサスの3か月前受付・公園約5,000台、東京武道館の団体登録・70台、石川の3週間前打合せ・臨時店舗申請を明記 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 14
+- Last verified wave: wave 15
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `7ea4077` and the worktree contains only known untracked paths, then continue with 3–5 high-fit candidates missing operations or current price observations, prioritizing official HTML and current-dated fee tables.
+- At the next heartbeat, confirm the current HEAD descends from data commit `3b37cd6` and the worktree contains only known untracked paths, then continue with 3–5 high-fit candidates missing operations or current price observations, prioritizing official HTML and current-dated fee tables.
 
 ## Blockers
 
