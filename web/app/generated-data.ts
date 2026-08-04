@@ -6,13 +6,13 @@ export const venueData = {
     "venues": 230,
     "details": 318,
     "prices": 495,
-    "operations": 149,
+    "operations": 153,
     "budgetScenarios": 13,
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-05",
-      "observationCount": 1562,
-      "venueObservationCount": 975,
+      "observationCount": 1566,
+      "venueObservationCount": 979,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -15705,10 +15705,10 @@ export const venueData = {
       "strengths": "青森県・指定管理者の公式案内はメイン競技フロア3,910㎡・天井14.5〜23.1m・固定3,368席・冷暖房、展示会・コンサート等の文化イベント対応、現行の貸切料金と利用資料を掲載",
       "cautions": "天井高は範囲であるため単一比較値にせず記録。最大収容人数、床荷重、搬入寸法、投擲、催事専有回線、空き状況は要確認",
       "sourceUrl": "https://aomori-sportspark.jp/new_athletic_park/mainarena/",
-      "observedAt": "2026-08-04",
+      "observedAt": "2026-08-05",
       "detailCount": 1,
       "priceCount": 1,
-      "operationCount": 0,
+      "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
       "historicalSeries": [],
@@ -15740,7 +15740,19 @@ export const venueData = {
         }
       ],
       "budgetScenarios": [],
-      "operation": null,
+      "operation": {
+        "station": "新総合運動公園前バス停",
+        "walkMinutes": 0,
+        "stationAccess": "新青森駅から青森駅経由の電車・バスで約40〜50分、青森駅から市バスで約45分。新総合運動公園前下車で正面ロータリー到着",
+        "airportAccess": "青森空港から車で約45分",
+        "parkingSpaces": 1015,
+        "largeVehicleAccess": "yes",
+        "loadingAccess": "unknown",
+        "bookingOpenMonths": null,
+        "setupPolicy": "次年度大会・イベントの貸切調整案内は例年11月頃。年度途中貸切は空き状況に応じ電話または窓口で予約し、予約後1週間以内に申請書を提出。利用1か月前を目安に施設職員と打合せ",
+        "networkPolicy": "unknown",
+        "note": "マエダアリーナ最寄りは第1普通671台、第2普通314台・身障者30台、大型11台。園内駐車場は無料だが催事・競技会の占用は有料。2026年国スポ・障スポ期間に施設利用制限あり。搬入、飲食、物販、催事専有回線、連続利用は要確認"
+      },
       "spaces": [
         {
           "id": "maeda-main",
@@ -17296,10 +17308,10 @@ export const venueData = {
       "strengths": "静岡県・指定管理者の公式案内はメインアリーナ82m×46m・観客席2,700、2026年4月適用の一般全面料金、団体登録条件を掲載",
       "cautions": "メインの天井高、固定席構成、床荷重、投擲、搬入寸法、催事専有回線、空き状況は要確認",
       "sourceUrl": "https://www.kusanagi-sportscomplex.jp/images/3349.pdf",
-      "observedAt": "2026-08-04",
+      "observedAt": "2026-08-05",
       "detailCount": 1,
       "priceCount": 1,
-      "operationCount": 0,
+      "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
       "historicalSeries": [],
@@ -17331,7 +17343,19 @@ export const venueData = {
         }
       ],
       "budgetScenarios": [],
-      "operation": null,
+      "operation": {
+        "station": "静岡鉄道県総合運動場駅",
+        "walkMinutes": 3,
+        "stationAccess": "静岡鉄道県総合運動場駅から徒歩約3分",
+        "airportAccess": null,
+        "parkingSpaces": null,
+        "largeVehicleAccess": "unknown",
+        "loadingAccess": "unknown",
+        "bookingOpenMonths": null,
+        "setupPolicy": "静岡県施設予約システム『とれるnet』で予約。抽選・空き施設申込みには事前の窓口利用者登録と本人確認が必要。設備・時間・詳細項目を指定し、備品も続けて予約可能",
+        "networkPolicy": "unknown",
+        "note": "大会・イベント時は北・南駐車場が制限され、駐車券なしでは入場不可の日があるため公共交通を推奨。駐車台数、大型車、搬入、飲食、物販、催事専有回線、連続利用、予約開始時期は要確認"
+      },
       "spaces": [
         {
           "id": "konohana-main",
@@ -18359,7 +18383,7 @@ export const venueData = {
       "observedAt": "2026-08-05",
       "detailCount": 1,
       "priceCount": 1,
-      "operationCount": 0,
+      "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
       "historicalSeries": [],
@@ -18391,7 +18415,19 @@ export const venueData = {
         }
       ],
       "budgetScenarios": [],
-      "operation": null,
+      "operation": {
+        "station": "産業体育館バス停",
+        "walkMinutes": 0,
+        "stationAccess": "米子駅から路線バス約19〜21分で産業体育館下車。便数が少ないため、徒歩10分のリビンズ山根前バス停も案内。米子駅からタクシー約15分",
+        "airportAccess": null,
+        "parkingSpaces": 380,
+        "largeVehicleAccess": "unknown",
+        "loadingAccess": "unknown",
+        "bookingOpenMonths": 12,
+        "setupPolicy": "体育館全面の大会・展示会は利用月の前年同月20日までに次年度分調整申込書を提出し、同月末までに決定。調整翌月から随時受付。一般予約は登録団体の月次利用調整会または翌日以降の電話予約",
+        "networkPolicy": "unknown",
+        "note": "無料駐車場380台。周辺商業施設への駐車は禁止。搬入、大型車、飲食、物販、催事専有回線、連続利用は要確認"
+      },
       "spaces": [
         {
           "id": "yonago-main",
@@ -18940,7 +18976,7 @@ export const venueData = {
       "observedAt": "2026-08-05",
       "detailCount": 1,
       "priceCount": 1,
-      "operationCount": 0,
+      "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
       "historicalSeries": [],
@@ -18972,7 +19008,19 @@ export const venueData = {
         }
       ],
       "budgetScenarios": [],
-      "operation": null,
+      "operation": {
+        "station": "総合スポーツセンターバス停",
+        "walkMinutes": 0,
+        "stationAccess": "JR新前橋駅・群馬総社駅から総合スポーツセンター行バスで終点下車。JR前橋駅から関根停留所下車徒歩約10分",
+        "airportAccess": null,
+        "parkingSpaces": 1643,
+        "largeVehicleAccess": "yes",
+        "loadingAccess": "unknown",
+        "bookingOpenMonths": 3,
+        "setupPolicy": "2025年4月から群馬県施設予約システムへ移行。専用利用は3か月前から10日前まで1時間単位でWEB予約。大会は大会要項・打合せ書・附属設備申請書を提出し、通常は1階から入退場",
+        "networkPolicy": "unknown",
+        "note": "駐車場計1,643台、大型・マイクロバスは西駐車場。物販と飲食は申請制で、火気を扱う飲食物販売は禁止。搬入、催事専有回線、連続利用は要確認"
+      },
       "spaces": [
         {
           "id": "gunma-main",
