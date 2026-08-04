@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 9完了。2026-08-06 07:00 JSTに最終化予定。
+ACTIVE — wave 10完了。2026-08-06 07:00 JSTに最終化予定。
 
 ## Baseline
 
@@ -32,8 +32,10 @@ ACTIVE — wave 9完了。2026-08-06 07:00 JSTに最終化予定。
 - Wave 8ではロートアリーナ奈良、河南総合体育館、ヤマタスポーツパーク県民体育館、松江市総合体育館を追加。奈良・鳥取の料金PDFをページ画像でも目視照合し、和歌山の連続7日以内・物販原則禁止、鳥取の予約制モバイルルーター、松江の2026年度料金と有料駐車条件を明記した。
 - Wave 9: 岡山・広島・山口・徳島の4候補、4施設区画、7料金、4運用観測を追加（`eda592a`）。
 - Wave 9ではきびじアリーナ、IHIアリーナ呉、ゼオンアリーナ周南、とくぎんトモニアリーナを追加。周南は2024年からの現名称と2026年4月改定料金、総社は2026年7月供用の新空調を反映し、徳島は現行施設ページが案内する料金表の施行日が2019年のため再確認注意を明記した。
-- Current local totals: candidates 219 / details 307 / prices 440 / operations 130.
-- Overnight additions from baseline: candidates +36 / details +36 / prices +50 / operations +28.
+- Wave 10: 香川・愛媛・高知・福岡の4候補、4施設区画、9料金、4運用観測を追加（`6756506`）。
+- Wave 10では高松市総合体育館、愛媛県総合運動公園体育館、高知県立春野総合運動公園体育館、福岡市民体育館を追加。愛媛の料金PDFをページ画像でも目視照合し、春野の固定1,830席・移動4,800席、福岡の競技場限定運用・大会を除くバスケット不可・出店事前承認を区別して記録した。
+- Current local totals: candidates 223 / details 311 / prices 449 / operations 134.
+- Overnight additions from baseline: candidates +40 / details +40 / prices +59 / operations +32.
 
 ## Verification
 
