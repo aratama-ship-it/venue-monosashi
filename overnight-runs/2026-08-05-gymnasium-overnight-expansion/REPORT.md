@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 3完了。2026-08-06 07:00 JSTに最終化予定。
+ACTIVE — wave 4完了。2026-08-06 07:00 JSTに最終化予定。
 
 ## Baseline
 
@@ -20,7 +20,10 @@ ACTIVE — wave 3完了。2026-08-06 07:00 JSTに最終化予定。
 - Wave 2: 北海道・山形・福島・茨城の4候補、4施設区画、3料金、2運用観測を追加（`8c04d2d`）。
 - 料金件数の固定値に依存していたrender testも、CSVの実件数に追従する検証へ変更。
 - Wave 3: 栃木・群馬・埼玉・千葉の4候補、4施設区画、6料金、2運用観測を追加（`36349f1`）。
-- Current local totals: candidates 195 / details 283 / prices 399 / operations 106.
+- Wave 4: 東京・神奈川・山梨・新潟の4候補、4施設区画、6料金、4運用観測を追加（`fa8248c`）。
+- Wave 4では大田区総合体育館、平塚総合体育館、富士北麓公園体育館、リージョンプラザ上越を追加。上越は2026年9月1日〜2027年3月31日の大規模改修休館予定を明記。
+- Current local totals: candidates 199 / details 287 / prices 405 / operations 110.
+- Overnight additions from baseline: candidates +16 / details +16 / prices +15 / operations +8.
 
 ## Verification
 
