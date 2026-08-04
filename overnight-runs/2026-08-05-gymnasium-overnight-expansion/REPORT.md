@@ -136,8 +136,10 @@ ACTIVE — wave 48完了。全国47都道府県・候補230件の目標を達成
 - Wave 60では常設音響と放送設備、センターハング4面、据置型大型ビジョン、仮設フローリング、メイン/サブ空調、基本照明を用途別に追加した。別途必要な信号回線、保守管理・オペレーター、撤去・養生は除外として明記し、税込の公開料金だけを記録。3波ごとのlintと表示テスト3件も合格した。
 - Wave 61: 真駒内セキスイハイムアイスアリーナの16夏期料金観測と候補精度を更新（`b27cea8`）。
 - Wave 61では2026年7月に更新された指定管理者公式サイトが全館料金表をHTML再掲していることを確認。夏期9〜21時全館額をスポーツ、研修・集会、展示会、その他催物、入場料有無、平日/土日休日で分離した。金額の基準日は2023年4月1日現在のため、現行掲載であることと実予約時の改定再確認を併記した。
-- Current local totals: candidates 230 / details 360 / prices 1082 / operations 216.
-- Overnight additions from baseline: candidates +47 / details +89 / prices +692 / operations +114.
+- Wave 62: 真駒内セキスイハイムアイスアリーナの16冬期料金観測を追加（`0ece006`）。
+- Wave 62では夏期と同じスポーツ、研修・集会、展示会、その他催物、入場料有無、平日/土日休日の軸で冬期9〜21時全館額を追加し、製氷期を含む季節差を比較可能にした。基準日と再確認注意は夏期同様に保持した。
+- Current local totals: candidates 230 / details 360 / prices 1098 / operations 216.
+- Overnight additions from baseline: candidates +47 / details +89 / prices +708 / operations +114.
 
 ## Verification
 

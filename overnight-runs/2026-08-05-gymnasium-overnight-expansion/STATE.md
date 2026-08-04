@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 07:47 JST
+- Last updated: 2026-08-05 07:49 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `b27cea8` (ledger-only commits may follow it)
+- Last data commit: `0ece006` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -105,16 +105,17 @@
 | 59 | 2026-08-05 07:42 JST | 東京有明アリーナの現行サブ料金深掘り | 16 prices | audit 0 errors; generated 230/1046; duplicate price IDs 0 | `936f2a2` | サブ全面のスポーツ入場有無、式典展示、物販について本番/準備・曜日別全日額を画像照合 |
 | 60 | 2026-08-05 07:44 JST | 東京有明アリーナの現行設備料金深掘り | 20 prices | audit 0 errors; generated 230/1066; duplicate price IDs 0; lint OK; tests 3/3 | `f97e9d1` | 音響・センターハング/大型ビジョン・仮設床・メイン/サブ空調・基本照明を用途別に画像照合 |
 | 61 | 2026-08-05 07:47 JST | 真駒内アイスアリーナの夏期全館料金深掘り | 16 prices / 1 candidate precision fix | audit 0 errors; generated 230/1082; duplicate price IDs 0 | `b27cea8` | 2026更新公式サイト再掲の2023年4月現在表からスポーツ/集会/展示/催物・入場料・曜日別全日額を追加 |
+| 62 | 2026-08-05 07:49 JST | 真駒内アイスアリーナの冬期全館料金深掘り | 16 prices | audit 0 errors; generated 230/1098; duplicate price IDs 0 | `0ece006` | 夏期と同じ用途軸の冬期全日額を追加し、季節差を比較可能にした |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 61
+- Last verified wave: wave 62
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `b27cea8` and the worktree contains only known untracked paths, then run wave 62 against the matching winter full-day rows in the current Makomanai operator page. Preserve the 2023-04-01 base date and recheck note, and finish with audit and generated-data verification.
+- At the next heartbeat, confirm the current HEAD descends from data commit `0ece006` and the worktree contains only known untracked paths, then run wave 63 against HAPPINESS ARENA or the next A-ranked unpriced venue with a current public primary-source rate table. If none is public, add Makomanai's directly published high-value equipment rates instead. Finish with audit, generated-data verification, and the 3-wave lint/test checkpoint.
 
 ## Blockers
 
