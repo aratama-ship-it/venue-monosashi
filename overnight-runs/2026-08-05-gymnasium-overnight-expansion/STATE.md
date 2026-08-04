@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 06:33 JST
+- Last updated: 2026-08-05 06:36 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `8bb5e71` (ledger-only commits may follow it)
+- Last data commit: `fcc1c87` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -85,16 +85,17 @@
 | 39 | 2026-08-05 06:23 JST | 大阪・広島・東京・愛媛4候補の運用・分割精度深掘り | 4 operations / 3 details / 4 candidate precision fixes | audit 0 errors; generated 230/692; duplicate operation/detail IDs 0; lint OK; tests 3/3 | `973b6b4` | RACTAB、広島中小企業会館、プリズム、愛媛県民文化会館の運用を追加。駐車数の公式不一致と半面同時開催条件を保持 |
 | 40 | 2026-08-05 06:29 JST | 広島・東京・愛媛3候補の現行料金・分割区画深掘り | 25 prices / 3 details / 2 price precision fixes / 3 candidate precision fixes | audit 0 errors; generated 230/717; duplicate price/detail IDs 0 | `96e8b6f` | 愛媛県民文化会館の旧料金を2025年施行の現行額へ訂正。プリズムの分割・設営・空調・音響と広島の区画別・入場料徴収時料金を追加 |
 | 41 | 2026-08-05 06:33 JST | 広島・京都4ホールの予約・搬入・配信運用深掘り | 4 operations / 3 detail precision fixes / 4 candidate precision fixes | audit 0 errors; generated 230/717; duplicate operation/detail IDs 0 | `8bb5e71` | 広島国際会議場、ロームシアター、京都コンサートホール、リーデンローズの受付・駐車・搬入・物販・回線を追加。専用/隣接駐車と共用/専用回線を分離 |
+| 42 | 2026-08-05 06:36 JST | 京都2ホールの現行掲載料金比較深掘り | 32 prices / 2 candidate precision fixes | audit 0 errors; generated 230/749; duplicate price IDs 0; lint OK; tests 3/3 | `fcc1c87` | ロームシアターのメイン・サウス・ノース・専用回線、京都コンサートホールの曜日・入場料帯・配信回線を追加。古い又は施行日不明資料は注意を保持 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 41
+- Last verified wave: wave 42
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `8bb5e71` and the worktree contains only known untracked paths, then run wave 42 as a current-pricing follow-up for the newly deepened halls. Use only current official HTML or clearly effective official tables; do not promote older linked PDFs to current rates without an effective-date check. Finish with audit, generated-data verification, and the 3-wave lint/test checkpoint.
+- At the next heartbeat, confirm the current HEAD descends from data commit `fcc1c87` and the worktree contains only known untracked paths, then run wave 43 as an operations/precision follow-up for the remaining verified arena or stadium candidates without operational rows. Prefer facilities with current official organizer guidance; keep venue-only, adjacent, and shared parking distinct. Finish with audit and generated-data verification.
 
 ## Blockers
 
