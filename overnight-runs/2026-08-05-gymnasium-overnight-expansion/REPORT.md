@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 64完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 65完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -142,8 +142,10 @@ ACTIVE — wave 64完了。全国47都道府県・候補230件の目標を達成
 - Wave 63では放送室・拡声装置、電光掲示盤・計測器、フロア用じゅうたん、バスケット/バレー/ハンド/アイスホッケー用具を税込で追加。HAPPINESS ARENAは公式ページ内に現行貸館料金を確認できず、問い合わせ制として推測追加を保留した。3波ごとのlintと表示テスト3件も合格した。
 - Wave 64: セーレン・ドリームアリーナの16メインアリーナ料金観測と候補・運用精度を更新（`38ed138`）。
 - Wave 64では2026年8月4日更新の福井県公式ページが現在案内する2024年4月1日改正表を画像照合し、学生等/一般、入場料なし/4,710円未満/以上、通常時間帯/大会等が終了しない場合の夜間、スポーツ以外の行事を分離した。税表記は推測せず、県外利用5割・休日2割加算は派生額を作らず運用条件として保持した。Big HatとRACTABは現行公式ページから到達する料金表の基準が2019年のため、追加を保留した。
-- Current local totals: candidates 230 / details 360 / prices 1122 / operations 216.
-- Overnight additions from baseline: candidates +47 / details +89 / prices +732 / operations +114.
+- Wave 65: セーレン・ドリームアリーナの10メインアリーナ設備料金観測を追加（`0ab9e81`）。
+- Wave 65ではメインアリーナ全面・2分の1・3分の1・4分の1の照明加算と、全面冷暖房加算を学生等/一般で分離した。施設基本料、照明、冷暖房、休日・県外加算を混ぜず、公式表の1時間単価のみを記録した。
+- Current local totals: candidates 230 / details 360 / prices 1132 / operations 216.
+- Overnight additions from baseline: candidates +47 / details +89 / prices +742 / operations +114.
 
 ## Verification
 

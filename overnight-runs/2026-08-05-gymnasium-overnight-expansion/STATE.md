@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 07:57 JST
+- Last updated: 2026-08-05 07:58 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `38ed138` (ledger-only commits may follow it)
+- Last data commit: `0ab9e81` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -108,16 +108,17 @@
 | 62 | 2026-08-05 07:49 JST | 真駒内アイスアリーナの冬期全館料金深掘り | 16 prices | audit 0 errors; generated 230/1098; duplicate price IDs 0 | `0ece006` | 夏期と同じ用途軸の冬期全日額を追加し、季節差を比較可能にした |
 | 63 | 2026-08-05 07:50 JST | 真駒内アイスアリーナの設備料金深掘り | 8 prices | audit 0 errors; generated 230/1106; duplicate price IDs 0; lint OK; tests 3/3 | `823ef7d` | 放送室・電光設備・床養生・競技用具を追加。HAPPINESS ARENAの非公開貸館料金は保留 |
 | 64 | 2026-08-05 07:57 JST | セーレン・ドリームアリーナの現行メイン料金深掘り | 16 prices / 1 candidate / 1 operation precision fix | audit 0 errors; generated 230/1122; duplicate price IDs 0 | `38ed138` | 2024年4月改正表を現在の県公式案内から画像照合。学生等/一般、入場料帯、通常/大会継続夜間、非スポーツを分離。県外5割・休日2割加算は派生額を作らず保持 |
+| 65 | 2026-08-05 07:58 JST | セーレン・ドリームアリーナのメイン設備料金深掘り | 10 prices | audit 0 errors; generated 230/1132; duplicate price IDs 0 | `0ab9e81` | メイン全面/1/2/1/3/1/4の照明と全面冷暖房を学生等/一般で分離。施設基本料と加算額を混ぜず保持 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 64
+- Last verified wave: wave 65
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `38ed138` and the worktree contains only known untracked paths, then run wave 65 against the same current official 福井県営体育館 table for main/sub lighting, heating and sub-arena pricing. Big Hat and RACTAB remain held because their current official pages expose 2019 base tables.
+- At the next heartbeat, confirm the current HEAD descends from data commit `0ab9e81` and the worktree contains only known untracked paths, then run wave 66 against the same current official 福井県営体育館 table for sub-arena facility, lighting and heating pricing. Finish the 3-wave checkpoint with lint and tests.
 
 ## Blockers
 
