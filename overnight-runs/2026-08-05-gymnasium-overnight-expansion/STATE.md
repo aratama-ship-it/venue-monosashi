@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 08:02 JST
+- Last updated: 2026-08-05 08:05 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `d6ff987` (ledger-only commits may follow it)
+- Last data commit: `a448b2e` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -111,16 +111,17 @@
 | 65 | 2026-08-05 07:58 JST | セーレン・ドリームアリーナのメイン設備料金深掘り | 10 prices | audit 0 errors; generated 230/1132; duplicate price IDs 0 | `0ab9e81` | メイン全面/1/2/1/3/1/4の照明と全面冷暖房を学生等/一般で分離。施設基本料と加算額を混ぜず保持 |
 | 66 | 2026-08-05 08:00 JST | セーレン・ドリームアリーナのサブ料金深掘り | 12 prices | audit 0 errors; generated 230/1144; duplicate price IDs 0; lint OK; tests 3/3 | `ca82616` | サブ全面の通常/大会継続夜間と、全面/半面の照明・冷暖房を学生等/一般で分離。3波チェック合格 |
 | 67 | 2026-08-05 08:02 JST | セーレン・ドリームアリーナの多目的・会議室深掘り | 4 details / 12 prices | audit 0 errors; generated 230/1156; duplicate detail/price IDs 0 | `d6ff987` | 多目的室と会議室3室を追加。定員、分割、音響等込み、照明・冷暖房条件を分離し、倍率のみの冷暖房は派生額を作らず保持 |
+| 68 | 2026-08-05 08:05 JST | サンガスタジアムの支援区画深掘り | 2 details / 8 prices / 1 operation / 1 candidate precision fix | audit 0 errors; generated 230/1164; duplicate IDs 0 | `a448b2e` | 会議室AとスタジオA/Bセットの現行税込料金・予約条件を追加。スタジアム本体の非公開催事料金とは分離 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 67
+- Last verified wave: wave 68
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `d6ff987` and the worktree contains only known untracked paths, then select another unpriced arena/sports candidate with a current public primary-source rate table. Keep stale, closed and inquiry-only venues held.
+- At the next heartbeat, confirm the current HEAD descends from data commit `a448b2e` and the worktree contains only known untracked paths, then deepen current official Sanga meeting-room and equipment pricing or add the single current official Nissan Stadium professional full-field/full-stand base rate with its priority-use caveat. Keep main-event inquiry rates separate.
 
 ## Blockers
 

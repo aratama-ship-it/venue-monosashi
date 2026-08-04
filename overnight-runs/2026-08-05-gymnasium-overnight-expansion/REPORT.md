@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 67完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 68完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -148,8 +148,10 @@ ACTIVE — wave 67完了。全国47都道府県・候補230件の目標を達成
 - Wave 66ではサブアリーナ全面の通常/大会等が終了しない場合の夜間料金と、全面/2分の1面の照明・冷暖房加算を学生等/一般で分離した。3波ごとのlintと表示テスト3件も合格した。
 - Wave 67: セーレン・ドリームアリーナの4区画と12多目的室・会議室料金観測を追加（`d6ff987`）。
 - Wave 67では多目的室、定員52/108/84人の会議室3室を区画化し、鏡張り用途、会議室2・3の半面対応、無料Wi-Fiと備品を記録。多目的室の基本・照明・冷暖房と各会議室の音響等設備込み基本料を学生等/一般で分離し、会議室冷暖房2割加算は派生額を作らず保持した。
-- Current local totals: candidates 230 / details 364 / prices 1156 / operations 216.
-- Overnight additions from baseline: candidates +47 / details +93 / prices +766 / operations +114.
+- Wave 68: サンガスタジアムの2支援区画、8料金観測、1運用観測を追加し候補精度を更新（`a448b2e`）。
+- Wave 68では約181㎡・120人の会議室Aと、定員20人のスタジオA/Bセットを区画化。会議室Aの午前/午後/夜/全日/区分外/通常時間外、スタジオの非営利/営業料金を現行公式HTMLから税込で追加した。スタジオは2か月先から1週間前まで、設営撤去込み・予約後キャンセル不可を記録し、スタジアム本体の非公開催事料金と明確に分離した。
+- Current local totals: candidates 230 / details 366 / prices 1164 / operations 217.
+- Overnight additions from baseline: candidates +47 / details +95 / prices +774 / operations +115.
 
 ## Verification
 
