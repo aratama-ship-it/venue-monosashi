@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 08:52 JST
+- Last updated: 2026-08-05 08:54 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `9dd4f3a` (ledger-only commits may follow it)
+- Last data commit: `9b9d2e3` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -129,16 +129,17 @@
 | 83 | 2026-08-05 08:48 JST | 佐世保市体育文化館の大体育室料金訂正・深掘り | 2 details / 22 prices / 1 price correction | audit 0 errors; generated 230/1389; duplicate IDs 0 | `41d66a0` | 市公式現行ページと2024年料金PDFを画像照合。大体育室営利額を233,280円へ訂正し、専用・練習料金を補完。小体育室768㎡・ホール600人も区画化 |
 | 84 | 2026-08-05 08:50 JST | 佐世保市体育文化館の小体育室・ホール料金深掘り | 25 prices | audit 0 errors; generated 230/1414; duplicate IDs 0; lint OK; tests 3/3 | `d002558` | 小体育室の専用・市内外練習17件、600人ホールの曜日/時間帯・控室8件を追加。PDF画像照合、3波チェック合格 |
 | 85 | 2026-08-05 08:52 JST | 佐世保市体育文化館の支援室・器具料金深掘り | 4 details / 25 prices | audit 0 errors; generated 230/1439; duplicate IDs 0 | `9dd4f3a` | 選手控室/ミーティング/役員/会議室を区画化し、専用付帯・市内外個別12件と体育館音響・器具13件を画像照合して追加 |
+| 86 | 2026-08-05 08:54 JST | 佐世保市体育文化館の空調料金深掘り | 18 prices | audit 0 errors; generated 230/1457; duplicate IDs 0 | `9b9d2e3` | 大体育室/観客席/小体育室/600人ホールの冷暖房・送風12件と、ミーティング/選手控室のコイン空調6件を30分・硬貨単位で追加 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 85
+- Last verified wave: wave 86
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `9dd4f3a` and the worktree contains only known untracked paths, then continue with 佐世保空調・照明 or newly verifiable arena rates. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
+- At the next heartbeat, confirm the current HEAD descends from data commit `9b9d2e3` and the worktree contains only known untracked paths, then continue with 佐世保照明 or newly verifiable arena rates. Wave 87 must run full lint and three display tests. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
 
 ## Blockers
 

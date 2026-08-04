@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 85完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 86完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -184,8 +184,10 @@ ACTIVE — wave 85完了。全国47都道府県・候補230件の目標を達成
 - Wave 84では小体育室の体育/非体育/営利の3時間帯と、市内外の競技別練習料金を追加。600人ホールは平日/土日休日の午前・午後・夜間と2控室を分離し、入場料徴収又は営利の5割加算は派生額を作らず除外条件に保持した。3波ごとのlintと表示テスト3件も合格した。
 - Wave 85: 佐世保市体育文化館の4支援区画と25料金観測を追加（`9dd4f3a`）。
 - Wave 85ではPDF画像を照合し、選手控室A・B、ミーティングルーム、役員室、会議室を区画化。専用付帯/市内外個別利用と、体育館・集会場の放送、マイク、得点表示、演台、平台、机、椅子等を施設基本料と分離した。
-- Current local totals: candidates 230 / details 394 / prices 1439 / operations 217.
-- Overnight additions from baseline: candidates +47 / details +123 / prices +1049 / operations +115.
+- Wave 86: 佐世保市体育文化館の18空調料金観測を追加（`9b9d2e3`）。
+- Wave 86では大体育室、観客席、小体育室、コミュニティセンターホールの冷房/暖房/送風を30分単位で分離し、ミーティングルームと選手控室A・Bの100円硬貨1枚あたり運転時間も別料金として記録した。
+- Current local totals: candidates 230 / details 394 / prices 1457 / operations 217.
+- Overnight additions from baseline: candidates +47 / details +123 / prices +1067 / operations +115.
 
 ## Verification
 
