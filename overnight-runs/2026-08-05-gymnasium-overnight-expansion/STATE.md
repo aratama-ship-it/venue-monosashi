@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 06:01 JST
+- Last updated: 2026-08-05 06:10 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `fd3c81a` (ledger-only commits may follow it)
+- Last data commit: `31adb25` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -79,16 +79,17 @@
 | 33 | 2026-08-05 05:49 JST | 茨城・兵庫・広島・大阪4候補の運用・休館深掘り | 4 operations / 1 detail / 2 detail-candidate precision fixes | audit 0 errors; generated 230/625; duplicate operation/detail IDs 0; lint OK; tests 3/3 | `d482921` | つくばの12か月前申込・5日上限、GLIONの大型搬入・来場者駐車なし、福山の6か月前予約・360台、EDIONの2026年4月〜2027年1月末予定全館休館を追加。EDION休館PDFを画像照合 |
 | 34 | 2026-08-05 05:51 JST | 茨城・広島2候補の現行料金比較深掘り | 12 prices | audit 0 errors; generated 230/637; duplicate price IDs 0 | `f6fa725` | つくばの大会/非スポーツ・入場料・冷暖房・可動舞台と、福山のアマチュア/非営利/その他催物の日額・時間額を追加。閉館中EDIONと更新日不明GLION料金は保留 |
 | 35 | 2026-08-05 06:01 JST | 愛媛・福岡・大阪・栃木4候補の運用・区画精度深掘り | 4 operations / 3 detail precision fixes | audit 0 errors; generated 230/637; duplicate operation/detail IDs 0 | `fd3c81a` | 愛媛の3か月前予約・219台、福岡国際センターの12か月前受付・搬入・夜間制約、グランキューブの2年前受付・304台・LAN、マロニエの2年前条件・450台・車両直接搬入を追加。福岡現行手引きを画像照合し、グランキューブの別区画席数混入を修正 |
+| 36 | 2026-08-05 06:10 JST | 愛媛・大阪・栃木3候補の現行料金・分割区画深掘り | 31 prices / 9 details / 3 candidate-operation precision fixes | audit 0 errors; generated 230/668; duplicate IDs 0; lint OK; tests 3/3 | `31adb25` | 愛媛の2025年改定用途別、グランキューブの2025年適用興行・展示、マロニエの現行掲載料金を追加。公式料金表を画像照合し、古い改定表示は実予約時再確認を保持 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 35
+- Last verified wave: wave 36
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `fd3c81a` and the worktree contains only known untracked paths, then run wave 36 as a pricing/precision checkpoint. Prefer the current 2025 Ehime Budokan rate sheet and any current rate tables reachable from the official Fukuoka International Center, GranCube Osaka, or Marronnier Plaza download paths; do not carry forward stale or unclear rates. Finish with audit, lint, and tests.
+- At the next heartbeat, confirm the current HEAD descends from data commit `31adb25` and the worktree contains only known untracked paths, then run wave 37 against existing candidates with missing operations or current pricing. Prefer current official HTML or clearly dated official PDFs; retain stale or ambiguous rates as unverified rather than promoting them. Finish with audit and generated-data verification.
 
 ## Blockers
 
