@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 77完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 78完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -168,8 +168,10 @@ ACTIVE — wave 77完了。全国47都道府県・候補230件の目標を達成
 - Wave 76では指定管理者の現行料金HTMLから、メインアリーナのバドミントンコート1面、3分の1面、半面、全面入場料なしを高校生以下のみ/一般で分離。条例改正議案で確認した全面・スイート料金も現行ページ上に一致することを確認し、候補の一次情報記述を更新した。
 - Wave 77: アダストリアみとアリーナの大型映像装置12料金観測を追加（`e857b25`）。
 - Wave 77では壁面型・4面型・帯型を、アマチュアスポーツ/その他、入場料有無で分離し、指定管理者の現行公式HTMLに掲載された1時間額を記録。施設基本料と映像設備、操作人件費・信号回線を混ぜず保持した。
-- Current local totals: candidates 230 / details 385 / prices 1279 / operations 217.
-- Overnight additions from baseline: candidates +47 / details +114 / prices +889 / operations +115.
+- Wave 78: アダストリアみとアリーナの多目的室3区画と24料金観測を追加（`6b5b220`）。
+- Wave 78では大・中・小区分を比較用に区画化し、アマチュアスポーツ/その他を午前8:30〜12:00、午後12:00〜17:00、昼間8:30〜17:00、夜間17:00〜21:00で分離。指定管理者の現行公式HTML掲載額のみを記録し、集約377㎡と各分割区画の未公表面積を混同しなかった。3波ごとのlintと表示テスト3件も合格した。
+- Current local totals: candidates 230 / details 388 / prices 1303 / operations 217.
+- Overnight additions from baseline: candidates +47 / details +117 / prices +913 / operations +115.
 
 ## Verification
 
