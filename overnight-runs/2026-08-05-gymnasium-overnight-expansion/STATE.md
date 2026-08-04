@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 08:44 JST
+- Last updated: 2026-08-05 08:48 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `b379dfb` (ledger-only commits may follow it)
+- Last data commit: `41d66a0` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -126,16 +126,17 @@
 | 80 | 2026-08-05 08:39 JST | アダストリアみとアリーナの支援室・照明料金深掘り | 22 prices | audit 0 errors; generated 230/1319; duplicate IDs 0 | `f31752f` | レスリング/ボクシング/フェンシング6件、放送1件、メイン/サブ照明15件を東町運動公園区画から追加。原文の不自然な表記1件は要確認付きで保持 |
 | 81 | 2026-08-05 08:40 JST | アダストリアみとアリーナのサブ・個人料金深掘り | 9 prices | audit 0 errors; generated 230/1328; duplicate IDs 0; lint OK; tests 3/3 | `4d0846d` | サブのバドミントン1面・全面を用途/入場料で7件、トレーニング高校生以下/一般を2件追加。3波チェック合格 |
 | 82 | 2026-08-05 08:44 JST | 熊本県立総合体育館の全館料金深掘り | 3 details / 39 prices | audit 0 errors; generated 230/1367; duplicate IDs 0 | `b379dfb` | 現行指定管理者HTMLから大/中/小体育室の個人・専用・設備、トレーニング、会議室を税込で追加。小体育室422㎡等も区画化 |
+| 83 | 2026-08-05 08:48 JST | 佐世保市体育文化館の大体育室料金訂正・深掘り | 2 details / 22 prices / 1 price correction | audit 0 errors; generated 230/1389; duplicate IDs 0 | `41d66a0` | 市公式現行ページと2024年料金PDFを画像照合。大体育室営利額を233,280円へ訂正し、専用・練習料金を補完。小体育室768㎡・ホール600人も区画化 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 82
+- Last verified wave: wave 83
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `b379dfb` and the worktree contains only known untracked paths, then continue with newly verifiable arena and support-space rates. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
+- At the next heartbeat, confirm the current HEAD descends from data commit `41d66a0` and the worktree contains only known untracked paths, then continue with 佐世保小体育室・ホール料金 or newly verifiable arena rates. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
 
 ## Blockers
 

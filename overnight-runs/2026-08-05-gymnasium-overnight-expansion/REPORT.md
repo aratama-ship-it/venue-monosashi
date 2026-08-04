@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 82完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 83完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -178,8 +178,10 @@ ACTIVE — wave 82完了。全国47都道府県・候補230件の目標を達成
 - Wave 81ではサブのバドミントン1面、全面の高校生以下/一般、入場料有無、アマチュアスポーツ以外を分離し、トレーニング室は高校生以下/一般の1人1時間額として追加。3波ごとのlintと表示テスト3件も合格した。
 - Wave 82: 熊本県立総合体育館の3区画と39料金観測を追加（`b379dfb`）。
 - Wave 82では指定管理者の現行公式HTMLから、422㎡の小体育室、622㎡・約90台のトレーニング室、分割可能な会議室を区画化。大/中/小体育室の競技別個人利用、専用利用、照明・冷暖房・大型映像、トレーニングと会議室を税込で分離し、入場料徴収時の別料金は数値を推測せず除外に保持した。
-- Current local totals: candidates 230 / details 388 / prices 1367 / operations 217.
-- Overnight additions from baseline: candidates +47 / details +117 / prices +977 / operations +115.
+- Wave 83: 佐世保市体育文化館の2区画・22料金観測を追加し、既存1料金を訂正（`41d66a0`）。
+- Wave 83では市公式現行ページと同ページが案内する令和6年4月1日現在PDFを画像照合。大体育室の営利目的4時間額を小体育室との混同による77,760円から233,280円へ訂正し、非営利の体育/非体育・入場料有無、練習の市内外を補完した。小体育室768㎡・移動席800席、コミュニティセンターホール600人も区画化した。
+- Current local totals: candidates 230 / details 390 / prices 1389 / operations 217.
+- Overnight additions from baseline: candidates +47 / details +119 / prices +999 / operations +115.
 
 ## Verification
 
