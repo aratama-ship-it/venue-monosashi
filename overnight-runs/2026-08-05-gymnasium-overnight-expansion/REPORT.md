@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 76完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 77完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -166,8 +166,10 @@ ACTIVE — wave 76完了。全国47都道府県・候補230件の目標を達成
 - Wave 75では約300㎡・100名のVIPエリア、28㎡・22名のスカイボックスA、21㎡・18名のBを区画化し、午前/午後/夜/全日/区分外/通常時間外を現行公式HTMLから税込で追加。VIPはラウンジと2室のセット貸出・宴会可・ゴミ持帰りを明記し、通常会議室と接遇区画を分離した。3波ごとのlintと表示テスト3件も合格した。
 - Wave 76: アダストリアみとアリーナの8分割料金観測を追加し候補精度を更新（`b35ecd2`）。
 - Wave 76では指定管理者の現行料金HTMLから、メインアリーナのバドミントンコート1面、3分の1面、半面、全面入場料なしを高校生以下のみ/一般で分離。条例改正議案で確認した全面・スイート料金も現行ページ上に一致することを確認し、候補の一次情報記述を更新した。
-- Current local totals: candidates 230 / details 385 / prices 1267 / operations 217.
-- Overnight additions from baseline: candidates +47 / details +114 / prices +877 / operations +115.
+- Wave 77: アダストリアみとアリーナの大型映像装置12料金観測を追加（`e857b25`）。
+- Wave 77では壁面型・4面型・帯型を、アマチュアスポーツ/その他、入場料有無で分離し、指定管理者の現行公式HTMLに掲載された1時間額を記録。施設基本料と映像設備、操作人件費・信号回線を混ぜず保持した。
+- Current local totals: candidates 230 / details 385 / prices 1279 / operations 217.
+- Overnight additions from baseline: candidates +47 / details +114 / prices +889 / operations +115.
 
 ## Verification
 

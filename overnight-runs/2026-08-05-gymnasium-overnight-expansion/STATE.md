@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 08:27 JST
+- Last updated: 2026-08-05 08:29 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `b35ecd2` (ledger-only commits may follow it)
+- Last data commit: `e857b25` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -120,16 +120,17 @@
 | 74 | 2026-08-05 08:23 JST | アダストリアみとアリーナの支援区画深掘り | 6 details / 1 detail precision fix | audit 0 errors; generated 230/1241; duplicate IDs 0 | `373f8ae` | 市公式施設概要PDFを画像照合。レスリング/フェンシング/ボクシング/トレーニング/多目的/会議室を追加し、サブ席数を198（固定192）へ補完 |
 | 75 | 2026-08-05 08:25 JST | サンガスタジアムVIP・スカイボックス深掘り | 3 details / 18 prices / 1 candidate precision fix | audit 0 errors; generated 230/1259; duplicate IDs 0; lint OK; tests 3/3 | `679d184` | VIPエリアとスカイボックスA/Bの面積・定員、午前/午後/夜/全日/区分外/通常時間外を現行公式HTMLから追加。接遇区画と通常会議室を分離 |
 | 76 | 2026-08-05 08:27 JST | アダストリアみとアリーナの分割料金深掘り | 8 prices / 1 candidate precision fix | audit 0 errors; generated 230/1267; duplicate IDs 0 | `b35ecd2` | 指定管理者の現行料金HTMLからバドミントン1面、1/3、半面、全面を高校生以下/一般で追加。条例議案のみだった現行性を運営者掲載でも確認 |
+| 77 | 2026-08-05 08:29 JST | アダストリアみとアリーナの大型映像料金深掘り | 12 prices | audit 0 errors; generated 230/1279; duplicate IDs 0 | `e857b25` | 壁面型/4面型/帯型をアマチュア/その他・入場料有無で分離し、現行指定管理者HTMLの1時間額を追加 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 76
+- Last verified wave: wave 77
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `b35ecd2` and the worktree contains only known untracked paths, then continue with current official support-space rates or newly verifiable arena rates. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
+- At the next heartbeat, confirm the current HEAD descends from data commit `e857b25` and the worktree contains only known untracked paths, then continue with current official support-space rates or newly verifiable arena rates. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
 
 ## Blockers
 
