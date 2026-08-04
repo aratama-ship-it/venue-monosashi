@@ -11634,7 +11634,7 @@ var client_references_default = {
 		} };
 	},
 	"54e7cc413194": async () => {
-		const m = await import("./assets/venue-search-BQFUzWzZ.js");
+		const m = await import("./assets/venue-search-7yXXpjxU.js");
 		return { get "VenueSearch"() {
 			return m["VenueSearch"];
 		} };
