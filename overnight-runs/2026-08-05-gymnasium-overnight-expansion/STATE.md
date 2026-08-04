@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 03:52 JST
+- Last updated: 2026-08-05 03:58 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `679d668` (ledger-only commits may follow it)
+- Last data commit: `eda592a` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -27,8 +27,8 @@
 - Hokuriku/Koshinetsu: 完了（山梨・新潟はwave 4、富山・石川・福井・長野はwave 5）
 - Tokai: 完了（岐阜・静岡・愛知・三重はwave 6）
 - Kinki: 完了（滋賀・京都・大阪・兵庫はwave 7、奈良・和歌山はwave 8）
-- Chugoku: 鳥取・島根はwave 8で完了。岡山、広島、山口
-- Shikoku: 徳島、香川、愛媛、高知
+- Chugoku: 完了（鳥取・島根はwave 8、岡山・広島・山口はwave 9）
+- Shikoku: 徳島はwave 9で完了。香川、愛媛、高知
 - Kyushu/Okinawa: 福岡、佐賀、長崎、熊本、大分、宮崎、鹿児島、沖縄
 
 ## Safety notes
@@ -51,16 +51,17 @@
 | 6 | 2026-08-05 03:36 JST | 岐阜・静岡・愛知・三重 | 4 candidates / 4 details / 6 prices / 4 operations | audit 0 errors; lint OK; tests 3/3 | `256054a` | 3-wave full checkpoint。大垣の旧版料金は数値追加を保留 |
 | 7 | 2026-08-05 03:46 JST | 滋賀・京都・大阪・兵庫 | 4 candidates / 4 details / 8 prices / 4 operations | audit 0 errors; lint OK; tests 3/3 | `8cb8e3d` | 現行名称を確認。彦根・京都の料金PDFを目視照合し、姫路の将来改修予定を明記 |
 | 8 | 2026-08-05 03:52 JST | 奈良・和歌山・鳥取・島根 | 4 candidates / 4 details / 7 prices / 4 operations | audit 0 errors; lint OK; tests 3/3 | `679d668` | 奈良・鳥取の料金PDFを目視照合。和歌山の連続7日上限、松江の現行2026年度料金を明記 |
+| 9 | 2026-08-05 03:58 JST | 岡山・広島・山口・徳島 | 4 candidates / 4 details / 7 prices / 4 operations | audit 0 errors; lint OK; tests 3/3 | `eda592a` | 周南の現名称・2026料金と総社の新空調を反映。徳島の旧施行日料金は再確認注意を明記 |
 
 ## Current Wave
 
 - Phase: regional expansion
-- Last verified wave: wave 8
+- Last verified wave: wave 9
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `679d668` and the worktree contains only known untracked paths, then continue with 岡山・広島・山口・徳島。
+- At the next heartbeat, confirm the current HEAD descends from data commit `eda592a` and the worktree contains only known untracked paths, then continue with 香川・愛媛・高知・福岡。
 
 ## Blockers
 
