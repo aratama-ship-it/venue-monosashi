@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 7完了。2026-08-06 07:00 JSTに最終化予定。
+ACTIVE — wave 8完了。2026-08-06 07:00 JSTに最終化予定。
 
 ## Baseline
 
@@ -28,8 +28,10 @@ ACTIVE — wave 7完了。2026-08-06 07:00 JSTに最終化予定。
 - Wave 6では大垣市総合体育館、香陵アリーナ、豊橋市総合体育館、相好アリーナ四日市を追加。香陵・豊橋・四日市の料金PDFを目視照合し、大垣は公開表が2019年改正版のため料金観測を保留した。
 - Wave 7: 滋賀・京都・大阪・兵庫の4候補、4施設区画、8料金、4運用観測を追加（`8cb8e3d`）。
 - Wave 7ではプロシードアリーナHIKONE、にっしんでんきアリーナ京都、東大阪アリーナ、ヴィクトリーナ・ウインク体育館を追加。彦根・京都の料金PDFを目視照合し、京都の現行ネーミングライツ名、東大阪の2026年12月予約システム移行、姫路の2027年1月〜2028年12月大規模改修予定を明記した。
-- Current local totals: candidates 211 / details 299 / prices 426 / operations 122.
-- Overnight additions from baseline: candidates +28 / details +28 / prices +36 / operations +20.
+- Wave 8: 奈良・和歌山・鳥取・島根の4候補、4施設区画、7料金、4運用観測を追加（`679d668`）。
+- Wave 8ではロートアリーナ奈良、河南総合体育館、ヤマタスポーツパーク県民体育館、松江市総合体育館を追加。奈良・鳥取の料金PDFをページ画像でも目視照合し、和歌山の連続7日以内・物販原則禁止、鳥取の予約制モバイルルーター、松江の2026年度料金と有料駐車条件を明記した。
+- Current local totals: candidates 215 / details 303 / prices 433 / operations 126.
+- Overnight additions from baseline: candidates +32 / details +32 / prices +43 / operations +24.
 
 ## Verification
 
