@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 08:11 JST
+- Last updated: 2026-08-05 08:16 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `16e6acc` (ledger-only commits may follow it)
+- Last data commit: `99eca09` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -115,16 +115,17 @@
 | 69 | 2026-08-05 08:07 JST | サンガスタジアム支援区画の設備料金深掘り | 17 prices | audit 0 errors; generated 230/1181; duplicate price IDs 0; lint OK; tests 3/3 | `3ae558e` | 会議室Aの音響・映像・舞台設備とスタジオの運動用具・音響・プロジェクター・シャワーを追加。3波チェック合格 |
 | 70 | 2026-08-05 08:08 JST | 日産スタジアムの現行基本料金確認 | 1 price / 1 candidate precision fix | audit 0 errors; generated 230/1182; duplicate price IDs 0 | `4eb0e6b` | フィールド・全スタンドのプロ基本144万円を追加。アマチュア約1/5は概算のため派生額を作らず、優先利用・別加算を保持 |
 | 71 | 2026-08-05 08:11 JST | FUKAI SQUARE GARDEN足利の現行料金深掘り | 13 prices / 1 candidate precision fix | audit 0 errors; generated 230/1195; duplicate price IDs 0 | `16e6acc` | 2024年10月施行の税込改定表を画像照合。スポーツ/集会/営利の午前・午後・夜・全日と電光掲示板を分離 |
+| 72 | 2026-08-05 08:16 JST | サンガスタジアム貸会議室群の比較深掘り | 7 details / 37 prices | audit 0 errors; generated 230/1232; duplicate IDs 0; lint OK; tests 3/3 | `99eca09` | B-1/D-1/F-1/G/H-1/I-1/J-1の面積・定員と午前/午後/夜/全日/区分外料金を現行公式HTMLから追加。大中小会議室を同軸化 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 71
+- Last verified wave: wave 72
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `16e6acc` and the worktree contains only known untracked paths, then review remaining unpriced arena/sports candidates and current official support-space rates. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
+- At the next heartbeat, confirm the current HEAD descends from data commit `99eca09` and the worktree contains only known untracked paths, then continue with current official support-space rates or newly verifiable arena rates. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
 
 ## Blockers
 

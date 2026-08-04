@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 71完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 72完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -156,8 +156,10 @@ ACTIVE — wave 71完了。全国47都道府県・候補230件の目標を達成
 - Wave 70では運営者の現行公式Q&Aから、フィールド・全スタンド使用時のプロ基本料金144万円を記録。入場料徴収、物品販売、照明・音響等は別加算、一般利用枠は大規模大会・イベント優先で限定的と明記した。アマチュアは約5分の1という概算のみのため派生額を作らなかった。
 - Wave 71: FUKAI SQUARE GARDEN足利の13料金観測を追加し候補精度を更新（`16e6acc`）。
 - Wave 71では足利市公式の2024年10月1日以後許可分の改定PDFを画像照合し、主競技場貸切のアマチュアスポーツ/集会/営利等を午前・午後・夜間・全日で分離。電光掲示板1式1時間も別設備料金として税込で追加した。
-- Current local totals: candidates 230 / details 366 / prices 1195 / operations 217.
-- Overnight additions from baseline: candidates +47 / details +95 / prices +805 / operations +115.
+- Wave 72: サンガスタジアムの貸会議室7区画と37料金観測を追加（`99eca09`）。
+- Wave 72では会議室B-1/D-1/F-1/G/H-1/I-1/J-1について、約14〜89㎡・10〜66名の面積と定員を区画化し、午前/午後/夜/全日/区分外料金を現行公式HTMLから税込で追加。B-1/D-1では通常使用時間外も記録し、ページに明示のない料金は推測しなかった。3波ごとのlintと表示テスト3件も合格した。
+- Current local totals: candidates 230 / details 373 / prices 1232 / operations 217.
+- Overnight additions from baseline: candidates +47 / details +102 / prices +842 / operations +115.
 
 ## Verification
 
