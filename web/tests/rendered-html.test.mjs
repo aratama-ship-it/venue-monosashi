@@ -44,8 +44,8 @@ test("server-renders the venue search shell", async () => {
   assert.match(html, /条件を置く/);
   assert.match(html, /同じ目盛りで見る/);
   assert.match(html, />225<[\s\S]*過去大会記録/);
-  assert.match(html, />174<[\s\S]*全国候補施設/);
-  assert.match(html, />387<[\s\S]*条件付き料金観測/);
+  assert.match(html, />183<[\s\S]*全国候補施設/);
+  assert.match(html, />390<[\s\S]*条件付き料金観測/);
   assert.match(html, />13<[\s\S]*区分合計の参考額/);
   assert.match(html, />594<[\s\S]*小劇場一次情報台帳/);
   assert.match(html, /small-theater-research\.[a-f0-9]{12}\.csv/);
@@ -62,6 +62,7 @@ test("server-renders the venue search shell", async () => {
   assert.match(html, /アマチュアスポーツ/);
   assert.match(html, /ディアボロ型/);
   assert.match(html, /けん玉大会型/);
+  assert.match(html, /体育館型/);
   assert.match(html, /小劇場型/);
   assert.match(html, /最大収容人数/);
   assert.match(html, /小劇場・ブラックボックス/);
@@ -81,7 +82,7 @@ test("server-renders the venue search shell", async () => {
   assert.match(html, /データの鮮度と公開状態/);
   assert.match(html, /条件を共有/);
   assert.match(html, /比較に追加/);
-  assert.match(html, /残り134施設も表示/);
+  assert.match(html, /残り143施設も表示/);
   assert.match(html, /絞り込みを開く/);
   assert.match(html, /更新と訂正/);
   assert.match(html, /訂正候補を送る/);

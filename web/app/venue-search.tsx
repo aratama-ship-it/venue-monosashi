@@ -11,6 +11,7 @@ type Preset =
   | "wyyc"
   | "diabolo"
   | "kendama"
+  | "gymnasium"
   | "small_theater";
 type SortKey =
   | "evidence"
@@ -68,6 +69,7 @@ const presets: Record<
     ceiling: number;
     venueType: VenueType;
     priceUse: PriceUse;
+    practice: boolean;
     description: string;
   }
 > = {
@@ -78,6 +80,7 @@ const presets: Record<
     ceiling: 0,
     venueType: "all",
     priceUse: "any",
+    practice: false,
     description: "全国候補を広く見る",
   },
   jjf: {
@@ -87,6 +90,7 @@ const presets: Record<
     ceiling: 8,
     venueType: "all",
     priceUse: "any",
+    practice: false,
     description: "練習空間＋舞台",
   },
   jyyf: {
@@ -96,6 +100,7 @@ const presets: Record<
     ceiling: 4,
     venueType: "all",
     priceUse: "any",
+    practice: false,
     description: "舞台・客席・物販",
   },
   wyyc: {
@@ -105,6 +110,7 @@ const presets: Record<
     ceiling: 7,
     venueType: "all",
     priceUse: "any",
+    practice: false,
     description: "配信・会議・宿泊",
   },
   diabolo: {
@@ -114,6 +120,7 @@ const presets: Record<
     ceiling: 4,
     venueType: "all",
     priceUse: "any",
+    practice: false,
     description: "AJDC・OIDC実績",
   },
   kendama: {
@@ -123,7 +130,18 @@ const presets: Record<
     ceiling: 3,
     venueType: "all",
     priceUse: "any",
+    practice: false,
     description: "KWC・全日本実績",
+  },
+  gymnasium: {
+    label: "体育館型",
+    capacityMin: 300,
+    capacityMax: 0,
+    ceiling: 7,
+    venueType: "all",
+    priceUse: "amateur_sports",
+    practice: true,
+    description: "競技面・天井・専用料金",
   },
   small_theater: {
     label: "小劇場型",
@@ -132,6 +150,7 @@ const presets: Record<
     ceiling: 0,
     venueType: "small_theater",
     priceUse: "performance",
+    practice: false,
     description: "150席以下・公演料金",
   },
 };
@@ -448,7 +467,11 @@ export function VenueSearch() {
       setIncludeBudgetScenarios(params.get("scenarios") === "1");
       setParking(numberParam(params, "parking", 5000));
       setFixedStage(params.get("fixed") === "1");
-      setPractice(params.get("practice") === "1");
+      setPractice(
+        params.has("practice")
+          ? params.get("practice") === "1"
+          : basePreset.practice,
+      );
       setOperationsOnly(params.get("operations") === "1");
       setHistoricalOnly(params.get("history") === "1");
       setSameSpace(params.get("same") === "1");
@@ -923,7 +946,9 @@ export function VenueSearch() {
     if (includeBudgetScenarios) params.set("scenarios", "1");
     if (parking > 0) params.set("parking", String(parking));
     if (fixedStage) params.set("fixed", "1");
-    if (practice) params.set("practice", "1");
+    if (practice !== presets[preset].practice) {
+      params.set("practice", practice ? "1" : "0");
+    }
     if (operationsOnly) params.set("operations", "1");
     if (historicalOnly) params.set("history", "1");
     if (sameSpace) params.set("same", "1");
@@ -1002,6 +1027,7 @@ export function VenueSearch() {
     setCeiling(presets[next].ceiling);
     setVenueType(presets[next].venueType);
     setPriceUse(presets[next].priceUse);
+    setPractice(presets[next].practice);
   }
 
   function reset() {
