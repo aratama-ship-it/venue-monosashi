@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 04:05 JST
+- Last updated: 2026-08-05 04:11 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `6756506` (ledger-only commits may follow it)
+- Last data commit: `70dc417` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -29,7 +29,7 @@
 - Kinki: 完了（滋賀・京都・大阪・兵庫はwave 7、奈良・和歌山はwave 8）
 - Chugoku: 完了（鳥取・島根はwave 8、岡山・広島・山口はwave 9）
 - Shikoku: 完了（徳島はwave 9、香川・愛媛・高知はwave 10）
-- Kyushu/Okinawa: 福岡はwave 10で完了。佐賀、長崎、熊本、大分、宮崎、鹿児島、沖縄
+- Kyushu/Okinawa: 福岡はwave 10、佐賀・長崎・熊本・大分はwave 11で完了。宮崎、鹿児島、沖縄
 
 ## Safety notes
 
@@ -53,16 +53,17 @@
 | 8 | 2026-08-05 03:52 JST | 奈良・和歌山・鳥取・島根 | 4 candidates / 4 details / 7 prices / 4 operations | audit 0 errors; lint OK; tests 3/3 | `679d668` | 奈良・鳥取の料金PDFを目視照合。和歌山の連続7日上限、松江の現行2026年度料金を明記 |
 | 9 | 2026-08-05 03:58 JST | 岡山・広島・山口・徳島 | 4 candidates / 4 details / 7 prices / 4 operations | audit 0 errors; lint OK; tests 3/3 | `eda592a` | 周南の現名称・2026料金と総社の新空調を反映。徳島の旧施行日料金は再確認注意を明記 |
 | 10 | 2026-08-05 04:05 JST | 香川・愛媛・高知・福岡 | 4 candidates / 4 details / 9 prices / 4 operations | audit 0 errors; lint OK; tests 3/3 | `6756506` | 愛媛の公式料金PDFを目視照合。春野の6,630席内訳、福岡の競技場限定運用と出店事前承認を明記 |
+| 11 | 2026-08-05 04:11 JST | 佐賀・長崎・熊本・大分 | 4 candidates / 4 details / 9 prices / 4 operations | audit 0 errors; lint OK; tests 3/3 | `70dc417` | 佐賀・大分の2026料金PDFを目視照合。長崎の5,600席構成と熊本の営利・不特定多数利用条件を明記 |
 
 ## Current Wave
 
 - Phase: regional expansion
-- Last verified wave: wave 10
+- Last verified wave: wave 11
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `6756506` and the worktree contains only known untracked paths, then continue with 佐賀・長崎・熊本・大分。
+- At the next heartbeat, confirm the current HEAD descends from data commit `70dc417` and the worktree contains only known untracked paths, then continue with 宮崎・鹿児島・沖縄 and one additional verified deepening candidate.
 
 ## Blockers
 

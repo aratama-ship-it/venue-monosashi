@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 10完了。2026-08-06 07:00 JSTに最終化予定。
+ACTIVE — wave 11完了。2026-08-06 07:00 JSTに最終化予定。
 
 ## Baseline
 
@@ -34,8 +34,10 @@ ACTIVE — wave 10完了。2026-08-06 07:00 JSTに最終化予定。
 - Wave 9ではきびじアリーナ、IHIアリーナ呉、ゼオンアリーナ周南、とくぎんトモニアリーナを追加。周南は2024年からの現名称と2026年4月改定料金、総社は2026年7月供用の新空調を反映し、徳島は現行施設ページが案内する料金表の施行日が2019年のため再確認注意を明記した。
 - Wave 10: 香川・愛媛・高知・福岡の4候補、4施設区画、9料金、4運用観測を追加（`6756506`）。
 - Wave 10では高松市総合体育館、愛媛県総合運動公園体育館、高知県立春野総合運動公園体育館、福岡市民体育館を追加。愛媛の料金PDFをページ画像でも目視照合し、春野の固定1,830席・移動4,800席、福岡の競技場限定運用・大会を除くバスケット不可・出店事前承認を区別して記録した。
-- Current local totals: candidates 223 / details 311 / prices 449 / operations 134.
-- Overnight additions from baseline: candidates +40 / details +40 / prices +59 / operations +32.
+- Wave 11: 佐賀・長崎・熊本・大分の4候補、4施設区画、9料金、4運用観測を追加（`70dc417`）。
+- Wave 11ではSAGAプラザ、長崎県立総合体育館、ナースパワーアリーナ、サイクルショップコダマ大洲アリーナを追加。佐賀・大分の2026年料金PDFをページ画像でも目視照合し、長崎の固定・可動・移動席内訳、熊本の専用利用打合せと営利・不特定多数利用条件、大分の天井高13.8mと5,088席構成を区別して記録した。
+- Current local totals: candidates 227 / details 315 / prices 458 / operations 138.
+- Overnight additions from baseline: candidates +44 / details +44 / prices +68 / operations +36.
 
 ## Verification
 
