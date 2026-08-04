@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 81完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 82完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -176,8 +176,10 @@ ACTIVE — wave 81完了。全国47都道府県・候補230件の目標を達成
 - Wave 80では東町運動公園区画内のレスリング/ボクシング/フェンシング場を高校生以下/一般で分離し、放送設備、メインアリーナ11照明区分、サブアリーナ4照明区分を1時間額で追加。観客席欄の「全面半灯」は不自然な原文表記のため意図を補正せず要確認として保持した。
 - Wave 81: アダストリアみとアリーナのサブアリーナ・トレーニング室9料金観測を追加（`4d0846d`）。
 - Wave 81ではサブのバドミントン1面、全面の高校生以下/一般、入場料有無、アマチュアスポーツ以外を分離し、トレーニング室は高校生以下/一般の1人1時間額として追加。3波ごとのlintと表示テスト3件も合格した。
-- Current local totals: candidates 230 / details 385 / prices 1328 / operations 217.
-- Overnight additions from baseline: candidates +47 / details +114 / prices +938 / operations +115.
+- Wave 82: 熊本県立総合体育館の3区画と39料金観測を追加（`b379dfb`）。
+- Wave 82では指定管理者の現行公式HTMLから、422㎡の小体育室、622㎡・約90台のトレーニング室、分割可能な会議室を区画化。大/中/小体育室の競技別個人利用、専用利用、照明・冷暖房・大型映像、トレーニングと会議室を税込で分離し、入場料徴収時の別料金は数値を推測せず除外に保持した。
+- Current local totals: candidates 230 / details 388 / prices 1367 / operations 217.
+- Overnight additions from baseline: candidates +47 / details +117 / prices +977 / operations +115.
 
 ## Verification
 
