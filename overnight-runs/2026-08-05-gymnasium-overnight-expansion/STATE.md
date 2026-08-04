@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 05:05 JST
+- Last updated: 2026-08-05 05:10 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `0412425` (ledger-only commits may follow it)
+- Last data commit: `7947160` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -69,16 +69,17 @@
 | 23 | 2026-08-05 04:57 JST | 北海道・秋田・宮崎・富山4候補の運用深掘り | 4 operations / 1 missing detail | audit 0 errors; generated 230/538 | `2f44785` | 帯広の予約・320台・飲食、秋田の団体登録・382台・申込制限、延岡の2か月前窓口申込と準備時間、富山の予約システム・350台・60名宿泊を追加。延岡の約800台は計画値のため数値欄に入れず、帯広の欠落区画を2,806㎡・2,883席で補完 |
 | 24 | 2026-08-05 05:02 JST | 北海道・秋田・宮崎・富山4候補の現行料金深掘り | 22 prices | audit 0 errors; generated 230/560; duplicate price IDs 0; lint OK; tests 3/3 | `dd376e3` | 帯広の用途・入場料・放送、秋田の2024年改定用途別、延岡の現行料金PDF、富山の2026年7月改定と照明・空調・映像を追加。秋田・延岡PDFは画像照合 |
 | 25 | 2026-08-05 05:05 JST | 奈良・山口・山形・栃木4候補の運用深掘り | 4 operations / 1 detail precision fix | audit 0 errors; generated 230/560 | `0412425` | 奈良の3か月前抽選と9月休止、維新の1,251台・14日前手続・2026年8月から約1年休止、山形の1,200台・120名合宿、日環のWEB予約・時間内撤収を追加。山形を2,200㎡へ精密化 |
+| 26 | 2026-08-05 05:10 JST | 奈良・山形・栃木3候補の現行料金比較深掘り | 21 prices | audit 0 errors; generated 230/581 | `7947160` | 奈良の2026年4月改定、山形の用途・入場料別、日環の税込用途別と照明・空調・放送を追加。日環PDFは画像照合し、休止中の維新は比較対象から除外 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 25
+- Last verified wave: wave 26
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `0412425` and the worktree contains only known untracked paths, then add current official price comparisons for CAND-175, CAND-179, and CAND-181. Hold CAND-178 out of current price comparison while its arena is closed for the approximately one-year ceiling seismic project, unless an official reopening-specific fee table is published.
+- At the next heartbeat, confirm the current HEAD descends from data commit `7947160` and the worktree contains only known untracked paths, then add official operations for another 3-5 high-fit candidates that still have no operation observation. Keep the source scope current and primary, retain unknown fields as unknown, and run the wave 27 full lint/test checkpoint after audit and generation.
 
 ## Blockers
 
