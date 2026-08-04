@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 04:57 JST
+- Last updated: 2026-08-05 05:02 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `2f44785` (ledger-only commits may follow it)
+- Last data commit: `dd376e3` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -67,16 +67,17 @@
 | 21 | 2026-08-05 04:48 JST | 東北4候補の運用・区画精度深掘り | 4 operations / 2 detail precision fixes | audit 0 errors; generated 230/524; lint OK; tests 3/3 | `e3799c2` | 青森市総合の298台・飲食物販条件、花巻の予約6か月前・駐車1,223台、仙台の2027年3月まで全館休館と通常駐車不可、由利本荘の1,000台・団体登録・Wi-Fi・宿泊を明記。花巻席数とナイス面積・固定席を精密化 |
 | 22 | 2026-08-05 04:53 JST | 東北3候補の現行料金比較深掘り | 14 prices | audit 0 errors; generated 230/538 | `6a069f6` | 青森市総合の用途・入場料別と放送、ナイスの平日/土日祝・入場料別、郡山の全日・用途/興行別を追加。郡山PDFは画像照合。花巻は公式料金ページの更新が2019年で現行性を担保できず保留 |
 | 23 | 2026-08-05 04:57 JST | 北海道・秋田・宮崎・富山4候補の運用深掘り | 4 operations / 1 missing detail | audit 0 errors; generated 230/538 | `2f44785` | 帯広の予約・320台・飲食、秋田の団体登録・382台・申込制限、延岡の2か月前窓口申込と準備時間、富山の予約システム・350台・60名宿泊を追加。延岡の約800台は計画値のため数値欄に入れず、帯広の欠落区画を2,806㎡・2,883席で補完 |
+| 24 | 2026-08-05 05:02 JST | 北海道・秋田・宮崎・富山4候補の現行料金深掘り | 22 prices | audit 0 errors; generated 230/560; duplicate price IDs 0; lint OK; tests 3/3 | `dd376e3` | 帯広の用途・入場料・放送、秋田の2024年改定用途別、延岡の現行料金PDF、富山の2026年7月改定と照明・空調・映像を追加。秋田・延岡PDFは画像照合 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 23
+- Last verified wave: wave 24
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `2f44785` and the worktree contains only known untracked paths, then add current official price comparisons for 3–4 of the newly enriched facilities and run the wave-24 full lint/test checkpoint. Prefer the current 2026 fee pages for 帯広 and 富山; preserve effective dates and keep any stale or planned terms out of verified numeric fields.
+- At the next heartbeat, confirm the current HEAD descends from data commit `dd376e3` and the worktree contains only known untracked paths, then add 3–5 missing high-fit arena operation records, prioritizing CAND-175, CAND-178, CAND-179, and CAND-181 where current official guides are available. Keep planned capacities and provisional construction values out of confirmed numeric fields.
 
 ## Blockers
 
