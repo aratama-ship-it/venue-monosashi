@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 15完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 16完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -44,8 +44,10 @@ ACTIVE — wave 15完了。全国47都道府県・候補230件の目標を達成
 - Wave 14では東京体育館とセキスイハイムスーパーアリーナの現行公式料金PDFをページ画像で目視照合し、平日・平日以外、非スポーツ用途、冷暖房を区別して記録した。高崎アリーナは公式HTML料金表を確認。島津アリーナ京都は公式サイトの証明書不整合により現行表を安全に取得できず、推測追加せず保留した。
 - Wave 15: 福岡市総合体育館、クラサス武道スポーツセンター、東京武道館、いしかわ総合スポーツセンターの4運用観測を追加（`3b37cd6`）。
 - Wave 15では福岡の大会・興行事前打合せ、搬入、駐車500台、クラサスのイベント3か月前受付と公園内約5,000台、東京武道館の5名以上団体登録と地下70台、石川の3週間前打合せ・清掃点検・臨時店舗申請を記録した。
-- Current local totals: candidates 230 / details 318 / prices 479 / operations 149.
-- Overnight additions from baseline: candidates +47 / details +47 / prices +89 / operations +47.
+- Wave 16: 福岡市総合体育館、クラサス武道スポーツセンター、東京武道館、いしかわ総合スポーツセンターの16料金観測を追加し、東京武道館の既存1件の用途誤分類を訂正（`ab3c317`）。
+- Wave 16では曜日、スポーツ・非スポーツ、スタンド使用、入場料、照明、音響、冷暖房を分離し、比較時に別条件が混ざらないよう補強した。
+- Current local totals: candidates 230 / details 318 / prices 495 / operations 149.
+- Overnight additions from baseline: candidates +47 / details +47 / prices +105 / operations +47.
 
 ## Verification
 
