@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 05:44 JST
+- Last updated: 2026-08-05 05:49 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `0520d70` (ledger-only commits may follow it)
+- Last data commit: `d482921` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -76,16 +76,17 @@
 | 30 | 2026-08-05 05:34 JST | 岡山・愛知2候補の現行料金比較深掘り | 14 prices / 4 source-conflict precision fixes | audit 0 errors; generated 230/608; duplicate price IDs 0; lint OK; tests 3/3 | `7e02376` | 岡山の2026年8月31日までの用途・曜日・空調・照明・音響と、豊田市の2026年3月更新料金を追加。豊田の市と指定管理者の席数・サブ面積・駐車台数の不一致を明記。浜松は2019年改正表のため数値追加を保留 |
 | 31 | 2026-08-05 05:41 JST | 神戸・大阪・東京・岡山4候補の展示場運用深掘り | 4 operations | audit 0 errors; generated 230/608; duplicate operation IDs 0 | `06743ee` | 神戸・ATC・東京国際フォーラム・コンベックスの申込開始、搬入、駐車、設営撤去、飲食・通信を追加。神戸・ATC・コンベックスの現行PDFを画像照合 |
 | 32 | 2026-08-05 05:44 JST | 神戸・大阪・岡山3候補の展示場料金深掘り | 17 prices / 4 details / 1 price precision fix | audit 0 errors; generated 230/625; duplicate price/detail IDs 0 | `0520d70` | 神戸の展示/集会/準備/時間外、ATCの分割/時間外、コンベックスの分割/時間帯/冷暖房を追加。ATC既存行の基本時間を9〜17時へ訂正。東京フォーラムは2023年適用表の現行性未解消のため保留 |
+| 33 | 2026-08-05 05:49 JST | 茨城・兵庫・広島・大阪4候補の運用・休館深掘り | 4 operations / 1 detail / 2 detail-candidate precision fixes | audit 0 errors; generated 230/625; duplicate operation/detail IDs 0; lint OK; tests 3/3 | `d482921` | つくばの12か月前申込・5日上限、GLIONの大型搬入・来場者駐車なし、福山の6か月前予約・360台、EDIONの2026年4月〜2027年1月末予定全館休館を追加。EDION休館PDFを画像照合 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 32
+- Last verified wave: wave 33
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `0520d70` and the worktree contains only known untracked paths, then select 3–4 additional high-fit candidates without operations observations. Prioritize official booking, parking, load-in, setup, food/retail, network, and current closures. Run audit/generation plus the wave 33 full lint/test checkpoint.
+- At the next heartbeat, confirm the current HEAD descends from data commit `d482921` and the worktree contains only known untracked paths, then deepen current official prices for Tsukuba Capio and EfPico Arena Fukuyama; evaluate GLION only if its public organizer rate sheet is clearly current. Exclude EDION while the whole building is closed, and do not mix post-reopening assumptions into current comparison.
 
 ## Blockers
 
