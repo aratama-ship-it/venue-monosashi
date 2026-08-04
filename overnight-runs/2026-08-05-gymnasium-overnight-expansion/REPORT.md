@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 5完了。2026-08-06 07:00 JSTに最終化予定。
+ACTIVE — wave 6完了。2026-08-06 07:00 JSTに最終化予定。
 
 ## Baseline
 
@@ -24,8 +24,10 @@ ACTIVE — wave 5完了。2026-08-06 07:00 JSTに最終化予定。
 - Wave 4では大田区総合体育館、平塚総合体育館、富士北麓公園体育館、リージョンプラザ上越を追加。上越は2026年9月1日〜2027年3月31日の大規模改修休館予定を明記。
 - Wave 5: 富山・石川・福井・長野の4候補、4施設区画、7料金、4運用観測を追加（`27e958d`）。
 - Wave 5では高岡市竹平記念体育館、金沢市総合体育館、福井市体育館、ことぶきアリーナ千曲を追加。高岡・福井の料金PDFはページ画像でも目視照合し、古い施行日の料金表は再確認注意を明記。
-- Current local totals: candidates 203 / details 291 / prices 412 / operations 114.
-- Overnight additions from baseline: candidates +20 / details +20 / prices +22 / operations +12.
+- Wave 6: 岐阜・静岡・愛知・三重の4候補、4施設区画、6料金、4運用観測を追加（`256054a`）。
+- Wave 6では大垣市総合体育館、香陵アリーナ、豊橋市総合体育館、相好アリーナ四日市を追加。香陵・豊橋・四日市の料金PDFを目視照合し、大垣は公開表が2019年改正版のため料金観測を保留した。
+- Current local totals: candidates 207 / details 295 / prices 418 / operations 118.
+- Overnight additions from baseline: candidates +24 / details +24 / prices +28 / operations +16.
 
 ## Verification
 
