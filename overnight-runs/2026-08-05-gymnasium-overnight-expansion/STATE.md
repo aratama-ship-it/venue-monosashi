@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 07:19 JST
+- Last updated: 2026-08-05 07:20 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `8930da0` (ledger-only commits may follow it)
+- Last data commit: `d4d088c` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -95,16 +95,17 @@
 | 49 | 2026-08-05 07:04 JST | 東京・兵庫・大阪・広島4ドーム/スタジアムの運用・区画深掘り | 4 operations / 3 details / 2 candidate precision fixes | audit 0 errors; generated 230/830; duplicate detail/operation IDs 0 | `402e4eb` | arena/sports-pattern未整備4候補を補完。長居24,665/20,000人の公式内不一致と広島利用案内の古さを保持 |
 | 50 | 2026-08-05 07:10 JST | YANMAR HANASAKA STADIUMの現行料金・スタンド区画深掘り | 18 prices / 4 details | audit 0 errors; generated 230/848; duplicate price/detail IDs 0 | `ebeaa45` | グラウンド、4スタンド、映像・音響・照明・競技用具、南北練習室を分離。倍率派生額は作らず公式規定を注記 |
 | 51 | 2026-08-05 07:19 JST | 八戸・盛岡2アリーナの現行料金深掘り | 25 prices | audit 0 errors; generated 230/873; duplicate price IDs 0; lint OK; tests 3/3 | `8930da0` | 八戸2026年7月改定と盛岡2026年4月改定をPDF画像照合。用途・入場料・市内外・曜日・時間帯・附属設備を分離 |
+| 52 | 2026-08-05 07:20 JST | 横浜・広島2大規模アリーナの現行料金深掘り | 25 prices / 2 candidate precision fixes | audit 0 errors; generated 230/898; duplicate price IDs 0 | `d4d088c` | 横浜2026年4月現在表と広島2024年4月施行現行表を画像照合。税別/税込、用途、入場料、時間帯を分離 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 51
+- Last verified wave: wave 52
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `8930da0` and the worktree contains only known untracked paths, then run wave 52 against high-fit arena candidates that still lack price observations, prioritizing 横浜アリーナ and 広島グリーンアリーナ where current official public rate tables can be found. Check HAPPINESS ARENA and 東京有明アリーナ only for current public external-hire rates; do not reuse stale or inquiry-only values. Finish with audit and generated-data verification.
+- At the next heartbeat, confirm the current HEAD descends from data commit `d4d088c` and the worktree contains only known untracked paths, then run wave 53 against the next high-fit arena price gaps, prioritizing 沖縄サントリーアリーナ, TOYOTA ARENA TOKYO and 横浜BUNTAI. Use only current official public rate tables, and record inquiry-only or stale rates as holds rather than numeric observations. Finish with audit and generated-data verification.
 
 ## Blockers
 
