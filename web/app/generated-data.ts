@@ -11,11 +11,11 @@ export const venueData = {
     "smallTheaterCensus": {
       "total": 594,
       "verificationCounts": {
-        "verified_primary": 387,
-        "primary_partial": 96,
-        "official_not_found": 68,
-        "ambiguous": 19,
-        "blocked": 24
+        "verified_primary": 433,
+        "primary_partial": 20,
+        "official_not_found": 89,
+        "ambiguous": 24,
+        "blocked": 28
       }
     }
   },
