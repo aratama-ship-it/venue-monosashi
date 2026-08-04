@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 08:07 JST
+- Last updated: 2026-08-05 08:08 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `3ae558e` (ledger-only commits may follow it)
+- Last data commit: `4eb0e6b` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -113,16 +113,17 @@
 | 67 | 2026-08-05 08:02 JST | セーレン・ドリームアリーナの多目的・会議室深掘り | 4 details / 12 prices | audit 0 errors; generated 230/1156; duplicate detail/price IDs 0 | `d6ff987` | 多目的室と会議室3室を追加。定員、分割、音響等込み、照明・冷暖房条件を分離し、倍率のみの冷暖房は派生額を作らず保持 |
 | 68 | 2026-08-05 08:05 JST | サンガスタジアムの支援区画深掘り | 2 details / 8 prices / 1 operation / 1 candidate precision fix | audit 0 errors; generated 230/1164; duplicate IDs 0 | `a448b2e` | 会議室AとスタジオA/Bセットの現行税込料金・予約条件を追加。スタジアム本体の非公開催事料金とは分離 |
 | 69 | 2026-08-05 08:07 JST | サンガスタジアム支援区画の設備料金深掘り | 17 prices | audit 0 errors; generated 230/1181; duplicate price IDs 0; lint OK; tests 3/3 | `3ae558e` | 会議室Aの音響・映像・舞台設備とスタジオの運動用具・音響・プロジェクター・シャワーを追加。3波チェック合格 |
+| 70 | 2026-08-05 08:08 JST | 日産スタジアムの現行基本料金確認 | 1 price / 1 candidate precision fix | audit 0 errors; generated 230/1182; duplicate price IDs 0 | `4eb0e6b` | フィールド・全スタンドのプロ基本144万円を追加。アマチュア約1/5は概算のため派生額を作らず、優先利用・別加算を保持 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 69
+- Last verified wave: wave 70
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `3ae558e` and the worktree contains only known untracked paths, then add the current official Nissan Stadium professional full-field/full-stand base rate with its priority-use caveat and sharpen its candidate/operation notes. Do not derive the approximate amateur amount.
+- At the next heartbeat, confirm the current HEAD descends from data commit `4eb0e6b` and the worktree contains only known untracked paths, then review the remaining B-ranked unpriced arena/sports candidates. Prefer current public facility or support-space rates; hold inquiry-only, closed and stale tables.
 
 ## Blockers
 
