@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 06:19 JST
+- Last updated: 2026-08-05 06:23 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `3f3d79b` (ledger-only commits may follow it)
+- Last data commit: `973b6b4` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -82,16 +82,17 @@
 | 36 | 2026-08-05 06:10 JST | 愛媛・大阪・栃木3候補の現行料金・分割区画深掘り | 31 prices / 9 details / 3 candidate-operation precision fixes | audit 0 errors; generated 230/668; duplicate IDs 0; lint OK; tests 3/3 | `31adb25` | 愛媛の2025年改定用途別、グランキューブの2025年適用興行・展示、マロニエの現行掲載料金を追加。公式料金表を画像照合し、古い改定表示は実予約時再確認を保持 |
 | 37 | 2026-08-05 06:15 JST | 福岡・熊本・長野・静岡4候補の運用・仕様深掘り | 4 operations / 3 detail / 4 candidate precision fixes | audit 0 errors; generated 230/668; duplicate operation IDs 0 | `9588cc0` | 西日本総合展示場、パークドーム、エムウェーブ、ツインメッセの予約・搬入・駐車・通信等を追加。パークドーム専用約530台と公園約1,000台を分離し、M-Wave 2026年版手引きを照合 |
 | 38 | 2026-08-05 06:19 JST | 福岡・熊本・静岡3候補の現行料金・分割区画深掘り | 24 prices / 7 details / 2 candidate precision fixes | audit 0 errors; generated 230/692; duplicate price/detail IDs 0 | `3f3d79b` | 西日本総合展示場の用途・分割、パークドームの用途・1/4、ツインメッセの北南・分割・空調等を追加。M-Waveの2019料金は保留 |
+| 39 | 2026-08-05 06:23 JST | 大阪・広島・東京・愛媛4候補の運用・分割精度深掘り | 4 operations / 3 details / 4 candidate precision fixes | audit 0 errors; generated 230/692; duplicate operation/detail IDs 0; lint OK; tests 3/3 | `973b6b4` | RACTAB、広島中小企業会館、プリズム、愛媛県民文化会館の運用を追加。駐車数の公式不一致と半面同時開催条件を保持 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 38
+- Last verified wave: wave 39
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `3f3d79b` and the worktree contains only known untracked paths, then run wave 39 against additional existing candidates missing operations. Prefer official HTML or clearly dated current guides, and treat any source conflict as a precision issue rather than selecting the larger figure. Finish with audit, lint, and tests as a three-wave checkpoint.
+- At the next heartbeat, confirm the current HEAD descends from data commit `973b6b4` and the worktree contains only known untracked paths, then run wave 40 as a pricing/precision follow-up for the newly deepened facilities. Prefer 2026-effective official tables; retain prices with older or unclear effective dates as held rather than current. Finish with audit and generated-data verification.
 
 ## Blockers
 
