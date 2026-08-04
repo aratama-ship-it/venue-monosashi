@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 05:22 JST
+- Last updated: 2026-08-05 05:29 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `4f56fdc` (ledger-only commits may follow it)
+- Last data commit: `52ae4b4` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -72,16 +72,17 @@
 | 26 | 2026-08-05 05:10 JST | 奈良・山形・栃木3候補の現行料金比較深掘り | 21 prices | audit 0 errors; generated 230/581 | `7947160` | 奈良の2026年4月改定、山形の用途・入場料別、日環の税込用途別と照明・空調・放送を追加。日環PDFは画像照合し、休止中の維新は比較対象から除外 |
 | 27 | 2026-08-05 05:16 JST | 茨城・長野・北海道・福島4候補の運用深掘り | 4 operations / 1 candidate risk precision fix | audit 0 errors; generated 230/581; lint OK; tests 3/3 | `a8b8001` | 水戸603台、長野500台・1か月前打合せ、旭川339台・翌月抽選、郡山153台・1か月前予約を追加。水戸・長野PDFは画像照合し、郡山の9月10日までの一般利用中止を明記 |
 | 28 | 2026-08-05 05:22 JST | 長野・北海道2候補の料金比較深掘り | 13 prices / 2 candidate risk precision fixes | audit 0 errors; generated 230/594; duplicate price IDs 0 | `4f56fdc` | ホワイトリングのメイン・サブ・空調・照明・音響、旭川の用途・入場料・営利別を追加。長野は現行公式ページが案内する2019年10月開始表、旭川は2026年9月30日までの現行欄をPDF画像照合。水戸は現行の専用料金表を確認できず数値追加を保留 |
+| 29 | 2026-08-05 05:29 JST | 岡山・静岡・愛知3候補の運用・区画深掘り | 3 operations / 1 detail / 2 detail-candidate precision fixes | audit 0 errors; generated 230/594; duplicate operation/detail IDs 0 | `52ae4b4` | 岡山の事前相談・清掃・Wi-Fi、浜松の12か月前抽選・30日前取消・650台、豊田の1か月前予約・543台を追加。浜松PDFは画像照合。豊田は固定3,440席・移動980席とサブ1,745㎡・550席へ精密化 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 28
+- Last verified wave: wave 29
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `4f56fdc` and the worktree contains only known untracked paths, then add official operations observations for 3–5 high-fit candidates that still lack them. Prioritize reservation lead time, parking, load-in, food/retail, connectivity, and temporary closure facts; record only facts supported by current primary sources.
+- At the next heartbeat, confirm the current HEAD descends from data commit `52ae4b4` and the worktree contains only known untracked paths, then investigate current official price tables for CAND-102, CAND-116, and CAND-130. Preserve effective dates and the announced 2026-09-01 Okayama revision; hold Hamamatsu or Toyota numeric values when current applicability cannot be established. Wave 30 is also a full lint/test checkpoint.
 
 ## Blockers
 
