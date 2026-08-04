@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 08:00 JST
+- Last updated: 2026-08-05 08:02 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `ca82616` (ledger-only commits may follow it)
+- Last data commit: `d6ff987` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -110,16 +110,17 @@
 | 64 | 2026-08-05 07:57 JST | セーレン・ドリームアリーナの現行メイン料金深掘り | 16 prices / 1 candidate / 1 operation precision fix | audit 0 errors; generated 230/1122; duplicate price IDs 0 | `38ed138` | 2024年4月改正表を現在の県公式案内から画像照合。学生等/一般、入場料帯、通常/大会継続夜間、非スポーツを分離。県外5割・休日2割加算は派生額を作らず保持 |
 | 65 | 2026-08-05 07:58 JST | セーレン・ドリームアリーナのメイン設備料金深掘り | 10 prices | audit 0 errors; generated 230/1132; duplicate price IDs 0 | `0ab9e81` | メイン全面/1/2/1/3/1/4の照明と全面冷暖房を学生等/一般で分離。施設基本料と加算額を混ぜず保持 |
 | 66 | 2026-08-05 08:00 JST | セーレン・ドリームアリーナのサブ料金深掘り | 12 prices | audit 0 errors; generated 230/1144; duplicate price IDs 0; lint OK; tests 3/3 | `ca82616` | サブ全面の通常/大会継続夜間と、全面/半面の照明・冷暖房を学生等/一般で分離。3波チェック合格 |
+| 67 | 2026-08-05 08:02 JST | セーレン・ドリームアリーナの多目的・会議室深掘り | 4 details / 12 prices | audit 0 errors; generated 230/1156; duplicate detail/price IDs 0 | `d6ff987` | 多目的室と会議室3室を追加。定員、分割、音響等込み、照明・冷暖房条件を分離し、倍率のみの冷暖房は派生額を作らず保持 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 66
+- Last verified wave: wave 67
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `ca82616` and the worktree contains only known untracked paths, then run wave 67 against the remaining current official 福井県営体育館 meeting-room/multipurpose pricing or pivot to another current primary-source arena table. Keep stale and inquiry-only venues held.
+- At the next heartbeat, confirm the current HEAD descends from data commit `d6ff987` and the worktree contains only known untracked paths, then select another unpriced arena/sports candidate with a current public primary-source rate table. Keep stale, closed and inquiry-only venues held.
 
 ## Blockers
 

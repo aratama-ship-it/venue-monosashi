@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 66完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 67完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -146,8 +146,10 @@ ACTIVE — wave 66完了。全国47都道府県・候補230件の目標を達成
 - Wave 65ではメインアリーナ全面・2分の1・3分の1・4分の1の照明加算と、全面冷暖房加算を学生等/一般で分離した。施設基本料、照明、冷暖房、休日・県外加算を混ぜず、公式表の1時間単価のみを記録した。
 - Wave 66: セーレン・ドリームアリーナの12サブアリーナ料金観測を追加（`ca82616`）。
 - Wave 66ではサブアリーナ全面の通常/大会等が終了しない場合の夜間料金と、全面/2分の1面の照明・冷暖房加算を学生等/一般で分離した。3波ごとのlintと表示テスト3件も合格した。
-- Current local totals: candidates 230 / details 360 / prices 1144 / operations 216.
-- Overnight additions from baseline: candidates +47 / details +89 / prices +754 / operations +114.
+- Wave 67: セーレン・ドリームアリーナの4区画と12多目的室・会議室料金観測を追加（`d6ff987`）。
+- Wave 67では多目的室、定員52/108/84人の会議室3室を区画化し、鏡張り用途、会議室2・3の半面対応、無料Wi-Fiと備品を記録。多目的室の基本・照明・冷暖房と各会議室の音響等設備込み基本料を学生等/一般で分離し、会議室冷暖房2割加算は派生額を作らず保持した。
+- Current local totals: candidates 230 / details 364 / prices 1156 / operations 216.
+- Overnight additions from baseline: candidates +47 / details +93 / prices +766 / operations +114.
 
 ## Verification
 
