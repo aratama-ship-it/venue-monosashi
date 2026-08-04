@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 04:41 JST
+- Last updated: 2026-08-05 04:45 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `626c0af` (ledger-only commits may follow it)
+- Last data commit: `4fcf6c7` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -63,16 +63,17 @@
 | 17 | 2026-08-05 04:33 JST | 既存高評価4候補の地域運用深掘り | 4 operations | audit 0 errors; generated 230/495 | `2e5e4fb` | マエダの次年度・年度途中貸切と1,015台、草薙のWEB予約・駐車制限、米子の年次調整・380台、群馬の新予約・1,643台・物販飲食申請を明記 |
 | 18 | 2026-08-05 04:37 JST | 既存高評価4候補の地域料金深掘り | 16 prices | audit 0 errors; lint OK; tests 3/3 | `1578ad8` | マエダの照明・冷暖房・映像、草薙の2026年区分、米子の営利・入場料・空調、群馬の用途・入場料・照明を追加。草薙・群馬PDFを目視照合 |
 | 19 | 2026-08-05 04:41 JST | 既存高評価4候補のアクセス・予約運用深掘り | 4 operations | audit 0 errors; generated 230/511 | `626c0af` | 北ガス札幌の駅・約100台・抽選申込、高知県民の通常2か月先抽選・82台・マイクロバス条件・物販/Wi-Fi申請、佐世保の165台・オンライン予約、小瀬の普通2,088台・大型93台・大会別申込を明記 |
+| 20 | 2026-08-05 04:45 JST | 既存高評価3候補の用途・設備料金深掘り | 13 prices / 1 operation precision fix | audit 0 errors; generated 230/524; duplicate price IDs 0 | `4fcf6c7` | 北ガス札幌の土日祝・放送・映像・移動席、高知県民の入場有無・非営利/営利・照明、小瀬の非スポーツ・夜間・放送・冷暖房を追加。札幌駐車場を現行管理者情報の106台へ精密化 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 19
+- Last verified wave: wave 20
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `626c0af` and the worktree contains only known untracked paths, then deepen current price comparisons for 3–5 high-fit candidates, prioritizing official HTML and current-dated fee tables; do not reuse stale prices without a `needs_check` boundary.
+- At the next heartbeat, confirm the current HEAD descends from data commit `4fcf6c7` and the worktree contains only known untracked paths, then add operations for 3–5 high-fit candidates that still lack them, using only official access/booking/usage pages. Wave 21 is a full checkpoint: run audit, generation, lint, and web tests before committing.
 
 ## Blockers
 
