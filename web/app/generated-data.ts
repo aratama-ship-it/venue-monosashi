@@ -6,13 +6,13 @@ export const venueData = {
     "venues": 230,
     "details": 318,
     "prices": 468,
-    "operations": 141,
+    "operations": 145,
     "budgetScenarios": 13,
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-05",
-      "observationCount": 1527,
-      "venueObservationCount": 940,
+      "observationCount": 1531,
+      "venueObservationCount": 944,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -13704,10 +13704,10 @@ export const venueData = {
       "strengths": "日本スポーツ振興センターの公式案内はアリーナ4,000㎡、最大12,934席、スタンド8,636席、最大アリーナ席4,124席を掲載。スポーツ競技とコンサート等文化行事の会場として主催者利用案内と2026・2027年度料金を公開",
       "cautions": "最大席数にはイベントごとにフロア上へ設置するアリーナ席を含む。屋根高、床荷重、投擲、搬入寸法、催事専有回線、空き状況は要確認",
       "sourceUrl": "https://www.jpnsport.go.jp/yoyogi/Default.aspx?TabId=70",
-      "observedAt": "2026-08-04",
+      "observedAt": "2026-08-05",
       "detailCount": 1,
       "priceCount": 1,
-      "operationCount": 0,
+      "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
       "historicalSeries": [],
@@ -13739,7 +13739,19 @@ export const venueData = {
         }
       ],
       "budgetScenarios": [],
-      "operation": null,
+      "operation": {
+        "station": "JR原宿駅",
+        "walkMinutes": 5,
+        "stationAccess": "JR原宿駅から原宿口まで徒歩約5分。渋谷駅から渋谷口までは徒歩約15分",
+        "airportAccess": null,
+        "parkingSpaces": null,
+        "largeVehicleAccess": "unknown",
+        "loadingAccess": "unknown",
+        "bookingOpenMonths": null,
+        "setupPolicy": "次年度利用は原則7月1日〜8月31日に利用予定申込書を提出し、日程調整後10月中旬頃に決定、10月31日までに正式申込。施設利用料は利用開始10日前までに全額納付。準備・撤去を含む原状回復は利用者責任",
+        "networkPolicy": "unknown",
+        "note": "第一体育館南側に普通車専用有料駐車場あり。2026年度公式利用案内PDFを目視確認。物品販売・製品展示会は申込対象だが詳細は担当係確認。駐車台数、大型車、搬入口、飲食、催事専有回線、連続利用は要確認"
+      },
       "spaces": [
         {
           "id": "yoyogi-first",
@@ -13770,10 +13782,10 @@ export const venueData = {
       "strengths": "指定管理者の公式案内はクロコくんホール3,646㎡・最大10,000席（固定5,000、可動2,000、移動3,000）、第2競技場1,638㎡・480席、第3競技場826.5㎡・200席、駐車1,385台を掲載。興行、展示会、式典・集会等の現行料金も公開",
       "cautions": "10,000席は固定・可動・移動席を含む最大構成。天井高、投擲、搬入寸法、催事専有回線、空き状況は要確認",
       "sourceUrl": "https://www.nespa.or.jp/hall/shisetsu/index.html",
-      "observedAt": "2026-08-04",
+      "observedAt": "2026-08-05",
       "detailCount": 3,
       "priceCount": 1,
-      "operationCount": 0,
+      "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
       "historicalSeries": [],
@@ -13805,7 +13817,19 @@ export const venueData = {
         }
       ],
       "budgetScenarios": [],
-      "operation": null,
+      "operation": {
+        "station": "JR笠寺駅",
+        "walkMinutes": 3,
+        "stationAccess": "JR東海道本線笠寺駅から徒歩約3分。名鉄本笠寺駅・大江駅からは徒歩約15分",
+        "airportAccess": "中部国際空港から名鉄空港線で金山駅へ移動し、JR東海道本線に乗り換えて笠寺駅へ。公式案内の目安は空港から金山約38分、金山から笠寺約6分",
+        "parkingSpaces": 1385,
+        "largeVehicleAccess": "yes",
+        "loadingAccess": "conditional",
+        "bookingOpenMonths": null,
+        "setupPolicy": "催物の最終打合せで関係車両、大型トラック、観光バス、テレビ中継車、電源車、物販テント等を申告。清掃・ごみ処理・原状回復は主催者責任",
+        "networkPolicy": "unknown",
+        "note": "ホール側有料駐車場1,385台、プール側327台は先着順で予約不可。大型車は事前確保・1日2,000円。アリーナ内飲食物持込禁止。物販は最終打合せと別料金が必要。催事専有回線、連続利用、予約開始時期は要確認"
+      },
       "spaces": [
         {
           "id": "ngk-main",
@@ -14033,10 +14057,10 @@ export const venueData = {
       "strengths": "指定管理者の公式案内はメインアリーナ約2,900㎡・観客席約5,018、サブアリーナ約1,300㎡・観客席約200、大会議室120席、駐車約900台を掲載。現行の団体登録・予約・利用料金・交通案内を公開",
       "cautions": "観客席約5,018の構成とイベント時の移動席・パイプ椅子は区別が必要。天井高、床荷重、搬入寸法、投擲、催事専有回線、空き状況は要確認",
       "sourceUrl": "https://shiga-arena.jp/gallery",
-      "observedAt": "2026-08-04",
+      "observedAt": "2026-08-05",
       "detailCount": 2,
       "priceCount": 1,
-      "operationCount": 0,
+      "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
       "historicalSeries": [],
@@ -14068,7 +14092,19 @@ export const venueData = {
         }
       ],
       "budgetScenarios": [],
-      "operation": null,
+      "operation": {
+        "station": "JR瀬田駅",
+        "walkMinutes": null,
+        "stationAccess": "JR瀬田駅から路線バス約15分、滋賀アリーナ停留所下車",
+        "airportAccess": null,
+        "parkingSpaces": null,
+        "largeVehicleAccess": "yes",
+        "loadingAccess": "unknown",
+        "bookingOpenMonths": null,
+        "setupPolicy": "団体登録後にWEB予約。利用区分は8時30分〜12時30分、13時〜17時、17時30分〜21時30分で、区分をまたぐ場合は原則延長料金。県外居住者は駐車場を除き料金1.5倍",
+        "networkPolicy": "yes",
+        "note": "駐車場あり。普通車100円、マイクロバス200円、大型車300円/回。物販は事前の許可申請・受理が必要。館内Wi-Fiあり。駐車台数、搬入、飲食、連続利用、一般予約開始時期は要確認"
+      },
       "spaces": [
         {
           "id": "shiga-main",
@@ -14170,10 +14206,10 @@ export const venueData = {
       "strengths": "指定管理者の公式案内はメインアリーナ2,600㎡・有効天井13.5m・固定1,800席、サブアリーナ1,200㎡・有効天井13.5m、各種国際試合対応を掲載。予約抽選・空き受付と料金表も公開",
       "cautions": "メインの移動観覧席は86席×8台の構成で、イベント最大収容人数ではない。床荷重、搬入寸法、投擲、催事専有回線、空き状況は要確認",
       "sourceUrl": "https://www.kakogawa-sports.jp/facilities/gym/index.html",
-      "observedAt": "2026-08-04",
+      "observedAt": "2026-08-05",
       "detailCount": 2,
       "priceCount": 1,
-      "operationCount": 0,
+      "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
       "historicalSeries": [],
@@ -14205,7 +14241,19 @@ export const venueData = {
         }
       ],
       "budgetScenarios": [],
-      "operation": null,
+      "operation": {
+        "station": "JR宝殿駅",
+        "walkMinutes": null,
+        "stationAccess": "JR宝殿駅北口から神姫バス約10分、東播工業高校前下車徒歩約20分。または、かこバスミニ約20分、平井内科クリニック前下車徒歩約3分。JR宝殿駅から約2.7km",
+        "airportAccess": null,
+        "parkingSpaces": null,
+        "largeVehicleAccess": "unknown",
+        "loadingAccess": "unknown",
+        "bookingOpenMonths": 4,
+        "setupPolicy": "利用者登録後、毎月20日〜月末に4か月先1か月分の抽選予約。翌月1日抽選、2日結果発表、3日以降は空き枠を即時予約。附属設備は予約時に同時申込し、使用後は備品復旧と清掃",
+        "networkPolicy": "unknown",
+        "note": "加古川西ランプから車約5分、加古川北ICから約10分。電話予約不可。駐車台数、大型車、搬入、飲食、物販、催事専有回線、連続利用は要確認"
+      },
       "spaces": [
         {
           "id": "showa-main",
