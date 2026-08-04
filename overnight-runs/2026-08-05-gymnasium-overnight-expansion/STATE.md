@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 04:11 JST
+- Last updated: 2026-08-05 04:19 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `70dc417` (ledger-only commits may follow it)
+- Last data commit: `cd2136c` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -29,7 +29,8 @@
 - Kinki: 完了（滋賀・京都・大阪・兵庫はwave 7、奈良・和歌山はwave 8）
 - Chugoku: 完了（鳥取・島根はwave 8、岡山・広島・山口はwave 9）
 - Shikoku: 完了（徳島はwave 9、香川・愛媛・高知はwave 10）
-- Kyushu/Okinawa: 福岡はwave 10、佐賀・長崎・熊本・大分はwave 11で完了。宮崎、鹿児島、沖縄
+- Kyushu/Okinawa: 完了（福岡はwave 10、佐賀・長崎・熊本・大分はwave 11、宮崎・鹿児島・沖縄はwave 12）
+- Nationwide target: 達成（47都道府県、候補230件）。以後は既存候補の料金・運用・区画不足を深掘りする。
 
 ## Safety notes
 
@@ -54,16 +55,17 @@
 | 9 | 2026-08-05 03:58 JST | 岡山・広島・山口・徳島 | 4 candidates / 4 details / 7 prices / 4 operations | audit 0 errors; lint OK; tests 3/3 | `eda592a` | 周南の現名称・2026料金と総社の新空調を反映。徳島の旧施行日料金は再確認注意を明記 |
 | 10 | 2026-08-05 04:05 JST | 香川・愛媛・高知・福岡 | 4 candidates / 4 details / 9 prices / 4 operations | audit 0 errors; lint OK; tests 3/3 | `6756506` | 愛媛の公式料金PDFを目視照合。春野の6,630席内訳、福岡の競技場限定運用と出店事前承認を明記 |
 | 11 | 2026-08-05 04:11 JST | 佐賀・長崎・熊本・大分 | 4 candidates / 4 details / 9 prices / 4 operations | audit 0 errors; lint OK; tests 3/3 | `70dc417` | 佐賀・大分の2026料金PDFを目視照合。長崎の5,600席構成と熊本の営利・不特定多数利用条件を明記 |
+| 12 | 2026-08-05 04:19 JST | 宮崎・鹿児島・沖縄 | 3 candidates / 3 details / 10 prices / 3 operations | audit 0 errors; lint OK; tests 3/3 | `cd2136c` | 全国47都道府県・候補230件に到達。宮崎・薩摩川内の料金PDFを目視照合し、沖縄の3,500席構成・6か月前予約・普通車408台を明記 |
 
 ## Current Wave
 
-- Phase: regional expansion
-- Last verified wave: wave 11
+- Phase: verified deepening
+- Last verified wave: wave 12
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `70dc417` and the worktree contains only known untracked paths, then continue with 宮崎・鹿児島・沖縄 and one additional verified deepening candidate.
+- At the next heartbeat, confirm the current HEAD descends from data commit `cd2136c` and the worktree contains only known untracked paths, then identify high-fit arena/sports candidates missing price or operation observations and deepen 3–5 records from current official sources.
 
 ## Blockers
 

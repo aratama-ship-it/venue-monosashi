@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 11完了。2026-08-06 07:00 JSTに最終化予定。
+ACTIVE — wave 12完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -36,8 +36,10 @@ ACTIVE — wave 11完了。2026-08-06 07:00 JSTに最終化予定。
 - Wave 10では高松市総合体育館、愛媛県総合運動公園体育館、高知県立春野総合運動公園体育館、福岡市民体育館を追加。愛媛の料金PDFをページ画像でも目視照合し、春野の固定1,830席・移動4,800席、福岡の競技場限定運用・大会を除くバスケット不可・出店事前承認を区別して記録した。
 - Wave 11: 佐賀・長崎・熊本・大分の4候補、4施設区画、9料金、4運用観測を追加（`70dc417`）。
 - Wave 11ではSAGAプラザ、長崎県立総合体育館、ナースパワーアリーナ、サイクルショップコダマ大洲アリーナを追加。佐賀・大分の2026年料金PDFをページ画像でも目視照合し、長崎の固定・可動・移動席内訳、熊本の専用利用打合せと営利・不特定多数利用条件、大分の天井高13.8mと5,088席構成を区別して記録した。
-- Current local totals: candidates 227 / details 315 / prices 458 / operations 138.
-- Overnight additions from baseline: candidates +44 / details +44 / prices +68 / operations +36.
+- Wave 12: 宮崎・鹿児島・沖縄の3候補、3施設区画、10料金、3運用観測を追加（`cd2136c`）。
+- Wave 12では宮崎市総合体育館、サンアリーナせんだい、沖縄県立武道館アリーナを追加。宮崎市の2026年改定料金と薩摩川内の専用使用料金をPDF画像で目視照合し、沖縄の競技フロア2,142㎡・最大約3,500席、予約6か月前・普通車408台を区別して記録した。
+- Current local totals: candidates 230 / details 318 / prices 468 / operations 141.
+- Overnight additions from baseline: candidates +47 / details +47 / prices +78 / operations +39.
 
 ## Verification
 
