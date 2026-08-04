@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 2完了。2026-08-06 07:00 JSTに最終化予定。
+ACTIVE — wave 3完了。2026-08-06 07:00 JSTに最終化予定。
 
 ## Baseline
 
@@ -19,7 +19,8 @@ ACTIVE — wave 2完了。2026-08-06 07:00 JSTに最終化予定。
 - 候補件数の固定値に依存していたrender testを、CSVの実件数に追従する検証へ変更。
 - Wave 2: 北海道・山形・福島・茨城の4候補、4施設区画、3料金、2運用観測を追加（`8c04d2d`）。
 - 料金件数の固定値に依存していたrender testも、CSVの実件数に追従する検証へ変更。
-- Current local totals: candidates 191 / details 279 / prices 393 / operations 104.
+- Wave 3: 栃木・群馬・埼玉・千葉の4候補、4施設区画、6料金、2運用観測を追加（`36349f1`）。
+- Current local totals: candidates 195 / details 283 / prices 399 / operations 106.
 
 ## Verification
 
