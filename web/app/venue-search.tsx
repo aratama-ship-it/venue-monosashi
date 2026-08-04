@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { venueData } from "./generated-data";
+import { publication } from "./publication";
 
 type Preset =
   | "all"
@@ -320,6 +321,33 @@ function numberLabel(value: number | null, suffix: string) {
   return value === null ? "要確認" : `${yen.format(value)}${suffix}`;
 }
 
+function displayDate(value: string | null) {
+  return value ? value.replaceAll("-", ".") : "未記録";
+}
+
+function observationAge(value: string | null) {
+  if (!value) return "unknown";
+  const observed = Date.parse(`${value}T00:00:00+09:00`);
+  const published = Date.parse(`${publication.updatedAt}T00:00:00+09:00`);
+  const days = Math.floor((published - observed) / 86_400_000);
+  if (days > 180) return "stale";
+  if (days > 60) return "review";
+  return "current";
+}
+
+function observationLabel(value: string | null) {
+  const age = observationAge(value);
+  if (age === "unknown") return "観測日 未記録";
+  if (age === "stale") return `${displayDate(value)}観測・再確認推奨`;
+  if (age === "review") return `${displayDate(value)}観測・更新確認中`;
+  return `${displayDate(value)}観測`;
+}
+
+function numberParam(params: URLSearchParams, key: string, max: number) {
+  const value = Number(params.get(key));
+  return Number.isFinite(value) && value > 0 ? Math.min(value, max) : 0;
+}
+
 export function VenueSearch() {
   const [preset, setPreset] = useState<Preset>("all");
   const [region, setRegion] = useState("全国");
@@ -346,15 +374,111 @@ export function VenueSearch() {
   const [historicalYear, setHistoricalYear] = useState("all");
   const [historicalQuery, setHistoricalQuery] = useState("");
   const [showAllHistorical, setShowAllHistorical] = useState(false);
+  const [showAllVenues, setShowAllVenues] = useState(false);
   const [smallTheaterPrefecture, setSmallTheaterPrefecture] = useState("全国");
   const [smallTheaterStatus, setSmallTheaterStatus] = useState("all");
   const [smallTheaterQuery, setSmallTheaterQuery] = useState("");
   const [smallTheaterCapacity, setSmallTheaterCapacity] = useState(0);
   const [showAllSmallTheaters, setShowAllSmallTheaters] = useState(false);
   const [smallTheaters, setSmallTheaters] = useState<SmallTheaterLedgerItem[]>([]);
+  const [selectedVenueIds, setSelectedVenueIds] = useState<string[]>([]);
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  const [actionMessage, setActionMessage] = useState("");
+  const [urlReady, setUrlReady] = useState(false);
   const [smallTheaterLoadState, setSmallTheaterLoadState] = useState<
     "loading" | "ready" | "failed"
   >("loading");
+
+  useEffect(() => {
+    const frame = window.requestAnimationFrame(() => {
+      const params = new URLSearchParams(window.location.search);
+      const presetParam = params.get("preset") as Preset | null;
+      const nextPreset =
+        presetParam && Object.hasOwn(presets, presetParam)
+          ? presetParam
+          : "all";
+      const basePreset = presets[nextPreset];
+      const nextRegion = params.get("region") ?? "全国";
+      const validRegions = new Set(venueData.venues.map((venue) => venue.region));
+      const nextPrefecture = params.get("prefecture") ?? "全国";
+      const validPrefectures = new Set(
+        venueData.venues.map((venue) => venue.prefecture),
+      );
+      const venueTypeParam = params.get("type") as VenueType | null;
+      const priceUseParam = params.get("use") as PriceUse | null;
+      const sortParam = params.get("sort") as SortKey | null;
+
+      setPreset(nextPreset);
+      setRegion(
+        nextRegion === "全国" || validRegions.has(nextRegion)
+          ? nextRegion
+          : "全国",
+      );
+      setPrefecture(
+        nextPrefecture === "全国" || validPrefectures.has(nextPrefecture)
+          ? nextPrefecture
+          : "全国",
+      );
+      setKeyword(params.get("q") ?? "");
+      setCapacity(numberParam(params, "min", 5000) || basePreset.capacityMin);
+      setCapacityMax(
+        numberParam(params, "max", 2000) || basePreset.capacityMax,
+      );
+      setArea(numberParam(params, "area", 10000));
+      setCeiling(numberParam(params, "ceiling", 20) || basePreset.ceiling);
+      setVenueType(
+        venueTypeParam === "small_theater"
+          ? venueTypeParam
+          : basePreset.venueType,
+      );
+      setBudget(numberParam(params, "budget", 1500));
+      setPriceUse(
+        priceUseParam &&
+          [
+            "any",
+            "amateur_sports",
+            "event",
+            "performance",
+            "no_admission_nonprofit",
+            "admission",
+          ].includes(priceUseParam)
+          ? priceUseParam
+          : basePreset.priceUse,
+      );
+      setIncludeBudgetScenarios(params.get("scenarios") === "1");
+      setParking(numberParam(params, "parking", 5000));
+      setFixedStage(params.get("fixed") === "1");
+      setPractice(params.get("practice") === "1");
+      setOperationsOnly(params.get("operations") === "1");
+      setHistoricalOnly(params.get("history") === "1");
+      setSameSpace(params.get("same") === "1");
+      setKeepUnknown(params.get("unknown") !== "0");
+      setSortKey(
+        sortParam &&
+          [
+            "evidence",
+            "price",
+            "capacity",
+            "capacity_small",
+            "area",
+            "booking",
+          ].includes(sortParam)
+          ? sortParam
+          : "evidence",
+      );
+      const validVenueIds = new Set(
+        venueData.venues.map((venue) => venue.id),
+      );
+      setSelectedVenueIds(
+        (params.get("compare") ?? "")
+          .split(",")
+          .filter((id) => validVenueIds.has(id))
+          .slice(0, 3),
+      );
+      setUrlReady(true);
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
 
   useEffect(() => {
     let active = true;
@@ -767,6 +891,110 @@ export function VenueSearch() {
     venueType,
   ]);
 
+  const selectedVenues = useMemo(
+    () =>
+      selectedVenueIds
+        .map((id) => venueData.venues.find((venue) => venue.id === id))
+        .filter((venue) => venue !== undefined),
+    [selectedVenueIds],
+  );
+  const visibleResults = showAllVenues ? results : results.slice(0, 40);
+
+  useEffect(() => {
+    if (!urlReady) return;
+    const params = new URLSearchParams();
+    if (preset !== "all") params.set("preset", preset);
+    if (region !== "全国") params.set("region", region);
+    if (prefecture !== "全国") params.set("prefecture", prefecture);
+    if (keyword.trim()) params.set("q", keyword.trim());
+    if (capacity > 0 && capacity !== presets[preset].capacityMin) {
+      params.set("min", String(capacity));
+    }
+    if (capacityMax > 0 && capacityMax !== presets[preset].capacityMax) {
+      params.set("max", String(capacityMax));
+    }
+    if (area > 0) params.set("area", String(area));
+    if (ceiling > 0 && ceiling !== presets[preset].ceiling) {
+      params.set("ceiling", String(ceiling));
+    }
+    if (venueType !== presets[preset].venueType) params.set("type", venueType);
+    if (budget > 0) params.set("budget", String(budget));
+    if (priceUse !== presets[preset].priceUse) params.set("use", priceUse);
+    if (includeBudgetScenarios) params.set("scenarios", "1");
+    if (parking > 0) params.set("parking", String(parking));
+    if (fixedStage) params.set("fixed", "1");
+    if (practice) params.set("practice", "1");
+    if (operationsOnly) params.set("operations", "1");
+    if (historicalOnly) params.set("history", "1");
+    if (sameSpace) params.set("same", "1");
+    if (!keepUnknown) params.set("unknown", "0");
+    if (sortKey !== "evidence") params.set("sort", sortKey);
+    if (selectedVenueIds.length) {
+      params.set("compare", selectedVenueIds.join(","));
+    }
+    const query = params.toString();
+    const nextUrl = `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash}`;
+    window.history.replaceState(null, "", nextUrl);
+  }, [
+    area,
+    budget,
+    capacity,
+    capacityMax,
+    ceiling,
+    fixedStage,
+    historicalOnly,
+    includeBudgetScenarios,
+    keepUnknown,
+    keyword,
+    operationsOnly,
+    parking,
+    practice,
+    preset,
+    priceUse,
+    prefecture,
+    region,
+    sameSpace,
+    selectedVenueIds,
+    sortKey,
+    urlReady,
+    venueType,
+  ]);
+
+  function announce(message: string) {
+    setActionMessage(message);
+    window.setTimeout(() => setActionMessage(""), 3200);
+  }
+
+  async function copyShareUrl() {
+    const url = window.location.href;
+    try {
+      await navigator.clipboard.writeText(url);
+    } catch {
+      const field = document.createElement("textarea");
+      field.value = url;
+      field.setAttribute("readonly", "");
+      field.style.position = "fixed";
+      field.style.opacity = "0";
+      document.body.append(field);
+      field.select();
+      document.execCommand("copy");
+      field.remove();
+    }
+    announce("現在の条件を含むURLをコピーしました");
+  }
+
+  function toggleComparison(id: string) {
+    if (selectedVenueIds.includes(id)) {
+      setSelectedVenueIds((current) => current.filter((item) => item !== id));
+      return;
+    }
+    if (selectedVenueIds.length >= 3) {
+      announce("比較できる会場は3件までです");
+      return;
+    }
+    setSelectedVenueIds((current) => [...current, id]);
+  }
+
   function choosePreset(next: Preset) {
     setPreset(next);
     setCapacity(presets[next].capacityMin);
@@ -838,17 +1066,21 @@ export function VenueSearch() {
               <span aria-hidden="true">↳</span>
               読み方
             </a>
+            <a href="#updates">
+              <span aria-hidden="true">↻</span>
+              更新と訂正
+            </a>
           </nav>
         </div>
 
         <div className="rail-foot">
           <p>
             <span>DATA EDITION</span>
-            全国調査版 0.1
+            {publication.edition}
           </p>
           <p>
-            <span>OBSERVED</span>
-            2026.08.03
+            <span>LATEST OBSERVATION</span>
+            {displayDate(venueData.stats.freshness.latestObservedAt)}
           </p>
           <a className="rail-action" href="#search">
             候補を測りはじめる
@@ -862,12 +1094,12 @@ export function VenueSearch() {
           <div className="masthead-inner">
             <div className="brand">
               <span className="brand-mark">会場ものさし</span>
-              <span className="edition">全国調査版 0.1</span>
+              <span className="edition">{publication.edition}</span>
             </div>
             <div className="masthead-note">
-              一次情報観測日 2026.08.03
+              最終一次情報観測 {displayDate(venueData.stats.freshness.latestObservedAt)}
               <br />
-              空き状況・見積は未確認
+              公開版更新 {displayDate(publication.updatedAt)}
             </div>
           </div>
         </header>
@@ -934,14 +1166,53 @@ export function VenueSearch() {
 
         <div className="measure" aria-hidden="true" />
 
+        <section className="freshness-strip" aria-label="データの鮮度と公開状態">
+          <div>
+            <span>LAST OBSERVED</span>
+            <strong>{displayDate(venueData.stats.freshness.latestObservedAt)}</strong>
+            <small>収録一次情報の最終観測日</small>
+          </div>
+          <div>
+            <span>VENUE OBSERVATIONS</span>
+            <strong>{yen.format(venueData.stats.freshness.venueObservationCount)}</strong>
+            <small>区画・料金・運用・参考額の観測</small>
+          </div>
+          <div>
+            <span>SMALL THEATER DATES</span>
+            <strong>
+              {yen.format(venueData.stats.freshness.smallTheaterObservationCount)}
+            </strong>
+            <small>公式確認日を記録した小劇場</small>
+          </div>
+          <div>
+            <span>PUBLIC EDITION</span>
+            <strong>{displayDate(publication.updatedAt)}</strong>
+            <small>サイト更新日。空き状況の保証日ではありません</small>
+          </div>
+        </section>
+
       <section className="workspace" id="search" aria-label="会場検索">
         <aside className="filters">
           <h2>条件を置く</h2>
+          <button
+            aria-controls="venue-filter-body"
+            aria-expanded={mobileFiltersOpen}
+            className="mobile-filter-toggle"
+            onClick={() => setMobileFiltersOpen((current) => !current)}
+            type="button"
+          >
+            {mobileFiltersOpen ? "絞り込みを閉じる" : "絞り込みを開く"}
+            <span aria-hidden="true">{mobileFiltersOpen ? "−" : "+"}</span>
+          </button>
           <p className="filter-caption">
             数値が未公開の施設を残すかどうかで、検索の厳しさを変えられます。
           </p>
 
-          <div className="filter-body">
+          <div
+            className="filter-body"
+            data-mobile-open={mobileFiltersOpen}
+            id="venue-filter-body"
+          >
             <div className="field preset-field">
               <span className="field-label">会場の型</span>
               <div className="preset-grid">
@@ -1233,12 +1504,76 @@ export function VenueSearch() {
               <span>
                 <strong>{results.length}</strong> / {venueData.stats.venues}施設
               </span>
+              <button
+                className="share-button"
+                onClick={copyShareUrl}
+                type="button"
+              >
+                条件を共有
+              </button>
             </div>
           </div>
 
+          <p aria-live="polite" className="action-message">
+            {actionMessage}
+          </p>
+
+          {selectedVenues.length > 0 && (
+            <section className="comparison-panel" aria-labelledby="comparison-title">
+              <div className="comparison-head">
+                <div>
+                  <p className="eyebrow">SHORTLIST</p>
+                  <h3 id="comparison-title">候補を並べて比較</h3>
+                </div>
+                <span>{selectedVenues.length} / 3施設</span>
+              </div>
+              <div className="comparison-grid">
+                {selectedVenues.map((venue) => (
+                  <article className="comparison-card" key={venue.id}>
+                    <button
+                      aria-label={`${venue.name}を比較から外す`}
+                      onClick={() => toggleComparison(venue.id)}
+                      type="button"
+                    >
+                      ×
+                    </button>
+                    <h4>{venue.name}</h4>
+                    <p>{venue.prefecture} {venue.city}</p>
+                    <dl>
+                      <div>
+                        <dt>最大観測面積</dt>
+                        <dd>{numberLabel(venue.maxArea, "㎡")}</dd>
+                      </div>
+                      <div>
+                        <dt>最大観測収容</dt>
+                        <dd>{numberLabel(venue.maxCapacity, "人")}</dd>
+                      </div>
+                      <div>
+                        <dt>候補内最小日額</dt>
+                        <dd>{priceLabel(venue.minDailyFacilityPrice)}</dd>
+                      </div>
+                      <div>
+                        <dt>一次情報観測</dt>
+                        <dd>{displayDate(venue.observedAt)}</dd>
+                      </div>
+                    </dl>
+                    <a href={venue.sourceUrl} rel="noreferrer" target="_blank">
+                      公式情報 ↗
+                    </a>
+                  </article>
+                ))}
+              </div>
+              {selectedVenues.length === 1 && (
+                <p className="comparison-hint">
+                  もう1〜2施設を追加すると違いを横並びで確認できます。
+                </p>
+              )}
+            </section>
+          )}
+
           {results.length ? (
             <div className="venue-list">
-              {results.map((venue, index) => (
+              {visibleResults.map((venue, index) => (
                 <article className="venue-card" key={venue.id}>
                   <div className="rank">{String(index + 1).padStart(2, "0")}</div>
                   <div className="venue-main">
@@ -1250,7 +1585,20 @@ export function VenueSearch() {
                           {categoryLabel(venue.category)}
                         </p>
                       </div>
-                      <span className="fit-mark">基準 {venue.fitLevel}</span>
+                      <div className="venue-actions">
+                        <button
+                          aria-pressed={selectedVenueIds.includes(venue.id)}
+                          className="compare-button"
+                          data-selected={selectedVenueIds.includes(venue.id)}
+                          onClick={() => toggleComparison(venue.id)}
+                          type="button"
+                        >
+                          {selectedVenueIds.includes(venue.id)
+                            ? "比較中"
+                            : "比較に追加"}
+                        </button>
+                        <span className="fit-mark">基準 {venue.fitLevel}</span>
+                      </div>
                     </div>
 
                     <p className="venue-summary">{venue.strengths}</p>
@@ -1299,6 +1647,11 @@ export function VenueSearch() {
                     <div className="venue-foot">
                       <div className="status-line">
                         <span className="status">一次情報あり</span>
+                        <span
+                          className={`status freshness ${observationAge(venue.observedAt)}`}
+                        >
+                          {observationLabel(venue.observedAt)}
+                        </span>
                         {venue.detailCount === 0 && (
                           <span className="status warn">区画値 未観測</span>
                         )}
@@ -1491,6 +1844,17 @@ export function VenueSearch() {
                   </div>
                 </article>
               ))}
+              {results.length > 40 && (
+                <button
+                  className="venue-more"
+                  onClick={() => setShowAllVenues((current) => !current)}
+                  type="button"
+                >
+                  {showAllVenues
+                    ? "先頭40施設に戻す"
+                    : `残り${results.length - 40}施設も表示`}
+                </button>
+              )}
             </div>
           ) : (
             <div className="empty">
@@ -1772,7 +2136,12 @@ export function VenueSearch() {
                           <small>索引名：{theater.indexName}</small>
                         )}
                       {theater.observedAt && (
-                        <small>公式確認日：{theater.observedAt}</small>
+                        <small className={`observation-date ${observationAge(theater.observedAt)}`}>
+                          公式確認日：{theater.observedAt}
+                          {observationAge(theater.observedAt) === "stale"
+                            ? "・再確認推奨"
+                            : ""}
+                        </small>
                       )}
                     </td>
                     <td>{theater.indexedPrefecture ?? "索引記載なし"}</td>
@@ -1868,6 +2237,39 @@ export function VenueSearch() {
         )}
       </section>
 
+      <section className="updates-section" id="updates" aria-labelledby="updates-title">
+        <div className="updates-copy">
+          <p className="eyebrow">PUBLICATION NOTES</p>
+          <h2 id="updates-title">更新と訂正</h2>
+          <p>
+            公開情報は観測時点の記録です。料金改定、改称、閉館、施設条件の変更を見つけた場合は、
+            その内容が確認できる公式ページと一緒に訂正候補を送れます。
+          </p>
+          <div className="updates-actions">
+            <a href={publication.correctionUrl} rel="noreferrer" target="_blank">
+              訂正候補を送る ↗
+            </a>
+            <a href={publication.repositoryUrl} rel="noreferrer" target="_blank">
+              調査データを見る ↗
+            </a>
+          </div>
+          <small>
+            送信先はGitHub Issuesです。氏名・電話番号などの個人情報は記載せず、公開済みの一次情報URLを添えてください。
+          </small>
+        </div>
+        <ol className="changelog" aria-label="更新履歴">
+          {publication.changelog.map((entry) => (
+            <li key={entry.date}>
+              <time dateTime={entry.date}>{displayDate(entry.date)}</time>
+              <div>
+                <strong>{entry.title}</strong>
+                <p>{entry.detail}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
       <section
         className="method-note"
         id="method"
@@ -1904,7 +2306,7 @@ export function VenueSearch() {
 
       <footer className="site-footer">
         <div className="site-footer-inner">
-          <span>会場ものさし — 全国公開調査版</span>
+          <span>会場ものさし — {publication.edition}</span>
           <span>
             開催可否、空き状況、正式見積は各施設への確認が必要です
           </span>

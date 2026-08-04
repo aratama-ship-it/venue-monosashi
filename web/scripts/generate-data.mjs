@@ -123,6 +123,28 @@ const smallTheaterAssets = {
   ledger: `small-theater-ledger.${smallTheaterAssetHash}.json`,
 };
 
+const observationDates = [
+  ...details.map((item) => item.observed_at),
+  ...prices.map((item) => item.observed_at),
+  ...operations.map((item) => item.observed_at),
+  ...budgetScenarios.map((item) => item.observed_at),
+  ...smallTheaters.map((item) => item.official_observed_at),
+].filter((value) => /^\d{4}-\d{2}-\d{2}$/.test(value));
+const sortedObservationDates = [...new Set(observationDates)].sort();
+const freshness = {
+  firstObservedAt: sortedObservationDates[0] ?? null,
+  latestObservedAt: sortedObservationDates.at(-1) ?? null,
+  observationCount: observationDates.length,
+  venueObservationCount:
+    details.filter((item) => item.observed_at).length +
+    prices.filter((item) => item.observed_at).length +
+    operations.filter((item) => item.observed_at).length +
+    budgetScenarios.filter((item) => item.observed_at).length,
+  smallTheaterObservationCount: smallTheaters.filter(
+    (item) => item.official_observed_at,
+  ).length,
+};
+
 const venues = candidates.map((candidate) => {
   const venueDetails = details.filter(
     (detail) => detail.candidate_id === candidate.candidate_id,
@@ -139,6 +161,14 @@ const venues = candidates.map((candidate) => {
   const venueBudgetScenarios = budgetScenarios.filter(
     (scenario) => scenario.candidate_id === candidate.candidate_id,
   );
+  const venueObservationDates = [
+    ...venueDetails.map((item) => item.observed_at),
+    ...venuePrices.map((item) => item.observed_at),
+    ...venueOperations.map((item) => item.observed_at),
+    ...venueBudgetScenarios.map((item) => item.observed_at),
+  ]
+    .filter((value) => /^\d{4}-\d{2}-\d{2}$/.test(value))
+    .sort();
   const linkedHistoricalEvents = historical.filter((event) =>
     venueAliases.some((alias) =>
       event.venue_names.includes(alias.venue_name_contains),
@@ -215,6 +245,7 @@ const venues = candidates.map((candidate) => {
     strengths: candidate.verified_public_facts,
     cautions: candidate.inference_or_risk,
     sourceUrl: candidate.official_url,
+    observedAt: venueObservationDates.at(-1) ?? null,
     detailCount: venueDetails.length,
     priceCount: venuePrices.length,
     operationCount: venueOperations.length,
@@ -332,6 +363,7 @@ export const venueData = ${JSON.stringify(
       prices: prices.length,
       operations: operations.length,
       budgetScenarios: budgetScenarios.length,
+      freshness,
       smallTheaterCensus: {
         total: smallTheaters.length,
         verificationCounts: smallTheaterVerificationCounts,

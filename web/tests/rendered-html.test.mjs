@@ -2,13 +2,13 @@ import assert from "node:assert/strict";
 import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 
-async function render() {
+async function render(pathname = "/") {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
   const { default: worker } = await import(workerUrl.href);
 
   return worker.fetch(
-    new Request("http://localhost/", {
+    new Request(`http://localhost${pathname}`, {
       headers: { accept: "text/html" },
     }),
     {
@@ -30,6 +30,15 @@ test("server-renders the venue search shell", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>会場ものさし/);
+  assert.match(
+    html,
+    /<link rel="canonical" href="https:\/\/venue-monosashi\.juggler-arata\.chatgpt\.site\/"/,
+  );
+  assert.match(html, /property="og:title"/);
+  assert.match(html, /property="og:image" content="https:\/\/venue-monosashi\.juggler-arata\.chatgpt\.site\/og-card\.png"/);
+  assert.match(html, /name="twitter:card" content="summary_large_image"/);
+  assert.match(html, /rel="icon" href="https:\/\/venue-monosashi\.juggler-arata\.chatgpt\.site\/favicon\.svg"/);
+  assert.match(html, /application\/ld\+json/);
   assert.match(html, /会場を、名前でなく/);
   assert.match(html, /条件で測る/);
   assert.match(html, /条件を置く/);
@@ -69,9 +78,32 @@ test("server-renders the venue search shell", async () => {
   assert.match(html, /小劇場台帳から探す/);
   assert.match(html, /SMALL THEATER RESEARCH LEDGER/);
   assert.match(html, /台帳を読み込んでいます/);
+  assert.match(html, /データの鮮度と公開状態/);
+  assert.match(html, /条件を共有/);
+  assert.match(html, /比較に追加/);
+  assert.match(html, /残り134施設も表示/);
+  assert.match(html, /絞り込みを開く/);
+  assert.match(html, /更新と訂正/);
+  assert.match(html, /訂正候補を送る/);
+  assert.match(html, /全国公開調査版 0\.2/);
   assert.match(html, /過去実績[\s\S]{0,40}21[\s\S]{0,40}件/);
   assert.match(html, /確認済み日額が低い順/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
+});
+
+test("publishes crawler routes and a share image", async () => {
+  const [robotsResponse, sitemapResponse] = await Promise.all([
+    render("/robots.txt"),
+    render("/sitemap.xml"),
+  ]);
+  assert.equal(robotsResponse.status, 200);
+  assert.match(await robotsResponse.text(), /Sitemap: https:\/\/venue-monosashi\.juggler-arata\.chatgpt\.site\/sitemap\.xml/);
+  assert.equal(sitemapResponse.status, 200);
+  assert.match(await sitemapResponse.text(), /venue-monosashi\.juggler-arata\.chatgpt\.site/);
+
+  const image = await readFile(new URL("../public/og-card.png", import.meta.url));
+  assert.ok(image.length > 20_000);
+  assert.deepEqual([...image.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
 });
 
 test("ships the small theater ledger as a separate data asset", async () => {

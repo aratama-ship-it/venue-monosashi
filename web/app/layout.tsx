@@ -1,11 +1,71 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./editorial-concept.css";
+import { publication } from "./publication";
 
 export const metadata: Metadata = {
-  title: "会場ものさし｜全国のイベント会場を過去大会と予算で測る",
-  description:
-    "JJF・ヨーヨー・ディアボロ・けん玉の過去会場を基準に、全国のイベント会場と150席以下の小劇場を規模・天井高・予算・搬入・アクセスで比較する調査版サービス。",
+  metadataBase: new URL(publication.url),
+  title: publication.title,
+  description: publication.description,
+  applicationName: publication.siteName,
+  icons: { icon: "/favicon.svg" },
+  keywords: [
+    "イベント会場",
+    "会場検索",
+    "小劇場",
+    "ジャグリング",
+    "ヨーヨー",
+    "ディアボロ",
+    "けん玉",
+    "会場費",
+  ],
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "ja_JP",
+    url: "/",
+    siteName: publication.siteName,
+    title: publication.title,
+    description: publication.description,
+    images: [
+      {
+        url: "/og-card.png",
+        width: 1200,
+        height: 630,
+        alt: "会場ものさし — 全国の会場を同じ条件で比較する公開調査版",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: publication.title,
+    description: publication.description,
+    images: ["/og-card.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  name: publication.siteName,
+  description: publication.description,
+  url: publication.url,
+  inLanguage: "ja",
+  dateModified: publication.updatedAt,
+  isAccessibleForFree: true,
+  keywords: [
+    "イベント会場",
+    "小劇場",
+    "ジャグリング",
+    "ヨーヨー",
+    "ディアボロ",
+    "けん玉",
+  ],
 };
 
 export default function RootLayout({
@@ -15,7 +75,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
