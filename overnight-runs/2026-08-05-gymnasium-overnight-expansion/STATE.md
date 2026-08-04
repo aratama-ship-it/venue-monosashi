@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 05:29 JST
+- Last updated: 2026-08-05 05:34 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `52ae4b4` (ledger-only commits may follow it)
+- Last data commit: `7e02376` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -73,16 +73,17 @@
 | 27 | 2026-08-05 05:16 JST | 茨城・長野・北海道・福島4候補の運用深掘り | 4 operations / 1 candidate risk precision fix | audit 0 errors; generated 230/581; lint OK; tests 3/3 | `a8b8001` | 水戸603台、長野500台・1か月前打合せ、旭川339台・翌月抽選、郡山153台・1か月前予約を追加。水戸・長野PDFは画像照合し、郡山の9月10日までの一般利用中止を明記 |
 | 28 | 2026-08-05 05:22 JST | 長野・北海道2候補の料金比較深掘り | 13 prices / 2 candidate risk precision fixes | audit 0 errors; generated 230/594; duplicate price IDs 0 | `4f56fdc` | ホワイトリングのメイン・サブ・空調・照明・音響、旭川の用途・入場料・営利別を追加。長野は現行公式ページが案内する2019年10月開始表、旭川は2026年9月30日までの現行欄をPDF画像照合。水戸は現行の専用料金表を確認できず数値追加を保留 |
 | 29 | 2026-08-05 05:29 JST | 岡山・静岡・愛知3候補の運用・区画深掘り | 3 operations / 1 detail / 2 detail-candidate precision fixes | audit 0 errors; generated 230/594; duplicate operation/detail IDs 0 | `52ae4b4` | 岡山の事前相談・清掃・Wi-Fi、浜松の12か月前抽選・30日前取消・650台、豊田の1か月前予約・543台を追加。浜松PDFは画像照合。豊田は固定3,440席・移動980席とサブ1,745㎡・550席へ精密化 |
+| 30 | 2026-08-05 05:34 JST | 岡山・愛知2候補の現行料金比較深掘り | 14 prices / 4 source-conflict precision fixes | audit 0 errors; generated 230/608; duplicate price IDs 0; lint OK; tests 3/3 | `7e02376` | 岡山の2026年8月31日までの用途・曜日・空調・照明・音響と、豊田市の2026年3月更新料金を追加。豊田の市と指定管理者の席数・サブ面積・駐車台数の不一致を明記。浜松は2019年改正表のため数値追加を保留 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 29
+- Last verified wave: wave 30
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `52ae4b4` and the worktree contains only known untracked paths, then investigate current official price tables for CAND-102, CAND-116, and CAND-130. Preserve effective dates and the announced 2026-09-01 Okayama revision; hold Hamamatsu or Toyota numeric values when current applicability cannot be established. Wave 30 is also a full lint/test checkpoint.
+- At the next heartbeat, confirm the current HEAD descends from data commit `7e02376` and the worktree contains only known untracked paths, then select 3–4 additional high-fit candidates without operations observations. Prioritize current official reservation, parking, access, load-in, setup/teardown, food/retail, and network facts, and record explicit source conflicts instead of choosing silently.
 
 ## Blockers
 
