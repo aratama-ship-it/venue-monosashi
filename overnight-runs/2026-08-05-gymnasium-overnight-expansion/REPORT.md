@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 129完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 130完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -272,8 +272,10 @@ ACTIVE — wave 129完了。全国47都道府県・候補230件の目標を達�
 - Wave 128では放送3件、フロア/観覧席/第2競技場/更衣室/研修・会議・控室等の冷暖房12件、フロアシート、競技用コート、ロールバック席、補助椅子、電光掲示、特殊電源8件を追加。各室・各時間帯・1時間切上げ等の単位を分離し、休館と再開後再確認を保持した。
 - Wave 129: カメイアリーナ仙台の舞台設備・温水プール13料金観測を追加（`ef8b4ff`）。
 - Wave 129では仮設ステージ、平台、吊物3系統、バトン、吊物幕、演台・花台、ピアノ9件と、温水プールの一般/小中学生2時間料金・超過4件を追加。全4ページの画像照合を完了し、lintと表示テスト3件も合格。確認用PDF/PNGのみ削除した。
-- Current local totals: candidates 230 / details 445 / prices 2207 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +174 / prices +1817 / operations +120.
+- Wave 130: トッケイセキュリティ平塚総合体育館の9区画・9料金観測を追加（`ee87793`）。
+- Wave 130では2026年7月31日更新の平塚市公式ページから第2/第3体育室、第1/第2武道場、A/B会議室、弓道場、トレーニング、温水プールを区画化。第1体育室市外・武道場市内外の冷房、個人利用、用具レンタル、トレーニング料金を追加し、不明な面積・年齢範囲等は推定せず保持した。
+- Current local totals: candidates 230 / details 454 / prices 2216 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +183 / prices +1826 / operations +120.
 
 ## Verification
 
