@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 98完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 99完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -210,8 +210,10 @@ ACTIVE — wave 98完了。全国47都道府県・候補230件の目標を達成
 - Wave 97ではサブアリーナ769.6㎡・ロールバック140席、トレーニング室2の116㎡、現在一般利用休止中の体力測定室134.4㎡を区画化。サブの平日/土日祝専用8件・個人6件と、トレーニング室2の専用4件・個人2件を2026年4月改定の現行指定管理者表から追加した。
 - Wave 98: 千葉ポートアリーナのメイン平日催事16料金観測を追加（`2469fbf`）。
 - Wave 98では入場料徴収アマチュアスポーツ、入場料なしの見本市・商品展示・営利宣伝、入場料徴収の集会・催事、プロスポーツ・コンサート等興行を、午前・午後・夜間・全日で分離した。
-- Current local totals: candidates 230 / details 406 / prices 1718 / operations 218.
-- Overnight additions from baseline: candidates +47 / details +135 / prices +1328 / operations +116.
+- Wave 99: 千葉ポートアリーナのメイン土日祝催事16料金観測を追加（`061f59b`）。
+- Wave 99ではWave 98と同じ4用途を土日祝の午前・午後・夜間・全日で補完し、曜日差を直接比較可能にした。3波ごとのlintと表示テスト3件も合格した。
+- Current local totals: candidates 230 / details 406 / prices 1734 / operations 218.
+- Overnight additions from baseline: candidates +47 / details +135 / prices +1344 / operations +116.
 
 ## Verification
 
