@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 149完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 150完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -312,8 +312,10 @@ ACTIVE — wave 149完了。全国47都道府県・候補230件の目標を達�
 - Wave 148では現行高岡市公式ページが2019年10月1日施行料金PDFを現在も案内している関係を再確認し、PDF3ページを全ページ画像照合。トレーニング室、多目的室、会議室、附属設備を区画化し、体育室/トレーニング個人料金、多目的/会議占用料金を追加した。施行日が古いことと現行ページからのリンクを混同せず、申込前再確認を保持した。
 - Wave 149: 高岡市竹平記念体育館のアマチュアスポーツ・入場料なし11料金観測を追加（`0ba80e4`）。
 - Wave 149では全面/2/3面/1/3面の午前・午後・夜間・全日料金を補完し、既存の全面全日1件は重複追加せず保持。現行公式ページからのリンクと2019年施行日の境界を各観測に残した。
-- Current local totals: candidates 230 / details 474 / prices 2590 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +203 / prices +2200 / operations +120.
+- Wave 150: 高岡市竹平記念体育館の時間単価・附属設備16料金観測を追加（`17f2f6e`）。
+- Wave 150ではアマチュア入場料なしの標準時間内/時間外を全面・2/3面・1/3面で分離し、拡声装置、2回路まで/追加1回路の照明6件、入場料有無別冷暖房、電光得点表示を追加。PDF全3ページの画像照合後、lint・表示テスト3件に合格し、確認用PDF/PNGのみ削除した。
+- Current local totals: candidates 230 / details 474 / prices 2606 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +203 / prices +2216 / operations +120.
 
 ## Verification
 
