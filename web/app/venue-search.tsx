@@ -565,7 +565,11 @@ export function VenueSearch() {
     : smallTheaterResults.slice(0, 40);
 
   const results = useMemo(() => {
-    const normalized = keyword.trim().toLocaleLowerCase("ja");
+    const searchTerms = keyword
+      .trim()
+      .toLocaleLowerCase("ja")
+      .split(/\s+/)
+      .filter(Boolean);
     return venueData.venues
       .map((venue) => {
         const hasSpaceCondition =
@@ -693,18 +697,20 @@ export function VenueSearch() {
         return selectedVenueRoles.every((role) => venueRoleSet.has(role));
       })
       .filter((venue) => {
-        if (!normalized) return true;
-        return [
+        if (searchTerms.length === 0) return true;
+        const searchableText = [
           venue.name,
+          venue.region,
           venue.city,
           venue.prefecture,
           venue.strengths,
           venue.cautions,
           venue.bestSpace?.name ?? "",
+          ...venue.spaces.map((space) => space.name),
         ]
           .join(" ")
-          .toLocaleLowerCase("ja")
-          .includes(normalized);
+          .toLocaleLowerCase("ja");
+        return searchTerms.every((term) => searchableText.includes(term));
       })
       .filter((venue) => {
         if (sameSpace) return venue.sameSpaceKnownMatch;
@@ -1170,11 +1176,14 @@ export function VenueSearch() {
               )}
             </div>
 
-            <label className="field">
-              <span className="field-label">キーワード</span>
+            <label className="field free-search-field">
+              <span className="field-label">フリー検索</span>
+              <span className="field-help">
+                会場名・地域・特徴・貸出区画を横断します。空白区切りで複数語を指定できます。
+              </span>
               <input
                 type="search"
-                placeholder="例：平土間、駅直結、配信"
+                placeholder="例：東京 平土間、駅直結、配信"
                 value={keyword}
                 onChange={(event) => setKeyword(event.target.value)}
               />

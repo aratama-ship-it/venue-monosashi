@@ -293,6 +293,7 @@ a {
 }
 
 .field-help {
+  display: block;
   margin: 0 0 9px;
   color: var(--muted);
   font-size: 0.72rem;

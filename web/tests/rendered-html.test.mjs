@@ -84,6 +84,8 @@ test("server-renders the venue search shell", async () => {
   );
   assert.match(html, />地域を選ぶ</);
   assert.doesNotMatch(html, /class="prefecture-groups"/);
+  assert.match(html, /フリー検索/);
+  assert.match(html, /空白区切りで複数語を指定できます/);
   assert.match(html, /最大収容人数/);
   assert.match(html, /舞台公演/);
   assert.match(html, /収容が小さい順/);
