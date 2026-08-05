@@ -332,8 +332,10 @@ ACTIVE — wave 152完了。全国47都道府県・候補230件の目標を達�
 - Wave 158では現行指定管理者ページが案内する令和6年4月1日改正料金PDF全1ページを画像照合し、入場料なし・平日の全面/2分の1面/3分の1面を午前、午後、夜間、全日で補完。市外2倍、スポーツ興行5倍、照明・冷暖房・附属設備別料金を派生計算せず条件として保持した。
 - Wave 159: 大垣市総合体育館第1体育館の土日祝12料金観測を追加（`1296e82`）。
 - Wave 159では入場料なし・土日祝の全面/2分の1面/3分の1面を午前、午後、夜間、全日で補完。3波ごとのlintと表示テスト3件に合格後、今回作成した確認用PDF 1件・PNG 1件だけを削除した。
-- Current local totals: candidates 230 / details 489 / prices 2696 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +218 / prices +2306 / operations +120.
+- Wave 160: 大垣市総合体育館第2体育館の16料金観測を追加（`8faee18`）。
+- Wave 160では入場料なしの全面/2分の1面について、平日・土日祝それぞれの午前、午後、夜間、全日を補完。画像照合済みの現行改正表の値だけを使用し、倍率条件と附属設備別料金を派生額に展開しなかった。
+- Current local totals: candidates 230 / details 489 / prices 2712 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +218 / prices +2322 / operations +120.
 
 ## Verification
 
