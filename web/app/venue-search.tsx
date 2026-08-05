@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { venueData } from "./generated-data";
 import { publication } from "./publication";
 
@@ -357,8 +357,11 @@ export function VenueSearch() {
   const [smallTheaters, setSmallTheaters] = useState<SmallTheaterLedgerItem[]>([]);
   const [selectedVenueIds, setSelectedVenueIds] = useState<string[]>([]);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  const [regionModalOpen, setRegionModalOpen] = useState(false);
   const [actionMessage, setActionMessage] = useState("");
   const [urlReady, setUrlReady] = useState(false);
+  const regionTriggerRef = useRef<HTMLButtonElement>(null);
+  const regionCloseRef = useRef<HTMLButtonElement>(null);
   const [smallTheaterLoadState, setSmallTheaterLoadState] = useState<
     "loading" | "ready" | "failed"
   >("loading");
@@ -492,6 +495,26 @@ export function VenueSearch() {
       active = false;
     };
   }, []);
+
+  useEffect(() => {
+    if (!regionModalOpen) return;
+    const regionTrigger = regionTriggerRef.current;
+    const previousOverflow = document.body.style.overflow;
+    const focusFrame = window.requestAnimationFrame(() => {
+      regionCloseRef.current?.focus();
+    });
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setRegionModalOpen(false);
+    };
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", closeOnEscape);
+    return () => {
+      window.cancelAnimationFrame(focusFrame);
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", closeOnEscape);
+      regionTrigger?.focus();
+    };
+  }, [regionModalOpen]);
 
   const prefectureGroups = useMemo(() => {
     const groupOrder = [
@@ -1197,47 +1220,37 @@ export function VenueSearch() {
                 </output>
               </span>
               <p className="field-help">
-                複数選択できます。選んだ都道府県のいずれかにある会場を表示します（OR検索）。
+                都道府県を複数選び、いずれかにある会場を表示します（OR検索）。
               </p>
               <button
-                aria-pressed={selectedPrefectures.length === 0}
-                className="prefecture-tag prefecture-all"
-                data-active={selectedPrefectures.length === 0}
-                onClick={() => setSelectedPrefectures([])}
+                aria-controls="region-filter-dialog"
+                aria-expanded={regionModalOpen}
+                aria-haspopup="dialog"
+                className="region-modal-trigger"
+                onClick={() => setRegionModalOpen(true)}
+                ref={regionTriggerRef}
                 type="button"
               >
-                全国
+                <span>地域を選ぶ</span>
+                <strong>
+                  {selectedPrefectures.length
+                    ? `${selectedPrefectures.length}件選択`
+                    : "全国"}
+                </strong>
               </button>
-              <div
-                aria-label="地域（都道府県・複数選択）"
-                className="prefecture-groups"
-              >
-                {prefectureGroups.map((group) => (
-                  <div className="prefecture-group" key={group.region}>
-                    <span className="prefecture-group-label">
-                      {group.region}
-                    </span>
-                    <div
-                      aria-label={`${group.region}の都道府県`}
-                      className="prefecture-tags"
-                      role="group"
-                    >
-                      {group.prefectures.map((prefecture) => (
-                        <button
-                          aria-pressed={selectedPrefectures.includes(prefecture)}
-                          className="prefecture-tag"
-                          data-active={selectedPrefectures.includes(prefecture)}
-                          key={prefecture}
-                          onClick={() => togglePrefecture(prefecture)}
-                          type="button"
-                        >
-                          {prefecture}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
+              {selectedPrefectures.length > 0 && (
+                <div
+                  aria-label="選択中の地域"
+                  className="selected-prefecture-summary"
+                >
+                  {selectedPrefectures.slice(0, 3).map((prefecture) => (
+                    <span key={prefecture}>{prefecture}</span>
+                  ))}
+                  {selectedPrefectures.length > 3 && (
+                    <span>ほか{selectedPrefectures.length - 3}件</span>
+                  )}
+                </div>
+              )}
             </div>
 
             <label className="field">
@@ -2293,6 +2306,101 @@ export function VenueSearch() {
           <small>サイト更新日。空き状況の保証日ではありません</small>
         </div>
       </section>
+
+      {regionModalOpen && (
+        <div
+          className="region-modal-backdrop"
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) setRegionModalOpen(false);
+          }}
+        >
+          <section
+            aria-labelledby="region-filter-title"
+            aria-modal="true"
+            className="region-modal"
+            id="region-filter-dialog"
+            role="dialog"
+          >
+            <header className="region-modal-head">
+              <div>
+                <p className="eyebrow">REGION FILTER</p>
+                <h2 id="region-filter-title">地域を選ぶ</h2>
+                <p>
+                  複数選択はOR検索です。選んだ都道府県のいずれかにある会場を表示します。
+                </p>
+              </div>
+              <button
+                aria-label="地域選択を閉じる"
+                className="region-modal-close"
+                onClick={() => setRegionModalOpen(false)}
+                ref={regionCloseRef}
+                type="button"
+              >
+                ×
+              </button>
+            </header>
+
+            <div className="region-modal-body">
+              <button
+                aria-pressed={selectedPrefectures.length === 0}
+                className="prefecture-tag prefecture-all"
+                data-active={selectedPrefectures.length === 0}
+                onClick={() => setSelectedPrefectures([])}
+                type="button"
+              >
+                全国
+              </button>
+              <div
+                aria-label="地域（都道府県・複数選択）"
+                className="prefecture-groups"
+              >
+                {prefectureGroups.map((group) => (
+                  <div className="prefecture-group" key={group.region}>
+                    <span className="prefecture-group-label">
+                      {group.region}
+                    </span>
+                    <div
+                      aria-label={`${group.region}の都道府県`}
+                      className="prefecture-tags"
+                      role="group"
+                    >
+                      {group.prefectures.map((prefecture) => (
+                        <button
+                          aria-pressed={selectedPrefectures.includes(prefecture)}
+                          className="prefecture-tag"
+                          data-active={selectedPrefectures.includes(prefecture)}
+                          key={prefecture}
+                          onClick={() => togglePrefecture(prefecture)}
+                          type="button"
+                        >
+                          {prefecture}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <footer className="region-modal-actions">
+              <button
+                className="region-modal-clear"
+                onClick={() => setSelectedPrefectures([])}
+                type="button"
+              >
+                全国に戻す
+              </button>
+              <button
+                className="region-modal-apply"
+                onClick={() => setRegionModalOpen(false)}
+                type="button"
+              >
+                選択を反映
+              </button>
+            </footer>
+          </section>
+        </div>
+      )}
 
       <footer className="site-footer">
         <div className="site-footer-inner">

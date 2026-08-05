@@ -528,6 +528,10 @@ body {
 .field select:focus,
 .venue-role-tag:focus-visible,
 .prefecture-tag:focus-visible,
+.region-modal-trigger:focus-visible,
+.region-modal-close:focus-visible,
+.region-modal-clear:focus-visible,
+.region-modal-apply:focus-visible,
 .reset-button:focus-visible,
 .source-link:focus-visible,
 .rail-nav a:focus-visible,
@@ -563,6 +567,15 @@ body {
   border-color: var(--signal);
   background: var(--signal);
   color: var(--ink);
+}
+
+.region-modal-trigger {
+  border-color: #c7c7c2;
+  background: #f8f8f6;
+}
+
+.region-modal-trigger:hover {
+  border-color: var(--ink);
 }
 
 .range {

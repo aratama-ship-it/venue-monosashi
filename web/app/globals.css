@@ -282,6 +282,10 @@ a {
 .field select:focus,
 .venue-role-tag:focus-visible,
 .prefecture-tag:focus-visible,
+.region-modal-trigger:focus-visible,
+.region-modal-close:focus-visible,
+.region-modal-clear:focus-visible,
+.region-modal-apply:focus-visible,
 .reset-button:focus-visible,
 .source-link:focus-visible {
   outline: 3px solid var(--mustard);
@@ -348,6 +352,129 @@ a {
   min-height: 30px;
   font-size: 0.68rem;
   padding: 5px 8px;
+}
+
+.region-modal-trigger {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  background: var(--white);
+  color: var(--ink);
+  cursor: pointer;
+  padding: 9px 11px;
+  text-align: left;
+}
+
+.region-modal-trigger strong {
+  color: var(--rust);
+  font-size: 0.7rem;
+}
+
+.selected-prefecture-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.selected-prefecture-summary span {
+  border: 1px solid var(--line-light);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.64rem;
+  padding: 4px 7px;
+}
+
+.region-modal-backdrop {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+  background: rgba(20, 20, 18, 0.58);
+}
+
+.region-modal {
+  width: min(820px, 100%);
+  max-height: calc(100vh - 40px);
+  overflow: hidden;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  background: var(--white);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+}
+
+.region-modal-head {
+  padding: 24px 26px 18px;
+  border-bottom: 1px solid var(--line-light);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: start;
+}
+
+.region-modal-head h2 {
+  margin: 3px 0 5px;
+  font-size: 1.45rem;
+}
+
+.region-modal-head p:not(.eyebrow) {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.55;
+}
+
+.region-modal-close {
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.region-modal-body {
+  padding: 20px 26px 26px;
+  overflow-y: auto;
+}
+
+.region-modal-actions {
+  padding: 14px 26px;
+  border-top: 1px solid var(--line-light);
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  background: var(--paper);
+}
+
+.region-modal-actions button {
+  min-height: 42px;
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 16px;
+  font-weight: 700;
+}
+
+.region-modal-clear {
+  background: transparent;
+  color: var(--ink);
+}
+
+.region-modal-apply {
+  background: var(--ink);
+  color: var(--white);
 }
 
 .range {
@@ -1048,5 +1175,31 @@ a {
 
   .site-footer-inner {
     flex-direction: column;
+  }
+
+  .region-modal-backdrop {
+    padding: 0;
+    align-items: end;
+  }
+
+  .region-modal {
+    max-height: 92vh;
+    border-radius: 14px 14px 0 0;
+  }
+
+  .region-modal-head,
+  .region-modal-body,
+  .region-modal-actions {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .prefecture-group {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .prefecture-group-label {
+    padding-top: 0;
   }
 }
