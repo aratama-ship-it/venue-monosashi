@@ -1088,10 +1088,8 @@ export function VenueSearch() {
 
           <div className="hero-summary">
             <p className="hero-copy">
-              JJF、日本ヨーヨー連盟、世界大会、ディアボロ、けん玉の過去会場を基準に、
-              全国の候補を面積・天井・客席・予算・搬入・アクセスで見比べます。
+              イベント会場候補を地域・面積・天井・客席・予算・搬入・アクセスで見比べます。
               150席以下の小劇場も、平土間・公演料金・利用条件から探せます。
-              未確認の費用は0円にせず、問い合せが必要な条件として残します。
             </p>
             <aside className="reference-block" aria-label="収録範囲">
               <p className="reference-title">いま載っている目盛り</p>

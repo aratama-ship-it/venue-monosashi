@@ -51,6 +51,14 @@ test("server-renders the venue search shell", async () => {
   assert.match(html, /application\/ld\+json/);
   assert.match(html, /会場を、名前でなく/);
   assert.match(html, /条件で測る/);
+  assert.match(
+    html,
+    /イベント会場候補を地域・面積・天井・客席・予算・搬入・アクセスで見比べます。/,
+  );
+  assert.match(
+    html,
+    /150席以下の小劇場も、平土間・公演料金・利用条件から探せます。/,
+  );
   assert.match(html, /条件を置く/);
   assert.match(html, /同じ目盛りで見る/);
   assert.match(html, />225<[\s\S]*過去大会記録/);
