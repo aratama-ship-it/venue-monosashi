@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 130完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 131完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -274,8 +274,10 @@ ACTIVE — wave 130完了。全国47都道府県・候補230件の目標を達�
 - Wave 129では仮設ステージ、平台、吊物3系統、バトン、吊物幕、演台・花台、ピアノ9件と、温水プールの一般/小中学生2時間料金・超過4件を追加。全4ページの画像照合を完了し、lintと表示テスト3件も合格。確認用PDF/PNGのみ削除した。
 - Wave 130: トッケイセキュリティ平塚総合体育館の9区画・9料金観測を追加（`ee87793`）。
 - Wave 130では2026年7月31日更新の平塚市公式ページから第2/第3体育室、第1/第2武道場、A/B会議室、弓道場、トレーニング、温水プールを区画化。第1体育室市外・武道場市内外の冷房、個人利用、用具レンタル、トレーニング料金を追加し、不明な面積・年齢範囲等は推定せず保持した。
-- Current local totals: candidates 230 / details 454 / prices 2216 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +183 / prices +1826 / operations +120.
+- Wave 131: トッケイセキュリティ平塚総合体育館の第1体育室16料金観測を追加（`6e1f142`）。
+- Wave 131では現行市公式ページから案内されるH31.3更新料金PDF2ページを画像照合し、第1体育室の一般/中学生以下、市内外、1/3・1/2・2/3・全面を追加。市外2倍、営利/入場料倍率は派生額を作らず条件として保持した。
+- Current local totals: candidates 230 / details 454 / prices 2232 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +183 / prices +1842 / operations +120.
 
 ## Verification
 

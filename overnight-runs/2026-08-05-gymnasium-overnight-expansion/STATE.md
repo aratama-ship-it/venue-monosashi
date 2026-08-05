@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 10:44 JST
+- Last updated: 2026-08-05 10:48 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `ee87793` (ledger-only commits may follow it)
+- Last data commit: `6e1f142` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -174,16 +174,17 @@
 | 128 | 2026-08-05 10:38 JST | カメイアリーナ仙台の冷暖房・放送・養生料金深掘り | 2 details / 23 prices | audit 0 errors; generated 230/2194; duplicate IDs 0 | `d39057e` | 支援室/共用器具を区画化し、放送3、冷暖房12、養生・席・得点板・電源8件を追加 |
 | 129 | 2026-08-05 10:41 JST | カメイアリーナ仙台の舞台設備・温水プール料金深掘り | 13 prices | audit 0 errors; generated 230/2207; duplicate price IDs 0; lint OK; tests 3/3 | `ef8b4ff` | 仮設舞台・吊物・演台・ピアノ9件と、温水プール年齢/超過4件を追加。検証用一時ファイルを削除 |
 | 130 | 2026-08-05 10:44 JST | トッケイセキュリティ平塚総合体育館の区画・現行料金深掘り | 9 details / 9 prices | audit 0 errors; generated 230/2216; duplicate IDs 0 | `ee87793` | 第2/3体育室、武道2室、会議2室、弓道、トレーニング、プールを区画化。空調/個人/レンタルを追加 |
+| 131 | 2026-08-05 10:48 JST | トッケイセキュリティ平塚総合体育館の第1体育室分割料金深掘り | 16 prices | audit 0 errors; generated 230/2232; duplicate price IDs 0 | `6e1f142` | 一般/中学生以下×市内外×1/3・1/2・2/3・全面を追加。公式PDF全2ページ画像照合 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 130
+- Last verified wave: wave 131
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `ee87793` and the worktree contains only the known user-owned untracked paths, then continue with トッケイセキュリティ平塚総合体育館の公式料金PDFを全ページ画像照合し、体育室・武道場・弓道場・会議室の専用料金を追加する。HTML現行額との一致も確認する。
+- At the next heartbeat, confirm the current HEAD descends from data commit `6e1f142` and the worktree contains only the known user-owned untracked paths plus active `tmp/pdfs/hiratsuka/` verification files, then continue with 第1体育室の大学生/高校生分割料金. Wave 132でfull checksを行う。PDFのH31.3表記と2026年更新ページからの現行リンク関係を各観測に保持する。
 
 ## Blockers
 
