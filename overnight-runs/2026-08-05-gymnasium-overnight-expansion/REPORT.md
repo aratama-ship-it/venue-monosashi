@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 93完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 94完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -200,8 +200,10 @@ ACTIVE — wave 93完了。全国47都道府県・候補230件の目標を達成
 - Wave 92では90㎡・最大120人の会議室全室と控室1・2について、平日/土日休日の午前・午後1・午後2・夜間・全日を分離。控室のみの利用不可も保持した。
 - Wave 93: EBARA WAVE アリーナおおたの体育室1・2・会議室の区外30料金観測を追加（`2f2ade4`）。
 - Wave 93では体育室1・2と会議室全室の平日/土日休日、午前・午後1・午後2・夜間・全日を区外利用で補完。3波ごとのlintと表示テスト3件も合格した。
-- Current local totals: candidates 230 / details 399 / prices 1644 / operations 217.
-- Overnight additions from baseline: candidates +47 / details +128 / prices +1254 / operations +115.
+- Wave 94: EBARA WAVE アリーナおおたの控室1・2の区外20料金観測を追加（`ac95468`）。
+- Wave 94では控室1・2の平日/土日休日、午前・午後1・午後2・夜間・全日を区外利用で補完。控室のみの利用不可を保持した。
+- Current local totals: candidates 230 / details 399 / prices 1664 / operations 217.
+- Overnight additions from baseline: candidates +47 / details +128 / prices +1274 / operations +115.
 
 ## Verification
 
