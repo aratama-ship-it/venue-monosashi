@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 09:12 JST
+- Last updated: 2026-08-05 09:17 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `8947709` (ledger-only commits may follow it)
+- Last data commit: `2f2ade4` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -136,16 +136,17 @@
 | 90 | 2026-08-05 09:03 JST | EBARA WAVE アリーナおおたの全館催事料金深掘り | 14 prices | audit 0 errors; generated 230/1564; duplicate IDs 0; lint OK; tests 3/3 | `7c9348e` | 弓道場除く全施設貸切を入場料帯・用途・曜日・区内外で分離。税込、準備後片付け込み。3波チェック合格 |
 | 91 | 2026-08-05 09:07 JST | EBARA WAVE アリーナおおたの体育室区内料金深掘り | 20 prices | audit 0 errors; generated 230/1584; duplicate price IDs 0 | `8f82d7c` | 体育室1・2の平日/土日休日、4時間帯/全日を区内利用で分離。税込、準備後片付け込み、ボール等の危険利用不可を保持 |
 | 92 | 2026-08-05 09:12 JST | EBARA WAVE アリーナおおたの会議室・控室区内料金深掘り | 30 prices | audit 0 errors; generated 230/1614; duplicate price IDs 0 | `8947709` | 会議室全室と控室1・2の平日/土日休日、4時間帯/全日を区内利用で分離。控室単独利用不可を保持 |
+| 93 | 2026-08-05 09:17 JST | EBARA WAVE アリーナおおたの体育室・会議室区外料金深掘り | 30 prices | audit 0 errors; generated 230/1644; duplicate price IDs 0; lint OK; tests 3/3 | `2f2ade4` | 体育室1・2と会議室全室の平日/土日休日、4時間帯/全日を区外利用で補完。3波チェック合格 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 92
+- Last verified wave: wave 93
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `8947709` and the worktree contains only known untracked paths, then continue with EBARA WAVE アリーナおおたの体育室・会議室・控室区外料金 or another current official source. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
+- At the next heartbeat, confirm the current HEAD descends from data commit `2f2ade4` and the worktree contains only known untracked paths, then continue with EBARA WAVE アリーナおおたの控室区外料金・個人利用料金 or another current official source. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
 
 ## Blockers
 
