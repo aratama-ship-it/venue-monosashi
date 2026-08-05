@@ -4,15 +4,15 @@ export const venueData = {
   "stats": {
     "historical": 225,
     "venues": 230,
-    "details": 474,
+    "details": 481,
     "prices": 2634,
     "operations": 222,
     "budgetScenarios": 13,
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-05",
-      "observationCount": 3930,
-      "venueObservationCount": 3343,
+      "observationCount": 3937,
+      "venueObservationCount": 3350,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -58097,7 +58097,7 @@ export const venueData = {
       "cautions": "最大4,200人は2階観覧席1,550席と区別して記録。観覧席の固定・可動内訳、天井高、床荷重、投擲、搬入寸法、舞台、催事専有回線、仮設席、空き状況は要確認",
       "sourceUrl": "https://www.tokushimacity-sports.or.jp/facilities-info/116/",
       "observedAt": "2026-08-05",
-      "detailCount": 1,
+      "detailCount": 8,
       "priceCount": 1,
       "operationCount": 1,
       "historicalCompletedCount": 0,
@@ -58155,6 +58155,83 @@ export const venueData = {
           "capacityFixed": 1550,
           "stageType": "unknown",
           "practiceUse": "yes"
+        },
+        {
+          "id": "tokushima-second",
+          "name": "第二競技場",
+          "type": "arena",
+          "area": null,
+          "ceiling": null,
+          "capacityTheater": 1000,
+          "capacityFixed": null,
+          "stageType": "unknown",
+          "practiceUse": "yes"
+        },
+        {
+          "id": "tokushima-meeting-1",
+          "name": "第一会議室",
+          "type": "meeting_room",
+          "area": null,
+          "ceiling": null,
+          "capacityTheater": 30,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "no"
+        },
+        {
+          "id": "tokushima-meeting-2",
+          "name": "第二会議室",
+          "type": "meeting_room",
+          "area": null,
+          "ceiling": null,
+          "capacityTheater": 60,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "no"
+        },
+        {
+          "id": "tokushima-multipurpose",
+          "name": "多目的ルーム",
+          "type": "multipurpose_room",
+          "area": 200,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "conditional"
+        },
+        {
+          "id": "tokushima-official-room",
+          "name": "役員室",
+          "type": "support_room",
+          "area": null,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "no"
+        },
+        {
+          "id": "tokushima-childcare",
+          "name": "育児支援ルーム",
+          "type": "support_room",
+          "area": null,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "no"
+        },
+        {
+          "id": "tokushima-shared-equipment",
+          "name": "有料貸出備品",
+          "type": "shared_inventory",
+          "area": null,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "conditional"
         }
       ],
       "bestSpace": {
