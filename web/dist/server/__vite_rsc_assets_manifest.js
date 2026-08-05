@@ -40,7 +40,7 @@ export default {
     "app/layout.tsx": {
       "js": [],
       "css": [
-        "/assets/index-CcB-ZnAM.css"
+        "/assets/index-DmnHV6Ne.css"
       ]
     }
   }
