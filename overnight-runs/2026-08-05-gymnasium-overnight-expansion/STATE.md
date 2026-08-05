@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 11:12 JST
+- Last updated: 2026-08-05 11:13 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `fd16cf8` (ledger-only commits may follow it)
+- Last data commit: `028def4` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -185,16 +185,17 @@
 | 139 | 2026-08-05 11:05 JST | 相好アリーナ四日市の平日分割料金深掘り | 23 prices | audit 0 errors; generated 230/2371; duplicate price IDs 0 | `17feb2e` | 指定管理者の現行料金HTMLから全面〜1/4面のスポーツ・入場料なし・平日午前/午後/夜間/全日を補完。既存の全面全日1件は重複追加せず保持 |
 | 140 | 2026-08-05 11:07 JST | 相好アリーナ四日市の土日祝分割料金深掘り | 24 prices | audit 0 errors; generated 230/2395; duplicate price IDs 0 | `1e0b19c` | 全面〜1/4面のスポーツ・入場料なし・土日祝午前/午後/夜間/全日を指定管理者の現行料金HTMLから追加 |
 | 141 | 2026-08-05 11:12 JST | 相好アリーナ四日市の支援区画・個人利用深掘り | 13 details / 12 prices | audit 0 errors; generated 230/2407; duplicate IDs 0; lint OK; tests 3/3 | `fd16cf8` | 多目的2室、弓道場と近的/遠的、トレーニングと2エリア、会議4区画、ウォーキングを区画化。個人・12枚券を追加。全区画会議室定員は推定せず保持 |
+| 142 | 2026-08-05 11:13 JST | 相好アリーナ四日市の多目的室スポーツ料金深掘り | 20 prices | audit 0 errors; generated 230/2427; duplicate price IDs 0 | `028def4` | 多目的室1の3/2/1区画、多目的室2の2/1区画を午前/午後/夜間/全日で追加。スポーツ・入場料なし |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 141
+- Last verified wave: wave 142
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `fd16cf8` and the worktree contains only the known user-owned untracked paths, then continue 相好アリーナ四日市 with current multipurpose-room dedicated-use prices.
+- At the next heartbeat, confirm the current HEAD descends from data commit `028def4` and the worktree contains only the known user-owned untracked paths, then continue 相好アリーナ四日市 with matching non-sports multipurpose-room prices.
 
 ## Blockers
 
