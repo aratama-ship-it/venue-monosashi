@@ -3,7 +3,7 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 11:23 JST
+- Last updated: 2026-08-05 11:24 JST
 - Cutoff: 2026-08-06 07:00 JST
 - Last data commit: `d15dc75` (ledger-only commits may follow it)
 
@@ -200,7 +200,7 @@
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `d15dc75` and the worktree contains only the known user-owned untracked paths, then recompute per-candidate detail/price/operation coverage and select the next primary-source-rich low-coverage sports facility.
+- At the next heartbeat, confirm the current HEAD descends from data commit `d15dc75` and the worktree contains only the known user-owned untracked paths, then deepen CAND-200 高岡市竹平記念体育館. The current official facility page still links the R1.10.1 price PDF and lists current opening/booking conditions; render and visually inspect the PDF before adding rates, preserve the old effective-date/current-link distinction, and do not infer unchanged prices beyond the official linkage.
 
 ## Blockers
 
