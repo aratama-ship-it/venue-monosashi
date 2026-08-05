@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 112完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 113完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -238,8 +238,10 @@ ACTIVE — wave 112完了。全国47都道府県・候補230件の目標を達�
 - Wave 111では卓球台開放の大人/小人・午前/午後/連続料金と登録・予約・駐車条件、冬期スケートの個人・3段階団体・観覧料金と安全条件を分離。監査で卓球の物理区画未特定を検出したため、サブアリーナ等へ推定せず「実施区画要確認」として保持した。3波ごとのlintと表示テスト3件も合格した。
 - Wave 112: 花巻市総合体育館の4区画を追加し候補精度を更新（`9eb4f5f`）。
 - Wave 112では市公式現行料金ページの画像と運営団体の料金PDF2ページを全ページ画像照合し、掲載額の一致を確認。第2アリーナ714㎡・約80席、第3アリーナ1,675.8㎡・固定1,970席＋車いす12席、多目的ルーム、トレーニングルームを区画化した。料金の施行日は表示されないため候補注意に保持した。
-- Current local totals: candidates 230 / details 424 / prices 1934 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +153 / prices +1544 / operations +120.
+- Wave 113: 花巻市総合体育館の第1アリーナ18料金観測を追加（`ea06da2`）。
+- Wave 113では全面貸切を一般/小中高校生/営利目的、平日/土日休日、朝/昼/夜で分離し、市公式現行料金画像と運営団体PDFの両方で数値を目視照合。1時間までごとの額、税表記なし、入場料等徴収時の2倍規定と照明・空調別料金を除外条件に保持した。
+- Current local totals: candidates 230 / details 424 / prices 1952 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +153 / prices +1562 / operations +120.
 
 ## Verification
 
