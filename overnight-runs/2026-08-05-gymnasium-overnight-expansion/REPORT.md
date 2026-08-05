@@ -342,8 +342,10 @@ ACTIVE — wave 152完了。全国47都道府県・候補230件の目標を達�
 - Wave 163では固定2,900席・壁面収納2,100席・アリーナ3,000席で最大8,000人を構造化。会議室7室、昇降式ステージ、更衣室、レフェリー控室を区画化し、公式2ページ間で異なるステージ高さは不一致を明記して推定統合しなかった。
 - Wave 164: ビッグハットA区分の12料金観測を追加（`2eef266`）。
 - Wave 164では現行主催者ページが案内する令和元年10月1日現在料金PDF全1ページを画像照合し、アマチュアスポーツ・入場料なしの平日/土日祝を午前、午後、夜間、昼間、昼夜、全日で補完。変更可能とする注記を各観測に残した。
-- Current local totals: candidates 230 / details 500 / prices 2760 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +229 / prices +2370 / operations +120.
+- Wave 165: ビッグハットB区分の12料金観測を追加（`5980b5a`）。
+- Wave 165ではアマチュアスポーツ・入場料徴収ありの平日/土日祝を午前、午後、夜間、昼間、昼夜、全日で補完。3波ごとのlintと表示テスト3件に合格後、今回作成した確認用PDF 1件・PNG 1件だけを削除した。
+- Current local totals: candidates 230 / details 500 / prices 2772 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +229 / prices +2382 / operations +120.
 
 ## Verification
 
