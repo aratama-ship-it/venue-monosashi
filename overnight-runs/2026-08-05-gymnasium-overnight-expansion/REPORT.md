@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 102完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 103完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -218,8 +218,10 @@ ACTIVE — wave 102完了。全国47都道府県・候補230件の目標を達�
 - Wave 101では控室・選手控室・主催者事務室・監視室・楽屋・記者室の料金群、研修室、更衣・シャワー室を区画化し、通常/時間外料金を追加。バスケ、バレー、テニス、バドミントン、卓球、ボクシング、レスリング、フェンシング、空手、柔道畳の用具料金も分離した。
 - Wave 102: 千葉ポートアリーナのフロア・舞台・許可19料金観測を追加（`a77fe17`）。
 - Wave 102ではテニス/バレー/バドミントン/卓球/多目的フロア、仮設ステージ、演台、バトン、金びょうぶ、幕、舞台照明、机・椅子・ロッカー、物販・広告・撮影・放映許可を分離。3波ごとのlintと表示テスト3件も合格した。
-- Current local totals: candidates 230 / details 409 / prices 1785 / operations 218.
-- Overnight additions from baseline: candidates +47 / details +138 / prices +1395 / operations +116.
+- Wave 103: 千葉ポートアリーナの分割・年齢別全日23料金観測を追加（`439e4a9`）。
+- Wave 103ではメインアリーナの全面・2/3面・半面・1/3面を、一般・中高校生・小学生以下、平日・土日祝の全日額で補完。既存の一般平日全面全日とは重複させず保持した。
+- Current local totals: candidates 230 / details 409 / prices 1808 / operations 218.
+- Overnight additions from baseline: candidates +47 / details +138 / prices +1418 / operations +116.
 
 ## Verification
 
