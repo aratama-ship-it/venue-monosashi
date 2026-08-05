@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 11:41 JST
+- Last updated: 2026-08-05 11:42 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `ada0635` (ledger-only commits may follow it)
+- Last data commit: `cf2d5f6` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -199,16 +199,17 @@
 | 153 | 2026-08-05 11:37 JST | とくぎんトモニアリーナの支援区画深掘り | 7 details | audit 0 errors; generated 230/2634; duplicate IDs 0; lint OK; tests 3/3 | `3275664` | 第二競技場、会議2室、多目的、役員、育児支援、有料貸出備品を現行指定管理者ページから区画化 |
 | 154 | 2026-08-05 11:40 JST | とくぎんトモニアリーナ第二競技場一般料金深掘り | 12 prices | audit 0 errors; generated 230/2646; duplicate price IDs 0 | `8678564` | 現行ページが案内する料金PDF全2ページを画像照合し、全面/半面の6時間区分を追加 |
 | 155 | 2026-08-05 11:41 JST | とくぎんトモニアリーナ第二競技場中高料金深掘り | 12 prices | audit 0 errors; generated 230/2658; duplicate price IDs 0 | `ada0635` | 中・高の全面/半面を午前/午後/夜間/午前午後/午後夜間/全日で追加 |
+| 156 | 2026-08-05 11:42 JST | とくぎんトモニアリーナ会議室料金深掘り | 14 prices | audit 0 errors; generated 230/2672; duplicate IDs 0; lint OK; tests 3/3 | `cf2d5f6` | 第一/第二会議室の6時間区分と超過料金を追加。確認用PDF/PNGを削除 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 155
-- No data edits are in progress. `tmp/pdfs/tokushima/` はwave 154で全2ページを画像照合済みの作業用PDF/PNGで、wave 156のfull checks後に削除する。
+- Last verified wave: wave 156
+- No data edits are in progress. Wave 154で作成した徳島の確認用PDF 1件・PNG 2件はfull checks後に削除済み。
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `ada0635` and preserve the recorded Tokushima PDF work files, then add the clearly imaged meeting-room period rates in wave 156, run full checks, and remove only the Tokushima PDF/PNG work files.
+- At the next heartbeat, confirm the current HEAD descends from data commit `cf2d5f6` and the worktree contains only the known user-owned untracked paths, then recompute low-coverage candidates and select the next current primary-source-rich arena. Wave 159で次のfull checksを行う。
 
 ## Blockers
 

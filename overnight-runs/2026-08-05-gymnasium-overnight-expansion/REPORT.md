@@ -324,8 +324,10 @@ ACTIVE — wave 152完了。全国47都道府県・候補230件の目標を達�
 - Wave 154では現行指定管理者ページからリンクされる2019年10月1日施行料金PDF全2ページを画像照合し、第二競技場の一般・全面/半面について午前、午後、夜間、午前午後、午後夜間、全日を補完。古い施行日と現行ページからのリンク関係を混同せず、各行に実利用前再確認を残した。
 - Wave 155: とくぎんトモニアリーナ第二競技場の中・高12料金観測を追加（`ada0635`）。
 - Wave 155では第二競技場の中学生・高校生区分について、全面/半面の午前、午後、夜間、午前午後、午後夜間、全日を補完。一般料金と混同せず独立した用途区分とし、施行日と実利用前再確認を保持した。
-- Current local totals: candidates 230 / details 481 / prices 2658 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +210 / prices +2268 / operations +120.
+- Wave 156: とくぎんトモニアリーナの会議室14料金観測を追加（`cf2d5f6`）。
+- Wave 156では第一・第二会議室それぞれの午前、午後、夜間、午前午後、午後夜間、全日、超過1時間を補完。3波ごとのlintと表示テスト3件に合格後、今回作成した確認用PDF 1件・PNG 2件だけを削除した。
+- Current local totals: candidates 230 / details 481 / prices 2672 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +210 / prices +2282 / operations +120.
 
 ## Verification
 
