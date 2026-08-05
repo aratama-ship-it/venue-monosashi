@@ -4,15 +4,15 @@ export const venueData = {
   "stats": {
     "historical": 225,
     "venues": 230,
-    "details": 434,
+    "details": 443,
     "prices": 2128,
     "operations": 222,
     "budgetScenarios": 13,
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-05",
-      "observationCount": 3384,
-      "venueObservationCount": 2797,
+      "observationCount": 3393,
+      "venueObservationCount": 2806,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -39420,7 +39420,7 @@ export const venueData = {
       "cautions": "2025年5月21日から2027年3月15日まで大規模改修休館予定のため直近利用候補にはできない。天井高、床荷重、投擲、搬入寸法、改修後仕様・料金は再確認",
       "sourceUrl": "https://www.spf-sendai.jp/sisetsu/gym/shi-gym/",
       "observedAt": "2026-08-05",
-      "detailCount": 1,
+      "detailCount": 10,
       "priceCount": 0,
       "operationCount": 1,
       "historicalCompletedCount": 0,
@@ -39459,6 +39459,105 @@ export const venueData = {
           "ceiling": null,
           "capacityTheater": 5705,
           "capacityFixed": 4681,
+          "stageType": "none",
+          "practiceUse": "yes"
+        },
+        {
+          "id": "kamei-second",
+          "name": "第2競技場",
+          "type": "arena",
+          "area": 770.8,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes"
+        },
+        {
+          "id": "kamei-pool",
+          "name": "25m温水プール",
+          "type": "pool",
+          "area": 275,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes"
+        },
+        {
+          "id": "kamei-training",
+          "name": "トレーニング室",
+          "type": "training_room",
+          "area": 204.08,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes"
+        },
+        {
+          "id": "kamei-gym-room",
+          "name": "体育室",
+          "type": "practice_room",
+          "area": 108.78,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes"
+        },
+        {
+          "id": "kamei-fitness-test",
+          "name": "体力測定室",
+          "type": "training_room",
+          "area": 180.18,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes"
+        },
+        {
+          "id": "kamei-light-exercise",
+          "name": "軽運動場",
+          "type": "practice_room",
+          "area": 347.4,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes"
+        },
+        {
+          "id": "kamei-training-rooms",
+          "name": "研修室1〜3",
+          "type": "meeting_room",
+          "area": 228.92,
+          "ceiling": null,
+          "capacityTheater": 180,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "no"
+        },
+        {
+          "id": "kamei-meeting",
+          "name": "会議室",
+          "type": "meeting_room",
+          "area": 74.8,
+          "ceiling": null,
+          "capacityTheater": 20,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "no"
+        },
+        {
+          "id": "kamei-infant-gym",
+          "name": "幼児体育室",
+          "type": "practice_room",
+          "area": 83.55,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
           "stageType": "none",
           "practiceUse": "yes"
         }
