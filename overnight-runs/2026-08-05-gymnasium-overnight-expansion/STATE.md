@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 11:02 JST
+- Last updated: 2026-08-05 11:05 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `3c353e5` (ledger-only commits may follow it)
+- Last data commit: `17feb2e` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -182,16 +182,17 @@
 | 136 | 2026-08-05 10:57 JST | トッケイセキュリティ平塚総合体育館の弓道場料金深掘り | 16 prices | audit 0 errors; generated 230/2312; duplicate price IDs 0 | `c2be2d4` | 半面/全面×4年齢区分×市内外を追加 |
 | 137 | 2026-08-05 10:59 JST | トッケイセキュリティ平塚総合体育館の会議・放送・記録料金深掘り | 3 details / 18 prices | audit 0 errors; generated 230/2330; duplicate IDs 0 | `08c4606` | A会議室2分割/共用器具を区画化し、プール個人、会議、放送、記録、可動席を追加 |
 | 138 | 2026-08-05 11:02 JST | トッケイセキュリティ平塚総合体育館の照明料金深掘り | 18 prices | audit 0 errors; generated 230/2348; duplicate IDs 0; lint OK; tests 3/3 | `3c353e5` | 第1体育室の1/3・半面・2/3・全面を100%/50%・市内外で分離し、温水プール全面100%も追加。画像照合用一時ファイルを削除 |
+| 139 | 2026-08-05 11:05 JST | 相好アリーナ四日市の平日分割料金深掘り | 23 prices | audit 0 errors; generated 230/2371; duplicate price IDs 0 | `17feb2e` | 指定管理者の現行料金HTMLから全面〜1/4面のスポーツ・入場料なし・平日午前/午後/夜間/全日を補完。既存の全面全日1件は重複追加せず保持 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 138
+- Last verified wave: wave 139
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `3c353e5` and the worktree contains only the known user-owned untracked paths, then select the next primary-source-rich low-coverage sports facility and continue one bounded wave.
+- At the next heartbeat, confirm the current HEAD descends from data commit `17feb2e` and the worktree contains only the known user-owned untracked paths, then continue 相好アリーナ四日市 with the matching weekend split-rate axis.
 
 ## Blockers
 
