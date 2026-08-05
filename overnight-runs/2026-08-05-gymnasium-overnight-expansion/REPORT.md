@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 150完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 151完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -314,8 +314,10 @@ ACTIVE — wave 150完了。全国47都道府県・候補230件の目標を達�
 - Wave 149では全面/2/3面/1/3面の午前・午後・夜間・全日料金を補完し、既存の全面全日1件は重複追加せず保持。現行公式ページからのリンクと2019年施行日の境界を各観測に残した。
 - Wave 150: 高岡市竹平記念体育館の時間単価・附属設備16料金観測を追加（`17f2f6e`）。
 - Wave 150ではアマチュア入場料なしの標準時間内/時間外を全面・2/3面・1/3面で分離し、拡声装置、2回路まで/追加1回路の照明6件、入場料有無別冷暖房、電光得点表示を追加。PDF全3ページの画像照合後、lint・表示テスト3件に合格し、確認用PDF/PNGのみ削除した。
-- Current local totals: candidates 230 / details 474 / prices 2606 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +203 / prices +2216 / operations +120.
+- Wave 151: 高岡市竹平記念体育館の入場有料10料金観測を追加（`e2d233e`）。
+- Wave 151ではアマチュアスポーツ/スポーツ以外の入場有料・全面料金を午前/午後/夜間/全日/時間外で分離。ページ跨ぎの表構造を全ページ画像照合結果に基づいて解釈し、用途を混同しないよう保持した。
+- Current local totals: candidates 230 / details 474 / prices 2616 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +203 / prices +2226 / operations +120.
 
 ## Verification
 
