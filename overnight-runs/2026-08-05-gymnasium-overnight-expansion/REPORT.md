@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 107完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 108完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -228,8 +228,10 @@ ACTIVE — wave 107完了。全国47都道府県・候補230件の目標を達�
 - Wave 106では入場料徴収アマチュアスポーツ、入場料なしの見本市・商品展示・営利宣伝、入場料徴収の集会・催事、プロスポーツ・コンサート等興行を、平日の午前・午後・夜間・全日で分離した。
 - Wave 107: 千葉ポートアリーナのサブ土日祝催事16料金観測を追加（`5c55df2`）。
 - Wave 107ではWave 106と同じ4用途を土日祝の午前・午後・夜間・全日で補完し、サブアリーナでも用途・曜日差を直接比較可能にした。
-- Current local totals: candidates 230 / details 409 / prices 1888 / operations 218.
-- Overnight additions from baseline: candidates +47 / details +138 / prices +1498 / operations +116.
+- Wave 108: 千葉ポートアリーナのトレーニング室1を1区画化し、17料金観測・1運用観測を追加（`974c8ed`）。
+- Wave 108では259.2㎡・29種34台、トレーナー配置、シャワーを区画化し、一般/高校生/65歳以上の2時間券・超過、3種回数券、一般/高校生の3種定期券、トレーニング利用者駐車割引を分離。当日受付、年齢証明、高校生以上条件も運用観測に保持した。3波ごとのlintと表示テスト3件も合格した。
+- Current local totals: candidates 230 / details 410 / prices 1905 / operations 219.
+- Overnight additions from baseline: candidates +47 / details +139 / prices +1515 / operations +117.
 
 ## Verification
 

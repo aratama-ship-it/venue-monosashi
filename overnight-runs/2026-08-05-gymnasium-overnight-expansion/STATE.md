@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 09:42 JST
+- Last updated: 2026-08-05 09:45 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `5c55df2` (ledger-only commits may follow it)
+- Last data commit: `974c8ed` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -151,16 +151,17 @@
 | 105 | 2026-08-05 09:38 JST | 千葉ポートアリーナのサブ・トレーニング年齢別料金深掘り | 24 prices | audit 0 errors; generated 230/1856; duplicate price IDs 0; lint OK; tests 3/3 | `6e49a8c` | サブの中高校生/小学生以下を平日/土日祝4区分、トレーニング2を年齢別4区分で補完。3波チェック合格 |
 | 106 | 2026-08-05 09:40 JST | 千葉ポートアリーナのサブ平日催事料金深掘り | 16 prices | audit 0 errors; generated 230/1872; duplicate price IDs 0 | `d1b606a` | 入場料徴収アマチュア、展示営利、集会催事、プロ/コンサートを平日3区分/全日で分離 |
 | 107 | 2026-08-05 09:42 JST | 千葉ポートアリーナのサブ土日祝催事料金深掘り | 16 prices | audit 0 errors; generated 230/1888; duplicate price IDs 0 | `5c55df2` | wave 106と同じ4用途を土日祝3区分/全日で補完 |
+| 108 | 2026-08-05 09:45 JST | 千葉ポートアリーナのトレーニング室1・個人利用券深掘り | 1 detail / 17 prices / 1 operation | audit 0 errors; generated 230/1905; duplicate IDs 0; lint OK; tests 3/3 | `974c8ed` | 259.2㎡・29種34台を区画化。年齢別2時間券・超過、回数券、定期券、駐車割引と当日受付・証明条件を分離 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 107
+- Last verified wave: wave 108
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `5c55df2` and the worktree contains only known untracked paths, then continue with 千葉ポートアリーナのトレーニング室1・個人利用券. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
+- At the next heartbeat, confirm the current HEAD descends from data commit `974c8ed` and the worktree contains only known untracked paths, then continue with current primary-source spaces/prices/operations from the remaining incomplete candidates. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
 
 ## Blockers
 
