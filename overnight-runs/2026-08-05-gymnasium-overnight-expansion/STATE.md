@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 09:16 JST
+- Last updated: 2026-08-05 09:18 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `477b4d4` (ledger-only commits may follow it)
+- Last data commit: `e9f5c8c` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -139,16 +139,17 @@
 | 93 | 2026-08-05 09:12 JST | EBARA WAVE アリーナおおたの体育室・会議室区外料金深掘り | 30 prices | audit 0 errors; generated 230/1644; duplicate price IDs 0; lint OK; tests 3/3 | `2f2ade4` | 体育室1・2と会議室全室の平日/土日休日、4時間帯/全日を区外利用で補完。3波チェック合格 |
 | 94 | 2026-08-05 09:14 JST | EBARA WAVE アリーナおおたの控室区外料金深掘り | 20 prices | audit 0 errors; generated 230/1664; duplicate price IDs 0 | `ac95468` | 控室1・2の平日/土日休日、4時間帯/全日を区外利用で補完。控室単独利用不可を保持 |
 | 95 | 2026-08-05 09:16 JST | EBARA WAVE アリーナおおたの弓道場・個人開放深掘り | 1 detail / 16 prices | audit 0 errors; generated 230/1680; duplicate IDs 0 | `477b4d4` | 近的28m・5人立を区画化。弓道個人/貸切の区内外・3区分とバスケ/バドミントン/卓球個人開放を現行HTMLから追加 |
+| 96 | 2026-08-05 09:18 JST | EBARA WAVE アリーナおおたの支援区画・駐車・弓道運用深掘り | 3 details / 2 prices / 1 operation | audit 0 errors; generated 230/1682; duplicate IDs 0; lint OK; tests 3/3 | `e9f5c8c` | 放送室・多目的更衣室・審判員室を区画化。普通/大型車駐車料金と弓道の登録・予約条件を追加し、公式表の重複区分名は推定せず保持 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 95
+- Last verified wave: wave 96
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `477b4d4` and the worktree contains only known untracked paths, then continue with EBARA WAVE アリーナおおたの附帯設備・運用精密化 or another current official source. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
+- At the next heartbeat, confirm the current HEAD descends from data commit `e9f5c8c` and the worktree contains only known untracked paths, then continue with EBARA WAVE アリーナおおたの附帯設備 or another current official source. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
 
 ## Blockers
 

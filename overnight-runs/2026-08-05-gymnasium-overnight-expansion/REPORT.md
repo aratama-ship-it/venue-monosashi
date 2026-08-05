@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 95完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 96完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -204,8 +204,10 @@ ACTIVE — wave 95完了。全国47都道府県・候補230件の目標を達成
 - Wave 94では控室1・2の平日/土日休日、午前・午後1・午後2・夜間・全日を区外利用で補完。控室のみの利用不可を保持した。
 - Wave 95: EBARA WAVE アリーナおおたの弓道場1区画と16料金観測を追加（`477b4d4`）。
 - Wave 95では近的28m・5人立を区画化し、弓道の個人一般/高校生以下・区内外貸切を3時間区分で分離。バスケットボール2区分、バドミントン、卓球の1人300円個人開放も現行HTMLから追加した。
-- Current local totals: candidates 230 / details 400 / prices 1680 / operations 217.
-- Overnight additions from baseline: candidates +47 / details +129 / prices +1290 / operations +115.
+- Wave 96: EBARA WAVE アリーナおおたの3支援区画、2駐車料金、1弓道運用観測を追加（`e9f5c8c`）。
+- Wave 96では放送室・多目的更衣室・審判員室を区画化し、地下普通車100円/30分・地上大型車2,000円/日を税表記なしで追加。弓道の登録、道着、原則10名以上、区内団体3か月前予約も分離し、公式表の重複区分名は推定せず要確認とした。3波チェックも合格した。
+- Current local totals: candidates 230 / details 403 / prices 1682 / operations 218.
+- Overnight additions from baseline: candidates +47 / details +132 / prices +1292 / operations +116.
 
 ## Verification
 
