@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 122完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 123完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -258,8 +258,10 @@ ACTIVE — wave 122完了。全国47都道府県・候補230件の目標を達�
 - Wave 121では1/24卓球、1/12バドミントン等、1/3バスケ/バレー、1/2ハンド/ドッジの一般平日/休日9〜21時8件と、1/12・1/3・1/2・全面のLow/High/全点灯照明8件を追加。半額適用の条件は表上で不明なため派生観測を作らず、休館中利用不可も保持した。
 - Wave 122: 維新大晃アリーナの空調・競技器具29料金観測を追加（`f3f18d1`）。
 - Wave 122ではアリーナ、レクチャールーム、エントランスホール、控室の冷暖房9件と、競技用具、電光得点表示、机椅子、全面養生、特殊フロアシート、移動ステージ、放送・通信機器等20件を追加。時間、室、組、台、枚、日等の課金単位を分離し、休館中利用不可も保持した。
-- Current local totals: candidates 230 / details 433 / prices 2112 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +162 / prices +1722 / operations +120.
+- Wave 123: 維新大晃アリーナのシャワー・光熱・映写16料金観測と受付室1区画を追加（`6e5d55b`）。
+- Wave 123では温水シャワーの利用人数段階とコイン式を分離し、水道、給湯室、電気・コンセント、テーブルクロス、映写機大小、スクリーン、受付室冷暖房を追加。課金単位と休館中利用不可を保持した。3波ごとのlintと表示テスト3件も合格し、確認用一時ファイルを削除した。
+- Current local totals: candidates 230 / details 434 / prices 2128 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +163 / prices +1738 / operations +120.
 
 ## Verification
 
