@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 116完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 117完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -246,8 +246,10 @@ ACTIVE — wave 116完了。全国47都道府県・候補230件の目標を達�
 - Wave 115ではアネックス全面貸切を一般/小中高校生/営利目的、平日/土日休日、朝/昼/夜で分離し、市公式現行料金画像と運営団体PDFの両方で数値を目視照合。半面利用は規定倍率のみのため派生額を作らず、基本全面額と分離した。
 - Wave 116: 花巻市総合体育館の多目的ルーム18料金観測を追加（`a8c0537`）。
 - Wave 116では一般/小中高校生/営利目的、平日/土日休日、朝/昼/夜を分離し、市公式現行料金画像と運営団体PDFの両方で数値を目視照合。暖冷房は別料金として除外条件に保持し、料金観測総数2,000件を突破した。
-- Current local totals: candidates 230 / details 424 / prices 2006 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +153 / prices +1616 / operations +120.
+- Wave 117: 花巻市総合体育館の個人利用・照明空調19料金観測を追加（`a3e22df`）。
+- Wave 117ではトレーニング一般/高校生、3アリーナ各一般/小中高校生の個人利用8件、3アリーナの半点灯・暖房・冷房9件、多目的ルームの暖房・冷房2件を追加。全点灯2倍・分割利用倍率は派生額を作らず規定として保持し、3波ごとのlintと表示テスト3件も合格した。
+- Current local totals: candidates 230 / details 424 / prices 2025 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +153 / prices +1635 / operations +120.
 
 ## Verification
 
