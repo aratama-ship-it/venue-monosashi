@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 140完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 141完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -294,8 +294,10 @@ ACTIVE — wave 140完了。全国47都道府県・候補230件の目標を達�
 - Wave 139では指定管理者の現行料金HTMLから、全面・3/4面・2/3面・半面・1/3面・1/4面のスポーツ・入場料なしを午前/午後/夜間/全日で補完。既存の全面全日1件は重複追加せず、同じ軸で比較可能にした。
 - Wave 140: 相好アリーナ四日市の土日祝分割24料金観測を追加（`1e0b19c`）。
 - Wave 140では全面・3/4面・2/3面・半面・1/3面・1/4面のスポーツ・入場料なしを土日祝の午前/午後/夜間/全日で追加し、平日との差を直接比較可能にした。
-- Current local totals: candidates 230 / details 457 / prices 2395 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +186 / prices +2005 / operations +120.
+- Wave 141: 相好アリーナ四日市の13区画・12料金観測を追加（`fd16cf8`）。
+- Wave 141では多目的室1/2、弓道場全体と近的/遠的射場、トレーニング全体とマシン/フリーウエイト、ウォーキングコース、大会議室全体/A/B、小会議室を区画化。アリーナ・弓道場・トレーニングの一般/中学生以下の個人料金と12枚券を追加した。大会議室全区画の定員は分割定員から推定せず空欄に保持。初回監査で会議室4行のCSV列ずれを検出・修正し、再監査、lint、表示テスト3件に合格した。
+- Current local totals: candidates 230 / details 470 / prices 2407 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +199 / prices +2017 / operations +120.
 
 ## Verification
 
