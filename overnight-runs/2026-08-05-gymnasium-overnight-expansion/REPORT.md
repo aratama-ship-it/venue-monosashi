@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 94完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 95完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -202,8 +202,10 @@ ACTIVE — wave 94完了。全国47都道府県・候補230件の目標を達成
 - Wave 93では体育室1・2と会議室全室の平日/土日休日、午前・午後1・午後2・夜間・全日を区外利用で補完。3波ごとのlintと表示テスト3件も合格した。
 - Wave 94: EBARA WAVE アリーナおおたの控室1・2の区外20料金観測を追加（`ac95468`）。
 - Wave 94では控室1・2の平日/土日休日、午前・午後1・午後2・夜間・全日を区外利用で補完。控室のみの利用不可を保持した。
-- Current local totals: candidates 230 / details 399 / prices 1664 / operations 217.
-- Overnight additions from baseline: candidates +47 / details +128 / prices +1274 / operations +115.
+- Wave 95: EBARA WAVE アリーナおおたの弓道場1区画と16料金観測を追加（`477b4d4`）。
+- Wave 95では近的28m・5人立を区画化し、弓道の個人一般/高校生以下・区内外貸切を3時間区分で分離。バスケットボール2区分、バドミントン、卓球の1人300円個人開放も現行HTMLから追加した。
+- Current local totals: candidates 230 / details 400 / prices 1680 / operations 217.
+- Overnight additions from baseline: candidates +47 / details +129 / prices +1290 / operations +115.
 
 ## Verification
 

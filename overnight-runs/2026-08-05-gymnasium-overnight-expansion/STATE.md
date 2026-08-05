@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 09:21 JST
+- Last updated: 2026-08-05 09:16 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `ac95468` (ledger-only commits may follow it)
+- Last data commit: `477b4d4` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -134,20 +134,21 @@
 | 88 | 2026-08-05 08:59 JST | EBARA WAVE アリーナおおたの区内料金深掘り | 5 details / 29 prices | audit 0 errors; generated 230/1520; duplicate IDs 0 | `b1d35a4` | サブ646㎡/固定200席、体育室2室、3分割会議室、控室を区画化。メイン全面/半面とサブの区内曜日・時間帯料金を税込で追加 |
 | 89 | 2026-08-05 09:02 JST | EBARA WAVE アリーナおおたの区外料金深掘り | 30 prices / 1 candidate precision fix | audit 0 errors; generated 230/1550; duplicate IDs 0 | `30e328f` | メイン全面/半面とサブの区外曜日・時間帯を税込で追加。区外半面平日全日の公開額が時間帯合計と不一致のため候補注意にも保持 |
 | 90 | 2026-08-05 09:03 JST | EBARA WAVE アリーナおおたの全館催事料金深掘り | 14 prices | audit 0 errors; generated 230/1564; duplicate IDs 0; lint OK; tests 3/3 | `7c9348e` | 弓道場除く全施設貸切を入場料帯・用途・曜日・区内外で分離。税込、準備後片付け込み。3波チェック合格 |
-| 91 | 2026-08-05 09:07 JST | EBARA WAVE アリーナおおたの体育室区内料金深掘り | 20 prices | audit 0 errors; generated 230/1584; duplicate price IDs 0 | `8f82d7c` | 体育室1・2の平日/土日休日、4時間帯/全日を区内利用で分離。税込、準備後片付け込み、ボール等の危険利用不可を保持 |
-| 92 | 2026-08-05 09:12 JST | EBARA WAVE アリーナおおたの会議室・控室区内料金深掘り | 30 prices | audit 0 errors; generated 230/1614; duplicate price IDs 0 | `8947709` | 会議室全室と控室1・2の平日/土日休日、4時間帯/全日を区内利用で分離。控室単独利用不可を保持 |
-| 93 | 2026-08-05 09:17 JST | EBARA WAVE アリーナおおたの体育室・会議室区外料金深掘り | 30 prices | audit 0 errors; generated 230/1644; duplicate price IDs 0; lint OK; tests 3/3 | `2f2ade4` | 体育室1・2と会議室全室の平日/土日休日、4時間帯/全日を区外利用で補完。3波チェック合格 |
-| 94 | 2026-08-05 09:21 JST | EBARA WAVE アリーナおおたの控室区外料金深掘り | 20 prices | audit 0 errors; generated 230/1664; duplicate price IDs 0 | `ac95468` | 控室1・2の平日/土日休日、4時間帯/全日を区外利用で補完。控室単独利用不可を保持 |
+| 91 | 2026-08-05 09:08 JST | EBARA WAVE アリーナおおたの体育室区内料金深掘り | 20 prices | audit 0 errors; generated 230/1584; duplicate price IDs 0 | `8f82d7c` | 体育室1・2の平日/土日休日、4時間帯/全日を区内利用で分離。税込、準備後片付け込み、ボール等の危険利用不可を保持 |
+| 92 | 2026-08-05 09:10 JST | EBARA WAVE アリーナおおたの会議室・控室区内料金深掘り | 30 prices | audit 0 errors; generated 230/1614; duplicate price IDs 0 | `8947709` | 会議室全室と控室1・2の平日/土日休日、4時間帯/全日を区内利用で分離。控室単独利用不可を保持 |
+| 93 | 2026-08-05 09:12 JST | EBARA WAVE アリーナおおたの体育室・会議室区外料金深掘り | 30 prices | audit 0 errors; generated 230/1644; duplicate price IDs 0; lint OK; tests 3/3 | `2f2ade4` | 体育室1・2と会議室全室の平日/土日休日、4時間帯/全日を区外利用で補完。3波チェック合格 |
+| 94 | 2026-08-05 09:14 JST | EBARA WAVE アリーナおおたの控室区外料金深掘り | 20 prices | audit 0 errors; generated 230/1664; duplicate price IDs 0 | `ac95468` | 控室1・2の平日/土日休日、4時間帯/全日を区外利用で補完。控室単独利用不可を保持 |
+| 95 | 2026-08-05 09:16 JST | EBARA WAVE アリーナおおたの弓道場・個人開放深掘り | 1 detail / 16 prices | audit 0 errors; generated 230/1680; duplicate IDs 0 | `477b4d4` | 近的28m・5人立を区画化。弓道個人/貸切の区内外・3区分とバスケ/バドミントン/卓球個人開放を現行HTMLから追加 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 94
+- Last verified wave: wave 95
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `ac95468` and the worktree contains only known untracked paths, then continue with EBARA WAVE アリーナおおたの個人利用料金・附帯設備 or another current official source. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
+- At the next heartbeat, confirm the current HEAD descends from data commit `477b4d4` and the worktree contains only known untracked paths, then continue with EBARA WAVE アリーナおおたの附帯設備・運用精密化 or another current official source. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
 
 ## Blockers
 
