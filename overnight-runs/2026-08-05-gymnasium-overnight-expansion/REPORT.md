@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 109完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 110完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -232,8 +232,10 @@ ACTIVE — wave 109完了。全国47都道府県・候補230件の目標を達�
 - Wave 108では259.2㎡・29種34台、トレーナー配置、シャワーを区画化し、一般/高校生/65歳以上の2時間券・超過、3種回数券、一般/高校生の3種定期券、トレーニング利用者駐車割引を分離。当日受付、年齢証明、高校生以上条件も運用観測に保持した。3波ごとのlintと表示テスト3件も合格した。
 - Wave 109: 東和薬品RACTABドームの9区画を追加し候補精度を更新（`b128351`）。
 - Wave 109ではメインアリーナの春夏プール・秋期3,504㎡競技フロア・冬期リンクを別区画化し、サブアリーナ1,540㎡・固定835席、サブプール、約400㎡トレーニング、多目的ホール、大小会議室も追加。季節構成・通常定員・椅子席のみ定員を混同せず保持した。
-- Current local totals: candidates 230 / details 419 / prices 1905 / operations 219.
-- Overnight additions from baseline: candidates +47 / details +148 / prices +1515 / operations +117.
+- Wave 110: 東和薬品RACTABドームの14料金観測・1運用観測を追加（`ae03b75`）。
+- Wave 110ではメインプール一般開放の大人/小人1回・11回券と30〜49人/50〜99人/100人以上の団体料金、トレーニングの都度・11回券・一般/学生1か月定期を分離。初回講習の事前予約、高校生相当以上、室内シューズ、トレーナー配置も運用観測に保持した。
+- Current local totals: candidates 230 / details 419 / prices 1919 / operations 220.
+- Overnight additions from baseline: candidates +47 / details +148 / prices +1529 / operations +118.
 
 ## Verification
 
