@@ -56,6 +56,8 @@ test("server-renders the venue search shell", async () => {
   );
   assert.match(html, /条件を置く/);
   assert.match(html, /同じ目盛りで見る/);
+  assert.match(html, /<header class="site-header site-rail"/);
+  assert.doesNotMatch(html, /<aside class="site-rail"/);
   assert.doesNotMatch(html, /いま載っている目盛り|class="reference-block"/);
   assert.match(html, /最低観測面積/);
   assert.match(html, /固定舞台が確認できた候補/);

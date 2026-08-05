@@ -16,7 +16,7 @@
 }
 
 html {
-  scroll-padding-top: 20px;
+  scroll-padding-top: 84px;
 }
 
 body {
@@ -45,23 +45,36 @@ body {
 }
 
 .site-shell {
-  display: grid;
-  grid-template-columns: var(--rail-width) minmax(0, 1fr);
+  display: block;
   min-height: 100vh;
 }
 
 .site-rail {
-  position: fixed;
+  position: sticky;
   z-index: 20;
-  inset: 0 auto 0 0;
-  width: var(--rail-width);
-  padding: 22px 16px 18px;
+  top: 0;
+  width: 100%;
+  min-height: 68px;
+  padding: 10px clamp(14px, 2.5vw, 36px);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-  overflow-y: auto;
-  border-right: 1px solid #d1d1cd;
+  gap: 20px;
+  overflow-x: auto;
+  border-bottom: 1px solid #d1d1cd;
   background: #f6f6f3;
+  scrollbar-width: none;
+}
+
+.site-rail::-webkit-scrollbar {
+  display: none;
+}
+
+.site-header-main {
+  min-width: max-content;
+  display: flex;
+  align-items: center;
 }
 
 .rail-brand {
@@ -99,9 +112,9 @@ body {
 }
 
 .rail-nav {
-  display: grid;
+  display: flex;
   gap: 3px;
-  margin-top: 34px;
+  margin: 0 0 0 clamp(16px, 2.5vw, 34px);
 }
 
 .rail-nav a {
@@ -122,7 +135,7 @@ body {
 
 .rail-nav a:hover {
   background: #e8e8e4;
-  transform: translateX(2px);
+  transform: translateY(-1px);
 }
 
 .rail-nav .rail-nav-primary {
@@ -157,9 +170,10 @@ body {
 }
 
 .rail-action {
+  flex: 0 0 auto;
   min-height: 48px;
-  margin-top: 4px;
-  padding: 12px;
+  margin: 0;
+  padding: 10px 13px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -169,6 +183,7 @@ body {
   font-size: 0.73rem;
   font-weight: 800;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .rail-action span {
@@ -177,7 +192,6 @@ body {
 }
 
 .site-canvas {
-  grid-column: 2;
   min-width: 0;
 }
 
@@ -614,7 +628,7 @@ body {
 .results-head {
   position: sticky;
   z-index: 5;
-  top: 8px;
+  top: 80px;
   margin: 0 0 8px;
   padding: 22px 24px 18px;
   border: 0;
@@ -1271,6 +1285,10 @@ body {
 
   .rail-brand small,
   .rail-foot {
+    display: none;
+  }
+
+  .rail-action {
     display: none;
   }
 

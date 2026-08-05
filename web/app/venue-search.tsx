@@ -985,8 +985,8 @@ export function VenueSearch() {
         検索条件へ移動
       </a>
 
-      <aside className="site-rail" aria-label="サイト案内">
-        <div>
+      <header className="site-header site-rail" aria-label="サイト案内">
+        <div className="site-header-main">
           <a className="rail-brand" href="#top" aria-label="会場ものさし ホーム">
             <span className="rail-symbol" aria-hidden="true">
               目
@@ -1021,21 +1021,11 @@ export function VenueSearch() {
           </nav>
         </div>
 
-        <div className="rail-foot">
-          <p>
-            <span>DATA EDITION</span>
-            {publication.edition}
-          </p>
-          <p>
-            <span>LATEST OBSERVATION</span>
-            {displayDate(venueData.stats.freshness.latestObservedAt)}
-          </p>
-          <a className="rail-action" href="#search">
-            候補を測りはじめる
-            <span aria-hidden="true">↘</span>
-          </a>
-        </div>
-      </aside>
+        <a className="rail-action" href="#search">
+          候補を測りはじめる
+          <span aria-hidden="true">↘</span>
+        </a>
+      </header>
 
       <div className="site-canvas">
         <header className="masthead">
