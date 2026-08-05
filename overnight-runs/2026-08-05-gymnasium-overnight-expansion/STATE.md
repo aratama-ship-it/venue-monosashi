@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 10:02 JST
+- Last updated: 2026-08-05 10:04 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `291a861` (ledger-only commits may follow it)
+- Last data commit: `3aff0a1` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -158,16 +158,17 @@
 | 112 | 2026-08-05 09:58 JST | 花巻市総合体育館のアリーナ・支援区画深掘り | 4 details / 1 candidate precision fix | audit 0 errors; generated 230/1934; duplicate IDs 0 | `9eb4f5f` | 市現行料金画像と運営団体PDFを画像照合。第2・第3アリーナ、多目的、トレーニングを区画化し掲載額一致を確認 |
 | 113 | 2026-08-05 10:00 JST | 花巻市総合体育館の第1アリーナ現行料金深掘り | 18 prices | audit 0 errors; generated 230/1952; duplicate price IDs 0 | `ea06da2` | 全面の一般/小中高校生/営利、平日/土日休日、朝/昼/夜の1時間額を市現行画像と運営団体PDFで照合 |
 | 114 | 2026-08-05 10:02 JST | 花巻市総合体育館の第2アリーナ現行料金深掘り | 18 prices | audit 0 errors; generated 230/1970; duplicate price IDs 0; lint OK; tests 3/3 | `291a861` | 全面の一般/小中高校生/営利、平日/土日休日、朝/昼/夜の1時間額を二つの公式掲載で照合。3波チェック合格 |
+| 115 | 2026-08-05 10:04 JST | 花巻市総合体育館の第3アリーナ現行料金深掘り | 18 prices | audit 0 errors; generated 230/1988; duplicate price IDs 0 | `3aff0a1` | 全面の一般/小中高校生/営利、平日/土日休日、朝/昼/夜の1時間額を二つの公式掲載で照合 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 114
+- Last verified wave: wave 115
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `291a861` and the worktree contains only known untracked paths plus the active `tmp/pdfs/hanamaki/` verification files, then continue with 花巻市総合体育館の第3アリーナ・多目的ルーム現行料金. Remove only the task-created temporary verification files after the Hanamaki waves. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
+- At the next heartbeat, confirm the current HEAD descends from data commit `3aff0a1` and the worktree contains only known untracked paths plus the active `tmp/pdfs/hanamaki/` verification files, then continue with 花巻市総合体育館の多目的ルーム・個人利用・照明空調料金. Remove only the task-created temporary verification files after the Hanamaki waves. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
 
 ## Blockers
 
