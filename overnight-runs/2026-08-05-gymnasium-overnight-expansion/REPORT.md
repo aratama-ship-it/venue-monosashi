@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 100完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 101完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -214,8 +214,10 @@ ACTIVE — wave 100完了。全国47都道府県・候補230件の目標を達�
 - Wave 99ではWave 98と同じ4用途を土日祝の午前・午後・夜間・全日で補完し、曜日差を直接比較可能にした。3波ごとのlintと表示テスト3件も合格した。
 - Wave 100: 千葉ポートアリーナの映像・音響・養生等13料金観測を追加（`127bf6c`）。
 - Wave 100ではメインの特別照明全灯/半灯・大型映像・放送、サブの冷暖房・放送、トレーニング室2放送、マイク、得点板、メイン/サブのフロアシート、移動観覧席、持込電源を基本使用料と分離した。
-- Current local totals: candidates 230 / details 406 / prices 1747 / operations 218.
-- Overnight additions from baseline: candidates +47 / details +135 / prices +1357 / operations +116.
+- Wave 101: 千葉ポートアリーナの3支援区画と19料金観測を追加（`1fb3236`）。
+- Wave 101では控室・選手控室・主催者事務室・監視室・楽屋・記者室の料金群、研修室、更衣・シャワー室を区画化し、通常/時間外料金を追加。バスケ、バレー、テニス、バドミントン、卓球、ボクシング、レスリング、フェンシング、空手、柔道畳の用具料金も分離した。
+- Current local totals: candidates 230 / details 409 / prices 1766 / operations 218.
+- Overnight additions from baseline: candidates +47 / details +138 / prices +1376 / operations +116.
 
 ## Verification
 

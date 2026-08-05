@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 09:27 JST
+- Last updated: 2026-08-05 09:29 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `127bf6c` (ledger-only commits may follow it)
+- Last data commit: `1fb3236` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -144,16 +144,17 @@
 | 98 | 2026-08-05 09:24 JST | 千葉ポートアリーナの平日催事料金深掘り | 16 prices | audit 0 errors; generated 230/1718; duplicate price IDs 0 | `2469fbf` | メイン全面の入場料徴収アマチュア、展示営利、集会催事、プロ/コンサートを平日3区分/全日で分離 |
 | 99 | 2026-08-05 09:26 JST | 千葉ポートアリーナの土日祝催事料金深掘り | 16 prices | audit 0 errors; generated 230/1734; duplicate price IDs 0; lint OK; tests 3/3 | `061f59b` | wave 98と同じ4用途を土日祝3区分/全日で補完。3波チェック合格 |
 | 100 | 2026-08-05 09:27 JST | 千葉ポートアリーナの映像・音響・養生設備深掘り | 13 prices | audit 0 errors; generated 230/1747; duplicate price IDs 0 | `127bf6c` | メイン照明/映像/放送、サブ冷暖房/放送、トレーニング2放送、得点板、フロアシート、移動席、電源等を分離 |
+| 101 | 2026-08-05 09:29 JST | 千葉ポートアリーナの支援室・競技用具深掘り | 3 details / 19 prices | audit 0 errors; generated 230/1766; duplicate IDs 0 | `1fb3236` | 控室等支援室、研修室、更衣シャワー室を区画化。時間帯/時間外料金と10種の競技用具料金を追加 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 100
+- Last verified wave: wave 101
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `127bf6c` and the worktree contains only known untracked paths, then continue with 千葉ポートアリーナの分割利用・競技用具・支援室料金. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
+- At the next heartbeat, confirm the current HEAD descends from data commit `1fb3236` and the worktree contains only known untracked paths, then continue with 千葉ポートアリーナの分割利用・舞台設備料金. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
 
 ## Blockers
 
