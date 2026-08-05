@@ -527,7 +527,7 @@ body {
 
 .field input:focus,
 .field select:focus,
-.preset-button:focus-visible,
+.venue-role-tag:focus-visible,
 .reset-button:focus-visible,
 .source-link:focus-visible,
 .rail-nav a:focus-visible,
@@ -542,21 +542,20 @@ body {
   outline-offset: 2px;
 }
 
-.preset-grid {
-  gap: 4px;
+.venue-role-tags {
+  gap: 6px;
 }
 
-.preset-button {
+.venue-role-tag {
   border-color: #c7c7c2;
-  border-radius: 4px;
   background: #f8f8f6;
 }
 
-.preset-button:hover {
+.venue-role-tag:hover {
   border-color: var(--ink);
 }
 
-.preset-button[data-active="true"] {
+.venue-role-tag[data-active="true"] {
   border-color: var(--signal);
   background: var(--signal);
   color: var(--ink);

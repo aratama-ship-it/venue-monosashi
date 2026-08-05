@@ -70,12 +70,16 @@ test("server-renders the venue search shell", async () => {
     /区分料金から組み立てた参考合計も予算検索に含める/,
   );
   assert.match(html, /アマチュアスポーツ/);
-  assert.match(html, /ディアボロ型/);
-  assert.match(html, /けん玉大会型/);
-  assert.match(html, /体育館型/);
-  assert.match(html, /小劇場型/);
+  assert.match(html, /会場の型（複数選択）/);
+  assert.match(html, /複数選択できます。選んだ型をすべて持つ会場を表示します/);
+  assert.match(html, />イベントスペース</);
+  assert.match(html, />舞台</);
+  assert.match(html, />スポーツ</);
+  assert.match(html, />会議・研修</);
+  assert.match(html, />展示</);
+  assert.match(html, />宿泊</);
+  assert.match(html, /aria-pressed="false"[^>]*class="venue-role-tag"/);
   assert.match(html, /最大収容人数/);
-  assert.match(html, /小劇場・ブラックボックス/);
   assert.match(html, /舞台公演/);
   assert.match(html, /収容が小さい順/);
   assert.match(html, /候補内最小日額/);

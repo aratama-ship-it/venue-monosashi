@@ -4,15 +4,6 @@ import { useEffect, useMemo, useState } from "react";
 import { venueData } from "./generated-data";
 import { publication } from "./publication";
 
-type Preset =
-  | "all"
-  | "jjf"
-  | "jyyf"
-  | "wyyc"
-  | "diabolo"
-  | "kendama"
-  | "gymnasium"
-  | "small_theater";
 type SortKey =
   | "evidence"
   | "price"
@@ -20,7 +11,20 @@ type SortKey =
   | "capacity_small"
   | "area"
   | "booking";
-type VenueType = "all" | "small_theater";
+type VenueRole =
+  | "event_space"
+  | "stage"
+  | "sports"
+  | "meeting"
+  | "exhibition"
+  | "lodging";
+type VenueRoleSource = {
+  category: string;
+  spaces: ReadonlyArray<{
+    type: string;
+    stageType: string;
+  }>;
+};
 type SmallTheaterLedgerItem = {
   id: string;
   indexName: string;
@@ -60,100 +64,92 @@ type PriceUse =
 const smallTheaterCsvUrl = `/data/${venueData.stats.smallTheaterCensus.assets.csv}`;
 const smallTheaterLedgerUrl = `/data/${venueData.stats.smallTheaterCensus.assets.ledger}`;
 
-const presets: Record<
-  Preset,
-  {
-    label: string;
-    capacityMin: number;
-    capacityMax: number;
-    ceiling: number;
-    venueType: VenueType;
-    priceUse: PriceUse;
-    practice: boolean;
-    description: string;
+const venueRoles: ReadonlyArray<{ id: VenueRole; label: string }> = [
+  { id: "event_space", label: "イベントスペース" },
+  { id: "stage", label: "舞台" },
+  { id: "sports", label: "スポーツ" },
+  { id: "meeting", label: "会議・研修" },
+  { id: "exhibition", label: "展示" },
+  { id: "lodging", label: "宿泊" },
+];
+
+const validVenueRoles = new Set<VenueRole>(venueRoles.map((role) => role.id));
+
+function venueRoleLabel(roleId: VenueRole) {
+  return venueRoles.find((role) => role.id === roleId)?.label ?? roleId;
+}
+
+function rolesForVenue(venue: VenueRoleSource): VenueRole[] {
+  const categoryParts = new Set(venue.category.split("_"));
+  const spaceTypes = new Set(venue.spaces.map((space) => space.type));
+  const hasCategory = (...parts: string[]) =>
+    parts.some((part) => categoryParts.has(part));
+  const hasSpace = (...types: string[]) =>
+    types.some((type) => spaceTypes.has(type));
+  const roles: VenueRole[] = [];
+
+  if (
+    hasCategory(
+      "event",
+      "convention",
+      "mice",
+      "multipurpose",
+      "flat",
+      "commercial",
+    ) ||
+    hasSpace(
+      "event_hall",
+      "event_space",
+      "convention_hall",
+      "flat_hall",
+      "multipurpose_hall",
+      "multipurpose_room",
+      "transformable_hall",
+    )
+  ) {
+    roles.push("event_space");
   }
-> = {
-  all: {
-    label: "条件なし",
-    capacityMin: 0,
-    capacityMax: 0,
-    ceiling: 0,
-    venueType: "all",
-    priceUse: "any",
-    practice: false,
-    description: "全国候補を広く見る",
-  },
-  jjf: {
-    label: "JJF型",
-    capacityMin: 650,
-    capacityMax: 0,
-    ceiling: 8,
-    venueType: "all",
-    priceUse: "any",
-    practice: false,
-    description: "練習空間＋舞台",
-  },
-  jyyf: {
-    label: "国内ヨーヨー型",
-    capacityMin: 600,
-    capacityMax: 0,
-    ceiling: 4,
-    venueType: "all",
-    priceUse: "any",
-    practice: false,
-    description: "舞台・客席・物販",
-  },
-  wyyc: {
-    label: "世界大会型",
-    capacityMin: 1000,
-    capacityMax: 0,
-    ceiling: 7,
-    venueType: "all",
-    priceUse: "any",
-    practice: false,
-    description: "配信・会議・宿泊",
-  },
-  diabolo: {
-    label: "ディアボロ型",
-    capacityMin: 300,
-    capacityMax: 0,
-    ceiling: 4,
-    venueType: "all",
-    priceUse: "any",
-    practice: false,
-    description: "AJDC・OIDC実績",
-  },
-  kendama: {
-    label: "けん玉大会型",
-    capacityMin: 100,
-    capacityMax: 0,
-    ceiling: 3,
-    venueType: "all",
-    priceUse: "any",
-    practice: false,
-    description: "KWC・全日本実績",
-  },
-  gymnasium: {
-    label: "体育館型",
-    capacityMin: 300,
-    capacityMax: 0,
-    ceiling: 7,
-    venueType: "all",
-    priceUse: "amateur_sports",
-    practice: true,
-    description: "競技面・天井・専用料金",
-  },
-  small_theater: {
-    label: "小劇場型",
-    capacityMin: 0,
-    capacityMax: 150,
-    ceiling: 0,
-    venueType: "small_theater",
-    priceUse: "performance",
-    practice: false,
-    description: "150席以下・公演料金",
-  },
-};
+  if (
+    hasCategory("stage", "theater", "culture") ||
+    hasSpace("stage", "stage_hall", "theater", "black_box") ||
+    venue.spaces.some(
+      (space) => !["none", "unknown"].includes(space.stageType),
+    )
+  ) {
+    roles.push("stage");
+  }
+  if (
+    hasCategory("sports", "arena", "competition") ||
+    hasSpace(
+      "arena",
+      "dojo",
+      "ice_rink",
+      "pool",
+      "sports_court",
+      "sports_program",
+      "training_room",
+    )
+  ) {
+    roles.push("sports");
+  }
+  if (
+    hasCategory("conference", "meetings", "learning") ||
+    hasSpace("conference", "meeting_room")
+  ) {
+    roles.push("meeting");
+  }
+  if (
+    hasCategory("exhibition", "gallery") ||
+    hasSpace("exhibition")
+  ) {
+    roles.push("exhibition");
+  }
+  if (hasCategory("lodging", "resort", "onsite")) {
+    roles.push("lodging");
+  }
+
+  return roles;
+}
 
 const yen = new Intl.NumberFormat("ja-JP");
 
@@ -248,57 +244,12 @@ const smallTheaterOfficialStatusLabels: Record<string, string> = {
   unknown: "現行性要確認",
 };
 
-const categoryWordLabels: Record<string, string> = {
-  adjacent: "隣接",
-  arena: "アリーナ",
-  business: "ビジネス",
-  commercial: "民間",
-  community: "地域",
-  complex: "複合施設",
-  conference: "会議",
-  convention: "コンベンション",
-  culture: "文化",
-  divisible: "分割可能",
-  event: "イベント",
-  exhibition: "展示",
-  flat: "平土間",
-  gallery: "ギャラリー",
-  hall: "ホール",
-  halls: "ホール",
-  integrated: "複合",
-  learning: "研修",
-  lodging: "宿泊",
-  meetings: "会議室",
-  mice: "MICE",
-  multi: "複数",
-  multipurpose: "多目的",
-  black: "ブラック",
-  box: "ボックス",
-  small: "小規模",
-  onsite: "同一敷地",
-  rehearsal: "リハーサル",
-  resort: "リゾート",
-  sports: "スポーツ",
-  stage: "舞台",
-  theater: "劇場",
-  transformable: "可変",
-  variable: "可変",
-};
-
 const largeVehicleLabels: Record<string, string> = {
   yes: "可",
   conditional: "条件付き",
   no: "不可",
   unknown: "要確認",
 };
-
-function categoryLabel(value: string) {
-  return value
-    .split("_")
-    .filter((part) => part !== "and")
-    .map((part) => categoryWordLabels[part] ?? part)
-    .join("・");
-}
 
 function matchesPriceUse(useCase: string, selected: PriceUse) {
   if (selected === "any" || useCase === "all") return true;
@@ -368,7 +319,7 @@ function numberParam(params: URLSearchParams, key: string, max: number) {
 }
 
 export function VenueSearch() {
-  const [preset, setPreset] = useState<Preset>("all");
+  const [selectedVenueRoles, setSelectedVenueRoles] = useState<VenueRole[]>([]);
   const [region, setRegion] = useState("全国");
   const [prefecture, setPrefecture] = useState("全国");
   const [keyword, setKeyword] = useState("");
@@ -376,7 +327,6 @@ export function VenueSearch() {
   const [capacityMax, setCapacityMax] = useState(0);
   const [area, setArea] = useState(0);
   const [ceiling, setCeiling] = useState(0);
-  const [venueType, setVenueType] = useState<VenueType>("all");
   const [budget, setBudget] = useState(0);
   const [priceUse, setPriceUse] = useState<PriceUse>("any");
   const [includeBudgetScenarios, setIncludeBudgetScenarios] = useState(false);
@@ -411,23 +361,34 @@ export function VenueSearch() {
   useEffect(() => {
     const frame = window.requestAnimationFrame(() => {
       const params = new URLSearchParams(window.location.search);
-      const presetParam = params.get("preset") as Preset | null;
-      const nextPreset =
-        presetParam && Object.hasOwn(presets, presetParam)
-          ? presetParam
-          : "all";
-      const basePreset = presets[nextPreset];
+      const nextVenueRoles = (params.get("roles") ?? "")
+        .split(",")
+        .filter((role): role is VenueRole =>
+          validVenueRoles.has(role as VenueRole),
+        );
+      if (
+        nextVenueRoles.length === 0 &&
+        (params.get("preset") === "small_theater" ||
+          params.get("type") === "small_theater")
+      ) {
+        nextVenueRoles.push("event_space", "stage");
+      }
+      if (
+        nextVenueRoles.length === 0 &&
+        params.get("preset") === "gymnasium"
+      ) {
+        nextVenueRoles.push("sports");
+      }
       const nextRegion = params.get("region") ?? "全国";
       const validRegions = new Set(venueData.venues.map((venue) => venue.region));
       const nextPrefecture = params.get("prefecture") ?? "全国";
       const validPrefectures = new Set(
         venueData.venues.map((venue) => venue.prefecture),
       );
-      const venueTypeParam = params.get("type") as VenueType | null;
       const priceUseParam = params.get("use") as PriceUse | null;
       const sortParam = params.get("sort") as SortKey | null;
 
-      setPreset(nextPreset);
+      setSelectedVenueRoles(nextVenueRoles);
       setRegion(
         nextRegion === "全国" || validRegions.has(nextRegion)
           ? nextRegion
@@ -439,17 +400,10 @@ export function VenueSearch() {
           : "全国",
       );
       setKeyword(params.get("q") ?? "");
-      setCapacity(numberParam(params, "min", 5000) || basePreset.capacityMin);
-      setCapacityMax(
-        numberParam(params, "max", 2000) || basePreset.capacityMax,
-      );
+      setCapacity(numberParam(params, "min", 5000));
+      setCapacityMax(numberParam(params, "max", 2000));
       setArea(numberParam(params, "area", 10000));
-      setCeiling(numberParam(params, "ceiling", 20) || basePreset.ceiling);
-      setVenueType(
-        venueTypeParam === "small_theater"
-          ? venueTypeParam
-          : basePreset.venueType,
-      );
+      setCeiling(numberParam(params, "ceiling", 20));
       setBudget(numberParam(params, "budget", 1500));
       setPriceUse(
         priceUseParam &&
@@ -462,16 +416,12 @@ export function VenueSearch() {
             "admission",
           ].includes(priceUseParam)
           ? priceUseParam
-          : basePreset.priceUse,
+          : "any",
       );
       setIncludeBudgetScenarios(params.get("scenarios") === "1");
       setParking(numberParam(params, "parking", 5000));
       setFixedStage(params.get("fixed") === "1");
-      setPractice(
-        params.has("practice")
-          ? params.get("practice") === "1"
-          : basePreset.practice,
-      );
+      setPractice(params.get("practice") === "1");
       setOperationsOnly(params.get("operations") === "1");
       setHistoricalOnly(params.get("history") === "1");
       setSameSpace(params.get("same") === "1");
@@ -763,10 +713,10 @@ export function VenueSearch() {
       })
       .filter((venue) => region === "全国" || venue.region === region)
       .filter((venue) => prefecture === "全国" || venue.prefecture === prefecture)
-      .filter(
-        (venue) =>
-          venueType === "all" || venue.category.includes("small_theater"),
-      )
+      .filter((venue) => {
+        const venueRoleSet = new Set(rolesForVenue(venue));
+        return selectedVenueRoles.every((role) => venueRoleSet.has(role));
+      })
       .filter((venue) => {
         if (!normalized) return true;
         return [
@@ -910,8 +860,8 @@ export function VenueSearch() {
     prefecture,
     region,
     sameSpace,
+    selectedVenueRoles,
     sortKey,
-    venueType,
   ]);
 
   const selectedVenues = useMemo(
@@ -926,29 +876,22 @@ export function VenueSearch() {
   useEffect(() => {
     if (!urlReady) return;
     const params = new URLSearchParams();
-    if (preset !== "all") params.set("preset", preset);
+    if (selectedVenueRoles.length) {
+      params.set("roles", selectedVenueRoles.join(","));
+    }
     if (region !== "全国") params.set("region", region);
     if (prefecture !== "全国") params.set("prefecture", prefecture);
     if (keyword.trim()) params.set("q", keyword.trim());
-    if (capacity > 0 && capacity !== presets[preset].capacityMin) {
-      params.set("min", String(capacity));
-    }
-    if (capacityMax > 0 && capacityMax !== presets[preset].capacityMax) {
-      params.set("max", String(capacityMax));
-    }
+    if (capacity > 0) params.set("min", String(capacity));
+    if (capacityMax > 0) params.set("max", String(capacityMax));
     if (area > 0) params.set("area", String(area));
-    if (ceiling > 0 && ceiling !== presets[preset].ceiling) {
-      params.set("ceiling", String(ceiling));
-    }
-    if (venueType !== presets[preset].venueType) params.set("type", venueType);
+    if (ceiling > 0) params.set("ceiling", String(ceiling));
     if (budget > 0) params.set("budget", String(budget));
-    if (priceUse !== presets[preset].priceUse) params.set("use", priceUse);
+    if (priceUse !== "any") params.set("use", priceUse);
     if (includeBudgetScenarios) params.set("scenarios", "1");
     if (parking > 0) params.set("parking", String(parking));
     if (fixedStage) params.set("fixed", "1");
-    if (practice !== presets[preset].practice) {
-      params.set("practice", practice ? "1" : "0");
-    }
+    if (practice) params.set("practice", "1");
     if (operationsOnly) params.set("operations", "1");
     if (historicalOnly) params.set("history", "1");
     if (sameSpace) params.set("same", "1");
@@ -974,15 +917,14 @@ export function VenueSearch() {
     operationsOnly,
     parking,
     practice,
-    preset,
     priceUse,
     prefecture,
     region,
     sameSpace,
+    selectedVenueRoles,
     selectedVenueIds,
     sortKey,
     urlReady,
-    venueType,
   ]);
 
   function announce(message: string) {
@@ -1020,18 +962,16 @@ export function VenueSearch() {
     setSelectedVenueIds((current) => [...current, id]);
   }
 
-  function choosePreset(next: Preset) {
-    setPreset(next);
-    setCapacity(presets[next].capacityMin);
-    setCapacityMax(presets[next].capacityMax);
-    setCeiling(presets[next].ceiling);
-    setVenueType(presets[next].venueType);
-    setPriceUse(presets[next].priceUse);
-    setPractice(presets[next].practice);
+  function toggleVenueRole(role: VenueRole) {
+    setSelectedVenueRoles((current) =>
+      current.includes(role)
+        ? current.filter((item) => item !== role)
+        : [...current, role],
+    );
   }
 
   function reset() {
-    setPreset("all");
+    setSelectedVenueRoles([]);
     setRegion("全国");
     setPrefecture("全国");
     setKeyword("");
@@ -1039,7 +979,6 @@ export function VenueSearch() {
     setCapacityMax(0);
     setArea(0);
     setCeiling(0);
-    setVenueType("all");
     setBudget(0);
     setPriceUse("any");
     setIncludeBudgetScenarios(false);
@@ -1239,38 +1178,37 @@ export function VenueSearch() {
             data-mobile-open={mobileFiltersOpen}
             id="venue-filter-body"
           >
-            <div className="field preset-field">
-              <span className="field-label">会場の型</span>
-              <div className="preset-grid">
-                {(Object.keys(presets) as Preset[]).map((key) => (
+            <div className="field venue-role-field">
+              <span className="field-label">
+                会場の型
+                <output>
+                  {selectedVenueRoles.length
+                    ? `${selectedVenueRoles.length}件選択`
+                    : "指定なし"}
+                </output>
+              </span>
+              <p className="field-help">
+                複数選択できます。選んだ型をすべて持つ会場を表示します。
+              </p>
+              <div
+                aria-label="会場の型（複数選択）"
+                className="venue-role-tags"
+                role="group"
+              >
+                {venueRoles.map((role) => (
                   <button
-                    className="preset-button"
-                    data-active={preset === key}
-                    key={key}
-                    onClick={() => choosePreset(key)}
+                    aria-pressed={selectedVenueRoles.includes(role.id)}
+                    className="venue-role-tag"
+                    data-active={selectedVenueRoles.includes(role.id)}
+                    key={role.id}
+                    onClick={() => toggleVenueRole(role.id)}
                     type="button"
                   >
-                    {presets[key].label}
-                    <br />
-                    <small>{presets[key].description}</small>
+                    {role.label}
                   </button>
                 ))}
               </div>
             </div>
-
-            <label className="field">
-              <span className="field-label">会場タイプ</span>
-              <select
-                value={venueType}
-                onChange={(event) => {
-                  setPreset("all");
-                  setVenueType(event.target.value as VenueType);
-                }}
-              >
-                <option value="all">指定なし</option>
-                <option value="small_theater">小劇場・ブラックボックス</option>
-              </select>
-            </label>
 
             <label className="field">
               <span className="field-label">地方</span>
@@ -1337,10 +1275,7 @@ export function VenueSearch() {
                 step="50"
                 type="range"
                 value={capacity}
-                onChange={(event) => {
-                  setPreset("all");
-                  setCapacity(Number(event.target.value));
-                }}
+                onChange={(event) => setCapacity(Number(event.target.value))}
               />
             </label>
 
@@ -1356,10 +1291,7 @@ export function VenueSearch() {
                 step="50"
                 type="range"
                 value={capacityMax}
-                onChange={(event) => {
-                  setPreset("all");
-                  setCapacityMax(Number(event.target.value));
-                }}
+                onChange={(event) => setCapacityMax(Number(event.target.value))}
               />
             </label>
 
@@ -1374,10 +1306,7 @@ export function VenueSearch() {
                 step="1"
                 type="range"
                 value={ceiling}
-                onChange={(event) => {
-                  setPreset("all");
-                  setCeiling(Number(event.target.value));
-                }}
+                onChange={(event) => setCeiling(Number(event.target.value))}
               />
             </label>
 
@@ -1607,9 +1536,18 @@ export function VenueSearch() {
                       <div>
                         <h3 className="venue-title">{venue.name}</h3>
                         <p className="venue-place">
-                          {venue.prefecture} {venue.city} ·{" "}
-                          {categoryLabel(venue.category)}
+                          {venue.prefecture} {venue.city}
                         </p>
+                        <ul
+                          aria-label={`${venue.name}の会場の型`}
+                          className="venue-category-tags"
+                        >
+                          {rolesForVenue(venue).map((role) => (
+                            <li className="venue-category-tag" key={role}>
+                              {venueRoleLabel(role)}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                       <div className="venue-actions">
                         <button

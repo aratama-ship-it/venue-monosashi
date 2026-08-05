@@ -280,32 +280,38 @@ a {
 
 .field input:focus,
 .field select:focus,
-.preset-button:focus-visible,
+.venue-role-tag:focus-visible,
 .reset-button:focus-visible,
 .source-link:focus-visible {
   outline: 3px solid var(--mustard);
   outline-offset: 2px;
 }
 
-.preset-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5px;
+.field-help {
+  margin: 0 0 9px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.5;
 }
 
-.preset-button {
-  min-height: 42px;
+.venue-role-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.venue-role-tag {
+  min-height: 36px;
   border: 1px solid var(--line);
-  border-radius: 0;
+  border-radius: 999px;
   background: transparent;
   color: var(--ink);
   cursor: pointer;
-  font-size: 0.72rem;
-  text-align: left;
-  padding: 8px;
+  font-size: 0.76rem;
+  padding: 7px 11px;
 }
 
-.preset-button[data-active="true"] {
+.venue-role-tag[data-active="true"] {
   border-color: var(--ink);
   background: var(--ink);
   color: var(--paper);
@@ -438,6 +444,24 @@ a {
   margin: 5px 0 0;
   color: var(--muted);
   font-size: 0.74rem;
+}
+
+.venue-category-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.venue-category-tag {
+  border: 1px solid var(--line-light);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.66rem;
+  line-height: 1;
+  padding: 5px 7px;
 }
 
 .fit-mark {
@@ -883,7 +907,7 @@ a {
     gap: 0 14px;
   }
 
-  .preset-field,
+  .venue-role-field,
   .check-field,
   .reset-button {
     grid-column: 1 / -1;
@@ -925,7 +949,7 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .preset-field,
+  .venue-role-field,
   .check-field,
   .reset-button {
     grid-column: auto;
