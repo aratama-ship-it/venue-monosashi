@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 10:55 JST
+- Last updated: 2026-08-05 10:57 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `48cc478` (ledger-only commits may follow it)
+- Last data commit: `c2be2d4` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -179,16 +179,17 @@
 | 133 | 2026-08-05 10:52 JST | トッケイセキュリティ平塚総合体育館の第2・第3体育室料金深掘り | 16 prices | audit 0 errors; generated 230/2264; duplicate price IDs 0 | `ae2c0e8` | 第2/3体育室全面の4年齢区分×市内外を追加 |
 | 134 | 2026-08-05 10:53 JST | トッケイセキュリティ平塚総合体育館の第1武道場料金深掘り | 16 prices | audit 0 errors; generated 230/2280; duplicate price IDs 0 | `220d691` | 半面/全面×4年齢区分×市内外を追加 |
 | 135 | 2026-08-05 10:55 JST | トッケイセキュリティ平塚総合体育館の第2武道場料金深掘り | 16 prices | audit 0 errors; generated 230/2296; duplicate price IDs 0; lint OK; tests 3/3 | `48cc478` | 半面/全面×4年齢区分×市内外を追加。3波チェック合格 |
+| 136 | 2026-08-05 10:57 JST | トッケイセキュリティ平塚総合体育館の弓道場料金深掘り | 16 prices | audit 0 errors; generated 230/2312; duplicate price IDs 0 | `c2be2d4` | 半面/全面×4年齢区分×市内外を追加 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 135
+- Last verified wave: wave 136
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `48cc478` and the worktree contains only the known user-owned untracked paths plus active `tmp/pdfs/hiratsuka/` verification files, then continue with 弓道場の半面/全面料金と附属設備. 完了後に平塚の検証用一時ファイルだけを削除する。
+- At the next heartbeat, confirm the current HEAD descends from data commit `c2be2d4` and the worktree contains only the known user-owned untracked paths plus active `tmp/pdfs/hiratsuka/` verification files, then continue with 会議室・放送・記録・可動席・照明・プール料金. 完了後に平塚の検証用一時ファイルだけを削除する。
 
 ## Blockers
 

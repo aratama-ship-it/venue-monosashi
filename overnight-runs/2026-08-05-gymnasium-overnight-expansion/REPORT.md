@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 135完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 136完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -284,8 +284,10 @@ ACTIVE — wave 135完了。全国47都道府県・候補230件の目標を達�
 - Wave 134では第1武道場の半面/全面、一般・大学生・高校生・中学生以下、市内外を補完。市外2倍、営利/入場料倍率、H31.3更新表と2026年更新ページからの現行リンク関係を保持した。
 - Wave 135: トッケイセキュリティ平塚総合体育館の第2武道場16料金観測を追加（`48cc478`）。
 - Wave 135では第2武道場の半面/全面、一般・大学生・高校生・中学生以下、市内外を補完。市外2倍、営利/入場料倍率、H31.3更新表と2026年更新ページからの現行リンク関係を保持し、3波ごとのlintと表示テスト3件も合格した。
-- Current local totals: candidates 230 / details 454 / prices 2296 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +183 / prices +1906 / operations +120.
+- Wave 136: トッケイセキュリティ平塚総合体育館の弓道場16料金観測を追加（`c2be2d4`）。
+- Wave 136では弓道場の半面/全面、一般・大学生・高校生・中学生以下、市内外を補完。市外2倍、営利/入場料倍率、H31.3更新表と2026年更新ページからの現行リンク関係を保持した。
+- Current local totals: candidates 230 / details 454 / prices 2312 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +183 / prices +1922 / operations +120.
 
 ## Verification
 
