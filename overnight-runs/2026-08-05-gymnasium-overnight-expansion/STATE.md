@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 09:26 JST
+- Last updated: 2026-08-05 09:27 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `061f59b` (ledger-only commits may follow it)
+- Last data commit: `127bf6c` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -143,16 +143,17 @@
 | 97 | 2026-08-05 09:22 JST | 千葉ポートアリーナのサブ・トレーニング区画深掘り | 3 details / 20 prices | audit 0 errors; generated 230/1702; duplicate IDs 0 | `3b625d0` | サブ769.6㎡・可動140席、トレーニング2 116㎡、休止中体力測定134.4㎡を区画化。サブ専用/個人とトレーニング2専用/個人料金を追加 |
 | 98 | 2026-08-05 09:24 JST | 千葉ポートアリーナの平日催事料金深掘り | 16 prices | audit 0 errors; generated 230/1718; duplicate price IDs 0 | `2469fbf` | メイン全面の入場料徴収アマチュア、展示営利、集会催事、プロ/コンサートを平日3区分/全日で分離 |
 | 99 | 2026-08-05 09:26 JST | 千葉ポートアリーナの土日祝催事料金深掘り | 16 prices | audit 0 errors; generated 230/1734; duplicate price IDs 0; lint OK; tests 3/3 | `061f59b` | wave 98と同じ4用途を土日祝3区分/全日で補完。3波チェック合格 |
+| 100 | 2026-08-05 09:27 JST | 千葉ポートアリーナの映像・音響・養生設備深掘り | 13 prices | audit 0 errors; generated 230/1747; duplicate price IDs 0 | `127bf6c` | メイン照明/映像/放送、サブ冷暖房/放送、トレーニング2放送、得点板、フロアシート、移動席、電源等を分離 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 99
+- Last verified wave: wave 100
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `061f59b` and the worktree contains only known untracked paths, then continue with 千葉ポートアリーナの附帯設備・分割利用料金. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
+- At the next heartbeat, confirm the current HEAD descends from data commit `127bf6c` and the worktree contains only known untracked paths, then continue with 千葉ポートアリーナの分割利用・競技用具・支援室料金. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
 
 ## Blockers
 
