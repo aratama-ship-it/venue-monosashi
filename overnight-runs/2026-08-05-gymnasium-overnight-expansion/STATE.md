@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 09:53 JST
+- Last updated: 2026-08-05 09:58 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `e7a957b` (ledger-only commits may follow it)
+- Last data commit: `9eb4f5f` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -155,16 +155,17 @@
 | 109 | 2026-08-05 09:49 JST | 東和薬品RACTABドームの季節構成・支援区画深掘り | 9 details / 1 candidate precision fix | audit 0 errors; generated 230/1905; duplicate IDs 0 | `b128351` | メインのプール・秋期フロア・冬期リンク、サブ/サブプール、トレーニング、多目的・大小会議室を季節・用途別に分離 |
 | 110 | 2026-08-05 09:51 JST | 東和薬品RACTABドームのプール・トレーニング個人料金深掘り | 14 prices / 1 operation | audit 0 errors; generated 230/1919; duplicate IDs 0 | `ae03b75` | プールの年齢別1回/11回券・団体段階料金と、トレーニングの都度/回数/定期券、初回講習・年齢条件を分離 |
 | 111 | 2026-08-05 09:53 JST | 東和薬品RACTABドームの卓球台開放・冬期スケート料金深掘り | 1 detail / 15 prices / 2 operations | audit 0 errors; generated 230/1934; duplicate IDs 0; lint OK; tests 3/3 | `e7a957b` | 卓球の時間帯別年齢料金、スケートの個人/団体段階/観覧料金を追加。卓球の物理区画は推定せず要確認で保持 |
+| 112 | 2026-08-05 09:58 JST | 花巻市総合体育館のアリーナ・支援区画深掘り | 4 details / 1 candidate precision fix | audit 0 errors; generated 230/1934; duplicate IDs 0 | `9eb4f5f` | 市現行料金画像と運営団体PDFを画像照合。第2・第3アリーナ、多目的、トレーニングを区画化し掲載額一致を確認 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 111
+- Last verified wave: wave 112
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `e7a957b` and the worktree contains only known untracked paths, then continue with current primary-source spaces/prices/operations from the remaining incomplete candidates. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
+- At the next heartbeat, confirm the current HEAD descends from data commit `9eb4f5f` and the worktree contains only known untracked paths plus the active `tmp/pdfs/hanamaki/` verification files, then continue with 花巻市総合体育館のアリーナ現行料金. Remove only the task-created temporary verification files after the Hanamaki waves. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
 
 ## Blockers
 

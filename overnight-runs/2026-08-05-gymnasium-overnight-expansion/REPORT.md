@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 111完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 112完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -236,8 +236,10 @@ ACTIVE — wave 111完了。全国47都道府県・候補230件の目標を達�
 - Wave 110ではメインプール一般開放の大人/小人1回・11回券と30〜49人/50〜99人/100人以上の団体料金、トレーニングの都度・11回券・一般/学生1か月定期を分離。初回講習の事前予約、高校生相当以上、室内シューズ、トレーナー配置も運用観測に保持した。
 - Wave 111: 東和薬品RACTABドームの1区画・15料金観測・2運用観測を追加（`e7a957b`）。
 - Wave 111では卓球台開放の大人/小人・午前/午後/連続料金と登録・予約・駐車条件、冬期スケートの個人・3段階団体・観覧料金と安全条件を分離。監査で卓球の物理区画未特定を検出したため、サブアリーナ等へ推定せず「実施区画要確認」として保持した。3波ごとのlintと表示テスト3件も合格した。
-- Current local totals: candidates 230 / details 420 / prices 1934 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +149 / prices +1544 / operations +120.
+- Wave 112: 花巻市総合体育館の4区画を追加し候補精度を更新（`9eb4f5f`）。
+- Wave 112では市公式現行料金ページの画像と運営団体の料金PDF2ページを全ページ画像照合し、掲載額の一致を確認。第2アリーナ714㎡・約80席、第3アリーナ1,675.8㎡・固定1,970席＋車いす12席、多目的ルーム、トレーニングルームを区画化した。料金の施行日は表示されないため候補注意に保持した。
+- Current local totals: candidates 230 / details 424 / prices 1934 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +153 / prices +1544 / operations +120.
 
 ## Verification
 
