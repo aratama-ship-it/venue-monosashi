@@ -5,7 +5,7 @@
 - Status: ACTIVE
 - Last updated: 2026-08-05 10:27 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `6e5d55b` (ledger-only commits may follow it)
+- Last data commit: `f1301f0` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -167,16 +167,17 @@
 | 121 | 2026-08-05 10:18 JST | 維新大晃アリーナの分割競技・照明料金深掘り | 16 prices | audit 0 errors; generated 230/2083; duplicate price IDs 0 | `2219bcb` | 1/24卓球・1/12バド等・1/3バスケ/バレー・1/2ハンド/ドッジの一般全日8件と、分割/全面照明8件を追加 |
 | 122 | 2026-08-05 10:22 JST | 維新大晃アリーナの空調・競技器具料金深掘り | 29 prices | audit 0 errors; generated 230/2112; duplicate price IDs 0 | `f3f18d1` | アリーナ/レクチャー/入口/控室の冷暖房9件と、競技用具・得点板・養生・放送・通信等20件を追加 |
 | 123 | 2026-08-05 10:27 JST | 維新大晃アリーナのシャワー・光熱・映写料金深掘り | 1 detail / 16 prices | audit 0 errors; generated 230/2128; duplicate IDs 0; lint OK; tests 3/3 | `6e5d55b` | 受付室を区画化。温水/コインシャワー、水道、電気、給湯室、クロス、映写機/スクリーン、受付室空調を追加 |
+| 124 | 2026-08-05 10:27 JST | カメイアリーナ仙台の競技・諸室区画深掘り | 9 details | audit 0 errors; generated 230/2128; duplicate detail IDs 0 | `f1301f0` | 第2競技場、25mプール、トレーニング/体育/体力測定/軽運動、研修3室、会議、幼児体育室を区画化 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 123
+- Last verified wave: wave 124
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `6e5d55b` and the worktree contains only the known user-owned untracked paths, then select the next primary-source-rich gymnasium for section/rate/operation deepening. The Ishin verification files have been removed. Keep closure and published rates separate for every facility.
+- At the next heartbeat, confirm the current HEAD descends from data commit `f1301f0` and the worktree contains only the known user-owned untracked paths, then continue with カメイアリーナ仙台の競技場料金. Keep its 2027年3月15日までの予定休館 separate from the currently linked published rate sheet and require post-renovation revalidation.
 
 ## Blockers
 
