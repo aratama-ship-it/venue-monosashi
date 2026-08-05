@@ -326,8 +326,10 @@ ACTIVE — wave 152完了。全国47都道府県・候補230件の目標を達�
 - Wave 155では第二競技場の中学生・高校生区分について、全面/半面の午前、午後、夜間、午前午後、午後夜間、全日を補完。一般料金と混同せず独立した用途区分とし、施行日と実利用前再確認を保持した。
 - Wave 156: とくぎんトモニアリーナの会議室14料金観測を追加（`cf2d5f6`）。
 - Wave 156では第一・第二会議室それぞれの午前、午後、夜間、午前午後、午後夜間、全日、超過1時間を補完。3波ごとのlintと表示テスト3件に合格後、今回作成した確認用PDF 1件・PNG 2件だけを削除した。
-- Current local totals: candidates 230 / details 481 / prices 2672 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +210 / prices +2282 / operations +120.
+- Wave 157: 大垣市総合体育館の8区画を追加し、候補・運用の現行精度を更新（`ef1d703`）。
+- Wave 157では第2・第3体育館、第1〜3会議室、研修室、トレーニング室、庭球場を現行指定管理者ページから区画化。駐車約270台を運用へ反映し、従来の2019料金表前提を、現行ページが2024表記PDFを案内している事実へ修正した。料金額はPDF画像確認前のためまだ追加していない。
+- Current local totals: candidates 230 / details 489 / prices 2672 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +218 / prices +2282 / operations +120.
 
 ## Verification
 

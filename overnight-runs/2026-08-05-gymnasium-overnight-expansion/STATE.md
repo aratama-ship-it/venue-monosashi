@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 11:42 JST
+- Last updated: 2026-08-05 11:52 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `cf2d5f6` (ledger-only commits may follow it)
+- Last data commit: `ef1d703` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -200,16 +200,17 @@
 | 154 | 2026-08-05 11:40 JST | とくぎんトモニアリーナ第二競技場一般料金深掘り | 12 prices | audit 0 errors; generated 230/2646; duplicate price IDs 0 | `8678564` | 現行ページが案内する料金PDF全2ページを画像照合し、全面/半面の6時間区分を追加 |
 | 155 | 2026-08-05 11:41 JST | とくぎんトモニアリーナ第二競技場中高料金深掘り | 12 prices | audit 0 errors; generated 230/2658; duplicate price IDs 0 | `ada0635` | 中・高の全面/半面を午前/午後/夜間/午前午後/午後夜間/全日で追加 |
 | 156 | 2026-08-05 11:42 JST | とくぎんトモニアリーナ会議室料金深掘り | 14 prices | audit 0 errors; generated 230/2672; duplicate IDs 0; lint OK; tests 3/3 | `cf2d5f6` | 第一/第二会議室の6時間区分と超過料金を追加。確認用PDF/PNGを削除 |
+| 157 | 2026-08-05 11:52 JST | 大垣市総合体育館の支援区画・駐車精度深掘り | 8 details / 1 candidate and 1 operation precision fix | audit 0 errors; generated 230/2672; duplicate IDs 0 | `ef1d703` | 第2/3体育館、会議3室、研修、トレーニング、庭球場を区画化。現行ページの約270台と2024料金PDFリンクを反映 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 156
+- Last verified wave: wave 157
 - No data edits are in progress. Wave 154で作成した徳島の確認用PDF 1件・PNG 2件はfull checks後に削除済み。
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `cf2d5f6` and the worktree contains only the known user-owned untracked paths, then recompute low-coverage candidates and select the next current primary-source-rich arena. Wave 159で次のfull checksを行う。
+- At the next heartbeat, confirm the current HEAD descends from data commit `ef1d703`, download and visually verify every page of the 2024-named Ogaki fee PDF currently linked by the operator page, then add only clearly supported rates in wave 158. Wave 159で次のfull checksと作業用PDF/PNG cleanupを行う。
 
 ## Blockers
 
