@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 11:27 JST
+- Last updated: 2026-08-05 11:29 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `06e761b` (ledger-only commits may follow it)
+- Last data commit: `0ba80e4` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -192,16 +192,17 @@
 | 146 | 2026-08-05 11:21 JST | 相好アリーナ四日市の競技器具・客席・舞台料金深掘り | 19 prices | audit 0 errors; generated 230/2527; duplicate price IDs 0 | `fcd312f` | 競技器具9種、タイマー/カウンター、シート、移動席、ステージ、アンプ、机椅子、電源を課金単位と設置可能数付きで追加 |
 | 147 | 2026-08-05 11:23 JST | 相好アリーナ四日市の支援区画設備料金深掘り | 46 prices | audit 0 errors; generated 230/2573; duplicate price IDs 0; lint OK; tests 3/3 | `d15dc75` | 多目的室1/2、弓道場、トレーニング、大小会議室へ空調・音響・映像・器具・家具・電源を区画別に追加 |
 | 148 | 2026-08-05 11:27 JST | 高岡市竹平記念体育館の支援区画・個人料金深掘り | 4 details / 6 prices / 1 candidate and 1 operation URL precision fix | audit 0 errors; generated 230/2579; duplicate IDs 0 | `06e761b` | 現行公式ページ移転を反映。PDF3ページを画像照合し、トレーニング/多目的/会議/附属設備を区画化、個人・占用料金を追加 |
+| 149 | 2026-08-05 11:29 JST | 高岡市竹平記念体育館のアマチュア分割料金深掘り | 11 prices | audit 0 errors; generated 230/2590; duplicate price IDs 0 | `0ba80e4` | 入場料なしの全面/2/3/1/3を午前/午後/夜間/全日で補完。既存全面全日1件は重複せず保持 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 148
+- Last verified wave: wave 149
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `06e761b` and the worktree contains only the known user-owned untracked paths plus active `tmp/pdfs/takaoka/` verification files, then add the R1.10.1 PDF's amateur-sports/no-admission morning, afternoon, evening, and full-day split rates. Preserve the current-page/old-effective-date distinction and keep temp files until wave 150 full checks.
+- At the next heartbeat, confirm the current HEAD descends from data commit `0ba80e4` and the worktree contains only the known user-owned untracked paths plus active `tmp/pdfs/takaoka/` verification files, then add standard-hours/hour-outside split rates and attached equipment rates. Wave 150でfull checksを行い、Takaoka verification temp filesだけを削除する。
 
 ## Blockers
 
