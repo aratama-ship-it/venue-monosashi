@@ -1131,31 +1131,6 @@ export function VenueSearch() {
 
         <div className="measure" aria-hidden="true" />
 
-        <section className="freshness-strip" aria-label="データの鮮度と公開状態">
-          <div>
-            <span>LAST OBSERVED</span>
-            <strong>{displayDate(venueData.stats.freshness.latestObservedAt)}</strong>
-            <small>収録一次情報の最終観測日</small>
-          </div>
-          <div>
-            <span>VENUE OBSERVATIONS</span>
-            <strong>{yen.format(venueData.stats.freshness.venueObservationCount)}</strong>
-            <small>区画・料金・運用・参考額の観測</small>
-          </div>
-          <div>
-            <span>SMALL THEATER DATES</span>
-            <strong>
-              {yen.format(venueData.stats.freshness.smallTheaterObservationCount)}
-            </strong>
-            <small>公式確認日を記録した小劇場</small>
-          </div>
-          <div>
-            <span>PUBLIC EDITION</span>
-            <strong>{displayDate(publication.updatedAt)}</strong>
-            <small>サイト更新日。空き状況の保証日ではありません</small>
-          </div>
-        </section>
-
       <section className="workspace" id="search" aria-label="会場検索">
         <aside className="filters">
           <h2>条件を置く</h2>
@@ -2265,6 +2240,31 @@ export function VenueSearch() {
               現在の594件の確認台帳は、CSVとして公開しています。
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="freshness-strip" aria-label="データの鮮度と公開状態">
+        <div>
+          <span>LAST OBSERVED</span>
+          <strong>{displayDate(venueData.stats.freshness.latestObservedAt)}</strong>
+          <small>収録一次情報の最終観測日</small>
+        </div>
+        <div>
+          <span>VENUE OBSERVATIONS</span>
+          <strong>{yen.format(venueData.stats.freshness.venueObservationCount)}</strong>
+          <small>区画・料金・運用・参考額の観測</small>
+        </div>
+        <div>
+          <span>SMALL THEATER DATES</span>
+          <strong>
+            {yen.format(venueData.stats.freshness.smallTheaterObservationCount)}
+          </strong>
+          <small>公式確認日を記録した小劇場</small>
+        </div>
+        <div>
+          <span>PUBLIC EDITION</span>
+          <strong>{displayDate(publication.updatedAt)}</strong>
+          <small>サイト更新日。空き状況の保証日ではありません</small>
         </div>
       </section>
 

@@ -94,6 +94,11 @@ test("server-renders the venue search shell", async () => {
   assert.match(html, /SMALL THEATER RESEARCH LEDGER/);
   assert.match(html, /台帳を読み込んでいます/);
   assert.match(html, /データの鮮度と公開状態/);
+  const workspaceIndex = html.indexOf('aria-label="会場検索"');
+  const freshnessIndex = html.indexOf('aria-label="データの鮮度と公開状態"');
+  const footerIndex = html.indexOf('<footer class="site-footer"');
+  assert.ok(workspaceIndex >= 0 && workspaceIndex < freshnessIndex);
+  assert.ok(freshnessIndex < footerIndex);
   assert.match(html, /条件を共有/);
   assert.match(html, /比較に追加/);
   assert.match(html, new RegExp(`残り${candidateCount - 40}施設も表示`));
