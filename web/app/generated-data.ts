@@ -8,6 +8,11 @@ export const venueData = {
     "prices": 2808,
     "operations": 222,
     "budgetScenarios": 13,
+    "candidateCoverage": {
+      "area": 185,
+      "capacity": 194,
+      "ceiling": 94
+    },
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-05",
@@ -18884,7 +18889,7 @@ export const venueData = {
       "historicalEventIds": [],
       "maxCapacity": 10770,
       "maxArea": 520,
-      "maxCeiling": 10770,
+      "maxCeiling": null,
       "maxFloorLoad": null,
       "hasFixedStage": false,
       "practiceUse": "yes",
@@ -19552,7 +19557,7 @@ export const venueData = {
           "name": "メインアリーナ",
           "type": "arena",
           "area": null,
-          "ceiling": 10770,
+          "ceiling": null,
           "capacityTheater": 10770,
           "capacityFixed": 6024,
           "stageType": "conditional",

@@ -375,6 +375,11 @@ venueDetails.forEach((row, index) => {
       errors.push(`venue-details.csv:${line} invalid ${field}=${row[field]}`);
     }
   });
+  if (row.ceiling_height_m !== "" && Number(row.ceiling_height_m) > 100) {
+    errors.push(
+      `venue-details.csv:${line} implausible ceiling_height_m=${row.ceiling_height_m}`,
+    );
+  }
 });
 
 priceObservations.forEach((row, index) => {

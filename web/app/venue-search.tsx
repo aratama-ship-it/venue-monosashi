@@ -6,7 +6,6 @@ import { publication } from "./publication";
 
 type SortKey =
   | "evidence"
-  | "price"
   | "capacity"
   | "capacity_small"
   | "area"
@@ -42,14 +41,6 @@ type SmallTheaterLedgerItem = {
   verificationStatus: string;
   note: string | null;
 };
-type PriceUse =
-  | "any"
-  | "amateur_sports"
-  | "event"
-  | "performance"
-  | "no_admission_nonprofit"
-  | "admission";
-
 const smallTheaterCsvUrl = `/data/${venueData.stats.smallTheaterCensus.assets.csv}`;
 const smallTheaterLedgerUrl = `/data/${venueData.stats.smallTheaterCensus.assets.ledger}`;
 
@@ -220,31 +211,6 @@ const largeVehicleLabels: Record<string, string> = {
   unknown: "要確認",
 };
 
-function matchesPriceUse(useCase: string, selected: PriceUse) {
-  if (selected === "any" || useCase === "all") return true;
-  if (selected === "amateur_sports") return useCase === "amateur_sports";
-  if (selected === "event") {
-    return ["event", "展示場", "combined_same_purpose"].includes(useCase);
-  }
-  if (selected === "performance") return useCase === "performance";
-  if (selected === "no_admission_nonprofit") {
-    return [
-      "non_profit",
-      "non_sports_no_admission_nonprofit",
-      "no_admission_no_sales",
-      "no_admission",
-    ].includes(useCase);
-  }
-  return [
-    "non_sports_admission_nonprofit",
-    "non_sports_admission_commercial",
-    "admission_up_to_1000",
-    "admission_under_5000_or_sales",
-    "admission_over_5000",
-    "admission",
-  ].includes(useCase);
-}
-
 function priceLabel(value: number | null) {
   if (value === null) return "未観測";
   if (value >= 10_000) {
@@ -300,17 +266,11 @@ export function VenueSearch() {
   const [capacity, setCapacity] = useState(0);
   const [capacityMax, setCapacityMax] = useState(0);
   const [area, setArea] = useState(0);
-  const [ceiling, setCeiling] = useState(0);
-  const [budget, setBudget] = useState(0);
-  const [priceUse, setPriceUse] = useState<PriceUse>("any");
-  const [includeBudgetScenarios, setIncludeBudgetScenarios] = useState(false);
-  const [parking, setParking] = useState(0);
   const [fixedStage, setFixedStage] = useState(false);
   const [practice, setPractice] = useState(false);
-  const [operationsOnly, setOperationsOnly] = useState(false);
+  const [largeVehicleOnly, setLargeVehicleOnly] = useState(false);
   const [historicalOnly, setHistoricalOnly] = useState(false);
-  const [sameSpace, setSameSpace] = useState(false);
-  const [keepUnknown, setKeepUnknown] = useState(true);
+  const [keepUnknown, setKeepUnknown] = useState(false);
   const [sortKey, setSortKey] = useState<SortKey>("evidence");
   const [showAllVenues, setShowAllVenues] = useState(false);
   const [smallTheaterPrefecture, setSmallTheaterPrefecture] = useState("全国");
@@ -381,43 +341,23 @@ export function VenueSearch() {
           ),
         );
       }
-      const priceUseParam = params.get("use") as PriceUse | null;
       const sortParam = params.get("sort") as SortKey | null;
 
       setSelectedVenueRoles(nextVenueRoles);
       setSelectedPrefectures(Array.from(new Set(nextPrefectures)));
       setKeyword(params.get("q") ?? "");
       setCapacity(numberParam(params, "min", 5000));
-      setCapacityMax(numberParam(params, "max", 2000));
+      setCapacityMax(numberParam(params, "max", 20000));
       setArea(numberParam(params, "area", 10000));
-      setCeiling(numberParam(params, "ceiling", 20));
-      setBudget(numberParam(params, "budget", 1500));
-      setPriceUse(
-        priceUseParam &&
-          [
-            "any",
-            "amateur_sports",
-            "event",
-            "performance",
-            "no_admission_nonprofit",
-            "admission",
-          ].includes(priceUseParam)
-          ? priceUseParam
-          : "any",
-      );
-      setIncludeBudgetScenarios(params.get("scenarios") === "1");
-      setParking(numberParam(params, "parking", 5000));
       setFixedStage(params.get("fixed") === "1");
       setPractice(params.get("practice") === "1");
-      setOperationsOnly(params.get("operations") === "1");
+      setLargeVehicleOnly(params.get("loading") === "1");
       setHistoricalOnly(params.get("history") === "1");
-      setSameSpace(params.get("same") === "1");
-      setKeepUnknown(params.get("unknown") !== "0");
+      setKeepUnknown(params.get("unknown") === "1");
       setSortKey(
         sortParam &&
           [
             "evidence",
-            "price",
             "capacity",
             "capacity_small",
             "area",
@@ -576,7 +516,6 @@ export function VenueSearch() {
           capacity > 0 ||
           capacityMax > 0 ||
           area > 0 ||
-          ceiling > 0 ||
           fixedStage ||
           practice;
         const matchingSpaces = venue.spaces.filter((space) => {
@@ -605,14 +544,6 @@ export function VenueSearch() {
           if (area > 0 && space.area !== null && space.area < area) return false;
           if (area > 0 && space.area === null && !keepUnknown) return false;
           if (
-            ceiling > 0 &&
-            space.ceiling !== null &&
-            space.ceiling < ceiling
-          ) {
-            return false;
-          }
-          if (ceiling > 0 && space.ceiling === null && !keepUnknown) return false;
-          if (
             fixedStage &&
             space.stageType !== "fixed" &&
             !(keepUnknown && space.stageType === "unknown")
@@ -636,10 +567,7 @@ export function VenueSearch() {
               price.category === "facility" &&
               price.unit === "per_day" &&
               !price.useCase.includes("setup") &&
-              matchesPriceUse(price.useCase, priceUse) &&
-              (!sameSpace ||
-                !hasSpaceCondition ||
-                matchingSpaceIds.has(price.spaceId)),
+              (!hasSpaceCondition || matchingSpaceIds.has(price.spaceId)),
           )
           .map((price) => ({
             amount: price.amount,
@@ -651,35 +579,12 @@ export function VenueSearch() {
             ): price is { amount: number; kind: "official_daily" } =>
               price.amount !== null,
           );
-        const compatibleBudgetScenarios = includeBudgetScenarios
-          ? venue.budgetScenarios
-              .filter(
-                (scenario) =>
-                  matchesPriceUse(scenario.useCase, priceUse) &&
-                  (!sameSpace ||
-                    !hasSpaceCondition ||
-                    matchingSpaceIds.has(scenario.spaceId)),
-              )
-              .map((scenario) => ({
-                amount: scenario.amount,
-                kind: "derived_scenario" as const,
-              }))
-              .filter(
-                (
-                  scenario,
-                ): scenario is {
-                  amount: number;
-                  kind: "derived_scenario";
-                } => scenario.amount !== null,
-              )
-          : [];
-        const compatiblePrices = [
-          ...compatibleDailyPrices,
-          ...compatibleBudgetScenarios,
-        ].sort((a, b) => a.amount - b.amount);
+        const compatiblePrices = compatibleDailyPrices.sort(
+          (a, b) => a.amount - b.amount,
+        );
         return {
           ...venue,
-          sameSpaceKnownMatch:
+          spaceKnownMatch:
             !hasSpaceCondition ||
             matchingSpaces.length > 0 ||
             (venue.spaces.length === 0 && keepUnknown),
@@ -712,77 +617,18 @@ export function VenueSearch() {
           .toLocaleLowerCase("ja");
         return searchTerms.every((term) => searchableText.includes(term));
       })
+      .filter((venue) => venue.spaceKnownMatch)
       .filter((venue) => {
-        if (sameSpace) return venue.sameSpaceKnownMatch;
-        if (capacity <= 0) return true;
-        if (venue.maxCapacity === null) return keepUnknown;
-        return venue.maxCapacity >= capacity;
-      })
-      .filter((venue) => {
-        if (sameSpace || capacityMax <= 0) return true;
-        if (venue.spaces.length === 0) return keepUnknown;
-        return venue.spaces.some((space) => {
-          const observedCapacity = Math.max(
-            space.capacityTheater ?? -1,
-            space.capacityFixed ?? -1,
-          );
-          return observedCapacity < 0
-            ? keepUnknown
-            : observedCapacity <= capacityMax;
-        });
-      })
-      .filter((venue) => {
-        if (sameSpace) return true;
-        if (area <= 0) return true;
-        if (venue.maxArea === null) return keepUnknown;
-        return venue.maxArea >= area;
-      })
-      .filter((venue) => {
-        if (sameSpace) return true;
-        if (ceiling <= 0) return true;
-        if (venue.maxCeiling === null) return keepUnknown;
-        return venue.maxCeiling >= ceiling;
-      })
-      .filter((venue) => {
-        if (budget <= 0) return true;
-        if (venue.searchPrice === null) return keepUnknown;
-        return venue.searchPrice <= budget * 10_000;
-      })
-      .filter((venue) => {
-        if (parking <= 0) return true;
-        if (venue.operation?.parkingSpaces === null || !venue.operation) {
-          return keepUnknown;
-        }
-        return venue.operation.parkingSpaces >= parking;
-      })
-      .filter((venue) => {
-        if (sameSpace) return true;
-        if (!fixedStage) return true;
-        if (venue.detailCount === 0) return keepUnknown;
-        return venue.hasFixedStage;
-      })
-      .filter((venue) => {
-        if (sameSpace) return true;
-        if (!practice) return true;
-        if (venue.practiceUse === null) return keepUnknown;
-        return venue.practiceUse === "yes" || venue.practiceUse === "conditional";
-      })
-      .filter((venue) => {
-        if (!operationsOnly) return true;
-        return venue.operation !== null;
+        if (!largeVehicleOnly) return true;
+        const access = venue.operation?.largeVehicleAccess;
+        if (!access || access === "unknown") return keepUnknown;
+        return access === "yes" || access === "conditional";
       })
       .filter((venue) => {
         if (!historicalOnly) return true;
         return venue.historicalCompletedCount > 0;
       })
       .sort((a, b) => {
-        if (sortKey === "price") {
-          return (
-            (a.searchPrice ?? Number.POSITIVE_INFINITY) -
-              (b.searchPrice ?? Number.POSITIVE_INFINITY) ||
-            a.name.localeCompare(b.name, "ja")
-          );
-        }
         if (sortKey === "capacity") {
           return (
             (b.maxCapacity ?? -1) - (a.maxCapacity ?? -1) ||
@@ -825,20 +671,14 @@ export function VenueSearch() {
       });
   }, [
     area,
-    budget,
     capacity,
     capacityMax,
-    ceiling,
     fixedStage,
     historicalOnly,
-    includeBudgetScenarios,
     keepUnknown,
     keyword,
-    operationsOnly,
-    parking,
+    largeVehicleOnly,
     practice,
-    priceUse,
-    sameSpace,
     selectedPrefectures,
     selectedVenueRoles,
     sortKey,
@@ -866,17 +706,11 @@ export function VenueSearch() {
     if (capacity > 0) params.set("min", String(capacity));
     if (capacityMax > 0) params.set("max", String(capacityMax));
     if (area > 0) params.set("area", String(area));
-    if (ceiling > 0) params.set("ceiling", String(ceiling));
-    if (budget > 0) params.set("budget", String(budget));
-    if (priceUse !== "any") params.set("use", priceUse);
-    if (includeBudgetScenarios) params.set("scenarios", "1");
-    if (parking > 0) params.set("parking", String(parking));
     if (fixedStage) params.set("fixed", "1");
     if (practice) params.set("practice", "1");
-    if (operationsOnly) params.set("operations", "1");
+    if (largeVehicleOnly) params.set("loading", "1");
     if (historicalOnly) params.set("history", "1");
-    if (sameSpace) params.set("same", "1");
-    if (!keepUnknown) params.set("unknown", "0");
+    if (keepUnknown) params.set("unknown", "1");
     if (sortKey !== "evidence") params.set("sort", sortKey);
     if (selectedVenueIds.length) {
       params.set("compare", selectedVenueIds.join(","));
@@ -886,20 +720,14 @@ export function VenueSearch() {
     window.history.replaceState(null, "", nextUrl);
   }, [
     area,
-    budget,
     capacity,
     capacityMax,
-    ceiling,
     fixedStage,
     historicalOnly,
-    includeBudgetScenarios,
     keepUnknown,
     keyword,
-    operationsOnly,
-    parking,
+    largeVehicleOnly,
     practice,
-    priceUse,
-    sameSpace,
     selectedPrefectures,
     selectedVenueRoles,
     selectedVenueIds,
@@ -965,17 +793,11 @@ export function VenueSearch() {
     setCapacity(0);
     setCapacityMax(0);
     setArea(0);
-    setCeiling(0);
-    setBudget(0);
-    setPriceUse("any");
-    setIncludeBudgetScenarios(false);
-    setParking(0);
     setFixedStage(false);
     setPractice(false);
-    setOperationsOnly(false);
+    setLargeVehicleOnly(false);
     setHistoricalOnly(false);
-    setSameSpace(false);
-    setKeepUnknown(true);
+    setKeepUnknown(false);
     setSortKey("evidence");
   }
 
@@ -1179,185 +1001,159 @@ export function VenueSearch() {
               />
             </label>
 
-            <label className="field">
-              <span className="field-label">
-                最低観測面積 <output>{area ? `${area}㎡` : "指定なし"}</output>
-              </span>
-              <input
-                className="range"
-                max="10000"
-                min="0"
-                step="250"
-                type="range"
-                value={area}
-                onChange={(event) => setArea(Number(event.target.value))}
-              />
-            </label>
+            <section className="filter-section" aria-labelledby="venue-size-filter-title">
+              <div className="filter-section-head">
+                <h3 id="venue-size-filter-title">会場規模</h3>
+                <span>
+                  面積 {venueData.stats.candidateCoverage.area} / {venueData.stats.venues}会場
+                  <br />
+                  収容 {venueData.stats.candidateCoverage.capacity} / {venueData.stats.venues}会場
+                </span>
+              </div>
+              <p className="filter-section-copy">
+                公開値がある貸出区画を、面積と収容人数の両方で照合します。
+              </p>
 
-            <label className="field">
-              <span className="field-label">
-                最低収容人数 <output>{capacity || "指定なし"}</output>
-              </span>
-              <input
-                className="range"
-                max="5000"
-                min="0"
-                step="50"
-                type="range"
-                value={capacity}
-                onChange={(event) => setCapacity(Number(event.target.value))}
-              />
-            </label>
+              <label className="field compact-field">
+                <span className="field-label">必要な面積</span>
+                <span className="unit-input">
+                  <input
+                    aria-label="最低面積"
+                    inputMode="numeric"
+                    max="10000"
+                    min="0"
+                    placeholder="指定なし"
+                    step="100"
+                    type="number"
+                    value={area || ""}
+                    onChange={(event) =>
+                      setArea(Math.max(0, Number(event.target.value) || 0))
+                    }
+                  />
+                  <span>㎡以上</span>
+                </span>
+              </label>
 
-            <label className="field">
-              <span className="field-label">
-                最大収容人数{" "}
-                <output>{capacityMax || "指定なし"}</output>
-              </span>
-              <input
-                className="range"
-                max="2000"
-                min="0"
-                step="50"
-                type="range"
-                value={capacityMax}
-                onChange={(event) => setCapacityMax(Number(event.target.value))}
-              />
-            </label>
+              <fieldset className="field capacity-range">
+                <legend className="field-label">収容人数</legend>
+                <div className="capacity-range-grid">
+                  <label>
+                    <span>下限</span>
+                    <span className="unit-input">
+                      <input
+                        aria-label="収容人数の下限"
+                        inputMode="numeric"
+                        max="20000"
+                        min="0"
+                        placeholder="指定なし"
+                        step="50"
+                        type="number"
+                        value={capacity || ""}
+                        onChange={(event) => {
+                          const next = Math.max(
+                            0,
+                            Number(event.target.value) || 0,
+                          );
+                          setCapacity(next);
+                          if (capacityMax > 0 && next > capacityMax) {
+                            setCapacityMax(next);
+                          }
+                        }}
+                      />
+                      <span>人以上</span>
+                    </span>
+                  </label>
+                  <label>
+                    <span>上限</span>
+                    <span className="unit-input">
+                      <input
+                        aria-label="収容人数の上限"
+                        inputMode="numeric"
+                        max="20000"
+                        min="0"
+                        placeholder="指定なし"
+                        step="50"
+                        type="number"
+                        value={capacityMax || ""}
+                        onChange={(event) => {
+                          const next = Math.max(
+                            0,
+                            Number(event.target.value) || 0,
+                          );
+                          setCapacityMax(next);
+                          if (next > 0 && capacity > next) {
+                            setCapacity(next);
+                          }
+                        }}
+                      />
+                      <span>人以下</span>
+                    </span>
+                  </label>
+                </div>
+              </fieldset>
 
-            <label className="field">
-              <span className="field-label">
-                最低天井高 <output>{ceiling ? `${ceiling}m` : "指定なし"}</output>
-              </span>
-              <input
-                className="range"
-                max="20"
-                min="0"
-                step="1"
-                type="range"
-                value={ceiling}
-                onChange={(event) => setCeiling(Number(event.target.value))}
-              />
-            </label>
+              <p className="filter-precision-note">
+                面積・収容人数・舞台条件は、同じ貸出区画で判定します。
+              </p>
 
-            <label className="field">
-              <span className="field-label">
-                確認済み日額料の上限{" "}
-                <output>{budget ? `${budget}万円` : "指定なし"}</output>
-              </span>
-              <input
-                className="range"
-                max="1500"
-                min="0"
-                step="10"
-                type="range"
-                value={budget}
-                onChange={(event) => setBudget(Number(event.target.value))}
-              />
-            </label>
+              <label className="check-field unknown-policy">
+                <input
+                  checked={keepUnknown}
+                  onChange={(event) => setKeepUnknown(event.target.checked)}
+                  type="checkbox"
+                />
+                <span>
+                  未確認の会場も候補に残す
+                  <small>条件一致は未確認のため「要問い合わせ」と表示します。</small>
+                </span>
+              </label>
+            </section>
 
-            <label className="field">
-              <span className="field-label">料金条件の用途</span>
-              <select
-                value={priceUse}
-                onChange={(event) =>
-                  setPriceUse(event.target.value as PriceUse)
-                }
-              >
-                <option value="any">指定なし（全観測）</option>
-                <option value="amateur_sports">アマチュアスポーツ</option>
-                <option value="event">展示・イベント</option>
-                <option value="performance">舞台公演</option>
-                <option value="no_admission_nonprofit">
-                  入場料なし・非営利
-                </option>
-                <option value="admission">入場料あり</option>
-              </select>
-            </label>
+            <details className="filter-advanced">
+              <summary>
+                設備・利用条件
+                <span>4項目</span>
+              </summary>
+              <div className="filter-advanced-body">
+                <label className="check-field">
+                  <input
+                    checked={fixedStage}
+                    onChange={(event) => setFixedStage(event.target.checked)}
+                    type="checkbox"
+                  />
+                  <span>固定舞台が確認できる</span>
+                </label>
 
-            <label className="field">
-              <span className="field-label">
-                最低駐車台数 <output>{parking || "指定なし"}</output>
-              </span>
-              <input
-                className="range"
-                max="5000"
-                min="0"
-                step="100"
-                type="range"
-                value={parking}
-                onChange={(event) => setParking(Number(event.target.value))}
-              />
-            </label>
+                <label className="check-field">
+                  <input
+                    checked={practice}
+                    onChange={(event) => setPractice(event.target.checked)}
+                    type="checkbox"
+                  />
+                  <span>競技・練習利用が可能または条件付き</span>
+                </label>
 
-            <label className="check-field">
-              <input
-                checked={includeBudgetScenarios}
-                onChange={(event) =>
-                  setIncludeBudgetScenarios(event.target.checked)
-                }
-                type="checkbox"
-              />
-              <span>
-                区分料金から組み立てた参考合計も予算検索に含める
-              </span>
-            </label>
+                <label className="check-field">
+                  <input
+                    checked={largeVehicleOnly}
+                    onChange={(event) =>
+                      setLargeVehicleOnly(event.target.checked)
+                    }
+                    type="checkbox"
+                  />
+                  <span>大型車搬入が可能または条件付き</span>
+                </label>
 
-            <label className="check-field">
-              <input
-                checked={fixedStage}
-                onChange={(event) => setFixedStage(event.target.checked)}
-                type="checkbox"
-              />
-              <span>固定舞台が確認できた候補</span>
-            </label>
-
-            <label className="check-field">
-              <input
-                checked={practice}
-                onChange={(event) => setPractice(event.target.checked)}
-                type="checkbox"
-              />
-              <span>競技・練習利用が可能または条件付き</span>
-            </label>
-
-            <label className="check-field">
-              <input
-                checked={operationsOnly}
-                onChange={(event) => setOperationsOnly(event.target.checked)}
-                type="checkbox"
-              />
-              <span>予約・搬入・交通の運用観測あり</span>
-            </label>
-
-            <label className="check-field">
-              <input
-                checked={historicalOnly}
-                onChange={(event) => setHistoricalOnly(event.target.checked)}
-                type="checkbox"
-              />
-              <span>収録大会の開催実績と照合済み</span>
-            </label>
-
-            <label className="check-field">
-              <input
-                checked={sameSpace}
-                onChange={(event) => setSameSpace(event.target.checked)}
-                type="checkbox"
-              />
-              <span>面積・収容・天井・舞台を同じ貸出区画で満たす</span>
-            </label>
-
-            <label className="check-field">
-              <input
-                checked={keepUnknown}
-                onChange={(event) => setKeepUnknown(event.target.checked)}
-                type="checkbox"
-              />
-              <span>
-                数値が未確認の施設も「要問い合わせ」として候補に残す
-              </span>
-            </label>
+                <label className="check-field">
+                  <input
+                    checked={historicalOnly}
+                    onChange={(event) => setHistoricalOnly(event.target.checked)}
+                    type="checkbox"
+                  />
+                  <span>収録大会の開催実績と照合済み</span>
+                </label>
+              </div>
+            </details>
 
             <button className="reset-button" onClick={reset} type="button">
               条件をすべて外す
@@ -1379,7 +1175,6 @@ export function VenueSearch() {
                   onChange={(event) => setSortKey(event.target.value as SortKey)}
                 >
                   <option value="evidence">観測の厚さ</option>
-                  <option value="price">確認済み日額が低い順</option>
                   <option value="capacity">収容が大きい順</option>
                   <option value="capacity_small">収容が小さい順</option>
                   <option value="area">面積が大きい順</option>
@@ -1523,10 +1318,7 @@ export function VenueSearch() {
                         </span>
                       </div>
                       <div className="metric">
-                        <span className="metric-label">
-                          {sameSpace ? "同一区画の日額料" : "候補内最小日額"}
-                          {priceUse !== "any" && "・用途一致"}
-                        </span>
+                        <span className="metric-label">確認済み日額の最小値</span>
                         <span
                           className={`metric-value ${venue.searchPrice === null ? "unknown" : ""}`}
                         >
@@ -1563,7 +1355,7 @@ export function VenueSearch() {
                               : ""}
                           </span>
                         )}
-                        {!sameSpace && venue.detailCount > 1 && (
+                        {venue.detailCount > 1 && (
                           <span className="status warn">数値は別区画を含む</span>
                         )}
                         {venue.operation?.largeVehicleAccess && (
@@ -1754,7 +1546,7 @@ export function VenueSearch() {
             <div className="empty">
               <h3>この条件では候補が出ませんでした</h3>
               <p>
-                「未確認の施設も残す」をオンにするか、収容人数・天井高・予算の条件を少し広げてください。
+                「未確認の会場も候補に残す」をオンにするか、面積・収容人数の条件を少し広げてください。
               </p>
             </div>
           )}
