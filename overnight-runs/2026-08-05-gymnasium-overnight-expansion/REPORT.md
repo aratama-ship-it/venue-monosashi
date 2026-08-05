@@ -338,8 +338,10 @@ ACTIVE — wave 152完了。全国47都道府県・候補230件の目標を達�
 - Wave 161では入場料なしの全面/2分の1面について、平日・土日祝それぞれの午前、午後、夜間、全日を補完。第2体育館と同様に画像で確認した掲載額だけを構造化した。
 - Wave 162: 大垣市総合体育館の会議・研修20料金観測と和室1区画を追加（`a1c3af1`）。
 - Wave 162では第1〜3会議室、研修室、和室の午前、午後、夜間、全日料金を補完。料金表だけに掲載される和室は独立区画とし、面積・定員を推定せず保持した。3波ごとのlintと表示テスト3件も合格した。
-- Current local totals: candidates 230 / details 490 / prices 2748 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +219 / prices +2358 / operations +120.
+- Wave 163: ビッグハットの10区画を追加し、アリーナ客席内訳を精密化（`113df69`）。
+- Wave 163では固定2,900席・壁面収納2,100席・アリーナ3,000席で最大8,000人を構造化。会議室7室、昇降式ステージ、更衣室、レフェリー控室を区画化し、公式2ページ間で異なるステージ高さは不一致を明記して推定統合しなかった。
+- Current local totals: candidates 230 / details 500 / prices 2748 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +229 / prices +2358 / operations +120.
 
 ## Verification
 

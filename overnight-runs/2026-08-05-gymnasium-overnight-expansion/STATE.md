@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 11:58 JST
+- Last updated: 2026-08-05 12:01 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `a1c3af1` (ledger-only commits may follow it)
+- Last data commit: `113df69` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -206,16 +206,17 @@
 | 160 | 2026-08-05 11:56 JST | 大垣市総合体育館第2体育館料金深掘り | 16 prices | audit 0 errors; generated 230/2712; duplicate price IDs 0 | `8faee18` | 全面/半面の平日・土日祝×午前/午後/夜間/全日を追加 |
 | 161 | 2026-08-05 11:57 JST | 大垣市総合体育館第3体育館料金深掘り | 16 prices | audit 0 errors; generated 230/2728; duplicate price IDs 0 | `6832499` | 全面/半面の平日・土日祝×午前/午後/夜間/全日を追加 |
 | 162 | 2026-08-05 11:58 JST | 大垣市総合体育館会議・研修料金深掘り | 1 detail / 20 prices | audit 0 errors; generated 230/2748; duplicate IDs 0; lint OK; tests 3/3 | `a1c3af1` | 会議3室・研修室・和室の4時間区分を追加し、和室を区画化 |
+| 163 | 2026-08-05 12:01 JST | ビッグハットの客席・支援区画深掘り | 10 details / 1 candidate and 1 detail precision fix | audit 0 errors; generated 230/2748; duplicate detail IDs 0 | `113df69` | 最大8,000人内訳、会議7室、昇降式ステージ、更衣9室、レフェリー2室を現行公式ページから追加 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 162
+- Last verified wave: wave 163
 - No data edits are in progress. Wave 158で作成した大垣の確認用PDF 1件・PNG 1件はfull checks後に削除済み。
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `a1c3af1` and the worktree contains only the known user-owned untracked paths, then recompute low-coverage candidates and select the next current primary-source-rich gymnasium. Wave 165で次のfull checksを行う。
+- At the next heartbeat, confirm the current HEAD descends from data commit `113df69`, visually verify every page of the Big Hat fee PDF currently linked by the operator organizer page, and add only clear rates with the old effective-date boundary preserved. Wave 165で次のfull checksと作業用PDF/PNG cleanupを行う。
 
 ## Blockers
 
