@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 121完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 122完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -256,8 +256,10 @@ ACTIVE — wave 121完了。全国47都道府県・候補230件の目標を達�
 - Wave 120では料金徴収なし/あり、スポーツ文化/非営利催物/営利催物、平日/休日の9〜21時料金を2025年4月版公式PDFで画像照合。照明・空調・器具を基本料から分離し、2026年8月から約1年間休館で利用不可・再開後の適用要確認を全観測に保持した。3波ごとのlintと表示テスト3件も合格した。
 - Wave 121: 維新大晃アリーナの分割競技・照明16料金観測を追加（`2219bcb`）。
 - Wave 121では1/24卓球、1/12バドミントン等、1/3バスケ/バレー、1/2ハンド/ドッジの一般平日/休日9〜21時8件と、1/12・1/3・1/2・全面のLow/High/全点灯照明8件を追加。半額適用の条件は表上で不明なため派生観測を作らず、休館中利用不可も保持した。
-- Current local totals: candidates 230 / details 433 / prices 2083 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +162 / prices +1693 / operations +120.
+- Wave 122: 維新大晃アリーナの空調・競技器具29料金観測を追加（`f3f18d1`）。
+- Wave 122ではアリーナ、レクチャールーム、エントランスホール、控室の冷暖房9件と、競技用具、電光得点表示、机椅子、全面養生、特殊フロアシート、移動ステージ、放送・通信機器等20件を追加。時間、室、組、台、枚、日等の課金単位を分離し、休館中利用不可も保持した。
+- Current local totals: candidates 230 / details 433 / prices 2112 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +162 / prices +1722 / operations +120.
 
 ## Verification
 
