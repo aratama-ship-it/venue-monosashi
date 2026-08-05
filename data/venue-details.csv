@@ -399,3 +399,6 @@ DETAIL-397,CAND-196,ota-room-2,体育室2,studio,120,,,,,no,none,yes,unknown,htt
 DETAIL-398,CAND-196,ota-meeting,会議室,meeting_room,90,,120,,,yes,none,no,unknown,https://www.ota.esforta.jp/facility/,2026-08-05,verified,"指定管理者公式の現行施設ページで21m×4.3m（90㎡）、最大120名、3室分割可を確認。天井高、床荷重、通信設備は未観測"
 DETAIL-399,CAND-196,ota-dressing,控室1・2,support_room,,,,,,no,none,no,unknown,https://www.ota.esforta.jp/facility/,2026-08-05,verified,"指定管理者公式の現行施設ページでアリーナ付帯の控室2室を確認。控室のみの利用は不可。各室の面積、定員、設備、通信環境は未観測"
 DETAIL-400,CAND-196,ota-kyudo,弓道場,practice_room,,,,,,no,none,yes,unknown,https://www.ota.esforta.jp/facility/,2026-08-05,verified,"指定管理者公式の現行施設ページで近的28m・5人立、団体・個人利用可能を確認。面積、天井高、床荷重、固定席、通信設備は未観測"
+DETAIL-401,CAND-196,ota-broadcast,放送室,support_room,,,,,,no,none,no,unknown,https://www.ota.esforta.jp/facility/,2026-08-05,verified,"指定管理者公式の現行施設ページでアリーナ付帯の放送室を確認。面積、定員、機器仕様、通信設備は未観測"
+DETAIL-402,CAND-196,ota-accessible-changing,多目的更衣室,support_room,,,,,,no,none,no,unknown,https://www.ota.esforta.jp/facility/,2026-08-05,verified,"指定管理者公式の現行施設ページでアリーナ付帯の多目的更衣室を確認。面積、定員、設備仕様は未観測"
+DETAIL-403,CAND-196,ota-referee,審判員室,support_room,,,,,,no,none,no,unknown,https://www.ota.esforta.jp/facility/,2026-08-05,verified,"指定管理者公式の現行施設ページでアリーナ付帯の審判員室を確認。面積、定員、設備、通信環境は未観測"

@@ -4,15 +4,15 @@ export const venueData = {
   "stats": {
     "historical": 225,
     "venues": 230,
-    "details": 400,
-    "prices": 1680,
-    "operations": 217,
+    "details": 403,
+    "prices": 1682,
+    "operations": 218,
     "budgetScenarios": 13,
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-05",
-      "observationCount": 2897,
-      "venueObservationCount": 2310,
+      "observationCount": 2903,
+      "venueObservationCount": 2316,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -36860,9 +36860,9 @@ export const venueData = {
       "cautions": "4,012席は固定・可動席の合計で車椅子席10席は別記する。区外メイン半面・平日全日68,600円は公開時間帯額の合計と不一致のため実予約時要確認。天井高、床荷重、投擲、床養生、搬入口寸法、催事回線、仮設席、空き状況は要確認",
       "sourceUrl": "https://www.ota.esforta.jp/facility/mainarena/",
       "observedAt": "2026-08-05",
-      "detailCount": 7,
-      "priceCount": 190,
-      "operationCount": 1,
+      "detailCount": 10,
+      "priceCount": 192,
+      "operationCount": 2,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
       "historicalSeries": [],
@@ -39915,6 +39915,38 @@ export const venueData = {
           "exclusions": "貸切利用・用具・指導",
           "note": "指定管理者公式の現行HTML案内を確認。税込。高校生以上を基本対象とし、前日9時から電話予約、1人1日1区分、定員40名",
           "sourceUrl": "https://www.ota.esforta.jp/guide/"
+        },
+        {
+          "id": "PRICE-1681",
+          "spaceId": "ota-main",
+          "category": "parking",
+          "useCase": "standard_vehicle",
+          "dayType": "all",
+          "timeBand": "per_30_minutes",
+          "amount": 100,
+          "taxStatus": "not_stated",
+          "unit": "per_30_minutes",
+          "basis": "地下駐車場・普通車61台",
+          "validFrom": null,
+          "exclusions": "大型車・周辺駐車場・時間超過分",
+          "note": "指定管理者公式の現行施設ページを確認。税表記なし。公式料金100円/30分として掲載",
+          "sourceUrl": "https://www.ota.esforta.jp/facility/"
+        },
+        {
+          "id": "PRICE-1682",
+          "spaceId": "ota-main",
+          "category": "parking",
+          "useCase": "large_vehicle",
+          "dayType": "all",
+          "timeBand": "per_day",
+          "amount": 2000,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "地上大型車両用駐車場・3台",
+          "validFrom": null,
+          "exclusions": "地下駐車場・周辺駐車場・複数日利用",
+          "note": "指定管理者公式の現行施設ページを確認。税表記なし。公式料金2,000円/日として掲載",
+          "sourceUrl": "https://www.ota.esforta.jp/facility/"
         }
       ],
       "budgetScenarios": [],
@@ -40008,6 +40040,39 @@ export const venueData = {
           "capacityFixed": null,
           "stageType": "none",
           "practiceUse": "yes"
+        },
+        {
+          "id": "ota-broadcast",
+          "name": "放送室",
+          "type": "support_room",
+          "area": null,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "no"
+        },
+        {
+          "id": "ota-accessible-changing",
+          "name": "多目的更衣室",
+          "type": "support_room",
+          "area": null,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "no"
+        },
+        {
+          "id": "ota-referee",
+          "name": "審判員室",
+          "type": "support_room",
+          "area": null,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "no"
         }
       ],
       "bestSpace": {
