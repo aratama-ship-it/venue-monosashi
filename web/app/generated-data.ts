@@ -4,15 +4,15 @@ export const venueData = {
   "stats": {
     "historical": 225,
     "venues": 230,
-    "details": 481,
+    "details": 489,
     "prices": 2672,
     "operations": 222,
     "budgetScenarios": 13,
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-05",
-      "observationCount": 3975,
-      "venueObservationCount": 3388,
+      "observationCount": 3983,
+      "venueObservationCount": 3396,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -52989,11 +52989,11 @@ export const venueData = {
       "name": "大垣市総合体育館",
       "category": "arena_and_meetings",
       "fitLevel": "B",
-      "strengths": "指定管理者公式案内は第1体育館1,770.89㎡・固定観客席1,300席、テニス2面・バレー3面・バドミントン10面・ハンドボール1面・バスケット2面、第2・第3体育館と会議室3室を掲載",
-      "cautions": "公開料金表は市公式ページから現在も案内される一方で2019年10月改正版のため、改定有無を確認するまで料金観測を追加しない。天井高、床荷重、投擲、搬入寸法、催事回線、可動・仮設席、空き状況は要確認",
+      "strengths": "指定管理者公式案内は第1体育館1,770.89㎡・固定観客席1,300席、第2体育館1,049.07㎡、第3体育館540㎡、会議3室・研修室・トレーニング室215.75㎡、駐車約270台を掲載",
+      "cautions": "指定管理者の現行施設ページは2024表記の料金PDFを現在案内。施行日・改定履歴を画像確認するまで料金観測は保留する。天井高、床荷重、投擲、搬入寸法、催事回線、可動・仮設席、空き状況は要確認",
       "sourceUrl": "https://www.ogaki-tairen.jp/?page_id=611",
       "observedAt": "2026-08-05",
-      "detailCount": 1,
+      "detailCount": 9,
       "priceCount": 0,
       "operationCount": 1,
       "historicalCompletedCount": 0,
@@ -53015,13 +53015,13 @@ export const venueData = {
         "walkMinutes": null,
         "stationAccess": "大垣駅南口から名阪近鉄バスのソフトピア線で総合体育館停留所、徒歩約1〜2分",
         "airportAccess": null,
-        "parkingSpaces": null,
+        "parkingSpaces": 270,
         "largeVehicleAccess": "conditional",
         "loadingAccess": "unknown",
         "bookingOpenMonths": 1,
         "setupPolicy": "通常団体は毎月1〜9日に翌月分の抽選申込、15日21時以降に空き申込。大会・イベントは年度の調整会議で決定",
         "networkPolicy": "unknown",
-        "note": "現行駐車場図は常時利用・要申請・バス専用の区画を分けるが総台数を掲載しないため数値欄は空欄。飲食、物販、搬入、専有回線、連続利用は要確認"
+        "note": "指定管理者の現行施設ページで駐車場約270台（障がい者等駐車場2台）を確認。別掲の現行駐車場図は常時利用・要申請・バス専用区画を分ける。飲食、物販、搬入、専有回線、連続利用は要確認"
       },
       "spaces": [
         {
@@ -53032,6 +53032,94 @@ export const venueData = {
           "ceiling": null,
           "capacityTheater": 1300,
           "capacityFixed": 1300,
+          "stageType": "none",
+          "practiceUse": "yes"
+        },
+        {
+          "id": "ogaki-second",
+          "name": "第2体育館",
+          "type": "arena",
+          "area": 1049.07,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes"
+        },
+        {
+          "id": "ogaki-third",
+          "name": "第3体育館",
+          "type": "arena",
+          "area": 540,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes"
+        },
+        {
+          "id": "ogaki-meeting-1",
+          "name": "第1会議室",
+          "type": "meeting_room",
+          "area": null,
+          "ceiling": null,
+          "capacityTheater": 72,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "no"
+        },
+        {
+          "id": "ogaki-meeting-2",
+          "name": "第2会議室",
+          "type": "meeting_room",
+          "area": null,
+          "ceiling": null,
+          "capacityTheater": 20,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "no"
+        },
+        {
+          "id": "ogaki-meeting-3",
+          "name": "第3会議室",
+          "type": "meeting_room",
+          "area": null,
+          "ceiling": null,
+          "capacityTheater": 10,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "no"
+        },
+        {
+          "id": "ogaki-training",
+          "name": "トレーニング室",
+          "type": "training_room",
+          "area": 215.75,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes"
+        },
+        {
+          "id": "ogaki-training-room",
+          "name": "研修室",
+          "type": "meeting_room",
+          "area": null,
+          "ceiling": null,
+          "capacityTheater": 30,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "no"
+        },
+        {
+          "id": "ogaki-tennis",
+          "name": "庭球場",
+          "type": "sports_court",
+          "area": null,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
           "stageType": "none",
           "practiceUse": "yes"
         }
