@@ -946,6 +946,76 @@ body {
   box-shadow: var(--shadow);
 }
 
+.archive-section.archive-disclosure {
+  padding: 0;
+  overflow: hidden;
+}
+
+.archive-summary {
+  min-height: 96px;
+  padding: 22px clamp(18px, 3vw, 32px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.archive-summary::-webkit-details-marker {
+  display: none;
+}
+
+.archive-summary-heading {
+  min-width: 0;
+}
+
+.archive-summary .eyebrow {
+  margin-bottom: 7px;
+}
+
+.archive-summary-title {
+  display: block;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+  font-weight: 700;
+}
+
+.archive-summary-action {
+  flex: 0 0 auto;
+  min-width: 78px;
+  color: var(--ink);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-align: right;
+}
+
+.archive-summary-close {
+  display: none;
+}
+
+.archive-disclosure[open] .archive-summary-open {
+  display: none;
+}
+
+.archive-disclosure[open] .archive-summary-close {
+  display: inline;
+}
+
+.archive-summary:focus-visible {
+  outline: 3px solid var(--signal);
+  outline-offset: -5px;
+}
+
+.archive-disclosure-content {
+  padding: 4px clamp(18px, 3vw, 32px) clamp(24px, 3vw, 38px);
+}
+
+.archive-disclosure-intro {
+  padding-top: 8px;
+}
+
 .archive-head h2::before {
   content: "03";
   display: inline-grid;

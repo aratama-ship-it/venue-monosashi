@@ -1762,31 +1762,46 @@ export function VenueSearch() {
         </div>
       </section>
 
-      <section
-        className="archive-section"
+      <details
+        className="archive-section archive-disclosure"
         id="small-theater-ledger"
         aria-labelledby="small-theater-ledger-title"
       >
-        <div className="archive-head">
-          <div>
-            <p className="eyebrow">SMALL THEATER RESEARCH LEDGER</p>
-            <h2 id="small-theater-ledger-title">小劇場台帳から探す</h2>
+        <summary className="archive-summary">
+          <span className="archive-summary-heading">
+            <span className="eyebrow">SMALL THEATER RESEARCH LEDGER</span>
+            <span
+              aria-level={2}
+              className="archive-summary-title"
+              id="small-theater-ledger-title"
+              role="heading"
+            >
+              小劇場台帳から探す
+            </span>
+          </span>
+          <span aria-hidden="true" className="archive-summary-action">
+            <span className="archive-summary-open">開く ＋</span>
+            <span className="archive-summary-close">閉じる −</span>
+          </span>
+        </summary>
+
+        <div className="archive-disclosure-content">
+          <div className="archive-head archive-disclosure-intro">
             <p>
               594件を候補発見情報と公式確認情報に分けて検索します。客席数・面積・料金・アクセス・利用条件は、公式URLがある行だけに表示します。
               索引に載っていても、現行性や公式情報を確認できない行は、その状態のまま残します。
             </p>
+            <div className="archive-total">
+              <strong>
+                {smallTheaterLoadState === "ready"
+                  ? smallTheaterResults.length
+                  : "—"}
+              </strong>
+              <span> / {venueData.stats.smallTheaterCensus.total}件</span>
+            </div>
           </div>
-          <div className="archive-total">
-            <strong>
-              {smallTheaterLoadState === "ready"
-                ? smallTheaterResults.length
-                : "—"}
-            </strong>
-            <span> / {venueData.stats.smallTheaterCensus.total}件</span>
-          </div>
-        </div>
 
-        <div className="archive-controls">
+          <div className="archive-controls">
           <label className="field">
             <span className="field-label">索引上の都道府県</span>
             <select
@@ -1848,9 +1863,9 @@ export function VenueSearch() {
               }}
             />
           </label>
-        </div>
+          </div>
 
-        <div className="archive-table-wrap" aria-live="polite">
+          <div className="archive-table-wrap" aria-live="polite">
           <table className="archive-table">
             <thead>
               <tr>
@@ -1964,21 +1979,22 @@ export function VenueSearch() {
             smallTheaterResults.length === 0 && (
             <div className="archive-empty">一致する小劇場はありません。</div>
           )}
-        </div>
+          </div>
 
-        {smallTheaterLoadState === "ready" &&
-          smallTheaterResults.length > 40 && (
-          <button
-            className="archive-more"
-            type="button"
-            onClick={() => setShowAllSmallTheaters((current) => !current)}
-          >
-            {showAllSmallTheaters
-              ? "先頭40件に戻す"
-              : `残り${smallTheaterResults.length - 40}件も表示`}
-          </button>
-        )}
-      </section>
+          {smallTheaterLoadState === "ready" &&
+            smallTheaterResults.length > 40 && (
+            <button
+              className="archive-more"
+              type="button"
+              onClick={() => setShowAllSmallTheaters((current) => !current)}
+            >
+              {showAllSmallTheaters
+                ? "先頭40件に戻す"
+                : `残り${smallTheaterResults.length - 40}件も表示`}
+            </button>
+          )}
+        </div>
+      </details>
 
       <section className="updates-section" id="updates" aria-labelledby="updates-title">
         <div className="updates-copy">
