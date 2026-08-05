@@ -4,15 +4,15 @@ export const venueData = {
   "stats": {
     "historical": 225,
     "venues": 230,
-    "details": 425,
+    "details": 433,
     "prices": 2055,
     "operations": 222,
     "budgetScenarios": 13,
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-05",
-      "observationCount": 3302,
-      "venueObservationCount": 2715,
+      "observationCount": 3310,
+      "venueObservationCount": 2723,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -35086,11 +35086,11 @@ export const venueData = {
       "name": "維新大晃アリーナ",
       "category": "arena_and_meetings",
       "fitLevel": "A",
-      "strengths": "指定管理者公式案内はアリーナ2,294㎡・固定1,450席・可動640席、体操を含む競技利用、控室5室を掲載",
-      "cautions": "フロア内飲食は禁止。天井高、床荷重、投擲、搬入寸法、舞台・音響、催事回線、空き状況は要確認",
+      "strengths": "指定管理者公式案内はアリーナ2,294㎡・固定1,450席・可動640席、レクチャー1,147㎡・固定72席、視聴覚・図書・会議室、2025年4月版料金表を掲載",
+      "cautions": "アリーナは天井耐震工事のため2026年8月から約1年間休館。レクチャー等の利用可否、天井高、床荷重、投擲、搬入寸法、催事回線、再開時期は要確認",
       "sourceUrl": "https://www.ishin100.com/main/guide/gu-arena/",
       "observedAt": "2026-08-05",
-      "detailCount": 1,
+      "detailCount": 9,
       "priceCount": 0,
       "operationCount": 1,
       "historicalCompletedCount": 0,
@@ -35131,6 +35131,94 @@ export const venueData = {
           "capacityFixed": 1450,
           "stageType": "none",
           "practiceUse": "yes"
+        },
+        {
+          "id": "ishin-lecture",
+          "name": "レクチャールーム",
+          "type": "arena",
+          "area": 1147,
+          "ceiling": null,
+          "capacityTheater": 72,
+          "capacityFixed": 72,
+          "stageType": "none",
+          "practiceUse": "yes"
+        },
+        {
+          "id": "ishin-av",
+          "name": "視聴覚室",
+          "type": "meeting_room",
+          "area": 288,
+          "ceiling": null,
+          "capacityTheater": 156,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "no"
+        },
+        {
+          "id": "ishin-library",
+          "name": "図書室",
+          "type": "meeting_room",
+          "area": 128,
+          "ceiling": null,
+          "capacityTheater": 40,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "no"
+        },
+        {
+          "id": "ishin-meeting-1",
+          "name": "第1会議室",
+          "type": "meeting_room",
+          "area": 64,
+          "ceiling": null,
+          "capacityTheater": 30,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "no"
+        },
+        {
+          "id": "ishin-meeting-2",
+          "name": "第2会議室",
+          "type": "meeting_room",
+          "area": 40,
+          "ceiling": null,
+          "capacityTheater": 18,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "no"
+        },
+        {
+          "id": "ishin-arena-support",
+          "name": "アリーナ控室・医務室・シャワー",
+          "type": "support_room",
+          "area": null,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "no"
+        },
+        {
+          "id": "ishin-entrance",
+          "name": "エントランスホール",
+          "type": "foyer",
+          "area": null,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "no"
+        },
+        {
+          "id": "ishin-shared-equipment",
+          "name": "共用器具・レンタル用具",
+          "type": "shared_inventory",
+          "area": null,
+          "ceiling": null,
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "conditional"
         }
       ],
       "bestSpace": {
