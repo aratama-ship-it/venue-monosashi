@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 11:17 JST
+- Last updated: 2026-08-05 11:19 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `b7a8fef` (ledger-only commits may follow it)
+- Last data commit: `4e72e9e` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -188,16 +188,17 @@
 | 142 | 2026-08-05 11:13 JST | 相好アリーナ四日市の多目的室スポーツ料金深掘り | 20 prices | audit 0 errors; generated 230/2427; duplicate price IDs 0 | `028def4` | 多目的室1の3/2/1区画、多目的室2の2/1区画を午前/午後/夜間/全日で追加。スポーツ・入場料なし |
 | 143 | 2026-08-05 11:16 JST | 相好アリーナ四日市の多目的室スポーツ以外料金深掘り | 20 prices | audit 0 errors; generated 230/2447; duplicate price IDs 0 | `861f972` | 多目的室1の3/2/1区画、多目的室2の2/1区画を午前/午後/夜間/全日で追加。スポーツ以外・入場料なし |
 | 144 | 2026-08-05 11:17 JST | 相好アリーナ四日市の弓道・トレーニング・会議料金深掘り | 40 prices | audit 0 errors; generated 230/2487; duplicate price IDs 0; lint OK; tests 3/3 | `b7a8fef` | 近的/遠的の全面・半面、トレーニング全面/ウエイト、会議全区画/A/B/小を午前/午後/夜間/全日で追加 |
+| 145 | 2026-08-05 11:19 JST | 相好アリーナ四日市の照明・空調・映像音響深掘り | 21 prices | audit 0 errors; generated 230/2508; duplicate price IDs 0 | `4e72e9e` | 掲載される15照明組合せ、全面/半面空調、大型映像、拡声、温水シャワー室/人を追加。非掲載照度は推定せず保持 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 144
+- Last verified wave: wave 145
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `b7a8fef` and the worktree contains only the known user-owned untracked paths, then continue 相好アリーナ四日市 with current equipment, lighting, air-conditioning, and display-system prices.
+- At the next heartbeat, confirm the current HEAD descends from data commit `4e72e9e` and the worktree contains only the known user-owned untracked paths, then continue 相好アリーナ四日市 with arena sports equipment, score/timing, seating, stage, and furniture prices.
 
 ## Blockers
 

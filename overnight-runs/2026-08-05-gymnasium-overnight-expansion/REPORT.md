@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 144完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 145完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -302,8 +302,10 @@ ACTIVE — wave 144完了。全国47都道府県・候補230件の目標を達�
 - Wave 143では多目的室1の3区画/2区画/1区画、多目的室2の2区画/1区画について、スポーツ以外・入場料なしの午前/午後/夜間/全日料金を指定管理者の現行HTMLから補完した。
 - Wave 144: 相好アリーナ四日市の弓道・トレーニング・会議40料金観測を追加（`b7a8fef`）。
 - Wave 144では近的/遠的射場の全面・半面、トレーニングルーム全面・ウエイトエリア、大会議室全区画/A/B、小会議室を午前/午後/夜間/全日で補完し、区画別の専用利用比較を可能にした。3波ごとのlintと表示テスト3件も合格した。
-- Current local totals: candidates 230 / details 470 / prices 2487 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +199 / prices +2097 / operations +120.
+- Wave 145: 相好アリーナ四日市の照明・空調・映像音響等21料金観測を追加（`4e72e9e`）。
+- Wave 145では全面〜1/4面の料金表に掲載される15照明組合せ、全面/半面空調、大型映像、拡声、温水シャワーの室単位/人単位を追加。掲載のない照度・面積組合せはゼロと推定せず保持した。
+- Current local totals: candidates 230 / details 470 / prices 2508 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +199 / prices +2118 / operations +120.
 
 ## Verification
 
