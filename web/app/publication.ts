@@ -3,7 +3,7 @@ export const publication = {
   title: "会場ものさし｜全国のイベント会場を過去大会と予算で測る",
   description:
     "JJF・ヨーヨー・ディアボロ・けん玉の過去会場を基準に、全国のイベント会場と150席以下の小劇場を規模・天井高・予算・搬入・アクセスで比較する公開調査版。",
-  url: "https://venue-monosashi.juggler-arata.chatgpt.site/",
+  url: "https://venue.art-monosashi.com/",
   edition: "全国公開調査版 0.2",
   updatedAt: "2026-08-05",
   repositoryUrl: "https://github.com/aratama-ship-it/venue-monosashi",

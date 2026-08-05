@@ -37,12 +37,12 @@ test("server-renders the venue search shell", async () => {
   assert.match(html, /<title>会場ものさし/);
   assert.match(
     html,
-    /<link rel="canonical" href="https:\/\/venue-monosashi\.juggler-arata\.chatgpt\.site\/"/,
+    /<link rel="canonical" href="https:\/\/venue\.art-monosashi\.com\/"/,
   );
   assert.match(html, /property="og:title"/);
-  assert.match(html, /property="og:image" content="https:\/\/venue-monosashi\.juggler-arata\.chatgpt\.site\/og\.png"/);
+  assert.match(html, /property="og:image" content="https:\/\/venue\.art-monosashi\.com\/og\.png"/);
   assert.match(html, /name="twitter:card" content="summary_large_image"/);
-  assert.match(html, /rel="icon" href="https:\/\/venue-monosashi\.juggler-arata\.chatgpt\.site\/favicon\.svg"/);
+  assert.match(html, /rel="icon" href="https:\/\/venue\.art-monosashi\.com\/favicon\.svg"/);
   assert.match(html, /application\/ld\+json/);
   assert.match(html, /会場を、名前でなく/);
   assert.match(html, /条件で測る/);
@@ -134,9 +134,9 @@ test("publishes crawler routes and a share image", async () => {
     render("/sitemap.xml"),
   ]);
   assert.equal(robotsResponse.status, 200);
-  assert.match(await robotsResponse.text(), /Sitemap: https:\/\/venue-monosashi\.juggler-arata\.chatgpt\.site\/sitemap\.xml/);
+  assert.match(await robotsResponse.text(), /Sitemap: https:\/\/venue\.art-monosashi\.com\/sitemap\.xml/);
   assert.equal(sitemapResponse.status, 200);
-  assert.match(await sitemapResponse.text(), /venue-monosashi\.juggler-arata\.chatgpt\.site/);
+  assert.match(await sitemapResponse.text(), /venue\.art-monosashi\.com/);
 
   const image = await readFile(new URL("../public/og.png", import.meta.url));
   assert.ok(image.length > 20_000);
