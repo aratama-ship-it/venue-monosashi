@@ -328,8 +328,10 @@ ACTIVE — wave 152完了。全国47都道府県・候補230件の目標を達�
 - Wave 156では第一・第二会議室それぞれの午前、午後、夜間、午前午後、午後夜間、全日、超過1時間を補完。3波ごとのlintと表示テスト3件に合格後、今回作成した確認用PDF 1件・PNG 2件だけを削除した。
 - Wave 157: 大垣市総合体育館の8区画を追加し、候補・運用の現行精度を更新（`ef1d703`）。
 - Wave 157では第2・第3体育館、第1〜3会議室、研修室、トレーニング室、庭球場を現行指定管理者ページから区画化。駐車約270台を運用へ反映し、従来の2019料金表前提を、現行ページが2024表記PDFを案内している事実へ修正した。料金額はPDF画像確認前のためまだ追加していない。
-- Current local totals: candidates 230 / details 489 / prices 2672 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +218 / prices +2282 / operations +120.
+- Wave 158: 大垣市総合体育館第1体育館の平日12料金観測を追加（`fcd41c5`）。
+- Wave 158では現行指定管理者ページが案内する令和6年4月1日改正料金PDF全1ページを画像照合し、入場料なし・平日の全面/2分の1面/3分の1面を午前、午後、夜間、全日で補完。市外2倍、スポーツ興行5倍、照明・冷暖房・附属設備別料金を派生計算せず条件として保持した。
+- Current local totals: candidates 230 / details 489 / prices 2684 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +218 / prices +2294 / operations +120.
 
 ## Verification
 
