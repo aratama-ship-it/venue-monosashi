@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 11:21 JST
+- Last updated: 2026-08-05 11:23 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `fcd312f` (ledger-only commits may follow it)
+- Last data commit: `d15dc75` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -190,16 +190,17 @@
 | 144 | 2026-08-05 11:17 JST | 相好アリーナ四日市の弓道・トレーニング・会議料金深掘り | 40 prices | audit 0 errors; generated 230/2487; duplicate price IDs 0; lint OK; tests 3/3 | `b7a8fef` | 近的/遠的の全面・半面、トレーニング全面/ウエイト、会議全区画/A/B/小を午前/午後/夜間/全日で追加 |
 | 145 | 2026-08-05 11:19 JST | 相好アリーナ四日市の照明・空調・映像音響深掘り | 21 prices | audit 0 errors; generated 230/2508; duplicate price IDs 0 | `4e72e9e` | 掲載される15照明組合せ、全面/半面空調、大型映像、拡声、温水シャワー室/人を追加。非掲載照度は推定せず保持 |
 | 146 | 2026-08-05 11:21 JST | 相好アリーナ四日市の競技器具・客席・舞台料金深掘り | 19 prices | audit 0 errors; generated 230/2527; duplicate price IDs 0 | `fcd312f` | 競技器具9種、タイマー/カウンター、シート、移動席、ステージ、アンプ、机椅子、電源を課金単位と設置可能数付きで追加 |
+| 147 | 2026-08-05 11:23 JST | 相好アリーナ四日市の支援区画設備料金深掘り | 46 prices | audit 0 errors; generated 230/2573; duplicate price IDs 0; lint OK; tests 3/3 | `d15dc75` | 多目的室1/2、弓道場、トレーニング、大小会議室へ空調・音響・映像・器具・家具・電源を区画別に追加 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 146
+- Last verified wave: wave 147
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `fcd312f` and the worktree contains only the known user-owned untracked paths, then continue 相好アリーナ四日市 with multipurpose, kyudo, training, and meeting equipment prices. Wave 147でfull checksを行う。
+- At the next heartbeat, confirm the current HEAD descends from data commit `d15dc75` and the worktree contains only the known user-owned untracked paths, then recompute per-candidate detail/price/operation coverage and select the next primary-source-rich low-coverage sports facility.
 
 ## Blockers
 

@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 146完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 147完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -306,8 +306,10 @@ ACTIVE — wave 146完了。全国47都道府県・候補230件の目標を達�
 - Wave 145では全面〜1/4面の料金表に掲載される15照明組合せ、全面/半面空調、大型映像、拡声、温水シャワーの室単位/人単位を追加。掲載のない照度・面積組合せはゼロと推定せず保持した。
 - Wave 146: 相好アリーナ四日市の競技器具・客席・舞台等19料金観測を追加（`fcd312f`）。
 - Wave 146ではハンドボール、バスケット、バドミントン、ソフトバレー、バレー、卓球、体操、レスリング、空手、フロアシート、各種タイマー/カウンター、移動観覧席、ポータブルステージ/アンプ、机椅子、特殊電灯電力を分離し、公開される設置可能数と課金単位を保持した。
-- Current local totals: candidates 230 / details 470 / prices 2527 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +199 / prices +2137 / operations +120.
+- Wave 147: 相好アリーナ四日市の支援区画設備46料金観測を追加（`d15dc75`）。
+- Wave 147では多目的室1/2に空調と共通器具、弓道場に観覧席空調・音響・家具・電源、トレーニングに音響・家具・電源、大小会議室に区画別空調・大会議室限定の音響映像・共通家具電源を追加。共通料金は適用先の区画ごとに明示し、施設未特定の共用在庫へ逃がさなかった。3波ごとのlintと表示テスト3件も合格した。
+- Current local totals: candidates 230 / details 470 / prices 2573 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +199 / prices +2183 / operations +120.
 
 ## Verification
 
