@@ -1,18 +1,18 @@
 export default {
-  "bootstrapScriptContent": "import(\"/assets/index-DupnbLd6.js\")",
+  "bootstrapScriptContent": "import(\"/assets/index-DfWhMj-E.js\")",
   "clientReferenceDeps": {
     "54e7cc413194": {
       "js": [
-        "/assets/venue-search-CBBC1tP0.js",
+        "/assets/venue-search-Cr-zBhdJ.js",
         "/assets/rolldown-runtime-S-ySWqyJ.js",
         "/assets/framework-DjPHiq1u.js",
-        "/assets/index-DupnbLd6.js"
+        "/assets/index-DfWhMj-E.js"
       ],
       "css": []
     },
     "593f344dc510": {
       "js": [
-        "/assets/index-DupnbLd6.js",
+        "/assets/index-DfWhMj-E.js",
         "/assets/rolldown-runtime-S-ySWqyJ.js",
         "/assets/framework-DjPHiq1u.js"
       ],
@@ -20,16 +20,16 @@ export default {
     },
     "15c18cfaeeff": {
       "js": [
-        "/assets/layout-segment-context-BicgHfCx.js",
+        "/assets/layout-segment-context-D9ElUSSR.js",
         "/assets/rolldown-runtime-S-ySWqyJ.js",
-        "/assets/index-DupnbLd6.js",
+        "/assets/index-DfWhMj-E.js",
         "/assets/framework-DjPHiq1u.js"
       ],
       "css": []
     },
     "8c0f216c4604": {
       "js": [
-        "/assets/index-DupnbLd6.js",
+        "/assets/index-DfWhMj-E.js",
         "/assets/rolldown-runtime-S-ySWqyJ.js",
         "/assets/framework-DjPHiq1u.js"
       ],
@@ -40,7 +40,7 @@ export default {
     "app/layout.tsx": {
       "js": [],
       "css": [
-        "/assets/index-DmnHV6Ne.css"
+        "/assets/index-Cow-40oe.css"
       ]
     }
   }

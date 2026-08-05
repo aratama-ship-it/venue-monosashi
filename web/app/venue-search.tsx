@@ -1050,8 +1050,8 @@ export function VenueSearch() {
           <div className="hero-visual">
             <p className="eyebrow">EVENT VENUE FIELD GUIDE</p>
             <h1 id="hero-title">
-              会場を、名前でなく
-              <span>条件で測る。</span>
+              <span className="hero-title-primary">会場を、名前でなく</span>
+              <span className="hero-title-accent">条件で測る。</span>
             </h1>
             <div className="hero-drawing" aria-hidden="true">
               <span className="drawing-label">SPACE / COST / ACCESS</span>
