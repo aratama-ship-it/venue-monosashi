@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 11:32 JST
+- Last updated: 2026-08-05 11:33 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `e2d233e` (ledger-only commits may follow it)
+- Last data commit: `a65c58e` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -195,16 +195,17 @@
 | 149 | 2026-08-05 11:29 JST | 高岡市竹平記念体育館のアマチュア分割料金深掘り | 11 prices | audit 0 errors; generated 230/2590; duplicate price IDs 0 | `0ba80e4` | 入場料なしの全面/2/3/1/3を午前/午後/夜間/全日で補完。既存全面全日1件は重複せず保持 |
 | 150 | 2026-08-05 11:30 JST | 高岡市竹平記念体育館の時間単価・附属設備深掘り | 16 prices | audit 0 errors; generated 230/2606; duplicate price IDs 0; lint OK; tests 3/3 | `17f2f6e` | 標準時間内/時間外の分割単価、拡声、照明6系統、冷暖房2区分、電光得点表示を追加。PDF/PNG一時ファイルを削除 |
 | 151 | 2026-08-05 11:32 JST | 高岡市竹平記念体育館の入場有料料金深掘り | 10 prices | audit 0 errors; generated 230/2616; duplicate price IDs 0 | `e2d233e` | アマチュアスポーツ/スポーツ以外の入場有料・全面を午前/午後/夜間/全日/時間外で分離 |
+| 152 | 2026-08-05 11:33 JST | 高岡市竹平記念体育館のスポーツ以外分割料金深掘り | 18 prices | audit 0 errors; generated 230/2634; duplicate price IDs 0 | `a65c58e` | 入場料なしの全面/2/3/1/3を午前/午後/夜間/全日/標準時間内1時間/時間外1時間で補完 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 151
+- Last verified wave: wave 152
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `e2d233e` and the worktree contains only the known user-owned untracked paths, then finish the visually inspected Takaoka table's non-sports/no-admission split and hourly rates, preserving the R1.10.1 effective date and current-link caveat.
+- At the next heartbeat, confirm the current HEAD descends from data commit `a65c58e` and the worktree contains only the known user-owned untracked paths, then recompute low-coverage candidates and select the next current primary-source-rich arena. Wave 153でfull checksを行う。
 
 ## Blockers
 
