@@ -1128,39 +1128,6 @@ export function VenueSearch() {
               イベント会場候補を地域・面積・天井・客席・予算・搬入・アクセスで見比べます。
               150席以下の小劇場も、平土間・公演料金・利用条件から探せます。
             </p>
-            <aside className="reference-block" aria-label="収録範囲">
-              <p className="reference-title">いま載っている目盛り</p>
-              <div className="reference-grid">
-                <div className="reference-row">
-                  <strong>{venueData.stats.historical}</strong>
-                  <span>過去大会記録</span>
-                </div>
-                <div className="reference-row">
-                  <strong>{venueData.stats.venues}</strong>
-                  <span>全国候補施設</span>
-                </div>
-                <div className="reference-row">
-                  <strong>47</strong>
-                  <span>都道府県を一巡</span>
-                </div>
-                <div className="reference-row">
-                  <strong>{venueData.stats.prices}</strong>
-                  <span>条件付き料金観測</span>
-                </div>
-                <div className="reference-row">
-                  <strong>{venueData.stats.budgetScenarios}</strong>
-                  <span>区分合計の参考額</span>
-                </div>
-                <div className="reference-row">
-                  <strong>{venueData.stats.smallTheaterCensus.total}</strong>
-                  <span>
-                    <a href={smallTheaterCsvUrl}>
-                      小劇場一次情報台帳 ↓
-                    </a>
-                  </span>
-                </div>
-              </div>
-            </aside>
           </div>
         </section>
 
