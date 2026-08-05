@@ -318,8 +318,10 @@ ACTIVE — wave 152完了。全国47都道府県・候補230件の目標を達�
 - Wave 151ではアマチュアスポーツ/スポーツ以外の入場有料・全面料金を午前/午後/夜間/全日/時間外で分離。ページ跨ぎの表構造を全ページ画像照合結果に基づいて解釈し、用途を混同しないよう保持した。
 - Wave 152: 高岡市竹平記念体育館のスポーツ以外・入場料なし18料金観測を追加（`a65c58e`）。
 - Wave 152では全面/2/3面/1/3面の午前・午後・夜間・全日と、標準時間内/時間外の1時間単価を補完。これで画像照合した施設・附属設備料金表の主要軸を完了した。
-- Current local totals: candidates 230 / details 474 / prices 2634 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +203 / prices +2244 / operations +120.
+- Wave 153: とくぎんトモニアリーナの7区画を追加（`3275664`）。
+- Wave 153では指定管理者の現行施設ページから、第二競技場、第一・第二会議室、多目的ルーム、役員室、育児支援ルーム、有料貸出備品を区画化。第二競技場の最大1,000人、会議室の30/60人、多目的ルーム200㎡と冷暖房条件を記録し、未掲載の面積・設備等は推定せず保持した。3波ごとのlintと表示テスト3件も合格した。
+- Current local totals: candidates 230 / details 481 / prices 2634 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +210 / prices +2244 / operations +120.
 
 ## Verification
 
