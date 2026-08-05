@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 08:56 JST
+- Last updated: 2026-08-05 08:59 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `74627ec` (ledger-only commits may follow it)
+- Last data commit: `b1d35a4` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -131,16 +131,17 @@
 | 85 | 2026-08-05 08:52 JST | 佐世保市体育文化館の支援室・器具料金深掘り | 4 details / 25 prices | audit 0 errors; generated 230/1439; duplicate IDs 0 | `9dd4f3a` | 選手控室/ミーティング/役員/会議室を区画化し、専用付帯・市内外個別12件と体育館音響・器具13件を画像照合して追加 |
 | 86 | 2026-08-05 08:54 JST | 佐世保市体育文化館の空調料金深掘り | 18 prices | audit 0 errors; generated 230/1457; duplicate IDs 0 | `9b9d2e3` | 大体育室/観客席/小体育室/600人ホールの冷暖房・送風12件と、ミーティング/選手控室のコイン空調6件を30分・硬貨単位で追加 |
 | 87 | 2026-08-05 08:56 JST | 佐世保市体育文化館の練習照明料金深掘り | 34 prices | audit 0 errors; generated 230/1491; duplicate IDs 0; lint OK; tests 3/3 | `74627ec` | 大体育室5照度×全面/競技面/Dバンク25件、小体育室半灯/全灯/観客席9件を30分単位で追加。3波チェック合格 |
+| 88 | 2026-08-05 08:59 JST | EBARA WAVE アリーナおおたの区内料金深掘り | 5 details / 29 prices | audit 0 errors; generated 230/1520; duplicate IDs 0 | `b1d35a4` | サブ646㎡/固定200席、体育室2室、3分割会議室、控室を区画化。メイン全面/半面とサブの区内曜日・時間帯料金を税込で追加 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 87
+- Last verified wave: wave 88
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `74627ec` and the worktree contains only known untracked paths, then continue with newly verifiable arena rates. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
+- At the next heartbeat, confirm the current HEAD descends from data commit `b1d35a4` and the worktree contains only known untracked paths, then continue with EBARA WAVE アリーナおおたの区外・全館催事料金. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
 
 ## Blockers
 

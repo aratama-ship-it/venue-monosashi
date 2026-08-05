@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 87完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 88完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -188,8 +188,10 @@ ACTIVE — wave 87完了。全国47都道府県・候補230件の目標を達成
 - Wave 86では大体育室、観客席、小体育室、コミュニティセンターホールの冷房/暖房/送風を30分単位で分離し、ミーティングルームと選手控室A・Bの100円硬貨1枚あたり運転時間も別料金として記録した。
 - Wave 87: 佐世保市体育文化館の34練習照明料金観測を追加（`74627ec`）。
 - Wave 87では大体育室を600/1200/1500/300LUX・水平灯ごとに全面、バスケット、バレー、バドミントン、Dバンクへ分離。小体育室は半灯/全灯の全面・競技面と観客席を30分単位で記録した。3波ごとのlintと表示テスト3件も合格した。
-- Current local totals: candidates 230 / details 394 / prices 1491 / operations 217.
-- Overnight additions from baseline: candidates +47 / details +123 / prices +1101 / operations +115.
+- Wave 88: EBARA WAVE アリーナおおたの5区画と区内29料金観測を追加（`b1d35a4`）。
+- Wave 88ではサブアリーナ646㎡・固定200席、各120㎡の体育室1・2、90㎡・最大120人・3分割可の会議室、控室2室を区画化。メイン全面/半面とサブの平日/土日休日・4時間帯/全日を税込で分離し、準備後片付け込み条件を保持した。
+- Current local totals: candidates 230 / details 399 / prices 1520 / operations 217.
+- Overnight additions from baseline: candidates +47 / details +128 / prices +1130 / operations +115.
 
 ## Verification
 
