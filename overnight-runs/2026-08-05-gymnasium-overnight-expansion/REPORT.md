@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 89完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 90完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -192,8 +192,10 @@ ACTIVE — wave 89完了。全国47都道府県・候補230件の目標を達成
 - Wave 88ではサブアリーナ646㎡・固定200席、各120㎡の体育室1・2、90㎡・最大120人・3分割可の会議室、控室2室を区画化。メイン全面/半面とサブの平日/土日休日・4時間帯/全日を税込で分離し、準備後片付け込み条件を保持した。
 - Wave 89: EBARA WAVE アリーナおおたの区外30料金観測を追加し候補注意を精密化（`30e328f`）。
 - Wave 89ではメイン全面/半面とサブの平日/土日休日・4時間帯/全日を区外利用で補完。公式ページの区外メイン半面・平日全日68,600円は公開4時間帯の合計と一致しないため、掲載額を改変せず実予約時要確認として保持した。
-- Current local totals: candidates 230 / details 399 / prices 1550 / operations 217.
-- Overnight additions from baseline: candidates +47 / details +128 / prices +1160 / operations +115.
+- Wave 90: EBARA WAVE アリーナおおたの全館催事14料金観測を追加（`7c9348e`）。
+- Wave 90では弓道場を除く全施設貸切について、入場料1,000円以下/以上のアマチュアスポーツ、3,000円以下/以上の非スポーツ、入場料なしの区内外スポーツ/営利非スポーツを平日・土日休日で分離した。3波ごとのlintと表示テスト3件も合格した。
+- Current local totals: candidates 230 / details 399 / prices 1564 / operations 217.
+- Overnight additions from baseline: candidates +47 / details +128 / prices +1174 / operations +115.
 
 ## Verification
 
