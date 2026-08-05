@@ -528,6 +528,7 @@ body {
 .field input:focus,
 .field select:focus,
 .venue-role-tag:focus-visible,
+.prefecture-tag:focus-visible,
 .reset-button:focus-visible,
 .source-link:focus-visible,
 .rail-nav a:focus-visible,
@@ -542,20 +543,24 @@ body {
   outline-offset: 2px;
 }
 
-.venue-role-tags {
+.venue-role-tags,
+.prefecture-tags {
   gap: 6px;
 }
 
-.venue-role-tag {
+.venue-role-tag,
+.prefecture-tag {
   border-color: #c7c7c2;
   background: #f8f8f6;
 }
 
-.venue-role-tag:hover {
+.venue-role-tag:hover,
+.prefecture-tag:hover {
   border-color: var(--ink);
 }
 
-.venue-role-tag[data-active="true"] {
+.venue-role-tag[data-active="true"],
+.prefecture-tag[data-active="true"] {
   border-color: var(--signal);
   background: var(--signal);
   color: var(--ink);

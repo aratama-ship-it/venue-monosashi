@@ -87,6 +87,14 @@ test("server-renders the venue search shell", async () => {
   assert.match(html, />展示</);
   assert.match(html, />宿泊</);
   assert.match(html, /aria-pressed="false"[^>]*class="venue-role-tag"/);
+  assert.match(html, /地域（都道府県・複数選択）/);
+  assert.match(
+    html,
+    /選んだ都道府県のいずれかにある会場を表示します（OR検索）/,
+  );
+  assert.match(html, /class="prefecture-tag"[^>]*>東京都</);
+  assert.match(html, /class="prefecture-tag"[^>]*>愛知県</);
+  assert.match(html, /class="prefecture-tag"[^>]*>大阪府</);
   assert.match(html, /最大収容人数/);
   assert.match(html, /舞台公演/);
   assert.match(html, /収容が小さい順/);

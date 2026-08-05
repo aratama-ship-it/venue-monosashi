@@ -281,6 +281,7 @@ a {
 .field input:focus,
 .field select:focus,
 .venue-role-tag:focus-visible,
+.prefecture-tag:focus-visible,
 .reset-button:focus-visible,
 .source-link:focus-visible {
   outline: 3px solid var(--mustard);
@@ -294,13 +295,15 @@ a {
   line-height: 1.5;
 }
 
-.venue-role-tags {
+.venue-role-tags,
+.prefecture-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
 }
 
-.venue-role-tag {
+.venue-role-tag,
+.prefecture-tag {
   min-height: 36px;
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -311,10 +314,40 @@ a {
   padding: 7px 11px;
 }
 
-.venue-role-tag[data-active="true"] {
+.venue-role-tag[data-active="true"],
+.prefecture-tag[data-active="true"] {
   border-color: var(--ink);
   background: var(--ink);
   color: var(--paper);
+}
+
+.prefecture-all {
+  margin-bottom: 10px;
+}
+
+.prefecture-groups {
+  display: grid;
+  gap: 11px;
+}
+
+.prefecture-group {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+}
+
+.prefecture-group-label {
+  padding-top: 7px;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.prefecture-tag {
+  min-height: 30px;
+  font-size: 0.68rem;
+  padding: 5px 8px;
 }
 
 .range {
@@ -908,6 +941,7 @@ a {
   }
 
   .venue-role-field,
+  .prefecture-field,
   .check-field,
   .reset-button {
     grid-column: 1 / -1;
@@ -950,6 +984,7 @@ a {
   }
 
   .venue-role-field,
+  .prefecture-field,
   .check-field,
   .reset-button {
     grid-column: auto;

@@ -318,10 +318,15 @@ function numberParam(params: URLSearchParams, key: string, max: number) {
   return Number.isFinite(value) && value > 0 ? Math.min(value, max) : 0;
 }
 
+function regionGroupLabel(region: string) {
+  if (["甲信越", "北陸", "東海", "中部"].includes(region)) return "中部";
+  if (["九州", "沖縄", "九州・沖縄"].includes(region)) return "九州・沖縄";
+  return region;
+}
+
 export function VenueSearch() {
   const [selectedVenueRoles, setSelectedVenueRoles] = useState<VenueRole[]>([]);
-  const [region, setRegion] = useState("全国");
-  const [prefecture, setPrefecture] = useState("全国");
+  const [selectedPrefectures, setSelectedPrefectures] = useState<string[]>([]);
   const [keyword, setKeyword] = useState("");
   const [capacity, setCapacity] = useState(0);
   const [capacityMax, setCapacityMax] = useState(0);
@@ -379,26 +384,41 @@ export function VenueSearch() {
       ) {
         nextVenueRoles.push("sports");
       }
-      const nextRegion = params.get("region") ?? "全国";
-      const validRegions = new Set(venueData.venues.map((venue) => venue.region));
-      const nextPrefecture = params.get("prefecture") ?? "全国";
       const validPrefectures = new Set(
         venueData.venues.map((venue) => venue.prefecture),
       );
+      const nextPrefectures = (params.get("prefectures") ?? "")
+        .split(",")
+        .filter((prefecture) => validPrefectures.has(prefecture));
+      const legacyPrefecture = params.get("prefecture");
+      const legacyRegion = params.get("region");
+      if (
+        nextPrefectures.length === 0 &&
+        legacyPrefecture &&
+        legacyPrefecture !== "全国" &&
+        validPrefectures.has(legacyPrefecture)
+      ) {
+        nextPrefectures.push(legacyPrefecture);
+      } else if (
+        nextPrefectures.length === 0 &&
+        legacyRegion &&
+        legacyRegion !== "全国"
+      ) {
+        nextPrefectures.push(
+          ...Array.from(
+            new Set(
+              venueData.venues
+                .filter((venue) => venue.region === legacyRegion)
+                .map((venue) => venue.prefecture),
+            ),
+          ),
+        );
+      }
       const priceUseParam = params.get("use") as PriceUse | null;
       const sortParam = params.get("sort") as SortKey | null;
 
       setSelectedVenueRoles(nextVenueRoles);
-      setRegion(
-        nextRegion === "全国" || validRegions.has(nextRegion)
-          ? nextRegion
-          : "全国",
-      );
-      setPrefecture(
-        nextPrefecture === "全国" || validPrefectures.has(nextPrefecture)
-          ? nextPrefecture
-          : "全国",
-      );
+      setSelectedPrefectures(Array.from(new Set(nextPrefectures)));
       setKeyword(params.get("q") ?? "");
       setCapacity(numberParam(params, "min", 5000));
       setCapacityMax(numberParam(params, "max", 2000));
@@ -473,24 +493,32 @@ export function VenueSearch() {
     };
   }, []);
 
-  const regions = useMemo(
-    () =>
-      Array.from(new Set(venueData.venues.map((venue) => venue.region))).sort(
-        (a, b) => a.localeCompare(b, "ja"),
+  const prefectureGroups = useMemo(() => {
+    const groupOrder = [
+      "北海道",
+      "東北",
+      "関東",
+      "中部",
+      "近畿",
+      "中国",
+      "四国",
+      "九州・沖縄",
+    ];
+    const groups = new Map<string, Set<string>>();
+    venueData.venues.forEach((venue) => {
+      const group = regionGroupLabel(venue.region);
+      if (!groups.has(group)) groups.set(group, new Set());
+      groups.get(group)?.add(venue.prefecture);
+    });
+    return Array.from(groups, ([region, prefectures]) => ({
+      region,
+      prefectures: Array.from(prefectures).sort((a, b) =>
+        a.localeCompare(b, "ja"),
       ),
-    [],
-  );
-  const prefectures = useMemo(
-    () =>
-      Array.from(
-        new Set(
-          venueData.venues
-            .filter((venue) => region === "全国" || venue.region === region)
-            .map((venue) => venue.prefecture),
-        ),
-      ).sort((a, b) => a.localeCompare(b, "ja")),
-    [region],
-  );
+    })).sort(
+      (a, b) => groupOrder.indexOf(a.region) - groupOrder.indexOf(b.region),
+    );
+  }, []);
   const historicalYears = useMemo(
     () =>
       Array.from(
@@ -711,8 +739,11 @@ export function VenueSearch() {
           searchPriceKind: compatiblePrices[0]?.kind ?? null,
         };
       })
-      .filter((venue) => region === "全国" || venue.region === region)
-      .filter((venue) => prefecture === "全国" || venue.prefecture === prefecture)
+      .filter(
+        (venue) =>
+          selectedPrefectures.length === 0 ||
+          selectedPrefectures.includes(venue.prefecture),
+      )
       .filter((venue) => {
         const venueRoleSet = new Set(rolesForVenue(venue));
         return selectedVenueRoles.every((role) => venueRoleSet.has(role));
@@ -857,9 +888,8 @@ export function VenueSearch() {
     parking,
     practice,
     priceUse,
-    prefecture,
-    region,
     sameSpace,
+    selectedPrefectures,
     selectedVenueRoles,
     sortKey,
   ]);
@@ -879,8 +909,9 @@ export function VenueSearch() {
     if (selectedVenueRoles.length) {
       params.set("roles", selectedVenueRoles.join(","));
     }
-    if (region !== "全国") params.set("region", region);
-    if (prefecture !== "全国") params.set("prefecture", prefecture);
+    if (selectedPrefectures.length) {
+      params.set("prefectures", selectedPrefectures.join(","));
+    }
     if (keyword.trim()) params.set("q", keyword.trim());
     if (capacity > 0) params.set("min", String(capacity));
     if (capacityMax > 0) params.set("max", String(capacityMax));
@@ -918,9 +949,8 @@ export function VenueSearch() {
     parking,
     practice,
     priceUse,
-    prefecture,
-    region,
     sameSpace,
+    selectedPrefectures,
     selectedVenueRoles,
     selectedVenueIds,
     sortKey,
@@ -970,10 +1000,17 @@ export function VenueSearch() {
     );
   }
 
+  function togglePrefecture(prefecture: string) {
+    setSelectedPrefectures((current) =>
+      current.includes(prefecture)
+        ? current.filter((item) => item !== prefecture)
+        : [...current, prefecture],
+    );
+  }
+
   function reset() {
     setSelectedVenueRoles([]);
-    setRegion("全国");
-    setPrefecture("全国");
+    setSelectedPrefectures([]);
     setKeyword("");
     setCapacity(0);
     setCapacityMax(0);
@@ -1183,34 +1220,58 @@ export function VenueSearch() {
               </div>
             </div>
 
-            <label className="field">
-              <span className="field-label">地方</span>
-              <select
-                value={region}
-                onChange={(event) => {
-                  setRegion(event.target.value);
-                  setPrefecture("全国");
-                }}
+            <div className="field prefecture-field">
+              <span className="field-label">
+                地域
+                <output>
+                  {selectedPrefectures.length
+                    ? `${selectedPrefectures.length}件選択`
+                    : "全国"}
+                </output>
+              </span>
+              <p className="field-help">
+                複数選択できます。選んだ都道府県のいずれかにある会場を表示します（OR検索）。
+              </p>
+              <button
+                aria-pressed={selectedPrefectures.length === 0}
+                className="prefecture-tag prefecture-all"
+                data-active={selectedPrefectures.length === 0}
+                onClick={() => setSelectedPrefectures([])}
+                type="button"
               >
-                <option>全国</option>
-                {regions.map((name) => (
-                  <option key={name}>{name}</option>
-                ))}
-              </select>
-            </label>
-
-            <label className="field">
-              <span className="field-label">都道府県</span>
-              <select
-                value={prefecture}
-                onChange={(event) => setPrefecture(event.target.value)}
+                全国
+              </button>
+              <div
+                aria-label="地域（都道府県・複数選択）"
+                className="prefecture-groups"
               >
-                <option>全国</option>
-                {prefectures.map((name) => (
-                  <option key={name}>{name}</option>
+                {prefectureGroups.map((group) => (
+                  <div className="prefecture-group" key={group.region}>
+                    <span className="prefecture-group-label">
+                      {group.region}
+                    </span>
+                    <div
+                      aria-label={`${group.region}の都道府県`}
+                      className="prefecture-tags"
+                      role="group"
+                    >
+                      {group.prefectures.map((prefecture) => (
+                        <button
+                          aria-pressed={selectedPrefectures.includes(prefecture)}
+                          className="prefecture-tag"
+                          data-active={selectedPrefectures.includes(prefecture)}
+                          key={prefecture}
+                          onClick={() => togglePrefecture(prefecture)}
+                          type="button"
+                        >
+                          {prefecture}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
                 ))}
-              </select>
-            </label>
+              </div>
+            </div>
 
             <label className="field">
               <span className="field-label">キーワード</span>
