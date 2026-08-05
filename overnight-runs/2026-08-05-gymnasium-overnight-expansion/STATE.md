@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 10:14 JST
+- Last updated: 2026-08-05 10:16 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `d64a7de` (ledger-only commits may follow it)
+- Last data commit: `c2a621e` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -163,16 +163,17 @@
 | 117 | 2026-08-05 10:08 JST | 花巻市総合体育館の個人利用・照明空調料金深掘り | 19 prices | audit 0 errors; generated 230/2025; duplicate price IDs 0; lint OK; tests 3/3 | `a3e22df` | トレーニング/3アリーナ個人8件、3アリーナ照明暖冷房9件、多目的暖冷房2件を追加。倍率派生額は作らず保持 |
 | 118 | 2026-08-05 10:10 JST | 花巻市総合体育館の共用附属設備料金深掘り | 1 detail / 30 prices | audit 0 errors; generated 230/2055; duplicate IDs 0 | `694c688` | 競技用具・得点表示・放送・吊物・移動ステージ・机椅子・持込電源を一般/小中高校生で分離。採暖設備の不明瞭な単位は保留 |
 | 119 | 2026-08-05 10:14 JST | 維新大晃アリーナの支援・会議区画深掘り | 8 details / 1 candidate precision fix | audit 0 errors; generated 230/2055; duplicate IDs 0 | `d64a7de` | 2025年4月版PDF全4ページを画像照合。レクチャー、視聴覚、図書、会議2室、控室群、入口、共用器具を区画化し8月から約1年休館を明記 |
+| 120 | 2026-08-05 10:16 JST | 維新大晃アリーナの全面催事料金深掘り | 12 prices | audit 0 errors; generated 230/2067; duplicate price IDs 0; lint OK; tests 3/3 | `c2a621e` | 料金徴収有無×スポーツ文化/非営利催物/営利催物×平日/休日の9〜21時料金を追加。休館中利用不可を各観測に保持 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 119
+- Last verified wave: wave 120
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `d64a7de` and the worktree contains only known untracked paths plus active `tmp/pdfs/ishin/` verification files, then continue with 維新大晃アリーナの2025年4月版専用利用・設備料金. Remove only the task-created temporary verification files after the Ishin waves. Keep current closure separate from published rates and do not imply availability.
+- At the next heartbeat, confirm the current HEAD descends from data commit `c2a621e` and the worktree contains only known untracked paths plus active `tmp/pdfs/ishin/` verification files, then continue with 維新大晃アリーナの分割競技・照明空調・器具料金. Remove only the task-created temporary verification files after the Ishin waves. Keep current closure separate from published rates and do not imply availability.
 
 ## Blockers
 
