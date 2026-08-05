@@ -953,7 +953,7 @@ body {
 
 .archive-summary {
   min-height: 96px;
-  padding: 22px clamp(18px, 3vw, 32px);
+  padding: clamp(26px, 4vw, 48px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -975,10 +975,31 @@ body {
 }
 
 .archive-summary-title {
-  display: block;
-  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
-  font-size: clamp(1.35rem, 2.4vw, 1.9rem);
-  font-weight: 700;
+  display: flex;
+}
+
+.section-title {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: clamp(1.55rem, 2.7vw, 2.2rem);
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  line-height: 1.12;
+}
+
+.section-title-index {
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  display: inline-grid;
+  place-items: center;
+  background: var(--signal);
+  font: 800 0.66rem/1 ui-monospace, "SFMono-Regular", Menlo, monospace;
+  letter-spacing: 0;
 }
 
 .archive-summary-action {
@@ -1009,23 +1030,11 @@ body {
 }
 
 .archive-disclosure-content {
-  padding: 4px clamp(18px, 3vw, 32px) clamp(24px, 3vw, 38px);
+  padding: 4px clamp(26px, 4vw, 48px) clamp(26px, 4vw, 48px);
 }
 
 .archive-disclosure-intro {
   padding-top: 8px;
-}
-
-.archive-head h2::before {
-  content: "03";
-  display: inline-grid;
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-  place-items: center;
-  background: var(--signal);
-  font: 800 0.66rem/1 ui-monospace, "SFMono-Regular", Menlo, monospace;
-  vertical-align: 4px;
 }
 
 .archive-controls {
@@ -1054,6 +1063,7 @@ body {
 }
 
 .updates-section {
+  margin-top: 8px;
   margin-bottom: 8px;
   padding: clamp(26px, 4vw, 48px);
   display: grid;
@@ -1066,8 +1076,6 @@ body {
 
 .updates-copy h2 {
   margin: 0;
-  font-size: clamp(1.7rem, 3vw, 2.5rem);
-  letter-spacing: -0.045em;
 }
 
 .updates-copy > p:not(.eyebrow) {
@@ -1449,6 +1457,16 @@ body {
 
   .updates-section {
     padding: 24px 20px;
+  }
+
+  .archive-summary {
+    padding: 24px 20px;
+  }
+
+  .archive-disclosure-content {
+    padding-right: 20px;
+    padding-bottom: 24px;
+    padding-left: 20px;
   }
 
   .changelog li {

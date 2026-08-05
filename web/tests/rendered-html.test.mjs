@@ -96,6 +96,7 @@ test("server-renders the venue search shell", async () => {
   assert.match(html, /現在の594件の確認台帳は、CSVとして公開しています/);
   assert.match(html, /小劇場台帳から探す/);
   assert.match(html, /SMALL THEATER RESEARCH LEDGER/);
+  assert.match(html, /class="section-title-index"[^>]*>03</);
   assert.match(
     html,
     /<details class="archive-section archive-disclosure" id="small-theater-ledger"/,
@@ -105,6 +106,8 @@ test("server-renders the venue search shell", async () => {
     /<details[^>]*id="small-theater-ledger"[^>]*\sopen(?:=|\s|>)/,
   );
   assert.match(html, /台帳を読み込んでいます/);
+  assert.match(html, /class="section-title-index"[^>]*>04</);
+  assert.match(html, /更新と訂正/);
   assert.match(html, /データの鮮度と公開状態/);
   const workspaceIndex = html.indexOf('aria-label="会場検索"');
   const freshnessIndex = html.indexOf('aria-label="データの鮮度と公開状態"');

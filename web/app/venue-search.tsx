@@ -1781,11 +1781,12 @@ export function VenueSearch() {
             <span className="eyebrow">SMALL THEATER RESEARCH LEDGER</span>
             <span
               aria-level={2}
-              className="archive-summary-title"
+              className="section-title archive-summary-title"
               id="small-theater-ledger-title"
               role="heading"
             >
-              小劇場台帳から探す
+              <span aria-hidden="true" className="section-title-index">03</span>
+              <span>小劇場台帳から探す</span>
             </span>
           </span>
           <span aria-hidden="true" className="archive-summary-action">
@@ -2008,7 +2009,10 @@ export function VenueSearch() {
       <section className="updates-section" id="updates" aria-labelledby="updates-title">
         <div className="updates-copy">
           <p className="eyebrow">PUBLICATION NOTES</p>
-          <h2 id="updates-title">更新と訂正</h2>
+          <h2 className="section-title" id="updates-title">
+            <span aria-hidden="true" className="section-title-index">04</span>
+            <span>更新と訂正</span>
+          </h2>
           <p>
             公開情報は観測時点の記録です。料金改定、改称、閉館、施設条件の変更を見つけた場合は、
             その内容が確認できる公式ページと一緒に訂正候補を送れます。
