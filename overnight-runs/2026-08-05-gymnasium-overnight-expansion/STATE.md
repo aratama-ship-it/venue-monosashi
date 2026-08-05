@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 11:40 JST
+- Last updated: 2026-08-05 11:41 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `8678564` (ledger-only commits may follow it)
+- Last data commit: `ada0635` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -198,16 +198,17 @@
 | 152 | 2026-08-05 11:33 JST | 高岡市竹平記念体育館のスポーツ以外分割料金深掘り | 18 prices | audit 0 errors; generated 230/2634; duplicate price IDs 0 | `a65c58e` | 入場料なしの全面/2/3/1/3を午前/午後/夜間/全日/標準時間内1時間/時間外1時間で補完 |
 | 153 | 2026-08-05 11:37 JST | とくぎんトモニアリーナの支援区画深掘り | 7 details | audit 0 errors; generated 230/2634; duplicate IDs 0; lint OK; tests 3/3 | `3275664` | 第二競技場、会議2室、多目的、役員、育児支援、有料貸出備品を現行指定管理者ページから区画化 |
 | 154 | 2026-08-05 11:40 JST | とくぎんトモニアリーナ第二競技場一般料金深掘り | 12 prices | audit 0 errors; generated 230/2646; duplicate price IDs 0 | `8678564` | 現行ページが案内する料金PDF全2ページを画像照合し、全面/半面の6時間区分を追加 |
+| 155 | 2026-08-05 11:41 JST | とくぎんトモニアリーナ第二競技場中高料金深掘り | 12 prices | audit 0 errors; generated 230/2658; duplicate price IDs 0 | `ada0635` | 中・高の全面/半面を午前/午後/夜間/午前午後/午後夜間/全日で追加 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 154
+- Last verified wave: wave 155
 - No data edits are in progress. `tmp/pdfs/tokushima/` はwave 154で全2ページを画像照合済みの作業用PDF/PNGで、wave 156のfull checks後に削除する。
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `8678564` and preserve the recorded Tokushima PDF work files, then deepen the clearly imaged second-arena junior rates in wave 155. Wave 156でfull checksとPDF/PNG cleanupを行う。
+- At the next heartbeat, confirm the current HEAD descends from data commit `ada0635` and preserve the recorded Tokushima PDF work files, then add the clearly imaged meeting-room period rates in wave 156, run full checks, and remove only the Tokushima PDF/PNG work files.
 
 ## Blockers
 

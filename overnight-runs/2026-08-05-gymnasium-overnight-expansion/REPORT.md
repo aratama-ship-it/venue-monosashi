@@ -322,8 +322,10 @@ ACTIVE — wave 152完了。全国47都道府県・候補230件の目標を達�
 - Wave 153では指定管理者の現行施設ページから、第二競技場、第一・第二会議室、多目的ルーム、役員室、育児支援ルーム、有料貸出備品を区画化。第二競技場の最大1,000人、会議室の30/60人、多目的ルーム200㎡と冷暖房条件を記録し、未掲載の面積・設備等は推定せず保持した。3波ごとのlintと表示テスト3件も合格した。
 - Wave 154: とくぎんトモニアリーナ第二競技場の一般12料金観測を追加（`8678564`）。
 - Wave 154では現行指定管理者ページからリンクされる2019年10月1日施行料金PDF全2ページを画像照合し、第二競技場の一般・全面/半面について午前、午後、夜間、午前午後、午後夜間、全日を補完。古い施行日と現行ページからのリンク関係を混同せず、各行に実利用前再確認を残した。
-- Current local totals: candidates 230 / details 481 / prices 2646 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +210 / prices +2256 / operations +120.
+- Wave 155: とくぎんトモニアリーナ第二競技場の中・高12料金観測を追加（`ada0635`）。
+- Wave 155では第二競技場の中学生・高校生区分について、全面/半面の午前、午後、夜間、午前午後、午後夜間、全日を補完。一般料金と混同せず独立した用途区分とし、施行日と実利用前再確認を保持した。
+- Current local totals: candidates 230 / details 481 / prices 2658 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +210 / prices +2268 / operations +120.
 
 ## Verification
 
