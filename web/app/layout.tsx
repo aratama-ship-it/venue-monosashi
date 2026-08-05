@@ -9,16 +9,7 @@ export const metadata: Metadata = {
   description: publication.description,
   applicationName: publication.siteName,
   icons: { icon: "/favicon.svg" },
-  keywords: [
-    "イベント会場",
-    "会場検索",
-    "小劇場",
-    "ジャグリング",
-    "ヨーヨー",
-    "ディアボロ",
-    "けん玉",
-    "会場費",
-  ],
+  keywords: publication.keywords,
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -58,14 +49,7 @@ const structuredData = {
   inLanguage: "ja",
   dateModified: publication.updatedAt,
   isAccessibleForFree: true,
-  keywords: [
-    "イベント会場",
-    "小劇場",
-    "ジャグリング",
-    "ヨーヨー",
-    "ディアボロ",
-    "けん玉",
-  ],
+  keywords: publication.keywords,
 };
 
 export default function RootLayout({

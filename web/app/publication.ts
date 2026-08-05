@@ -1,11 +1,21 @@
 export const publication = {
   siteName: "会場ものさし",
-  title: "会場ものさし｜全国のイベント会場を過去大会と予算で測る",
+  title: "会場ものさし｜全国のイベント会場を条件で比較",
   description:
-    "JJF・ヨーヨー・ディアボロ・けん玉の過去会場を基準に、全国のイベント会場と150席以下の小劇場を規模・天井高・予算・搬入・アクセスで比較する公開調査版。",
+    "イベント会場候補を地域・面積・天井・客席・予算・搬入・アクセスで見比べます。 150席以下の小劇場も、平土間・公演料金・利用条件から探せます。",
   url: "https://venue.art-monosashi.com/",
   edition: "全国公開調査版 0.2",
   updatedAt: "2026-08-05",
+  keywords: [
+    "イベント会場",
+    "会場検索",
+    "会場比較",
+    "小劇場",
+    "体育館",
+    "イベントスペース",
+    "貸会場",
+    "会場費",
+  ],
   repositoryUrl: "https://github.com/aratama-ship-it/venue-monosashi",
   correctionUrl:
     "https://github.com/aratama-ship-it/venue-monosashi/issues/new?title=%E4%BC%9A%E5%A0%B4%E6%83%85%E5%A0%B1%E3%81%AE%E8%A8%82%E6%AD%A3%E6%8F%90%E6%A1%88&body=%E4%BC%9A%E5%A0%B4%E5%90%8D%EF%BC%9A%0A%E8%A8%82%E6%AD%A3%E7%AE%87%E6%89%80%EF%BC%9A%0A%E4%B8%80%E6%AC%A1%E6%83%85%E5%A0%B1URL%EF%BC%9A%0A%E8%A3%9C%E8%B6%B3%EF%BC%9A",

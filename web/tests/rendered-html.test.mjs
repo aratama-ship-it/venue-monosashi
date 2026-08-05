@@ -34,7 +34,15 @@ test("server-renders the venue search shell", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>会場ものさし/);
+  assert.match(
+    html,
+    /<title>会場ものさし｜全国のイベント会場を条件で比較<\/title>/,
+  );
+  assert.match(
+    html,
+    /<meta name="description" content="イベント会場候補を地域・面積・天井・客席・予算・搬入・アクセスで見比べます。 150席以下の小劇場も、平土間・公演料金・利用条件から探せます。"/,
+  );
+  assert.match(html, /content="イベント会場,会場検索,会場比較,小劇場,体育館,イベントスペース,貸会場,会場費"/);
   assert.match(
     html,
     /<link rel="canonical" href="https:\/\/venue\.art-monosashi\.com\/"/,
