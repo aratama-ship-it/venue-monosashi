@@ -52,6 +52,11 @@ test("server-renders the venue search shell", async () => {
   assert.match(html, /name="twitter:card" content="summary_large_image"/);
   assert.match(html, /rel="icon" href="https:\/\/venue\.art-monosashi\.com\/favicon\.svg"/);
   assert.match(html, /application\/ld\+json/);
+  assert.equal([...html.matchAll(/static\.cloudflareinsights\.com\/beacon\.min\.js/g)].length, 1);
+  assert.match(html, /977721791a104a10ae5b37312104bbf5/);
+  const layoutSource = await readFile(new URL("../app/layout.tsx", import.meta.url), "utf8");
+  assert.match(layoutSource, /NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN/);
+  assert.match(layoutSource, /static\.cloudflareinsights\.com\/beacon\.min\.js/);
   assert.match(html, /会場を、名前でなく/);
   assert.match(html, /条件で測る/);
   assert.match(
