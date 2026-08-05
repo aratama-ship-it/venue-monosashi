@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 139完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 140完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -292,8 +292,10 @@ ACTIVE — wave 139完了。全国47都道府県・候補230件の目標を達�
 - Wave 138では第1体育室の1/3・半面・2/3・全面を100%/50%点灯、市内外で分離し、温水プール全面100%点灯も追加。3波ごとのlintと表示テスト3件に合格し、画像照合用一時ファイルのみ削除した。
 - Wave 139: 相好アリーナ四日市の平日分割23料金観測を追加（`17feb2e`）。
 - Wave 139では指定管理者の現行料金HTMLから、全面・3/4面・2/3面・半面・1/3面・1/4面のスポーツ・入場料なしを午前/午後/夜間/全日で補完。既存の全面全日1件は重複追加せず、同じ軸で比較可能にした。
-- Current local totals: candidates 230 / details 457 / prices 2371 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +186 / prices +1981 / operations +120.
+- Wave 140: 相好アリーナ四日市の土日祝分割24料金観測を追加（`1e0b19c`）。
+- Wave 140では全面・3/4面・2/3面・半面・1/3面・1/4面のスポーツ・入場料なしを土日祝の午前/午後/夜間/全日で追加し、平日との差を直接比較可能にした。
+- Current local totals: candidates 230 / details 457 / prices 2395 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +186 / prices +2005 / operations +120.
 
 ## Verification
 
