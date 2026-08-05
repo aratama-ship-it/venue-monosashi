@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 97完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 98完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -208,8 +208,10 @@ ACTIVE — wave 97完了。全国47都道府県・候補230件の目標を達成
 - Wave 96では放送室・多目的更衣室・審判員室を区画化し、地下普通車100円/30分・地上大型車2,000円/日を税表記なしで追加。弓道の登録、道着、原則10名以上、区内団体3か月前予約も分離し、公式表の重複区分名は推定せず要確認とした。3波チェックも合格した。
 - Wave 97: 千葉ポートアリーナの3区画と20料金観測を追加（`3b625d0`）。
 - Wave 97ではサブアリーナ769.6㎡・ロールバック140席、トレーニング室2の116㎡、現在一般利用休止中の体力測定室134.4㎡を区画化。サブの平日/土日祝専用8件・個人6件と、トレーニング室2の専用4件・個人2件を2026年4月改定の現行指定管理者表から追加した。
-- Current local totals: candidates 230 / details 406 / prices 1702 / operations 218.
-- Overnight additions from baseline: candidates +47 / details +135 / prices +1312 / operations +116.
+- Wave 98: 千葉ポートアリーナのメイン平日催事16料金観測を追加（`2469fbf`）。
+- Wave 98では入場料徴収アマチュアスポーツ、入場料なしの見本市・商品展示・営利宣伝、入場料徴収の集会・催事、プロスポーツ・コンサート等興行を、午前・午後・夜間・全日で分離した。
+- Current local totals: candidates 230 / details 406 / prices 1718 / operations 218.
+- Overnight additions from baseline: candidates +47 / details +135 / prices +1328 / operations +116.
 
 ## Verification
 

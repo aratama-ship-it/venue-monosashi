@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 09:22 JST
+- Last updated: 2026-08-05 09:24 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `3b625d0` (ledger-only commits may follow it)
+- Last data commit: `2469fbf` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -141,16 +141,17 @@
 | 95 | 2026-08-05 09:16 JST | EBARA WAVE アリーナおおたの弓道場・個人開放深掘り | 1 detail / 16 prices | audit 0 errors; generated 230/1680; duplicate IDs 0 | `477b4d4` | 近的28m・5人立を区画化。弓道個人/貸切の区内外・3区分とバスケ/バドミントン/卓球個人開放を現行HTMLから追加 |
 | 96 | 2026-08-05 09:18 JST | EBARA WAVE アリーナおおたの支援区画・駐車・弓道運用深掘り | 3 details / 2 prices / 1 operation | audit 0 errors; generated 230/1682; duplicate IDs 0; lint OK; tests 3/3 | `e9f5c8c` | 放送室・多目的更衣室・審判員室を区画化。普通/大型車駐車料金と弓道の登録・予約条件を追加し、公式表の重複区分名は推定せず保持 |
 | 97 | 2026-08-05 09:22 JST | 千葉ポートアリーナのサブ・トレーニング区画深掘り | 3 details / 20 prices | audit 0 errors; generated 230/1702; duplicate IDs 0 | `3b625d0` | サブ769.6㎡・可動140席、トレーニング2 116㎡、休止中体力測定134.4㎡を区画化。サブ専用/個人とトレーニング2専用/個人料金を追加 |
+| 98 | 2026-08-05 09:24 JST | 千葉ポートアリーナの平日催事料金深掘り | 16 prices | audit 0 errors; generated 230/1718; duplicate price IDs 0 | `2469fbf` | メイン全面の入場料徴収アマチュア、展示営利、集会催事、プロ/コンサートを平日3区分/全日で分離 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 97
+- Last verified wave: wave 98
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `3b625d0` and the worktree contains only known untracked paths, then continue with 千葉ポートアリーナのメイン催事・附帯設備料金. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
+- At the next heartbeat, confirm the current HEAD descends from data commit `2469fbf` and the worktree contains only known untracked paths, then continue with 千葉ポートアリーナの土日祝催事・附帯設備料金. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
 
 ## Blockers
 
