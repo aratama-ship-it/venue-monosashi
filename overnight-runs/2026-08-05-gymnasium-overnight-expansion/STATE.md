@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 10:27 JST
+- Last updated: 2026-08-05 10:34 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `3ea5ed0` (ledger-only commits may follow it)
+- Last data commit: `2929084` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -169,16 +169,17 @@
 | 123 | 2026-08-05 10:27 JST | 維新大晃アリーナのシャワー・光熱・映写料金深掘り | 1 detail / 16 prices | audit 0 errors; generated 230/2128; duplicate IDs 0; lint OK; tests 3/3 | `6e5d55b` | 受付室を区画化。温水/コインシャワー、水道、電気、給湯室、クロス、映写機/スクリーン、受付室空調を追加 |
 | 124 | 2026-08-05 10:27 JST | カメイアリーナ仙台の競技・諸室区画深掘り | 9 details | audit 0 errors; generated 230/2128; duplicate detail IDs 0 | `f1301f0` | 第2競技場、25mプール、トレーニング/体育/体力測定/軽運動、研修3室、会議、幼児体育室を区画化 |
 | 125 | 2026-08-05 10:27 JST | カメイアリーナ仙台の第1競技場料金深掘り | 12 prices | audit 0 errors; generated 230/2140; duplicate price IDs 0 | `3ea5ed0` | アマチュアスポーツの入場料有無×営利有無×午前/午後/夜間を追加。土日祝2割増は派生させず保持 |
+| 126 | 2026-08-05 10:34 JST | カメイアリーナ仙台の料金版監査・第2競技場深掘り | 12 price corrections / 12 prices | audit 0 errors; generated 230/2152; duplicate price IDs 0; lint OK; tests 3/3 | `2929084` | 現行ページ直リンクの旧2019年4月表を市の改定案内が指定する2019年10月表へ訂正。第2競技場12件も追加 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 125
+- Last verified wave: wave 126
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `3ea5ed0` and the worktree contains only the known user-owned untracked paths, then continue with カメイアリーナ仙台の第2競技場・附帯設備料金. Keep its 2027年3月15日までの予定休館 separate from the currently linked published rate sheet and require post-renovation revalidation.
+- At the next heartbeat, confirm the current HEAD descends from data commit `2929084` and the worktree contains only the known user-owned untracked paths plus active `tmp/pdfs/kamei/` verification files, then continue with カメイアリーナ仙台の附帯設備・個人料金. Use only the 2019年10月適用表 supported by the city fee-revision notice; do not reuse the stale current-page direct-link PDF. Keep the 2027年3月15日までの予定休館 separate and require post-renovation revalidation.
 
 ## Blockers
 
