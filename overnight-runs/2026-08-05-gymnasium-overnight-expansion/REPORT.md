@@ -344,8 +344,10 @@ ACTIVE — wave 152完了。全国47都道府県・候補230件の目標を達�
 - Wave 164では現行主催者ページが案内する令和元年10月1日現在料金PDF全1ページを画像照合し、アマチュアスポーツ・入場料なしの平日/土日祝を午前、午後、夜間、昼間、昼夜、全日で補完。変更可能とする注記を各観測に残した。
 - Wave 165: ビッグハットB区分の12料金観測を追加（`5980b5a`）。
 - Wave 165ではアマチュアスポーツ・入場料徴収ありの平日/土日祝を午前、午後、夜間、昼間、昼夜、全日で補完。3波ごとのlintと表示テスト3件に合格後、今回作成した確認用PDF 1件・PNG 1件だけを削除した。
-- Current local totals: candidates 230 / details 500 / prices 2772 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +229 / prices +2382 / operations +120.
+- Wave 166: ビッグハットC区分の12料金観測を追加（`47720ec`）。
+- Wave 166では式典、集会、その他これらに類する利用の平日/土日祝を午前、午後、夜間、昼間、昼夜、全日で補完。旧基準日・変更可能・実利用前再確認を全観測に保持した。
+- Current local totals: candidates 230 / details 500 / prices 2784 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +229 / prices +2394 / operations +120.
 
 ## Verification
 
