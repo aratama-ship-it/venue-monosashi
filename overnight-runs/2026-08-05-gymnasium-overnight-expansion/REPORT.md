@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 128完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 129完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -270,8 +270,10 @@ ACTIVE — wave 128完了。全国47都道府県・候補230件の目標を達�
 - Wave 127では第1/第2競技場・軽運動場、トレーニング室、体力測定の個人料金8件と、第1競技場500/1,000/1,300/2,000ルクス・吊下げスポット、第2競技場500/1,000ルクスの時間帯別照明11件を追加。非掲載の組合せはゼロと推定せず、1時間未満切上げ、休館、再開後再確認を保持した。
 - Wave 128: カメイアリーナ仙台の支援室/共用器具2区画と、冷暖房・放送・養生23料金観測を追加（`d39057e`）。
 - Wave 128では放送3件、フロア/観覧席/第2競技場/更衣室/研修・会議・控室等の冷暖房12件、フロアシート、競技用コート、ロールバック席、補助椅子、電光掲示、特殊電源8件を追加。各室・各時間帯・1時間切上げ等の単位を分離し、休館と再開後再確認を保持した。
-- Current local totals: candidates 230 / details 445 / prices 2194 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +174 / prices +1804 / operations +120.
+- Wave 129: カメイアリーナ仙台の舞台設備・温水プール13料金観測を追加（`ef8b4ff`）。
+- Wave 129では仮設ステージ、平台、吊物3系統、バトン、吊物幕、演台・花台、ピアノ9件と、温水プールの一般/小中学生2時間料金・超過4件を追加。全4ページの画像照合を完了し、lintと表示テスト3件も合格。確認用PDF/PNGのみ削除した。
+- Current local totals: candidates 230 / details 445 / prices 2207 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +174 / prices +1817 / operations +120.
 
 ## Verification
 
