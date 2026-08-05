@@ -42,17 +42,6 @@ type SmallTheaterLedgerItem = {
   verificationStatus: string;
   note: string | null;
 };
-type HistoricalSeries =
-  | "all"
-  | "JJF"
-  | "JYYF_NATIONAL"
-  | "JYYF_REGIONAL"
-  | "JYYF_JUNIOR"
-  | "WYYC"
-  | "DIABOLO_AJDC"
-  | "DIABOLO_OIDC"
-  | "KENDAMA_KWC"
-  | "KENDAMA_JKA_YOUTH";
 type PriceUse =
   | "any"
   | "amateur_sports"
@@ -209,26 +198,6 @@ const useCaseLabels: Record<string, string> = {
   setup_teardown: "設営・撤去",
 };
 
-const historicalSeriesLabels: Record<string, string> = {
-  JJF: "JJF",
-  JYYF_NATIONAL: "JYYF 全国・前身",
-  JYYF_REGIONAL: "JYYF 地区",
-  JYYF_JUNIOR: "JYYF ジュニア",
-  WYYC: "世界大会",
-  DIABOLO_AJDC: "全日本ディアボロ",
-  DIABOLO_OIDC: "大阪国際ディアボロ",
-  KENDAMA_KWC: "けん玉ワールドカップ",
-  KENDAMA_JKA_YOUTH: "全日本少年少女けん玉",
-};
-
-const eventStatusLabels: Record<string, string> = {
-  held: "開催",
-  planned: "予定",
-  cancelled: "中止",
-  hybrid_decentralized: "分散・オンライン",
-  partially_cancelled: "一部中止",
-};
-
 const smallTheaterVerificationLabels: Record<string, string> = {
   verified_primary: "公式確認済み",
   primary_partial: "公式一部確認",
@@ -343,11 +312,6 @@ export function VenueSearch() {
   const [sameSpace, setSameSpace] = useState(false);
   const [keepUnknown, setKeepUnknown] = useState(true);
   const [sortKey, setSortKey] = useState<SortKey>("evidence");
-  const [historicalSeries, setHistoricalSeries] =
-    useState<HistoricalSeries>("all");
-  const [historicalYear, setHistoricalYear] = useState("all");
-  const [historicalQuery, setHistoricalQuery] = useState("");
-  const [showAllHistorical, setShowAllHistorical] = useState(false);
   const [showAllVenues, setShowAllVenues] = useState(false);
   const [smallTheaterPrefecture, setSmallTheaterPrefecture] = useState("全国");
   const [smallTheaterStatus, setSmallTheaterStatus] = useState("all");
@@ -542,49 +506,6 @@ export function VenueSearch() {
       (a, b) => groupOrder.indexOf(a.region) - groupOrder.indexOf(b.region),
     );
   }, []);
-  const historicalYears = useMemo(
-    () =>
-      Array.from(
-        new Set(venueData.historicalEvents.map((event) => event.year)),
-      ).sort((a, b) => b - a),
-    [],
-  );
-  const historicalResults = useMemo(() => {
-    const normalized = historicalQuery.trim().toLocaleLowerCase("ja");
-    return [...venueData.historicalEvents]
-      .filter(
-        (event) =>
-          historicalSeries === "all" || event.series === historicalSeries,
-      )
-      .filter(
-        (event) =>
-          historicalYear === "all" ||
-          event.year === Number(historicalYear),
-      )
-      .filter((event) => {
-        if (!normalized) return true;
-        return [
-          event.venueNames,
-          event.city,
-          event.prefectureOrState,
-          event.country,
-          event.note,
-        ]
-          .join(" ")
-          .toLocaleLowerCase("ja")
-          .includes(normalized);
-      })
-      .sort(
-        (a, b) =>
-          b.year - a.year ||
-          a.series.localeCompare(b.series) ||
-          a.city.localeCompare(b.city, "ja"),
-      );
-  }, [historicalQuery, historicalSeries, historicalYear]);
-  const visibleHistorical = showAllHistorical
-    ? historicalResults
-    : historicalResults.slice(0, 24);
-
   const smallTheaterPrefectures = useMemo(
     () =>
       Array.from(
@@ -1078,10 +999,6 @@ export function VenueSearch() {
             <a href="#search">
               <span aria-hidden="true">⌕</span>
               条件で探す
-            </a>
-            <a href="#past-venues">
-              <span aria-hidden="true">▤</span>
-              過去会場台帳
             </a>
             <a href="#small-theater-ledger">
               <span aria-hidden="true">⌘</span>
@@ -1843,158 +1760,6 @@ export function VenueSearch() {
             </div>
           )}
         </div>
-      </section>
-
-      <section
-        className="archive-section"
-        id="past-venues"
-        aria-labelledby="archive-title"
-      >
-        <div className="archive-head">
-          <div>
-            <p className="eyebrow">HISTORICAL VENUE LEDGER</p>
-            <h2 id="archive-title">過去会場台帳をたどる</h2>
-            <p>
-              候補の基準になったJJF・JYYF・世界大会・ディアボロ・けん玉大会を、系列、年、会場名から確認できます。
-              開催実績と現在の貸出可否は別です。
-            </p>
-          </div>
-          <div className="archive-total">
-            <strong>{historicalResults.length}</strong>
-            <span> / {venueData.stats.historical}記録</span>
-          </div>
-        </div>
-
-        <div className="archive-controls">
-          <label className="field">
-            <span className="field-label">大会系列</span>
-            <select
-              value={historicalSeries}
-              onChange={(event) => {
-                setHistoricalSeries(
-                  event.target.value as HistoricalSeries,
-                );
-                setShowAllHistorical(false);
-              }}
-            >
-              <option value="all">すべて</option>
-              <option value="JJF">JJF</option>
-              <option value="JYYF_NATIONAL">JYYF 全国・前身</option>
-              <option value="JYYF_REGIONAL">JYYF 地区</option>
-              <option value="JYYF_JUNIOR">JYYF ジュニア</option>
-              <option value="WYYC">世界大会</option>
-              <option value="DIABOLO_AJDC">全日本ディアボロ</option>
-              <option value="DIABOLO_OIDC">大阪国際ディアボロ</option>
-              <option value="KENDAMA_KWC">けん玉ワールドカップ</option>
-              <option value="KENDAMA_JKA_YOUTH">
-                全日本少年少女けん玉
-              </option>
-            </select>
-          </label>
-          <label className="field">
-            <span className="field-label">開催年</span>
-            <select
-              value={historicalYear}
-              onChange={(event) => {
-                setHistoricalYear(event.target.value);
-                setShowAllHistorical(false);
-              }}
-            >
-              <option value="all">すべて</option>
-              {historicalYears.map((year) => (
-                <option key={year} value={year}>
-                  {year}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="field">
-            <span className="field-label">会場名・都市</span>
-            <input
-              type="search"
-              placeholder="例：アクリエひめじ、横浜、Orlando"
-              value={historicalQuery}
-              onChange={(event) => {
-                setHistoricalQuery(event.target.value);
-                setShowAllHistorical(false);
-              }}
-            />
-          </label>
-        </div>
-
-        <div className="archive-table-wrap" aria-live="polite">
-          <table className="archive-table">
-            <thead>
-              <tr>
-                <th>年・系列</th>
-                <th>地域</th>
-                <th>会場</th>
-                <th>状態</th>
-                <th>根拠</th>
-              </tr>
-            </thead>
-            <tbody>
-              {visibleHistorical.map((event) => (
-                <tr key={event.id}>
-                  <td>
-                    <strong>{event.year}</strong>
-                    <small>
-                      {historicalSeriesLabels[event.series] ?? event.series}
-                    </small>
-                  </td>
-                  <td>
-                    {event.prefectureOrState || event.country}
-                    <small>{event.city || "都市未記載"}</small>
-                  </td>
-                  <td>
-                    {event.venueNames || "正確な施設名は未確認"}
-                    {event.note && <small>{event.note}</small>}
-                  </td>
-                  <td>
-                    <span
-                      className={`archive-status ${
-                        event.verificationStatus === "verified"
-                          ? ""
-                          : "unverified"
-                      }`}
-                    >
-                      {eventStatusLabels[event.eventStatus] ??
-                        event.eventStatus}
-                      ・
-                      {event.verificationStatus === "verified"
-                        ? "確認済み"
-                        : "要確認"}
-                    </span>
-                  </td>
-                  <td>
-                    <a
-                      href={event.sourceUrl}
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      出典 ↗
-                    </a>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          {historicalResults.length === 0 && (
-            <div className="archive-empty">一致する過去会場はありません。</div>
-          )}
-        </div>
-
-        {historicalResults.length > 24 && (
-          <button
-            className="archive-more"
-            type="button"
-            onClick={() => setShowAllHistorical((current) => !current)}
-          >
-            {showAllHistorical
-              ? "先頭24件に戻す"
-              : `残り${historicalResults.length - 24}件も表示`}
-          </button>
-        )}
       </section>
 
       <section

@@ -88,11 +88,8 @@ test("server-renders the venue search shell", async () => {
   assert.match(html, /舞台公演/);
   assert.match(html, /収容が小さい順/);
   assert.match(html, /候補内最小日額/);
-  assert.match(html, /過去会場台帳をたどる/);
-  assert.match(html, /JYYF 全国・前身/);
-  assert.match(html, /全日本ディアボロ/);
-  assert.match(html, /けん玉ワールドカップ/);
-  assert.match(html, /開催実績と現在の貸出可否は別/);
+  assert.doesNotMatch(html, /id="past-venues"/);
+  assert.doesNotMatch(html, /過去会場台帳をたどる/);
   assert.match(html, /LaSens等の索引で小劇場を見つけ/);
   assert.match(html, /現在の594件の確認台帳は、CSVとして公開しています/);
   assert.match(html, /小劇場台帳から探す/);
