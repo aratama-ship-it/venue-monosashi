@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 11:56 JST
+- Last updated: 2026-08-05 11:57 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `8faee18` (ledger-only commits may follow it)
+- Last data commit: `6832499` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -204,16 +204,17 @@
 | 158 | 2026-08-05 11:54 JST | 大垣市総合体育館第1体育館平日料金深掘り | 12 prices / 1 candidate precision fix | audit 0 errors; generated 230/2684; duplicate price IDs 0 | `fcd41c5` | 令和6年4月1日改正PDF全1ページを画像照合し、全面/半面/1/3面の平日4時間区分を追加 |
 | 159 | 2026-08-05 11:55 JST | 大垣市総合体育館第1体育館土日祝料金深掘り | 12 prices | audit 0 errors; generated 230/2696; duplicate IDs 0; lint OK; tests 3/3 | `1296e82` | 全面/半面/1/3面の土日祝4時間区分を追加。確認用PDF/PNGを削除 |
 | 160 | 2026-08-05 11:56 JST | 大垣市総合体育館第2体育館料金深掘り | 16 prices | audit 0 errors; generated 230/2712; duplicate price IDs 0 | `8faee18` | 全面/半面の平日・土日祝×午前/午後/夜間/全日を追加 |
+| 161 | 2026-08-05 11:57 JST | 大垣市総合体育館第3体育館料金深掘り | 16 prices | audit 0 errors; generated 230/2728; duplicate price IDs 0 | `6832499` | 全面/半面の平日・土日祝×午前/午後/夜間/全日を追加 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 160
+- Last verified wave: wave 161
 - No data edits are in progress. Wave 158で作成した大垣の確認用PDF 1件・PNG 1件はfull checks後に削除済み。
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `8faee18` and the worktree contains only the known user-owned untracked paths, then add the already image-verified Ogaki third-arena no-admission rates in wave 161. Wave 162で会議室料金とfull checksを行う。
+- At the next heartbeat, confirm the current HEAD descends from data commit `6832499` and the worktree contains only the known user-owned untracked paths, then add the already image-verified Ogaki meeting/training-room rates in wave 162 and run full checks.
 
 ## Blockers
 
