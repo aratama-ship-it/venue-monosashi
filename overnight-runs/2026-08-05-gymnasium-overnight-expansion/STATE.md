@@ -3,9 +3,9 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-05 10:00 JST
+- Last updated: 2026-08-05 10:02 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `ea06da2` (ledger-only commits may follow it)
+- Last data commit: `291a861` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -157,16 +157,17 @@
 | 111 | 2026-08-05 09:53 JST | 東和薬品RACTABドームの卓球台開放・冬期スケート料金深掘り | 1 detail / 15 prices / 2 operations | audit 0 errors; generated 230/1934; duplicate IDs 0; lint OK; tests 3/3 | `e7a957b` | 卓球の時間帯別年齢料金、スケートの個人/団体段階/観覧料金を追加。卓球の物理区画は推定せず要確認で保持 |
 | 112 | 2026-08-05 09:58 JST | 花巻市総合体育館のアリーナ・支援区画深掘り | 4 details / 1 candidate precision fix | audit 0 errors; generated 230/1934; duplicate IDs 0 | `9eb4f5f` | 市現行料金画像と運営団体PDFを画像照合。第2・第3アリーナ、多目的、トレーニングを区画化し掲載額一致を確認 |
 | 113 | 2026-08-05 10:00 JST | 花巻市総合体育館の第1アリーナ現行料金深掘り | 18 prices | audit 0 errors; generated 230/1952; duplicate price IDs 0 | `ea06da2` | 全面の一般/小中高校生/営利、平日/土日休日、朝/昼/夜の1時間額を市現行画像と運営団体PDFで照合 |
+| 114 | 2026-08-05 10:02 JST | 花巻市総合体育館の第2アリーナ現行料金深掘り | 18 prices | audit 0 errors; generated 230/1970; duplicate price IDs 0; lint OK; tests 3/3 | `291a861` | 全面の一般/小中高校生/営利、平日/土日休日、朝/昼/夜の1時間額を二つの公式掲載で照合。3波チェック合格 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 113
+- Last verified wave: wave 114
 - No data edits are in progress.
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `ea06da2` and the worktree contains only known untracked paths plus the active `tmp/pdfs/hanamaki/` verification files, then continue with 花巻市総合体育館の第2・第3アリーナ現行料金. Remove only the task-created temporary verification files after the Hanamaki waves. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
+- At the next heartbeat, confirm the current HEAD descends from data commit `291a861` and the worktree contains only known untracked paths plus the active `tmp/pdfs/hanamaki/` verification files, then continue with 花巻市総合体育館の第3アリーナ・多目的ルーム現行料金. Remove only the task-created temporary verification files after the Hanamaki waves. Keep ノエビアの2019表、大垣の2019表、改修休館中の仙台 and inquiry-only stadium rates held.
 
 ## Blockers
 
