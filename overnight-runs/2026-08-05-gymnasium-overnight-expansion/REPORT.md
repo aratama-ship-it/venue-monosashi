@@ -2,7 +2,7 @@
 
 ## Outcome
 
-ACTIVE — wave 124完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
+ACTIVE — wave 125完了。全国47都道府県・候補230件の目標を達成し、2026-08-06 07:00 JSTまで既存候補の深掘りを継続中。
 
 ## Baseline
 
@@ -262,8 +262,10 @@ ACTIVE — wave 124完了。全国47都道府県・候補230件の目標を達�
 - Wave 123では温水シャワーの利用人数段階とコイン式を分離し、水道、給湯室、電気・コンセント、テーブルクロス、映写機大小、スクリーン、受付室冷暖房を追加。課金単位と休館中利用不可を保持した。3波ごとのlintと表示テスト3件も合格し、確認用一時ファイルを削除した。
 - Wave 124: カメイアリーナ仙台の競技・諸室9区画を追加（`f1301f0`）。
 - Wave 124では指定管理者の現行施設ページから第2競技場770.80㎡、25mプール275㎡、トレーニング・体育・体力測定・軽運動、研修室1〜3合計228.92㎡/180名、会議室74.8㎡/20名、幼児体育室83.55㎡を区画化。2027年3月15日までの予定休館と再開後再確認を各区画に保持した。
-- Current local totals: candidates 230 / details 443 / prices 2128 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +172 / prices +1738 / operations +120.
+- Wave 125: カメイアリーナ仙台の第1競技場12料金観測を追加（`3ea5ed0`）。
+- Wave 125では現行施設ページからリンクされる公式料金表を用い、アマチュアスポーツの入場料有無、営利有無、午前/午後/夜間を分離。土日祝2割増は派生額を作らず条件として保持し、改修休館中の利用不可と再開後再確認も各観測に明記した。
+- Current local totals: candidates 230 / details 443 / prices 2140 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +172 / prices +1750 / operations +120.
 
 ## Verification
 
