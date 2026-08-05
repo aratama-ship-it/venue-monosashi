@@ -348,8 +348,16 @@ ACTIVE — wave 152完了。全国47都道府県・候補230件の目標を達�
 - Wave 166では式典、集会、その他これらに類する利用の平日/土日祝を午前、午後、夜間、昼間、昼夜、全日で補完。旧基準日・変更可能・実利用前再確認を全観測に保持した。
 - Wave 167: ビッグハットD区分の12料金観測を追加（`524a349`）。
 - Wave 167では見本市、展示会、その他これらに類する利用の平日/土日祝を午前、午後、夜間、昼間、昼夜、全日で補完。C区分と混同せず独立用途として保持した。
-- Current local totals: candidates 230 / details 500 / prices 2796 / operations 222.
-- Overnight additions from baseline: candidates +47 / details +229 / prices +2406 / operations +120.
+- Wave 168: ビッグハットE区分の12料金観測を追加（`7d72724`）。
+- Wave 168では営利興行の平日/土日祝を午前、午後、夜間、昼間、昼夜、全日で補完。3波ごとのlintと表示テスト3件に合格した。ユーザーの「次の作業が終わったら停止」指示に従い、この波を最後として継続を停止した。
+- Current local totals: candidates 230 / details 500 / prices 2808 / operations 222.
+- Overnight additions from baseline: candidates +47 / details +229 / prices +2418 / operations +120.
+
+## Stop Record
+
+- Status: PARTIAL（技術的障害ではなく、ユーザーの直接指示による停止）
+- Stopped after: wave 168 full verification
+- No further research, edits, push, deploy, or publication will run automatically.
 
 ## Verification
 

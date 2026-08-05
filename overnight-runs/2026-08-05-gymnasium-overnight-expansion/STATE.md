@@ -2,10 +2,10 @@
 
 ## Status
 
-- Status: ACTIVE
-- Last updated: 2026-08-05 12:06 JST
+- Status: PARTIAL
+- Last updated: 2026-08-05 12:08 JST
 - Cutoff: 2026-08-06 07:00 JST
-- Last data commit: `524a349` (ledger-only commits may follow it)
+- Last data commit: `7d72724` (ledger-only commits may follow it)
 
 ## Baseline
 
@@ -211,17 +211,18 @@
 | 165 | 2026-08-05 12:04 JST | ビッグハットB区分料金深掘り | 12 prices | audit 0 errors; generated 230/2772; duplicate IDs 0; lint OK; tests 3/3 | `5980b5a` | 入場料徴収ありの平日/土日祝6区分を追加。確認用PDF/PNGを削除 |
 | 166 | 2026-08-05 12:06 JST | ビッグハットC区分料金深掘り | 12 prices | audit 0 errors; generated 230/2784; duplicate price IDs 0 | `47720ec` | 式典・集会等の平日/土日祝6区分を追加 |
 | 167 | 2026-08-05 12:06 JST | ビッグハットD区分料金深掘り | 12 prices | audit 0 errors; generated 230/2796; duplicate price IDs 0 | `524a349` | 見本市・展示会等の平日/土日祝6区分を追加 |
+| 168 | 2026-08-05 12:08 JST | ビッグハットE区分料金深掘り | 12 prices | audit 0 errors; generated 230/2808; duplicate IDs 0; lint OK; tests 3/3 | `7d72724` | 営利興行の平日/土日祝6区分を追加。ユーザー指示によりこの波完了後に継続停止 |
 
 ## Current Wave
 
 - Phase: verified deepening
-- Last verified wave: wave 167
+- Last verified wave: wave 168
 - No data edits are in progress. Wave 164で作成したビッグハットの確認用PDF 1件・PNG 1件はfull checks後に削除済み。
 
 ## Next Action
 
-- At the next heartbeat, confirm the current HEAD descends from data commit `524a349` and the worktree contains only the known user-owned untracked paths, then add the already image-verified Big Hat E-category commercial rates in wave 168 and run full checks.
+- None. 2026-08-05 12:08 JSTのユーザー指示に従い、wave 168の完了・フル検証後に継続を停止。再開は明示指示がある場合のみ。
 
 ## Blockers
 
-- None.
+- None. Stopped by direct user instruction, not by a technical blocker.
