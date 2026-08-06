@@ -121,6 +121,9 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Recorded only explicit official capacities and floor areas; no ceiling or price value was inferred. Stage dimensions remain descriptive notes only, and all unreported conditions remain `要確認`.
 - Wave 35 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Gunma is now 15 candidates, 13 municipalities, and 75 spaces; national remaining deficits are 560 candidates and 253 spaces. Public deployment and custom-domain verification remain to be completed for this wave.
 - Wave 35 validation and deployment passed: production version 80 was deployed successfully from commit `68dcfb2638fd105f1dacdc3cb5818eae7a508e90`; the Sites URL and `https://venue.art-monosashi.com/?release=68dcfb2` returned the established site marker. Tracked `web/dist` output was restored after deployment.
+- Added four official-source-backed Saitama facilities — 狭山市市民会館、飯能市市民会館、越谷コミュニティセンター（サンシティホール）、草加市文化会館 — and 37 searchable spaces, increasing the national total to 619 facilities and 2,560 spaces. Sources are the official pages and documents of 狭山市、飯能市、越谷市、サンシティホール指定管理者、草加市文化協会.
+- Recorded only explicit capacities and floor areas; no ceiling or price value was inferred. Published stage heights remain descriptive notes only, and all unreported conditions remain `要確認`.
+- Wave 36 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Saitama is now 15 candidates, 13 municipalities, and 79 spaces; national remaining deficits are 556 candidates and 244 spaces. Public deployment and custom-domain verification remain to be completed for this wave.
 
 ## Verification
 

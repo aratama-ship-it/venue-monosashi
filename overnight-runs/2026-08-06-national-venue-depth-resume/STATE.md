@@ -4,14 +4,14 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-07 Asia/Tokyo
-- Current wave: Wave 36 — Saitama official-source expansion (next).
+- Current wave: Wave 37 — Chiba official-source expansion (next).
 
 ## Baseline
 
 - Git branch and commit: `agent/add-competition-and-small-theater-coverage` at `5c0946bc6e73c553c168f3f8b13468e64790da72`.
-- Data counts: 615 candidate facilities, 2,523 searchable spaces, 2,823 price observations, and 222 operation rows.
-- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 560 candidates and 253 spaces; municipality deficit is measured by the generated report.
-- Canonical hashes: `candidate-venues.csv` `0a83a784dceea38a3a146587e2457c44fc7403ffbe9c62186a3ca4532f902933`; `venue-details.csv` `2afd5815ea595527bbec8b100daf097684c20a8fefcb18ba32fee82ca49885e1`; `price-observations.csv` `640b4afc3d607a7b796818d49334bf2f56fb303745a92ad8b759b10158e2e396`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
+- Data counts: 619 candidate facilities, 2,560 searchable spaces, 2,823 price observations, and 222 operation rows.
+- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 556 candidates and 244 spaces; municipality deficit is measured by the generated report.
+- Canonical hashes: `candidate-venues.csv` `96f9c953d7e1ced523ea79fecf3874d36186b1c851a27b90ed1ca57041c66f3a`; `venue-details.csv` `78e49e5ec8919ef5a09346dd49601647394d2bc7c45ac86cb311f227f34b09a0`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
 
@@ -134,6 +134,10 @@
 - Wave 35 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-record warning. Public deployment remains to be completed for this wave.
 - Wave 35 deployment passed: production version 80 was deployed successfully; the Sites URL and `https://venue.art-monosashi.com/?release=68dcfb2` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
+- Wave 36 source data: added four official-source-backed Saitama facilities — 狭山市市民会館（狭山市）、飯能市市民会館（飯能市）、越谷コミュニティセンター（サンシティホール）（越谷市）、草加市文化会館（草加市） — and 37 independently searchable spaces. Saitama is now 15 candidates, 13 municipalities, and 79 spaces.
+- Official sources: 狭山市、飯能市、越谷市とサンシティホール指定管理者、草加市文化協会。Explicit capacities and floor areas only were recorded. No ceiling or price observation was added; published stage heights and all unreported conditions remain `要確認`.
+- Wave 36 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-record warning. Public deployment remains to be completed for this wave.
+
 - Wave 21 source data: added four official-source-backed Kanagawa facilities — 厚木市文化会館（厚木市）、カルッツかわさき（川崎市）、鎌倉芸術館（鎌倉市）、小田原三の丸ホール（小田原市） — and 68 independently searchable spaces. Kanagawa is now 14 candidates, 7 municipalities, and 93 spaces.
 - Official sources: 厚木市、カルッツかわさき公式運営者、鎌倉芸術館公式運営者、小田原三の丸ホール公式運営者. Explicit room ceiling values were recorded only for カルッツかわさき（アクトスタジオ4.5m、大会議室3.0m、中会議室3.0m、小会議室2.8m）. Stage dimensions at the halls remain notes only and no price observation was added.
 - Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
@@ -174,7 +178,7 @@
 
 ## Next Action
 
-- Research one bounded official-source wave for 埼玉県, the next lowest candidate-depth prefecture tied at 11 candidates, then regenerate all reports and deploy after validation.
+- Research one bounded official-source wave for 千葉県, the next lowest candidate-depth prefecture tied at 11 candidates, then regenerate all reports and deploy after validation.
 
 ## Blockers
 
