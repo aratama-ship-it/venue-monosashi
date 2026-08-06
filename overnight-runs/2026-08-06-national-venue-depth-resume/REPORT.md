@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 17 is validated and awaiting public deployment; the next bounded wave targets Okayama.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 17 is published; the next bounded wave targets Okayama.
 
 ## Changes
 
@@ -55,6 +55,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Validated and deployed Wave 16 to the existing public site (version 61); the established custom domain returned the site marker for the deployed source revision.
 - Added four official-source-backed Niigata facilities — 青海総合文化会館（きらら青海）、さくらんど会館、五泉市総合会館、加茂文化会館 — and 16 searchable spaces, increasing the national total to 543 facilities and 1,974 spaces. The sources are the official pages of 糸魚川市、五泉市、加茂市.
 - No Niigata ceiling or price values were inferred or added. New space conditions remain explicitly `要確認`; the Aomi stage-height range and sports-hall dimensions were not used as ceiling measurements.
+- Validated and deployed Wave 17 to the existing public site (version 62); the established custom domain returned the site marker for the deployed source revision.
 
 ## Verification
 
