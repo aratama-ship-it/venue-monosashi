@@ -72,6 +72,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Nagano facilities — 長野県伊那文化会館、駒ヶ根市文化会館、中野市市民会館ソソラホール、須坂市文化会館メセナホール — and 36 searchable spaces, increasing the national total to 563 facilities and 2,175 spaces. Sources are the official pages of 長野県伊那文化会館、駒ヶ根市、中野市、須坂市文化会館.
 - Recorded only explicit capacities and floor areas from the official facility guides. Stage, proscenium, and building dimensions remain notes only; no ceiling or price observation was added.
 - Wave 22 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Public deployment and custom-domain verification remain to be completed for this wave.
+- Deployed Wave 22 to the existing public site (version 67); `https://venue.art-monosashi.com/?release=8606ba2` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 ## Verification
 
