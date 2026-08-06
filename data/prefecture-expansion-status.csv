@@ -28,7 +28,7 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 大阪府,近畿,17,4,43,27,28,15,8,11,8,expanding
 兵庫県,近畿,12,6,53,32,25,21,13,9,0,foundation_plus
 奈良県,近畿,11,10,47,22,21,6,14,5,4,foundation_plus
-和歌山県,近畿,10,7,26,20,12,0,15,8,25,foundation_plus
+和歌山県,近畿,14,10,44,24,15,0,11,5,7,foundation_plus
 鳥取県,中国,11,8,43,29,31,1,14,7,8,foundation_plus
 島根県,中国,12,6,37,12,6,3,13,9,14,foundation_plus
 岡山県,中国,13,9,56,19,17,2,12,6,0,foundation_plus
