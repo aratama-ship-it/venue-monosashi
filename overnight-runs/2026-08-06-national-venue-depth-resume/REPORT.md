@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 5 is ready for final repository validation and public deployment.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 6 is ready for final repository validation and public deployment.
 
 ## Changes
 
@@ -20,11 +20,13 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Aomori facilities and 34 searchable spaces, increasing the national total to 495 facilities and 1,652 spaces. The sources are the official pages of 平川市, 六ヶ所村文化交流プラザ スワニー, むつ市, and 藤崎町.
 - Retained stage-height and approximate-seat statements as notes only. No new Aomori ceiling height or approximate capacity entered a numeric filter.
 - Deployed the validated Wave 5 data to the existing public site (version 50) and confirmed the established custom domain returned the site response.
+- Added four official-source-backed Tochigi facilities and 23 searchable spaces, increasing the national total to 499 facilities and 1,675 spaces. The sources are the official pages of 那須塩原市、KOBELCO 真岡いちごホール指定管理者、さくら市、大田原市. Wave 6 is ready for final repository validation and public deployment.
+- Retained 真岡いちごホールの舞台高さ as a note only; it was not entered as a ceiling measurement.
 
 ## Verification
 
-- Wave audit passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 495 venues and 2,823 price observations.
-- Current depth report: 680 candidate gaps and 802 space gaps. Aomori is 12 candidates, 10 municipalities, and 63 spaces; Tochigi, Toyama, Fukui, Aichi, Kyoto, Hyogo, Shimane, Kagawa, Fukuoka, and Nagasaki now form the lowest candidate-depth group at 8 candidates.
+- Wave audit passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 499 venues and 2,823 price observations.
+- Current depth report: 676 candidate gaps and 779 space gaps. Tochigi is 12 candidates, 10 municipalities, and 43 spaces; Toyama, Fukui, Aichi, Kyoto, Hyogo, Shimane, Kagawa, Fukuoka, Nagasaki, and Okinawa now form the lowest candidate-depth group at 8 candidates.
 
 ## Pre-existing State Preserved
 
