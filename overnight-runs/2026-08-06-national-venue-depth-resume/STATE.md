@@ -71,7 +71,8 @@
 
 - Wave 23 source data: added four official-source-backed Gifu facilities — 岐阜市文化センター（岐阜市）、ぎふしんフォーラム（岐阜市）、じゅうろくプラザ（岐阜市）、大垣市スイトピアセンター（大垣市） — and 36 independently searchable spaces. Gifu is now 14 candidates, 8 municipalities, and 81 spaces.
 - Official sources: 岐阜市、じゅうろくプラザ公式運営者、大垣市. The じゅうろくプラザ 600-seat hall and 240-seat large meeting room, and the スイトピアセンター 589-seat culture hall, were recorded from official pages. No ceiling or price observation was added; all unreported area, ceiling, loading, and current availability remain `要確認`.
-- Wave 23 verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, and `git diff --check` all passed with only the pre-existing historical-event warning. `npm run validate` and public deployment remain to be completed for this wave.
+- Wave 23 verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
+- Wave 23 deployment passed: production version 68 was deployed successfully; `https://venue.art-monosashi.com/?release=547b19f` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 - Wave 21 source data: added four official-source-backed Kanagawa facilities — 厚木市文化会館（厚木市）、カルッツかわさき（川崎市）、鎌倉芸術館（鎌倉市）、小田原三の丸ホール（小田原市） — and 68 independently searchable spaces. Kanagawa is now 14 candidates, 7 municipalities, and 93 spaces.
 - Official sources: 厚木市、カルッツかわさき公式運営者、鎌倉芸術館公式運営者、小田原三の丸ホール公式運営者. Explicit room ceiling values were recorded only for カルッツかわさき（アクトスタジオ4.5m、大会議室3.0m、中会議室3.0m、小会議室2.8m）. Stage dimensions at the halls remain notes only and no price observation was added.
@@ -113,7 +114,7 @@
 
 ## Next Action
 
-- Complete validation and deployment for Wave 23, then research one bounded official-source wave for the next lowest candidate-depth prefecture from the regenerated report: 和歌山県、広島県、高知県、佐賀県、熊本県、鹿児島県 are tied at 10 candidates.
+- Research one bounded official-source wave for the next lowest candidate-depth prefecture from the regenerated report: 和歌山県、広島県、高知県、佐賀県、熊本県、鹿児島県 are tied at 10 candidates.
 
 ## Blockers
 

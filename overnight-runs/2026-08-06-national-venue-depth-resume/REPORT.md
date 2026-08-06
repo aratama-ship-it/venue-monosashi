@@ -75,7 +75,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Deployed Wave 22 to the existing public site (version 67); `https://venue.art-monosashi.com/?release=8606ba2` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 - Added four official-source-backed Gifu facilities — 岐阜市文化センター、ぎふしんフォーラム（岐阜市民会館）、じゅうろくプラザ、大垣市スイトピアセンター — and 36 searchable spaces, increasing the national total to 567 facilities and 2,211 spaces. Sources are the official pages of 岐阜市、じゅうろくプラザ公式運営者、大垣市.
 - Recorded only explicit official capacities: じゅうろくプラザ多目的ホール600席、大会議室240席、スイトピアセンター文化ホール589席. No ceiling or price value was inferred; unreported area, ceiling, loading, and availability remain `要確認`.
-- Wave 23 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Public deployment remains to be completed for this wave.
+- Wave 23 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Production version 68 was deployed and `https://venue.art-monosashi.com/?release=547b19f` returned the established site marker. Tracked `web/dist` output was restored.
 
 ## Verification
 
