@@ -27,6 +27,7 @@ type VenueRoleSource = {
   }>;
 };
 type VenueSpace = (typeof venueData.venues)[number]["spaces"][number];
+type VenueRecord = (typeof venueData.venues)[number];
 type SmallTheaterLedgerItem = {
   id: string;
   indexName: string;
@@ -211,6 +212,13 @@ const unitLabels: Record<string, string> = {
   estimate: "参考目安",
 };
 
+const dayTypeLabels: Record<string, string> = {
+  all: "曜日共通",
+  current_all: "全日",
+  weekday: "平日",
+  weekend_holiday: "土日祝",
+};
+
 const useCaseLabels: Record<string, string> = {
   all: "用途共通",
   amateur_sports: "アマチュアスポーツ",
@@ -318,8 +326,88 @@ function priceLabel(value: number | null) {
   return `¥${yen.format(value)}〜`;
 }
 
+function spacePriceSummary(
+  venue: VenueRecord,
+  spaceId: string,
+  feeClass: FeeClass,
+  priceDayType: PriceDayType,
+) {
+  const officialDaily = venue.priceObservations
+    .filter(
+      (price) =>
+        price.spaceId === spaceId &&
+        price.category === "facility" &&
+        price.unit === "per_day" &&
+        price.amount !== null &&
+        !price.useCase.includes("setup") &&
+        priceMatchesConditions(
+          price.useCase,
+          price.dayType,
+          feeClass,
+          priceDayType,
+        ),
+    )
+    .map((price) => ({ amount: price.amount, kind: "公式日額" }));
+  const derivedDaily = venue.budgetScenarios
+    .filter(
+      (scenario) =>
+        scenario.spaceId === spaceId &&
+        scenario.amount !== null &&
+        priceMatchesConditions(
+          scenario.useCase,
+          scenario.dayType,
+          feeClass,
+          priceDayType,
+        ),
+    )
+    .map((scenario) => ({ amount: scenario.amount, kind: "区分合計の参考額" }));
+  const daily = [...officialDaily, ...derivedDaily].sort(
+    (a, b) => a.amount - b.amount,
+  )[0];
+
+  if (daily) {
+    return {
+      value: priceLabel(daily.amount),
+      note: daily.kind,
+      known: true,
+    };
+  }
+
+  const observedCount = venue.priceObservations.filter(
+    (price) =>
+      price.spaceId === spaceId &&
+      priceMatchesConditions(
+        price.useCase,
+        price.dayType,
+        feeClass,
+        priceDayType,
+      ),
+  ).length;
+
+  if (observedCount > 0) {
+    return {
+      value: `${observedCount}件観測`,
+      note: "日額は要確認",
+      known: false,
+    };
+  }
+
+  return {
+    value: "要確認",
+    note:
+      feeClass !== "all" || priceDayType !== "all"
+        ? "選択条件の料金未観測"
+        : "料金未観測",
+    known: false,
+  };
+}
+
 function numberLabel(value: number | null, suffix: string) {
   return value === null ? "要確認" : `${yen.format(value)}${suffix}`;
+}
+
+function textOrConfirm(value: string | null | undefined) {
+  return value && value !== "unknown" ? value : "要確認";
 }
 
 function displayDate(value: string | null) {
@@ -1656,8 +1744,7 @@ export function VenueSearch() {
                       </a>
                     </div>
 
-                    {venue.spaces.length > 0 && (
-                      <details className="evidence-drawer space-drawer">
+                    <details className="evidence-drawer space-drawer">
                         <summary>
                           <span>区画ごとの情報を見る</span>
                           <span className="drawer-count">
@@ -1673,49 +1760,77 @@ export function VenueSearch() {
                                 <th>面積</th>
                                 <th>収容</th>
                                 <th>高さ</th>
+                                <th>確認日額</th>
                                 <th>補足・出典</th>
                               </tr>
                             </thead>
                             <tbody>
-                              {venue.spaces.map((space) => {
-                                const height = spaceHeightLabel(space);
-                                return (
-                                  <tr key={space.id}>
-                                    <td>
-                                      <strong>{space.name}</strong>
-                                      <small>
-                                        {spaceTypeLabels[space.type] ?? space.type}
-                                      </small>
-                                    </td>
-                                    <td className="amount">
-                                      {numberLabel(space.area, "㎡")}
-                                    </td>
-                                    <td>{spaceCapacityLabel(space)}</td>
-                                    <td className="amount">
-                                      {height.value}
-                                      <small>{height.kind}</small>
-                                    </td>
-                                    <td>
-                                      <small>{space.note ?? "補足情報なし"}</small>
-                                      <small>
-                                        <a href={space.sourceUrl} rel="noreferrer" target="_blank">
-                                          区画の公式情報 ↗
-                                        </a>
-                                      </small>
-                                    </td>
-                                  </tr>
-                                );
-                              })}
+                              {venue.spaces.length > 0 ? (
+                                venue.spaces.map((space) => {
+                                  const height = spaceHeightLabel(space);
+                                  const price = spacePriceSummary(
+                                    venue,
+                                    space.id,
+                                    feeClass,
+                                    priceDayType,
+                                  );
+                                  return (
+                                    <tr key={space.id}>
+                                      <td>
+                                        <strong>{space.name}</strong>
+                                        <small>
+                                          {spaceTypeLabels[space.type] ?? space.type}
+                                        </small>
+                                      </td>
+                                      <td className="amount">
+                                        {numberLabel(space.area, "㎡")}
+                                      </td>
+                                      <td>{spaceCapacityLabel(space)}</td>
+                                      <td className="amount">
+                                        {height.value}
+                                        <small>{height.kind}</small>
+                                      </td>
+                                      <td className={`amount ${price.known ? "" : "unknown"}`}>
+                                        {price.value}
+                                        <small>{price.note}</small>
+                                      </td>
+                                      <td>
+                                        <small>{space.note ?? "補足情報は要確認"}</small>
+                                        <small>
+                                          <a href={space.sourceUrl} rel="noreferrer" target="_blank">
+                                            区画の公式情報 ↗
+                                          </a>
+                                        </small>
+                                      </td>
+                                    </tr>
+                                  );
+                                })
+                              ) : (
+                                <tr className="unknown-row">
+                                  <td>
+                                    <strong>区画未調査</strong>
+                                    <small>貸出区画の公式確認が必要</small>
+                                  </td>
+                                  <td className="amount unknown">要確認</td>
+                                  <td className="unknown">要確認</td>
+                                  <td className="amount unknown">要確認</td>
+                                  <td className="amount unknown">要確認</td>
+                                  <td>
+                                    <small>公式施設案内・図面・料金表を要確認</small>
+                                    <small>
+                                      <a href={venue.sourceUrl} rel="noreferrer" target="_blank">
+                                        施設の公式情報 ↗
+                                      </a>
+                                    </small>
+                                  </td>
+                                </tr>
+                              )}
                             </tbody>
                           </table>
                         </div>
                       </details>
-                    )}
 
-                    {(venue.priceObservations.length > 0 ||
-                      venue.budgetScenarios.length > 0 ||
-                      venue.operation) && (
-                      <details className="evidence-drawer">
+                    <details className="evidence-drawer">
                         <summary>
                           <span>観測した料金・運用を確認</span>
                           <span className="drawer-count">
@@ -1725,7 +1840,8 @@ export function VenueSearch() {
                           </span>
                         </summary>
 
-                        {venue.priceObservations.length > 0 && (
+                        {(venue.priceObservations.length > 0 ||
+                          venue.budgetScenarios.length > 0) ? (
                           <div className="price-table-wrap">
                             <table className="price-table">
                               <thead>
@@ -1763,7 +1879,7 @@ export function VenueSearch() {
                                       <small>
                                         {useCaseLabels[price.useCase] ??
                                           price.useCase}{" "}
-                                        · {price.dayType} / {price.timeBand}
+                                        · {dayTypeLabels[price.dayType] ?? price.dayType} / {price.timeBand}
                                       </small>
                                     </td>
                                     <td>{price.exclusions || "記載なし"}</td>
@@ -1792,7 +1908,7 @@ export function VenueSearch() {
                                     <td>
                                       {scenario.label}
                                       <small>
-                                        {scenario.dayType} / {scenario.timeSpan}
+                                        {dayTypeLabels[scenario.dayType] ?? scenario.dayType} / {scenario.timeSpan}
                                         {" · "}
                                         {scenario.componentPriceIds
                                           .map(
@@ -1811,15 +1927,19 @@ export function VenueSearch() {
                               </tbody>
                             </table>
                           </div>
+                        ) : (
+                          <p className="drawer-empty">
+                            区画別の公式料金は未観測です。営利・非営利、曜日、入場料、付帯設備を含む条件は要確認です。
+                          </p>
                         )}
 
-                        {venue.operation && (
-                          <div className="operation-grid">
+                        <div className="operation-grid">
                             <div>
                               <span>駅・徒歩</span>
                               <strong>
-                                {venue.operation.station ?? "要確認"}
-                                {venue.operation.walkMinutes !== null
+                                {textOrConfirm(venue.operation?.station)}
+                                {venue.operation?.walkMinutes !== null &&
+                                venue.operation?.walkMinutes !== undefined
                                   ? `　約${venue.operation.walkMinutes}分`
                                   : ""}
                               </strong>
@@ -1827,13 +1947,14 @@ export function VenueSearch() {
                             <div>
                               <span>空港・広域交通</span>
                               <strong>
-                                {venue.operation.airportAccess ?? "要確認"}
+                                {textOrConfirm(venue.operation?.airportAccess)}
                               </strong>
                             </div>
                             <div>
                               <span>駐車</span>
                               <strong>
-                                {venue.operation.parkingSpaces !== null
+                                {venue.operation?.parkingSpaces !== null &&
+                                venue.operation?.parkingSpaces !== undefined
                                   ? `${yen.format(venue.operation.parkingSpaces)}台`
                                   : "要確認"}
                               </strong>
@@ -1841,7 +1962,8 @@ export function VenueSearch() {
                             <div>
                               <span>予約開始</span>
                               <strong>
-                                {venue.operation.bookingOpenMonths !== null
+                                {venue.operation?.bookingOpenMonths !== null &&
+                                venue.operation?.bookingOpenMonths !== undefined
                                   ? `${venue.operation.bookingOpenMonths}か月前`
                                   : "区画・用途別に要確認"}
                               </strong>
@@ -1849,19 +1971,17 @@ export function VenueSearch() {
                             <div>
                               <span>搬入</span>
                               <strong>
-                                {venue.operation.loadingAccess ?? "要確認"}
+                                {textOrConfirm(venue.operation?.loadingAccess)}
                               </strong>
                             </div>
                             <div>
                               <span>通信</span>
                               <strong>
-                                {venue.operation.networkPolicy ?? "要確認"}
+                                {textOrConfirm(venue.operation?.networkPolicy)}
                               </strong>
                             </div>
                           </div>
-                        )}
                       </details>
-                    )}
                   </div>
                 </article>
               ))}

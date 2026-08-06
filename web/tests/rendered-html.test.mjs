@@ -32,6 +32,10 @@ test("server-renders the venue search shell", async () => {
     new URL("../app/generated-data.ts", import.meta.url),
     "utf8",
   );
+  const venueSearchSource = await readFile(
+    new URL("../app/venue-search.tsx", import.meta.url),
+    "utf8",
+  );
   const candidateCount = candidateCsv.trim().split(/\r?\n/).length - 1;
   const response = await render();
   assert.equal(response.status, 200);
@@ -100,6 +104,13 @@ test("server-renders the venue search shell", async () => {
   );
   assert.match(generatedData, /"amount": 288320/);
   assert.match(html, /区画ごとの情報を見る/);
+  assert.equal([...html.matchAll(/区画ごとの情報を見る/g)].length, 40);
+  assert.equal([...html.matchAll(/観測した料金・運用を確認/g)].length, 40);
+  assert.match(html, /確認日額/);
+  assert.match(html, /選択条件の料金未観測|料金未観測/);
+  assert.match(venueSearchSource, /区画別の公式料金は未観測です/);
+  assert.match(venueSearchSource, /貸出区画の公式確認が必要/);
+  assert.doesNotMatch(html, /<strong>unknown<\/strong>/);
   assert.match(html, /aria-label="確認済み天井高の下限"/);
   assert.match(html, /最高部・中央高・舞台開口は除外しています/);
   assert.doesNotMatch(html, /高投げ可否/);

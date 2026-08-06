@@ -794,8 +794,28 @@ a {
   font-weight: 700;
 }
 
+.price-table .amount.unknown,
+.price-table .unknown {
+  color: var(--rust);
+}
+
+.price-table .unknown-row td {
+  background: rgba(182, 63, 40, 0.035);
+}
+
+.drawer-empty {
+  margin: 0;
+  padding: 12px;
+  border: 1px solid var(--line-light);
+  background: rgba(182, 63, 40, 0.035);
+  color: var(--rust);
+  font-size: 0.68rem;
+  font-weight: 650;
+  line-height: 1.65;
+}
+
 .space-table {
-  min-width: 840px;
+  min-width: 960px;
 }
 
 .space-table td:first-child {
