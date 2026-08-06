@@ -142,6 +142,7 @@
 - Wave 37 source data: added four official-source-backed Chiba facilities — 浦安市文化会館（浦安市）、東金文化会館（東金市）、千葉県東総文化会館（旭市）、白井市文化会館（白井市） — and 24 independently searchable spaces. Chiba is now 15 candidates, 14 municipalities, and 68 spaces.
 - Official sources: 浦安市、東金市、旭市、白井市。Explicit capacities and floor areas only were recorded. No ceiling or price observation was added; published stage heights and all unreported conditions remain `要確認`.
 - Wave 37 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-record warning. Public deployment remains to be completed for this wave.
+- Wave 37 deployment passed: production version 82 was deployed successfully from commit `e1e3e7706b449d4370ea9676d42407ef3f4cd496`; the Sites URL and `https://venue.art-monosashi.com/?release=e1e3e77` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 - Wave 21 source data: added four official-source-backed Kanagawa facilities — 厚木市文化会館（厚木市）、カルッツかわさき（川崎市）、鎌倉芸術館（鎌倉市）、小田原三の丸ホール（小田原市） — and 68 independently searchable spaces. Kanagawa is now 14 candidates, 7 municipalities, and 93 spaces.
 - Official sources: 厚木市、カルッツかわさき公式運営者、鎌倉芸術館公式運営者、小田原三の丸ホール公式運営者. Explicit room ceiling values were recorded only for カルッツかわさき（アクトスタジオ4.5m、大会議室3.0m、中会議室3.0m、小会議室2.8m）. Stage dimensions at the halls remain notes only and no price observation was added.
