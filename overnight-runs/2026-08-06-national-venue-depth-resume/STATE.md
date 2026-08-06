@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-06 Asia/Tokyo
-- Current wave: Wave 12 — Shimane official-source expansion, validated and awaiting deployment.
+- Current wave: Wave 13 — Kagawa official-source expansion.
 
 ## Baseline
 
@@ -56,15 +56,16 @@
 - Wave 11 source data: added four Hyogo candidates — 西宮市民会館（アミティ・ベイコムホール）（西宮市）、明石市立市民会館（アワーズホール）（明石市）、明石市立西部市民会館（明石市）、ライフピアいちじま大ホール（丹波市） — and 23 independently searchable spaces. Hyogo is now 12 candidates, 6 municipalities, and 53 spaces. Official sources: 西宮市文化振興財団の施設案内、明石市の現行貸しホール・貸室一覧、丹波市のライフピアいちじま大ホール施設概要.
 - No Hyogo ceiling value was added to the searchable filter. All new room ceiling values remain unknown; no stage, proscenium, or building-height statement was used as a ceiling value. Wave 11 verification and deployment: `npm run validate`, audit, depth-report generation, app-data generation, and whitespace check passed (the pre-existing historical-event warning only); production version 56 deployed successfully and the established `venue.art-monosashi.com` endpoint returned the site response.
 
+- Wave 12 source data: added four Shimane candidates — 島根県芸術文化センター グラントワ（益田市）、安来市総合文化ホール アルテピア（安来市）、加茂文化ホール ラメール（雲南市）、石央文化ホール（浜田市） — and 22 independently searchable spaces. Shimane is now 12 candidates, 6 municipalities, and 37 spaces. Official sources: グラントワ公式運営者、安来市とアルテピア指定管理者、雲南市とラメール指定管理者、浜田市.
+- Only グラントワ多目的ギャラリーの公式「天井の高さ」3.7m was added to the searchable filter. Other new space ceiling values remain unknown; no stage, proscenium, or building-height statement was used as a ceiling value. Wave 12 verification and deployment: `npm run validate`, audit, depth-report generation, app-data generation, and whitespace check passed (the pre-existing historical-event warning only); production version 57 deployed successfully and the established `venue.art-monosashi.com` endpoint returned the site response.
+
 ## Current Wave
 
-- Wave 12 source data: added four Shimane candidates — 島根県芸術文化センター グラントワ（益田市）、安来市総合文化ホール アルテピア（安来市）、加茂文化ホール ラメール（雲南市）、石央文化ホール（浜田市） — and 22 independently searchable spaces. Shimane is now 12 candidates, 6 municipalities, and 37 spaces.
-- Official sources: グラントワ公式運営者、安来市とアルテピア指定管理者、雲南市とラメール指定管理者、浜田市。多目的ギャラリー以外の最低天井高と料金に直接根拠がない区画は追加せず、要確認のままとした。
-- Wave verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. Audit has 0 errors and the pre-existing historical-event warning only.
+- Wave 13 objective: add a bounded set of official-source-backed Kagawa facilities and independently searchable spaces. Kagawa is in the lowest candidate-depth group at 8 candidates, 4 municipalities, and 15 spaces; confirm current depth before editing and preserve unknown ceilings and pricing as `要確認`.
 
 ## Next Action
 
-- Commit and deploy the validated Wave 12 source, verify the public custom domain, then select Kagawa (8 candidates, 4 municipalities, 15 spaces) as the next lowest-depth wave.
+- Research and complete one bounded Kagawa official-source wave, then run the required generation, audit, depth report, validation, public deployment, and endpoint verification sequence.
 
 ## Blockers
 
