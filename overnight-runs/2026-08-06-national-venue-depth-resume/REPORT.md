@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 8 is published; the next bounded wave targets Aichi.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 9 is ready for final repository validation and public deployment.
 
 ## Changes
 
@@ -29,11 +29,13 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Fukui facilities and 48 searchable spaces, increasing the national total to 507 facilities and 1,755 spaces. The sources are the official pages of 坂井市、あわら市、若狭町、高浜町.
 - No stage-height, proscenium, or building-height statement was converted to a searchable ceiling value. Approximate capacities remain notes only.
 - Validated and deployed Wave 8 to the existing public site (version 53); the established custom domain returned the site response.
+- Added four official-source-backed Aichi facilities and 49 searchable spaces, increasing the national total to 511 facilities and 1,804 spaces. The sources are the official pages of 豊川市、刈谷市、碧南市 and the respective official facility operators. Wave 9 is ready for final repository validation and public deployment.
+- No stage opening, grid, or room-height value was converted to a searchable ceiling measurement.
 
 ## Verification
 
-- Wave audit passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 507 venues and 2,823 price observations.
-- Current depth report: 668 candidate gaps and 712 space gaps. Fukui is 12 candidates, 9 municipalities, and 64 spaces; Aichi, Kyoto, Hyogo, Shimane, Kagawa, Fukuoka, Nagasaki, Okinawa, Niigata, and Okayama now form the lowest candidate-depth group at 8 candidates.
+- Wave audit passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 511 venues and 2,823 price observations.
+- Current depth report: 664 candidate gaps and 676 space gaps. Aichi is 12 candidates, 8 municipalities, and 64 spaces; Kyoto, Hyogo, Shimane, Kagawa, Fukuoka, Nagasaki, and Okinawa now form the lowest candidate-depth group at 8 candidates.
 
 ## Pre-existing State Preserved
 
