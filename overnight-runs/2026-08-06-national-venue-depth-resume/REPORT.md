@@ -96,6 +96,9 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Recorded only explicit official capacities and area values; no ceiling or price value was inferred. 指宿市の令和8年度料金改定案内は候補注記に残し、価格台帳への区画別観測は未追加。舞台寸法は天井高に使用していない。
 - Wave 29 local source validation passed with 0 audit errors and the pre-existing historical-record warning only. Public deployment remains to be completed for this wave.
 - Wave 29 validation passed with 0 audit errors and the pre-existing historical-record warning only. Production version 74 was deployed and `https://venue.art-monosashi.com/?release=1acf2eb` returned the established site marker. Tracked `web/dist` output was restored after deployment.
+- Added four official-source-backed Iwate facilities — 二戸市民文化会館、陸前高田市民文化会館「奇跡の一本松ホール」、八幡平市立松尾コミュニティセンター、大船渡市民文化会館（リアスホール） — and 36 independently searchable spaces, increasing the national total to 595 facilities and 2,392 spaces. Sources are the official pages of 二戸市、陸前高田市、八幡平市、大船渡市.
+- Recorded only explicit official capacities and floor areas; no ceiling or price value was inferred. Stage, proscenium, and building heights remain notes only, and all unreported conditions remain `要確認`.
+- Wave 30 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Public deployment and custom-domain verification remain to be completed for this wave.
 
 ## Verification
 
