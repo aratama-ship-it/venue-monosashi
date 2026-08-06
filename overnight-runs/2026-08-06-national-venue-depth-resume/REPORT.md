@@ -129,6 +129,9 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Recorded only explicit capacities and floor areas; no ceiling or price value was inferred. Published stage heights remain descriptive notes only, and all unreported conditions remain `要確認`.
 - Wave 37 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Chiba is now 15 candidates, 14 municipalities, and 68 spaces; national remaining deficits are 552 candidates and 237 spaces. Public deployment and custom-domain verification remain to be completed for this wave.
 - Wave 37 validation and deployment passed: production version 82 was deployed successfully from commit `e1e3e7706b449d4370ea9676d42407ef3f4cd496`; the Sites URL and `https://venue.art-monosashi.com/?release=e1e3e77` returned the established site marker. Tracked `web/dist` output was restored after deployment.
+- Added four official-source-backed Ishikawa facilities — 野々市市文化会館フォルテ、内灘町文化会館、かほく市高松産業文化センター、富来活性化センター — and 24 searchable spaces, increasing the national total to 627 facilities and 2,608 spaces. Sources are the official pages and documents of 野々市市、内灘町、かほく市、志賀町.
+- Recorded only explicit capacities and floor areas; no ceiling or price value was inferred. Published stage heights remain descriptive notes only, and all unreported conditions remain `要確認`.
+- Wave 38 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Ishikawa is now 15 candidates, 13 municipalities, and 62 spaces; national remaining deficits are 548 candidates and 224 spaces. Public deployment and custom-domain verification remain to be completed for this wave.
 
 ## Verification
 
