@@ -4,12 +4,12 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-06 Asia/Tokyo
-- Current wave: Wave 22 — Nagano official-source expansion.
+- Current wave: Wave 23 — Gifu official-source expansion.
 
 ## Baseline
 
 - Git branch and commit: `agent/add-competition-and-small-theater-coverage` at `5c0946bc6e73c553c168f3f8b13468e64790da72`.
-- Data counts: 563 candidate facilities, 2,175 searchable spaces, 2,823 price observations, and 222 operation rows.
+- Data counts: 567 candidate facilities, 2,211 searchable spaces, 2,823 price observations, and 222 operation rows.
 - Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 612 candidates and 405 spaces; municipality deficit is measured by the generated report.
 - Canonical hashes: `candidate-venues.csv` `0a83a784dceea38a3a146587e2457c44fc7403ffbe9c62186a3ca4532f902933`; `venue-details.csv` `2afd5815ea595527bbec8b100daf097684c20a8fefcb18ba32fee82ca49885e1`; `price-observations.csv` `640b4afc3d607a7b796818d49334bf2f56fb303745a92ad8b759b10158e2e396`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
@@ -69,6 +69,10 @@
 - Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
 - Wave 22 deployment passed: production version 67 was deployed successfully; `https://venue.art-monosashi.com/?release=8606ba2` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
+- Wave 23 source data: added four official-source-backed Gifu facilities — 岐阜市文化センター（岐阜市）、ぎふしんフォーラム（岐阜市）、じゅうろくプラザ（岐阜市）、大垣市スイトピアセンター（大垣市） — and 36 independently searchable spaces. Gifu is now 14 candidates, 8 municipalities, and 81 spaces.
+- Official sources: 岐阜市、じゅうろくプラザ公式運営者、大垣市. The じゅうろくプラザ 600-seat hall and 240-seat large meeting room, and the スイトピアセンター 589-seat culture hall, were recorded from official pages. No ceiling or price observation was added; all unreported area, ceiling, loading, and current availability remain `要確認`.
+- Wave 23 verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, and `git diff --check` all passed with only the pre-existing historical-event warning. `npm run validate` and public deployment remain to be completed for this wave.
+
 - Wave 21 source data: added four official-source-backed Kanagawa facilities — 厚木市文化会館（厚木市）、カルッツかわさき（川崎市）、鎌倉芸術館（鎌倉市）、小田原三の丸ホール（小田原市） — and 68 independently searchable spaces. Kanagawa is now 14 candidates, 7 municipalities, and 93 spaces.
 - Official sources: 厚木市、カルッツかわさき公式運営者、鎌倉芸術館公式運営者、小田原三の丸ホール公式運営者. Explicit room ceiling values were recorded only for カルッツかわさき（アクトスタジオ4.5m、大会議室3.0m、中会議室3.0m、小会議室2.8m）. Stage dimensions at the halls remain notes only and no price observation was added.
 - Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
@@ -109,7 +113,7 @@
 
 ## Next Action
 
-- Research one bounded official-source wave for the next lowest candidate-depth prefecture from the regenerated report: 岐阜県、和歌山県、広島県、高知県、佐賀県、熊本県、鹿児島県 are tied at 10 candidates.
+- Complete validation and deployment for Wave 23, then research one bounded official-source wave for the next lowest candidate-depth prefecture from the regenerated report: 和歌山県、広島県、高知県、佐賀県、熊本県、鹿児島県 are tied at 10 candidates.
 
 ## Blockers
 

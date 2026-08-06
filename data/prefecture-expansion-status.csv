@@ -19,7 +19,7 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 福井県,北陸,12,9,64,20,4,0,13,6,0,foundation_plus
 山梨県,甲信越,11,10,50,26,38,2,14,5,1,foundation_plus
 長野県,甲信越,14,12,74,34,45,8,11,3,0,foundation_plus
-岐阜県,東海,10,8,45,38,28,2,15,7,6,foundation_plus
+岐阜県,東海,14,8,81,41,28,2,11,7,0,foundation_plus
 静岡県,東海,11,8,43,22,20,10,14,7,8,foundation_plus
 愛知県,東海,12,8,64,37,38,6,13,7,0,foundation_plus
 三重県,東海,25,15,79,49,48,22,0,0,0,reference_depth
