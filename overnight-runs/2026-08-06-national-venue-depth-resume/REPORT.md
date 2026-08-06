@@ -95,6 +95,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Kagoshima facilities — 指宿市民会館、末吉総合センター、奄美川商ホール（奄美振興会館）、姶良市文化会館 加音ホール — and 32 independently searchable spaces, increasing the national total to 591 facilities and 2,356 spaces. Sources are the official pages of 指宿市、曽於市、奄美市、鹿児島県.
 - Recorded only explicit official capacities and area values; no ceiling or price value was inferred. 指宿市の令和8年度料金改定案内は候補注記に残し、価格台帳への区画別観測は未追加。舞台寸法は天井高に使用していない。
 - Wave 29 local source validation passed with 0 audit errors and the pre-existing historical-record warning only. Public deployment remains to be completed for this wave.
+- Wave 29 validation passed with 0 audit errors and the pre-existing historical-record warning only. Production version 74 was deployed and `https://venue.art-monosashi.com/?release=1acf2eb` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 ## Verification
 
