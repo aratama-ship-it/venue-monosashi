@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 16 is published; the next bounded wave targets Niigata.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 17 is validated and awaiting public deployment; the next bounded wave targets Okayama.
 
 ## Changes
 
@@ -53,11 +53,13 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Okinawa facilities — 那覇市中央公民館、那覇市ぶんかテンブス館、うるま市石川会館、うるま市きむたかホール — and 8 searchable spaces, increasing the national total to 539 facilities and 1,958 spaces. The sources are the official pages of 那覇市 and うるま市.
 - No Okinawa ceiling or price values were inferred or added. New space conditions remain explicitly `要確認`; approximate capacities and stage/building statements were not used as ceiling measurements.
 - Validated and deployed Wave 16 to the existing public site (version 61); the established custom domain returned the site marker for the deployed source revision.
+- Added four official-source-backed Niigata facilities — 青海総合文化会館（きらら青海）、さくらんど会館、五泉市総合会館、加茂文化会館 — and 16 searchable spaces, increasing the national total to 543 facilities and 1,974 spaces. The sources are the official pages of 糸魚川市、五泉市、加茂市.
+- No Niigata ceiling or price values were inferred or added. New space conditions remain explicitly `要確認`; the Aomi stage-height range and sports-hall dimensions were not used as ceiling measurements.
 
 ## Verification
 
 - Wave 14 audit and validation passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 531 venues and 2,823 price observations.
-- Current depth report: 636 candidate gaps and 545 space gaps. Okinawa is 12 candidates, 7 municipalities, and 26 spaces; Niigata is now the lowest candidate-depth prefecture at 9 candidates.
+- Current depth report: 632 candidate gaps and 529 space gaps. Niigata is 13 candidates, 10 municipalities, and 40 spaces; Okayama is now the lowest candidate-depth prefecture at 9 candidates.
 
 ## Pre-existing State Preserved
 

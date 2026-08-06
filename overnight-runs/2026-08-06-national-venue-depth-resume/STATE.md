@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-06 Asia/Tokyo
-- Current wave: Wave 17 — Niigata official-source expansion.
+- Current wave: Wave 17 — Niigata official-source expansion, validated and awaiting deployment.
 
 ## Baseline
 
@@ -72,6 +72,9 @@
 - No Okinawa ceiling value or price observation was added. All new ceiling, price, loading, and availability attributes remain `要確認`; approximate capacities and stage/building dimensions were not converted into ceiling data.
 - Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
 - Wave 16 deployment passed: production version 61 was deployed successfully, and `https://venue.art-monosashi.com/?release=c2daae4` returned the established site marker.
+- Wave 17 source data: added four Niigata candidates — 青海総合文化会館（きらら青海）（糸魚川市）、さくらんど会館（五泉市）、五泉市総合会館（五泉市）、加茂文化会館（加茂市） — and 16 independently searchable spaces. Niigata is now 13 candidates, 10 municipalities, and 40 spaces. Official sources: 糸魚川市、五泉市、加茂市.
+- No Niigata ceiling value or price observation was added. All new ceiling, price, loading, and availability attributes remain `要確認`; the Aomi stage-height range and sports-hall dimensions were not converted into ceiling data.
+- Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
 - Wave 14 deployment passed: production version 59 was deployed successfully, and `https://venue.art-monosashi.com/?release=dfbcb27` returned the established site marker.
 - Wave 15 source data: added four Nagasaki candidates — メモリード・シーハットおおむら（大村市）、長崎市民会館（長崎市）、長崎市平和会館（長崎市）、長崎市三和公民館（長崎市） — and 15 independently searchable spaces. Nagasaki is now 12 candidates, 6 municipalities, and 34 spaces. Official sources: 大村市、長崎市.
 - No Nagasaki ceiling value or price observation was added. All new ceiling, price, loading, and availability attributes remain `要確認`; stage dimensions, building dimensions, and maximum layout capacities were not converted into ceiling data.
@@ -79,7 +82,7 @@
 
 ## Next Action
 
-- Research and complete one bounded Niigata official-source wave, then run the required generation, audit, depth report, validation, public deployment, and endpoint verification sequence. Niigata currently has 9 candidates, 7 municipalities, and 24 spaces.
+- Commit and deploy the validated Niigata source-data wave, verify the public custom domain, then target the next lowest-depth prefecture, Okayama (9 candidates, 6 municipalities, 28 spaces).
 
 ## Blockers
 
