@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 18 is published; the next bounded wave targets Ehime.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 19 Ehime is validated locally and awaits public deployment; the next bounded wave targets Hokkaido.
 
 ## Changes
 
@@ -59,11 +59,13 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Okayama facilities — 津山文化センター、津山市勝北文化センター、美作文化センター、玉野市立中央公民館 — and 28 searchable spaces, increasing the national total to 547 facilities and 2,002 spaces. The sources are the official pages of 津山市・津山文化センター運営者、美作市、玉野市.
 - No Okayama ceiling or price values were inferred or added. New space conditions remain explicitly `要確認`; stage or building statements were not used as ceiling measurements.
 - Validated and deployed Wave 18 to the existing public site (version 63); the established custom domain returned the site marker for the deployed source revision.
+- Added four official-source-backed Ehime facilities — 松山市民会館、西条市総合文化会館、宇和島市立南予文化会館、宇和島市立コスモスホール三間 — and 35 searchable spaces, increasing the national total to 551 facilities and 2,037 spaces. The sources are the official pages of 松山市、西条市総合文化会館運営者、宇和島市.
+- Recorded closure/reconstruction constraints as notes only: 松山市民会館 has a published FY2027-end closure policy, and 南予文化会館 is closed during ongoing ceiling renovation. No new Ehime ceiling or price value was inferred or added; stage dimensions were not converted to ceiling measurements.
 
 ## Verification
 
 - Wave 14 audit and validation passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 531 venues and 2,823 price observations.
-- Current depth report: 628 candidate gaps and 506 space gaps. Okayama is 13 candidates, 9 municipalities, and 56 spaces; Ehime is now the lowest candidate-depth prefecture at 9 candidates.
+- Current depth report: 624 candidate gaps and 478 space gaps. Ehime is now 13 candidates, 8 municipalities, and 58 spaces; Hokkaido is the lowest candidate-depth prefecture at 10 candidates, 4 municipalities, and 14 spaces.
 
 ## Pre-existing State Preserved
 
