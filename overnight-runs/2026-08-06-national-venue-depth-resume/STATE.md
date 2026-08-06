@@ -132,6 +132,7 @@
 - Wave 35 source data: added four official-source-backed Gunma facilities — 玉村町文化センター（玉村町）、安中市文化センター（安中市）、旧日本基督教団沼田教会紀念会堂（沼田市）、前橋市中央公民館（前橋市） — and 27 independently searchable spaces. Gunma is now 15 candidates, 13 municipalities, and 75 spaces.
 - Official sources: 玉村町、安中市、沼田市、前橋市. Explicit capacities and floor areas were recorded only where the official sources stated them; no ceiling or price observation was inferred. Stage dimensions remain notes only, and all unreported conditions remain `要確認`.
 - Wave 35 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-record warning. Public deployment remains to be completed for this wave.
+- Wave 35 deployment passed: production version 80 was deployed successfully; the Sites URL and `https://venue.art-monosashi.com/?release=68dcfb2` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 - Wave 21 source data: added four official-source-backed Kanagawa facilities — 厚木市文化会館（厚木市）、カルッツかわさき（川崎市）、鎌倉芸術館（鎌倉市）、小田原三の丸ホール（小田原市） — and 68 independently searchable spaces. Kanagawa is now 14 candidates, 7 municipalities, and 93 spaces.
 - Official sources: 厚木市、カルッツかわさき公式運営者、鎌倉芸術館公式運営者、小田原三の丸ホール公式運営者. Explicit room ceiling values were recorded only for カルッツかわさき（アクトスタジオ4.5m、大会議室3.0m、中会議室3.0m、小会議室2.8m）. Stage dimensions at the halls remain notes only and no price observation was added.
