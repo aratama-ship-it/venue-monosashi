@@ -61,6 +61,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Validated and deployed Wave 18 to the existing public site (version 63); the established custom domain returned the site marker for the deployed source revision.
 - Added four official-source-backed Ehime facilities — 松山市民会館、西条市総合文化会館、宇和島市立南予文化会館、宇和島市立コスモスホール三間 — and 35 searchable spaces, increasing the national total to 551 facilities and 2,037 spaces. The sources are the official pages of 松山市、西条市総合文化会館運営者、宇和島市.
 - Recorded closure/reconstruction constraints as notes only: 松山市民会館 has a published FY2027-end closure policy, and 南予文化会館 is closed during ongoing ceiling renovation. No new Ehime ceiling or price value was inferred or added; stage dimensions were not converted to ceiling measurements.
+- Validated and deployed Wave 19 to the existing public site (version 64); `https://venue.art-monosashi.com/?release=1fa8c9e` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 ## Verification
 

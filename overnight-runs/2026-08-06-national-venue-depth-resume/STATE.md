@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-06 Asia/Tokyo
-- Current wave: Wave 19 — Ehime official-source expansion validated and awaiting public deployment.
+- Current wave: Wave 20 — Hokkaido official-source expansion.
 
 ## Baseline
 
@@ -68,6 +68,7 @@
 - Official sources: 松山市、西条市総合文化会館運営者、宇和島市。松山市民会館の2028年3月末閉館方針と、南予文化会館の改修休館は候補の注記に明記した。南予文化会館の休館中ホールについて料金観測は追加していない。
 - No Ehime ceiling value or price observation was added. All new ceiling, price, loading, and availability attributes remain `要確認`; published stage dimensions were not converted into ceiling data.
 - Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check` all passed with only the pre-existing historical-event warning. `npm run validate` remains required before deployment.
+- Wave 19 deployment passed: production version 64 was deployed successfully, and `https://venue.art-monosashi.com/?release=1fa8c9e` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 - Wave 14 source data: added four Fukuoka candidates — デンカ大牟田文化会館（大牟田市）、飯塚市文化会館 コスモスコモン（飯塚市）、田主丸複合文化施設（そよ風ホール）（久留米市）、コスメイト行橋（行橋市文化ホール）（行橋市） — and 11 independently searchable spaces. Fukuoka is now 12 candidates, 7 municipalities, and 25 spaces. Official sources: デンカ大牟田文化会館運営者、飯塚市、久留米市、行橋市文化振興公社.
 - No Fukuoka ceiling value or price observation was added. All new ceiling, price, loading, and availability attributes remain `要確認`; no stage, proscenium, or building-height statement was converted into ceiling data.
@@ -92,7 +93,7 @@
 
 ## Next Action
 
-- Run the required validation and public deployment sequence for Wave 19 Ehime. Then research one bounded Hokkaido official-source wave, currently the lowest candidate-depth prefecture at 10 candidates, 4 municipalities, and 14 spaces.
+- Research and complete one bounded Hokkaido official-source wave, currently the lowest candidate-depth prefecture at 10 candidates, 4 municipalities, and 14 spaces. Use official operator, municipality, prefecture, or government sources only, then run the full generation, audit, validation, deployment, and endpoint-verification sequence.
 
 ## Blockers
 
