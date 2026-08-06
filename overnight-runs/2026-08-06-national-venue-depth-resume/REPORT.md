@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 15 is validated and awaiting public deployment; the next bounded wave targets Okinawa.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 15 is published; the next bounded wave targets Okinawa.
 
 ## Changes
 
@@ -49,6 +49,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Validated and deployed Wave 14 to the existing public site (version 59); the established custom domain returned the site marker for the deployed source revision.
 - Added four official-source-backed Nagasaki facilities — メモリード・シーハットおおむら、長崎市民会館、長崎市平和会館、長崎市三和公民館 — and 15 searchable spaces, increasing the national total to 535 facilities and 1,949 spaces. The sources are the official pages of 大村市 and 長崎市.
 - No Nagasaki ceiling or price values were inferred or added. New space conditions remain explicitly `要確認`; stage, building, and layout-height statements were not used as ceiling measurements.
+- Validated and deployed Wave 15 to the existing public site (version 60); the established custom domain returned the site marker for the deployed source revision.
 
 ## Verification
 
