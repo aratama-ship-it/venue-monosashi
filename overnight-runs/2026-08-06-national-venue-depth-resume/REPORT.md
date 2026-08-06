@@ -125,6 +125,9 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Recorded only explicit capacities and floor areas; no ceiling or price value was inferred. Published stage heights remain descriptive notes only, and all unreported conditions remain `要確認`.
 - Wave 36 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Saitama is now 15 candidates, 13 municipalities, and 79 spaces; national remaining deficits are 556 candidates and 244 spaces. Public deployment and custom-domain verification remain to be completed for this wave.
 - Wave 36 validation and deployment passed: production version 81 was deployed successfully from commit `eb3b007b251083c92ed463929a8381b8301ada54`; the Sites URL and `https://venue.art-monosashi.com/?release=eb3b007` returned the established site marker. Tracked `web/dist` output was restored after deployment.
+- Added four official-source-backed Chiba facilities — 浦安市文化会館、東金文化会館、千葉県東総文化会館、白井市文化会館 — and 24 searchable spaces, increasing the national total to 623 facilities and 2,584 spaces. Sources are the official pages and documents of 浦安市、東金市、旭市、白井市.
+- Recorded only explicit capacities and floor areas; no ceiling or price value was inferred. Published stage heights remain descriptive notes only, and all unreported conditions remain `要確認`.
+- Wave 37 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Chiba is now 15 candidates, 14 municipalities, and 68 spaces; national remaining deficits are 552 candidates and 237 spaces. Public deployment and custom-domain verification remain to be completed for this wave.
 
 ## Verification
 
