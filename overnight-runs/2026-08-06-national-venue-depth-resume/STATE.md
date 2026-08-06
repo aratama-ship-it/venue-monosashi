@@ -137,6 +137,7 @@
 - Wave 36 source data: added four official-source-backed Saitama facilities — 狭山市市民会館（狭山市）、飯能市市民会館（飯能市）、越谷コミュニティセンター（サンシティホール）（越谷市）、草加市文化会館（草加市） — and 37 independently searchable spaces. Saitama is now 15 candidates, 13 municipalities, and 79 spaces.
 - Official sources: 狭山市、飯能市、越谷市とサンシティホール指定管理者、草加市文化協会。Explicit capacities and floor areas only were recorded. No ceiling or price observation was added; published stage heights and all unreported conditions remain `要確認`.
 - Wave 36 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-record warning. Public deployment remains to be completed for this wave.
+- Wave 36 deployment passed: production version 81 was deployed successfully from commit `eb3b007b251083c92ed463929a8381b8301ada54`; the Sites URL and `https://venue.art-monosashi.com/?release=eb3b007` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 - Wave 21 source data: added four official-source-backed Kanagawa facilities — 厚木市文化会館（厚木市）、カルッツかわさき（川崎市）、鎌倉芸術館（鎌倉市）、小田原三の丸ホール（小田原市） — and 68 independently searchable spaces. Kanagawa is now 14 candidates, 7 municipalities, and 93 spaces.
 - Official sources: 厚木市、カルッツかわさき公式運営者、鎌倉芸術館公式運営者、小田原三の丸ホール公式運営者. Explicit room ceiling values were recorded only for カルッツかわさき（アクトスタジオ4.5m、大会議室3.0m、中会議室3.0m、小会議室2.8m）. Stage dimensions at the halls remain notes only and no price observation was added.
