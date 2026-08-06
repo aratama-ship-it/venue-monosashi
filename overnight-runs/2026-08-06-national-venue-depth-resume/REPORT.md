@@ -15,11 +15,12 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Deployed the validated Wave 2 data to the existing public site (version 47) and confirmed the established custom domain returned the site response.
 - Added four official-source-backed Oita facilities and 35 searchable spaces, increasing the national total to 487 facilities and 1,591 spaces. Wave 3 is ready for final repository validation and public deployment.
 - Deployed the validated Wave 3 data to the existing public site (version 48) and confirmed the established custom domain returned the site response.
+- Added four official-source-backed Miyazaki facilities and 27 searchable spaces, increasing the national total to 491 facilities and 1,618 spaces. Wave 4 is ready for final repository validation and public deployment.
 
 ## Verification
 
 - Wave audit passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 480 venues and 2,823 price observations.
-- Current depth report: 688 candidate gaps and 849 space gaps. Oita is 11 candidates, 9 municipalities, and 56 spaces; Miyazaki is now the lowest-depth prefecture at 7 candidates.
+- Current depth report: 684 candidate gaps and 824 space gaps. Miyazaki is 11 candidates, 10 municipalities, and 53 spaces; Aomori, Tochigi, Toyama, Fukui, Aichi, Kyoto, Hyogo, Shimane, Kagawa, and Fukuoka now form the lowest candidate-depth group at 8 candidates.
 
 ## Pre-existing State Preserved
 

@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-06 Asia/Tokyo
-- Current wave: Wave 4 — Miyazaki official-source expansion.
+- Current wave: Wave 4 — Miyazaki official-source expansion (source data and checks complete; validation and deployment pending).
 
 ## Baseline
 
@@ -26,14 +26,16 @@
 - Wave 3 source data: added four Oita candidates — 宇佐文化会館・ウサノピア（宇佐市）、くにさき総合文化センター（国東市）、豊後高田市中央公民館（豊後高田市）、豊後大野市総合文化センター エイトピアおおの（豊後大野市） — and 35 independently searchable spaces. Oita is now 11 candidates, 9 municipalities, and 56 spaces. Official sources: 宇佐市、国東市、豊後高田市、エイトピアおおの指定管理者.
 - The only new filterable ceiling values are the values explicitly labelled height by the official facility page: アストくにさきマルチホール5m and ギャラリー3.5m. The stage hall's proscenium and grid heights remain notes only.
 - Wave 3 verification and deployment: `npm run validate` passed (the pre-existing historical-event warning only); production version 48 deployed successfully and the established `venue.art-monosashi.com` endpoint returned the site response.
+- Wave 4 source data: added four Miyazaki candidates — 日南市文化センター（日南市）、串間市文化会館（串間市）、えびの市文化センター（えびの市）、三股町立文化会館（三股町） — and 27 independently searchable spaces. Miyazaki is now 11 candidates, 10 municipalities, and 53 spaces. Official sources: 日南市、串間市文化会館運営者、宮崎県公共文化施設ポータル、えびの市、三股町立文化会館.
+- Stage dimensions and heights published by the facilities remain notes only. No Miyazaki ceiling value was added to the searchable filter because no new source described it as a space ceiling or clear height.
 
 ## Current Wave
 
-- Add a bounded, official-source-only Miyazaki wave with at most four facilities in distinct underrepresented municipalities and all clearly published independent spaces.
+- Run repository validation, commit the named Wave 4 source files, deploy to the existing public site, and verify the public URL.
 
 ## Next Action
 
-- Research Miyazaki municipal, prefectural, and designated-operator venue pages; then add only fully source-backed facility and space rows.
+- After successful public deployment, start Wave 5 in Aomori, the lowest-depth prefecture (8 candidates), using official-source-only additions.
 
 ## Blockers
 
