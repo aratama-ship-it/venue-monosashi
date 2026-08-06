@@ -113,6 +113,9 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Recorded only explicit official capacities and floor areas; no ceiling or price value was inferred. Published stage height and stage dimensions remain descriptive notes only, and all unreported conditions remain `要確認`.
 - Wave 33 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Fukushima is now 15 candidates, 11 municipalities, and 76 spaces; national remaining deficits are 568 candidates and 260 spaces. Public deployment and custom-domain verification remain to be completed for this wave.
 - Wave 33 validation and deployment passed: production version 78 was deployed successfully from commit `70efe79520147a3f7b2811b74845daf61dd8979c`; the Sites URL and `https://venue.art-monosashi.com/?release=70efe79` returned the established site marker. Tracked `web/dist` output was restored after deployment.
+- Added four official-source-backed Ibaraki facilities — 坂東市民音楽ホール、下妻市民文化会館、下妻市立図書館2階施設、笠間市消防本部 多目的ホール・会議室 — and 19 independently searchable spaces, increasing the national total to 611 facilities and 2,496 spaces. Sources are the official pages and rules of 坂東市、下妻市、笠間市.
+- Recorded only explicit official capacities and floor areas; no ceiling or price value was inferred. Stage dimensions remain descriptive notes only, and all unreported conditions remain `要確認`.
+- Wave 34 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Ibaraki is now 15 candidates, 13 municipalities, and 66 spaces; national remaining deficits are 564 candidates and 256 spaces. Public deployment and custom-domain verification remain to be completed for this wave.
 
 ## Verification
 
