@@ -146,7 +146,8 @@
 
 - Wave 38 source data: added four official-source-backed Ishikawa facilities — 野々市市文化会館フォルテ（野々市市）、内灘町文化会館（内灘町）、かほく市高松産業文化センター（かほく市）、富来活性化センター（志賀町） — and 24 independently searchable spaces. Ishikawa is now 15 candidates, 13 municipalities, and 62 spaces.
 - Official sources: 野々市市と文化会館指定管理者、内灘町、かほく市、志賀町。Explicit capacities and floor areas only were recorded. No ceiling or price observation was added; published stage heights and all unreported conditions remain `要確認`.
-- Wave 38 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-record warning. Public deployment remains to be completed for this wave.
+- Wave 38 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-record warning.
+- Wave 38 deployment passed: production version 83 was deployed successfully from commit `e3facb1231ff18948177e4f2d386cf542b77a050`; the Sites URL and `https://venue.art-monosashi.com/?release=e3facb1` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 - Wave 21 source data: added four official-source-backed Kanagawa facilities — 厚木市文化会館（厚木市）、カルッツかわさき（川崎市）、鎌倉芸術館（鎌倉市）、小田原三の丸ホール（小田原市） — and 68 independently searchable spaces. Kanagawa is now 14 candidates, 7 municipalities, and 93 spaces.
 - Official sources: 厚木市、カルッツかわさき公式運営者、鎌倉芸術館公式運営者、小田原三の丸ホール公式運営者. Explicit room ceiling values were recorded only for カルッツかわさき（アクトスタジオ4.5m、大会議室3.0m、中会議室3.0m、小会議室2.8m）. Stage dimensions at the halls remain notes only and no price observation was added.
