@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-06 Asia/Tokyo
-- Current wave: Wave 7 — Toyama official-source expansion.
+- Current wave: Wave 8 — Fukui official-source expansion.
 
 ## Baseline
 
@@ -38,15 +38,17 @@
 - No Tochigi ceiling value was added to the searchable filter. Published stage height at 真岡いちごホール is retained only as a note, not as a ceiling measurement.
 - Wave 6 verification and deployment: `npm run validate` passed (the pre-existing historical-event warning only); production version 51 deployed successfully and the established `venue.art-monosashi.com` endpoint returned the site response.
 
-## Current Wave
-
 - Wave 7 source data: added four Toyama candidates — 高周波文化ホール（射水市）、津沢コミュニティプラザ（小矢部市）、上市町文化研修センター（上市町）、砺波市文化会館（砺波市） — and 32 independently searchable spaces. Toyama is now 12 candidates, 10 municipalities, and 49 spaces. Official sources: 射水市、小矢部市、上市町、砺波市.
 - No Toyama ceiling value was added to the searchable filter. Published stage areas at 高周波文化ホール remain descriptive notes only, not room floor or ceiling measurements. Approximate seating at 津沢コミュニティプラザ and 砺波市文化会館 remains outside the numeric capacity filter.
-- Wave 7 audit, depth-report generation, app-data generation, and whitespace check passed. Final repository validation and public deployment are pending.
+- Wave 7 verification and deployment: `npm run validate` passed (the pre-existing historical-event warning only); production version 52 deployed successfully and the established `venue.art-monosashi.com` endpoint returned the site response.
+
+## Current Wave
+
+- Research a bounded, official-source-only Fukui wave. Fukui is in the current lowest candidate-depth group (8 candidates), together with Aichi, Kyoto, Hyogo, Shimane, Kagawa, Fukuoka, Nagasaki, Okinawa, and Niigata.
 
 ## Next Action
 
-- Run final validation, commit and deploy the validated Toyama source-data wave, verify the public endpoint, then continue with a bounded Fukui wave (the current lowest candidate-depth group).
+- Research Fukui municipal, prefectural, and designated-operator venue pages; then add only fully source-backed facility and space rows.
 
 ## Blockers
 
