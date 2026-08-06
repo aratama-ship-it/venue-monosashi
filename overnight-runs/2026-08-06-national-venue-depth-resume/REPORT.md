@@ -144,6 +144,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Wave 40 source data: added four official-source-backed Shizuoka facilities — 三島市民文化会館、焼津文化会館、掛川市文化会館シオーネ、かなや会館 — and 18 searchable spaces, increasing the national total to 639 facilities and 2,660 spaces. Sources are the official pages and documents of 三島市、焼津市、掛川市、島田市.
 - Recorded only explicit capacities and floor areas; no ceiling or price value was inferred. All unreported conditions remain `要確認`.
 - Wave 40 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Shizuoka is now 15 candidates, 12 municipalities, and 61 spaces; national remaining deficits are 536 candidates and 215 spaces. Deployment remains to be completed.
+- Wave 40 deployment passed: production version 85 was deployed successfully from commit `56a8980cb46c76dd5537a1ec331309ca9e1d1fe3`; the Sites URL and `https://venue.art-monosashi.com/?release=56a8980` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 - Wave 14 audit and validation passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 531 venues and 2,823 price observations.
 - Current depth report: 612 candidate gaps and 405 space gaps. Nagano is now 14 candidates, 12 municipalities, and 74 spaces; the next lowest candidate-depth is 10 candidates in 岐阜県、和歌山県、広島県、高知県、佐賀県、熊本県、鹿児島県.

@@ -197,6 +197,7 @@
 - Wave 40 source data: added four official-source-backed Shizuoka facilities — 三島市民文化会館、焼津文化会館、掛川市文化会館シオーネ、かなや会館 — and 18 independently searchable spaces. Shizuoka is now 15 candidates, 12 municipalities, and 61 spaces.
 - Official sources: 三島市、焼津市、掛川市、島田市。Explicit capacities and floor areas only were recorded. No ceiling or price observation was added; all unreported conditions remain `要確認`.
 - Wave 40 local verification passed: app-data generation, audit, depth-report generation, and whitespace check passed with only the pre-existing historical-record warning. `npm run validate`, source commit, public deployment, and custom-domain verification remain to be completed.
+- Wave 40 deployment passed: production version 85 was deployed successfully from commit `56a8980cb46c76dd5537a1ec331309ca9e1d1fe3`; the Sites URL and `https://venue.art-monosashi.com/?release=56a8980` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 - Research one bounded official-source wave for 滋賀県, the next lowest candidate-depth prefecture tied at 11 candidates, then regenerate all reports and deploy after validation.
 
