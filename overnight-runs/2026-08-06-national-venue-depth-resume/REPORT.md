@@ -12,6 +12,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added three available-room day-fee observations for 不二輸送機ホール. Published pricing for the currently unavailable 萩市民館大ホール remains out of searchable price data.
 - Deployed the validated Wave 1 data to the existing public site (version 46) and confirmed the established custom domain returned the site response.
 - Added three official-source-backed Kochi facilities and 40 searchable spaces, increasing the national total to 483 facilities and 1,556 spaces. Wave 2 is ready for final repository validation and public deployment.
+- Deployed the validated Wave 2 data to the existing public site (version 47) and confirmed the established custom domain returned the site response.
 
 ## Verification
 

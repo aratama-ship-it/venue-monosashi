@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-06 Asia/Tokyo
-- Current wave: Wave 2 — Kochi official-source expansion (source data and checks complete; validation and deployment pending).
+- Current wave: Wave 3 — Oita official-source expansion.
 
 ## Baseline
 
@@ -22,14 +22,15 @@
 - Wave 1 verification and deployment: `npm run validate` passed (the pre-existing historical-event warning only); production version 46 deployed successfully and the established `venue.art-monosashi.com` endpoint returned the site response.
 - Wave 2 source data: added three Kochi candidates — 土佐市複合文化施設つなーで（土佐市）、南国市地域交流センターMIARE！（南国市）、室戸市保健福祉センターやすらぎ（室戸市） — and 40 independently searchable spaces. Kochi is now 10 candidates, 7 municipalities, and 53 spaces. Official sources: 土佐市、南国市、室戸市.
 - Capacity is recorded only when the official source gives an explicit capacity or seat count. Counts of chairs, desks, or slippers are retained as notes and do not become searchable capacity values.
+- Wave 2 verification and deployment: `npm run validate` passed (the pre-existing historical-event warning only); production version 47 deployed successfully and the established `venue.art-monosashi.com` endpoint returned the site response.
 
 ## Current Wave
 
-- Run repository validation, commit the named Wave 2 source files, deploy to the existing public site, and verify the public URL.
+- Add a bounded, official-source-only Oita wave with at most four facilities in distinct underrepresented municipalities and all clearly published independent spaces.
 
 ## Next Action
 
-- After successful public deployment, start Wave 3 in Oita, the lowest-depth prefecture (7 candidates), using official-source-only additions.
+- Research Oita municipal, prefectural, and designated-operator venue pages; then add only fully source-backed facility and space rows.
 
 ## Blockers
 
