@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-06 Asia/Tokyo
-- Current wave: Wave 4 — Miyazaki official-source expansion (source data and checks complete; validation and deployment pending).
+- Current wave: Wave 5 — Aomori official-source expansion.
 
 ## Baseline
 
@@ -28,14 +28,15 @@
 - Wave 3 verification and deployment: `npm run validate` passed (the pre-existing historical-event warning only); production version 48 deployed successfully and the established `venue.art-monosashi.com` endpoint returned the site response.
 - Wave 4 source data: added four Miyazaki candidates — 日南市文化センター（日南市）、串間市文化会館（串間市）、えびの市文化センター（えびの市）、三股町立文化会館（三股町） — and 27 independently searchable spaces. Miyazaki is now 11 candidates, 10 municipalities, and 53 spaces. Official sources: 日南市、串間市文化会館運営者、宮崎県公共文化施設ポータル、えびの市、三股町立文化会館.
 - Stage dimensions and heights published by the facilities remain notes only. No Miyazaki ceiling value was added to the searchable filter because no new source described it as a space ceiling or clear height.
+- Wave 4 verification and deployment: `npm run validate` passed (the pre-existing historical-event warning only); production version 49 deployed successfully and the established `venue.art-monosashi.com` endpoint returned the site response.
 
 ## Current Wave
 
-- Run repository validation, commit the named Wave 4 source files, deploy to the existing public site, and verify the public URL.
+- Add a bounded, official-source-only Aomori wave with at most four facilities in distinct underrepresented municipalities and all clearly published independent spaces.
 
 ## Next Action
 
-- After successful public deployment, start Wave 5 in Aomori, the lowest-depth prefecture (8 candidates), using official-source-only additions.
+- Research Aomori municipal, prefectural, and designated-operator venue pages; then add only fully source-backed facility and space rows.
 
 ## Blockers
 

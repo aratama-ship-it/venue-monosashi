@@ -16,6 +16,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Oita facilities and 35 searchable spaces, increasing the national total to 487 facilities and 1,591 spaces. Wave 3 is ready for final repository validation and public deployment.
 - Deployed the validated Wave 3 data to the existing public site (version 48) and confirmed the established custom domain returned the site response.
 - Added four official-source-backed Miyazaki facilities and 27 searchable spaces, increasing the national total to 491 facilities and 1,618 spaces. Wave 4 is ready for final repository validation and public deployment.
+- Deployed the validated Wave 4 data to the existing public site (version 49) and confirmed the established custom domain returned the site response.
 
 ## Verification
 
