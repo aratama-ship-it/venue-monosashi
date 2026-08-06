@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-06 Asia/Tokyo
-- Current wave: Wave 1 — Yamaguchi official-source expansion (source data and checks complete; validation and deployment pending).
+- Current wave: Wave 2 — Kochi official-source expansion.
 
 ## Baseline
 
@@ -19,14 +19,15 @@
 
 - Wave 1 source data: added four Yamaguchi candidates — 萩市民館（萩市）、美祢市民会館（美祢市）、不二輸送機ホール（山陽小野田市）、スターピアくだまつ（下松市） — and 33 independently searchable spaces. Yamaguchi is now 11 candidates, 10 municipalities, and 59 spaces. Official sources: 萩市、 美祢市、山陽小野田市、スターピアくだまつ指定管理者の公開資料.
 - Published fee observations were retained only for currently available rooms. 萩市民館大ホールは2026年6月から使用中止のため、旧料金表を検索用料金データには入れていない。山陽小野田市文化会館は大ホール平日・休日、小ホール全日の日額を確認した。
+- Wave 1 verification and deployment: `npm run validate` passed (the pre-existing historical-event warning only); production version 46 deployed successfully and the established `venue.art-monosashi.com` endpoint returned the site response.
 
 ## Current Wave
 
-- Run repository validation, commit the named Wave 1 source files, deploy to the existing public site, and verify the public URL.
+- Add a bounded, official-source-only Kochi wave with at most four facilities in distinct underrepresented municipalities and all clearly published independent spaces.
 
 ## Next Action
 
-- After successful public deployment, start Wave 2 in Kochi, the lowest-depth prefecture (7 candidates), using official-source-only additions.
+- Research Kochi municipal, prefectural, and designated-operator venue pages; then add only fully source-backed facility and space rows.
 
 ## Blockers
 

@@ -10,6 +10,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Yamaguchi facilities and 33 searchable spaces, increasing the national total to 480 facilities and 1,516 spaces.
 - Kept 67 ceiling observations in the recheck workflow; no new ceiling height was inferred from stage, proscenium, or building measurements.
 - Added three available-room day-fee observations for 不二輸送機ホール. Published pricing for the currently unavailable 萩市民館大ホール remains out of searchable price data.
+- Deployed the validated Wave 1 data to the existing public site (version 46) and confirmed the established custom domain returned the site response.
 
 ## Verification
 
