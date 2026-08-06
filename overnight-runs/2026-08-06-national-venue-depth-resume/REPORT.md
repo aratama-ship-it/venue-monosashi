@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 13 is published; the next bounded wave targets Fukuoka.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 14 is validated and awaiting public deployment; the next bounded wave targets Nagasaki.
 
 ## Changes
 
@@ -44,11 +44,13 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Kagawa facilities — 善通寺市民会館、東かがわ市交流プラザ、源内音楽ホール、ユープラザうたづ — and 26 searchable spaces, increasing the national total to 527 facilities and 1,923 spaces. The sources are the official pages of 善通寺市、東かがわ市交流プラザ、さぬき市、宇多津町振興財団.
 - No Kagawa ceiling value was added to the searchable filter. All new room ceiling values remain unknown; no stage, proscenium, or building-height statement was used as a ceiling value.
 - Validated and deployed Wave 13 to the existing public site (version 58); the established custom domain returned the site response.
+- Added four official-source-backed Fukuoka facilities — デンカ大牟田文化会館、飯塚市文化会館 コスモスコモン、田主丸複合文化施設（そよ風ホール）、コスメイト行橋（行橋市文化ホール） — and 11 searchable spaces, increasing the national total to 531 facilities and 1,934 spaces. The sources are the official pages of デンカ大牟田文化会館、飯塚市、久留米市、行橋市文化振興公社.
+- No Fukuoka ceiling or price values were inferred or added. New space conditions remain explicitly `要確認`; stage, proscenium, and building-height statements were not used as ceiling measurements.
 
 ## Verification
 
-- Wave 13 audit and validation passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 527 venues and 2,823 price observations.
-- Current depth report: 648 candidate gaps and 580 space gaps. Kagawa is 12 candidates, 8 municipalities, and 41 spaces; Fukuoka, Nagasaki, and Okinawa now form the lowest candidate-depth group at 8 candidates.
+- Wave 14 audit and validation passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 531 venues and 2,823 price observations.
+- Current depth report: 644 candidate gaps and 569 space gaps. Fukuoka is 12 candidates, 7 municipalities, and 25 spaces; Nagasaki and Okinawa are now the lowest candidate-depth group at 8 candidates.
 
 ## Pre-existing State Preserved
 
