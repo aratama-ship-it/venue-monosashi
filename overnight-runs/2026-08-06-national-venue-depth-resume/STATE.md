@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-07 Asia/Tokyo
-- Current wave: Wave 30 — Iwate official-source expansion.
+- Current wave: Wave 31 — Akita official-source expansion (next).
 
 ## Baseline
 
@@ -107,6 +107,7 @@
 - Wave 30 source data: added four official-source-backed Iwate facilities — 二戸市民文化会館（二戸市）、陸前高田市民文化会館「奇跡の一本松ホール」（陸前高田市）、八幡平市立松尾コミュニティセンター（八幡平市）、大船渡市民文化会館（リアスホール）（大船渡市） — and 36 independently searchable spaces. Iwate is now 15 candidates, 13 municipalities, and 83 spaces.
 - Official sources: 二戸市、陸前高田市、八幡平市、大船渡市. Explicit capacity and area values were recorded only where the official pages stated them; no ceiling or price observation was inferred. All unreported conditions remain 要確認, and stage/building heights were not converted to ceiling data.
 - Wave 30 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-record warning. Public deployment remains to be completed for this wave.
+- Wave 30 deployment passed: production version 75 was deployed successfully; `https://venue.art-monosashi.com` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 - Wave 21 source data: added four official-source-backed Kanagawa facilities — 厚木市文化会館（厚木市）、カルッツかわさき（川崎市）、鎌倉芸術館（鎌倉市）、小田原三の丸ホール（小田原市） — and 68 independently searchable spaces. Kanagawa is now 14 candidates, 7 municipalities, and 93 spaces.
 - Official sources: 厚木市、カルッツかわさき公式運営者、鎌倉芸術館公式運営者、小田原三の丸ホール公式運営者. Explicit room ceiling values were recorded only for カルッツかわさき（アクトスタジオ4.5m、大会議室3.0m、中会議室3.0m、小会議室2.8m）. Stage dimensions at the halls remain notes only and no price observation was added.
@@ -148,7 +149,7 @@
 
 ## Next Action
 
-- After Wave 30 deployment, research one bounded official-source wave for the next lowest candidate-depth prefecture from the regenerated report: 秋田県、山形県、福島県、茨城県、群馬県、埼玉県、千葉県、石川県、山梨県、静岡県 are tied at 11 candidates.
+- Research one bounded official-source wave for 秋田県, the next lowest candidate-depth prefecture tied at 11 candidates, then regenerate all reports and deploy after validation.
 
 ## Blockers
 
