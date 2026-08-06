@@ -117,6 +117,9 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Recorded only explicit official capacities and floor areas; no ceiling or price value was inferred. Stage dimensions remain descriptive notes only, and all unreported conditions remain `要確認`.
 - Wave 34 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Ibaraki is now 15 candidates, 13 municipalities, and 66 spaces; national remaining deficits are 564 candidates and 256 spaces. Public deployment and custom-domain verification remain to be completed for this wave.
 - Wave 34 validation and deployment passed: production version 79 was deployed successfully from commit `9f12093a1d24ba1d29cda550d4ffe315b25f1866`; the Sites URL and `https://venue.art-monosashi.com/?release=9f12093` returned the established site marker. Tracked `web/dist` output was restored after deployment.
+- Added four official-source-backed Gunma facilities — 玉村町文化センター、安中市文化センター、旧日本基督教団沼田教会紀念会堂、前橋市中央公民館 — and 27 independently searchable spaces, increasing the national total to 615 facilities and 2,523 spaces. Sources are the official pages of 玉村町、安中市、沼田市、前橋市.
+- Recorded only explicit official capacities and floor areas; no ceiling or price value was inferred. Stage dimensions remain descriptive notes only, and all unreported conditions remain `要確認`.
+- Wave 35 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Gunma is now 15 candidates, 13 municipalities, and 75 spaces; national remaining deficits are 560 candidates and 253 spaces. Public deployment and custom-domain verification remain to be completed for this wave.
 
 ## Verification
 
