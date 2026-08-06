@@ -85,6 +85,9 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Kochi facilities — 三里文化会館、筆山文化会館、木村会館、春野文化ホール ピアステージ — and 24 searchable spaces, increasing the national total to 579 facilities and 2,268 spaces. Sources are the official pages of 高知市.
 - Recorded only explicit official capacities and areas from Kochi city pages. No ceiling or price value was inferred; unreported ceiling, loading, and availability remain `要確認`.
 - Wave 26 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Production version 71 was deployed and `https://venue.art-monosashi.com/?release=58745c0` returned the established site marker. Tracked `web/dist` output was restored.
+- Added four official-source-backed Saga facilities — 武雄市文化会館、千代田文化会館 はんぎーホール、小城保健福祉センター 桜楽館、多久市中央公民館 — and 28 independently searchable spaces, increasing the national total to 583 facilities and 2,296 spaces. Sources are the official pages of 武雄市、神埼市、小城市、多久市.
+- Recorded only explicit official capacities; no ceiling or price value was inferred. 武雄市文化会館の休館・整備計画、未確認の現行利用可否、面積、天井、搬入、料金、空き状況は注記と `要確認` で保持した。プロセニアム・舞台寸法は天井高に使用していない。
+- Wave 27 local source validation passed with 0 audit errors and the pre-existing historical-record warning only. Public deployment remains to be completed for this wave.
 
 ## Verification
 
