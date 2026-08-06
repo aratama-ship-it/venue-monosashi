@@ -2,7 +2,7 @@
 
 ## Status
 
-- Status: PARTIAL/BLOCKED
+- Status: BLOCKED
 - Last updated: 2026-08-07 Asia/Tokyo
 - Current wave: Wave 31 — Akita official-source expansion (public deployment blocked).
 
