@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 6 is ready for final repository validation and public deployment.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 7 will continue with Toyama.
 
 ## Changes
 
@@ -20,8 +20,9 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Aomori facilities and 34 searchable spaces, increasing the national total to 495 facilities and 1,652 spaces. The sources are the official pages of 平川市, 六ヶ所村文化交流プラザ スワニー, むつ市, and 藤崎町.
 - Retained stage-height and approximate-seat statements as notes only. No new Aomori ceiling height or approximate capacity entered a numeric filter.
 - Deployed the validated Wave 5 data to the existing public site (version 50) and confirmed the established custom domain returned the site response.
-- Added four official-source-backed Tochigi facilities and 23 searchable spaces, increasing the national total to 499 facilities and 1,675 spaces. The sources are the official pages of 那須塩原市、KOBELCO 真岡いちごホール指定管理者、さくら市、大田原市. Wave 6 is ready for final repository validation and public deployment.
+- Added four official-source-backed Tochigi facilities and 23 searchable spaces, increasing the national total to 499 facilities and 1,675 spaces. The sources are the official pages of 那須塩原市、KOBELCO 真岡いちごホール指定管理者、さくら市、大田原市.
 - Retained 真岡いちごホールの舞台高さ as a note only; it was not entered as a ceiling measurement.
+- Deployed the validated Wave 6 data to the existing public site (version 51) and confirmed the established custom domain returned the site response.
 
 ## Verification
 

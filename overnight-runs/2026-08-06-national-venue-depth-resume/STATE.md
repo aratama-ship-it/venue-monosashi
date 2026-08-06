@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-06 Asia/Tokyo
-- Current wave: Wave 6 — Tochigi official-source expansion.
+- Current wave: Wave 7 — Toyama official-source expansion.
 
 ## Baseline
 
@@ -34,15 +34,17 @@
 - No Aomori ceiling value was added to the searchable filter. Published stage heights at タカシンホール and スワニー remain descriptive notes only; no source labelled them as a room ceiling or clear height. Approximate seating at 藤崎町文化センター likewise remains outside the numeric capacity filter.
 - Wave 5 verification and deployment: `npm run validate` passed (the pre-existing historical-event warning only); production version 50 deployed successfully and the established `venue.art-monosashi.com` endpoint returned the site response.
 
-## Current Wave
-
 - Wave 6 source data: added four Tochigi candidates — 大正堂くろいそみるひぃホール（那須塩原市）、KOBELCO 真岡いちごホール（真岡市）、氏家公民館（さくら市）、大田原東地区公民館（大田原市） — and 23 independently searchable spaces. Tochigi is now 12 candidates, 10 municipalities, and 43 spaces. Official sources: 那須塩原市、KOBELCO 真岡いちごホール指定管理者、さくら市、大田原市.
 - No Tochigi ceiling value was added to the searchable filter. Published stage height at 真岡いちごホール is retained only as a note, not as a ceiling measurement.
-- Wave 6 audit, depth-report generation, app-data generation, and whitespace check passed. Final repository validation and public deployment are pending.
+- Wave 6 verification and deployment: `npm run validate` passed (the pre-existing historical-event warning only); production version 51 deployed successfully and the established `venue.art-monosashi.com` endpoint returned the site response.
+
+## Current Wave
+
+- Research a bounded, official-source-only Toyama wave. Toyama is in the current lowest candidate-depth group (8 candidates), together with Fukui, Aichi, Kyoto, Hyogo, Shimane, Kagawa, Fukuoka, Nagasaki, and Okinawa.
 
 ## Next Action
 
-- Run final validation, commit and deploy the validated Tochigi source-data wave, verify the public endpoint, then continue with a bounded Toyama wave (the current lowest candidate-depth group).
+- Research Toyama municipal, prefectural, and designated-operator venue pages; then add only fully source-backed facility and space rows.
 
 ## Blockers
 
