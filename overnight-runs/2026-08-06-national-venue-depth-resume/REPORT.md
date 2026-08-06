@@ -92,6 +92,9 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Recorded only explicit official capacities; no ceiling or price value was inferred. 山鹿市資料間の収容人数差異と菊池市文化会館の閉館・大ホール閉鎖は注記と `要確認` で保持し、舞台・アリーナ寸法は天井高に使用していない。
 - Wave 28 local source validation passed with 0 audit errors and the pre-existing historical-record warning only. Public deployment remains to be completed for this wave.
 - Wave 28 validation passed with 0 audit errors and the pre-existing historical-record warning only. Production version 73 was deployed and `https://venue.art-monosashi.com/?release=702a8f3` returned the established site marker. Tracked `web/dist` output was restored after deployment.
+- Added four official-source-backed Kagoshima facilities — 指宿市民会館、末吉総合センター、奄美川商ホール（奄美振興会館）、姶良市文化会館 加音ホール — and 32 independently searchable spaces, increasing the national total to 591 facilities and 2,356 spaces. Sources are the official pages of 指宿市、曽於市、奄美市、鹿児島県.
+- Recorded only explicit official capacities and area values; no ceiling or price value was inferred. 指宿市の令和8年度料金改定案内は候補注記に残し、価格台帳への区画別観測は未追加。舞台寸法は天井高に使用していない。
+- Wave 29 local source validation passed with 0 audit errors and the pre-existing historical-record warning only. Public deployment remains to be completed for this wave.
 
 ## Verification
 
