@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 14 is published; the next bounded wave targets Nagasaki.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 15 is validated and awaiting public deployment; the next bounded wave targets Okinawa.
 
 ## Changes
 
@@ -47,11 +47,13 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Fukuoka facilities — デンカ大牟田文化会館、飯塚市文化会館 コスモスコモン、田主丸複合文化施設（そよ風ホール）、コスメイト行橋（行橋市文化ホール） — and 11 searchable spaces, increasing the national total to 531 facilities and 1,934 spaces. The sources are the official pages of デンカ大牟田文化会館、飯塚市、久留米市、行橋市文化振興公社.
 - No Fukuoka ceiling or price values were inferred or added. New space conditions remain explicitly `要確認`; stage, proscenium, and building-height statements were not used as ceiling measurements.
 - Validated and deployed Wave 14 to the existing public site (version 59); the established custom domain returned the site marker for the deployed source revision.
+- Added four official-source-backed Nagasaki facilities — メモリード・シーハットおおむら、長崎市民会館、長崎市平和会館、長崎市三和公民館 — and 15 searchable spaces, increasing the national total to 535 facilities and 1,949 spaces. The sources are the official pages of 大村市 and 長崎市.
+- No Nagasaki ceiling or price values were inferred or added. New space conditions remain explicitly `要確認`; stage, building, and layout-height statements were not used as ceiling measurements.
 
 ## Verification
 
 - Wave 14 audit and validation passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 531 venues and 2,823 price observations.
-- Current depth report: 644 candidate gaps and 569 space gaps. Fukuoka is 12 candidates, 7 municipalities, and 25 spaces; Nagasaki and Okinawa are now the lowest candidate-depth group at 8 candidates.
+- Current depth report: 640 candidate gaps and 554 space gaps. Nagasaki is 12 candidates, 6 municipalities, and 34 spaces; Okinawa is now the lowest candidate-depth prefecture at 8 candidates.
 
 ## Pre-existing State Preserved
 
