@@ -86,7 +86,8 @@
 
 - Wave 26 source data: added four official-source-backed Kochi facilities — 三里文化会館、筆山文化会館、木村会館、春野文化ホール ピアステージ（いずれも高知市） — and 24 independently searchable spaces. Kochi is now 14 candidates, 7 municipalities, and 77 spaces.
 - Official sources: 高知市. Explicit capacities and areas were recorded for 三里文化会館多目的ホール（300席）、2階研修室（30人程度）、筆山文化会館音楽練習室（72㎡・30人程度）、軽音楽室（29㎡・4〜6人）、会議室（63㎡）、2階広間（39㎡）. No ceiling or price observation was added; all unreported ceiling, loading, and current availability remain `要確認`.
-- Wave 26 verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, and `git diff --check` all passed with only the pre-existing historical-event warning. `npm run validate` and public deployment remain to be completed for this wave.
+- Wave 26 verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
+- Wave 26 deployment passed: production version 71 was deployed successfully; `https://venue.art-monosashi.com/?release=58745c0` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 - Wave 21 source data: added four official-source-backed Kanagawa facilities — 厚木市文化会館（厚木市）、カルッツかわさき（川崎市）、鎌倉芸術館（鎌倉市）、小田原三の丸ホール（小田原市） — and 68 independently searchable spaces. Kanagawa is now 14 candidates, 7 municipalities, and 93 spaces.
 - Official sources: 厚木市、カルッツかわさき公式運営者、鎌倉芸術館公式運営者、小田原三の丸ホール公式運営者. Explicit room ceiling values were recorded only for カルッツかわさき（アクトスタジオ4.5m、大会議室3.0m、中会議室3.0m、小会議室2.8m）. Stage dimensions at the halls remain notes only and no price observation was added.
