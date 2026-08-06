@@ -103,7 +103,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Akita facilities — 北秋田市文化会館（北秋田市）、能代市文化会館（能代市）、象潟公会堂（にかほ市）、山本ふるさと文化館（三種町） — and 19 independently searchable spaces, increasing the national total to 599 facilities and 2,411 spaces. Sources are the official pages of 北秋田市、能代市、にかほ市、三種町.
 - Recorded only explicit official capacities; no ceiling or price value was inferred. Stage and building heights remain notes only, and all unreported conditions remain `要確認`. The 三種町 source publishes time-band and admission-fee conditions, retained as candidate notes rather than unscoped price observations.
 - Wave 31 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Public deployment and custom-domain verification remain to be completed for this wave.
-- Public deployment was blocked by the Sites safety review when the private source push to the newly issued external repository was rejected as possible source disclosure. No workaround was attempted; user approval or an already verified repository destination is required.
+- The user explicitly approved sending the private source to the Sites repository, clearing the prior safety blocker; deployment is being resumed from the validated Wave 31 checkpoint.
 
 ## Verification
 
@@ -120,7 +120,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 
 ## Blockers
 
-- Wave 31 public deployment is blocked by the Sites source-repository safety review; local data and validation are complete.
+- Prior Wave 31 deployment blocker cleared by explicit user approval; deployment resume is pending in this turn.
 
 ## Morning Decisions
 
