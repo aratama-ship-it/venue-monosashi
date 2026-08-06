@@ -4,12 +4,12 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-06 Asia/Tokyo
-- Current wave: Wave 24 — Wakayama official-source expansion.
+- Current wave: Wave 25 — Hiroshima official-source expansion.
 
 ## Baseline
 
 - Git branch and commit: `agent/add-competition-and-small-theater-coverage` at `5c0946bc6e73c553c168f3f8b13468e64790da72`.
-- Data counts: 571 candidate facilities, 2,229 searchable spaces, 2,823 price observations, and 222 operation rows.
+- Data counts: 575 candidate facilities, 2,244 searchable spaces, 2,823 price observations, and 222 operation rows.
 - Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 612 candidates and 405 spaces; municipality deficit is measured by the generated report.
 - Canonical hashes: `candidate-venues.csv` `0a83a784dceea38a3a146587e2457c44fc7403ffbe9c62186a3ca4532f902933`; `venue-details.csv` `2afd5815ea595527bbec8b100daf097684c20a8fefcb18ba32fee82ca49885e1`; `price-observations.csv` `640b4afc3d607a7b796818d49334bf2f56fb303745a92ad8b759b10158e2e396`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
@@ -79,6 +79,10 @@
 - Wave 24 verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
 - Wave 24 deployment passed: production version 69 was deployed successfully; `https://venue.art-monosashi.com/?release=63e4f4b` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
+- Wave 25 source data: added four official-source-backed Hiroshima facilities — 東広島芸術文化ホールくらら（東広島市）、広島市文化交流会館（広島市）、三原市芸術文化センター ポポロ（三原市）、むかいしま文化ホール（尾道市） — and 15 independently searchable spaces. Hiroshima is now 14 candidates, 7 municipalities, and 29 spaces.
+- Official sources: 東広島市・くらら公式運営者、広島市、三原市芸術文化センター公式運営者、尾道市. Explicit official capacities were recorded for 広島市文化交流会館ホール（2,001席）、ポポロホール（1,209席）、むかいしま文化ホール（400名）とホール研修室1・2（各30名程度）. No ceiling or price observation was added; all unreported area, ceiling, loading, and current availability remain `要確認`.
+- Wave 25 verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, and `git diff --check` all passed with only the pre-existing historical-event warning. `npm run validate` and public deployment remain to be completed for this wave.
+
 - Wave 21 source data: added four official-source-backed Kanagawa facilities — 厚木市文化会館（厚木市）、カルッツかわさき（川崎市）、鎌倉芸術館（鎌倉市）、小田原三の丸ホール（小田原市） — and 68 independently searchable spaces. Kanagawa is now 14 candidates, 7 municipalities, and 93 spaces.
 - Official sources: 厚木市、カルッツかわさき公式運営者、鎌倉芸術館公式運営者、小田原三の丸ホール公式運営者. Explicit room ceiling values were recorded only for カルッツかわさき（アクトスタジオ4.5m、大会議室3.0m、中会議室3.0m、小会議室2.8m）. Stage dimensions at the halls remain notes only and no price observation was added.
 - Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
@@ -119,7 +123,7 @@
 
 ## Next Action
 
-- Complete validation and deployment for Wave 24, then research one bounded official-source wave for the next lowest candidate-depth prefecture from the regenerated report: 広島県、高知県、佐賀県、熊本県、鹿児島県 are tied at 10 candidates.
+- Complete validation and deployment for Wave 25, then research one bounded official-source wave for the next lowest candidate-depth prefecture from the regenerated report: 高知県、佐賀県、熊本県、鹿児島県 are tied at 10 candidates.
 
 ## Blockers
 
