@@ -51,11 +51,13 @@
 
 ## Current Wave
 
-- Wave 10 objective: add a bounded set of official-source-backed Kyoto facilities and independently searchable spaces. Kyoto is in the lowest candidate-depth group at 8 candidates; confirm current depth before editing and preserve unknown ceilings and pricing as `要確認`.
+- Wave 10 source data: added four Kyoto candidates — 舞鶴市総合文化会館・舞鶴東コミュニティセンター（舞鶴市）、文化パルク城陽（城陽市）、福知山市厚生会館（福知山市）、長岡京市中央公民館（長岡京市） — and 48 independently searchable spaces. Kyoto is now 12 candidates, 6 municipalities, and 72 spaces. Official sources: 舞鶴市、城陽市、福知山市、長岡京市.
+- No Kyoto ceiling value was added to the searchable filter. Published stage opening, proscenium, grid, and stage-height values remain descriptive notes only; no value was converted to a ceiling measurement.
+- Wave 10 audit, depth-report generation, app-data generation, whitespace check, and `npm run validate` passed. Final source commit and public deployment are pending.
 
 ## Next Action
 
-- Research and complete one bounded Kyoto official-source wave, then run the required generation, audit, depth report, validation, public deployment, and endpoint verification sequence.
+- Commit and deploy the validated Kyoto source-data wave, verify the public endpoint, then continue with a bounded Hyogo wave (the current lowest candidate-depth group).
 
 ## Blockers
 
