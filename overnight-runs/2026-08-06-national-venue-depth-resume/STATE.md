@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-07 Asia/Tokyo
-- Current wave: Wave 31 — Akita official-source expansion (deployment explicitly authorized).
+- Current wave: Wave 32 — Yamagata official-source expansion (next).
 
 ## Baseline
 
@@ -112,6 +112,7 @@
 - Wave 31 source data: added four official-source-backed Akita facilities — 北秋田市文化会館（北秋田市）、能代市文化会館（能代市）、象潟公会堂（にかほ市）、山本ふるさと文化館（三種町） — and 19 independently searchable spaces. Akita is now 15 candidates, 14 municipalities, and 55 spaces.
 - Official sources: 北秋田市、能代市、にかほ市、三種町. Explicit capacities were recorded only where the official pages stated them; no ceiling or price observation was inferred. All unreported conditions remain 要確認, and stage/building heights were not converted to ceiling data.
 - Wave 31 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-record warning. Public deployment remains to be completed for this wave.
+- Wave 31 deployment passed: production version 76 was deployed successfully; both the Sites URL and `https://venue.art-monosashi.com` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 - Wave 21 source data: added four official-source-backed Kanagawa facilities — 厚木市文化会館（厚木市）、カルッツかわさき（川崎市）、鎌倉芸術館（鎌倉市）、小田原三の丸ホール（小田原市） — and 68 independently searchable spaces. Kanagawa is now 14 candidates, 7 municipalities, and 93 spaces.
 - Official sources: 厚木市、カルッツかわさき公式運営者、鎌倉芸術館公式運営者、小田原三の丸ホール公式運営者. Explicit room ceiling values were recorded only for カルッツかわさき（アクトスタジオ4.5m、大会議室3.0m、中会議室3.0m、小会議室2.8m）. Stage dimensions at the halls remain notes only and no price observation was added.
@@ -153,8 +154,8 @@
 
 ## Next Action
 
-- Resume after the deployment safety blocker is resolved; then research one bounded official-source wave for 山形県, the next lowest candidate-depth prefecture tied at 11 candidates.
+- Research one bounded official-source wave for 山形県, the next lowest candidate-depth prefecture tied at 11 candidates, then regenerate all reports and deploy after validation.
 
 ## Blockers
 
-- The user explicitly authorized sending the private venue-monosashi source code and venue data to the Sites-issued `git.chatgpt-team.site` repository for publication. Resume the validated Wave 31 deployment without changing DNS, secrets, or account settings.
+- None. The repository safety blocker was cleared by destination-specific user authorization, and Wave 31 deployed successfully without DNS, secret, or account-setting changes.

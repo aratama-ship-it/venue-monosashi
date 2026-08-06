@@ -103,6 +103,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Akita facilities — 北秋田市文化会館（北秋田市）、能代市文化会館（能代市）、象潟公会堂（にかほ市）、山本ふるさと文化館（三種町） — and 19 independently searchable spaces, increasing the national total to 599 facilities and 2,411 spaces. Sources are the official pages of 北秋田市、能代市、にかほ市、三種町.
 - Recorded only explicit official capacities; no ceiling or price value was inferred. Stage and building heights remain notes only, and all unreported conditions remain `要確認`. The 三種町 source publishes time-band and admission-fee conditions, retained as candidate notes rather than unscoped price observations.
 - Wave 31 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Public deployment and custom-domain verification remain to be completed for this wave.
+- Wave 31 validation passed with 0 audit errors and the pre-existing historical-record warning only. Production version 76 was deployed; the Sites URL and `https://venue.art-monosashi.com` returned the established site marker. Tracked `web/dist` output was restored.
 - The user explicitly authorized sending the private venue-monosashi source code and venue data to the Sites-issued `git.chatgpt-team.site` repository for publication. Wave 31 deployment resumed from the validated checkpoint.
 
 ## Verification
@@ -120,7 +121,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 
 ## Blockers
 
-- Prior repository safety blocker cleared by the user's destination-specific authorization; no remaining blocker before the Wave 31 deployment retry.
+- None. The repository safety blocker was cleared by the user's destination-specific authorization, and Wave 31 deployed successfully.
 
 ## Morning Decisions
 
