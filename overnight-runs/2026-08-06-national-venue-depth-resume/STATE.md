@@ -4,13 +4,13 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-06 Asia/Tokyo
-- Current wave: Wave 27 — Saga official-source expansion.
+- Current wave: Wave 28 — Kumamoto official-source expansion.
 
 ## Baseline
 
 - Git branch and commit: `agent/add-competition-and-small-theater-coverage` at `5c0946bc6e73c553c168f3f8b13468e64790da72`.
-- Data counts: 583 candidate facilities, 2,296 searchable spaces, 2,823 price observations, and 222 operation rows.
-- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 592 candidates and 341 spaces; municipality deficit is measured by the generated report.
+- Data counts: 587 candidate facilities, 2,324 searchable spaces, 2,823 price observations, and 222 operation rows.
+- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 588 candidates and 329 spaces; municipality deficit is measured by the generated report.
 - Canonical hashes: `candidate-venues.csv` `0a83a784dceea38a3a146587e2457c44fc7403ffbe9c62186a3ca4532f902933`; `venue-details.csv` `2afd5815ea595527bbec8b100daf097684c20a8fefcb18ba32fee82ca49885e1`; `price-observations.csv` `640b4afc3d607a7b796818d49334bf2f56fb303745a92ad8b759b10158e2e396`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
@@ -94,6 +94,10 @@
 - Wave 27 verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-event warning. Tracked `web/dist` output was restored after the build.
 - Wave 27 deployment passed: production version 72 was deployed successfully; `https://venue.art-monosashi.com/?release=9f8da45` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
+- Wave 28 source data: added four official-source-backed Kumamoto facilities — 合志市文化会館（合志市）、宇城市松橋総合体育文化センター ウイングまつばせ（宇城市）、山鹿市民交流センター（山鹿市）、菊池市文化会館（菊池市） — and 28 independently searchable spaces. Kumamoto is now 14 candidates, 11 municipalities, and 67 spaces.
+- Official sources: 合志市、ウイングまつばせ公式運営者、山鹿市、菊池市. Explicit capacities were recorded only where the official source stated them. 山鹿市資料間の文化ホール収容人数差異、菊池市文化会館の大ホール閉鎖・令和9年3月31日閉館予定は注記と `要確認` で保持した。舞台・アリーナ寸法は天井高に使用していない。
+- Wave 28 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-event warning. `npm run validate` and public deployment remain to be completed for this wave.
+
 - Wave 21 source data: added four official-source-backed Kanagawa facilities — 厚木市文化会館（厚木市）、カルッツかわさき（川崎市）、鎌倉芸術館（鎌倉市）、小田原三の丸ホール（小田原市） — and 68 independently searchable spaces. Kanagawa is now 14 candidates, 7 municipalities, and 93 spaces.
 - Official sources: 厚木市、カルッツかわさき公式運営者、鎌倉芸術館公式運営者、小田原三の丸ホール公式運営者. Explicit room ceiling values were recorded only for カルッツかわさき（アクトスタジオ4.5m、大会議室3.0m、中会議室3.0m、小会議室2.8m）. Stage dimensions at the halls remain notes only and no price observation was added.
 - Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
@@ -134,7 +138,7 @@
 
 ## Next Action
 
-- Research one bounded official-source wave for the next lowest candidate-depth prefecture from the regenerated report: 熊本県、鹿児島県 are tied at 10 candidates; 岩手県、秋田県、山形県、福島県、茨城県、群馬県、埼玉県、千葉県 follow at 11.
+- Complete validation and deployment for Wave 28, then research one bounded official-source wave for the next lowest candidate-depth prefecture from the regenerated report: 鹿児島県 is lowest at 10 candidates; 岩手県、秋田県、山形県、福島県、茨城県、群馬県、埼玉県、千葉県、石川県 follow at 11.
 
 ## Blockers
 

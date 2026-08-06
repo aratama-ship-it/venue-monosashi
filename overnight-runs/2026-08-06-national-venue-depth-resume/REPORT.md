@@ -88,6 +88,9 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Saga facilities — 武雄市文化会館、千代田文化会館 はんぎーホール、小城保健福祉センター 桜楽館、多久市中央公民館 — and 28 independently searchable spaces, increasing the national total to 583 facilities and 2,296 spaces. Sources are the official pages of 武雄市、神埼市、小城市、多久市.
 - Recorded only explicit official capacities; no ceiling or price value was inferred. 武雄市文化会館の休館・整備計画、未確認の現行利用可否、面積、天井、搬入、料金、空き状況は注記と `要確認` で保持した。プロセニアム・舞台寸法は天井高に使用していない。
 - Wave 27 validation passed with 0 audit errors and the pre-existing historical-record warning only. Production version 72 was deployed and `https://venue.art-monosashi.com/?release=9f8da45` returned the established site marker. Tracked `web/dist` output was restored after deployment.
+- Added four official-source-backed Kumamoto facilities — 合志市文化会館、宇城市松橋総合体育文化センター ウイングまつばせ、山鹿市民交流センター、菊池市文化会館 — and 28 independently searchable spaces, increasing the national total to 587 facilities and 2,324 spaces. Sources are the official pages of 合志市、ウイングまつばせ公式運営者、山鹿市、菊池市.
+- Recorded only explicit official capacities; no ceiling or price value was inferred. 山鹿市資料間の収容人数差異と菊池市文化会館の閉館・大ホール閉鎖は注記と `要確認` で保持し、舞台・アリーナ寸法は天井高に使用していない。
+- Wave 28 local source validation passed with 0 audit errors and the pre-existing historical-record warning only. Public deployment remains to be completed for this wave.
 
 ## Verification
 
