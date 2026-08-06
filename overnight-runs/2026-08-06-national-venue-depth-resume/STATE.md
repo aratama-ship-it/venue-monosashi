@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-06 Asia/Tokyo
-- Current wave: Wave 12 — Shimane official-source expansion.
+- Current wave: Wave 12 — Shimane official-source expansion, validated and awaiting deployment.
 
 ## Baseline
 
@@ -58,11 +58,13 @@
 
 ## Current Wave
 
-- Wave 12 objective: add a bounded set of official-source-backed Shimane facilities and independently searchable spaces. Shimane is in the lowest candidate-depth group at 8 candidates, 2 municipalities, and 15 spaces; confirm current depth before editing and preserve unknown ceilings and pricing as `要確認`.
+- Wave 12 source data: added four Shimane candidates — 島根県芸術文化センター グラントワ（益田市）、安来市総合文化ホール アルテピア（安来市）、加茂文化ホール ラメール（雲南市）、石央文化ホール（浜田市） — and 22 independently searchable spaces. Shimane is now 12 candidates, 6 municipalities, and 37 spaces.
+- Official sources: グラントワ公式運営者、安来市とアルテピア指定管理者、雲南市とラメール指定管理者、浜田市。多目的ギャラリー以外の最低天井高と料金に直接根拠がない区画は追加せず、要確認のままとした。
+- Wave verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. Audit has 0 errors and the pre-existing historical-event warning only.
 
 ## Next Action
 
-- Research and complete one bounded Shimane official-source wave, then run the required generation, audit, depth report, validation, public deployment, and endpoint verification sequence.
+- Commit and deploy the validated Wave 12 source, verify the public custom domain, then select Kagawa (8 candidates, 4 municipalities, 15 spaces) as the next lowest-depth wave.
 
 ## Blockers
 
