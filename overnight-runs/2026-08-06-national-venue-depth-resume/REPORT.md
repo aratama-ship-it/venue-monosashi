@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 7 will continue with Toyama.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 7 is ready for final repository validation and public deployment.
 
 ## Changes
 
@@ -23,11 +23,13 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Tochigi facilities and 23 searchable spaces, increasing the national total to 499 facilities and 1,675 spaces. The sources are the official pages of 那須塩原市、KOBELCO 真岡いちごホール指定管理者、さくら市、大田原市.
 - Retained 真岡いちごホールの舞台高さ as a note only; it was not entered as a ceiling measurement.
 - Deployed the validated Wave 6 data to the existing public site (version 51) and confirmed the established custom domain returned the site response.
+- Added four official-source-backed Toyama facilities and 32 searchable spaces, increasing the national total to 503 facilities and 1,707 spaces. The sources are the official pages of 射水市、小矢部市、上市町、砺波市. Wave 7 is ready for final repository validation and public deployment.
+- Retained stage-area and approximate-seat statements as notes only. No new Toyama ceiling height or approximate capacity entered a numeric filter.
 
 ## Verification
 
-- Wave audit passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 499 venues and 2,823 price observations.
-- Current depth report: 676 candidate gaps and 779 space gaps. Tochigi is 12 candidates, 10 municipalities, and 43 spaces; Toyama, Fukui, Aichi, Kyoto, Hyogo, Shimane, Kagawa, Fukuoka, Nagasaki, and Okinawa now form the lowest candidate-depth group at 8 candidates.
+- Wave audit passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 503 venues and 2,823 price observations.
+- Current depth report: 672 candidate gaps and 747 space gaps. Toyama is 12 candidates, 10 municipalities, and 49 spaces; Fukui, Aichi, Kyoto, Hyogo, Shimane, Kagawa, Fukuoka, Nagasaki, Okinawa, and Niigata now form the lowest candidate-depth group at 8 candidates.
 
 ## Pre-existing State Preserved
 
