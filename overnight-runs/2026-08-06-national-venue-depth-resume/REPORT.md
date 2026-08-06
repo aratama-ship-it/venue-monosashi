@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 10 is published; the next bounded wave targets Hyogo.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 11 is validated and awaiting public deployment; the next bounded wave will target Shimane.
 
 ## Changes
 
@@ -35,11 +35,13 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Kyoto facilities and 48 searchable spaces, increasing the national total to 515 facilities and 1,852 spaces. The sources are the official pages of 舞鶴市、城陽市、福知山市、長岡京市.
 - No stage opening, proscenium, grid, or stage-height value was converted to a searchable ceiling measurement.
 - Validated and deployed Wave 10 to the existing public site (version 55); the established custom domain returned the site response.
+- Added four official-source-backed Hyogo facilities — 西宮市民会館（アミティ・ベイコムホール）、明石市立市民会館（アワーズホール）、明石市立西部市民会館、ライフピアいちじま大ホール — and 23 searchable spaces, increasing the national total to 519 facilities and 1,875 spaces. The sources are the official pages of 西宮市文化振興財団、明石市、丹波市.
+- No Hyogo ceiling value was added to the searchable filter. All new room ceiling values remain unknown; no stage, proscenium, or building-height statement was used as a ceiling value.
 
 ## Verification
 
-- Wave audit passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 515 venues and 2,823 price observations.
-- Current depth report: 660 candidate gaps and 649 space gaps. Kyoto is 12 candidates, 6 municipalities, and 72 spaces; Hyogo, Shimane, Kagawa, Fukuoka, Nagasaki, and Okinawa now form the lowest candidate-depth group at 8 candidates.
+- Wave 11 audit and validation passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 519 venues and 2,823 price observations.
+- Current depth report: 656 candidate gaps and 628 space gaps. Hyogo is 12 candidates, 6 municipalities, and 53 spaces; Shimane, Kagawa, Fukuoka, Nagasaki, and Okinawa now form the lowest candidate-depth group at 8 candidates.
 
 ## Pre-existing State Preserved
 
