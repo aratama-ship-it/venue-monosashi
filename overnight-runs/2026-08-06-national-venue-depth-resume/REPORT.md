@@ -78,7 +78,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Wave 23 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Production version 68 was deployed and `https://venue.art-monosashi.com/?release=547b19f` returned the established site marker. Tracked `web/dist` output was restored.
 - Added four official-source-backed Wakayama facilities — 海南市民交流センター、岩出市コミュニティセンター・サンホール、岩出市総合保健福祉センター、白浜会館 — and 18 searchable spaces, increasing the national total to 571 facilities and 2,229 spaces. Sources are the official pages of 海南市、岩出市、白浜町.
 - Recorded only explicit official capacities and areas from 岩出市総合保健福祉センター and 白浜会館; no ceiling or price value was inferred. Unreported area, ceiling, loading, and availability remain `要確認`.
-- Wave 24 local validation remains to be completed before public deployment.
+- Wave 24 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Production version 69 was deployed and `https://venue.art-monosashi.com/?release=63e4f4b` returned the established site marker. Tracked `web/dist` output was restored.
 
 ## Verification
 

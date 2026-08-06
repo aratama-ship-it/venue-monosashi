@@ -76,7 +76,8 @@
 
 - Wave 24 source data: added four official-source-backed Wakayama facilities — 海南市民交流センター（海南市）、岩出市コミュニティセンター・サンホール（岩出市）、岩出市総合保健福祉センター（岩出市）、白浜会館（白浜町） — and 18 independently searchable spaces. Wakayama is now 14 candidates, 10 municipalities, and 44 spaces.
 - Official sources: 海南市、岩出市、白浜町. Explicit official capacities and areas were recorded for 岩出市総合保健福祉センター多目的ホール（300人・347㎡）、小ホール（96人・163㎡）、視聴覚室（96人・131㎡） and 白浜会館1階ホール（移動いす2,000人）. No ceiling or price observation was added; all unreported area, ceiling, loading, and current availability remain `要確認`.
-- Wave 24 verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, and `git diff --check` all passed with only the pre-existing historical-event warning. `npm run validate` and public deployment remain to be completed for this wave.
+- Wave 24 verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
+- Wave 24 deployment passed: production version 69 was deployed successfully; `https://venue.art-monosashi.com/?release=63e4f4b` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 - Wave 21 source data: added four official-source-backed Kanagawa facilities — 厚木市文化会館（厚木市）、カルッツかわさき（川崎市）、鎌倉芸術館（鎌倉市）、小田原三の丸ホール（小田原市） — and 68 independently searchable spaces. Kanagawa is now 14 candidates, 7 municipalities, and 93 spaces.
 - Official sources: 厚木市、カルッツかわさき公式運営者、鎌倉芸術館公式運営者、小田原三の丸ホール公式運営者. Explicit room ceiling values were recorded only for カルッツかわさき（アクトスタジオ4.5m、大会議室3.0m、中会議室3.0m、小会議室2.8m）. Stage dimensions at the halls remain notes only and no price observation was added.
