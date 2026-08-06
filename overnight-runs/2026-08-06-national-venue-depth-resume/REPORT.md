@@ -81,7 +81,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Wave 24 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Production version 69 was deployed and `https://venue.art-monosashi.com/?release=63e4f4b` returned the established site marker. Tracked `web/dist` output was restored.
 - Added four official-source-backed Hiroshima facilities — 東広島芸術文化ホールくらら、広島市文化交流会館、三原市芸術文化センター ポポロ、むかいしま文化ホール — and 15 searchable spaces, increasing the national total to 575 facilities and 2,244 spaces. Sources are the official pages of 東広島市、広島市、三原市芸術文化センター、尾道市.
 - Recorded only explicit official capacities from city/operator pages; no ceiling or price value was inferred. Unreported area, ceiling, loading, and availability remain `要確認`.
-- Wave 25 local validation remains to be completed before public deployment.
+- Wave 25 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Production version 70 was deployed and `https://venue.art-monosashi.com/?release=035d756` returned the established site marker. Tracked `web/dist` output was restored.
 
 ## Verification
 

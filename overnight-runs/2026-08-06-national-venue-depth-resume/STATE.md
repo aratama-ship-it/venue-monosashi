@@ -81,7 +81,8 @@
 
 - Wave 25 source data: added four official-source-backed Hiroshima facilities — 東広島芸術文化ホールくらら（東広島市）、広島市文化交流会館（広島市）、三原市芸術文化センター ポポロ（三原市）、むかいしま文化ホール（尾道市） — and 15 independently searchable spaces. Hiroshima is now 14 candidates, 7 municipalities, and 29 spaces.
 - Official sources: 東広島市・くらら公式運営者、広島市、三原市芸術文化センター公式運営者、尾道市. Explicit official capacities were recorded for 広島市文化交流会館ホール（2,001席）、ポポロホール（1,209席）、むかいしま文化ホール（400名）とホール研修室1・2（各30名程度）. No ceiling or price observation was added; all unreported area, ceiling, loading, and current availability remain `要確認`.
-- Wave 25 verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, and `git diff --check` all passed with only the pre-existing historical-event warning. `npm run validate` and public deployment remain to be completed for this wave.
+- Wave 25 verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
+- Wave 25 deployment passed: production version 70 was deployed successfully; `https://venue.art-monosashi.com/?release=035d756` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 - Wave 21 source data: added four official-source-backed Kanagawa facilities — 厚木市文化会館（厚木市）、カルッツかわさき（川崎市）、鎌倉芸術館（鎌倉市）、小田原三の丸ホール（小田原市） — and 68 independently searchable spaces. Kanagawa is now 14 candidates, 7 municipalities, and 93 spaces.
 - Official sources: 厚木市、カルッツかわさき公式運営者、鎌倉芸術館公式運営者、小田原三の丸ホール公式運営者. Explicit room ceiling values were recorded only for カルッツかわさき（アクトスタジオ4.5m、大会議室3.0m、中会議室3.0m、小会議室2.8m）. Stage dimensions at the halls remain notes only and no price observation was added.
