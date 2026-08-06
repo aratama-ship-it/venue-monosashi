@@ -91,6 +91,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Kumamoto facilities — 合志市文化会館、宇城市松橋総合体育文化センター ウイングまつばせ、山鹿市民交流センター、菊池市文化会館 — and 28 independently searchable spaces, increasing the national total to 587 facilities and 2,324 spaces. Sources are the official pages of 合志市、ウイングまつばせ公式運営者、山鹿市、菊池市.
 - Recorded only explicit official capacities; no ceiling or price value was inferred. 山鹿市資料間の収容人数差異と菊池市文化会館の閉館・大ホール閉鎖は注記と `要確認` で保持し、舞台・アリーナ寸法は天井高に使用していない。
 - Wave 28 local source validation passed with 0 audit errors and the pre-existing historical-record warning only. Public deployment remains to be completed for this wave.
+- Wave 28 validation passed with 0 audit errors and the pre-existing historical-record warning only. Production version 73 was deployed and `https://venue.art-monosashi.com/?release=702a8f3` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 ## Verification
 
