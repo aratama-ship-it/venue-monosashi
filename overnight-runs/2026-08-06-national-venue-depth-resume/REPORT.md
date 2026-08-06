@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 16 is validated and awaiting public deployment; the next bounded wave targets Niigata.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 16 is published; the next bounded wave targets Niigata.
 
 ## Changes
 
@@ -52,6 +52,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Validated and deployed Wave 15 to the existing public site (version 60); the established custom domain returned the site marker for the deployed source revision.
 - Added four official-source-backed Okinawa facilities — 那覇市中央公民館、那覇市ぶんかテンブス館、うるま市石川会館、うるま市きむたかホール — and 8 searchable spaces, increasing the national total to 539 facilities and 1,958 spaces. The sources are the official pages of 那覇市 and うるま市.
 - No Okinawa ceiling or price values were inferred or added. New space conditions remain explicitly `要確認`; approximate capacities and stage/building statements were not used as ceiling measurements.
+- Validated and deployed Wave 16 to the existing public site (version 61); the established custom domain returned the site marker for the deployed source revision.
 
 ## Verification
 
