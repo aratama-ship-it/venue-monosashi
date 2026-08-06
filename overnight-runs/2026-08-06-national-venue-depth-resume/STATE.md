@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-06 Asia/Tokyo
-- Current wave: Wave 16 — Okinawa official-source expansion.
+- Current wave: Wave 16 — Okinawa official-source expansion, validated and awaiting deployment.
 
 ## Baseline
 
@@ -68,6 +68,9 @@
 - No Fukuoka ceiling value or price observation was added. All new ceiling, price, loading, and availability attributes remain `要確認`; no stage, proscenium, or building-height statement was converted into ceiling data.
 - Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
 - Wave 15 deployment passed: production version 60 was deployed successfully, and `https://venue.art-monosashi.com/?release=a57da99` returned the established site marker.
+- Wave 16 source data: added four Okinawa candidates — 那覇市中央公民館（那覇市）、那覇市ぶんかテンブス館（那覇市）、うるま市石川会館（うるま市）、うるま市きむたかホール（うるま市） — and 8 independently searchable spaces. Okinawa is now 12 candidates, 7 municipalities, and 26 spaces. Official sources: 那覇市、うるま市.
+- No Okinawa ceiling value or price observation was added. All new ceiling, price, loading, and availability attributes remain `要確認`; approximate capacities and stage/building dimensions were not converted into ceiling data.
+- Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
 - Wave 14 deployment passed: production version 59 was deployed successfully, and `https://venue.art-monosashi.com/?release=dfbcb27` returned the established site marker.
 - Wave 15 source data: added four Nagasaki candidates — メモリード・シーハットおおむら（大村市）、長崎市民会館（長崎市）、長崎市平和会館（長崎市）、長崎市三和公民館（長崎市） — and 15 independently searchable spaces. Nagasaki is now 12 candidates, 6 municipalities, and 34 spaces. Official sources: 大村市、長崎市.
 - No Nagasaki ceiling value or price observation was added. All new ceiling, price, loading, and availability attributes remain `要確認`; stage dimensions, building dimensions, and maximum layout capacities were not converted into ceiling data.
@@ -75,7 +78,7 @@
 
 ## Next Action
 
-- Research and complete one bounded Okinawa official-source wave, then run the required generation, audit, depth report, validation, public deployment, and endpoint verification sequence. Okinawa currently has 8 candidates, 7 municipalities, and 16 spaces.
+- Commit and deploy the validated Okinawa source-data wave, verify the public custom domain, then target the next lowest-depth prefecture, Niigata (9 candidates, 7 municipalities, 24 spaces).
 
 ## Blockers
 

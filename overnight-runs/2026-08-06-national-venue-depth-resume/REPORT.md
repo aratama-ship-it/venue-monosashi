@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 15 is published; the next bounded wave targets Okinawa.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 16 is validated and awaiting public deployment; the next bounded wave targets Niigata.
 
 ## Changes
 
@@ -50,11 +50,13 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Nagasaki facilities — メモリード・シーハットおおむら、長崎市民会館、長崎市平和会館、長崎市三和公民館 — and 15 searchable spaces, increasing the national total to 535 facilities and 1,949 spaces. The sources are the official pages of 大村市 and 長崎市.
 - No Nagasaki ceiling or price values were inferred or added. New space conditions remain explicitly `要確認`; stage, building, and layout-height statements were not used as ceiling measurements.
 - Validated and deployed Wave 15 to the existing public site (version 60); the established custom domain returned the site marker for the deployed source revision.
+- Added four official-source-backed Okinawa facilities — 那覇市中央公民館、那覇市ぶんかテンブス館、うるま市石川会館、うるま市きむたかホール — and 8 searchable spaces, increasing the national total to 539 facilities and 1,958 spaces. The sources are the official pages of 那覇市 and うるま市.
+- No Okinawa ceiling or price values were inferred or added. New space conditions remain explicitly `要確認`; approximate capacities and stage/building statements were not used as ceiling measurements.
 
 ## Verification
 
 - Wave 14 audit and validation passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 531 venues and 2,823 price observations.
-- Current depth report: 640 candidate gaps and 554 space gaps. Nagasaki is 12 candidates, 6 municipalities, and 34 spaces; Okinawa is now the lowest candidate-depth prefecture at 8 candidates.
+- Current depth report: 636 candidate gaps and 545 space gaps. Okinawa is 12 candidates, 7 municipalities, and 26 spaces; Niigata is now the lowest candidate-depth prefecture at 9 candidates.
 
 ## Pre-existing State Preserved
 
