@@ -17,8 +17,9 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Deployed the validated Wave 3 data to the existing public site (version 48) and confirmed the established custom domain returned the site response.
 - Added four official-source-backed Miyazaki facilities and 27 searchable spaces, increasing the national total to 491 facilities and 1,618 spaces. Wave 4 is ready for final repository validation and public deployment.
 - Deployed the validated Wave 4 data to the existing public site (version 49) and confirmed the established custom domain returned the site response.
-- Added four official-source-backed Aomori facilities and 34 searchable spaces, increasing the national total to 495 facilities and 1,652 spaces. The sources are the official pages of 平川市, 六ヶ所村文化交流プラザ スワニー, むつ市, and 藤崎町. Wave 5 is ready for final repository validation and public deployment.
+- Added four official-source-backed Aomori facilities and 34 searchable spaces, increasing the national total to 495 facilities and 1,652 spaces. The sources are the official pages of 平川市, 六ヶ所村文化交流プラザ スワニー, むつ市, and 藤崎町.
 - Retained stage-height and approximate-seat statements as notes only. No new Aomori ceiling height or approximate capacity entered a numeric filter.
+- Deployed the validated Wave 5 data to the existing public site (version 50) and confirmed the established custom domain returned the site response.
 
 ## Verification
 
