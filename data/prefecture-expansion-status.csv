@@ -33,7 +33,7 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 島根県,中国,8,2,15,7,5,2,17,13,36,foundation_plus
 岡山県,中国,9,6,28,19,17,2,16,9,23,foundation_plus
 広島県,中国,10,4,14,9,12,5,15,11,37,foundation_plus
-山口県,中国,7,6,26,17,19,1,18,9,25,foundation
+山口県,中国,11,10,59,45,36,1,14,5,0,foundation_plus
 徳島県,四国,11,8,35,28,7,1,14,7,16,foundation_plus
 香川県,四国,8,4,15,10,6,0,17,11,36,foundation_plus
 愛媛県,四国,9,6,23,21,15,0,16,9,28,foundation_plus
