@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 19 Ehime is validated locally and awaits public deployment; the next bounded wave targets Hokkaido.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 20 Hokkaido is validated locally and awaits public deployment; the next bounded wave targets Kanagawa.
 
 ## Changes
 
@@ -62,11 +62,13 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Ehime facilities — 松山市民会館、西条市総合文化会館、宇和島市立南予文化会館、宇和島市立コスモスホール三間 — and 35 searchable spaces, increasing the national total to 551 facilities and 2,037 spaces. The sources are the official pages of 松山市、西条市総合文化会館運営者、宇和島市.
 - Recorded closure/reconstruction constraints as notes only: 松山市民会館 has a published FY2027-end closure policy, and 南予文化会館 is closed during ongoing ceiling renovation. No new Ehime ceiling or price value was inferred or added; stage dimensions were not converted to ceiling measurements.
 - Validated and deployed Wave 19 to the existing public site (version 64); `https://venue.art-monosashi.com/?release=1fa8c9e` returned the established site marker. Tracked `web/dist` output was restored after deployment.
+- Added four official-source-backed Hokkaido facilities — 小樽市民会館、コーチャンフォー釧路文化ホール、北見芸術文化ホール、苫小牧市民文化ホール ART CUBES — and 34 searchable spaces, increasing the national total to 555 facilities and 2,071 spaces. The sources are the official pages of 小樽市民会館指定管理者、釧路市、北見市、苫小牧市民文化ホール指定管理者.
+- No new Hokkaido ceiling or price value was inferred or added. The official 1,524-seat Kushiro large-hall capacity was recorded; new space conditions otherwise remain explicitly `要確認`.
 
 ## Verification
 
 - Wave 14 audit and validation passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 531 venues and 2,823 price observations.
-- Current depth report: 624 candidate gaps and 478 space gaps. Ehime is now 13 candidates, 8 municipalities, and 58 spaces; Hokkaido is the lowest candidate-depth prefecture at 10 candidates, 4 municipalities, and 14 spaces.
+- Current depth report: 620 candidate gaps and 444 space gaps. Hokkaido is now 14 candidates, 8 municipalities, and 48 spaces; Kanagawa is currently tied for the lowest candidate-depth at 10 candidates.
 
 ## Pre-existing State Preserved
 

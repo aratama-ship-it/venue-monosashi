@@ -1,5 +1,5 @@
 prefecture,region,candidate_count,municipality_count,space_count,capacity_known_count,area_known_count,ceiling_known_count,candidate_gap,municipality_gap,space_gap,status
-北海道,北海道,10,4,14,11,13,2,15,11,37,foundation_plus
+北海道,北海道,14,8,48,12,13,2,11,7,3,foundation_plus
 青森県,東北,12,10,63,33,44,2,13,5,0,foundation_plus
 岩手県,東北,11,9,47,29,22,0,14,6,4,foundation_plus
 宮城県,東北,12,8,49,25,29,6,13,7,2,foundation_plus

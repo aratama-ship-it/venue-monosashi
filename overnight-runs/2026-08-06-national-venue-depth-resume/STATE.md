@@ -4,13 +4,13 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-06 Asia/Tokyo
-- Current wave: Wave 20 — Hokkaido official-source expansion.
+- Current wave: Wave 20 — Hokkaido official-source expansion validated and awaiting public deployment.
 
 ## Baseline
 
 - Git branch and commit: `agent/add-competition-and-small-theater-coverage` at `5c0946bc6e73c553c168f3f8b13468e64790da72`.
-- Data counts: 551 candidate facilities, 2,037 searchable spaces, 2,823 price observations, and 222 operation rows.
-- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 624 candidates and 478 spaces; municipality deficit is measured by the generated report.
+- Data counts: 555 candidate facilities, 2,071 searchable spaces, 2,823 price observations, and 222 operation rows.
+- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 620 candidates and 444 spaces; municipality deficit is measured by the generated report.
 - Canonical hashes: `candidate-venues.csv` `0a83a784dceea38a3a146587e2457c44fc7403ffbe9c62186a3ca4532f902933`; `venue-details.csv` `2afd5815ea595527bbec8b100daf097684c20a8fefcb18ba32fee82ca49885e1`; `price-observations.csv` `640b4afc3d607a7b796818d49334bf2f56fb303745a92ad8b759b10158e2e396`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
@@ -64,6 +64,11 @@
 
 ## Current Wave
 
+- Wave 20 source data: added four official-source-backed Hokkaido facilities — 小樽市民会館（小樽市）、コーチャンフォー釧路文化ホール（釧路市）、北見芸術文化ホール（北見市）、苫小牧市民文化ホール ART CUBES（苫小牧市） — and 34 independently searchable spaces. Hokkaido is now 14 candidates, 8 municipalities, and 48 spaces.
+- Official sources: 小樽市民会館指定管理者、釧路市、北見市、苫小牧市民文化ホール指定管理者. 釧路大ホールの公式収容1,524席のみ容量検索値に採用し、それ以外の客席・面積・天井高・搬入・料金・空き状況は要確認とした。
+- No Hokkaido ceiling value or price observation was added. Existing source-published arena/building heights remain untouched; all new ceiling, price, loading, and availability attributes remain `要確認`.
+- Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check` all passed with only the pre-existing historical-event warning. `npm run validate` remains required before deployment.
+
 - Wave 19 source data: added four official-source-backed Ehime facilities — 松山市民会館（松山市）、西条市総合文化会館（西条市）、宇和島市立南予文化会館（宇和島市）、宇和島市立コスモスホール三間（宇和島市） — and 35 independently searchable spaces. Ehime is now 13 candidates, 8 municipalities, and 58 spaces.
 - Official sources: 松山市、西条市総合文化会館運営者、宇和島市。松山市民会館の2028年3月末閉館方針と、南予文化会館の改修休館は候補の注記に明記した。南予文化会館の休館中ホールについて料金観測は追加していない。
 - No Ehime ceiling value or price observation was added. All new ceiling, price, loading, and availability attributes remain `要確認`; published stage dimensions were not converted into ceiling data.
@@ -93,7 +98,7 @@
 
 ## Next Action
 
-- Research and complete one bounded Hokkaido official-source wave, currently the lowest candidate-depth prefecture at 10 candidates, 4 municipalities, and 14 spaces. Use official operator, municipality, prefecture, or government sources only, then run the full generation, audit, validation, deployment, and endpoint-verification sequence.
+- Run the required validation and public deployment sequence for Wave 20 Hokkaido. Then research one bounded Kanagawa official-source wave, currently tied for the lowest candidate-depth at 10 candidates, 7 municipalities, and 16 spaces.
 
 ## Blockers
 
