@@ -66,7 +66,8 @@
 
 - Wave 21 source data: added four official-source-backed Kanagawa facilities — 厚木市文化会館（厚木市）、カルッツかわさき（川崎市）、鎌倉芸術館（鎌倉市）、小田原三の丸ホール（小田原市） — and 68 independently searchable spaces. Kanagawa is now 14 candidates, 7 municipalities, and 93 spaces.
 - Official sources: 厚木市、カルッツかわさき公式運営者、鎌倉芸術館公式運営者、小田原三の丸ホール公式運営者. Explicit room ceiling values were recorded only for カルッツかわさき（アクトスタジオ4.5m、大会議室3.0m、中会議室3.0m、小会議室2.8m）. Stage dimensions at the halls remain notes only and no price observation was added.
-- Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning. Public deployment remains required before closing this wave.
+- Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
+- Wave 21 deployment passed: production version 66 was deployed successfully; `https://venue.art-monosashi.com/?release=1e2f363` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 - Wave 20 source data: added four official-source-backed Hokkaido facilities — 小樽市民会館（小樽市）、コーチャンフォー釧路文化ホール（釧路市）、北見芸術文化ホール（北見市）、苫小牧市民文化ホール ART CUBES（苫小牧市） — and 34 independently searchable spaces. Hokkaido is now 14 candidates, 8 municipalities, and 48 spaces.
 - Official sources: 小樽市民会館指定管理者、釧路市、北見市、苫小牧市民文化ホール指定管理者. 釧路大ホールの公式収容1,524席のみ容量検索値に採用し、それ以外の客席・面積・天井高・搬入・料金・空き状況は要確認とした。
@@ -103,7 +104,7 @@
 
 ## Next Action
 
-- Deploy the validated Wave 21 Kanagawa source commit and verify the public custom domain. Then research one bounded wave for the next lowest candidate-depth prefecture from the regenerated report: 長野県、岐阜県、和歌山県、広島県、高知県、佐賀県、熊本県、鹿児島県 are tied at 10 candidates.
+- Research one bounded official-source wave for the next lowest candidate-depth prefecture from the regenerated report: 長野県、岐阜県、和歌山県、広島県、高知県、佐賀県、熊本県、鹿児島県 are tied at 10 candidates.
 
 ## Blockers
 

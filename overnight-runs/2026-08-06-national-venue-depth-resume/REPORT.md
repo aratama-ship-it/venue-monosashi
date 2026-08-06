@@ -67,7 +67,8 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Validated and deployed Wave 20 to the existing public site (version 65); `https://venue.art-monosashi.com/?release=bcf31a5` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 - Added four official-source-backed Kanagawa facilities — 厚木市文化会館、カルッツかわさき、鎌倉芸術館、小田原三の丸ホール — and 68 searchable spaces, increasing the national total to 559 facilities and 2,139 spaces. Sources are the official pages of 厚木市、カルッツかわさき、鎌倉芸術館、小田原三の丸ホール.
 - Recorded only explicit room ceiling measurements from the カルッツかわさき official facility guide: アクトスタジオ4.5m、大会議室3.0m、中会議室3.0m、小会議室2.8m. Hall stage dimensions remain notes only and no price observation was added.
-- Wave 21 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Public deployment and custom-domain verification remain to be completed for this wave.
+- Wave 21 local validation passed with 0 audit errors and the pre-existing historical-record warning only.
+- Deployed Wave 21 to the existing public site (version 66); `https://venue.art-monosashi.com/?release=1e2f363` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 ## Verification
 
