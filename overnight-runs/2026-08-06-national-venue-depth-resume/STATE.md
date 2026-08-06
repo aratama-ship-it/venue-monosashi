@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-06 Asia/Tokyo
-- Current wave: Wave 3 — Oita official-source expansion (source data and checks complete; validation and deployment pending).
+- Current wave: Wave 4 — Miyazaki official-source expansion.
 
 ## Baseline
 
@@ -25,14 +25,15 @@
 - Wave 2 verification and deployment: `npm run validate` passed (the pre-existing historical-event warning only); production version 47 deployed successfully and the established `venue.art-monosashi.com` endpoint returned the site response.
 - Wave 3 source data: added four Oita candidates — 宇佐文化会館・ウサノピア（宇佐市）、くにさき総合文化センター（国東市）、豊後高田市中央公民館（豊後高田市）、豊後大野市総合文化センター エイトピアおおの（豊後大野市） — and 35 independently searchable spaces. Oita is now 11 candidates, 9 municipalities, and 56 spaces. Official sources: 宇佐市、国東市、豊後高田市、エイトピアおおの指定管理者.
 - The only new filterable ceiling values are the values explicitly labelled height by the official facility page: アストくにさきマルチホール5m and ギャラリー3.5m. The stage hall's proscenium and grid heights remain notes only.
+- Wave 3 verification and deployment: `npm run validate` passed (the pre-existing historical-event warning only); production version 48 deployed successfully and the established `venue.art-monosashi.com` endpoint returned the site response.
 
 ## Current Wave
 
-- Run repository validation, commit the named Wave 3 source files, deploy to the existing public site, and verify the public URL.
+- Add a bounded, official-source-only Miyazaki wave with at most four facilities in distinct underrepresented municipalities and all clearly published independent spaces.
 
 ## Next Action
 
-- After successful public deployment, start Wave 4 in Miyazaki, the lowest-depth prefecture (7 candidates), using official-source-only additions.
+- Research Miyazaki municipal, prefectural, and designated-operator venue pages; then add only fully source-backed facility and space rows.
 
 ## Blockers
 

@@ -14,6 +14,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added three official-source-backed Kochi facilities and 40 searchable spaces, increasing the national total to 483 facilities and 1,556 spaces. Wave 2 is ready for final repository validation and public deployment.
 - Deployed the validated Wave 2 data to the existing public site (version 47) and confirmed the established custom domain returned the site response.
 - Added four official-source-backed Oita facilities and 35 searchable spaces, increasing the national total to 487 facilities and 1,591 spaces. Wave 3 is ready for final repository validation and public deployment.
+- Deployed the validated Wave 3 data to the existing public site (version 48) and confirmed the established custom domain returned the site response.
 
 ## Verification
 
