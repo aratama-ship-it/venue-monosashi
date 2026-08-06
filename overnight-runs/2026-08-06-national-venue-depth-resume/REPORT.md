@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 13 is validated and awaiting public deployment; the next bounded wave will target Fukuoka.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 13 is published; the next bounded wave targets Fukuoka.
 
 ## Changes
 
@@ -43,6 +43,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Validated and deployed Wave 12 to the existing public site (version 57); the established custom domain returned the site response.
 - Added four official-source-backed Kagawa facilities — 善通寺市民会館、東かがわ市交流プラザ、源内音楽ホール、ユープラザうたづ — and 26 searchable spaces, increasing the national total to 527 facilities and 1,923 spaces. The sources are the official pages of 善通寺市、東かがわ市交流プラザ、さぬき市、宇多津町振興財団.
 - No Kagawa ceiling value was added to the searchable filter. All new room ceiling values remain unknown; no stage, proscenium, or building-height statement was used as a ceiling value.
+- Validated and deployed Wave 13 to the existing public site (version 58); the established custom domain returned the site response.
 
 ## Verification
 
