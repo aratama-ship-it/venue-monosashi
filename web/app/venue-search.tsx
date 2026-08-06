@@ -10,6 +10,8 @@ type SortKey =
   | "capacity_small"
   | "area"
   | "booking";
+type FeeClass = "all" | "nonprofit" | "commercial";
+type PriceDayType = "all" | "weekday" | "weekend_holiday";
 type VenueRole =
   | "event_space"
   | "stage"
@@ -55,6 +57,46 @@ const venueRoles: ReadonlyArray<{ id: VenueRole; label: string }> = [
 ];
 
 const validVenueRoles = new Set<VenueRole>(venueRoles.map((role) => role.id));
+const validFeeClasses = new Set<FeeClass>(["all", "nonprofit", "commercial"]);
+const validPriceDayTypes = new Set<PriceDayType>([
+  "all",
+  "weekday",
+  "weekend_holiday",
+]);
+
+function feeClassForUseCase(useCase: string): Exclude<FeeClass, "all"> | null {
+  const normalized = useCase.toLocaleLowerCase("ja");
+  if (
+    normalized.includes("noncommercial") ||
+    normalized.includes("nonprofit") ||
+    normalized.includes("non_profit") ||
+    normalized.includes("非営利") ||
+    normalized.includes("公益")
+  ) {
+    return "nonprofit";
+  }
+  if (
+    normalized.includes("commercial") ||
+    /(^|_)profit($|_)/.test(normalized) ||
+    normalized.includes("営利")
+  ) {
+    return "commercial";
+  }
+  return null;
+}
+
+function priceMatchesConditions(
+  useCase: string,
+  dayType: string,
+  feeClass: FeeClass,
+  priceDayType: PriceDayType,
+) {
+  const feeMatches =
+    feeClass === "all" || feeClassForUseCase(useCase) === feeClass;
+  const dayMatches =
+    priceDayType === "all" || dayType === "all" || dayType === priceDayType;
+  return feeMatches && dayMatches;
+}
 
 function venueRoleLabel(roleId: VenueRole) {
   return venueRoles.find((role) => role.id === roleId)?.label ?? roleId;
@@ -187,6 +229,8 @@ const useCaseLabels: Record<string, string> = {
   admission_up_to_1000: "入場料1,000円以下",
   admission_under_5000_or_sales: "入場料5,000円未満または販売あり",
   admission_over_5000: "入場料5,000円以上",
+  commercial_admission_up_to_1000: "営利・宣伝目的／入場料1,000円以下",
+  nonprofit_admission_up_to_1000: "公益目的／入場料1,000円以下",
   setup_teardown: "設営・撤去",
 };
 
@@ -319,6 +363,9 @@ export function VenueSearch() {
   const [capacityMax, setCapacityMax] = useState(0);
   const [area, setArea] = useState(0);
   const [ceiling, setCeiling] = useState(0);
+  const [feeClass, setFeeClass] = useState<FeeClass>("all");
+  const [priceDayType, setPriceDayType] = useState<PriceDayType>("all");
+  const [maxDailyPrice, setMaxDailyPrice] = useState(0);
   const [fixedStage, setFixedStage] = useState(false);
   const [practice, setPractice] = useState(false);
   const [largeVehicleOnly, setLargeVehicleOnly] = useState(false);
@@ -403,6 +450,17 @@ export function VenueSearch() {
       setCapacityMax(numberParam(params, "max", 20000));
       setArea(numberParam(params, "area", 10000));
       setCeiling(numberParam(params, "ceiling", 100));
+      const feeParam = params.get("fee") as FeeClass | null;
+      const priceDayParam = params.get("price_day") as PriceDayType | null;
+      setFeeClass(
+        feeParam && validFeeClasses.has(feeParam) ? feeParam : "all",
+      );
+      setPriceDayType(
+        priceDayParam && validPriceDayTypes.has(priceDayParam)
+          ? priceDayParam
+          : "all",
+      );
+      setMaxDailyPrice(numberParam(params, "budget", 100000000));
       setFixedStage(params.get("fixed") === "1");
       setPractice(params.get("practice") === "1");
       setLargeVehicleOnly(params.get("loading") === "1");
@@ -626,6 +684,12 @@ export function VenueSearch() {
               price.category === "facility" &&
               price.unit === "per_day" &&
               !price.useCase.includes("setup") &&
+              priceMatchesConditions(
+                price.useCase,
+                price.dayType,
+                feeClass,
+                priceDayType,
+              ) &&
               (!hasSpaceCondition || matchingSpaceIds.has(price.spaceId)),
           )
           .map((price) => ({
@@ -638,16 +702,48 @@ export function VenueSearch() {
             ): price is { amount: number; kind: "official_daily" } =>
               price.amount !== null,
           );
-        const compatiblePrices = compatibleDailyPrices.sort(
+        const compatibleScenarioPrices = venue.budgetScenarios
+          .filter(
+            (scenario) =>
+              priceMatchesConditions(
+                scenario.useCase,
+                scenario.dayType,
+                feeClass,
+                priceDayType,
+              ) &&
+              (!hasSpaceCondition || matchingSpaceIds.has(scenario.spaceId)),
+          )
+          .map((scenario) => ({
+            amount: scenario.amount,
+            kind: "derived_scenario" as const,
+          }))
+          .filter(
+            (
+              price,
+            ): price is { amount: number; kind: "derived_scenario" } =>
+              price.amount !== null,
+          );
+        const compatiblePrices = [
+          ...compatibleDailyPrices,
+          ...compatibleScenarioPrices,
+        ].sort(
           (a, b) => a.amount - b.amount,
         );
+        const searchPrice = compatiblePrices[0]?.amount ?? null;
+        const hasPriceCondition =
+          feeClass !== "all" || priceDayType !== "all" || maxDailyPrice > 0;
         return {
           ...venue,
           spaceKnownMatch:
             !hasSpaceCondition ||
             matchingSpaces.length > 0 ||
             (venue.spaces.length === 0 && keepUnknown),
-          searchPrice: compatiblePrices[0]?.amount ?? null,
+          priceKnownMatch: !hasPriceCondition || searchPrice !== null,
+          priceWithinBudget:
+            maxDailyPrice <= 0 ||
+            searchPrice === null ||
+            searchPrice <= maxDailyPrice,
+          searchPrice,
           searchPriceKind: compatiblePrices[0]?.kind ?? null,
         };
       })
@@ -677,6 +773,11 @@ export function VenueSearch() {
         return searchTerms.every((term) => searchableText.includes(term));
       })
       .filter((venue) => venue.spaceKnownMatch)
+      .filter(
+        (venue) =>
+          (venue.priceKnownMatch && venue.priceWithinBudget) ||
+          (!venue.priceKnownMatch && keepUnknown),
+      )
       .filter((venue) => {
         if (!largeVehicleOnly) return true;
         const access = venue.operation?.largeVehicleAccess;
@@ -733,11 +834,14 @@ export function VenueSearch() {
     capacity,
     capacityMax,
     ceiling,
+    feeClass,
     fixedStage,
     historicalOnly,
     keepUnknown,
     keyword,
     largeVehicleOnly,
+    maxDailyPrice,
+    priceDayType,
     practice,
     selectedPrefectures,
     selectedVenueRoles,
@@ -767,6 +871,9 @@ export function VenueSearch() {
     if (capacityMax > 0) params.set("max", String(capacityMax));
     if (area > 0) params.set("area", String(area));
     if (ceiling > 0) params.set("ceiling", String(ceiling));
+    if (feeClass !== "all") params.set("fee", feeClass);
+    if (priceDayType !== "all") params.set("price_day", priceDayType);
+    if (maxDailyPrice > 0) params.set("budget", String(maxDailyPrice));
     if (fixedStage) params.set("fixed", "1");
     if (practice) params.set("practice", "1");
     if (largeVehicleOnly) params.set("loading", "1");
@@ -784,12 +891,15 @@ export function VenueSearch() {
     capacity,
     capacityMax,
     ceiling,
+    feeClass,
     fixedStage,
     historicalOnly,
     keepUnknown,
     keyword,
     largeVehicleOnly,
+    maxDailyPrice,
     practice,
+    priceDayType,
     selectedPrefectures,
     selectedVenueRoles,
     selectedVenueIds,
@@ -856,6 +966,9 @@ export function VenueSearch() {
     setCapacityMax(0);
     setArea(0);
     setCeiling(0);
+    setFeeClass("all");
+    setPriceDayType("all");
+    setMaxDailyPrice(0);
     setFixedStage(false);
     setPractice(false);
     setLargeVehicleOnly(false);
@@ -1194,6 +1307,66 @@ export function VenueSearch() {
                 <span>
                   未確認の会場も候補に残す
                   <small>条件一致は未確認のため「要問い合わせ」と表示します。</small>
+                </span>
+              </label>
+            </section>
+
+            <section className="filter-section" aria-labelledby="price-filter-title">
+              <div className="filter-section-head">
+                <h3 id="price-filter-title">料金条件</h3>
+                <span>確認済みの日額・区分合計のみ</span>
+              </div>
+              <p className="filter-section-copy">
+                営利性と曜日を明記した同じ貸出区画の料金で照合します。付帯設備・技術人員・空調等は含まれない場合があります。
+              </p>
+
+              <label className="field compact-field">
+                <span className="field-label">利用区分</span>
+                <select
+                  aria-label="料金の利用区分"
+                  value={feeClass}
+                  onChange={(event) => setFeeClass(event.target.value as FeeClass)}
+                >
+                  <option value="all">指定なし</option>
+                  <option value="nonprofit">非営利・公益目的</option>
+                  <option value="commercial">営利・宣伝目的</option>
+                </select>
+              </label>
+
+              <label className="field compact-field">
+                <span className="field-label">利用日</span>
+                <select
+                  aria-label="料金の利用日"
+                  value={priceDayType}
+                  onChange={(event) =>
+                    setPriceDayType(event.target.value as PriceDayType)
+                  }
+                >
+                  <option value="all">指定なし</option>
+                  <option value="weekday">平日</option>
+                  <option value="weekend_holiday">土日祝</option>
+                </select>
+              </label>
+
+              <label className="field compact-field">
+                <span className="field-label">確認済み日額の上限</span>
+                <span className="unit-input">
+                  <input
+                    aria-label="確認済み日額の上限"
+                    inputMode="numeric"
+                    max="100000000"
+                    min="0"
+                    placeholder="指定なし"
+                    step="10000"
+                    type="number"
+                    value={maxDailyPrice || ""}
+                    onChange={(event) =>
+                      setMaxDailyPrice(
+                        Math.max(0, Number(event.target.value) || 0),
+                      )
+                    }
+                  />
+                  <span>円以下</span>
                 </span>
               </label>
             </section>

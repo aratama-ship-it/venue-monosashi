@@ -28,6 +28,10 @@ test("server-renders the venue search shell", async () => {
     new URL("../../data/candidate-venues.csv", import.meta.url),
     "utf8",
   );
+  const generatedData = await readFile(
+    new URL("../app/generated-data.ts", import.meta.url),
+    "utf8",
+  );
   const candidateCount = candidateCsv.trim().split(/\r?\n/).length - 1;
   const response = await render();
   assert.equal(response.status, 200);
@@ -79,6 +83,22 @@ test("server-renders the venue search shell", async () => {
   assert.match(html, /aria-label="収容人数の下限"/);
   assert.match(html, /aria-label="収容人数の上限"/);
   assert.match(html, /確認済み天井高の下限/);
+  assert.match(html, /料金条件/);
+  assert.match(html, /aria-label="料金の利用区分"/);
+  assert.match(html, /非営利・公益目的/);
+  assert.match(html, /営利・宣伝目的/);
+  assert.match(html, /aria-label="料金の利用日"/);
+  assert.match(html, /aria-label="確認済み日額の上限"/);
+  assert.match(
+    generatedData,
+    /大ホール全部・公益目的・入場料1000円以下・平日3区分/,
+  );
+  assert.match(generatedData, /"amount": 192210/);
+  assert.match(
+    generatedData,
+    /大ホール全部・営利宣伝目的・入場料1000円以下・平日3区分/,
+  );
+  assert.match(generatedData, /"amount": 288320/);
   assert.match(html, /区画ごとの情報を見る/);
   assert.match(html, /aria-label="確認済み天井高の下限"/);
   assert.match(html, /最高部・中央高・舞台開口は除外しています/);
