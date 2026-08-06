@@ -151,7 +151,8 @@
 
 - Wave 39 source data: added eight official-source-backed Yamanashi facilities — 上野原市文化ホール（もみじホール）、須玉ふれあい館ホール、長坂コミュニティ・ステーションホール、八ヶ岳やまびこホール、富士河口湖町中央公民館、豊富中央公民館、中央市立玉穂生涯学習館、山中湖村役場平野コミュニティセンター — and 34 independently searchable spaces. Yamanashi is now 19 candidates, 15 municipalities, and 84 spaces.
 - Official sources: 上野原市、北杜市、富士河口湖町、中央市、山中湖村。Explicit capacities and floor areas only were recorded. No ceiling or price observation was added; all unreported conditions remain `要確認`.
-- Wave 39 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-record warning. Public deployment remains to be completed for this wave.
+- Wave 39 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-record warning.
+- Wave 39 deployment passed: production version 84 was deployed successfully from commit `c62b73f0ef512d8e2bdaa60ddade6fb9c8f2cc19`; the Sites URL and `https://venue.art-monosashi.com/?release=c62b73f` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 - Wave 21 source data: added four official-source-backed Kanagawa facilities — 厚木市文化会館（厚木市）、カルッツかわさき（川崎市）、鎌倉芸術館（鎌倉市）、小田原三の丸ホール（小田原市） — and 68 independently searchable spaces. Kanagawa is now 14 candidates, 7 municipalities, and 93 spaces.
 - Official sources: 厚木市、カルッツかわさき公式運営者、鎌倉芸術館公式運営者、小田原三の丸ホール公式運営者. Explicit room ceiling values were recorded only for カルッツかわさき（アクトスタジオ4.5m、大会議室3.0m、中会議室3.0m、小会議室2.8m）. Stage dimensions at the halls remain notes only and no price observation was added.
