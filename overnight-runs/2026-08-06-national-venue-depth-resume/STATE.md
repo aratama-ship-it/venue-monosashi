@@ -2,9 +2,9 @@
 
 ## Status
 
-- Status: ACTIVE
+- Status: BLOCKED
 - Last updated: 2026-08-07 Asia/Tokyo
-- Current wave: Wave 31 — Akita official-source expansion (deployment resumed after user approval).
+- Current wave: Wave 31 — Akita official-source expansion (deployment blocked by repository safety review).
 
 ## Baseline
 
@@ -157,4 +157,4 @@
 
 ## Blockers
 
-- Previous public-deployment blocker is cleared: the user explicitly approved sending the private source to the Sites repository. Continue with the validated Wave 31 deployment, then advance to Yamagata.
+- The user explicitly approved sending the private source to the Sites repository, but the safety reviewer still rejected the push as disclosure to a newly created, unverified external repository. No workaround was attempted; deployment cannot proceed until the destination is verified by the platform.
