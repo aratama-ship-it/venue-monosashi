@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-06 Asia/Tokyo
-- Current wave: Wave 11 — Hyogo official-source expansion, validated and awaiting deployment.
+- Current wave: Wave 12 — Shimane official-source expansion.
 
 ## Baseline
 
@@ -53,15 +53,16 @@
 - No Kyoto ceiling value was added to the searchable filter. Published stage opening, proscenium, grid, and stage-height values remain descriptive notes only; no value was converted to a ceiling measurement.
 - Wave 10 verification and deployment: `npm run validate`, audit, depth-report generation, app-data generation, and whitespace check passed (the pre-existing historical-event warning only); production version 55 deployed successfully and the established `venue.art-monosashi.com` endpoint returned the site response.
 
+- Wave 11 source data: added four Hyogo candidates — 西宮市民会館（アミティ・ベイコムホール）（西宮市）、明石市立市民会館（アワーズホール）（明石市）、明石市立西部市民会館（明石市）、ライフピアいちじま大ホール（丹波市） — and 23 independently searchable spaces. Hyogo is now 12 candidates, 6 municipalities, and 53 spaces. Official sources: 西宮市文化振興財団の施設案内、明石市の現行貸しホール・貸室一覧、丹波市のライフピアいちじま大ホール施設概要.
+- No Hyogo ceiling value was added to the searchable filter. All new room ceiling values remain unknown; no stage, proscenium, or building-height statement was used as a ceiling value. Wave 11 verification and deployment: `npm run validate`, audit, depth-report generation, app-data generation, and whitespace check passed (the pre-existing historical-event warning only); production version 56 deployed successfully and the established `venue.art-monosashi.com` endpoint returned the site response.
+
 ## Current Wave
 
-- Wave 11 source data: added four Hyogo candidates — 西宮市民会館（アミティ・ベイコムホール）（西宮市）、明石市立市民会館（アワーズホール）（明石市）、明石市立西部市民会館（明石市）、ライフピアいちじま大ホール（丹波市） — and 23 independently searchable spaces. Hyogo is now 12 candidates, 6 municipalities, and 53 spaces.
-- Official sources: 西宮市文化振興財団の施設案内、明石市の現行貸しホール・貸室一覧、丹波市のライフピアいちじま大ホール施設概要。料金・最低天井高に直接根拠がない区画は追加せず、要確認のままとした。
-- Wave verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. Audit has 0 errors and the pre-existing historical-event warning only.
+- Wave 12 objective: add a bounded set of official-source-backed Shimane facilities and independently searchable spaces. Shimane is in the lowest candidate-depth group at 8 candidates, 2 municipalities, and 15 spaces; confirm current depth before editing and preserve unknown ceilings and pricing as `要確認`.
 
 ## Next Action
 
-- Commit and deploy the validated Wave 11 source, verify the public custom domain, then select Shimane (8 candidates, 2 municipalities, 15 spaces) as the next lowest-depth wave.
+- Research and complete one bounded Shimane official-source wave, then run the required generation, audit, depth report, validation, public deployment, and endpoint verification sequence.
 
 ## Blockers
 

@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 11 is validated and awaiting public deployment; the next bounded wave will target Shimane.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 11 is published; the next bounded wave targets Shimane.
 
 ## Changes
 
@@ -37,6 +37,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Validated and deployed Wave 10 to the existing public site (version 55); the established custom domain returned the site response.
 - Added four official-source-backed Hyogo facilities — 西宮市民会館（アミティ・ベイコムホール）、明石市立市民会館（アワーズホール）、明石市立西部市民会館、ライフピアいちじま大ホール — and 23 searchable spaces, increasing the national total to 519 facilities and 1,875 spaces. The sources are the official pages of 西宮市文化振興財団、明石市、丹波市.
 - No Hyogo ceiling value was added to the searchable filter. All new room ceiling values remain unknown; no stage, proscenium, or building-height statement was used as a ceiling value.
+- Validated and deployed Wave 11 to the existing public site (version 56); the established custom domain returned the site response.
 
 ## Verification
 
