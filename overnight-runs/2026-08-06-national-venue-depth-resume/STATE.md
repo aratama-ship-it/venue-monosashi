@@ -32,11 +32,13 @@
 
 ## Current Wave
 
-- Add a bounded, official-source-only Aomori wave with at most four facilities in distinct underrepresented municipalities and all clearly published independent spaces.
+- Wave 5 source data: added four Aomori candidates — タカシン文化センター（平川市）、六ヶ所村文化交流プラザ スワニー（六ヶ所村）、下北文化会館（むつ市）、藤崎町文化センター（藤崎町） — and 34 independently searchable spaces. Aomori is now 12 candidates, 10 municipalities, and 63 spaces. Official sources: 平川市、六ヶ所村文化交流プラザ スワニー指定管理者、むつ市、藤崎町.
+- No Aomori ceiling value was added to the searchable filter. Published stage heights at タカシンホール and スワニー remain descriptive notes only; no source labelled them as a room ceiling or clear height. Approximate seating at 藤崎町文化センター likewise remains outside the numeric capacity filter.
+- Wave 5 audit, depth-report generation, app-data generation, and whitespace check passed. Final repository validation and public deployment are pending.
 
 ## Next Action
 
-- Research Aomori municipal, prefectural, and designated-operator venue pages; then add only fully source-backed facility and space rows.
+- Run final validation, commit and deploy the validated Aomori source-data wave, verify the public endpoint, then continue with a bounded Tochigi wave (the current lowest candidate-depth group).
 
 ## Blockers
 

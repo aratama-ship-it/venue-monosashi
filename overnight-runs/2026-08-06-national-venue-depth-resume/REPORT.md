@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 1 is ready for final repository validation and public deployment.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 5 is ready for final repository validation and public deployment.
 
 ## Changes
 
@@ -17,11 +17,13 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Deployed the validated Wave 3 data to the existing public site (version 48) and confirmed the established custom domain returned the site response.
 - Added four official-source-backed Miyazaki facilities and 27 searchable spaces, increasing the national total to 491 facilities and 1,618 spaces. Wave 4 is ready for final repository validation and public deployment.
 - Deployed the validated Wave 4 data to the existing public site (version 49) and confirmed the established custom domain returned the site response.
+- Added four official-source-backed Aomori facilities and 34 searchable spaces, increasing the national total to 495 facilities and 1,652 spaces. The sources are the official pages of 平川市, 六ヶ所村文化交流プラザ スワニー, むつ市, and 藤崎町. Wave 5 is ready for final repository validation and public deployment.
+- Retained stage-height and approximate-seat statements as notes only. No new Aomori ceiling height or approximate capacity entered a numeric filter.
 
 ## Verification
 
-- Wave audit passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 480 venues and 2,823 price observations.
-- Current depth report: 684 candidate gaps and 824 space gaps. Miyazaki is 11 candidates, 10 municipalities, and 53 spaces; Aomori, Tochigi, Toyama, Fukui, Aichi, Kyoto, Hyogo, Shimane, Kagawa, and Fukuoka now form the lowest candidate-depth group at 8 candidates.
+- Wave audit passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 495 venues and 2,823 price observations.
+- Current depth report: 680 candidate gaps and 802 space gaps. Aomori is 12 candidates, 10 municipalities, and 63 spaces; Tochigi, Toyama, Fukui, Aichi, Kyoto, Hyogo, Shimane, Kagawa, Fukuoka, and Nagasaki now form the lowest candidate-depth group at 8 candidates.
 
 ## Pre-existing State Preserved
 
