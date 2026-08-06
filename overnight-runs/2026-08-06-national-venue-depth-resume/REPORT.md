@@ -11,11 +11,12 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Kept 67 ceiling observations in the recheck workflow; no new ceiling height was inferred from stage, proscenium, or building measurements.
 - Added three available-room day-fee observations for 不二輸送機ホール. Published pricing for the currently unavailable 萩市民館大ホール remains out of searchable price data.
 - Deployed the validated Wave 1 data to the existing public site (version 46) and confirmed the established custom domain returned the site response.
+- Added three official-source-backed Kochi facilities and 40 searchable spaces, increasing the national total to 483 facilities and 1,556 spaces. Wave 2 is ready for final repository validation and public deployment.
 
 ## Verification
 
 - Wave audit passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 480 venues and 2,823 price observations.
-- Current depth report: 695 candidate gaps and 917 space gaps. Yamaguchi is 11 candidates, 10 municipalities, and 59 spaces; Kochi, Oita, and Miyazaki are now the lowest-depth prefectures at 7 candidates.
+- Current depth report: 692 candidate gaps and 879 space gaps. Kochi is 10 candidates, 7 municipalities, and 53 spaces; Oita and Miyazaki are now the lowest-depth prefectures at 7 candidates.
 
 ## Pre-existing State Preserved
 

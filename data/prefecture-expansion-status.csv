@@ -37,7 +37,7 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 徳島県,四国,11,8,35,28,7,1,14,7,16,foundation_plus
 香川県,四国,8,4,15,10,6,0,17,11,36,foundation_plus
 愛媛県,四国,9,6,23,21,15,0,16,9,28,foundation_plus
-高知県,四国,7,4,13,9,6,1,18,11,38,foundation
+高知県,四国,10,7,53,18,36,1,15,8,0,foundation_plus
 福岡県,九州,8,3,14,8,12,6,17,12,37,foundation_plus
 佐賀県,九州,10,8,26,13,9,2,15,7,25,foundation_plus
 長崎県,九州,8,5,19,9,5,2,17,10,32,foundation_plus
