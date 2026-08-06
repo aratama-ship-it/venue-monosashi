@@ -9,8 +9,8 @@
 ## Baseline
 
 - Git branch and commit: `agent/add-competition-and-small-theater-coverage` at `5c0946bc6e73c553c168f3f8b13468e64790da72`.
-- Data counts: 639 candidate facilities, 2,660 searchable spaces, 2,823 price observations, and 222 operation rows.
-- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 536 candidates and 215 spaces; municipality deficit is measured by the generated report.
+- Data counts: 644 candidate facilities, 2,665 searchable spaces, 2,823 price observations, and 222 operation rows.
+- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 531 candidates and 210 spaces; municipality deficit is measured by the generated report.
 - Canonical hashes: `candidate-venues.csv` `dc2976c8362153223edd203f627b728dbb1a56241b92f284ce842711c89bf9ee`; `venue-details.csv` `2ecac5bbdb107507dbcfa73e463a97d5092ec470ffedeac0480bfab679c0ec32`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
