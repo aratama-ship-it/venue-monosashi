@@ -91,7 +91,8 @@
 
 - Wave 27 source data: added four official-source-backed Saga facilities — 武雄市文化会館（武雄市）、千代田文化会館 はんぎーホール（神埼市）、小城保健福祉センター 桜楽館（小城市）、多久市中央公民館（多久市） — and 28 independently searchable spaces. Saga is now 14 candidates, 12 municipalities, and 54 spaces.
 - Official sources: 武雄市、神埼市、小城市、多久市. Explicit capacities were recorded only where the official source stated them; no ceiling or price observation was added. 武雄市文化会館の休館・整備計画は候補注記に残し、各区画の現行利用可否は要確認とした。プロセニアム・舞台寸法は天井高に使用していない。
-- Wave 27 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-event warning. `npm run validate` and public deployment remain to be completed for this wave.
+- Wave 27 verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-event warning. Tracked `web/dist` output was restored after the build.
+- Wave 27 deployment passed: production version 72 was deployed successfully; `https://venue.art-monosashi.com/?release=9f8da45` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 - Wave 21 source data: added four official-source-backed Kanagawa facilities — 厚木市文化会館（厚木市）、カルッツかわさき（川崎市）、鎌倉芸術館（鎌倉市）、小田原三の丸ホール（小田原市） — and 68 independently searchable spaces. Kanagawa is now 14 candidates, 7 municipalities, and 93 spaces.
 - Official sources: 厚木市、カルッツかわさき公式運営者、鎌倉芸術館公式運営者、小田原三の丸ホール公式運営者. Explicit room ceiling values were recorded only for カルッツかわさき（アクトスタジオ4.5m、大会議室3.0m、中会議室3.0m、小会議室2.8m）. Stage dimensions at the halls remain notes only and no price observation was added.
@@ -133,7 +134,7 @@
 
 ## Next Action
 
-- Complete validation and deployment for Wave 27, then research one bounded official-source wave for the next lowest candidate-depth prefecture from the regenerated report: 熊本県、鹿児島県 are tied at 10 candidates; 岩手県、秋田県、山形県、福島県、茨城県、群馬県、埼玉県、千葉県 follow at 11.
+- Research one bounded official-source wave for the next lowest candidate-depth prefecture from the regenerated report: 熊本県、鹿児島県 are tied at 10 candidates; 岩手県、秋田県、山形県、福島県、茨城県、群馬県、埼玉県、千葉県 follow at 11.
 
 ## Blockers
 
