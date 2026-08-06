@@ -235,13 +235,6 @@ const ceilingTypeLabels: Record<string, string> = {
   unknown: "高さ未確認",
 };
 
-const overheadUseLabels: Record<string, string> = {
-  verified: "頭上利用確認済み",
-  conditional: "頭上利用は条件付き",
-  prohibited: "頭上利用不可",
-  unknown: "高投げ可否は要問い合わせ",
-};
-
 function spaceCapacityLabel(space: VenueSpace) {
   if (space.capacityTheater !== null && space.capacityFixed !== null) {
     if (space.capacityTheater === space.capacityFixed) {
@@ -1189,7 +1182,7 @@ export function VenueSearch() {
               </label>
 
               <p className="filter-precision-note">
-                面積・収容人数・天井下限・舞台条件は、同じ貸出区画で判定します。高さがあっても高投げ可とは限らないため、利用許可は会場へ確認してください。
+                面積・収容人数・天井下限・舞台条件は、同じ貸出区画で判定します。
               </p>
 
               <label className="check-field unknown-policy">
@@ -1466,9 +1459,6 @@ export function VenueSearch() {
                         {venue.detailCount > 1 && (
                           <span className="status warn">数値は別区画を含む</span>
                         )}
-                        {venue.maxCeiling !== null && (
-                          <span className="status warn">高投げ可否 要問い合わせ</span>
-                        )}
                         {venue.maxCeiling === null && venue.ceilingReferenceCount > 0 && (
                           <span className="status warn">
                             天井参考値 {venue.ceilingReferenceCount}区画・意味を精査中
@@ -1510,7 +1500,7 @@ export function VenueSearch() {
                                 <th>面積</th>
                                 <th>収容</th>
                                 <th>高さ</th>
-                                <th>確認状態</th>
+                                <th>補足・出典</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -1533,8 +1523,6 @@ export function VenueSearch() {
                                       <small>{height.kind}</small>
                                     </td>
                                     <td>
-                                      {overheadUseLabels[space.overheadUseStatus] ??
-                                        space.overheadUseStatus}
                                       <small>{space.note ?? "補足情報なし"}</small>
                                       <small>
                                         <a href={space.sourceUrl} rel="noreferrer" target="_blank">

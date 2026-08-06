@@ -82,7 +82,7 @@ test("server-renders the venue search shell", async () => {
   assert.match(html, /区画ごとの情報を見る/);
   assert.match(html, /aria-label="確認済み天井高の下限"/);
   assert.match(html, /最高部・中央高・舞台開口は除外しています/);
-  assert.match(html, /高さがあっても高投げ可とは限らない/);
+  assert.doesNotMatch(html, /高投げ可否/);
   assert.match(html, /固定舞台が確認できる/);
   assert.match(html, /大型車搬入が可能または条件付き/);
   assert.match(html, /収録大会の開催実績と照合済み/);
