@@ -44,11 +44,13 @@
 
 ## Current Wave
 
-- Research a bounded, official-source-only Fukui wave. Fukui is in the current lowest candidate-depth group (8 candidates), together with Aichi, Kyoto, Hyogo, Shimane, Kagawa, Fukuoka, Nagasaki, Okinawa, and Niigata.
+- Wave 8 source data: added four Fukui candidates — 文化の森・YURI文化情報交流館（坂井市）、あわら市中央公民館（あわら市）、パレア若狭（若狭町）、高浜町文化会館（高浜町） — and 48 independently searchable spaces. Fukui is now 12 candidates, 9 municipalities, and 64 spaces. Official sources: 坂井市、あわら市、若狭町、高浜町.
+- No Fukui ceiling value was added to the searchable filter. No stage-height, proscenium, or building-height statement was converted to a ceiling value. Approximate capacities at あわら市中央公民館 remain outside the numeric filter.
+- Wave 8 audit, depth-report generation, app-data generation, and whitespace check passed. Final repository validation and public deployment are pending.
 
 ## Next Action
 
-- Research Fukui municipal, prefectural, and designated-operator venue pages; then add only fully source-backed facility and space rows.
+- Run final validation, commit and deploy the validated Fukui source-data wave, verify the public endpoint, then continue with a bounded Aichi wave (the current lowest candidate-depth group).
 
 ## Blockers
 

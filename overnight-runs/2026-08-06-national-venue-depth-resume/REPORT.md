@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 8 will continue with Fukui.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 8 is ready for final repository validation and public deployment.
 
 ## Changes
 
@@ -26,11 +26,13 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Toyama facilities and 32 searchable spaces, increasing the national total to 503 facilities and 1,707 spaces. The sources are the official pages of 射水市、小矢部市、上市町、砺波市.
 - Retained stage-area and approximate-seat statements as notes only. No new Toyama ceiling height or approximate capacity entered a numeric filter.
 - Deployed the validated Wave 7 data to the existing public site (version 52) and confirmed the established custom domain returned the site response.
+- Added four official-source-backed Fukui facilities and 48 searchable spaces, increasing the national total to 507 facilities and 1,755 spaces. The sources are the official pages of 坂井市、あわら市、若狭町、高浜町. Wave 8 is ready for final repository validation and public deployment.
+- No stage-height, proscenium, or building-height statement was converted to a searchable ceiling value. Approximate capacities remain notes only.
 
 ## Verification
 
-- Wave audit passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 503 venues and 2,823 price observations.
-- Current depth report: 672 candidate gaps and 747 space gaps. Toyama is 12 candidates, 10 municipalities, and 49 spaces; Fukui, Aichi, Kyoto, Hyogo, Shimane, Kagawa, Fukuoka, Nagasaki, Okinawa, and Niigata now form the lowest candidate-depth group at 8 candidates.
+- Wave audit passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 507 venues and 2,823 price observations.
+- Current depth report: 668 candidate gaps and 712 space gaps. Fukui is 12 candidates, 9 municipalities, and 64 spaces; Aichi, Kyoto, Hyogo, Shimane, Kagawa, Fukuoka, Nagasaki, Okinawa, Niigata, and Okayama now form the lowest candidate-depth group at 8 candidates.
 
 ## Pre-existing State Preserved
 
