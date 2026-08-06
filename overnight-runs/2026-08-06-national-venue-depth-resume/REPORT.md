@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 14 is validated and awaiting public deployment; the next bounded wave targets Nagasaki.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 14 is published; the next bounded wave targets Nagasaki.
 
 ## Changes
 
@@ -46,6 +46,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Validated and deployed Wave 13 to the existing public site (version 58); the established custom domain returned the site response.
 - Added four official-source-backed Fukuoka facilities — デンカ大牟田文化会館、飯塚市文化会館 コスモスコモン、田主丸複合文化施設（そよ風ホール）、コスメイト行橋（行橋市文化ホール） — and 11 searchable spaces, increasing the national total to 531 facilities and 1,934 spaces. The sources are the official pages of デンカ大牟田文化会館、飯塚市、久留米市、行橋市文化振興公社.
 - No Fukuoka ceiling or price values were inferred or added. New space conditions remain explicitly `要確認`; stage, proscenium, and building-height statements were not used as ceiling measurements.
+- Validated and deployed Wave 14 to the existing public site (version 59); the established custom domain returned the site marker for the deployed source revision.
 
 ## Verification
 

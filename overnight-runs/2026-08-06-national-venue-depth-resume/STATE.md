@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-06 Asia/Tokyo
-- Current wave: Wave 14 — Fukuoka official-source expansion, validated and awaiting deployment.
+- Current wave: Wave 15 — Nagasaki official-source expansion.
 
 ## Baseline
 
@@ -67,10 +67,11 @@
 - Wave 14 source data: added four Fukuoka candidates — デンカ大牟田文化会館（大牟田市）、飯塚市文化会館 コスモスコモン（飯塚市）、田主丸複合文化施設（そよ風ホール）（久留米市）、コスメイト行橋（行橋市文化ホール）（行橋市） — and 11 independently searchable spaces. Fukuoka is now 12 candidates, 7 municipalities, and 25 spaces. Official sources: デンカ大牟田文化会館運営者、飯塚市、久留米市、行橋市文化振興公社.
 - No Fukuoka ceiling value or price observation was added. All new ceiling, price, loading, and availability attributes remain `要確認`; no stage, proscenium, or building-height statement was converted into ceiling data.
 - Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
+- Wave 14 deployment passed: production version 59 was deployed successfully, and `https://venue.art-monosashi.com/?release=dfbcb27` returned the established site marker.
 
 ## Next Action
 
-- Commit and deploy the validated Fukuoka source-data wave, verify the public custom domain, then target the next lowest-depth prefecture, Nagasaki (8 candidates, 5 municipalities, 19 spaces).
+- Research and complete one bounded Nagasaki official-source wave, then run the required generation, audit, depth report, validation, public deployment, and endpoint verification sequence. Nagasaki currently has 8 candidates, 5 municipalities, and 19 spaces.
 
 ## Blockers
 
