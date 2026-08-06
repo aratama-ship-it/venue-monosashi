@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-06 Asia/Tokyo
-- Current wave: Wave 9 — Aichi official-source expansion.
+- Current wave: Wave 10 — Kyoto official-source expansion.
 
 ## Baseline
 
@@ -45,15 +45,17 @@
 - No Fukui ceiling value was added to the searchable filter. No stage-height, proscenium, or building-height statement was converted to a ceiling value. Approximate capacities at あわら市中央公民館 remain outside the numeric filter.
 - Wave 8 verification and deployment: `npm run validate`, audit, depth-report generation, app-data generation, and whitespace check passed (the pre-existing historical-event warning only); production version 53 deployed successfully and the established `venue.art-monosashi.com` endpoint returned the site response.
 
-## Current Wave
-
 - Wave 9 source data: added four Aichi candidates — 豊川市文化会館（豊川市）、刈谷市総合文化センター（刈谷市）、碧南市文化会館（中央公民館）（碧南市）、碧南市芸術文化ホール（碧南市） — and 49 independently searchable spaces. Aichi is now 12 candidates, 8 municipalities, and 64 spaces. Official sources: 豊川市、刈谷市、碧南市、各指定管理者の公式施設案内.
 - No Aichi ceiling value was added to the searchable filter. Published stage opening, grid, and room-height information remains descriptive notes only; no value was converted to a ceiling measurement.
-- Wave 9 audit, depth-report generation, app-data generation, whitespace check, and `npm run validate` passed. Final source commit and public deployment are pending.
+- Wave 9 verification and deployment: `npm run validate`, audit, depth-report generation, app-data generation, and whitespace check passed (the pre-existing historical-event warning only); production version 54 deployed successfully and the established `venue.art-monosashi.com` endpoint returned the site response.
+
+## Current Wave
+
+- Wave 10 objective: add a bounded set of official-source-backed Kyoto facilities and independently searchable spaces. Kyoto is in the lowest candidate-depth group at 8 candidates; confirm current depth before editing and preserve unknown ceilings and pricing as `要確認`.
 
 ## Next Action
 
-- Commit and deploy the validated Aichi source-data wave, verify the public endpoint, then continue with a bounded Kyoto wave (the current lowest candidate-depth group).
+- Research and complete one bounded Kyoto official-source wave, then run the required generation, audit, depth report, validation, public deployment, and endpoint verification sequence.
 
 ## Blockers
 
