@@ -82,6 +82,9 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Hiroshima facilities — 東広島芸術文化ホールくらら、広島市文化交流会館、三原市芸術文化センター ポポロ、むかいしま文化ホール — and 15 searchable spaces, increasing the national total to 575 facilities and 2,244 spaces. Sources are the official pages of 東広島市、広島市、三原市芸術文化センター、尾道市.
 - Recorded only explicit official capacities from city/operator pages; no ceiling or price value was inferred. Unreported area, ceiling, loading, and availability remain `要確認`.
 - Wave 25 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Production version 70 was deployed and `https://venue.art-monosashi.com/?release=035d756` returned the established site marker. Tracked `web/dist` output was restored.
+- Added four official-source-backed Kochi facilities — 三里文化会館、筆山文化会館、木村会館、春野文化ホール ピアステージ — and 24 searchable spaces, increasing the national total to 579 facilities and 2,268 spaces. Sources are the official pages of 高知市.
+- Recorded only explicit official capacities and areas from Kochi city pages. No ceiling or price value was inferred; unreported ceiling, loading, and availability remain `要確認`.
+- Wave 26 local validation remains to be completed before public deployment.
 
 ## Verification
 
