@@ -105,6 +105,9 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Wave 31 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Public deployment and custom-domain verification remain to be completed for this wave.
 - Wave 31 validation passed with 0 audit errors and the pre-existing historical-record warning only. Production version 76 was deployed; the Sites URL and `https://venue.art-monosashi.com` returned the established site marker. Tracked `web/dist` output was restored.
 - The user explicitly authorized sending the private venue-monosashi source code and venue data to the Sites-issued `git.chatgpt-team.site` repository for publication. Wave 31 deployment resumed from the validated checkpoint.
+- Added four official-source-backed Yamagata facilities — 寒河江市市民文化会館、長井市民文化会館、村山市民会館、白鷹町文化交流センター あゆーむ — and 33 independently searchable spaces, increasing the national total to 603 facilities and 2,444 spaces. Sources are the official pages and documents of 寒河江市、長井市、村山市、白鷹町.
+- Recorded only explicit official capacities and floor areas; no ceiling or price value was inferred. Published stage heights and stage areas remain descriptive notes only, and all unreported conditions remain `要確認`.
+- Wave 32 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Yamagata is now 15 candidates, 13 municipalities, and 66 spaces; national remaining deficits are 572 candidates and 268 spaces. Public deployment and custom-domain verification remain to be completed for this wave.
 
 ## Verification
 
