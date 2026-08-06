@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 18 is validated and awaiting public deployment; the next bounded wave targets Ehime.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 18 is published; the next bounded wave targets Ehime.
 
 ## Changes
 
@@ -58,6 +58,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Validated and deployed Wave 17 to the existing public site (version 62); the established custom domain returned the site marker for the deployed source revision.
 - Added four official-source-backed Okayama facilities — 津山文化センター、津山市勝北文化センター、美作文化センター、玉野市立中央公民館 — and 28 searchable spaces, increasing the national total to 547 facilities and 2,002 spaces. The sources are the official pages of 津山市・津山文化センター運営者、美作市、玉野市.
 - No Okayama ceiling or price values were inferred or added. New space conditions remain explicitly `要確認`; stage or building statements were not used as ceiling measurements.
+- Validated and deployed Wave 18 to the existing public site (version 63); the established custom domain returned the site marker for the deployed source revision.
 
 ## Verification
 

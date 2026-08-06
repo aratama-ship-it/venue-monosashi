@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-06 Asia/Tokyo
-- Current wave: Wave 18 — Okayama official-source expansion, validated and awaiting deployment.
+- Current wave: Wave 19 — Ehime official-source expansion.
 
 ## Baseline
 
@@ -79,6 +79,7 @@
 - Wave 18 source data: added four Okayama candidates — 津山文化センター（津山市）、津山市勝北文化センター（津山市）、美作文化センター（美作市）、玉野市立中央公民館（玉野市） — and 28 independently searchable spaces. Okayama is now 13 candidates, 9 municipalities, and 56 spaces. Official sources: 津山市・津山文化センター運営者、美作市、玉野市.
 - No Okayama ceiling value or price observation was added. All new ceiling, price, loading, and availability attributes remain `要確認`; stage or building dimensions were not converted into ceiling data.
 - Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
+- Wave 18 deployment passed: production version 63 was deployed successfully, and `https://venue.art-monosashi.com/?release=7d09936` returned the established site marker.
 - Wave 14 deployment passed: production version 59 was deployed successfully, and `https://venue.art-monosashi.com/?release=dfbcb27` returned the established site marker.
 - Wave 15 source data: added four Nagasaki candidates — メモリード・シーハットおおむら（大村市）、長崎市民会館（長崎市）、長崎市平和会館（長崎市）、長崎市三和公民館（長崎市） — and 15 independently searchable spaces. Nagasaki is now 12 candidates, 6 municipalities, and 34 spaces. Official sources: 大村市、長崎市.
 - No Nagasaki ceiling value or price observation was added. All new ceiling, price, loading, and availability attributes remain `要確認`; stage dimensions, building dimensions, and maximum layout capacities were not converted into ceiling data.
@@ -86,7 +87,7 @@
 
 ## Next Action
 
-- Commit and deploy the validated Okayama source-data wave, verify the public custom domain, then target the next lowest-depth prefecture, Ehime (9 candidates, 6 municipalities, 23 spaces).
+- Research and complete one bounded Ehime official-source wave, then run the required generation, audit, depth report, validation, public deployment, and endpoint verification sequence. Ehime currently has 9 candidates, 6 municipalities, and 23 spaces.
 
 ## Blockers
 
