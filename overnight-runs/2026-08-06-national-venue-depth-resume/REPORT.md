@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 21 Kanagawa is validated locally and awaits public deployment; the next bounded wave is selected from the regenerated lowest-depth report.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 22 Nagano is validated locally and awaits public deployment; the next bounded wave is selected from the regenerated lowest-depth report.
 
 ## Changes
 
@@ -69,11 +69,14 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Recorded only explicit room ceiling measurements from the カルッツかわさき official facility guide: アクトスタジオ4.5m、大会議室3.0m、中会議室3.0m、小会議室2.8m. Hall stage dimensions remain notes only and no price observation was added.
 - Wave 21 local validation passed with 0 audit errors and the pre-existing historical-record warning only.
 - Deployed Wave 21 to the existing public site (version 66); `https://venue.art-monosashi.com/?release=1e2f363` returned the established site marker. Tracked `web/dist` output was restored after deployment.
+- Added four official-source-backed Nagano facilities — 長野県伊那文化会館、駒ヶ根市文化会館、中野市市民会館ソソラホール、須坂市文化会館メセナホール — and 36 searchable spaces, increasing the national total to 563 facilities and 2,175 spaces. Sources are the official pages of 長野県伊那文化会館、駒ヶ根市、中野市、須坂市文化会館.
+- Recorded only explicit capacities and floor areas from the official facility guides. Stage, proscenium, and building dimensions remain notes only; no ceiling or price observation was added.
+- Wave 22 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Public deployment and custom-domain verification remain to be completed for this wave.
 
 ## Verification
 
 - Wave 14 audit and validation passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 531 venues and 2,823 price observations.
-- Current depth report: 616 candidate gaps and 418 space gaps. Kanagawa is now 14 candidates, 7 municipalities, and 93 spaces; the next lowest candidate-depth is 10 candidates in 長野県、岐阜県、和歌山県、広島県、高知県、佐賀県、熊本県、鹿児島県.
+- Current depth report: 612 candidate gaps and 405 space gaps. Nagano is now 14 candidates, 12 municipalities, and 74 spaces; the next lowest candidate-depth is 10 candidates in 岐阜県、和歌山県、広島県、高知県、佐賀県、熊本県、鹿児島県.
 
 ## Pre-existing State Preserved
 
