@@ -2,9 +2,9 @@
 
 ## Status
 
-- Status: ACTIVE
+- Status: PARTIAL/BLOCKED
 - Last updated: 2026-08-07 Asia/Tokyo
-- Current wave: Wave 32 — Yamagata official-source expansion (next).
+- Current wave: Wave 31 — Akita official-source expansion (public deployment blocked).
 
 ## Baseline
 
@@ -153,8 +153,8 @@
 
 ## Next Action
 
-- After Wave 31 deployment, research one bounded official-source wave for 山形県, the next lowest candidate-depth prefecture tied at 11 candidates, then regenerate all reports and deploy after validation.
+- Resume after the deployment safety blocker is resolved; then research one bounded official-source wave for 山形県, the next lowest candidate-depth prefecture tied at 11 candidates.
 
 ## Blockers
 
-- None.
+- Public deployment of Wave 31 was blocked by the Sites safety review: pushing the private source to the newly issued external repository was rejected as possible source disclosure. No workaround was attempted. User approval or an already verified repository destination is required before deployment can continue.
