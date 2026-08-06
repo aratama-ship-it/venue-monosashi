@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-06 Asia/Tokyo
-- Current wave: Wave 20 — Hokkaido official-source expansion validated and awaiting public deployment.
+- Current wave: Wave 21 — Kanagawa official-source expansion.
 
 ## Baseline
 
@@ -68,6 +68,7 @@
 - Official sources: 小樽市民会館指定管理者、釧路市、北見市、苫小牧市民文化ホール指定管理者. 釧路大ホールの公式収容1,524席のみ容量検索値に採用し、それ以外の客席・面積・天井高・搬入・料金・空き状況は要確認とした。
 - No Hokkaido ceiling value or price observation was added. Existing source-published arena/building heights remain untouched; all new ceiling, price, loading, and availability attributes remain `要確認`.
 - Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check` all passed with only the pre-existing historical-event warning. `npm run validate` remains required before deployment.
+- Wave 20 deployment passed: production version 65 was deployed successfully, and `https://venue.art-monosashi.com/?release=bcf31a5` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 - Wave 19 source data: added four official-source-backed Ehime facilities — 松山市民会館（松山市）、西条市総合文化会館（西条市）、宇和島市立南予文化会館（宇和島市）、宇和島市立コスモスホール三間（宇和島市） — and 35 independently searchable spaces. Ehime is now 13 candidates, 8 municipalities, and 58 spaces.
 - Official sources: 松山市、西条市総合文化会館運営者、宇和島市。松山市民会館の2028年3月末閉館方針と、南予文化会館の改修休館は候補の注記に明記した。南予文化会館の休館中ホールについて料金観測は追加していない。

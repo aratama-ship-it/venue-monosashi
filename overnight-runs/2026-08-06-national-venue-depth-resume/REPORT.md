@@ -64,6 +64,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Validated and deployed Wave 19 to the existing public site (version 64); `https://venue.art-monosashi.com/?release=1fa8c9e` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 - Added four official-source-backed Hokkaido facilities — 小樽市民会館、コーチャンフォー釧路文化ホール、北見芸術文化ホール、苫小牧市民文化ホール ART CUBES — and 34 searchable spaces, increasing the national total to 555 facilities and 2,071 spaces. The sources are the official pages of 小樽市民会館指定管理者、釧路市、北見市、苫小牧市民文化ホール指定管理者.
 - No new Hokkaido ceiling or price value was inferred or added. The official 1,524-seat Kushiro large-hall capacity was recorded; new space conditions otherwise remain explicitly `要確認`.
+- Validated and deployed Wave 20 to the existing public site (version 65); `https://venue.art-monosashi.com/?release=bcf31a5` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 ## Verification
 
