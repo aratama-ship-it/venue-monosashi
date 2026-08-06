@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 17 is published; the next bounded wave targets Okayama.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 18 is validated and awaiting public deployment; the next bounded wave targets Ehime.
 
 ## Changes
 
@@ -56,11 +56,13 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Niigata facilities — 青海総合文化会館（きらら青海）、さくらんど会館、五泉市総合会館、加茂文化会館 — and 16 searchable spaces, increasing the national total to 543 facilities and 1,974 spaces. The sources are the official pages of 糸魚川市、五泉市、加茂市.
 - No Niigata ceiling or price values were inferred or added. New space conditions remain explicitly `要確認`; the Aomi stage-height range and sports-hall dimensions were not used as ceiling measurements.
 - Validated and deployed Wave 17 to the existing public site (version 62); the established custom domain returned the site marker for the deployed source revision.
+- Added four official-source-backed Okayama facilities — 津山文化センター、津山市勝北文化センター、美作文化センター、玉野市立中央公民館 — and 28 searchable spaces, increasing the national total to 547 facilities and 2,002 spaces. The sources are the official pages of 津山市・津山文化センター運営者、美作市、玉野市.
+- No Okayama ceiling or price values were inferred or added. New space conditions remain explicitly `要確認`; stage or building statements were not used as ceiling measurements.
 
 ## Verification
 
 - Wave 14 audit and validation passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 531 venues and 2,823 price observations.
-- Current depth report: 632 candidate gaps and 529 space gaps. Niigata is 13 candidates, 10 municipalities, and 40 spaces; Okayama is now the lowest candidate-depth prefecture at 9 candidates.
+- Current depth report: 628 candidate gaps and 506 space gaps. Okayama is 13 candidates, 9 municipalities, and 56 spaces; Ehime is now the lowest candidate-depth prefecture at 9 candidates.
 
 ## Pre-existing State Preserved
 
