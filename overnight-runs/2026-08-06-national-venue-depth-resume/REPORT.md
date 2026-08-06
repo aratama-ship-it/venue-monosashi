@@ -112,6 +112,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Fukushima facilities — 田村市文化センター、相馬市民会館、伊達市ふるさと会館（MDDホール）、霊山中央交流館 — and 33 independently searchable spaces, increasing the national total to 607 facilities and 2,477 spaces. Sources are the official pages and documents of 田村市、相馬市、伊達市.
 - Recorded only explicit official capacities and floor areas; no ceiling or price value was inferred. Published stage height and stage dimensions remain descriptive notes only, and all unreported conditions remain `要確認`.
 - Wave 33 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Fukushima is now 15 candidates, 11 municipalities, and 76 spaces; national remaining deficits are 568 candidates and 260 spaces. Public deployment and custom-domain verification remain to be completed for this wave.
+- Wave 33 validation and deployment passed: production version 78 was deployed successfully from commit `70efe79520147a3f7b2811b74845daf61dd8979c`; the Sites URL and `https://venue.art-monosashi.com/?release=70efe79` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 ## Verification
 

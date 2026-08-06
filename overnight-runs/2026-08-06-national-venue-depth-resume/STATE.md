@@ -122,6 +122,7 @@
 - Wave 33 source data: added four official-source-backed Fukushima facilities — 田村市文化センター（田村市）、相馬市民会館（相馬市）、伊達市ふるさと会館（MDDホール）（伊達市）、霊山中央交流館（伊達市） — and 33 independently searchable spaces. Fukushima is now 15 candidates, 11 municipalities, and 76 spaces.
 - Official sources: 田村市、相馬市、伊達市. Explicit capacities and floor areas were recorded only where the official sources stated them; no ceiling or price observation was inferred. Published stage height and stage dimensions remain notes only, and all unreported conditions remain `要確認`.
 - Wave 33 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-record warning. Public deployment remains to be completed for this wave.
+- Wave 33 deployment passed: production version 78 was deployed successfully; the Sites URL and `https://venue.art-monosashi.com/?release=70efe79` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 - Wave 21 source data: added four official-source-backed Kanagawa facilities — 厚木市文化会館（厚木市）、カルッツかわさき（川崎市）、鎌倉芸術館（鎌倉市）、小田原三の丸ホール（小田原市） — and 68 independently searchable spaces. Kanagawa is now 14 candidates, 7 municipalities, and 93 spaces.
 - Official sources: 厚木市、カルッツかわさき公式運営者、鎌倉芸術館公式運営者、小田原三の丸ホール公式運営者. Explicit room ceiling values were recorded only for カルッツかわさき（アクトスタジオ4.5m、大会議室3.0m、中会議室3.0m、小会議室2.8m）. Stage dimensions at the halls remain notes only and no price observation was added.
