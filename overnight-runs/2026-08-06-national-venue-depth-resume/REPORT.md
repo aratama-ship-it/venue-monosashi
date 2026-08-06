@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 10 is ready for final repository validation and public deployment.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 10 is published; the next bounded wave targets Hyogo.
 
 ## Changes
 
@@ -32,8 +32,9 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Aichi facilities and 49 searchable spaces, increasing the national total to 511 facilities and 1,804 spaces. The sources are the official pages of 豊川市、刈谷市、碧南市 and the respective official facility operators.
 - No stage opening, grid, or room-height value was converted to a searchable ceiling measurement.
 - Validated and deployed Wave 9 to the existing public site (version 54); the established custom domain returned the site response.
-- Added four official-source-backed Kyoto facilities and 48 searchable spaces, increasing the national total to 515 facilities and 1,852 spaces. The sources are the official pages of 舞鶴市、城陽市、福知山市、長岡京市. Wave 10 is ready for final repository validation and public deployment.
+- Added four official-source-backed Kyoto facilities and 48 searchable spaces, increasing the national total to 515 facilities and 1,852 spaces. The sources are the official pages of 舞鶴市、城陽市、福知山市、長岡京市.
 - No stage opening, proscenium, grid, or stage-height value was converted to a searchable ceiling measurement.
+- Validated and deployed Wave 10 to the existing public site (version 55); the established custom domain returned the site response.
 
 ## Verification
 
