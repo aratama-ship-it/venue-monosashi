@@ -645,7 +645,7 @@ a {
 
 .metrics {
   display: grid;
-  grid-template-columns: repeat(4, minmax(105px, 1fr));
+  grid-template-columns: repeat(5, minmax(105px, 1fr));
   border-top: 1px solid var(--line-light);
   border-left: 1px solid var(--line-light);
 }

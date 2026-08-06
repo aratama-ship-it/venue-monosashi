@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import "./editorial-concept.css";
 import { publication } from "./publication";
@@ -52,6 +53,13 @@ const structuredData = {
   keywords: publication.keywords,
 };
 
+const cloudflareAnalyticsToken =
+  process.env.NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN?.trim() ||
+  "977721791a104a10ae5b37312104bbf5";
+const cloudflareAnalyticsEnabled = /^[0-9a-f]{32}$/i.test(
+  cloudflareAnalyticsToken,
+);
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -65,6 +73,17 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         {children}
+        {cloudflareAnalyticsEnabled ? (
+          <Script
+            id="cloudflare-web-analytics"
+            strategy="afterInteractive"
+            type="module"
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon={JSON.stringify({
+              token: cloudflareAnalyticsToken.toLowerCase(),
+            })}
+          />
+        ) : null}
       </body>
     </html>
   );

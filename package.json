@@ -10,6 +10,8 @@
   },
   "scripts": {
     "audit": "node scripts/audit-data.mjs",
+    "depth-report": "node scripts/report-prefecture-depth.mjs",
+    "depth-report:write": "node scripts/report-prefecture-depth.mjs --write",
     "audit-small-theaters": "node scripts/small-theater-research.mjs audit",
     "build": "rm -rf dist && cp -R web/dist dist",
     "next-small-theaters": "node scripts/small-theater-research.mjs next --limit 8",

@@ -201,7 +201,7 @@ const venues = candidates.map((candidate) => {
     .map((detail) => nullableNumber(detail.area_m2))
     .filter((value) => value !== null);
   const ceilingValues = venueDetails
-    .map((detail) => nullableNumber(detail.ceiling_height_m))
+    .map((detail) => nullableNumber(detail.clear_height_min_m))
     .filter((value) => value !== null);
   const floorLoadValues = venueDetails
     .map((detail) => nullableNumber(detail.floor_load_kg_m2))
@@ -258,6 +258,12 @@ const venues = candidates.map((candidate) => {
     maxCapacity: capacityValues.length ? Math.max(...capacityValues) : null,
     maxArea: areaValues.length ? Math.max(...areaValues) : null,
     maxCeiling: ceilingValues.length ? Math.max(...ceilingValues) : null,
+    ceilingReferenceCount: venueDetails.filter(
+      (detail) => nullableNumber(detail.ceiling_height_m) !== null,
+    ).length,
+    filterableCeilingCount: venueDetails.filter(
+      (detail) => nullableNumber(detail.clear_height_min_m) !== null,
+    ).length,
     maxFloorLoad: floorLoadValues.length ? Math.max(...floorLoadValues) : null,
     hasFixedStage,
     practiceUse,
@@ -322,7 +328,10 @@ const venues = candidates.map((candidate) => {
       name: detail.space_name,
       type: detail.space_type,
       area: nullableNumber(detail.area_m2),
-      ceiling: nullableNumber(detail.ceiling_height_m),
+      ceiling: nullableNumber(detail.clear_height_min_m),
+      ceilingReference: nullableNumber(detail.ceiling_height_m),
+      ceilingType: detail.ceiling_height_type,
+      overheadUseStatus: detail.overhead_use_status,
       capacityTheater: nullableNumber(detail.capacity_theater),
       capacityFixed: nullableNumber(detail.capacity_fixed),
       stageType: detail.stage_type,
@@ -369,9 +378,18 @@ const candidateCoverage = {
   ).size,
   ceiling: new Set(
     details
-      .filter((detail) => nullableNumber(detail.ceiling_height_m) !== null)
+      .filter((detail) => nullableNumber(detail.clear_height_min_m) !== null)
       .map((detail) => detail.candidate_id),
   ).size,
+};
+
+const spaceCoverage = {
+  ceiling: details.filter(
+    (detail) => nullableNumber(detail.clear_height_min_m) !== null,
+  ).length,
+  ceilingReference: details.filter(
+    (detail) => nullableNumber(detail.ceiling_height_m) !== null,
+  ).length,
 };
 
 const output = `// Generated from ../data/*.csv by scripts/generate-data.mjs.
@@ -386,6 +404,7 @@ export const venueData = ${JSON.stringify(
       operations: operations.length,
       budgetScenarios: budgetScenarios.length,
       candidateCoverage,
+      spaceCoverage,
       freshness,
       smallTheaterCensus: {
         total: smallTheaters.length,

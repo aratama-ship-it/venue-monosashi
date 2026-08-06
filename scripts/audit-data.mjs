@@ -49,6 +49,7 @@ const historical = loadCsv("data/historical-events.csv");
 const candidates = loadCsv("data/candidate-venues.csv");
 const prefectureCoverage = loadCsv("data/prefecture-coverage.csv");
 const venueDetails = loadCsv("data/venue-details.csv");
+const ceilingRechecks = loadCsv("data/ceiling-recheck-ledger.csv");
 const priceObservations = loadCsv("data/price-observations.csv");
 const venueOperations = loadCsv("data/venue-operations.csv");
 const historicalVenueAliases = loadCsv("data/historical-venue-aliases.csv");
@@ -111,11 +112,29 @@ requireFields(
     "space_id",
     "space_name",
     "space_type",
+    "ceiling_height_type",
+    "overhead_use_status",
     "source_url",
     "observed_at",
     "verification_status",
   ],
   "venue-details.csv",
+);
+requireFields(
+  ceilingRechecks,
+  [
+    "review_id",
+    "detail_id",
+    "candidate_id",
+    "space_name",
+    "raw_height_m",
+    "previous_type",
+    "resolution",
+    "ceiling_height_type",
+    "evidence_url",
+    "reviewed_at",
+  ],
+  "ceiling-recheck-ledger.csv",
 );
 requireFields(
   priceObservations,
@@ -180,6 +199,7 @@ checkUnique(historical, "event_id", "historical-events.csv");
 checkUnique(candidates, "candidate_id", "candidate-venues.csv");
 checkUnique(prefectureCoverage, "prefecture", "prefecture-coverage.csv");
 checkUnique(venueDetails, "detail_id", "venue-details.csv");
+checkUnique(ceilingRechecks, "review_id", "ceiling-recheck-ledger.csv");
 checkUnique(priceObservations, "price_id", "price-observations.csv");
 checkUnique(venueOperations, "operation_id", "venue-operations.csv");
 checkUnique(historicalVenueAliases, "alias_id", "historical-venue-aliases.csv");
@@ -189,6 +209,7 @@ checkUnique(budgetScenarios, "scenario_id", "budget-scenarios.csv");
   ["candidate-venues.csv", candidates],
   ["prefecture-coverage.csv", prefectureCoverage],
   ["venue-details.csv", venueDetails],
+  ["ceiling-recheck-ledger.csv", ceilingRechecks],
   ["price-observations.csv", priceObservations],
   ["venue-operations.csv", venueOperations],
   ["historical-venue-aliases.csv", historicalVenueAliases],
@@ -349,10 +370,32 @@ const taxStatuses = new Set(["included", "excluded", "not_stated"]);
 const numericDetailFields = [
   "area_m2",
   "ceiling_height_m",
+  "clear_height_min_m",
   "capacity_theater",
   "capacity_fixed",
   "floor_load_kg_m2",
 ];
+const ceilingHeightTypes = new Set([
+  "minimum_clear",
+  "published_clear",
+  "range_minimum",
+  "highest_point",
+  "stage_opening",
+  "stage_clearance",
+  "nominal_review",
+  "unknown",
+]);
+const filterableCeilingTypes = new Set([
+  "minimum_clear",
+  "published_clear",
+  "range_minimum",
+]);
+const overheadUseStatuses = new Set([
+  "verified",
+  "conditional",
+  "prohibited",
+  "unknown",
+]);
 
 venueDetails.forEach((row, index) => {
   const line = index + 2;
@@ -379,6 +422,69 @@ venueDetails.forEach((row, index) => {
     errors.push(
       `venue-details.csv:${line} implausible ceiling_height_m=${row.ceiling_height_m}`,
     );
+  }
+  if (!ceilingHeightTypes.has(row.ceiling_height_type)) {
+    errors.push(
+      `venue-details.csv:${line} invalid ceiling_height_type=${row.ceiling_height_type}`,
+    );
+  }
+  if (!overheadUseStatuses.has(row.overhead_use_status)) {
+    errors.push(
+      `venue-details.csv:${line} invalid overhead_use_status=${row.overhead_use_status}`,
+    );
+  }
+  if (row.ceiling_height_m && row.ceiling_height_type === "unknown") {
+    errors.push(`venue-details.csv:${line} raw ceiling has unknown type`);
+  }
+  if (row.clear_height_min_m && !filterableCeilingTypes.has(row.ceiling_height_type)) {
+    errors.push(
+      `venue-details.csv:${line} non-filterable type has clear_height_min_m=${row.ceiling_height_type}`,
+    );
+  }
+  if (!row.clear_height_min_m && filterableCeilingTypes.has(row.ceiling_height_type)) {
+    errors.push(
+      `venue-details.csv:${line} filterable type missing clear_height_min_m=${row.ceiling_height_type}`,
+    );
+  }
+  if (
+    row.clear_height_min_m &&
+    row.ceiling_height_m &&
+    Number(row.clear_height_min_m) > Number(row.ceiling_height_m)
+  ) {
+    errors.push(
+      `venue-details.csv:${line} clear height exceeds raw ceiling=${row.clear_height_min_m}>${row.ceiling_height_m}`,
+    );
+  }
+});
+
+const detailById = new Map(venueDetails.map((row) => [row.detail_id, row]));
+ceilingRechecks.forEach((row, index) => {
+  const line = index + 2;
+  const detail = detailById.get(row.detail_id);
+  if (!detail) {
+    errors.push(`ceiling-recheck-ledger.csv:${line} unknown detail_id=${row.detail_id}`);
+    return;
+  }
+  if (detail.candidate_id !== row.candidate_id || detail.space_name !== row.space_name) {
+    errors.push(`ceiling-recheck-ledger.csv:${line} detail snapshot mismatch=${row.detail_id}`);
+  }
+  if (!new Set(["resolved_filterable", "resolved_excluded", "human_review"]).has(row.resolution)) {
+    errors.push(`ceiling-recheck-ledger.csv:${line} invalid resolution=${row.resolution}`);
+  }
+  if (!/^https:\/\//.test(row.evidence_url)) {
+    errors.push(`ceiling-recheck-ledger.csv:${line} non-https evidence_url`);
+  }
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(row.reviewed_at)) {
+    errors.push(`ceiling-recheck-ledger.csv:${line} invalid reviewed_at=${row.reviewed_at}`);
+  }
+  if (
+    detail.clear_height_min_m !== row.clear_height_min_m ||
+    detail.ceiling_height_type !== row.ceiling_height_type
+  ) {
+    errors.push(`ceiling-recheck-ledger.csv:${line} resolution drift=${row.detail_id}`);
+  }
+  if (row.resolution === "human_review" && !row.human_action) {
+    errors.push(`ceiling-recheck-ledger.csv:${line} human review missing action=${row.detail_id}`);
   }
 });
 
@@ -558,6 +664,8 @@ const historicalBySeries = Object.groupBy(historical, (row) => row.series);
 const verifiedHistorical = historical.filter((row) => row.verification_status === "verified").length;
 const candidateRegions = new Set(candidates.map((row) => row.region));
 const candidatePrefectures = new Set(candidates.map((row) => row.prefecture));
+const rawCeilingDetails = venueDetails.filter((row) => row.ceiling_height_m);
+const filterableCeilingDetails = venueDetails.filter((row) => row.clear_height_min_m);
 
 console.log("Venue Monosashi data audit");
 console.log(`historical_rows=${historical.length}`);
@@ -572,6 +680,19 @@ console.log(`candidate_prefectures=${candidatePrefectures.size}`);
 console.log(`candidate_missing_prefectures=${missingPrefectures.length}`);
 console.log(`prefecture_coverage_rows=${prefectureCoverage.length}`);
 console.log(`venue_detail_rows=${venueDetails.length}`);
+console.log(`ceiling_recheck_rows=${ceilingRechecks.length}`);
+console.log(
+  `ceiling_recheck_human=${ceilingRechecks.filter((row) => row.resolution === "human_review").length}`,
+);
+console.log(`ceiling_raw_spaces=${rawCeilingDetails.length}`);
+console.log(
+  `ceiling_raw_candidates=${new Set(rawCeilingDetails.map((row) => row.candidate_id)).size}`,
+);
+console.log(`ceiling_filterable_spaces=${filterableCeilingDetails.length}`);
+console.log(
+  `ceiling_filterable_candidates=${new Set(filterableCeilingDetails.map((row) => row.candidate_id)).size}`,
+);
+console.log(`ceiling_quarantined_spaces=${rawCeilingDetails.length - filterableCeilingDetails.length}`);
 console.log(`price_observation_rows=${priceObservations.length}`);
 console.log(`venue_operation_rows=${venueOperations.length}`);
 console.log(`historical_venue_alias_rows=${historicalVenueAliases.length}`);

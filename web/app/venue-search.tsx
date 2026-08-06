@@ -266,6 +266,7 @@ export function VenueSearch() {
   const [capacity, setCapacity] = useState(0);
   const [capacityMax, setCapacityMax] = useState(0);
   const [area, setArea] = useState(0);
+  const [ceiling, setCeiling] = useState(0);
   const [fixedStage, setFixedStage] = useState(false);
   const [practice, setPractice] = useState(false);
   const [largeVehicleOnly, setLargeVehicleOnly] = useState(false);
@@ -349,6 +350,7 @@ export function VenueSearch() {
       setCapacity(numberParam(params, "min", 5000));
       setCapacityMax(numberParam(params, "max", 20000));
       setArea(numberParam(params, "area", 10000));
+      setCeiling(numberParam(params, "ceiling", 100));
       setFixedStage(params.get("fixed") === "1");
       setPractice(params.get("practice") === "1");
       setLargeVehicleOnly(params.get("loading") === "1");
@@ -516,6 +518,7 @@ export function VenueSearch() {
           capacity > 0 ||
           capacityMax > 0 ||
           area > 0 ||
+          ceiling > 0 ||
           fixedStage ||
           practice;
         const matchingSpaces = venue.spaces.filter((space) => {
@@ -543,6 +546,10 @@ export function VenueSearch() {
           }
           if (area > 0 && space.area !== null && space.area < area) return false;
           if (area > 0 && space.area === null && !keepUnknown) return false;
+          if (ceiling > 0 && space.ceiling !== null && space.ceiling < ceiling) {
+            return false;
+          }
+          if (ceiling > 0 && space.ceiling === null && !keepUnknown) return false;
           if (
             fixedStage &&
             space.stageType !== "fixed" &&
@@ -673,6 +680,7 @@ export function VenueSearch() {
     area,
     capacity,
     capacityMax,
+    ceiling,
     fixedStage,
     historicalOnly,
     keepUnknown,
@@ -706,6 +714,7 @@ export function VenueSearch() {
     if (capacity > 0) params.set("min", String(capacity));
     if (capacityMax > 0) params.set("max", String(capacityMax));
     if (area > 0) params.set("area", String(area));
+    if (ceiling > 0) params.set("ceiling", String(ceiling));
     if (fixedStage) params.set("fixed", "1");
     if (practice) params.set("practice", "1");
     if (largeVehicleOnly) params.set("loading", "1");
@@ -722,6 +731,7 @@ export function VenueSearch() {
     area,
     capacity,
     capacityMax,
+    ceiling,
     fixedStage,
     historicalOnly,
     keepUnknown,
@@ -793,6 +803,7 @@ export function VenueSearch() {
     setCapacity(0);
     setCapacityMax(0);
     setArea(0);
+    setCeiling(0);
     setFixedStage(false);
     setPractice(false);
     setLargeVehicleOnly(false);
@@ -1008,10 +1019,12 @@ export function VenueSearch() {
                   面積 {venueData.stats.candidateCoverage.area} / {venueData.stats.venues}会場
                   <br />
                   収容 {venueData.stats.candidateCoverage.capacity} / {venueData.stats.venues}会場
+                  <br />
+                  天井下限 {venueData.stats.candidateCoverage.ceiling} / {venueData.stats.venues}会場
                 </span>
               </div>
               <p className="filter-section-copy">
-                公開値がある貸出区画を、面積と収容人数の両方で照合します。
+                公開値がある貸出区画を、面積・収容人数・確認済みの天井下限で照合します。
               </p>
 
               <label className="field compact-field">
@@ -1092,8 +1105,32 @@ export function VenueSearch() {
                 </div>
               </fieldset>
 
+              <label className="field compact-field">
+                <span className="field-label">確認済み天井高の下限</span>
+                <span className="field-help">
+                  公式情報から下限・有効高・単一の公表高と判断できた
+                  {venueData.stats.spaceCoverage.ceiling}区画のみ検索します。最高部・中央高・舞台開口は除外しています。
+                </span>
+                <span className="unit-input">
+                  <input
+                    aria-label="確認済み天井高の下限"
+                    inputMode="decimal"
+                    max="100"
+                    min="0"
+                    placeholder="指定なし"
+                    step="0.5"
+                    type="number"
+                    value={ceiling || ""}
+                    onChange={(event) =>
+                      setCeiling(Math.max(0, Number(event.target.value) || 0))
+                    }
+                  />
+                  <span>m以上</span>
+                </span>
+              </label>
+
               <p className="filter-precision-note">
-                面積・収容人数・舞台条件は、同じ貸出区画で判定します。
+                面積・収容人数・天井下限・舞台条件は、同じ貸出区画で判定します。高さがあっても高投げ可とは限らないため、利用許可は会場へ確認してください。
               </p>
 
               <label className="check-field unknown-policy">
@@ -1229,6 +1266,10 @@ export function VenueSearch() {
                         <dd>{numberLabel(venue.maxCapacity, "人")}</dd>
                       </div>
                       <div>
+                        <dt>最大確認済み天井下限</dt>
+                        <dd>{numberLabel(venue.maxCeiling, "m")}</dd>
+                      </div>
+                      <div>
                         <dt>候補内最小日額</dt>
                         <dd>{priceLabel(venue.minDailyFacilityPrice)}</dd>
                       </div>
@@ -1318,6 +1359,14 @@ export function VenueSearch() {
                         </span>
                       </div>
                       <div className="metric">
+                        <span className="metric-label">最大確認済み天井下限</span>
+                        <span
+                          className={`metric-value ${venue.maxCeiling === null ? "unknown" : ""}`}
+                        >
+                          {numberLabel(venue.maxCeiling, "m")}
+                        </span>
+                      </div>
+                      <div className="metric">
                         <span className="metric-label">確認済み日額の最小値</span>
                         <span
                           className={`metric-value ${venue.searchPrice === null ? "unknown" : ""}`}
@@ -1357,6 +1406,14 @@ export function VenueSearch() {
                         )}
                         {venue.detailCount > 1 && (
                           <span className="status warn">数値は別区画を含む</span>
+                        )}
+                        {venue.maxCeiling !== null && (
+                          <span className="status warn">高投げ可否 要問い合わせ</span>
+                        )}
+                        {venue.maxCeiling === null && venue.ceilingReferenceCount > 0 && (
+                          <span className="status warn">
+                            天井参考値 {venue.ceilingReferenceCount}区画・意味を精査中
+                          </span>
                         )}
                         {venue.operation?.largeVehicleAccess && (
                           <span className="status">

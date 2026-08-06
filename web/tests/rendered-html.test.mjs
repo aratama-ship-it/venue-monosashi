@@ -52,6 +52,11 @@ test("server-renders the venue search shell", async () => {
   assert.match(html, /name="twitter:card" content="summary_large_image"/);
   assert.match(html, /rel="icon" href="https:\/\/venue\.art-monosashi\.com\/favicon\.svg"/);
   assert.match(html, /application\/ld\+json/);
+  assert.equal([...html.matchAll(/static\.cloudflareinsights\.com\/beacon\.min\.js/g)].length, 1);
+  assert.match(html, /977721791a104a10ae5b37312104bbf5/);
+  const layoutSource = await readFile(new URL("../app/layout.tsx", import.meta.url), "utf8");
+  assert.match(layoutSource, /NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN/);
+  assert.match(layoutSource, /static\.cloudflareinsights\.com\/beacon\.min\.js/);
   assert.match(html, /会場を、名前でなく/);
   assert.match(html, /条件で測る/);
   assert.match(
@@ -73,14 +78,18 @@ test("server-renders the venue search shell", async () => {
   assert.match(html, /<legend class="field-label">収容人数<\/legend>/);
   assert.match(html, /aria-label="収容人数の下限"/);
   assert.match(html, /aria-label="収容人数の上限"/);
+  assert.match(html, /確認済み天井高の下限/);
+  assert.match(html, /aria-label="確認済み天井高の下限"/);
+  assert.match(html, /最高部・中央高・舞台開口は除外しています/);
+  assert.match(html, /高さがあっても高投げ可とは限らない/);
   assert.match(html, /固定舞台が確認できる/);
   assert.match(html, /大型車搬入が可能または条件付き/);
   assert.match(html, /収録大会の開催実績と照合済み/);
-  assert.match(html, /面積・収容人数・舞台条件は、同じ貸出区画で判定します/);
+  assert.match(html, /面積・収容人数・天井下限・舞台条件は、同じ貸出区画で判定します/);
   assert.match(html, /未確認の会場も候補に残す/);
   assert.doesNotMatch(
     html,
-    /最低天井高|確認済み日額料の上限|料金条件の用途|最低駐車台数/,
+    /確認済み日額料の上限|料金条件の用途|最低駐車台数/,
   );
   assert.match(html, /会場の型（複数選択）/);
   assert.match(html, /複数選択できます。選んだ型をすべて持つ会場を表示します/);

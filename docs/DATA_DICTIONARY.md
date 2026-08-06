@@ -14,7 +14,12 @@
 | space_name | 公式の区画名 |
 | space_type | exhibition / arena / theater / flat_hall / conference / meeting / outdoor等 |
 | area_m2 | 公開された貸出面積。推定値は入れない |
-| ceiling_height_m | 公開された天井高 |
+| ceiling_height_m | 公式情報に掲載された高さの原値。最高部・中央高・舞台開口を含み得るため、検索には直接使わない |
+| clear_height_min_m | 公式情報から最低高・有効高・公表された単一の室内高・範囲下限と判定できた値。天井高検索に使う唯一の列 |
+| ceiling_height_type | `minimum_clear` / `published_clear` / `range_minimum` / `highest_point` / `stage_opening` / `stage_clearance` / `nominal_review` / `unknown` |
+| overhead_use_status | 高投げ等の頭上空間利用可否。`verified` / `conditional` / `prohibited` / `unknown`。天井高だけから推定しない |
+
+天井高の再確認結果は `ceiling-recheck-ledger.csv` に、判定前後の型、検索採用値、確認した公式URL、確認日、人力確認事項を記録する。`resolved_filterable` は検索採用、`resolved_excluded` は値の意味が判明したうえで検索対象外、`human_review` は公式資料だけでは解決できず人力確認を残した状態を表す。
 | capacity_theater | シアター形式最大収容数 |
 | capacity_fixed | 固定席数 |
 | floor_load_kg_m2 | 床荷重。t/㎡はkg/㎡へ換算した場合に注記 |
