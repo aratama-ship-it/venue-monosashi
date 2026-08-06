@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 20 Hokkaido is validated locally and awaits public deployment; the next bounded wave targets Kanagawa.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 21 Kanagawa is validated locally and awaits public deployment; the next bounded wave is selected from the regenerated lowest-depth report.
 
 ## Changes
 
@@ -65,11 +65,14 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Hokkaido facilities — 小樽市民会館、コーチャンフォー釧路文化ホール、北見芸術文化ホール、苫小牧市民文化ホール ART CUBES — and 34 searchable spaces, increasing the national total to 555 facilities and 2,071 spaces. The sources are the official pages of 小樽市民会館指定管理者、釧路市、北見市、苫小牧市民文化ホール指定管理者.
 - No new Hokkaido ceiling or price value was inferred or added. The official 1,524-seat Kushiro large-hall capacity was recorded; new space conditions otherwise remain explicitly `要確認`.
 - Validated and deployed Wave 20 to the existing public site (version 65); `https://venue.art-monosashi.com/?release=bcf31a5` returned the established site marker. Tracked `web/dist` output was restored after deployment.
+- Added four official-source-backed Kanagawa facilities — 厚木市文化会館、カルッツかわさき、鎌倉芸術館、小田原三の丸ホール — and 68 searchable spaces, increasing the national total to 559 facilities and 2,139 spaces. Sources are the official pages of 厚木市、カルッツかわさき、鎌倉芸術館、小田原三の丸ホール.
+- Recorded only explicit room ceiling measurements from the カルッツかわさき official facility guide: アクトスタジオ4.5m、大会議室3.0m、中会議室3.0m、小会議室2.8m. Hall stage dimensions remain notes only and no price observation was added.
+- Wave 21 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Public deployment and custom-domain verification remain to be completed for this wave.
 
 ## Verification
 
 - Wave 14 audit and validation passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 531 venues and 2,823 price observations.
-- Current depth report: 620 candidate gaps and 444 space gaps. Hokkaido is now 14 candidates, 8 municipalities, and 48 spaces; Kanagawa is currently tied for the lowest candidate-depth at 10 candidates.
+- Current depth report: 616 candidate gaps and 418 space gaps. Kanagawa is now 14 candidates, 7 municipalities, and 93 spaces; the next lowest candidate-depth is 10 candidates in 長野県、岐阜県、和歌山県、広島県、高知県、佐賀県、熊本県、鹿児島県.
 
 ## Pre-existing State Preserved
 
