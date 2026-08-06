@@ -336,6 +336,9 @@ const venues = candidates.map((candidate) => {
       capacityFixed: nullableNumber(detail.capacity_fixed),
       stageType: detail.stage_type,
       practiceUse: detail.sports_or_practice_use,
+      sourceUrl: detail.source_url,
+      observedAt: detail.observed_at || null,
+      note: detail.note || null,
     })),
     bestSpace: bestSpace
       ? {

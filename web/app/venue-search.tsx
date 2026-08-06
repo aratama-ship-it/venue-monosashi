@@ -24,6 +24,7 @@ type VenueRoleSource = {
     stageType: string;
   }>;
 };
+type VenueSpace = (typeof venueData.venues)[number]["spaces"][number];
 type SmallTheaterLedgerItem = {
   id: string;
   indexName: string;
@@ -210,6 +211,64 @@ const largeVehicleLabels: Record<string, string> = {
   no: "不可",
   unknown: "要確認",
 };
+
+const spaceTypeLabels: Record<string, string> = {
+  arena: "アリーナ",
+  conference: "会議室",
+  exhibition: "展示場",
+  flat_hall: "平土間",
+  meeting_room: "会議室",
+  multipurpose_hall: "多目的ホール",
+  practice_room: "練習室・スタジオ",
+  stage_hall: "舞台・ホール",
+  theater: "劇場",
+};
+
+const ceilingTypeLabels: Record<string, string> = {
+  minimum_clear: "最低有効高",
+  published_clear: "公表天井高",
+  range_minimum: "高さ範囲の下限",
+  highest_point: "最高部（検索対象外）",
+  stage_opening: "舞台開口高（検索対象外）",
+  stage_clearance: "舞台高さ（検索対象外）",
+  nominal_review: "参考値（精査中）",
+  unknown: "高さ未確認",
+};
+
+const overheadUseLabels: Record<string, string> = {
+  verified: "頭上利用確認済み",
+  conditional: "頭上利用は条件付き",
+  prohibited: "頭上利用不可",
+  unknown: "高投げ可否は要問い合わせ",
+};
+
+function spaceCapacityLabel(space: VenueSpace) {
+  if (space.capacityTheater !== null && space.capacityFixed !== null) {
+    if (space.capacityTheater === space.capacityFixed) {
+      return `${yen.format(space.capacityTheater)}席`;
+    }
+    return `最大${yen.format(space.capacityTheater)}席・固定${yen.format(space.capacityFixed)}席`;
+  }
+  if (space.capacityTheater !== null) return `最大${yen.format(space.capacityTheater)}席`;
+  if (space.capacityFixed !== null) return `固定${yen.format(space.capacityFixed)}席`;
+  return "未確認";
+}
+
+function spaceHeightLabel(space: VenueSpace) {
+  if (space.ceiling !== null) {
+    return {
+      value: `${space.ceiling}m`,
+      kind: ceilingTypeLabels[space.ceilingType] ?? "検索対象の確認済み高さ",
+    };
+  }
+  if (space.ceilingReference !== null) {
+    return {
+      value: `${space.ceilingReference}m`,
+      kind: ceilingTypeLabels[space.ceilingType] ?? "参考値（検索対象外）",
+    };
+  }
+  return { value: "未確認", kind: "公式資料または施設への確認が必要" };
+}
 
 function priceLabel(value: number | null) {
   if (value === null) return "未観測";
@@ -1433,6 +1492,64 @@ export function VenueSearch() {
                         公式情報を確認 ↗
                       </a>
                     </div>
+
+                    {venue.spaces.length > 0 && (
+                      <details className="evidence-drawer space-drawer">
+                        <summary>
+                          <span>区画ごとの情報を見る</span>
+                          <span className="drawer-count">
+                            {venue.spaces.length}区画 / 天井検索対象
+                            {venue.spaces.filter((space) => space.ceiling !== null).length}区画
+                          </span>
+                        </summary>
+                        <div className="price-table-wrap">
+                          <table className="price-table space-table">
+                            <thead>
+                              <tr>
+                                <th>区画</th>
+                                <th>面積</th>
+                                <th>収容</th>
+                                <th>高さ</th>
+                                <th>確認状態</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {venue.spaces.map((space) => {
+                                const height = spaceHeightLabel(space);
+                                return (
+                                  <tr key={space.id}>
+                                    <td>
+                                      <strong>{space.name}</strong>
+                                      <small>
+                                        {spaceTypeLabels[space.type] ?? space.type}
+                                      </small>
+                                    </td>
+                                    <td className="amount">
+                                      {numberLabel(space.area, "㎡")}
+                                    </td>
+                                    <td>{spaceCapacityLabel(space)}</td>
+                                    <td className="amount">
+                                      {height.value}
+                                      <small>{height.kind}</small>
+                                    </td>
+                                    <td>
+                                      {overheadUseLabels[space.overheadUseStatus] ??
+                                        space.overheadUseStatus}
+                                      <small>{space.note ?? "補足情報なし"}</small>
+                                      <small>
+                                        <a href={space.sourceUrl} rel="noreferrer" target="_blank">
+                                          区画の公式情報 ↗
+                                        </a>
+                                      </small>
+                                    </td>
+                                  </tr>
+                                );
+                              })}
+                            </tbody>
+                          </table>
+                        </div>
+                      </details>
+                    )}
 
                     {(venue.priceObservations.length > 0 ||
                       venue.budgetScenarios.length > 0 ||

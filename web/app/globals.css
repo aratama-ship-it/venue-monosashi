@@ -794,6 +794,21 @@ a {
   font-weight: 700;
 }
 
+.space-table {
+  min-width: 840px;
+}
+
+.space-table td:first-child {
+  min-width: 180px;
+}
+
+.space-table a {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .operation-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

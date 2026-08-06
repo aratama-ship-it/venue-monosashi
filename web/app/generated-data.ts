@@ -4,7 +4,7 @@ export const venueData = {
   "stats": {
     "historical": 225,
     "venues": 476,
-    "details": 1435,
+    "details": 1458,
     "prices": 2808,
     "operations": 222,
     "budgetScenarios": 13,
@@ -14,14 +14,14 @@ export const venueData = {
       "ceiling": 85
     },
     "spaceCoverage": {
-      "ceiling": 151,
-      "ceilingReference": 182
+      "ceiling": 166,
+      "ceilingReference": 202
     },
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-06",
-      "observationCount": 5065,
-      "venueObservationCount": 4478,
+      "observationCount": 5088,
+      "venueObservationCount": 4501,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -178,7 +178,10 @@ export const venueData = {
           "capacityTheater": 5000,
           "capacityFixed": 2120,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.hakodate.hokkaido.jp/docs/2014040900082/",
+          "observedAt": "2026-08-06",
+          "note": "44m×65m。収容5000人はイベント内容で変動するため、個別レイアウトは要確認。全面・2/3・1/3で料金区分あり"
         },
         {
           "id": "hakodate-sub-arena",
@@ -192,7 +195,10 @@ export const venueData = {
           "capacityTheater": 1044,
           "capacityFixed": 208,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hakodate.hokkaido.jp/docs/2014040900082/",
+          "observedAt": "2026-08-06",
+          "note": "25m×40m。2分割料金あり。専用使用は原則平日午前・午後で、メインアリーナ全面使用時は原則貸出不可"
         }
       ],
       "bestSpace": {
@@ -371,7 +377,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.yumemesse.or.jp/facility/main-building-exhibition-building/",
+          "observedAt": "2026-07-30",
+          "note": "無柱・コンクリート平土間。天井高17〜25m、間仕切受梁部13mのため検索用数値は最低値13m。3分割可。5m×5m搬入口3か所、車両進入可。主催者事務室・会議室・控室を各3室、給排水・場内放送・冷暖房・光通信ケーブル敷設対応"
         },
         {
           "id": "yumemesse-exhibition-third",
@@ -385,7 +394,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.yumemesse.or.jp/facility/main-building-exhibition-building/",
+          "observedAt": "2026-07-30",
+          "note": "A・B・Cのいずれか1区画。全面7500㎡の3分割と公式施設検索の2500㎡区分から収録。天井高は全面の最低値13m。各区画に搬入口・主催者諸室あり"
         },
         {
           "id": "yumemesse-conference-hall",
@@ -399,7 +411,10 @@ export const venueData = {
           "capacityTheater": 504,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.yumemesse.or.jp/facility/main-building-conference-building/",
+          "observedAt": "2026-08-06",
+          "note": "2分割可。240インチスクリーン、固定プロジェクター、移動観覧席を備え、基本仕様は机・椅子なしの可変レイアウト"
         }
       ],
       "bestSpace": {
@@ -514,7 +529,10 @@ export const venueData = {
           "capacityTheater": 2560,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.aobayama.jp/organizer/floor/exhibitionhall/exhibitionroom_all.html",
+          "observedAt": "2026-08-06",
+          "note": "無柱カーペット平場、スクール1536席、最大5分割。床耐荷重5t/㎡（一部ピット開口部を除く）、搬出入口3か所はW5m×H5m。会議棟は2027年10月末まで休館、展示棟も2027年4〜10月末は休館予定"
         },
         {
           "id": "sendai-exhibition-one",
@@ -528,7 +546,10 @@ export const venueData = {
           "capacityTheater": 792,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.aobayama.jp/organizer/floor/exhibitionhall/exhibitionroom_1.html",
+          "observedAt": "2026-08-06",
+          "note": "展示室1〜3は各1000㎡、シアター792席、スクール480席。展示室1は500㎡ずつに分割可。床耐荷重は一部ピットを除き5t/㎡。競技・投擲、床養生、遮音、同時催事は要確認"
         }
       ],
       "bestSpace": {
@@ -775,7 +796,10 @@ export const venueData = {
           "capacityTheater": 2000,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://u-koryukyoten.jp/assets/pdf/guide/shisetsuriyoutebiki.pdf",
+          "observedAt": "2026-07-30",
+          "note": "34.06m×55.26m、天井高8.3〜9.4m。高弾性衝撃吸収シート床、東西2分割可。スクール1152人、立食1000人。搬入口、床配線ピット、道具・照明バトンあり。スポーツ・投擲可否は要確認"
         },
         {
           "id": "lightcube-medium",
@@ -789,7 +813,10 @@ export const venueData = {
           "capacityTheater": 702,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://u-koryukyoten.jp/assets/pdf/guide/shisetsuriyoutebiki.pdf",
+          "observedAt": "2026-07-30",
+          "note": "天井高6.5〜8.7m、シアター702人、スクール360人、立食400人。東西分割可で常設ステージあり。床荷重、投擲・運動利用、配信回線の詳細は公式公開資料上で未観測"
         }
       ],
       "bestSpace": {
@@ -1137,7 +1164,10 @@ export const venueData = {
           "capacityTheater": 10000,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.tokimesse.com/sponsor/guide/wavemarket.html",
+          "observedAt": "2026-07-30",
+          "note": "無柱コンクリート平場、最大天井高25.5m・平均22m。A5100㎡とB2700㎡に完全分割でき、45t以下の車両が直接進入可能。吊点2t/点、床ピットあり。投擲・床養生・観客配置は要確認"
         },
         {
           "id": "tokimesse-wave-b",
@@ -1151,7 +1181,10 @@ export const venueData = {
           "capacityTheater": 2000,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.tokimesse.com/sponsor/guide/wavemarket.html",
+          "observedAt": "2026-07-30",
+          "note": "最小の公式分割区画。シアター約2000人の参考値は1/3利用、展示ホール全体の平均天井高・床荷重を継承。完全分割時の遮音、搬入レーン、控室、競技・投擲は要確認"
         },
         {
           "id": "tokimesse-snow",
@@ -1165,7 +1198,10 @@ export const venueData = {
           "capacityTheater": 1000,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.tokimesse.com/sponsor/guide/snow.html",
+          "observedAt": "2026-08-06",
+          "note": "カーペット平土間、A/B各550㎡へ完全2分割。シアター1000、スクール700、立食700。大型搬入EV4.15t/3.35t、同時通訳ブース6室、構内LAN、映像音響照明調整室を備える"
         }
       ],
       "bestSpace": {
@@ -1379,7 +1415,10 @@ export const venueData = {
           "capacityTheater": 3000,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.actcity.jp/user/exhibition/spec/",
+          "observedAt": "2026-08-06",
+          "note": "35m×100m、3分割可。吊フック約200個・2t/点、各ブロックに幅4.7m×高さ4.0mの搬入口があり車両乗入可。控室6、主催者事務室、更衣室2"
         },
         {
           "id": "actcity-exhibition-block3",
@@ -1393,7 +1432,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.actcity.jp/user/exhibition/spec/",
+          "observedAt": "2026-08-06",
+          "note": "最小料金の1100㎡区画。LAN、臨時電話、臨時電源に対応。床はコンクリート"
         },
         {
           "id": "actcity-middle-hall",
@@ -1407,7 +1449,10 @@ export const venueData = {
           "capacityTheater": 1030,
           "capacityFixed": 1030,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.actcity.jp/user/concert/spec/",
+          "observedAt": "2026-07-30",
+          "note": "面積190㎡は舞台。舞台間口18.5m・高さ15.5m・奥行10.5m。固定1030席、リハーサル室2、楽屋8、400インチ大型映像スクリーン、LAN・Wi-Fi・舞台モニタ"
         }
       ],
       "bestSpace": {
@@ -1685,7 +1730,10 @@ export const venueData = {
           "capacityTheater": 2000,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.nara-cc.jp/facility/floor.html",
+          "observedAt": "2026-08-06",
+          "note": "無柱平土間。A・B・Cへ3分割可。基本レイアウトはフラットで、備品追加・レイアウト変更は別料金"
         },
         {
           "id": "nara-convention-a",
@@ -1699,7 +1747,10 @@ export const venueData = {
           "capacityTheater": 700,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.nara-cc.jp/facility/floor.html",
+          "observedAt": "2026-08-06",
+          "note": "全面ABCの1/3区画。スクール360人"
         },
         {
           "id": "nara-convention-b",
@@ -1713,7 +1764,10 @@ export const venueData = {
           "capacityTheater": 521,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.nara-cc.jp/facility/floor.html",
+          "observedAt": "2026-08-06",
+          "note": "全面ABCの1/3区画。スクール300人"
         },
         {
           "id": "nara-convention-c",
@@ -1727,7 +1781,10 @@ export const venueData = {
           "capacityTheater": 700,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.nara-cc.jp/facility/floor.html",
+          "observedAt": "2026-08-06",
+          "note": "全面ABCの1/3区画。スクール360人"
         },
         {
           "id": "nara-tenpyo",
@@ -1741,7 +1798,10 @@ export const venueData = {
           "capacityTheater": 504,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.nara-cc.jp/facility/floor.html",
+          "observedAt": "2026-08-06",
+          "note": "階段型座席を収納して平面利用可。階段型シアター476人。基本レイアウトはフラット＋ステージ"
         }
       ],
       "bestSpace": {
@@ -1936,7 +1996,10 @@ export const venueData = {
           "capacityTheater": 594,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.mamakari.net/facility/eventhall.php",
+          "observedAt": "2026-08-06",
+          "note": "36m×16.5m、全面シアター594席、東西半面各264席。トラック搬入口直結、床ピット、音響・照明・映像・美術バトン・平台あり。競技・投擲、床養生、吊物荷重、催事回線は要確認"
         },
         {
           "id": "okayama-convention",
@@ -1950,7 +2013,10 @@ export const venueData = {
           "capacityTheater": 720,
           "capacityFixed": 420,
           "stageType": "convertible",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.mamakari.net/facility/conventionhall.php",
+          "observedAt": "2026-08-06",
+          "note": "33.5m×21.8m。後壁収納ロールバック420席とスタッキング300席、6分割電動昇降舞台を収納して完全平土間化できる。音響・照明・映像・美術バトンあり。競技・投擲、床養生、吊物荷重、催事回線は要確認"
         }
       ],
       "bestSpace": {
@@ -2193,7 +2259,10 @@ export const venueData = {
           "capacityTheater": 5000,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.kunibikimesse.jp/facilitys/floorguide_u/1",
+          "observedAt": "2026-08-06",
+          "note": "3分割運用可。床荷重5t/㎡を5000kg/㎡へ換算"
         },
         {
           "id": "kunibiki-multipurpose",
@@ -2207,7 +2276,10 @@ export const venueData = {
           "capacityTheater": 650,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.kunibikimesse.jp/facilitys/floorguide_u/2",
+          "observedAt": "2026-08-06",
+          "note": "特殊照明・大型スクリーン・音響設備あり"
         }
       ],
       "bestSpace": {
@@ -2386,7 +2458,10 @@ export const venueData = {
           "capacityTheater": 2002,
           "capacityFixed": null,
           "stageType": "convertible",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://ishinhall.com/wp-content/themes/overwall/images/pdf/yamaguchi_hall_floorguide.pdf",
+          "observedAt": "2026-07-30",
+          "note": "平土間時の床面積約1190㎡、天井高17.2m、木目調ビニルタイル、床耐荷重200kg/㎡（配置により350kg/㎡まで）。平土間、半面、1200・1500・1700・2000席へ可変。舞台間口29m、搬出口2か所、5G・LANあり。投擲・床養生は要確認"
         }
       ],
       "bestSpace": {
@@ -2565,7 +2640,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.cul-spo.or.jp/comcen/fac_taiiku/",
+          "observedAt": "2026-07-30",
+          "note": "50.7m×40.2m。バスケットボール・ハンドボール2面、バドミントン12面等。1/3単位の専用利用可。天井高、観客席数、床荷重、催事回線は公式ページ上で未観測"
         },
         {
           "id": "matsuyama-sub",
@@ -2579,7 +2657,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.cul-spo.or.jp/comcen/fac_taiiku/",
+          "observedAt": "2026-07-30",
+          "note": "18.6m×36.0m。バスケットボール・バレーボール1面、バドミントン4面等。メインのアップコートや小規模大会に利用可能。半面利用可"
         },
         {
           "id": "camellia-hall",
@@ -2593,7 +2674,10 @@ export const venueData = {
           "capacityTheater": 988,
           "capacityFixed": 506,
           "stageType": "convertible",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.cul-spo.or.jp/comcen/fac_bunka_list/",
+          "observedAt": "2026-07-30",
+          "note": "観客席面積は1階537㎡。1階ロールバック可動482席、2・3階固定506席、計988席。舞台261㎡・間口18m・奥行14.5m・高さ8m、楽屋5室、リハーサル室112㎡。ホール専用5G基地局あり"
         }
       ],
       "bestSpace": {
@@ -2724,7 +2808,10 @@ export const venueData = {
           "capacityTheater": 1085,
           "capacityFixed": 1085,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.bunkaplaza.or.jp/facility/halls/",
+          "observedAt": "2026-07-30",
+          "note": "舞台間口18m×奥行15m×高さ9〜11m（可変）、固定1085席。リハーサル室106.57㎡・天井4mと楽屋6室等を併設。平土間面積、床荷重、投擲・競技利用、配信回線は公式公開ページ上で未観測"
         },
         {
           "id": "culport-small",
@@ -2738,7 +2825,10 @@ export const venueData = {
           "capacityTheater": 200,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.bunkaplaza.or.jp/facility/halls/",
+          "observedAt": "2026-08-06",
+          "note": "間口11.3m×奥行22.9m、既設舞台・固定席なし、移動席200。仮設舞台24台を自由配置可能。避難誘導計画等の許可を得た場合は約230人まで。床荷重、投擲・競技利用、配信回線は要確認"
         }
       ],
       "bestSpace": {
@@ -2947,7 +3037,10 @@ export const venueData = {
           "capacityTheater": 224,
           "capacityFixed": null,
           "stageType": "convertible",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.town.kasuya.fukuoka.jp/s037/040/010/010/010/030/20191202181804.html",
+          "observedAt": "2026-07-30",
+          "note": "可動席を収納すると展示会、ダンス・バレエのレッスン、スクール形式講習会等に対応。2分の1利用可。面積、天井高、床材、舞台寸法は公式ページ上で未観測"
         },
         {
           "id": "sunlake-sakura",
@@ -2961,7 +3054,10 @@ export const venueData = {
           "capacityTheater": 560,
           "capacityFixed": 560,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.kasuya.fukuoka.jp/s037/040/010/010/010/20191115151740.html",
+          "observedAt": "2026-07-30",
+          "note": "560人収容のコンサート・発表会・講演会等向けホール。舞台のみ利用、リハーサル室、楽屋A〜Cあり。面積、天井高、舞台寸法は公式ページ上で未観測"
         }
       ],
       "bestSpace": {
@@ -3156,7 +3252,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.kumamoto-jo-hall.jp/organizer/spec_exhibition.html",
+          "observedAt": "2026-08-06",
+          "note": "北側B約830㎡、南側A約690㎡に分割可。コンクリート床＋塗装、11t車直接乗入れ可。固定グリッドバトン、電動道具バトン、電気・給排水ピットあり。投擲・床保護・催事回線は要確認"
         },
         {
           "id": "kumamoto-civic",
@@ -3170,7 +3269,10 @@ export const venueData = {
           "capacityTheater": 750,
           "capacityFixed": null,
           "stageType": "convertible",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.kumamoto-jo-hall.jp/organizer/spec_civic.html",
+          "observedAt": "2026-08-06",
+          "note": "北側B約380㎡、南側A約220㎡に分割可。移動観覧席約320席＋仮設約430席で計750席、収納時は平土間。舞台幅約26m×奥行約9m、350インチスクリーン、搬入EV2300kg。移動観覧席での飲食は禁止"
         },
         {
           "id": "kumamoto-main",
@@ -3184,7 +3286,10 @@ export const venueData = {
           "capacityTheater": 2304,
           "capacityFixed": 2304,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.kumamoto-jo-hall.jp/organizer/spec_main.html",
+          "observedAt": "2026-07-30",
+          "note": "1階1738席・2階566席。舞台幅約22m×奥行約20m、420インチスクリーン。搬入EVは4500kgと6000kgの2基。固定席ホールのため、競技床を要するJJF型よりWYYC型の舞台・決勝用途向き"
         }
       ],
       "bestSpace": {
@@ -3250,7 +3355,10 @@ export const venueData = {
           "capacityTheater": 2628,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://dejima-messe.jp/facility",
+          "observedAt": "2026-08-06",
+          "note": "カーペット張り平土間。4分割可"
         },
         {
           "id": "dejima-exhibition",
@@ -3264,7 +3372,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://dejima-messe.jp/facility",
+          "observedAt": "2026-08-06",
+          "note": "2分割可。床荷重5t/㎡を5000kg/㎡へ換算。全面シアター人数は配置依存のため未入力"
         }
       ],
       "bestSpace": {
@@ -3379,7 +3490,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": 522,
           "stageType": "convertible",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.b-conplaza.jp/organizer2/facilitie/convention/",
+          "observedAt": "2026-07-30",
+          "note": "アリーナ形式。固定席522はセンターアリーナ形式の公式仕様値"
         },
         {
           "id": "bcon-philharmonia",
@@ -3393,7 +3507,10 @@ export const venueData = {
           "capacityTheater": 1190,
           "capacityFixed": 1106,
           "stageType": "convertible",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.b-conplaza.jp/organizer2/facilitie/phil/",
+          "observedAt": "2026-07-30",
+          "note": "プロセニアム1106席、オープンステージ時970または1190席"
         }
       ],
       "bestSpace": {
@@ -3540,7 +3657,10 @@ export const venueData = {
           "capacityTheater": 5000,
           "capacityFixed": 1468,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.oki-conven.jp/top2/institution2/tenjitooutline/",
+          "observedAt": "2026-07-30",
+          "note": "展示有効部分約2500㎡、天井高は12.5〜24.5m（中央21m）。固定1468席・可動672席・移動席で舞台設置時4120席例、最大5000人。床耐圧2t/㎡、10t車両走行可、搬入口4か所、最大165㎡の組立舞台、吊フック122点"
         }
       ],
       "bestSpace": {
@@ -3719,7 +3839,10 @@ export const venueData = {
           "capacityTheater": 3368,
           "capacityFixed": 3368,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://aomori-sportspark.jp/info/organizer/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行主催者資料で64m×46m・3,910㎡・天井14.5〜23.1m、公式施設ページで固定3,368席を確認。天井高欄は下限値で範囲は注記保持。集会・展示・興行時の床荷重上限500kg/㎡。固定舞台、催事専有回線は未観測"
         },
         {
           "id": "maeda-sub",
@@ -3733,7 +3856,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://aomori-sportspark.jp/new_athletic_park/subarena/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式ページでバレーボール・バスケットボール・テニス各2面、バドミントン6面、卓球12面と大会・研修利用を確認。集会・展示・興行時の床荷重上限300kg/㎡。面積、天井高、収容人数、搬入、催事専有回線は未観測"
         }
       ],
       "bestSpace": {
@@ -3966,7 +4092,10 @@ export const venueData = {
           "capacityTheater": 4000,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.convention.or.jp/facility/_data_1.html",
+          "observedAt": "2026-08-06",
+          "note": "第1〜第4集会展示場を一体利用。公式施設紹介は3分割可、公式料金は4分の1単位の料金を掲載。椅子3500席・机椅子2200席の目安もあるため4000人は催事別レイアウト確認が必要"
         },
         {
           "id": "yamagata-bigwing-quarter",
@@ -3980,7 +4109,10 @@ export const venueData = {
           "capacityTheater": 1000,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.convention.or.jp/bigwing/shisetsu/",
+          "observedAt": "2026-08-06",
+          "note": "第1・第4区画の床面積は各935.28㎡、第2・第3は各980.39㎡。本行は料金表の4分の1区分に合わせ最小側935㎡を採用"
         },
         {
           "id": "bigwing-exhibition-all",
@@ -3994,7 +4126,10 @@ export const venueData = {
           "capacityTheater": 3500,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.convention.or.jp/bigwing/shisetsu/",
+          "observedAt": "2026-08-03",
+          "note": "第1〜4集会展示場の椅子収容は全体3,500席（1/4使用時850席）、机・椅子では全体2,200席（1/4使用時600席）。公式は収容席数を若干のゆとりのある設定と明記。面積は各区画へ記録し、全体の面積は未入力。天井高、床荷重、投擲、搬入、催事回線は未観測"
         },
         {
           "id": "bigwing-exhibition-1",
@@ -4008,7 +4143,10 @@ export const venueData = {
           "capacityTheater": 850,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.convention.or.jp/bigwing/shisetsu/",
+          "observedAt": "2026-08-03",
+          "note": "公式掲載の床面積。椅子収容は1/4使用時850席で、公式は収容席数を若干のゆとりのある設定と明記。天井高、床荷重、投擲、搬入、催事回線は未観測"
         },
         {
           "id": "bigwing-exhibition-2",
@@ -4022,7 +4160,10 @@ export const venueData = {
           "capacityTheater": 850,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.convention.or.jp/bigwing/shisetsu/",
+          "observedAt": "2026-08-03",
+          "note": "公式掲載の床面積。椅子収容は1/4使用時850席で、公式は収容席数を若干のゆとりのある設定と明記。天井高、床荷重、投擲、搬入、催事回線は未観測"
         },
         {
           "id": "bigwing-exhibition-3",
@@ -4036,7 +4177,10 @@ export const venueData = {
           "capacityTheater": 850,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.convention.or.jp/bigwing/shisetsu/",
+          "observedAt": "2026-08-03",
+          "note": "公式掲載の床面積。椅子収容は1/4使用時850席で、公式は収容席数を若干のゆとりのある設定と明記。天井高、床荷重、投擲、搬入、催事回線は未観測"
         },
         {
           "id": "bigwing-exhibition-4",
@@ -4050,7 +4194,10 @@ export const venueData = {
           "capacityTheater": 850,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.convention.or.jp/bigwing/shisetsu/",
+          "observedAt": "2026-08-03",
+          "note": "公式掲載の床面積。椅子収容は1/4使用時850席で、公式は収容席数を若干のゆとりのある設定と明記。天井高、床荷重、投擲、搬入、催事回線は未観測"
         }
       ],
       "bestSpace": {
@@ -4249,7 +4396,10 @@ export const venueData = {
           "capacityTheater": 5500,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://big-palette.jp/promotor/room/exhibition-hall.html",
+          "observedAt": "2026-07-30",
+          "note": "無柱平土間。天井高15〜20m、キャットウォーク下13.5m。条件付き床荷重5t/㎡の区域があるが、通常値2t/㎡を2000kg/㎡へ換算。A・B・Cの3分割と2面結合に対応。催事配信は有線LANを基に個別Wi-Fi構築を施設が推奨"
         },
         {
           "id": "bigpalette-convention-full",
@@ -4263,7 +4413,10 @@ export const venueData = {
           "capacityTheater": 900,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.big-palette.jp/promotor/room/convention-hall.html",
+          "observedAt": "2026-08-06",
+          "note": "タイルカーペット平土間。A575㎡とB335㎡へ分割可。スクール500人、円卓300人。搬出入口2か所、250・200インチスクリーン、吊りバトン、電源取出盤あり"
         },
         {
           "id": "bigpalette-exhibition-a",
@@ -4277,7 +4430,10 @@ export const venueData = {
           "capacityTheater": 1400,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://big-palette.jp/promotor/room/exhibition-hall.html",
+          "observedAt": "2026-07-30",
+          "note": "スクール860人、展示70小間。全面ホールを可動間仕切りで分割する1区画。天井は全面仕様の15〜20m、キャットウォーク下13.5m"
         },
         {
           "id": "bigpalette-exhibition-b",
@@ -4291,7 +4447,10 @@ export const venueData = {
           "capacityTheater": 1150,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://big-palette.jp/promotor/room/exhibition-hall.html",
+          "observedAt": "2026-07-30",
+          "note": "スクール720人、展示50小間。全面ホールを可動間仕切りで分割する1区画。天井は全面仕様の15〜20m、キャットウォーク下13.5m"
         },
         {
           "id": "bigpalette-exhibition-c",
@@ -4305,7 +4464,10 @@ export const venueData = {
           "capacityTheater": 2100,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://big-palette.jp/promotor/room/exhibition-hall.html",
+          "observedAt": "2026-07-30",
+          "note": "スクール1150人、展示100小間。全面ホールを可動間仕切りで分割する1区画。天井は全面仕様の15〜20m、キャットウォーク下13.5m"
         }
       ],
       "bestSpace": {
@@ -4468,7 +4630,10 @@ export const venueData = {
           "capacityTheater": 2736,
           "capacityFixed": 1036,
           "stageType": "convertible",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.tcf.or.jp/capio/facility/arena/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式HTMLで34m×40m・1,360㎡、スポーツ以外の定員2,736席、2階固定1,036席、床面仮設1,700席、収納式可動ステージ20m×6m、半面利用可を確認。天井高、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -4695,7 +4860,10 @@ export const venueData = {
           "capacityTheater": 10000,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.g-messe-gunma.jp/visitor-facilities-exhibitionhall.html",
+          "observedAt": "2026-08-06",
+          "note": "無柱。3分割時は各約3330㎡・シアター約2500人。大型車両が直接乗入可能。床荷重5t/㎡を5000kg/㎡へ換算"
         },
         {
           "id": "gmesse-main",
@@ -4709,7 +4877,10 @@ export const venueData = {
           "capacityTheater": 1000,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.g-messe-gunma.jp/visitor-facilities-mainhall.html",
+          "observedAt": "2026-08-06",
+          "note": "3分割時は各443㎡。平土間、吊物可、舞台照明・映像音響・LAN・大型貨物用エレベーターあり"
         }
       ],
       "bestSpace": {
@@ -4920,7 +5091,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.m-messe.co.jp/organizers/guide/exhibitionhall/guide_exibition9-11",
+          "observedAt": "2026-07-30",
+          "note": "展示ホール10・11は各4500㎡。天井高16〜34mは9〜11全体の公表レンジで、検索用数値には最低値16mを収録。床荷重3t/㎡を3000kg/㎡へ換算。床下ピット、放送設備、Wi-Fi対応可"
         },
         {
           "id": "makuhari-event-hall",
@@ -4934,7 +5108,10 @@ export const venueData = {
           "capacityTheater": 9000,
           "capacityFixed": 3948,
           "stageType": "convertible",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.m-messe.co.jp/organizers/guide/eventhall/guide_eventhall?newwindow=true",
+          "observedAt": "2026-08-06",
+          "note": "最大約9000人。固定3948席、可動912席、仮設約3000席。音響・照明、100箇所の吊フック、リハーサルルームあり"
         },
         {
           "id": "makuhari-convention-hall",
@@ -4948,7 +5125,10 @@ export const venueData = {
           "capacityTheater": 1664,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.m-messe.co.jp/organizers/guide/conferencehall/guide_conference",
+          "observedAt": "2026-07-30",
+          "note": "天井高7.5〜9.0mの最低値を検索用数値に収録。A/B各670㎡へ分割可。スクール1026人、試験684人、立食1000人。国際会議場全館で無料Wi-Fi"
         }
       ],
       "bestSpace": {
@@ -5079,7 +5259,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.bigsight.jp/organizer/facilities/south.html",
+          "observedAt": "2026-08-06",
+          "note": "約72m×72m。南2ホールとの間仕切り開放で10000㎡利用可。搬出入口3、主催者事務室1、商談室4。床耐荷重5t/㎡を5000kg/㎡へ換算"
         }
       ],
       "bestSpace": {
@@ -5226,7 +5409,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://lp.pacifico.co.jp/hubfs/Annual_Report_2021_eng.pdf",
+          "observedAt": "2026-07-30",
+          "note": "展示ホール全体は20000㎡の無柱空間で4分割可。天井高13〜19mのため検索用数値に最低値13mを収録。床耐荷重5t/㎡を5000kg/㎡へ換算"
         },
         {
           "id": "pacifico-north-g1-g8",
@@ -5240,7 +5426,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://lp.pacifico.co.jp/hubfs/north/guide/North.pdf",
+          "observedAt": "2026-07-30",
+          "note": "無柱・床面カーペット仕様。G1〜G8の8分割に対応。公式レイアウト例は全区画丸卓2340席、G1〜G4シアター3024席、G5＋G6シアター1440席。全区画のシアター収容は公開資料上で未確認"
         },
         {
           "id": "pacifico-north-g1-g4",
@@ -5254,7 +5443,10 @@ export const venueData = {
           "capacityTheater": 3024,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://lp.pacifico.co.jp/hubfs/north/guide/North.pdf",
+          "observedAt": "2026-07-30",
+          "note": "G1・G2各681㎡、G3・G4各739㎡の合計。公式レイアウト図にシアター3024席。区画ごとの分割利用も可能"
         }
       ],
       "bestSpace": {
@@ -5401,7 +5593,10 @@ export const venueData = {
           "capacityTheater": 3000,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.technohall.or.jp/facility.html",
+          "observedAt": "2026-07-30",
+          "note": "91.3m×38.8m、膜天井。シアター約2700〜3000人、3ゾーン完全分割と1/2・1/4・3/4利用に対応。床荷重5t/㎡、搬入口5か所、トラック搬入可、5Gアンテナ設置"
         },
         {
           "id": "techno-west-quarter-c",
@@ -5415,7 +5610,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.technohall.or.jp/pdf/sonota/nisi-ryokin202310.pdf",
+          "observedAt": "2026-08-06",
+          "note": "現行料金表で最小面積の1/4区画C。1/4区画Bは940㎡。膜天井・床暖房のため床面保護条件は利用手引で要確認"
         }
       ],
       "bestSpace": {
@@ -5610,7 +5808,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://ishikawa-odekake.jp/westpark/facilities/santen/",
+          "observedAt": "2026-07-30",
+          "note": "北面2362㎡・南面3150㎡・共用部1163㎡。天井高は8〜19mのため数値欄は保守的に最小値8m。床荷重1500kg/㎡。搬入口9か所、うちW5.96m×H6.18mが4か所。競技・投擲、観客配置、床養生、遮音、催事回線は要確認"
         },
         {
           "id": "ishikawa-hall3",
@@ -5624,7 +5825,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://ishikawa-odekake.jp/westpark/facilities/santen/",
+          "observedAt": "2026-07-30",
+          "note": "東面4317㎡・西面1892㎡。天井高は東15.5m・西10mのため数値欄は保守的に10m。床荷重は位置により1500〜5500kg/㎡のため数値欄は最小値。搬入口5か所。競技・投擲、観客配置、床養生、遮音、催事回線は要確認"
         },
         {
           "id": "ishikawa-hall1",
@@ -5638,7 +5842,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://ishikawa-odekake.jp/westpark/facilities/santen/",
+          "observedAt": "2026-07-30",
+          "note": "展示面積3193㎡、天井高10m、床荷重1500kg/㎡。放送・音響設備を有料貸出。競技・投擲、観客配置、床養生、搬入車両条件、催事回線は要確認"
         }
       ],
       "bestSpace": {
@@ -5801,7 +6008,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.yiso.or.jp/messe/facilities/",
+          "observedAt": "2026-07-30",
+          "note": "全面・2/3・1/3の3分割利用。主催者控室3室、大会議室150席、交流サロン102席を同一施設内に備える。天井高・床荷重・シアター収容は公式ページから未観測"
         },
         {
           "id": "aimesse-third",
@@ -5815,7 +6025,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.yiso.or.jp/messe/facilities/",
+          "observedAt": "2026-07-30",
+          "note": "最小分割区画。照明はLED昼白色5000K、Ra70、器具光束25000lm。区画別搬入口・床条件・収容は要確認"
         }
       ],
       "bestSpace": {
@@ -6046,7 +6259,10 @@ export const venueData = {
           "capacityTheater": 7000,
           "capacityFixed": 3596,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.matsumoto.nagano.jp/soshiki/239/5722.html",
+          "observedAt": "2026-07-30",
+          "note": "39m×65m。固定3596席、ロールバック可動1536席、移動席を含め利用形態により3600〜7000席。3分割可。天井高、床荷重、催事回線は公式ページ上で未観測"
         },
         {
           "id": "airwater-sub",
@@ -6060,7 +6276,10 @@ export const venueData = {
           "capacityTheater": 192,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.matsumoto.nagano.jp/soshiki/239/5722.html",
+          "observedAt": "2026-07-30",
+          "note": "30m×37m。ロールバック可動席192席。2分割可。バドミントン4面等に対応。天井高、床荷重、催事回線は公式ページ上で未観測"
         },
         {
           "id": "kissei-large",
@@ -6074,7 +6293,10 @@ export const venueData = {
           "capacityTheater": 2000,
           "capacityFixed": 2000,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.matsubun.jp/outline/",
+          "observedAt": "2026-07-30",
+          "note": "固定2000席。プロセニアム間口18m・高さ10m、楽屋9室、4か国語同時通訳設備。無料Wi-Fi・有線LANと別事業者の有料回線があるが、配信帯域は要確認"
         },
         {
           "id": "kissei-medium",
@@ -6088,7 +6310,10 @@ export const venueData = {
           "capacityTheater": 1000,
           "capacityFixed": null,
           "stageType": "convertible",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.matsubun.jp/outline/",
+          "observedAt": "2026-07-30",
+          "note": "電動可動椅子308席を含む移動席最大746席。椅子収納時939㎡、昇降舞台252㎡。全椅子収納のオールスタンディングは公式案内で定員1000人。可動椅子上の一斉起立・跳躍は禁止"
         }
       ],
       "bestSpace": {
@@ -6251,7 +6476,10 @@ export const venueData = {
           "capacityTheater": 1897,
           "capacityFixed": null,
           "stageType": "movable_floor",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.g-ncc.jp/facilities/main-hall-2/",
+          "observedAt": "2026-08-02",
+          "note": "最大1897席。舞台は705㎡、間口20m・高さ8.5〜9m・奥行14.5m、プロセニアム可動壁は間口18〜20m。面積は舞台面積のみ公開のためspace全体面積欄は未入力。舞台のみの練習利用料金が公開されるが、投擲・床養生・催事回線は要確認"
         },
         {
           "id": "gmc-deai-dome",
@@ -6265,7 +6493,10 @@ export const venueData = {
           "capacityTheater": 4065,
           "capacityFixed": 2805,
           "stageType": "shared",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://gifu-sports.org/gmc/shisetsudata/deaidoom/",
+          "observedAt": "2026-08-02",
+          "note": "アリーナ40m×55m。観客席4065席の内訳は2階2805席・可動1260席。会議室2室、更衣室（シャワー付）、ステージ照明・音響・調光・吊物・舞台設備（共有）、大型ビジョンを公式掲載。天井高・床荷重・催事回線は未観測"
         },
         {
           "id": "gmc-fureai-dome",
@@ -6279,7 +6510,10 @@ export const venueData = {
           "capacityTheater": 592,
           "capacityFixed": null,
           "stageType": "shared",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://gifu-sports.org/gmc/shisetsudata/fureaidome/",
+          "observedAt": "2026-08-06",
+          "note": "アリーナ37.5m×45m、観客席592席。放送設備、冷暖房・換気設備、舞台設備（共有）、吊物設備、更衣室（シャワー付）を公式掲載。床荷重・催事回線は未観測"
         }
       ],
       "bestSpace": {
@@ -6410,7 +6644,10 @@ export const venueData = {
           "capacityTheater": 5848,
           "capacityFixed": null,
           "stageType": "convertible",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://portmesse.com/facility/tenjikan01",
+          "observedAt": "2026-07-30",
+          "note": "約2万㎡の無柱空間。天井高はトラス下20m・垂壁部分13mのため検索用数値に最低値13mを収録。4分割可。5848席は可動階段席。床耐荷重5t/㎡を5000kg/㎡へ換算"
         },
         {
           "id": "portmesse-first-b",
@@ -6424,7 +6661,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://portmesse.com/facility/tenjikan01",
+          "observedAt": "2026-07-30",
+          "note": "35m×96m。全面4分割時の最小区画。天井高はトラス下20m・垂壁部分13mのため検索用数値に最低値13mを収録。床耐荷重5t/㎡を5000kg/㎡へ換算"
         }
       ],
       "bestSpace": {
@@ -6555,7 +6795,10 @@ export const venueData = {
           "capacityTheater": 4000,
           "capacityFixed": 3054,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://shisetsu.mizuno.jp/m-7138/gallery",
+          "observedAt": "2026-08-06",
+          "note": "69m×46m、2分割・3分割可。固定2476席・可動546席・車椅子32席で合計3054席。大型映像装置275インチを公式掲載し、車輌搬入可能と記載。床荷重、舞台、投擲、床養生、催事回線は未観測"
         },
         {
           "id": "saori-sub",
@@ -6569,7 +6812,10 @@ export const venueData = {
           "capacityTheater": 490,
           "capacityFixed": 478,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://shisetsu.mizuno.jp/m-7138/gallery",
+          "observedAt": "2026-08-06",
+          "note": "46m×37m、2分割可。固定468席・車椅子10席で合計478席。床荷重、舞台、投擲、床養生、催事回線は未観測"
         },
         {
           "id": "messe-exhibition",
@@ -6583,7 +6829,10 @@ export const venueData = {
           "capacityTheater": 4000,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://shisetsu.mizuno.jp/m-7138/gallery",
+          "observedAt": "2026-08-02",
+          "note": "39.7m×81.4m、3分割可。天井高は13〜16mのため数値欄は最小値13m。各展示場の収容人数1333名、全面4000名を公式掲載。車輌搬入可能。床荷重、スポーツ・投擲、床養生、催事回線は未観測"
         }
       ],
       "bestSpace": {
@@ -6842,7 +7091,10 @@ export const venueData = {
           "capacityTheater": 5018,
           "capacityFixed": 2502,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://shiga-arena.jp/gallery",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式ページの約2,900㎡・最大約5,018席を記録。最大値は2階2,502席、移動1,616席、パイプ椅子900席の合計。移動席は大規模イベント時のみで主催者側が設置収納できる場合に限る。天井高、床荷重、搬入は未観測"
         },
         {
           "id": "shiga-sub",
@@ -6856,7 +7108,10 @@ export const venueData = {
           "capacityTheater": 200,
           "capacityFixed": 200,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://shiga-arena.jp/gallery",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式ページで約1,300㎡・観客席約200席を確認。固定席と車いす席を含むが内訳は未観測。利用種目はメインアリーナに準ずる。天井高、床荷重、搬入は未観測"
         }
       ],
       "bestSpace": {
@@ -7051,7 +7306,10 @@ export const venueData = {
           "capacityTheater": 4000,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.miyakomesse.jp/planner/information/exhibition-hall3/",
+          "observedAt": "2026-08-06",
+          "note": "80m×50m、半面2000㎡に2分割可。シアター4000人、スクール1800人。舞台音響・照明・映像、昇降・固定バトン、電気・ガス・給排水、インターネット回線あり。車両の場内乗入れ不可で4500kg搬入EVを使用"
         },
         {
           "id": "miyakomesse-hall1",
@@ -7065,7 +7323,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.miyakomesse.jp/planner/information/exhibition-hall1/",
+          "observedAt": "2026-07-30",
+          "note": "地下1階、半面740㎡に分割可。天井高、収容、床荷重は公式ページ上で未観測。車両の場内乗入れ不可で4500kgまたは2000kg搬入EVを使用"
         }
       ],
       "bestSpace": {
@@ -7228,7 +7489,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.intex-osaka.com/jp/organizer/guide/download/file/hall_5ab_detail.pdf",
+          "observedAt": "2026-08-06",
+          "note": "インテックス大阪で最小の展示区画。柱あり（12m×19m間隔）、搬出入口1か所、アンカー打設不可。光回線・事務所LAN口、空調、ワイヤレスマイク2ch等の設備記載あり"
         },
         {
           "id": "intex-hall-5a",
@@ -7242,7 +7506,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.intex-osaka.com/jp/organizer/guide/download/file/hall_5ab_detail.pdf",
+          "observedAt": "2026-07-30",
+          "note": "無柱空間。天井高6〜12mのため検索用数値に最低値6mを収録。搬出入口2か所、アンカー打設不可。5A・5Bの一体利用可"
         }
       ],
       "bestSpace": {
@@ -7263,7 +7530,7 @@ export const venueData = {
       "cautions": "JJF・WYYC実績を持つ有力基準会場。現在料金と同時確保条件を再確認",
       "sourceUrl": "https://www.city.himeji.lg.jp/kanko/0000006638.html",
       "observedAt": "2026-08-06",
-      "detailCount": 3,
+      "detailCount": 23,
       "priceCount": 5,
       "operationCount": 1,
       "historicalCompletedCount": 1,
@@ -7279,8 +7546,8 @@ export const venueData = {
       "maxCapacity": 4032,
       "maxArea": 4000,
       "maxCeiling": 10,
-      "ceilingReferenceCount": 2,
-      "filterableCeilingCount": 2,
+      "ceilingReferenceCount": 20,
+      "filterableCeilingCount": 17,
       "maxFloorLoad": 5000,
       "hasFixedStage": true,
       "practiceUse": "yes",
@@ -7395,7 +7662,10 @@ export const venueData = {
           "capacityTheater": 4032,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.himeji-ccc.jp/organizer/exhibition.html",
+          "observedAt": "2026-08-06",
+          "note": "無柱・コンクリート平土間。縦長レイアウトのシアター4032席、横長3456席。床ピット、横看板用吊バトン、500インチ電動スクリーン、10t車進入可"
         },
         {
           "id": "acrie-exhibition-b",
@@ -7409,7 +7679,10 @@ export const venueData = {
           "capacityTheater": 720,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.himeji-ccc.jp/organizer/exhibition.html",
+          "observedAt": "2026-08-06",
+          "note": "3分割時の最小区画。搬入口は開口幅約6m・高さ約5m、主催者控室約20㎡。床はコンクリート平土間"
         },
         {
           "id": "acrie-middle-hall",
@@ -7417,13 +7690,356 @@ export const venueData = {
           "type": "stage_hall",
           "area": null,
           "ceiling": null,
-          "ceilingReference": null,
-          "ceilingType": "unknown",
+          "ceilingReference": 12,
+          "ceilingType": "stage_opening",
           "overheadUseStatus": "unknown",
           "capacityTheater": 693,
           "capacityFixed": 693,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.himeji-ccc.jp/organizer/middle_hall.html",
+          "observedAt": "2026-08-06",
+          "note": "固定693席。舞台開口は幅約16m・高さ約12m、反射板使用時は高さ約11.5m。これは客席を含む最低天井高ではないため検索対象外。舞台床荷重約800kg/㎡、10t車最大2台"
+        },
+        {
+          "id": "acrie-large-hall",
+          "name": "大ホール",
+          "type": "stage_hall",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": 14,
+          "ceilingType": "stage_opening",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": 2010,
+          "capacityFixed": 2010,
+          "stageType": "fixed",
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.himeji-ccc.jp/organizer/large_hall.html",
+          "observedAt": "2026-08-06",
+          "note": "2,010席。舞台約360㎡、舞台開口高約14m、反射板使用時約13m。これは客席を含む最低天井高ではないため検索対象外。舞台床荷重約800kg/㎡、10t車最大2台"
+        },
+        {
+          "id": "acrie-small-hall",
+          "name": "小ホール",
+          "type": "stage_hall",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": 9,
+          "ceilingType": "stage_clearance",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": 164,
+          "capacityFixed": 164,
+          "stageType": "fixed",
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.himeji-ccc.jp/organizer/small_hall.html",
+          "observedAt": "2026-08-06",
+          "note": "164席。オープン形式の舞台は約50㎡、幅約9.5m・高さ約9m・奥行約5.5m。舞台寸法の高さであり最低天井高ではないため検索対象外。舞台床荷重約800kg/㎡"
+        },
+        {
+          "id": "acrie-exhibition-a",
+          "name": "展示場A",
+          "type": "exhibition",
+          "area": 1850,
+          "ceiling": 10,
+          "ceilingReference": 10,
+          "ceilingType": "published_clear",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": 1440,
+          "capacityFixed": null,
+          "stageType": "temporary",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.himeji-ccc.jp/organizer/exhibition.html",
+          "observedAt": "2026-08-06",
+          "note": "約1,850㎡、シアター1,440人、天井高10m。コンクリート平土間、床荷重5t/㎡、10t車進入可"
+        },
+        {
+          "id": "acrie-exhibition-c",
+          "name": "展示場C",
+          "type": "exhibition",
+          "area": 1230,
+          "ceiling": 10,
+          "ceilingReference": 10,
+          "ceilingType": "published_clear",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": 960,
+          "capacityFixed": null,
+          "stageType": "temporary",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.himeji-ccc.jp/organizer/exhibition.html",
+          "observedAt": "2026-08-06",
+          "note": "約1,230㎡、シアター960人、天井高10m。コンクリート平土間、床荷重5t/㎡、10t車進入可"
+        },
+        {
+          "id": "acrie-main-studio",
+          "name": "メインスタジオ（リハーサル室）",
+          "type": "practice_room",
+          "area": 250,
+          "ceiling": 9,
+          "ceilingReference": 9,
+          "ceilingType": "published_clear",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.himeji-ccc.jp/organizer/studio.html",
+          "observedAt": "2026-08-06",
+          "note": "約250㎡、天井高約9m、フローリング、防振遮音構造、看板用バトン1本"
+        },
+        {
+          "id": "acrie-studio-1",
+          "name": "スタジオ1（大）",
+          "type": "practice_room",
+          "area": 140,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.himeji-ccc.jp/organizer/studio.html",
+          "observedAt": "2026-08-06",
+          "note": "約140㎡。防振遮音構造、看板用バトン1本。天井高は公式ページで未観測"
+        },
+        {
+          "id": "acrie-studio-5-6",
+          "name": "スタジオ5・6（中）",
+          "type": "practice_room",
+          "area": 70,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.himeji-ccc.jp/organizer/studio.html",
+          "observedAt": "2026-08-06",
+          "note": "各約70㎡。2室のうち1室は防振遮音構造。天井高は公式ページで未観測"
+        },
+        {
+          "id": "acrie-studio-2-4",
+          "name": "スタジオ2・3・4（小）",
+          "type": "practice_room",
+          "area": 17,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.himeji-ccc.jp/organizer/studio.html",
+          "observedAt": "2026-08-06",
+          "note": "各約17㎡。3室のうち1室は防振遮音構造。天井高は公式ページで未観測"
+        },
+        {
+          "id": "acrie-meeting-401",
+          "name": "中会議室401",
+          "type": "meeting_room",
+          "area": 80,
+          "ceiling": 3.5,
+          "ceilingReference": 3.5,
+          "ceilingType": "published_clear",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": 60,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.himeji-ccc.jp/organizer/conference.html",
+          "observedAt": "2026-08-06",
+          "note": "シアター60人・天井高3.5m"
+        },
+        {
+          "id": "acrie-meeting-402",
+          "name": "中会議室402",
+          "type": "meeting_room",
+          "area": 80,
+          "ceiling": 3.5,
+          "ceilingReference": 3.5,
+          "ceilingType": "published_clear",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": 60,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.himeji-ccc.jp/organizer/conference.html",
+          "observedAt": "2026-08-06",
+          "note": "シアター60人・天井高3.5m"
+        },
+        {
+          "id": "acrie-meeting-403",
+          "name": "中会議室403",
+          "type": "meeting_room",
+          "area": 80,
+          "ceiling": 3.5,
+          "ceilingReference": 3.5,
+          "ceilingType": "published_clear",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": 60,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.himeji-ccc.jp/organizer/conference.html",
+          "observedAt": "2026-08-06",
+          "note": "シアター60人・天井高3.5m"
+        },
+        {
+          "id": "acrie-meeting-401-403",
+          "name": "中会議室401+402+403",
+          "type": "meeting_room",
+          "area": 240,
+          "ceiling": 3.5,
+          "ceilingReference": 3.5,
+          "ceilingType": "published_clear",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": 180,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.himeji-ccc.jp/organizer/conference.html",
+          "observedAt": "2026-08-06",
+          "note": "一体利用240㎡、シアター180人、天井高3.5m"
+        },
+        {
+          "id": "acrie-meeting-404",
+          "name": "中会議室404",
+          "type": "meeting_room",
+          "area": 80,
+          "ceiling": 3.1,
+          "ceilingReference": 3.1,
+          "ceilingType": "published_clear",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": 60,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.himeji-ccc.jp/organizer/conference.html",
+          "observedAt": "2026-08-06",
+          "note": "シアター60人・天井高3.1m"
+        },
+        {
+          "id": "acrie-special-meeting",
+          "name": "特別会議室",
+          "type": "meeting_room",
+          "area": 80,
+          "ceiling": 3.1,
+          "ceilingReference": 3.1,
+          "ceilingType": "published_clear",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.himeji-ccc.jp/organizer/conference.html",
+          "observedAt": "2026-08-06",
+          "note": "口の字20人・天井高3.1m。シアター定員は未掲載"
+        },
+        {
+          "id": "acrie-meeting-405",
+          "name": "小会議室405",
+          "type": "meeting_room",
+          "area": 35,
+          "ceiling": 2.65,
+          "ceilingReference": 2.65,
+          "ceilingType": "published_clear",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": 28,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.himeji-ccc.jp/organizer/conference.html",
+          "observedAt": "2026-08-06",
+          "note": "シアター28人・天井高2.65m"
+        },
+        {
+          "id": "acrie-meeting-406",
+          "name": "小会議室406",
+          "type": "meeting_room",
+          "area": 35,
+          "ceiling": 2.65,
+          "ceilingReference": 2.65,
+          "ceilingType": "published_clear",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": 28,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.himeji-ccc.jp/organizer/conference.html",
+          "observedAt": "2026-08-06",
+          "note": "シアター28人・天井高2.65m"
+        },
+        {
+          "id": "acrie-meeting-407",
+          "name": "多目的ホール（大会議室407）",
+          "type": "meeting_room",
+          "area": 230,
+          "ceiling": 4.8,
+          "ceilingReference": 4.8,
+          "ceilingType": "published_clear",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": 208,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.himeji-ccc.jp/organizer/conference.html",
+          "observedAt": "2026-08-06",
+          "note": "シアター208人・天井高4.8m"
+        },
+        {
+          "id": "acrie-meeting-408",
+          "name": "多目的ホール（大会議室408）",
+          "type": "meeting_room",
+          "area": 230,
+          "ceiling": 4.8,
+          "ceilingReference": 4.8,
+          "ceilingType": "published_clear",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": 208,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.himeji-ccc.jp/organizer/conference.html",
+          "observedAt": "2026-08-06",
+          "note": "シアター208人・天井高4.8m"
+        },
+        {
+          "id": "acrie-meeting-409",
+          "name": "多目的ホール（大会議室409）",
+          "type": "meeting_room",
+          "area": 230,
+          "ceiling": 4.8,
+          "ceilingReference": 4.8,
+          "ceilingType": "published_clear",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": 208,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.himeji-ccc.jp/organizer/conference.html",
+          "observedAt": "2026-08-06",
+          "note": "シアター208人・天井高4.8m"
+        },
+        {
+          "id": "acrie-meeting-407-409",
+          "name": "多目的ホール（大会議室407+408+409）",
+          "type": "meeting_room",
+          "area": 690,
+          "ceiling": 4.8,
+          "ceilingReference": 4.8,
+          "ceilingType": "published_clear",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": 711,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.himeji-ccc.jp/organizer/conference.html",
+          "observedAt": "2026-08-06",
+          "note": "一体利用690㎡、縦長シアター711人、天井高4.8m"
         }
       ],
       "bestSpace": {
@@ -7650,7 +8266,10 @@ export const venueData = {
           "capacityTheater": 8500,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.wakayamasposhin.or.jp/big-whale/form/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式ページで3,280㎡・最大8,500人・床面荷重5t/㎡を確認。半面スポーツ利用に対応。土足催事は全面養生、重量物は計画書提出と管理者協議が必要。固定席構成、天井高、固定舞台、催事専有回線は未観測"
         }
       ],
       "bestSpace": {
@@ -7845,7 +8464,10 @@ export const venueData = {
           "capacityTheater": 2004,
           "capacityFixed": null,
           "stageType": "convertible",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.bigship.or.jp/bigship/organizer/6/1/",
+          "observedAt": "2026-07-30",
+          "note": "可動席1824席、固定・バルコニー等を含む最大2004席。客席収納時は平土間1879㎡で展示・スポーツ競技会に対応し、1/2利用可。舞台最大幅34m・奥行18.5m、プロセニアム間口22m・高さ10m。通信・給排水ピットあり"
         },
         {
           "id": "bigship-international",
@@ -7859,7 +8481,10 @@ export const venueData = {
           "capacityTheater": 408,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.bigship.or.jp/bigship/organizer/6/3/",
+          "observedAt": "2026-07-30",
+          "note": "絨毯の平土間で客席フリーレイアウト。貸出時は机・椅子を倉庫収納。学会・シンポジウム・展示会・レセプションに対応。天井高、床荷重、投擲条件は公式ページ上で未観測"
         }
       ],
       "bestSpace": {
@@ -8025,7 +8650,10 @@ export const venueData = {
           "capacityTheater": 5000,
           "capacityFixed": 1514,
           "stageType": "convertible",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.asty-tokushima.jp/organizer/facility/hall/",
+          "observedAt": "2026-08-06",
+          "note": "水平可動席1216・移動席2270。床耐荷重は通常部5t/㎡・昇降床部0.5t/㎡と混在するため数値欄は未入力。11tトラック乗入可"
         }
       ],
       "bestSpace": {
@@ -8188,7 +8816,10 @@ export const venueData = {
           "capacityTheater": 4000,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.sunmesse.com/organizer/price.php",
+          "observedAt": "2026-07-30",
+          "note": "A・B・Cの3面構成。2/3または1/3利用可"
         },
         {
           "id": "sunmesse-small",
@@ -8202,7 +8833,10 @@ export const venueData = {
           "capacityTheater": 800,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.sunmesse.com/organizer/price.php",
+          "observedAt": "2026-07-30",
+          "note": "主催者事務室は展示場利用時無料。天井高・床荷重は別資料で要確認"
         }
       ],
       "bestSpace": {
@@ -8422,7 +9056,10 @@ export const venueData = {
           "capacityTheater": 8400,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://saga-sunrisepark.com/wp-content/uploads/2023/05/SAGA_ARENA_PF_web_20230501.pdf",
+          "observedAt": "2026-07-30",
+          "note": "床面積約3036㎡、天井高20m以上。コンクリート床にポータブルフロアを設置し、バレー・バスケット最大2面。11tトラック直接乗入れ可能な搬入口2か所、天井耐荷重100t。床耐荷重、投擲条件、最小貸出単位は要確認"
         },
         {
           "id": "saga-sub",
@@ -8436,7 +9073,10 @@ export const venueData = {
           "capacityTheater": 450,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://saga-sunrisepark.com/wp-content/uploads/2023/05/SAGA_ARENA_PF_web_20230501.pdf",
+          "observedAt": "2026-07-30",
+          "note": "床面積約1800㎡、天井高15m以上、木床・床ハードニング仕様。バレー・バスケット最大2面。メイン大会の練習、物販、第二会場、単独の中規模競技会に対応。床耐荷重・投擲・回線は要確認"
         }
       ],
       "bestSpace": {
@@ -8502,7 +9142,10 @@ export const venueData = {
           "capacityTheater": 3300,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.seagaia-mice.jp/facilities/convention-center/convention-4f/summit-hall-all/",
+          "observedAt": "2026-08-06",
+          "note": "61.40m×42.38m。シアター3300人、スクール1590人、立食5000人、ディナー1320人。1/5・1/3・2/3・全面に分割可。飲食可、6000kgカーリフトで展示車等を各階へ搬入可能。床荷重・投擲条件は未観測"
         },
         {
           "id": "seagaia-summit-fifth",
@@ -8516,7 +9159,10 @@ export const venueData = {
           "capacityTheater": 400,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.seagaia-mice.jp/facilities/convention-center/convention-4f/tenju-tenran/",
+          "observedAt": "2026-08-06",
+          "note": "サミットホールの最小公開分割例。16.90m×21.19m、シアター400人、スクール200人、立食150人、ディナー160人。会議・分科会・ワークショップ向け。床荷重・投擲条件は未観測"
         }
       ],
       "bestSpace": {
@@ -8759,7 +9405,10 @@ export const venueData = {
           "capacityTheater": 5700,
           "capacityFixed": null,
           "stageType": "convertible",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://nishihara-shokai-arena.jp/facilities/mainarena",
+          "observedAt": "2026-07-30",
+          "note": "競技面42m×65m。移動観覧席6パターンで最大5700人。音響・照明・空調・舞台機構あり。レイアウト例は約2800〜5300席。床荷重、最低天井高、投擲、吊物、床養生、催事回線は要確認"
         },
         {
           "id": "kagoshima-sub",
@@ -8773,7 +9422,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://nishihara-shokai-arena.jp/facilities/subarena",
+          "observedAt": "2026-07-30",
+          "note": "競技面36m×28m、天井高15m。バスケット・バレー・フットサル2面、バドミントン6面。主な種目以外は要問い合わせ。床荷重、観客収容、投擲、吊物、床養生、催事回線は要確認"
         }
       ],
       "bestSpace": {
@@ -8888,7 +9540,10 @@ export const venueData = {
           "capacityTheater": 2500,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.sora-scc.jp/organizer/venue/",
+          "observedAt": "2026-07-30",
+          "note": "間口約63.5m・奥行約41.1m・天井最高部12m。昇降式ステージ、2・3分割、3か国語同時通訳ブースを装備。最大収容は機器設置により減少"
         },
         {
           "id": "sapporo-main-third-b",
@@ -8902,7 +9557,10 @@ export const venueData = {
           "capacityTheater": 800,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.sora-scc.jp/organizer/venue/",
+          "observedAt": "2026-08-06",
+          "note": "3分割の中央区画。面積866㎡、最大800人。区画利用時の有効天井・舞台位置・投擲範囲は要確認"
         }
       ],
       "bestSpace": {
@@ -9049,7 +9707,10 @@ export const venueData = {
           "capacityTheater": 15000,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.marinemesse.or.jp/download/document/document_dl.php?document_no=1&id=38",
+          "observedAt": "2026-07-30",
+          "note": "102m×79m、天井高20〜30m、吊下げ総重量500t。床荷重5t/㎡だが昇降席0.55t/㎡・昇降舞台1t/㎡で車両乗入不可。最大15000人、来場者用約950台・関係者用約80台を利用手引きに記載"
         },
         {
           "id": "marine-a-subarena",
@@ -9063,7 +9724,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.marinemesse.or.jp/download/document/document_dl.php?document_no=1&id=38",
+          "observedAt": "2026-07-30",
+          "note": "3階。公式利用手引きがスポーツ競技時のウォームアップ会場として利用可能と明記。天井高・収容・配信回線は未観測"
         }
       ],
       "bestSpace": {
@@ -9216,7 +9880,10 @@ export const venueData = {
           "capacityTheater": 700,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.osakacommunity.jp/kita-center/guide/fee/",
+          "observedAt": "2026-07-30",
+          "note": "舞台付き。椅子席700人、机使用時約300人。面積・天井高・固定席数・配信回線は未観測"
         }
       ],
       "bestSpace": {
@@ -9336,7 +10003,10 @@ export const venueData = {
           "capacityTheater": 506,
           "capacityFixed": 264,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.hall-ecole.org/files/libs/641/202401111622502130.pdf",
+          "observedAt": "2026-07-30",
+          "note": "基本506席。前方242席は平置き可動、後方264席はひな壇固定だが収納可能。全面フラット、半分仕切り、楽屋2室。天井高は未観測"
         }
       ],
       "bestSpace": {
@@ -9537,7 +10207,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.iwakura.aichi.jp/0000000028.html",
+          "observedAt": "2026-07-30",
+          "note": "放送設備、音響反射板、照明、演台等の付帯設備と冷暖房料金を公式掲載。面積、定員、天井高、固定席、配信回線は未観測"
         }
       ],
       "bestSpace": {
@@ -9763,7 +10436,10 @@ export const venueData = {
           "capacityTheater": 200,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.kcf.or.jp/sunamachi/shisetsu/ichiran/detail/?id=123",
+          "observedAt": "2026-07-30",
+          "note": "フローリング。第2研修室と連結可能。舞台・照明、グランドピアノ、音響卓セットは別料金。ダンス、ヨガ、大会、コンクール等に利用可。天井高は未観測"
         }
       ],
       "bestSpace": {
@@ -9950,7 +10626,10 @@ export const venueData = {
           "capacityTheater": 758,
           "capacityFixed": 758,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://nyc.niye.go.jp/lib/pdf/facilities/culture/hall_L.pdf",
+          "observedAt": "2026-07-30",
+          "note": "舞台間口約20m×奥行約10m。楽屋6室、楽屋事務室、音響室、投光室、映写室を備える。天井高は未観測"
         },
         {
           "id": "nyc-rehearsal",
@@ -9964,7 +10643,10 @@ export const venueData = {
           "capacityTheater": 100,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://nyc.niye.go.jp/wp-content/uploads/2026/07/nyc_price20260707.pdf",
+          "observedAt": "2026-07-30",
+          "note": "約300㎡。公式施設案内では大練習室として定員100人、移動式鏡、バレーバー、移動ステージ等を備える"
         },
         {
           "id": "nyc-gym-1",
@@ -9978,7 +10660,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://nyc.niye.go.jp/wp-content/uploads/2026/07/nyc_price20260707.pdf",
+          "observedAt": "2026-07-30",
+          "note": "約816㎡。第2体育室も約816㎡、第3体育室は約851㎡。天井高、床材、同時利用時の動線・音条件は未観測"
         }
       ],
       "bestSpace": {
@@ -10117,7 +10802,10 @@ export const venueData = {
           "capacityTheater": 370,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://gibun.jp/facility/",
+          "observedAt": "2026-07-30",
+          "note": "シアター370人、机・椅子297人。201㎡・200人のホール1と211㎡・170人のホール2へ分割可。講演会・展示会・ダンス形式に対応。全館Wi-Fiだが配信品質は未確認"
         }
       ],
       "bestSpace": {
@@ -10207,7 +10895,10 @@ export const venueData = {
           "capacityTheater": 308,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.bellesalle.co.jp/shisetsu/tokyo/bs_akihabara/detail/bs_akihabara_hall_2fb/",
+          "observedAt": "2026-08-06",
+          "note": "シアター308席、スクール3名掛け180席、島型120席。大型スクリーン、専有回線NURO、控室あり。過去大会がこの区画を利用したかは未確認"
         }
       ],
       "bestSpace": {
@@ -10335,7 +11026,10 @@ export const venueData = {
           "capacityTheater": 615,
           "capacityFixed": null,
           "stageType": "convertible",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.osakacommunity.jp/higashinari-center/floor/",
+          "observedAt": "2026-07-30",
+          "note": "移動観覧席を収納して平土間利用可能。大ホールの定員615名、面積520㎡。有効天井高、床荷重、投擲、配信回線は要確認"
         }
       ],
       "bestSpace": {
@@ -10463,7 +11157,10 @@ export const venueData = {
           "capacityTheater": 700,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.osakacommunity.jp/nishinari-center/floor/",
+          "observedAt": "2026-07-30",
+          "note": "面積は舞台を含む。椅子700台、舞台音響・照明・プロジェクター等あり。定員表記、有効天井高、床荷重、投擲、配信回線は要確認"
         }
       ],
       "bestSpace": {
@@ -10666,7 +11363,10 @@ export const venueData = {
           "capacityTheater": 1520,
           "capacityFixed": 768,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://suncherry.hatsukaichi-sports.net/facilities/",
+          "observedAt": "2026-07-30",
+          "note": "固定768席・可動752席の合計を最大観覧席数1520として収容欄に記録。舞台・配信・競技床と可動席の同時構成、天井高は要確認"
         },
         {
           "id": "suncherry-sub",
@@ -10680,7 +11380,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://suncherry.hatsukaichi-sports.net/facilities/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式ページで573.1㎡、バスケットボール・バレーボール各1面、バドミントン3面を確認。収容人数、天井高、床荷重、搬入、催事専有回線は未観測"
         }
       ],
       "bestSpace": {
@@ -10771,7 +11474,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://co.sunshinecity.co.jp/file/pdf/fountain/fountain_202607.pdf",
+          "observedAt": "2026-07-30",
+          "note": "4層吹抜け、628インチ大型ビジョン、ライブカメラ、音響・照明、有線回線、無料パイプ椅子120脚。床面積・安全上の最大観客数は公開規程から未観測"
         }
       ],
       "bestSpace": {
@@ -10825,7 +11531,10 @@ export const venueData = {
           "capacityTheater": 90,
           "capacityFixed": null,
           "stageType": "convertible",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.sapporo-community-plaza.jp/scarts_culturalfacility.html?num=782",
+          "observedAt": "2026-07-30",
+          "note": "札幌市文化施設案内の約100㎡・90席。天井高、現行レイアウト、配信回線、搬入口は要確認"
         }
       ],
       "bestSpace": {
@@ -10896,7 +11605,10 @@ export const venueData = {
           "capacityTheater": 80,
           "capacityFixed": null,
           "stageType": "convertible",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.gekito.jp/?pg=1723857507",
+          "observedAt": "2026-08-06",
+          "note": "13.3m×8.8m、80席・60席の構成例。照明・音響、Wi-Fi、有線LAN、北側大開口部あり。客席構成と高投げ・競技利用は要相談"
         }
       ],
       "bestSpace": {
@@ -10999,7 +11711,10 @@ export const venueData = {
           "capacityTheater": 60,
           "capacityFixed": null,
           "stageType": "convertible",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://stspot.jp/guide/",
+          "observedAt": "2026-08-06",
+          "note": "舞台・客席を自由にレイアウトできる平土間。操作室10㎡、楽屋10㎡、ロビーを別に備える"
         }
       ],
       "bestSpace": {
@@ -11053,7 +11768,10 @@ export const venueData = {
           "capacityTheater": 100,
           "capacityFixed": null,
           "stageType": "convertible",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://askyoto.or.jp/project/e9/",
+          "observedAt": "2026-07-30",
+          "note": "公式運営者ページで100席規模を確認。面積、天井高、舞台構成、回線は要確認"
         }
       ],
       "bestSpace": {
@@ -11107,7 +11825,10 @@ export const venueData = {
           "capacityTheater": 108,
           "capacityFixed": null,
           "stageType": "convertible",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.pomplazahall.jp/pom.html",
+          "observedAt": "2026-08-06",
+          "note": "間口9.1m・奥行14m、可動席108席または60席。スポーツ・コンテスト等は許可できない利用例として明記"
         }
       ],
       "bestSpace": {
@@ -11242,7 +11963,10 @@ export const venueData = {
           "capacityTheater": 80,
           "capacityFixed": null,
           "stageType": "convertible",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.m-base.okinawa/introduction/",
+          "observedAt": "2026-08-06",
+          "note": "8.1m×14.2m、通常74席・最大80席。演劇・ダンス・伝統芸能等に対応。競技・投擲、配信回線は要確認"
         }
       ],
       "bestSpace": {
@@ -11325,7 +12049,10 @@ export const venueData = {
           "capacityTheater": 150,
           "capacityFixed": null,
           "stageType": "convertible",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.ryutopia.or.jp/information/facility/studio-gallery/",
+          "observedAt": "2026-08-06",
+          "note": "間口16.8m×奥行12.2m。劇場主舞台に近い面積を持つ演劇・舞踊用スタジオ。最大150席は舞台・客席構成により変動"
         }
       ],
       "bestSpace": {
@@ -11424,7 +12151,10 @@ export const venueData = {
           "capacityTheater": 200,
           "capacityFixed": null,
           "stageType": "convertible",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.bunka-toyama.jp/orbis/facilityguide/index.html",
+          "observedAt": "2026-07-30",
+          "note": "舞台・客席総面積は約200㎡。9基の床昇降装置と直径4.2m回転舞台、最大200席の移動椅子、音響・照明・映像設備あり。天井高と催事用回線は要確認"
         }
       ],
       "bestSpace": {
@@ -11523,7 +12253,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "convertible",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://sainotsuno.org/wp/wp-content/themes/sainotsuno2025/pdf/zumen01.pdf",
+          "observedAt": "2026-08-06",
+          "note": "公式図面の断面寸法で室内高約3.48m、平面寸法で約10.4m×約10.0mを確認。面積は換算せず未入力。消防上の定員、競技・投擲、回線は要確認"
         }
       ],
       "bestSpace": {
@@ -11622,7 +12355,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "convertible",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.nanjare-nagoya.com/service/equipment/",
+          "observedAt": "2026-07-30",
+          "note": "平台・箱馬、パイプ椅子大60脚・小20脚、音響・照明、楽屋、上階稽古場あり。椅子数を定員へ読み替えず、面積・天井高・収容は未入力"
         }
       ],
       "bestSpace": {
@@ -11834,7 +12570,10 @@ export const venueData = {
           "capacityTheater": 108,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://forest.ashibue.jp/theater/10",
+          "observedAt": "2026-08-06",
+          "note": "舞台間口8.8m・奥行6.0m。客席108席のうち最前列・2列目は可動。補助席込み消防上最大132人だが、通常客席108席を検索値に採用"
         }
       ],
       "bestSpace": {
@@ -11933,7 +12672,10 @@ export const venueData = {
           "capacityTheater": 77,
           "capacityFixed": 66,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://art-village-toon.jp/facility/theater/",
+          "observedAt": "2026-07-30",
+          "note": "固定66席、車いす・補助席を含む77席。舞台77.05㎡。公式ページの合計面積163.97㎡と内訳105㎡＋77.05㎡が一致しないためarea_m2は未入力"
         }
       ],
       "bestSpace": {
@@ -12064,7 +12806,10 @@ export const venueData = {
           "capacityTheater": 10000,
           "capacityFixed": 4092,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.kitayell.jp/facilities/sports/main-arena/",
+          "observedAt": "2026-08-06",
+          "note": "84.3m×49.7m。移動席1872席、1階固定席2612席・貴賓席72席・身障者席20席、2階固定席1388席、仮設席4036席を公式掲載。舞台照明・吊物・音響・大型映像設備の公式掲載はあるが、恒設舞台、投擲、床養生、催事回線は未観測"
         },
         {
           "id": "kitayell-sub",
@@ -12078,7 +12823,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.kitayell.jp/facilities/sports/sub-arena/",
+          "observedAt": "2026-08-06",
+          "note": "45m×35m。バレーボール2面、バスケットボール2面、テニス2面、バドミントン8面、卓球10面を公式掲載。1/2面積利用の料金規定あり。収容人数、床荷重、舞台、投擲、床養生、催事回線は未観測"
         }
       ],
       "bestSpace": {
@@ -12289,7 +13037,10 @@ export const venueData = {
           "capacityTheater": 9000,
           "capacityFixed": 3045,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hachinohe.aomori.jp/soshikikarasagasu/naganeokunaiskatejo/bunka_sports/2/14957.html",
+          "observedAt": "2026-08-03",
+          "note": "床面積・天井高は公式掲載の約値。固定席は車いす用28席を含む。スケートリンク開設期はリンク内側フィールド約5600㎡と観客席を使用可能。大型カラーモニター中央3面、多段調光LED照明、空調換気設備を公式掲載。床荷重、分割、恒設舞台、投擲、催事回線は未観測"
         }
       ],
       "bestSpace": {
@@ -12612,7 +13363,10 @@ export const venueData = {
           "capacityTheater": 5058,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.morioka.iwate.jp/shisetsu/sports/gim/1006882.html",
+          "observedAt": "2026-08-03",
+          "note": "市公式のフロア面積と観客席数を記録。5,058席は固定席・ロイヤルボックス・移動席・立見席を含む総数で、固定席数欄には転記しない。指定管理者は約3,200㎡、舞台・音響・照明設備とアリーナ観覧席3,098席を別に掲載。天井高、床荷重、分割、恒設舞台、投擲、床養生、催事回線は未観測"
         }
       ],
       "bestSpace": {
@@ -13479,7 +14233,10 @@ export const venueData = {
           "capacityTheater": 4000,
           "capacityFixed": 2500,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.pref.fukui.lg.jp/doc/undoukouen/taiikukan.html",
+          "observedAt": "2026-08-03",
+          "note": "福井県公式の約3,000㎡、2階固定席2,500席、1階可動席1,500席を記録。最大4,000席は両者の合計で、固定席欄とは区別。建物高さ約17mはアリーナ天井高ではないため空欄。床荷重、分割、舞台、投擲、床養生、催事回線は未観測"
         },
         {
           "id": "seiren-sub",
@@ -13493,7 +14250,10 @@ export const venueData = {
           "capacityTheater": 200,
           "capacityFixed": 200,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.pref.fukui.lg.jp/doc/undoukouen/taiikukan.html",
+          "observedAt": "2026-08-03",
+          "note": "福井県公式の約1,000㎡、2階固定席200席を記録。建物高さ約17mはアリーナ天井高ではないため空欄。床荷重、分割、舞台、投擲、床養生、催事回線は未観測"
         },
         {
           "id": "seiren-multipurpose",
@@ -13507,7 +14267,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.pref.fukui.lg.jp/doc/undoukouen/taiikukan.html",
+          "observedAt": "2026-08-05",
+          "note": "福井県公式ページで鏡張り・ダンス等向けを確認。更衣室と拡声装置を含み、球技や走り回る運動は不可。面積、天井高、定員、床荷重、配信設備は未観測"
         },
         {
           "id": "seiren-meeting-1",
@@ -13521,7 +14284,10 @@ export const venueData = {
           "capacityTheater": 52,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.pref.fukui.lg.jp/doc/undoukouen/taiikukan.html",
+          "observedAt": "2026-08-05",
+          "note": "福井県公式ページで定員52人、プロジェクター・スクリーン・マイク2本、無料Wi-Fiを確認。大音量不可、飲食は大会開催時や長時間会議に伴う昼食等のみ。面積と配信向け専有回線は未観測"
         },
         {
           "id": "seiren-meeting-2",
@@ -13535,7 +14301,10 @@ export const venueData = {
           "capacityTheater": 108,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.pref.fukui.lg.jp/doc/undoukouen/taiikukan.html",
+          "observedAt": "2026-08-05",
+          "note": "福井県公式ページで定員108人、料金表で2分の1利用を確認。プロジェクター・スクリーン・マイク2本、無料Wi-Fiあり。面積と配信向け専有回線は未観測"
         },
         {
           "id": "seiren-meeting-3",
@@ -13549,7 +14318,10 @@ export const venueData = {
           "capacityTheater": 84,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.pref.fukui.lg.jp/doc/undoukouen/taiikukan.html",
+          "observedAt": "2026-08-05",
+          "note": "福井県公式ページで定員84人、料金表で2分の1利用を確認。プロジェクター・スクリーン・マイク2本、無料Wi-Fiあり。面積と配信向け専有回線は未観測"
         }
       ],
       "bestSpace": {
@@ -13680,7 +14452,10 @@ export const venueData = {
           "capacityTheater": 9000,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://sundome.sankan.jp/about-us-h/",
+          "observedAt": "2026-08-06",
+          "note": "公式の展示面積8,000㎡、高さ55m、観客席9,000席を記録。ホール料金表は1階・2階フロア別と2分割利用を案内するが、固定席数、床荷重、恒設舞台、投擲、床養生、催事回線は未観測"
         }
       ],
       "bestSpace": {
@@ -13811,7 +14586,10 @@ export const venueData = {
           "capacityTheater": 11000,
           "capacityFixed": 4980,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://sun-arena.or.jp/?page_id=342",
+          "observedAt": "2026-08-03",
+          "note": "公式掲載のフロア面積3,489㎡、天井高約21m、床荷重5t/㎡を5,000kg/㎡へ換算、観客収容11,000席、固定席4,980席を記録。電動可動席2,180席、仮設ステージ用吊物、イベント用照明音響設備、連絡用テレビ中継設備を公式掲載。投擲、搬入、催事回線は未観測"
         },
         {
           "id": "sun-sub",
@@ -13825,7 +14603,10 @@ export const venueData = {
           "capacityTheater": 3000,
           "capacityFixed": 1002,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://sun-arena.or.jp/?page_id=189",
+          "observedAt": "2026-08-03",
+          "note": "公式掲載のフロア面積1,746㎡、天井高約17m、床荷重3t/㎡を3,000kg/㎡へ換算、観客収容3,000席、固定席1,002席を記録。仮設ステージ用吊物とイベント用照明音響設備を公式掲載。投擲、搬入、催事回線は未観測"
         }
       ],
       "bestSpace": {
@@ -13940,7 +14721,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.aichiskyexpo.com/organizer-top/intro-shisetsu/",
+          "observedAt": "2026-08-03",
+          "note": "公式掲載の展示面積10,000㎡、梁下天井高20m、有効高19〜20m、床耐荷重5t/㎡を5,000kg/㎡へ換算。コンクリート床、配線・配管ピット、搬出入口2箇所（各W8.9m×H5.0m）、ローディングエリア3,163㎡を公式掲載。収容人数、投擲、催事回線は未観測"
         },
         {
           "id": "skyexpo-halls-b-f",
@@ -13954,7 +14738,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.aichiskyexpo.com/organizer-top/intro-shisetsu/",
+          "observedAt": "2026-08-03",
+          "note": "公式掲載の1ホール当たり展示面積10,000㎡、天井高14m、有効高13〜14m、床荷重5t/㎡を5,000kg/㎡へ換算。B〜Fの5ホールは連結して10,000〜50,000㎡として利用可能。収容人数、投擲、催事回線は未観測"
         },
         {
           "id": "skyexpo-outdoor-a",
@@ -13968,7 +14755,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.aichiskyexpo.com/organizer-top/forusecharge/",
+          "observedAt": "2026-08-03",
+          "note": "公式料金ページが多目的利用地A全面の面積33,000㎡と利用料金を掲載。公式施設案内は屋外コンサート、車の試乗会、搬入車両・大型バス待機場等への利用を案内。天井高、床荷重、収容人数、投擲、催事回線は未観測"
         }
       ],
       "bestSpace": {
@@ -14099,7 +14889,10 @@ export const venueData = {
           "capacityTheater": 10578,
           "capacityFixed": 5024,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://kagawa-arena.com/guide/",
+          "observedAt": "2026-08-04",
+          "note": "公式掲載のフロア面積約3,385㎡、最高天井高さ27.6m、最大収容人数10,578人、固定席5,024席（別途車いす席28席）を記録。コンクリート床で、木製床を利用する場合は利用者負担で設置撤去が必要。床荷重、投擲、催事回線は未観測"
         },
         {
           "id": "kagawa-sub",
@@ -14113,7 +14906,10 @@ export const venueData = {
           "capacityTheater": 2928,
           "capacityFixed": 1002,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://kagawa-arena.com/guide/",
+          "observedAt": "2026-08-04",
+          "note": "公式掲載のフロア面積約1,770㎡、最高天井高さ17.5m、最大収容人数2,928人、固定席1,002席（別途車いす席8席）を記録。木製フローリング。床荷重、投擲、催事回線は未観測"
         }
       ],
       "bestSpace": {
@@ -14179,7 +14975,10 @@ export const venueData = {
           "capacityTheater": 6000,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.nagasakistadiumcity.com/project_outline/",
+          "observedAt": "2026-08-04",
+          "note": "公式施設概要の収容人数約6,000席を記録。公式の施設面積27,396.15㎡はアリーナ床面積かを確認できないためarea_m2には転記しない。音楽コンサート、展示・物産展にも使用可能な多機能・可変型施設として公式掲載。固定席数、天井高、床荷重、投擲、催事回線は未観測"
         }
       ],
       "bestSpace": {
@@ -15206,7 +16005,10 @@ export const venueData = {
           "capacityTheater": 15000,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://ariake-arena.tokyo/organizer/main-arena/",
+          "observedAt": "2026-08-04",
+          "note": "主催者向け公式掲載の面積約4,100㎡、最大約15,000席（仮設席含む）を記録。1階アリーナ部は催事に応じて移動観覧席、仮設客席、スタンディング席を設置するため、capacity_fixedは未入力。天井高、床荷重、投擲、催事回線は未観測"
         },
         {
           "id": "ariake-sub",
@@ -15220,7 +16022,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://ariake-arena.tokyo/organizer/sub-arena/",
+          "observedAt": "2026-08-04",
+          "note": "主催者向け公式掲載の全面利用時約1,400㎡を記録。全面・半面利用、メインアリーナとの併用が可能と公式掲載。天井高、収容人数、固定席、床荷重、投擲は未観測。催事用専有回線は未確認だが、公開Wi-Fiは公式FAQで接続可能エリアとベストエフォート条件を掲載"
         }
       ],
       "bestSpace": {
@@ -15351,7 +16156,10 @@ export const venueData = {
           "capacityTheater": 16000,
           "capacityFixed": 8956,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.osaka-johall.com/english/",
+          "observedAt": "2026-08-04",
+          "note": "公式英語ページ掲載のアリーナ面積3,500㎡、天井高21m、最大収容16,000人、固定スタンド席8,956席、可動席最大4,500席を記録。最大収容は立見2,500人を含むレイアウトCの値。床はコンクリート下地のウレタン樹脂仕上げ。床荷重、投擲、搬入寸法は未観測。公式料金表にWi-Fi・光回線の有料利用区分を掲載"
         }
       ],
       "bestSpace": {
@@ -15530,7 +16338,10 @@ export const venueData = {
           "capacityTheater": 17000,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.yokohama-arena.co.jp/organizer/equipment/",
+          "observedAt": "2026-08-04",
+          "note": "公式掲載の面積8,000㎡（楕円形114m×78m）、最大収容17,000人を記録。大型エレベーター及びリフトによる重量物搬出入、音響・照明・映像・信号・通信設備を公式掲載。床・壁フックは1点当たり耐荷重5tだが、床荷重kg/㎡ではないため未入力。天井高、固定席数、投擲は未観測"
         },
         {
           "id": "yokohama-sub",
@@ -15544,7 +16355,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.yokohama-arena.co.jp/organizer/subspace/subarena.html",
+          "observedAt": "2026-08-04",
+          "note": "公式掲載の面積1,036㎡、奥行34m、幅22m、天井高7mを記録。フットサル、バスケットボール、バレーボール、メインアリーナイベント時の練習場・ウォームアップ、リハーサルに利用可能と公式掲載。収容人数、固定席、床荷重、投擲、催事専有回線は未観測"
         }
       ],
       "bestSpace": {
@@ -15627,7 +16441,10 @@ export const venueData = {
           "capacityTheater": 37000,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.saitama-arena.co.jp/business/layout_sizes/layout_sizes_stadium/",
+          "observedAt": "2026-08-04",
+          "note": "公式掲載の展示会・見本市レイアウト面積14,600㎡、センターステージ時約37,000席を記録。37,000席は上段・下段・300/500レベル・仮設約10,400席を含む構成で固定席数として扱わない。現在は大規模改修により2027年3月末まで利用不可と公式告知。天井高、床荷重、投擲は未観測"
         },
         {
           "id": "saitama-main",
@@ -15641,7 +16458,10 @@ export const venueData = {
           "capacityTheater": 22500,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.saitama-arena.co.jp/business/layout_sizes/layout_sizes_main_arena/",
+          "observedAt": "2026-08-04",
+          "note": "公式掲載の展示会・見本市レイアウト面積7,100㎡、センターステージ時最大約22,500席を記録。座席は可動・仮設を含む催事レイアウトで変動するため固定席数は未入力。現在は大規模改修により2027年3月末まで利用不可と公式告知。天井高、床荷重、投擲は未観測"
         },
         {
           "id": "saitama-community",
@@ -15655,7 +16475,10 @@ export const venueData = {
           "capacityTheater": 3000,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.saitama-arena.co.jp/business/layout_sizes/layout_sizes_comu_arena/",
+          "observedAt": "2026-08-04",
+          "note": "公式掲載の展示会利用時最大面積7,500㎡、可動席3,000席を記録。展示会・祭り・フリーマーケット、フットサル・運動会等に多目的利用可能と公式掲載。現在は大規模改修により2027年3月末まで利用不可と公式告知。天井高、床荷重、投擲は未観測"
         }
       ],
       "bestSpace": {
@@ -15738,7 +16561,10 @@ export const venueData = {
           "capacityTheater": 8000,
           "capacityFixed": 3528,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.kobe-spokyo.jp/worldsp-kobe/about/gaiyou",
+          "observedAt": "2026-08-04",
+          "note": "公式掲載の面積3,100㎡、最高天井高約30m、床荷重2t/㎡を2,000kg/㎡へ換算、固定席3,528席、仮設席約4,500席、最大約8,000人を記録。屋内スポーツ用長尺弾性塩ビシート・コンクリート下地。仮設舞台の利用料金が公式設備表にある。投擲、搬入寸法、催事専有回線は未観測"
         }
       ],
       "bestSpace": {
@@ -16093,7 +16919,10 @@ export const venueData = {
           "capacityTheater": 10000,
           "capacityFixed": 4400,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://h-jigyoudan.or.jp/sports-center/center-facility/",
+          "observedAt": "2026-08-04",
+          "note": "公式掲載のフロア面積約3,500㎡（48m×80m）、固定席約4,400席、最大収容人数約10,000人を記録。スポーツ大会、コンサート、展示会、各種ショーに利用可能。大アリーナ観客席・競技場・管理室のWi-Fiスポット設置を公式掲載するが催事専有回線は未確認。天井高、床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "hiroshima-sub",
@@ -16107,7 +16936,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": 500,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://h-jigyoudan.or.jp/sports-center/center-facility/",
+          "observedAt": "2026-08-04",
+          "note": "公式掲載のフロア面積約1,700㎡（35m×49m）と固定席約500席を記録。スポーツ大会・練習、競技会のウォーミングアップ会場、展示会、プロレス・ボクシング等に利用可能。最大収容人数、天井高、床荷重、投擲、搬入寸法、催事通信は未観測"
         }
       ],
       "bestSpace": {
@@ -16190,7 +17022,10 @@ export const venueData = {
           "capacityTheater": 4009,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.xebioarena.com/equipment-information/",
+          "observedAt": "2026-08-04",
+          "note": "公式掲載の総座席数4,009席（1階可動席1,232席、2階一般席2,407席、3階一般席266席、3階VIP席104席）を総座席数として記録。常設LEDビジョン・音響設備と、スポーツ・コンサート・コンベンション用途を公式掲載。面積、天井高、床荷重、投擲、搬入寸法、催事専有回線は未観測"
         }
       ],
       "bestSpace": {
@@ -16256,7 +17091,10 @@ export const venueData = {
           "capacityTheater": 10000,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.okinawa.okinawa.jp/k003/tokushuuichiran/okinawaarena.html",
+          "observedAt": "2026-08-04",
+          "note": "沖縄市の2025年更新ページで、展示面積1階2,600㎡（61m×48m）、最大天井高28m、床荷重3t/㎡を3,000kg/㎡へ換算、最大収容人数10,000人を確認。1t/点の吊りフック118か所を掲載するが、隣接フックの連続利用は不可。固定席数、投擲、搬入寸法、催事専有回線は未観測"
         }
       ],
       "bestSpace": {
@@ -16355,7 +17193,10 @@ export const venueData = {
           "capacityTheater": 10000,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.mitsuifudosan.co.jp/corporate/news/2024/0408/",
+          "observedAt": "2026-08-04",
+          "note": "三井不動産の公式リリースで収容客数約1万人の大型多目的アリーナと確認。アリーナ床上に客席を設置した構成であるため、固定席数には転記しない。スポーツ、音楽コンサート、常設センタービジョン・リボンビジョンを掲載するが、床面積、天井高、床荷重、投擲、搬入寸法、催事専有回線は未観測"
         },
         {
           "id": "lala-sub",
@@ -16369,7 +17210,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://lalaarenatokyo-bay.com/wp-content/uploads/2025/07/ea0b47857713c6e7173afd3ab81358c9.pdf",
+          "observedAt": "2026-08-04",
+          "note": "公式料金表（2026年7月版）はサブアリーナ727㎡、空調あり、物販等可能、音出しはBGM程度と掲載。所有者の公式リリースはバスケットボール・バレーボール等の練習場又はイベント当日の物販会場として約720㎡と掲載。収容人数、天井高、床荷重、投擲、搬入寸法、催事専有回線は未観測"
         }
       ],
       "bestSpace": {
@@ -16468,7 +17312,10 @@ export const venueData = {
           "capacityTheater": 17000,
           "capacityFixed": 10402,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.ig-arena.jp/uploads/2026/03/riyouannai_260301.pdf",
+          "observedAt": "2026-08-04",
+          "note": "運営会社の2026年3月利用案内で競技面積約4,600㎡、固定席10,402席、可動席4,474席、車椅子席79席・同伴席79席を確認。愛知県の2026年更新施設概要でアリーナ内天井高30mと最大収容人数17,000人（立見含む）を確認。固定席の内約400席は着脱可能で約60席分の車椅子席に転換可能。床荷重、投擲、搬入寸法、催事専有回線は未観測"
         },
         {
           "id": "ig-sub",
@@ -16482,7 +17329,10 @@ export const venueData = {
           "capacityTheater": 600,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.ig-arena.jp/uploads/2026/03/riyouannai_260301.pdf",
+          "observedAt": "2026-08-04",
+          "note": "運営会社の2026年3月利用案内で競技面積約2,600㎡、フローリング床、固定席600席を確認。貸出範囲は競技面とスタンド客席。ロッカールームとシャワールームを利用可能とするが、天井高、床荷重、投擲、搬入寸法、催事専有回線は未観測"
         }
       ],
       "bestSpace": {
@@ -16565,7 +17415,10 @@ export const venueData = {
           "capacityTheater": 12141,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "unknown"
+          "practiceUse": "unknown",
+          "sourceUrl": "https://pia-arena-mm.jp/assets/images/facility/facility_summary.pdf",
+          "observedAt": "2026-08-04",
+          "note": "ぴあ株式会社の主催者向け公式資料で面積3,899.14㎡、コンクリート床、床耐荷重2t/㎡を2,000kg/㎡へ換算、着席時合計10,057席・立見時合計12,141人を確認。天井吊荷重、キャットウォーク、屋内荷捌きスペース、中継端子盤経由で館内14か所にカメラ設置可能を掲載。固定席数、明確なアリーナ天井高、投擲、催事専有回線の性能は未観測"
         }
       ],
       "bestSpace": {
@@ -16631,7 +17484,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.toyota-arena-tokyo.jp/about-the-arena/main-arena/",
+          "observedAt": "2026-08-04",
+          "note": "公式メインアリーナページで可動席を除いた土間部分約2,730㎡、10,000席を超えるレイアウト、スポーツ・コンサート・MICEを想定したステージ・トラス・吊り天井機構を確認。主催者向け公式ページの収容人数は約10,000人だが、構成別の固定席数は未観測のため数値欄へは転記しない。天井高、床荷重、投擲、搬入寸法、催事専有回線は未観測"
         }
       ],
       "bestSpace": {
@@ -16697,7 +17553,10 @@ export const venueData = {
           "capacityTheater": 55000,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.tokyo-dome.co.jp/en/business/event-space/?lang=en",
+          "observedAt": "2026-08-04",
+          "note": "東京ドームシティ公式の貸出会場一覧で最大収容人数55,000人、利用例としてコンサート・展示会・各種スポーツイベントを確認。催事レイアウト別の固定席数、アリーナ床面積、天井高、床荷重、投擲、搬入寸法、催事専有回線は未観測"
         }
       ],
       "bestSpace": {
@@ -17068,7 +17927,10 @@ export const venueData = {
           "capacityTheater": 5000,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://yokohama-buntai.jp/facility/",
+          "observedAt": "2026-08-06",
+          "note": "運営会社の公式施設案内でコンクリート平土間、床面積2,530.57㎡（横約63m×縦約40m）、アリーナ床面から天井まで14.5m、観客席約5,000席を確認。約5,000席は利用レイアウトで変動すると公式資料に明記され、固定席数、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -18031,7 +18893,10 @@ export const venueData = {
           "capacityTheater": 10000,
           "capacityFixed": 6000,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.keio.co.jp/news/update/news_release/news_release2025/pdf/nr20250425_keioarenatokyo.pdf",
+          "observedAt": "2026-08-04",
+          "note": "命名権者の2025年公式リリースで競技面約4,900㎡、固定席約6,000席、最大10,000人を確認。指定管理者の公式施設ページでコンサート・展示会等の商業イベント対応と掲載。天井高、床荷重、投擲、搬入寸法、催事専有回線は未観測"
         },
         {
           "id": "keio-sub",
@@ -18045,7 +18910,10 @@ export const venueData = {
           "capacityTheater": 340,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.keio.co.jp/news/update/news_release/news_release2025/pdf/nr20250425_keioarenatokyo.pdf",
+          "observedAt": "2026-08-04",
+          "note": "命名権者の2025年公式リリースで競技面約1,800㎡、固定席340席を確認。天井高、最大収容人数、床荷重、投擲、搬入寸法、催事専有回線は未観測"
         }
       ],
       "bestSpace": {
@@ -18111,7 +18979,10 @@ export const venueData = {
           "capacityTheater": 10000,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.totteikobe.jp/for_organizer/",
+          "observedAt": "2026-08-04",
+          "note": "運営会社の主催者向け公式ページで収容人数約1万人以上、コンサート、スポーツ興行、式典・パーティー等のレイアウトを確認。収容人数はステージ・客席レイアウトや見切れで変動すると明記されるため、固定席数、床面積、天井高、床荷重、投擲、搬入寸法、催事専有回線は未観測"
         }
       ],
       "bestSpace": {
@@ -18274,7 +19145,10 @@ export const venueData = {
           "capacityTheater": 5000,
           "capacityFixed": 2100,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.fukuyama.hiroshima.jp/soshiki/sports/172543.html",
+          "observedAt": "2026-08-04",
+          "note": "福山市公式ページで面積約2,600㎡、天井高15m、2階固定席約2,100席、1階壁面収納可動席約900席を確認。ライブ・講演会ではアリーナ面へ椅子2,000席を設置して最大5,000人と掲載。耐床荷重は総重量4tまでの車両乗入れ可で、kg/㎡換算は根拠不十分のため未入力。吊物荷重は条件により最大20t。投擲、搬入寸法、催事専有回線は未観測"
         }
       ],
       "bestSpace": {
@@ -18501,7 +19375,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://hello-kitakyushu.or.jp/nishiten/detail/",
+          "observedAt": "2026-08-05",
+          "note": "公式施設案内で面積5,520㎡、有効天井高10m、床荷重5t/㎡を5,000kg/㎡へ換算、間仕切り分割、搬入口W6.3×H6.3mを2か所、臨時通信回線を確認。収容人数、投擲は未観測"
         },
         {
           "id": "nishiten-large-two-thirds",
@@ -18515,7 +19392,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://hello-kitakyushu.or.jp/nishiten/fee/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行HTML料金表で大展示場2/3区画を確認。3,680㎡は親区画5,520㎡の2/3として計算。共通の天井10m、床荷重5,000kg/㎡、臨時通信回線条件を継承。収容人数、投擲は未観測"
         },
         {
           "id": "nishiten-large-half",
@@ -18529,7 +19409,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://hello-kitakyushu.or.jp/nishiten/fee/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行HTML料金表で大展示場1/2区画を確認。2,760㎡は親区画5,520㎡の1/2として計算。共通の天井10m、床荷重5,000kg/㎡、臨時通信回線条件を継承。収容人数、投擲は未観測"
         },
         {
           "id": "nishiten-large-third",
@@ -18543,7 +19426,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://hello-kitakyushu.or.jp/nishiten/fee/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行HTML料金表で大展示場1/3区画を確認。1,840㎡は親区画5,520㎡の1/3として計算。共通の天井10m、床荷重5,000kg/㎡、臨時通信回線条件を継承。収容人数、投擲は未観測"
         }
       ],
       "bestSpace": {
@@ -18770,7 +19656,10 @@ export const venueData = {
           "capacityTheater": 2500,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.okayama-momo.jp/userguide/03/",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで面積約3,680㎡、2階観客席約2,500席を確認。催物・式典・文化的諸行事に利用可能、無線LANスポットありと掲載。天井高、床荷重、投擲、搬入寸法、催事専有回線性能は未観測"
         },
         {
           "id": "shigeto-sub",
@@ -18784,7 +19673,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.okayama-momo.jp/userguide/03/",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで面積約737㎡を確認。収容人数、天井高、床荷重、投擲、搬入寸法、催事専有回線は未観測"
         }
       ],
       "bestSpace": {
@@ -19379,7 +20271,10 @@ export const venueData = {
           "capacityTheater": 8000,
           "capacityFixed": 5016,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.kyoto-furitutaiikukan.jp/3sisetuannai.html",
+          "observedAt": "2026-08-04",
+          "note": "体育館公式施設案内で面積2,242㎡（59m×38m）、固定観覧席5,016席、移動観覧席・仮設席を設置する約8,000席構成を確認。天井高、床荷重、投擲、搬入寸法、催事専有回線は未観測"
         },
         {
           "id": "shimazu-second",
@@ -19393,7 +20288,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.kyoto-furitutaiikukan.jp/3sisetuannai.html",
+          "observedAt": "2026-08-04",
+          "note": "体育館公式施設案内で面積864㎡（36m×24m）を確認。収容人数、天井高、床荷重、投擲、搬入寸法、催事専有回線は未観測"
         }
       ],
       "bestSpace": {
@@ -19476,7 +20374,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": 1318,
           "stageType": "conditional",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.grandmesse.jp/kiji00310/index.html",
+          "observedAt": "2026-08-04",
+          "note": "運営会社公式ページで面積8,000㎡（150m×54m）、天井高14.5〜16.4m（間仕切り壁部分10m）、床耐荷重5t/㎡を5,000kg/㎡へ換算、4ゾーンの区画面積、コンサート利用可を確認。展示ホールDの壁面収納式スライド座席は770/1,318席の切替で全館固定席ではないため、固定席欄は未入力。各ゾーン搬出入口は幅5.0m×高さ4.6m。催事専有回線、投擲、最大収容人数は未観測"
         }
       ],
       "bestSpace": {
@@ -19559,7 +20460,10 @@ export const venueData = {
           "capacityTheater": 53820,
           "capacityFixed": 41566,
           "stageType": "conditional",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.sapporo-dome.co.jp/dome/",
+          "observedAt": "2026-08-04",
+          "note": "運営会社公式概要でクローズドアリーナ14,460㎡、固定客席41,566席、最大収容53,820人を確認。公式はコンサート・展示会等の実績を掲載。高さ68mはアリーナ面からの建物高さでクリア天井高とは明示されないため未入力。床荷重、投擲、搬入寸法、催事専有回線は未観測"
         }
       ],
       "bestSpace": {
@@ -19642,7 +20546,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.sapporo-sport.jp/tsudome/floorguide/",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式フロアガイドで屋内アリーナ11,484㎡を確認。大型搬出入口A・Cは幅3.6m×高さ3.7m、Bは3.6m×3.4m、Dは3.1m×3.3m。イベント盤とTV中継盤を公式掲載。天井高、収容人数、床荷重、投擲は未観測"
         }
       ],
       "bestSpace": {
@@ -20349,7 +21256,10 @@ export const venueData = {
           "capacityTheater": 10770,
           "capacityFixed": 6024,
           "stageType": "conditional",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://makomanai-park.jp/icearena/about/",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで固定スタンド6,024人（ロイヤルボックス162席を含む）、立見約1,500人、移動席約4,000人、合計10,770人を確認。競技フロア面積、天井高、床荷重は未観測"
         },
         {
           "id": "makomanai-annex",
@@ -20363,7 +21273,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://makomanai-park.jp/icearena/about/",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで通年利用の附属体育館フロア面積520㎡、全部使用又はコート使用を確認。収容人数、天井高、床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -20510,7 +21423,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": 5011,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.mspf.jp/grande21/index.php?action=sisetu_shoukai_arena",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページでフロア3,740㎡、固定席5,011席、可動席2,052席、国際室内競技大会・各種イベント対応を確認。天井高、床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "grande-sub",
@@ -20524,7 +21440,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": 474,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.mspf.jp/grande21/index.php?action=sisetu_shoukai_arena",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで面積843㎡、固定席474席を確認。天井高、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -20607,7 +21526,10 @@ export const venueData = {
           "capacityTheater": 6000,
           "capacityFixed": 2500,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.azumapark.or.jp/guide-map/sports-facility/%E3%81%82%E3%81%9A%E3%81%BE%E7%B7%8F%E5%90%88%E4%BD%93%E8%82%B2%E9%A4%A8/%E3%83%A1%E3%82%A4%E3%83%B3%E3%82%A2%E3%83%AA%E3%83%BC%E3%83%8A/",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで59.4m×46.2m（2,744.3㎡）、天井高13〜19m、固定席2,500席、可動席1,200席、最大6,000人、各種文化イベント対応を確認。天井高は範囲で単一比較値にせず注記へ保持。床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "azuma-sub",
@@ -20621,7 +21543,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.azumapark.or.jp/guide-map/sports-facility/%E3%81%82%E3%81%9A%E3%81%BE%E7%B7%8F%E5%90%88%E4%BD%93%E8%82%B2%E9%A4%A8/%E3%83%A1%E3%82%A4%E3%83%B3%E3%82%A2%E3%83%AA%E3%83%BC%E3%83%8A/",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページでサブアリーナ871㎡を確認。収容人数、天井高、床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -20736,7 +21661,10 @@ export const venueData = {
           "capacityTheater": 3000,
           "capacityFixed": 3000,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.takasaki-foundation.or.jp/arena/guide.php",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで有効スペース42m×85m（3,570㎡）、天井高17.5〜19m、固定席3,000席、移動式観覧席1,022席、車椅子席21席を確認。公開席数の合計はイベント最大収容人数とは限らないため容量欄へは転記しない。天井高は範囲で単一比較値にせず注記へ保持。床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "takasaki-sub",
@@ -20750,7 +21678,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": 100,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.takasaki-foundation.or.jp/arena/guide.php",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで有効スペース26.8m×38.5m（1,031.8㎡）、天井高15m、観客席100席を確認。床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -20833,7 +21764,10 @@ export const venueData = {
           "capacityTheater": 10000,
           "capacityFixed": 4868,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.ecopa.jp/facility/arena/",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページでフロア面積4,165㎡（85m×49m）、天井高26.2m・吊物下有効19.5m、最大10,000人、固定席4,868席、可動席1,440席を確認。比較欄は催事で重要な明示済み吊物下有効19.5mを記録し、公称26.2mは注記へ保持。床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "ecopa-sub",
@@ -20847,7 +21781,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.ecopa.jp/facility/arena/",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページでフロア面積1,470㎡を確認。収容人数、天井高、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -21874,7 +22811,10 @@ export const venueData = {
           "capacityTheater": 8000,
           "capacityFixed": 2900,
           "stageType": "elevating",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.nagano-mwave.co.jp/bighat/about/",
+          "observedAt": "2026-08-05",
+          "note": "ロールバック席収納時約4,000㎡、設定時約2,000㎡。固定席は3階2,100席+2階800席で2,900席、壁面収納2,100席、アリーナ3,000席、合計最大8,000人。搬出口3.8m×3.4m。最高35mは吊物下有効高さではない"
         },
         {
           "id": "bighat-meeting-1",
@@ -21888,7 +22828,10 @@ export const venueData = {
           "capacityTheater": 180,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.nagano-mwave.co.jp/bighat/event_organizer/",
+          "observedAt": "2026-08-06",
+          "note": "シアター180人・スクール110人。スライディングウォールで2分割可。入口H2.1m×W1.2m。会議室単体申込はビッグハットで受付不可"
         },
         {
           "id": "bighat-meeting-2",
@@ -21902,7 +22845,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.nagano-mwave.co.jp/bighat/event_organizer/",
+          "observedAt": "2026-08-06",
+          "note": "応接セットは1人掛け8脚・3人掛け1脚。公式表にシアター/スクール定員と入口寸法の掲載なし"
         },
         {
           "id": "bighat-meeting-3",
@@ -21916,7 +22862,10 @@ export const venueData = {
           "capacityTheater": 65,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.nagano-mwave.co.jp/bighat/event_organizer/",
+          "observedAt": "2026-08-06",
+          "note": "シアター65人・スクール40人、入口H2.1m×W1.2m"
         },
         {
           "id": "bighat-meeting-4",
@@ -21930,7 +22879,10 @@ export const venueData = {
           "capacityTheater": 40,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.nagano-mwave.co.jp/bighat/event_organizer/",
+          "observedAt": "2026-08-06",
+          "note": "シアター40人・スクール25人、入口H2.1m×W1.9m"
         },
         {
           "id": "bighat-meeting-5",
@@ -21944,7 +22896,10 @@ export const venueData = {
           "capacityTheater": 220,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.nagano-mwave.co.jp/bighat/event_organizer/",
+          "observedAt": "2026-08-06",
+          "note": "シアター220人・スクール140人、入口H2.1m×W1.9m"
         },
         {
           "id": "bighat-meeting-6",
@@ -21958,7 +22913,10 @@ export const venueData = {
           "capacityTheater": 100,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.nagano-mwave.co.jp/bighat/event_organizer/",
+          "observedAt": "2026-08-06",
+          "note": "シアター100人・スクール60人、入口H2.1m×W1.2m"
         },
         {
           "id": "bighat-meeting-7",
@@ -21972,7 +22930,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.nagano-mwave.co.jp/bighat/event_organizer/",
+          "observedAt": "2026-08-06",
+          "note": "和室6畳、トイレ、パントリー、シャワー設備あり。定員は公式ページに掲載なし"
         },
         {
           "id": "bighat-stage",
@@ -21986,7 +22947,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "elevating",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.nagano-mwave.co.jp/bighat/about/",
+          "observedAt": "2026-08-05",
+          "note": "間口26m×奥行8.5m・221㎡、2分割可。高さ0m/0.6m/1.0m、客席設定時9段396人、床荷重360kg/㎡。別フロア案内は高さ1.5m表記もあり不一致のため要確認"
         },
         {
           "id": "bighat-changing",
@@ -22000,7 +22964,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.nagano-mwave.co.jp/bighat/event_organizer/",
+          "observedAt": "2026-08-05",
+          "note": "全9室。トイレ、冷暖房、乾燥室、シャワー設備あり。利用は有料。室別面積・定員は要確認"
         },
         {
           "id": "bighat-referee",
@@ -22014,7 +22981,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.nagano-mwave.co.jp/bighat/event_organizer/",
+          "observedAt": "2026-08-05",
+          "note": "2室あり、イベントにより救護室として利用。面積、定員、設備、料金は要確認"
         }
       ],
       "bestSpace": {
@@ -22097,7 +23067,10 @@ export const venueData = {
           "capacityTheater": 18700,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.mediadome.jp/about.html",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページで最大収容約18,700人（立見含む）、コンサート・スポーツ等の大規模イベント対応を確認。主催者向け公式料金表で大会・イベント利用の使用面積5,000㎡を確認。天井高、床荷重、固定席数、投擲、搬入口寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -22180,7 +23153,10 @@ export const venueData = {
           "capacityTheater": 12934,
           "capacityFixed": 8636,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.jpnsport.go.jp/yoyogi/Default.aspx?TabId=70",
+          "observedAt": "2026-08-04",
+          "note": "日本スポーツ振興センター公式ページでアリーナ4,000㎡、スタンド席8,636席、車いす観覧席104席、来賓席34〜70席、最大アリーナ席4,124席、最大合計12,934席を確認。アリーナ席はイベントごとにフロア上へ設置するため固定席欄はスタンド席のみを記録"
         }
       ],
       "bestSpace": {
@@ -22263,7 +23239,10 @@ export const venueData = {
           "capacityTheater": 10000,
           "capacityFixed": 5000,
           "stageType": "conditional",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.nespa.or.jp/hall/shisetsu/index.html",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページでアリーナ3,646㎡、最大10,000席（固定5,000、可動2,000、移動3,000）を確認。床荷重1,000kg/㎡と床養生条件は主催者ガイドで確認。天井高、投擲、搬入寸法は未観測"
         },
         {
           "id": "ngk-second",
@@ -22277,7 +23256,10 @@ export const venueData = {
           "capacityTheater": 480,
           "capacityFixed": 480,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.nespa.or.jp/hall/shisetsu/index.html",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページでアリーナ1,638㎡、観覧席480席を確認。天井高、床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "ngk-third",
@@ -22291,7 +23273,10 @@ export const venueData = {
           "capacityTheater": 200,
           "capacityFixed": 200,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.nespa.or.jp/hall/shisetsu/index.html",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページでアリーナ826.5㎡、観覧席200席を確認。天井高、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -22357,7 +23342,10 @@ export const venueData = {
           "capacityTheater": 8000,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://hamamatsu-arena.jp/index.html",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式案内で65m×44m（2,860㎡）、最大8,000人を確認。浜松市の現行施設資料で天井高20mを確認。固定席数、床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "hamamatsu-sub",
@@ -22371,7 +23359,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://hamamatsu-arena.jp/index.html",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式案内で40m×34m（1,360㎡）を確認。収容人数、天井高、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -22518,7 +23509,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://kobe-cc.jp/ja/facilities/exhibition-hall/hall2-1f-conventionhall/",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで3,800㎡、天井12m、床荷重5t/㎡を5,000kg/㎡へ換算、天井吊物1t×28、搬入口3か所（幅6m×高4.5m×2、幅5m×高4.5m×1）を確認。収容人数、投擲は未観測"
         }
       ],
       "bestSpace": {
@@ -22681,7 +23675,10 @@ export const venueData = {
           "capacityTheater": 3600,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://atchall.com/howto/hall/atchall/ahall/",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページで2,900㎡、天井8m、床荷重2t/㎡を2,000kg/㎡へ換算、1,600㎡と1,300㎡に分割可を確認。3,600席はシアターレイアウト例で固定席欄には転記しない"
         },
         {
           "id": "atc-a-half-large",
@@ -22695,7 +23692,10 @@ export const venueData = {
           "capacityTheater": 1600,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://atchall.com/howto/hall/atchall/ahall/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式HTMLで1,600㎡、天井8m、床荷重2t/㎡を2,000kg/㎡へ換算。シアター最大1,600席は使用例で固定席数ではない。投擲、搬入寸法は未観測"
         },
         {
           "id": "atc-a-half-small",
@@ -22709,7 +23709,10 @@ export const venueData = {
           "capacityTheater": 1400,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://atchall.com/howto/hall/atchall/ahall/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式HTMLで1,300㎡、天井8m、床荷重2t/㎡を2,000kg/㎡へ換算。シアター最大1,400席は使用例で固定席数ではない。投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -22792,7 +23795,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://shiga-arena.jp/gallery",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで約2,900㎡、大規模イベント時の移動観覧席1,616席・パイプ椅子900席の運用を確認。公式公開の観客席約5,018は構成が明確でないため固定席欄へ転記しない。天井高、床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "shiga-sub",
@@ -22806,7 +23812,10 @@ export const venueData = {
           "capacityTheater": 200,
           "capacityFixed": 200,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://shiga-arena.jp/gallery",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで約1,300㎡、観客席約200を確認。天井高、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -23097,7 +24106,10 @@ export const venueData = {
           "capacityTheater": 3536,
           "capacityFixed": 1484,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.pref.shimane.lg.jp/infra/toshi/koen/pref/hamashi.html",
+          "observedAt": "2026-08-04",
+          "note": "島根県公式ページで40m×64.9m（2,596㎡）、固定1,484席、可動2,052席、計3,536席、車いす16席を確認。天井高、床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "kami-sub",
@@ -23111,7 +24123,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.pref.shimane.lg.jp/infra/toshi/koen/pref/hamashi.html",
+          "observedAt": "2026-08-04",
+          "note": "島根県公式ページで34m×24m（816㎡）を確認。収容人数、天井高、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -23194,7 +24209,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": 1800,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.kakogawa-sports.jp/facilities/gym/index.html",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで65m×40m（2,600㎡）、有効天井13.5m、固定1,800席、移動観覧席86席×8台を確認。床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "showa-sub",
@@ -23208,7 +24226,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.kakogawa-sports.jp/facilities/gym/index.html",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで40m×30m（1,200㎡）、有効天井13.5mを確認。収容人数、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -23339,7 +24360,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": 3176,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.fukuoka-city-arena.jp/about/index.html",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで45.0m×70.2m（約3,160㎡）、固定3,176席、移動1,824席、車いす42席を確認。天井高、床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "fukuoka-sub",
@@ -23353,7 +24377,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": 696,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.fukuoka-city-arena.jp/about/index.html",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで約1,730㎡、固定696席、車いす4席を確認。天井高、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -23580,7 +24607,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": 2896,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://ehime-spa.jp/budoukan/martial-facilities/",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで床面積5,095㎡、講演会・イベント利用可を確認。別の公式建物概要で固定観覧席2,896席、収納式移動席988席を確認。天井高、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -24287,7 +25317,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.kspa.or.jp/sougou_taiku_charge/",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで50.4m×36.0m（1,814㎡）、ハンドボール・バスケットボール・バレーボール・体操競技等に利用可能と確認。収容人数、天井高、床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "kumamoto-medium",
@@ -24301,7 +25334,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.kspa.or.jp/sougou_taiku_charge/",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで43.9m×32.8m（1,439㎡）、ハンドボール・バスケットボール・バレーボール・体操競技等に利用可能と確認。収容人数、天井高、床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "kumamoto-small",
@@ -24315,7 +25351,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.kspa.or.jp/sougou_taiku_charge/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式の現行施設・税込料金ページで22.0m×19.2m（422㎡）、卓球10面、ボクシング・レスリング・フェンシング等に利用可能と確認。定員、天井高、床荷重、搬入寸法は未観測"
         },
         {
           "id": "kumamoto-training",
@@ -24329,7 +25368,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.kspa.or.jp/sougou_taiku_charge/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式の現行施設・税込料金ページで622㎡・マシン約90台を確認。原則として中学生以下は利用不可。定員、天井高、床荷重、通信設備は未観測"
         },
         {
           "id": "kumamoto-meeting",
@@ -24343,7 +25385,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.kspa.or.jp/sougou_taiku_charge/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式の現行施設・税込料金ページで全部・3分の2・3分の1の分割料金を確認。面積、定員、天井高、床荷重、通信設備は未観測"
         }
       ],
       "bestSpace": {
@@ -24409,7 +25454,10 @@ export const venueData = {
           "capacityTheater": 8000,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/org/facilities/events/",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページで最大約8,000人、基本時間7:00から24:00内に設営・公演・撤去を行うと確認。舞台床面積、天井高、固定席数、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -24524,7 +25572,10 @@ export const venueData = {
           "capacityTheater": 9308,
           "capacityFixed": 5178,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.tef.or.jp/tmg/arena/index.html",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで競技フロア3,220㎡、天井高27m、最大9,308席、固定5,178席、車いす130席を確認。最大席数の他の構成、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -24607,7 +25658,10 @@ export const venueData = {
           "capacityTheater": 5100,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nagaoka.niigata.jp/shisei/cate05/ao-re/floor_arena.html",
+          "observedAt": "2026-08-04",
+          "note": "長岡市公式ページで面積2,123㎡、天井高12.5m、センターステージ約5,100席、床荷重2t/㎡を2,000kg/㎡へ換算、南搬入口6.2m×4.0m×2台を確認。座席はレイアウト別目安で固定席数は未観測"
         }
       ],
       "bestSpace": {
@@ -24690,7 +25744,10 @@ export const venueData = {
           "capacityTheater": 5012,
           "capacityFixed": 5012,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.t-i-forum.co.jp/organizer/facilities/",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページで固定5,012席を確認。舞台のプロセニアム高10mはアリーナ天井高とは異なるため、その値として注記のみ。床面積、床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "forum-e",
@@ -24704,7 +25761,10 @@ export const venueData = {
           "capacityTheater": 3000,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.t-i-forum.co.jp/organizer/facilities/",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページで平土間5,000㎡、天井9m、立食3,000人、3,000㎡・2,000㎡への分割可を確認。3,000人は立食レイアウトで固定席数は未観測。床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -24787,7 +25847,10 @@ export const venueData = {
           "capacityTheater": 5500,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://sansin.or.jp/rental/hall/",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページで無柱4,455㎡、天井9.7〜15m、シアター全体5,500人、床荷重1.5t/㎡を1,500kg/㎡へ換算、分割可を確認。一部指定区域5t/㎡は全面値と混同しない。収容人数はレイアウト値で固定席数は未観測"
         }
       ],
       "bestSpace": {
@@ -24918,7 +25981,10 @@ export const venueData = {
           "capacityTheater": 6500,
           "capacityFixed": 3440,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.toyota-taikyo.or.jp/skyhall",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式ページで80m×45m（3,600㎡）、最大6,500人、2階固定3,440席・1階移動980席、最高天井24mを確認。豊田市の2026年3月更新ページは観客席3,470席とするため内訳と現行仕様は要確認。最大人数と席種合計の差、吊物下有効高さ、床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "sky-sub",
@@ -24932,7 +25998,10 @@ export const venueData = {
           "capacityTheater": 550,
           "capacityFixed": 550,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.toyota-taikyo.or.jp/skyhall",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式ページで36.9m×47.3m・1,745㎡、天井12.5m、2階控席370席・3階控席180席の計550席を確認。豊田市の2026年3月更新ページは面積1,737㎡とするため現行寸法は要確認。床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -24998,7 +26067,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": 3131,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.furitutaiikukaikan.ne.jp/facilities.php",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで主競技場3,010㎡、中央天井高19.2m、固定3,131席を確認。総収容人数、床荷重、投擲、搬入寸法は未観測。2026年4月から2027年1月末予定まで全館臨時休館中"
         }
       ],
       "bestSpace": {
@@ -25081,7 +26153,10 @@ export const venueData = {
           "capacityTheater": 10000,
           "capacityFixed": 5932,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.yahataya-park.jp/osaka_arena/main/outline.html",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで3,580㎡、中央天井26m、固定5,932席、可動1,390席、最大10,000人を確認。床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -25612,7 +26687,10 @@ export const venueData = {
           "capacityTheater": 10000,
           "capacityFixed": 6000,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.namihayadome.gr.jp/shisetsuannai.html",
+          "observedAt": "2026-08-06",
+          "note": "指定管理者公式ページで固定6,000席、最大10,000人、天井高42.65mを確認。アイスリンク・プール期を含む季節利用条件がある。床面積、床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "ractab-main-pool",
@@ -25626,7 +26704,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": 6000,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.namihayadome.gr.jp/shisetsuannai.html",
+          "observedAt": "2026-08-06",
+          "note": "春期・夏期のメイン構成。50m×25.5m・10コースのメインプールと25m×25mの飛込プール。可動床、水深0〜3.5m/0〜2.0m、飛込側0〜5.0m。固定席6,000席・最大10,000人はメインアリーナ共通。床荷重、通信設備は未観測"
         },
         {
           "id": "ractab-main-floor",
@@ -25640,7 +26721,10 @@ export const venueData = {
           "capacityTheater": 10000,
           "capacityFixed": 6000,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.namihayadome.gr.jp/shisetsuannai.html",
+          "observedAt": "2026-08-06",
+          "note": "9月中旬〜10月下旬の秋期構成。最大84m×44m、バレー5面、テニス5面、卓球26面、バスケ4面、ハンドボール2面、バドミントン18面。固定6,000席・最大10,000人。床荷重、投擲、搬入口寸法は未観測"
         },
         {
           "id": "ractab-main-ice",
@@ -25654,7 +26738,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": 6000,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.namihayadome.gr.jp/shisetsuannai.html",
+          "observedAt": "2026-08-06",
+          "note": "12月中旬〜3月下旬の冬期構成。メインリンク60m×30m、サブリンク30m×18m。固定席6,000席・最大10,000人はメインアリーナ共通。リンク分割、氷厚、通信設備は未観測"
         },
         {
           "id": "ractab-sub",
@@ -25668,7 +26755,10 @@ export const venueData = {
           "capacityTheater": 2000,
           "capacityFixed": 835,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.namihayadome.gr.jp/shisetsuannai.html",
+          "observedAt": "2026-08-05",
+          "note": "35m×44m、最低天井高12.3m、固定835席・最大2,000人・車椅子6席。バレー3面、テニス1面、卓球10面、バスケ2面、ハンドボール1面、バドミントン8面。床荷重、搬入口寸法、通信設備は未観測"
         },
         {
           "id": "ractab-sub-pool",
@@ -25682,7 +26772,10 @@ export const venueData = {
           "capacityTheater": 210,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.namihayadome.gr.jp/shisetsuannai.html",
+          "observedAt": "2026-08-05",
+          "note": "50m×15m・7コース。東半面25m×15mは可動床0.5〜3.7m、西半面23.5m×15mは固定床1.4m。見学者ギャラリー210席・車椅子10席・難聴者用ループ36席。施設面積、通信設備は未観測"
         },
         {
           "id": "ractab-training",
@@ -25696,7 +26789,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.namihayadome.gr.jp/shisetsuannai.html",
+          "observedAt": "2026-08-05",
+          "note": "約400㎡、約40種類70点、専用トレーナー配置、更衣室あり。初回講習受講が必要で高校生相当以上。定員、天井高、通信設備は未観測"
         },
         {
           "id": "ractab-multipurpose",
@@ -25710,7 +26806,10 @@ export const venueData = {
           "capacityTheater": 132,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.namihayadome.gr.jp/shisetsuannai.html",
+          "observedAt": "2026-08-05",
+          "note": "約270㎡（映写室・倉庫等込み）、通常定員約132名、椅子席のみ約255名、3分割可。120インチ映像・AV・難聴者用ループ設備。軽スポーツ、展示販売等に利用可能"
         },
         {
           "id": "ractab-large-meeting",
@@ -25724,7 +26823,10 @@ export const venueData = {
           "capacityTheater": 96,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.namihayadome.gr.jp/shisetsuannai.html",
+          "observedAt": "2026-08-05",
+          "note": "約190㎡（倉庫込み）、通常定員約96名、椅子席のみ約180名、3分割可。通信設備は未観測"
         },
         {
           "id": "ractab-medium-meeting",
@@ -25738,7 +26840,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.namihayadome.gr.jp/shisetsuannai.html",
+          "observedAt": "2026-08-05",
+          "note": "約75㎡（倉庫込み）、通常定員約30名、椅子席のみ約50名、2分割可。通信設備は未観測"
         },
         {
           "id": "ractab-table-tennis-open",
@@ -25752,7 +26857,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.namihayadome.gr.jp/kojinriyou.html",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式の現行個人利用ページで卓球台開放の料金・時間・登録条件を確認したが、実施する物理区画と卓球台数は同ページ上で特定できない。サブアリーナ等へ推定帰属させず要確認として独立保持"
         }
       ],
       "bestSpace": {
@@ -25835,7 +26943,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.pulseplaza.jp/floor/",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページで無柱5,400㎡、天井10m、床荷重5t/㎡を5,000kg/㎡へ換算して確認。収容人数、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -26030,7 +27141,10 @@ export const venueData = {
           "capacityTheater": 4300,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.convex-okayama.co.jp/facility/",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページで3,797㎡、収容4,300人を確認。収容人数はレイアウトの公開値で固定席数、天井高、床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "convex-medium",
@@ -26044,7 +27158,10 @@ export const venueData = {
           "capacityTheater": 3000,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.convex-okayama.co.jp/facility/",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページで2,571㎡、収容3,000人を確認。収容人数はレイアウトの公開値で固定席数、天井高、床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "convex-small",
@@ -26058,7 +27175,10 @@ export const venueData = {
           "capacityTheater": 1000,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.convex-okayama.co.jp/facility/",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページで1,415㎡、収容1,000人を確認。収容人数はレイアウトの公開値で固定席数、天井高、床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "convex-large-two-thirds",
@@ -26072,7 +27192,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.convex-okayama.co.jp/direction/charge/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式HTML料金表で大展示場2/3区画2,327㎡を確認。天井高、収容人数、床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "convex-large-one-third",
@@ -26086,7 +27209,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.convex-okayama.co.jp/direction/charge/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式HTML料金表で大展示場1/3区画1,470㎡を確認。天井高、収容人数、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -26169,7 +27295,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.kyoceradome-osaka.jp/use_guide/arena/",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページでアリーナ13,200㎡、天井高60mを確認。固定席数、収容人数、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -26364,7 +27493,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://exhibition-oken.jp/home/%E7%B7%8F%E5%90%88%E5%B1%95%E7%A4%BA%E9%A4%A8/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式設備ページで展示館2,640㎡、天井高5m、4分割、搬入口6か所（最大W4.75×H4.0m）、有料Wi-Fiと臨時回線を確認。収容人数、固定席、床荷重、投擲は未観測"
         },
         {
           "id": "hiroshima-exhibition-one-zone",
@@ -26378,7 +27510,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://exhibition-oken.jp/ご利用料金案内/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行料金表で1区画660㎡を確認。展示館共通の天井5m、有料Wi-Fi・臨時回線条件を継承。収容人数、床荷重、投擲は未観測"
         },
         {
           "id": "hiroshima-exhibition-two-zones",
@@ -26392,7 +27527,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://exhibition-oken.jp/ご利用料金案内/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行料金表で2区画1,320㎡を確認。展示館共通の天井5m、有料Wi-Fi・臨時回線条件を継承。収容人数、床荷重、投擲は未観測"
         },
         {
           "id": "hiroshima-exhibition-three-zones",
@@ -26406,7 +27544,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://exhibition-oken.jp/ご利用料金案内/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行料金表で3区画1,980㎡を確認。展示館共通の天井5m、有料Wi-Fi・臨時回線条件を継承。収容人数、床荷重、投擲は未観測"
         }
       ],
       "bestSpace": {
@@ -26553,7 +27694,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": 1356,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.sapporo.jp/sports/sisetsu/institution/gym/chuo.html",
+          "observedAt": "2026-08-04",
+          "note": "札幌市公式ページで2,612㎡、固定1,356席、可動1,104席、車いす・同伴者各22席を確認。収容人数、天井高、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -26700,7 +27844,10 @@ export const venueData = {
           "capacityTheater": 3368,
           "capacityFixed": 3368,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://aomori-sportspark.jp/new_athletic_park/mainarena/",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで64m×46m（3,910㎡）、天井14.5〜23.1m、固定3,368席を確認。天井高は範囲のため空欄とし注記に保持。最大収容人数、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -26766,7 +27913,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.marinemesse.or.jp/kokusai/organizer/material",
+          "observedAt": "2026-08-05",
+          "note": "運営財団公式の2026年5月作成利用手引きを画像照合し、3,425㎡、床荷重5,000kg/㎡、N1・N2搬入口W3.4×H3.4mと車両乗入れを確認。天井高、収容人数、固定席、投擲は未観測"
         }
       ],
       "bestSpace": {
@@ -26897,7 +28047,10 @@ export const venueData = {
           "capacityTheater": 2000,
           "capacityFixed": 2000,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.kspa.or.jp/park_charge/",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページでグラウンド約11,000㎡、スタンド約2,000席、ドーム最高48mを確認。最高高さは吊物下有効高さとは明示されない。床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "parkdome-quarter",
@@ -26911,7 +28064,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.kspa.or.jp/park_charge/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式HTML料金表でグラウンド1/4面利用を確認。2,750㎡は親区画約11,000㎡の1/4として計算。ドーム最高48mは吊物下有効高さではない。床荷重、収容人数、投擲、催事専有回線は未観測"
         }
       ],
       "bestSpace": {
@@ -27074,7 +28230,10 @@ export const venueData = {
           "capacityTheater": 4048,
           "capacityFixed": 2028,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://budo.oita-sportspark.jp/facility/",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで約81m×40m（約3,570㎡）、有効天井高12.5m、定員4,048（固定2,028、車いす20、可動2,000）を確認。中央19mは有効天井高と区別。床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -27237,7 +28396,10 @@ export const venueData = {
           "capacityTheater": 4644,
           "capacityFixed": 1572,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.kochi-kenmin.org/faci_1/",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで1階1,945.30㎡、移動3,072席、2階固定1,572席、定員4,644、ステージ109.20㎡を確認。天井高、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -29304,7 +30466,10 @@ export const venueData = {
           "capacityTheater": 5058,
           "capacityFixed": 2058,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.sasebo.lg.jp/bunsupo/sports/taikukan.html",
+          "observedAt": "2026-08-04",
+          "note": "佐世保市公式案内で大体育室1,920㎡、固定2,058席、移動3,000席を確認。定員5,058は固定・移動席の合計として記録。天井高、床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "sasebo-small",
@@ -29318,7 +30483,10 @@ export const venueData = {
           "capacityTheater": 800,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.sasebo.lg.jp/bunsupo/sports/taikukan.html",
+          "observedAt": "2026-08-05",
+          "note": "佐世保市公式案内で24m×32m（768㎡）、移動席800席、バスケット1面・バレー2面・バドミントン4面を確認。固定席、天井高、床荷重、搬入寸法は未観測"
         },
         {
           "id": "sasebo-community-hall",
@@ -29332,7 +30500,10 @@ export const venueData = {
           "capacityTheater": 600,
           "capacityFixed": null,
           "stageType": "proscenium",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.city.sasebo.lg.jp/bunsupo/sports/taikukan.html",
+          "observedAt": "2026-08-05",
+          "note": "佐世保市公式案内で本格的ホール機能・収容600人を確認。中規模コンサート、講習会、音楽発表会等に利用可能。面積、固定席内訳、舞台寸法、搬入寸法、通信設備は未観測"
         },
         {
           "id": "sasebo-athlete-room",
@@ -29346,7 +30517,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.city.sasebo.lg.jp/documents/2764/06taikubunkakan.pdf",
+          "observedAt": "2026-08-05",
+          "note": "佐世保市の現行施設ページが案内する料金PDFを画像照合し、選手控室A・Bの専用付帯・個別利用区分を確認。各室の面積、定員、設備、通信環境は未観測"
         },
         {
           "id": "sasebo-meeting-room",
@@ -29360,7 +30534,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.city.sasebo.lg.jp/documents/2764/06taikubunkakan.pdf",
+          "observedAt": "2026-08-05",
+          "note": "佐世保市の現行施設ページが案内する料金PDFを画像照合し、専用付帯・個別利用区分を確認。面積、定員、設備、通信環境は未観測"
         },
         {
           "id": "sasebo-officer-room",
@@ -29374,7 +30551,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.city.sasebo.lg.jp/documents/2764/06taikubunkakan.pdf",
+          "observedAt": "2026-08-05",
+          "note": "佐世保市の現行施設ページが案内する料金PDFを画像照合し、専用付帯利用区分を確認。面積、定員、設備、通信環境は未観測"
         },
         {
           "id": "sasebo-conference-room",
@@ -29388,7 +30568,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.city.sasebo.lg.jp/documents/2764/06taikubunkakan.pdf",
+          "observedAt": "2026-08-05",
+          "note": "佐世保市の現行施設ページが案内する料金PDFを画像照合し、専用付帯・個別利用区分を確認。面積、定員、設備、通信環境は未観測"
         }
       ],
       "bestSpace": {
@@ -29442,7 +30625,10 @@ export const venueData = {
           "capacityTheater": 2001,
           "capacityFixed": 2001,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://kenminhall.com/visitors/venue/",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで2,001席、舞台全幅49m×奥行20m、プロセニアム高さ10〜7m、すのこ高さ25mを確認。プロセニアム高さを舞台側の高さとして記録し、アリーナ天井高とは扱わない。床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -29589,7 +30775,10 @@ export const venueData = {
           "capacityTheater": 40000,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.suita.osaka.jp/bunka/1018347/1021077/1018351/",
+          "observedAt": "2026-08-04",
+          "note": "吹田市公式ページで収容40,000人を確認。屋外スタジアムのため、アリーナ床面積、天井高、固定席構成、床荷重、投擲、搬入寸法は未観測又は該当しない"
         }
       ],
       "bestSpace": {
@@ -30936,7 +32125,10 @@ export const venueData = {
           "capacityTheater": 21600,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://sangastadium-by-kyocera.jp/stadium-guide/overview",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページで収容21,600人を確認。屋外スタジアムのため、アリーナ床面積、天井高、固定席構成、床荷重、投擲、搬入寸法は未観測又は該当しない"
         },
         {
           "id": "sanga-meeting-a",
@@ -30950,7 +32142,10 @@ export const venueData = {
           "capacityTheater": 120,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://sangastadium-by-kyocera.jp/meeting-room/meeting-facilities",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行施設・税込料金ページで約181㎡・120名・Wi-Fiありを確認。定員分の机椅子を備えるがレイアウトにより変更の場合あり。床荷重と配信向け専有回線は未観測"
         },
         {
           "id": "sanga-studio-ab",
@@ -30964,7 +32159,10 @@ export const venueData = {
           "capacityTheater": 20,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://sangastadium-by-kyocera.jp/sky-field/vr-fitness/studio-rental",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式ページでスタジオA/Bをセット貸出、定員20名、常設の鏡・棚・冷暖房を確認。スタジオBは移動式鏡。面積、天井高、床荷重、配信設備は未観測"
         },
         {
           "id": "sanga-meeting-b1",
@@ -30978,7 +32176,10 @@ export const venueData = {
           "capacityTheater": 66,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://sangastadium-by-kyocera.jp/meeting-room/meeting-facilities",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行施設・税込料金ページで約89㎡・66名・Wi-Fiありを確認。会議室Cとのパーテーションを外して一体利用可能。定員分の机椅子を備える。床荷重と配信向け専有回線は未観測"
         },
         {
           "id": "sanga-meeting-d1",
@@ -30992,7 +32193,10 @@ export const venueData = {
           "capacityTheater": 48,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://sangastadium-by-kyocera.jp/meeting-room/meeting-facilities",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行施設・税込料金ページで約72㎡・48名・Wi-Fiありを確認。定員分の机椅子を備えるがレイアウトにより変更の場合あり。床荷重と配信向け専有回線は未観測"
         },
         {
           "id": "sanga-meeting-f1",
@@ -31006,7 +32210,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://sangastadium-by-kyocera.jp/meeting-room/meeting-facilities",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行施設・税込料金ページで約40㎡・30名・Wi-Fiありを確認。定員分の机椅子を備えるがレイアウトにより変更の場合あり。床荷重と配信向け専有回線は未観測"
         },
         {
           "id": "sanga-meeting-g",
@@ -31020,7 +32227,10 @@ export const venueData = {
           "capacityTheater": 18,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://sangastadium-by-kyocera.jp/meeting-room/meeting-facilities",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行施設・税込料金ページで約31㎡・18名・Wi-Fiありを確認。定員分の机椅子を備えるがレイアウトにより変更の場合あり。床荷重と配信向け専有回線は未観測"
         },
         {
           "id": "sanga-meeting-h1",
@@ -31034,7 +32244,10 @@ export const venueData = {
           "capacityTheater": 20,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://sangastadium-by-kyocera.jp/meeting-room/meeting-facilities",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行施設・税込料金ページで約24㎡・20名・Wi-Fiありを確認。定員分の机椅子を備えるがレイアウトにより変更の場合あり。床荷重と配信向け専有回線は未観測"
         },
         {
           "id": "sanga-meeting-i1",
@@ -31048,7 +32261,10 @@ export const venueData = {
           "capacityTheater": 16,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://sangastadium-by-kyocera.jp/meeting-room/meeting-facilities",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行施設・税込料金ページで約19㎡・16名・Wi-Fiありを確認。定員分の机椅子を備えるがレイアウトにより変更の場合あり。床荷重と配信向け専有回線は未観測"
         },
         {
           "id": "sanga-meeting-j1",
@@ -31062,7 +32278,10 @@ export const venueData = {
           "capacityTheater": 10,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://sangastadium-by-kyocera.jp/meeting-room/meeting-facilities",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行施設・税込料金ページで約14㎡・10名・Wi-Fiありを確認。定員分の机椅子を備えるがレイアウトにより変更の場合あり。床荷重と配信向け専有回線は未観測"
         },
         {
           "id": "sanga-vip",
@@ -31076,7 +32295,10 @@ export const venueData = {
           "capacityTheater": 100,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://sangastadium-by-kyocera.jp/meeting-room/meeting-facilities",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行施設・税込料金ページで約300㎡・100名・Wi-Fiありを確認。VIPラウンジとVIPルーム1・2の3区画セット。宴会利用可能だがゴミは持ち帰り。収容数はレイアウトで変更あり"
         },
         {
           "id": "sanga-skybox-a",
@@ -31090,7 +32312,10 @@ export const venueData = {
           "capacityTheater": 22,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://sangastadium-by-kyocera.jp/meeting-room/meeting-facilities",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行施設・税込料金ページで約28㎡・22名を確認。定員分の机椅子を備えるがレイアウトにより変更の場合あり。Wi-Fi、床荷重、配信向け専有回線は未観測"
         },
         {
           "id": "sanga-skybox-b",
@@ -31104,7 +32329,10 @@ export const venueData = {
           "capacityTheater": 18,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://sangastadium-by-kyocera.jp/meeting-room/meeting-facilities",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行施設・税込料金ページで約21㎡・18名を確認。定員分の机椅子を備えるがレイアウトにより変更の場合あり。Wi-Fi、床荷重、配信向け専有回線は未観測"
         }
       ],
       "bestSpace": {
@@ -31378,7 +32606,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://nagaipark.com/stadium/guide/price/",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページでその他利用の全スタンド料金を確認。収容人数、フィールド面積、固定席構成、床荷重、投擲、搬入寸法は未観測又は該当しない"
         }
       ],
       "bestSpace": {
@@ -31733,7 +32964,10 @@ export const venueData = {
           "capacityTheater": 24665,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.hanasaka-stadium.jp/guide/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式施設表で天然芝117m×76.1m、収容24,665人を確認。8,903.7㎡は公称寸法から計算。同じページの紹介文には20,000人表記もあり不一致を注記。屋外天然芝のため天井高・床荷重・投擲、搬入寸法は未観測又は該当しない"
         },
         {
           "id": "hanasaka-north-training",
@@ -31747,7 +32981,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.hanasaka-stadium.jp/department/rental/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行施設・料金表で966㎡、ハンドボール・バドミントン・テニス・バレーボール・卓球等の利用を確認。天井高、収容人数、床荷重、搬入、催事専有回線は未観測"
         },
         {
           "id": "hanasaka-south-training",
@@ -31761,7 +32998,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.hanasaka-stadium.jp/department/rental/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行施設・料金表で966㎡、ハンドボール・バドミントン・テニス・バレーボール・卓球等の利用を確認。天井高、収容人数、床荷重、搬入、催事専有回線は未観測"
         },
         {
           "id": "hanasaka-main-stand",
@@ -31775,7 +33015,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": 6610,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.hanasaka-stadium.jp/department/rental/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行施設・料金表で固定6,610席を確認。面積、床荷重、搬入、配信設備は未観測"
         },
         {
           "id": "hanasaka-back-stand",
@@ -31789,7 +33032,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": 10917,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.hanasaka-stadium.jp/department/rental/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行施設・料金表で固定10,917席、上段5,022席・下段5,895席を確認。上下段別利用の可否、面積、床荷重、搬入、配信設備は未観測"
         },
         {
           "id": "hanasaka-home-stand",
@@ -31803,7 +33049,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": 3842,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.hanasaka-stadium.jp/department/rental/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行施設・料金表で固定3,842席を確認。面積、床荷重、搬入、配信設備は未観測"
         },
         {
           "id": "hanasaka-away-stand",
@@ -31817,7 +33066,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": 2705,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.hanasaka-stadium.jp/department/rental/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行施設・料金表で固定2,705席を確認。面積、床荷重、搬入、配信設備は未観測"
         }
       ],
       "bestSpace": {
@@ -32044,7 +33296,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.gco.co.jp/facilities/3f/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式ページでイベントホール2,600㎡、天井9.4m、無柱、床荷重1t/㎡を1,000kg/㎡へ換算、2分割・3分割、イベントホールLANを確認。別区画のメインホール2,754席が誤って収容欄に入っていた既存値は削除。収容人数、投擲は未観測"
         },
         {
           "id": "gcube-main",
@@ -32058,7 +33313,10 @@ export const venueData = {
           "capacityTheater": 2754,
           "capacityFixed": 2754,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.gco.co.jp/facilities/",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページでメインホール最大2,754席を確認。舞台・天井高、床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "gcube-event-1930",
@@ -32072,7 +33330,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.gco.co.jp/facilities/3f/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の興行・展示会料金表でA+B+C+D又はB+C+D+Eの1,930㎡区画を確認。イベントホール共通の天井9.4m、床荷重1t/㎡、LAN条件を継承。収容人数、投擲は未観測"
         },
         {
           "id": "gcube-event-1500",
@@ -32086,7 +33347,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.gco.co.jp/facilities/3f/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の興行・展示会料金表でA+B+C又はC+D+Eの1,500㎡区画を確認。イベントホール共通の天井9.4m、床荷重1t/㎡、LAN条件を継承。収容人数、投擲は未観測"
         },
         {
           "id": "gcube-event-1260",
@@ -32100,7 +33364,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.gco.co.jp/facilities/3f/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の興行・展示会料金表でB+C+Dの1,260㎡区画を確認。イベントホール共通の天井9.4m、床荷重1t/㎡、LAN条件を継承。収容人数、投擲は未観測"
         },
         {
           "id": "gcube-event-1100",
@@ -32114,7 +33381,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.gco.co.jp/facilities/3f/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の興行・展示会料金表でA+B又はD+Eの1,100㎡区画を確認。イベントホール共通の天井9.4m、床荷重1t/㎡、LAN条件を継承。収容人数、投擲は未観測"
         },
         {
           "id": "gcube-event-830",
@@ -32128,7 +33398,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.gco.co.jp/facilities/3f/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の興行・展示会料金表でB+C又はC+Dの830㎡区画を確認。イベントホール共通の天井9.4m、床荷重1t/㎡、LAN条件を継承。収容人数、投擲は未観測"
         },
         {
           "id": "gcube-event-670",
@@ -32142,7 +33415,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.gco.co.jp/facilities/3f/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の興行・展示会料金表でA又はEの670㎡区画を確認。イベントホール共通の天井9.4m、床荷重1t/㎡、LAN条件を継承。収容人数、投擲は未観測"
         }
       ],
       "bestSpace": {
@@ -32196,7 +33472,10 @@ export const venueData = {
           "capacityTheater": 2700,
           "capacityFixed": 2700,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.festivalhall.jp/about/",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページで収容2,700人、舞台間口30mを確認。舞台奥行・高さ、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -32267,7 +33546,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.orixtheater.jp/information/price/",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページで貸館料金・利用条件を確認。客席数、舞台寸法、天井高、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -32338,7 +33620,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.kih.co.jp/s/kokusaihall/facilities/index",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページで施設・座席案内、料金PDFを確認。客席数、舞台寸法、天井高、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -32661,7 +33946,10 @@ export const venueData = {
           "capacityTheater": 28520,
           "capacityFixed": 28520,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.hiroshima-stadiumpark.jp/peacewing/rental/detail/",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページで天然芝エリア78m×115m、フィールド全体84m×121m、収容28,520席を確認。10164㎡は84m×121mを計算した値。屋外・天然芝の利用可能日条件があるため、固定席構成、床荷重、投擲、搬入寸法は未観測又は該当しない"
         }
       ],
       "bestSpace": {
@@ -32727,7 +34015,10 @@ export const venueData = {
           "capacityTheater": 10000,
           "capacityFixed": 3040,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hiroshima.lg.jp/facility/kinrou/1031726.html",
+          "observedAt": "2026-08-04",
+          "note": "広島市公式ページで収容約10,000人、固定3,040席を確認。天井高、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -32810,7 +34101,10 @@ export const venueData = {
           "capacityTheater": 72000,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.nissan-stadium.jp/stadium/gaiyo.php",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページで天然芝107m×72m、約72,000席を確認。7704㎡は公称寸法から計算。屋外・天然芝のため、アリーナ床荷重・天井高・投擲、搬入寸法は未観測又は該当しない"
         }
       ],
       "bestSpace": {
@@ -32876,7 +34170,10 @@ export const venueData = {
           "capacityTheater": 32000,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.yokohama-stadium.co.jp/user",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式ページで野球以外のイベント利用、グラウンド・スタンド・屋内練習場・控室・映像音響設備を確認。32,000人はコンサート時のグラウンドアリーナ席とスタンド席を合わせた最大収容で、固定席数ではない"
         }
       ],
       "bestSpace": {
@@ -33007,7 +34304,10 @@ export const venueData = {
           "capacityTheater": 3728,
           "capacityFixed": 1728,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.tef.or.jp/tb/budo/",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで34m×58m（1,972㎡）、固定1,728席、フロア2,000席、計3,728席を確認。天井高、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -34322,7 +35622,10 @@ export const venueData = {
           "capacityTheater": 5000,
           "capacityFixed": 2382,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.mito.lg.jp/uploaded/attachment/1039.pdf",
+          "observedAt": "2026-08-05",
+          "note": "水戸市公式施設概要PDFで69m×46m（3,255㎡）、有効高さ14m、収容5,000人、固定2,382席を確認。固定席の内数に貴賓席30、別に電動式可動1,260、手動式可動288、車いす8。指定管理者ページの固定1,980席とは不一致のため市公式最新内訳を採用。床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "mito-sub",
@@ -34336,7 +35639,10 @@ export const venueData = {
           "capacityTheater": 198,
           "capacityFixed": 192,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.mito.lg.jp/uploaded/attachment/1039.pdf",
+          "observedAt": "2026-08-05",
+          "note": "水戸市公式施設概要PDFで997㎡、有効高さ12.5m、観客席198席（固定192・車いす6）を画像照合。床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "mito-suite-6",
@@ -34350,7 +35656,10 @@ export const venueData = {
           "capacityTheater": 6,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.city.mito.lg.jp/uploaded/attachment/61055.pdf",
+          "observedAt": "2026-08-05",
+          "note": "水戸市公式条例改正議案で6人部屋区分を確認。2025年度当初予算概要では6室整備。指定管理者がアリーナ利用に支障なしと認める場合のみ単独利用可能。面積、床荷重、通信設備は未観測"
         },
         {
           "id": "mito-suite-8",
@@ -34364,7 +35673,10 @@ export const venueData = {
           "capacityTheater": 8,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.city.mito.lg.jp/uploaded/attachment/61055.pdf",
+          "observedAt": "2026-08-05",
+          "note": "水戸市公式条例改正議案で8人部屋区分を確認。2025年度当初予算概要では6室整備。指定管理者がアリーナ利用に支障なしと認める場合のみ単独利用可能。面積、床荷重、通信設備は未観測"
         },
         {
           "id": "mito-suite-9",
@@ -34378,7 +35690,10 @@ export const venueData = {
           "capacityTheater": 9,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.city.mito.lg.jp/uploaded/attachment/61055.pdf",
+          "observedAt": "2026-08-05",
+          "note": "水戸市公式条例改正議案で9人部屋区分を確認。2025年度当初予算概要では2室整備。指定管理者がアリーナ利用に支障なしと認める場合のみ単独利用可能。面積、床荷重、通信設備は未観測"
         },
         {
           "id": "mito-wrestling",
@@ -34392,7 +35707,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.mito.lg.jp/uploaded/attachment/1039.pdf",
+          "observedAt": "2026-08-05",
+          "note": "水戸市公式施設概要PDFを画像照合し410㎡を確認。定員、天井高、床荷重、搬入、通信設備は未観測"
         },
         {
           "id": "mito-fencing",
@@ -34406,7 +35724,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.mito.lg.jp/uploaded/attachment/1039.pdf",
+          "observedAt": "2026-08-05",
+          "note": "水戸市公式施設概要PDFを画像照合し261㎡を確認。定員、天井高、床荷重、搬入、通信設備は未観測"
         },
         {
           "id": "mito-boxing",
@@ -34420,7 +35741,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.mito.lg.jp/uploaded/attachment/1039.pdf",
+          "observedAt": "2026-08-05",
+          "note": "水戸市公式施設概要PDFを画像照合し317㎡を確認。定員、天井高、床荷重、搬入、通信設備は未観測"
         },
         {
           "id": "mito-training",
@@ -34434,7 +35758,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.mito.lg.jp/uploaded/attachment/1039.pdf",
+          "observedAt": "2026-08-05",
+          "note": "水戸市公式施設概要PDFを画像照合し331㎡を確認。定員、天井高、床荷重、搬入、通信設備は未観測"
         },
         {
           "id": "mito-multipurpose",
@@ -34448,7 +35775,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.mito.lg.jp/uploaded/attachment/1039.pdf",
+          "observedAt": "2026-08-05",
+          "note": "水戸市公式施設概要PDFを画像照合し377㎡・3室への分割利用可を確認。分割面積、定員、天井高、床荷重、通信設備は未観測"
         },
         {
           "id": "mito-meeting",
@@ -34462,7 +35792,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.city.mito.lg.jp/uploaded/attachment/1039.pdf",
+          "observedAt": "2026-08-05",
+          "note": "水戸市公式施設概要PDFを画像照合し400㎡・3室への分割利用可を確認。分割面積、定員、天井高、床荷重、通信設備は未観測"
         }
       ],
       "bestSpace": {
@@ -34705,7 +36038,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.marronnierplaza.jp/facility/large-exhibition.html",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式ページで2,665㎡、天井高10.3m、床荷重5t/㎡を5,000kg/㎡へ換算、間仕切り分割、搬出入口4か所W5.0×H4.7m、車両直接乗入れを確認。通信は2週間前までの臨時回線工事。収容人数、投擲は未観測"
         },
         {
           "id": "marronnier-large-two-thirds",
@@ -34719,7 +36055,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.marronnierplaza.jp/facility/large-exhibition.html",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式ページと現行料金表で大展示場2/3区画1,780㎡、天井10.3m、床荷重5t/㎡を5,000kg/㎡へ換算、間仕切り分割、車両直接乗入れを確認。収容人数、投擲は未観測"
         },
         {
           "id": "marronnier-large-half",
@@ -34733,7 +36072,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.marronnierplaza.jp/facility/large-exhibition.html",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式ページと現行料金表で大展示場1/2区画1,333㎡、天井10.3m、床荷重5t/㎡を5,000kg/㎡へ換算、間仕切り分割、車両直接乗入れを確認。収容人数、投擲は未観測"
         },
         {
           "id": "marronnier-large-third",
@@ -34747,7 +36089,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.marronnierplaza.jp/facility/large-exhibition.html",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式ページと現行料金表で大展示場1/3区画890㎡、天井10.3m、床荷重5t/㎡を5,000kg/㎡へ換算、間仕切り分割、車両直接乗入れを確認。収容人数、投擲は未観測"
         }
       ],
       "bestSpace": {
@@ -34813,7 +36158,10 @@ export const venueData = {
           "capacityTheater": 20000,
           "capacityFixed": 6500,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.nagano-mwave.co.jp/m_wave/event_organizer/medias/uploads/202604_11arena-manual.pdf",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式2026年4月版利用案内で展示物等300kg/㎡、東西搬入口から11t車・W2.7×H3.6m以内を確認。公式施設案内で約13,700㎡、固定約6,500席、収容20,000人、複数イベント対応を確認。室内中央高さ約38mは吊物下有効高さとは明示されないため空欄。投擲は未観測"
         }
       ],
       "bestSpace": {
@@ -34992,7 +36340,10 @@ export const venueData = {
           "capacityTheater": 5000,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://whitering.jp/facility.html",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページで約66m×41m（約2,700㎡）、観客席約5,000、最高高さ約39.7mを確認。最高高さは吊物下有効高さとは明示されないため空欄とし注記に保持。床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "whitering-sub",
@@ -35006,7 +36357,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://whitering.jp/facility.html",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式ページでサブ約2,300㎡を確認。収容人数、天井高、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -35249,7 +36603,10 @@ export const venueData = {
           "capacityTheater": 6000,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.t-messe.or.jp/organizer/floorguide.html",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページで5,000㎡、天井12〜13m、床荷重5t/㎡を5,000kg/㎡へ換算、集会椅子席6,000人規模を確認。天井高は範囲のため最小12mを記録。6,000人は固定席数ではない"
         },
         {
           "id": "twin-south",
@@ -35263,7 +36620,10 @@ export const venueData = {
           "capacityTheater": 6500,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.t-messe.or.jp/organizer/floorguide.html",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式ページで5,400㎡、天井9.5m、床荷重5t/㎡を5,000kg/㎡へ換算、2/3・1/3分割、W5.0×H4.0m搬出入口4か所、椅子席6,500人の実績を確認。6,500人は固定席数ではない"
         },
         {
           "id": "twin-north-half",
@@ -35277,7 +36637,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.t-messe.or.jp/organizer/price.html",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行HTML料金表で北館1/2・2,500㎡を確認。共通の天井12〜13m、床荷重5,000kg/㎡、公衆Wi-Fi条件を継承。収容人数、投擲は未観測"
         },
         {
           "id": "twin-south-two-thirds",
@@ -35291,7 +36654,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.t-messe.or.jp/organizer/price.html",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行HTML料金表で南館2/3・3,600㎡を確認。共通の天井9.5m、床荷重5,000kg/㎡、公衆Wi-Fi条件を継承。収容人数、投擲は未観測"
         },
         {
           "id": "twin-south-third",
@@ -35305,7 +36671,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.t-messe.or.jp/organizer/price.html",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式の現行HTML料金表で南館1/3・1,800㎡を確認。共通の天井9.5m、床荷重5,000kg/㎡、公衆Wi-Fi条件を継承。収容人数、投擲は未観測"
         }
       ],
       "bestSpace": {
@@ -35436,7 +36805,10 @@ export const venueData = {
           "capacityTheater": 2700,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.kusanagi-sportscomplex.jp/images/3349.pdf",
+          "observedAt": "2026-08-04",
+          "note": "指定管理者公式料金PDFで82m×46m（3,772㎡）、観客席2,700を確認。面積は公称寸法から計算。天井高、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -35663,7 +37035,10 @@ export const venueData = {
           "capacityTheater": 2085,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.tokyo-dome.co.jp/prism/organizer/",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページで有効面積2,809㎡、天井5m、最大2,085人、床荷重500kg/㎡、高速ネット回線5本、スライディングウォールを確認。2,085人は固定席数ではない"
         },
         {
           "id": "prism-pattern-a",
@@ -35677,7 +37052,10 @@ export const venueData = {
           "capacityTheater": 1745,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.tokyo-dome.co.jp/prism/organizer/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式主催者ページで2,327㎡・最大1,745名を確認。共通の天井5m、床荷重500kg/㎡、高速ネット5回線、スライディングウォールを継承。収容はレイアウトにより変動、投擲は未観測"
         },
         {
           "id": "prism-pattern-b",
@@ -35691,7 +37069,10 @@ export const venueData = {
           "capacityTheater": 1030,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.tokyo-dome.co.jp/prism/organizer/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式主催者ページで西半面1,374㎡・最大1,030名を確認。共通の天井5m、床荷重500kg/㎡、高速ネット5回線を継承。他催事同時開催・音漏れ・搬出入調整条件がある。投擲は未観測"
         },
         {
           "id": "prism-pattern-c",
@@ -35705,7 +37086,10 @@ export const venueData = {
           "capacityTheater": 1030,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.tokyo-dome.co.jp/prism/organizer/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式主催者ページで東半面1,374㎡・最大1,030名を確認。共通の天井5m、床荷重500kg/㎡、高速ネット5回線を継承。他催事同時開催・音漏れ・搬出入調整条件がある。投擲は未観測"
         }
       ],
       "bestSpace": {
@@ -35852,7 +37236,10 @@ export const venueData = {
           "capacityTheater": 2883,
           "capacityFixed": null,
           "stageType": "unknown",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.obihiro.hokkaido.jp/bunka/sports/shisetsu/1007571/",
+          "observedAt": "2026-08-05",
+          "note": "帯広市公式ページで競技エリア61m×46m・2,806㎡、観覧席2,883席を確認。現行指定管理者料金表は3分割利用を掲載。天井高、固定可動席内訳、床荷重、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -35999,7 +37386,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": 2468,
           "stageType": "",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.akita.lg.jp/shisetsu/sports-koen/1009703/1006397.html",
+          "observedAt": "2026-08-04",
+          "note": "秋田市公式ページでメインアリーナ2,540㎡、固定2,468席、ロールバック900席、移動1,666席を確認。収容人数、天井高、床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "cna-sub",
@@ -36013,7 +37403,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.akita.lg.jp/shisetsu/sports-koen/1009703/1006397.html",
+          "observedAt": "2026-08-04",
+          "note": "秋田市公式ページでサブアリーナ836㎡を確認。収容人数、天井高、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -36240,7 +37633,10 @@ export const venueData = {
           "capacityTheater": 2725,
           "capacityFixed": 2725,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.kenbun.jp/facility/facility02/",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページでメインホール2,725席（車椅子10席を含む）を確認。舞台寸法、天井高、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -36341,7 +37737,10 @@ export const venueData = {
           "capacityTheater": 1504,
           "capacityFixed": 1504,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.pcf.city.hiroshima.jp/icch/phoenix.html",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式ページで1,547㎡、最大1,504席、ステージ間口22m×奥行13m×天井高8.95m、6か国語同時通訳を確認。8.95mはステージ天井高でありアリーナ有効高とは扱わない。無料有線LAN2回線、100Mbps保証付き光回線、Wi-Fiと配信回線分離条件を公式通信資料で補完。床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -36712,7 +38111,10 @@ export const venueData = {
           "capacityTheater": 2005,
           "capacityFixed": 2005,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://rohmtheatrekyoto.jp/rental/facility/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式ページでメインホール2,005席（オーケストラピット使用時1,833席）を確認。2026年3月版利用案内から有線LAN、共用Wi-Fi、有料専用光回線2回線を補完。舞台寸法、天井高、床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "rohm-south",
@@ -36726,7 +38128,10 @@ export const venueData = {
           "capacityTheater": 716,
           "capacityFixed": 716,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://rohmtheatrekyoto.jp/rental/facility/",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページでサウスホール716席を確認。舞台寸法、天井高、床荷重、投擲、搬入寸法は未観測"
         },
         {
           "id": "rohm-north",
@@ -36740,7 +38145,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://rohmtheatrekyoto.jp/rental/facility/",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページでノースホール約300㎡平土間を確認。収容人数、天井高、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -37015,7 +38423,10 @@ export const venueData = {
           "capacityTheater": 1833,
           "capacityFixed": 1833,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.kyotoconcerthall.org/facilities/",
+          "observedAt": "2026-08-05",
+          "note": "運営者公式ページで大ホール総席数1,833席、車椅子6席を確認。楽屋Wi-Fiとライブ配信用1Gbps光回線、11t車接車可能な搬入口を公式貸館案内で補完。舞台寸法、天井高、床荷重、投擲、搬入口寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -37081,7 +38492,10 @@ export const venueData = {
           "capacityTheater": 2003,
           "capacityFixed": 2003,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.fukuyamabunkahall.jp/r-rose/facility/",
+          "observedAt": "2026-08-04",
+          "note": "運営者公式ページで大ホール2,003人を確認。舞台寸法、天井高、床荷重、投擲、搬入寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -37260,7 +38674,10 @@ export const venueData = {
           "capacityTheater": 4364,
           "capacityFixed": 1664,
           "stageType": "fixed",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.pref.nara.jp/secure/47826/1F%20arena%20heimennzu.pdf",
+          "observedAt": "2026-08-05",
+          "note": "奈良県公式平面図で競技面1,428㎡、天井メッシュまで14m、2階固定1,664席、1階移動2,700席、固定ステージを確認。4,364人は固定・移動席の合計"
         }
       ],
       "bestSpace": {
@@ -37423,7 +38840,10 @@ export const venueData = {
           "capacityTheater": 3956,
           "capacityFixed": 2004,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.kanko-miyazaki.jp/arena/2530",
+          "observedAt": "2026-08-05",
+          "note": "宮崎県公式観光情報でバスケットコート3面、固定2,004席、可動最大1,952席を確認。床面積、天井高、床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -37586,7 +39006,10 @@ export const venueData = {
           "capacityTheater": 3024,
           "capacityFixed": 2000,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.toyama-pref-ihc.or.jp/zaidan/SportsCenter/",
+          "observedAt": "2026-08-05",
+          "note": "運営財団公式ページで競技フロア50m×36m、固定2,000席、移動1,024席を確認。天井高、床荷重、投擲は未観測"
         }
       ],
       "bestSpace": {
@@ -38821,7 +40244,10 @@ export const venueData = {
           "capacityTheater": 2090,
           "capacityFixed": 1450,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.ishin100.com/main/guide/gu-arena/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式ページで2,294㎡、固定1,450席、可動640席、体操を含む競技利用を確認。天井高、床荷重、投擲は未観測"
         },
         {
           "id": "ishin-lecture",
@@ -38835,7 +40261,10 @@ export const venueData = {
           "capacityTheater": 72,
           "capacityFixed": 72,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.ishin100.com/main/guide/gu-lecture/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式現行ページで31m×37m・2階固定72席、バスケ/バレー2面、バドミントン/インディアカ/ソフトバレー6面、卓球12面を確認。areaは公表値。天井高、床荷重、通信設備は未観測"
         },
         {
           "id": "ishin-av",
@@ -38849,7 +40278,10 @@ export const venueData = {
           "capacityTheater": 156,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.ishin100.com/main/guide/gu-meeting/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式現行ページで18m×16m・156席、PC/DVD/ビデオ/プロジェクター、230cm×305cmスクリーンを確認。会議、研修、学会、講演、映画上映に利用可能。通信設備は未観測"
         },
         {
           "id": "ishin-library",
@@ -38863,7 +40295,10 @@ export const venueData = {
           "capacityTheater": 40,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.ishin100.com/main/guide/gu-meeting/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式現行ページで16m×8m・40人、展示台を確認。会議、研修、展覧会、作品展に利用可能。通信設備は未観測"
         },
         {
           "id": "ishin-meeting-1",
@@ -38877,7 +40312,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.ishin100.com/main/guide/gu-meeting/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式現行ページで8m×8m・30人、ホワイトボード・黒板・スクリーンを確認。通信設備は未観測"
         },
         {
           "id": "ishin-meeting-2",
@@ -38891,7 +40329,10 @@ export const venueData = {
           "capacityTheater": 18,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.ishin100.com/main/guide/gu-meeting/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式現行ページで8m×5m・18席、ホワイトボード・黒板・スクリーンを確認。通信設備は未観測"
         },
         {
           "id": "ishin-arena-support",
@@ -38905,7 +40346,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.ishin100.com/main/guide/gu-arena/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式現行ページで控室5室、医務室1室、シャワー19を確認。2025年4月料金表に控室冷暖房・温水シャワー料金あり。各室面積、定員、通信設備は未観測"
         },
         {
           "id": "ishin-entrance",
@@ -38919,7 +40363,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.ishin100.com/main/wp-content/uploads/7_%E3%82%A2%E3%83%AA%E3%83%BC%E3%83%8A%E6%96%99%E9%87%91%E8%A1%A8_20250407.pdf",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式2025年4月版料金表で冷暖房料金のあるエントランスホールを確認。面積、定員、催事利用可否、通信設備は未観測"
         },
         {
           "id": "ishin-shared-equipment",
@@ -38933,7 +40380,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.ishin100.com/main/wp-content/uploads/7_%E3%82%A2%E3%83%AA%E3%83%BC%E3%83%8A%E6%96%99%E9%87%91%E8%A1%A8_20250407.pdf",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式2025年4月版料金表で競技器具、得点表示、放送、養生、ステージ、通信機器、ラケット・ボール等レンタルを確認。配置、在庫、休館中の貸出可否は要確認"
         },
         {
           "id": "ishin-reception",
@@ -38947,7 +40397,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.ishin100.com/main/wp-content/uploads/7_%E3%82%A2%E3%83%AA%E3%83%BC%E3%83%8A%E6%96%99%E9%87%91%E8%A1%A8_20250407.pdf",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式2025年4月版料金表で冷暖房料金のある受付室を確認。面積、定員、基本使用料、通信設備は未観測。2026年8月から約1年間休館"
         }
       ],
       "bestSpace": {
@@ -39126,7 +40579,10 @@ export const venueData = {
           "capacityTheater": 6000,
           "capacityFixed": 2946,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.yamagatasi-taikyou.jp/shisetsu-1sposen-syoukai.html",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式ページでフロア55m×40m・2,200㎡、固定2,946席、車椅子10席、収納可動1,440席、移動椅子1,604席、合計6,000席を確認。天井高、床荷重は未観測。Wi-Fi・展示集会利用は別の公式案内で確認"
         }
       ],
       "bestSpace": {
@@ -39273,7 +40729,10 @@ export const venueData = {
           "capacityTheater": 3324,
           "capacityFixed": 1498,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.kose-sp.pref.yamanashi.jp/guide/739/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式ページで50m×44m、天井15m、固定1,498席、可動826席、立見1,000人を確認。3,324人は固定・可動・立見の合計"
         }
       ],
       "bestSpace": {
@@ -39452,7 +40911,10 @@ export const venueData = {
           "capacityTheater": 5008,
           "capacityFixed": 3016,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.pref.tochigi.lg.jp/b03/pref/gyoukaku/tochigigyoukaku/documents/20251224091710.pdf",
+          "observedAt": "2026-08-05",
+          "note": "栃木県公式管理実績資料で固定3,016席、可動1,992席、バスケット4面等を確認。延床面積は競技面積として扱わず、天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -39615,7 +41077,10 @@ export const venueData = {
           "capacityTheater": 5019,
           "capacityFixed": 2806,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.ishikawa-spc.jp/facilities/main-arina.html",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式ページで80m×46m、固定2,806席、可動2,152席、車いす42席、貴賓19席、イベント利用を確認。天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -39778,7 +41243,10 @@ export const venueData = {
           "capacityTheater": 3000,
           "capacityFixed": 2000,
           "stageType": "fixed",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://yonago-santai.jp/about/facility/mainarena/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式ページで1,836㎡、フロア椅子席3,000人、観客席2,000人、固定ステージ最大18m×7.5mを確認。収容3,000人はフロア椅子配置の値"
         }
       ],
       "bestSpace": {
@@ -39925,7 +41393,10 @@ export const venueData = {
           "capacityTheater": 5000,
           "capacityFixed": 1254,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://aomori-arena.jp/facility/",
+          "observedAt": "2026-08-05",
+          "note": "施設公式ページで40m×50m、可動1,344席、固定1,254席、コンサート時約5,000席を確認。5,000席は仮設等を含む構成で固定席数と区別"
         }
       ],
       "bestSpace": {
@@ -41928,7 +43399,10 @@ export const venueData = {
           "capacityTheater": 2068,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.hanamaki.iwate.jp/bunkasports/sports/1019891/shisetsu/1001954.html",
+          "observedAt": "2026-08-05",
+          "note": "花巻市公式2026年施設一覧で60m×45m、2階観客席2,068名を確認。固定席かは明記されないためcapacity_fixedは未入力。天井高、床荷重は未観測"
         },
         {
           "id": "hanamaki-second",
@@ -41942,7 +43416,10 @@ export const venueData = {
           "capacityTheater": 80,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://hanamaki-sports.com/facilities/facility01/",
+          "observedAt": "2026-08-05",
+          "note": "運営団体公式ページで34m×21m・観客席約80名、バスケ/バレー/テニス各1面、バドミントン4面、卓球8台を確認。areaは公表寸法の積。席種、天井高、床荷重、通信設備は未観測"
         },
         {
           "id": "hanamaki-third",
@@ -41956,7 +43433,10 @@ export const venueData = {
           "capacityTheater": 1982,
           "capacityFixed": 1970,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://hanamaki-sports.com/facilities/facility01/",
+          "observedAt": "2026-08-05",
+          "note": "運営団体公式ページで49m×34.2m、固定1,970席・車椅子12席、フットサル/ハンドボール1面、バスケ/バレー/テニス各2面、バドミントン10面、卓球12台を確認。areaは公表寸法の積。天井高、床荷重、通信設備は未観測"
         },
         {
           "id": "hanamaki-multipurpose",
@@ -41970,7 +43450,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://hanamaki-sports.com/facilities/facility01/",
+          "observedAt": "2026-08-05",
+          "note": "運営団体公式施設ページと市公式現行料金表で存在を確認。一般・児童生徒・営利目的の貸切区分、暖冷房料金あり。面積、定員、分割、設備、通信環境は未観測"
         },
         {
           "id": "hanamaki-training",
@@ -41984,7 +43467,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://hanamaki-sports.com/facilities/facility01/",
+          "observedAt": "2026-08-05",
+          "note": "運営団体公式施設ページと市公式現行料金表で存在を確認。個人利用は一般・高校生区分。面積、定員、年齢条件、機器数、初回講習、通信環境は未観測"
         },
         {
           "id": "hanamaki-shared-equipment",
@@ -41998,7 +43484,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hanamaki.iwate.jp/bunkasports/sports/1019891/shisetsu/1001959.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式現行料金画像と運営団体PDFで共用の競技用具、得点表示、放送、吊物、移動ステージ、机椅子、持込電源の料金表を確認。各アリーナへの配置・在庫数・利用可否は予約時要確認"
         }
       ],
       "bestSpace": {
@@ -43329,7 +44818,10 @@ export const venueData = {
           "capacityTheater": 5705,
           "capacityFixed": 4681,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.spf-sendai.jp/sisetsu/gym/shi-gym/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式ページで65.9m×40.1m、固定4,681席、ロールバック1,024席を確認。5,705人は両者の合計。2027年3月15日まで大規模改修休館予定"
         },
         {
           "id": "kamei-second",
@@ -43343,7 +44835,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.spf-sendai.jp/sisetsu/gym/shi-gym/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式現行ページで32.8m×23.5m、770.80㎡、バスケ1面、バレー最大2面、テニス1面、卓球14台、バドミントン4面を確認。定員、天井高、床荷重、通信設備は未観測。2027年3月15日まで大規模改修休館予定"
         },
         {
           "id": "kamei-pool",
@@ -43357,7 +44852,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.spf-sendai.jp/sisetsu/gym/shi-gym/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式現行ページで25m・5コース、水面275.00㎡、水深1.1〜1.3mを確認。通常時は月〜土10〜21時、日祝10〜20時。2027年3月15日まで大規模改修休館予定"
         },
         {
           "id": "kamei-training",
@@ -43371,7 +44869,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.spf-sendai.jp/sisetsu/gym/shi-gym/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式現行ページで204.08㎡を確認。通常利用には事前講習が必要。機器数、定員、通信設備は未観測。2027年3月15日まで大規模改修休館予定"
         },
         {
           "id": "kamei-gym-room",
@@ -43385,7 +44886,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.spf-sendai.jp/sisetsu/gym/shi-gym/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式現行ページで体育室108.78㎡を確認。定員、利用可能種目、天井高、通信設備は未観測。2027年3月15日まで大規模改修休館予定"
         },
         {
           "id": "kamei-fitness-test",
@@ -43399,7 +44903,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.spf-sendai.jp/sisetsu/gym/shi-gym/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式現行ページで180.18㎡を確認。通常料金表にドクター指導/一般コースあり。定員、機器、予約条件は未観測。2027年3月15日まで大規模改修休館予定"
         },
         {
           "id": "kamei-light-exercise",
@@ -43413,7 +44920,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.spf-sendai.jp/sisetsu/gym/shi-gym/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式現行ページで347.40㎡を確認。定員、分割、利用可能種目、通信設備は未観測。2027年3月15日まで大規模改修休館予定"
         },
         {
           "id": "kamei-training-rooms",
@@ -43427,7 +44937,10 @@ export const venueData = {
           "capacityTheater": 180,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.spf-sendai.jp/sisetsu/gym/shi-gym/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式現行ページで研修室1〜3合計228.92㎡・180名を確認。個別室面積と定員、間仕切条件、通信設備は未観測。2027年3月15日まで大規模改修休館予定"
         },
         {
           "id": "kamei-meeting",
@@ -43441,7 +44954,10 @@ export const venueData = {
           "capacityTheater": 20,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.spf-sendai.jp/sisetsu/gym/shi-gym/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式現行ページで74.8㎡・20名を確認。設備、通信環境は未観測。2027年3月15日まで大規模改修休館予定"
         },
         {
           "id": "kamei-infant-gym",
@@ -43455,7 +44971,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.spf-sendai.jp/sisetsu/gym/shi-gym/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式現行ページで83.55㎡、保護者同伴の未就学児は無料と確認。定員、設備、通信環境は未観測。2027年3月15日まで大規模改修休館予定"
         },
         {
           "id": "kamei-first-support",
@@ -43469,7 +44988,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.spf-sendai.jp/sisetsu/gym/shi-gym/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式現行ページと2019年10月適用料金表で主催者控室3室、放送準備室、男女更衣室を確認。各室面積・定員・通信設備は未観測。2027年3月15日まで大規模改修休館予定"
         },
         {
           "id": "kamei-shared-equipment",
@@ -43483,7 +45005,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.spf-sendai.jp/wp-content/uploads/shi-gym_price201910.pdf",
+          "observedAt": "2026-08-05",
+          "note": "仙台市公式の使用料改定案内が2019年10月適用として案内する指定管理者料金表で舞台、照明、放送、養生、電光掲示、特殊電源を確認。配置・在庫・改修後利用可否は要確認"
         }
       ],
       "bestSpace": {
@@ -43614,7 +45139,10 @@ export const venueData = {
           "capacityTheater": 5000,
           "capacityFixed": 2269,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.yurihonjo.lg.jp/_res/projects/default_project/_page_/001/009/228/1009228.2502.pdf",
+          "observedAt": "2026-08-05",
+          "note": "由利本荘市公式2026年度年間予約対象施設一覧でメインアリーナ3,458㎡、固定2,269席、可動800席、最大5,000人を確認。最大値は仮設等を含む構成で固定席数と区別。天井高、床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -43777,7 +45305,10 @@ export const venueData = {
           "capacityTheater": 1494,
           "capacityFixed": 1494,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.asahikawa.hokkaido.jp/kurashi/401/ka011/d081536_d/fil/hsparina_kihon.pdf",
+          "observedAt": "2026-08-05",
+          "note": "旭川市の新アリーナ基本計画に掲載された現施設概要でアリーナ1,812㎡・固定1,494席を確認。天井高、床荷重、投擲は未観測"
         }
       ],
       "bestSpace": {
@@ -43860,7 +45391,10 @@ export const venueData = {
           "capacityTheater": 5000,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://taibun.com/facility/arena",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式ページの41.6m×45.6mから面積を算出。高さ11mは最も低い位置。固定ステージ20m×7m・間口高7.9m、全面・1/2・1/3利用、競技外催事時の床養生条件を確認。5,000人は施設公式トップの集会規模"
         }
       ],
       "bestSpace": {
@@ -44007,7 +45541,10 @@ export const venueData = {
           "capacityTheater": 5013,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.koriyama.lg.jp/soshiki/44/1662.html",
+          "observedAt": "2026-08-05",
+          "note": "郡山市公式ページの42m×60mから面積を算出。最大5,013席は移動観覧席を含む。体操・新体操を含む競技利用と冷暖房を確認"
         }
       ],
       "bestSpace": {
@@ -44106,7 +45643,10 @@ export const venueData = {
           "capacityTheater": 2500,
           "capacityFixed": 2500,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.kamisu-arena.com/concept/",
+          "observedAt": "2026-08-05",
+          "note": "施設公式ページで固定観覧席約2,500席、スポーツ・各種イベントへの利用、防災時の避難・救援救護スペースを確認。競技面積と天井高は未観測"
         }
       ],
       "bestSpace": {
@@ -44381,7 +45921,10 @@ export const venueData = {
           "capacityTheater": 1310,
           "capacityFixed": 1006,
           "stageType": "unknown",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.pref.tochigi.lg.jp/c09/education/sports/shisetsu/documents/sisetuitirantaiikukan.pdf",
+          "observedAt": "2026-08-05",
+          "note": "栃木県公式施設一覧で43m×39m、椅子席1,006席・立見304席、バレー・バスケット各2面等を確認。面積1,679.1㎡は栃木県スポーツコミッション公式案内とも照合"
         }
       ],
       "bestSpace": {
@@ -44528,7 +46071,10 @@ export const venueData = {
           "capacityTheater": 9000,
           "capacityFixed": 3225,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.pref.gunma.jp/page/22142.html",
+          "observedAt": "2026-08-05",
+          "note": "群馬県公式ページで3,664㎡、固定3,225席、移動2,208席、最大約9,000席、体操・各種イベント、仮設ステージ・舞台照明を確認"
         }
       ],
       "bestSpace": {
@@ -44643,7 +46189,10 @@ export const venueData = {
           "capacityTheater": 2954,
           "capacityFixed": 1988,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.saitama.lg.jp/004/006/003/001/p077482.html",
+          "observedAt": "2026-08-05",
+          "note": "さいたま市公式ページで観覧席2,954席・うちロールバック966席を確認。固定1,988席は差引計算。A・B・Cの3区分料金を公開"
         }
       ],
       "bestSpace": {
@@ -48310,7 +49859,10 @@ export const venueData = {
           "capacityTheater": 7496,
           "capacityFixed": 4380,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.chiba.jp/shimin/seikatsubunka/sports/shisetsu/documents/02_kijyun_portarena.pdf",
+          "observedAt": "2026-08-05",
+          "note": "千葉市公式管理基準で2,730㎡、固定4,380席、ロールバック616席、仮設2,500席、車椅子用8スペースを確認。7,496席は固定・ロールバック・仮設の合計で、車椅子スペースは含めない"
         },
         {
           "id": "chiba-port-sub",
@@ -48324,7 +49876,10 @@ export const venueData = {
           "capacityTheater": 140,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://chibacity.spo-sin.or.jp/shisetu/arena-top/arena-sub/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式の現行施設ページで769.6㎡、ロールバックチェア140席、バスケ・バレー各1面、バドミントン4面、卓球12面、展示・販売利用を確認。140席は可動席で固定席ではない"
         },
         {
           "id": "chiba-port-training-2",
@@ -48338,7 +49893,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://chibacity.spo-sin.or.jp/shisetu/arena-top/arena-training02/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式の現行施設ページで116㎡のエアロビクススタジオ、個人・専用利用、放送設備、温水シャワーを確認。床を傷つける種目・物を振り回す種目は利用不可の場合あり"
         },
         {
           "id": "chiba-port-fitness-test",
@@ -48352,7 +49910,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://chibacity.spo-sin.or.jp/shisetu/arena-top/arena-tairyoku/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式の現行施設ページで134.4㎡・体力測定器具を確認。ただし現在は一般利用休止中。再開時期、通信設備、定員は未観測"
         },
         {
           "id": "chiba-port-support-rooms",
@@ -48366,7 +49927,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://chibacity.spo-sin.or.jp/shisetu/arena-top/arena-price/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式の現行料金ページで同一料金群として掲載された支援室を区画群として記録。室数、各面積、定員、設備、通信環境は未観測"
         },
         {
           "id": "chiba-port-seminar",
@@ -48380,7 +49944,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://chibacity.spo-sin.or.jp/shisetu/arena-top/arena-price/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式の現行料金ページで研修室を確認。室数、面積、定員、分割、通信設備は未観測"
         },
         {
           "id": "chiba-port-changing-shower",
@@ -48394,7 +49961,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://chibacity.spo-sin.or.jp/shisetu/arena-top/arena-price/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式の現行料金ページで更衣・シャワー室を確認。室数、面積、定員、設備仕様は未観測"
         },
         {
           "id": "chiba-port-training-1",
@@ -48408,7 +49978,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://chibacity.spo-sin.or.jp/shisetu/arena-top/arena-training01/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式の現行施設ページで259.2㎡、29機種34台、トレーナー常駐、温水シャワーを確認。高校生以上対象で室内シューズ必須。定員、天井高、通信設備は未観測"
         }
       ],
       "bestSpace": {
@@ -51547,7 +53120,10 @@ export const venueData = {
           "capacityTheater": 4012,
           "capacityFixed": 2186,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.ota.esforta.jp/facility/mainarena/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式ページで48m×38m・1,824㎡、固定2,186席、可動1,816席、車椅子10席を確認。4,012席は固定・可動の合計で車椅子席は含めない"
         },
         {
           "id": "ota-sub",
@@ -51561,7 +53137,10 @@ export const venueData = {
           "capacityTheater": 200,
           "capacityFixed": 200,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.ota.esforta.jp/facility/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式の現行施設ページで34m×19m（646㎡）、固定200席、バレー/バスケット各1面、バドミントン4面、柔道2面を確認。天井高、床荷重、搬入寸法、通信設備は未観測"
         },
         {
           "id": "ota-room-1",
@@ -51575,7 +53154,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.ota.esforta.jp/facility/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式の現行施設ページで11m×11m（120㎡）、ダンス・体操向けを確認。ボール等のけがにつながるものは利用不可。定員、天井高、床荷重、通信設備は未観測"
         },
         {
           "id": "ota-room-2",
@@ -51589,7 +53171,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.ota.esforta.jp/facility/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式の現行施設ページで11m×11m（120㎡）、ダンス・体操向けを確認。ボール等のけがにつながるものは利用不可。定員、天井高、床荷重、通信設備は未観測"
         },
         {
           "id": "ota-meeting",
@@ -51603,7 +53188,10 @@ export const venueData = {
           "capacityTheater": 120,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.ota.esforta.jp/facility/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式の現行施設ページで21m×4.3m（90㎡）、最大120名、3室分割可を確認。天井高、床荷重、通信設備は未観測"
         },
         {
           "id": "ota-dressing",
@@ -51617,7 +53205,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.ota.esforta.jp/facility/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式の現行施設ページでアリーナ付帯の控室2室を確認。控室のみの利用は不可。各室の面積、定員、設備、通信環境は未観測"
         },
         {
           "id": "ota-kyudo",
@@ -51631,7 +53222,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.ota.esforta.jp/facility/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式の現行施設ページで近的28m・5人立、団体・個人利用可能を確認。面積、天井高、床荷重、固定席、通信設備は未観測"
         },
         {
           "id": "ota-broadcast",
@@ -51645,7 +53239,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.ota.esforta.jp/facility/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式の現行施設ページでアリーナ付帯の放送室を確認。面積、定員、機器仕様、通信設備は未観測"
         },
         {
           "id": "ota-accessible-changing",
@@ -51659,7 +53256,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.ota.esforta.jp/facility/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式の現行施設ページでアリーナ付帯の多目的更衣室を確認。面積、定員、設備仕様は未観測"
         },
         {
           "id": "ota-referee",
@@ -51673,7 +53273,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.ota.esforta.jp/facility/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式の現行施設ページでアリーナ付帯の審判員室を確認。面積、定員、設備、通信環境は未観測"
         }
       ],
       "bestSpace": {
@@ -54012,7 +55615,10 @@ export const venueData = {
           "capacityTheater": 1848,
           "capacityFixed": 1848,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.hiratsuka.kanagawa.jp/common/200061846.pdf",
+          "observedAt": "2026-08-05",
+          "note": "平塚市公式監査資料で第1体育室を囲む2階観客席1,848席を確認。市公式案内でバスケット・バレー・バドミントン・ハンドボール・フットサル等の専用利用と冷房設備を確認。面積・天井高は未観測"
         },
         {
           "id": "hiratsuka-second",
@@ -54026,7 +55632,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.hiratsuka.kanagawa.jp/koen/page-c_00811.html",
+          "observedAt": "2026-08-05",
+          "note": "平塚市公式現行ページで体育室3室の一つとして確認。市公式利用種目案内でバスケ/バレー1面、バドミントン4面、卓球10台等を確認。面積、定員、天井高、空調の現状は要確認"
         },
         {
           "id": "hiratsuka-third",
@@ -54040,7 +55649,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hiratsuka.kanagawa.jp/koen/page-c_00811.html",
+          "observedAt": "2026-08-05",
+          "note": "平塚市公式現行ページで体育室3室の一つとして確認。市公式利用種目案内では卓球、剣道、空手等に対応し、球技等は不可。面積、定員、天井高は要確認"
         },
         {
           "id": "hiratsuka-budo-1",
@@ -54054,7 +55666,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.hiratsuka.kanagawa.jp/koen/page-c_00811.html",
+          "observedAt": "2026-08-05",
+          "note": "平塚市公式現行ページで武道場2室の一つとして確認。柔道等の利用と冷房設備、全面/半面利用を確認。面積、定員、床仕様は要確認"
         },
         {
           "id": "hiratsuka-budo-2",
@@ -54068,7 +55683,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.hiratsuka.kanagawa.jp/koen/page-c_00811.html",
+          "observedAt": "2026-08-05",
+          "note": "平塚市公式現行ページで武道場2室の一つとして確認。剣道、空手等の利用と冷房設備、全面/半面利用を確認。面積、定員、床仕様は要確認"
         },
         {
           "id": "hiratsuka-meeting-a",
@@ -54082,7 +55700,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.city.hiratsuka.kanagawa.jp/koen/page-c_00830.html",
+          "observedAt": "2026-08-05",
+          "note": "平塚市公式ページでA会議室を確認。面積、定員、分割、通信設備は未観測"
         },
         {
           "id": "hiratsuka-meeting-b",
@@ -54096,7 +55717,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.city.hiratsuka.kanagawa.jp/koen/page-c_00830.html",
+          "observedAt": "2026-08-05",
+          "note": "平塚市公式ページでB会議室を確認。面積、定員、分割、通信設備は未観測"
         },
         {
           "id": "hiratsuka-archery",
@@ -54110,7 +55734,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.hiratsuka.kanagawa.jp/koen/page-c_00811.html",
+          "observedAt": "2026-08-05",
+          "note": "平塚市公式現行ページと利用対象施設一覧で弓道場を確認。全面/半面利用可。射距離、立数、面積、定員は要確認"
         },
         {
           "id": "hiratsuka-training",
@@ -54124,7 +55751,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.hiratsuka.kanagawa.jp/koen/page-c_00808.html",
+          "observedAt": "2026-08-05",
+          "note": "平塚市公式現行ページで1日3部門・1部門300円、ビギナー講習、マシン利用を確認。面積、定員、機器数、年齢条件は要確認"
         },
         {
           "id": "hiratsuka-pool",
@@ -54138,7 +55768,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.hiratsuka.kanagawa.jp/koen/page-c_00811.html",
+          "observedAt": "2026-08-05",
+          "note": "平塚市公式現行ページで西側プール棟の室内温水プールを確認。水面積、コース数、水深、定員、貸切条件は要確認"
         },
         {
           "id": "hiratsuka-meeting-a1",
@@ -54152,7 +55785,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.city.hiratsuka.kanagawa.jp/common/200041061.pdf",
+          "observedAt": "2026-08-05",
+          "note": "2026年7月31日更新の市公式施設ページから案内される料金表でA会議室のA-1区画を確認。面積、定員、通信設備は要確認"
         },
         {
           "id": "hiratsuka-meeting-a2",
@@ -54166,7 +55802,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.city.hiratsuka.kanagawa.jp/common/200041061.pdf",
+          "observedAt": "2026-08-05",
+          "note": "2026年7月31日更新の市公式施設ページから案内される料金表でA会議室のA-2区画を確認。面積、定員、通信設備は要確認"
         },
         {
           "id": "hiratsuka-shared-equipment",
@@ -54180,7 +55819,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hiratsuka.kanagawa.jp/common/200041061.pdf",
+          "observedAt": "2026-08-05",
+          "note": "市公式料金表で放送、電光記録、可動席、冷暖房、照明等を確認。配置、在庫、操作人員、更新後仕様は要確認"
         }
       ],
       "bestSpace": {
@@ -54279,7 +55921,10 @@ export const venueData = {
           "capacityTheater": 2234,
           "capacityFixed": 944,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.hokuroku.jp/about/37",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式ページで39m×46m・1,794㎡、天井15m、可動770席・固定944席・立見500席・車椅子20台を確認。2,234人はこれらの合計"
         }
       ],
       "bestSpace": {
@@ -54378,7 +56023,10 @@ export const venueData = {
           "capacityTheater": 3468,
           "capacityFixed": 1243,
           "stageType": "unknown",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://region-joetsu.jp/facility/indoor-stadium/",
+          "observedAt": "2026-08-05",
+          "note": "施設公式ページで76m×37m・2,812㎡、天井14m、固定1,243席・移動2,225席・車椅子8席、全面・3/4・2/4・1/4分割を確認。3,468席は固定・移動の合計で車椅子席は含めない"
         }
       ],
       "bestSpace": {
@@ -55437,7 +57085,10 @@ export const venueData = {
           "capacityTheater": 2000,
           "capacityFixed": 2000,
           "stageType": "unknown",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.takaoka.toyama.jp/material/files/group/59/shiryou45.pdf",
+          "observedAt": "2026-08-05",
+          "note": "高岡市公式資料で52.1m×36m・1,900㎡、天井約19m、固定2,000席、空調設備、最大照度約3,000ルクスを確認。サブアリーナはない"
         },
         {
           "id": "takaoka-takehira-training",
@@ -55451,7 +57102,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.takaoka.toyama.jp/gyosei/kanko_bunka_sports/sports/5/9/9384.html",
+          "observedAt": "2026-08-05",
+          "note": "現行市公式施設ページと同ページが案内する2019年10月1日施行料金PDFで確認。面積、定員、機器構成は現行ページで未観測"
         },
         {
           "id": "takaoka-takehira-multipurpose",
@@ -55465,7 +57119,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.takaoka.toyama.jp/material/files/group/61/10-takehiramemorialgym.pdf",
+          "observedAt": "2026-08-05",
+          "note": "現行市公式ページが案内する料金PDF全3ページを画像照合して占用利用区画を確認。面積、定員、床仕様は要確認"
         },
         {
           "id": "takaoka-takehira-meeting",
@@ -55479,7 +57136,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.city.takaoka.toyama.jp/material/files/group/61/10-takehiramemorialgym.pdf",
+          "observedAt": "2026-08-05",
+          "note": "現行市公式ページが案内する料金PDF全3ページを画像照合して占用利用区画を確認。面積、定員、通信・映像設備は要確認"
         },
         {
           "id": "takaoka-takehira-equipment",
@@ -55493,7 +57153,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.takaoka.toyama.jp/material/files/group/61/10-takehiramemorialgym.pdf",
+          "observedAt": "2026-08-05",
+          "note": "料金PDF3ページで拡声、照明、冷暖房、電光得点表示を確認。仕様、在庫、操作人員、現在の改定有無は予約時要確認"
         }
       ],
       "bestSpace": {
@@ -55592,7 +57255,10 @@ export const venueData = {
           "capacityTheater": 2312,
           "capacityFixed": 2072,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.kanazawa-sports.jp/use/search/433/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式ページで40m×60m・2,400㎡、観客席2,312席（うち可動席240席）を確認。固定席2,072席は総席数から可動席を差し引いた算出値"
         }
       ],
       "bestSpace": {
@@ -55691,7 +57357,10 @@ export const venueData = {
           "capacityTheater": 1308,
           "capacityFixed": 804,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.fukui.lg.jp/kyoiku/sports/sisetu/sitaiikukann.html",
+          "observedAt": "2026-08-05",
+          "note": "福井市公式ページで47m×36m・1,692㎡、固定804席・可動504席・車椅子5席を確認。1,308席は固定・可動の合計で車椅子席は含めない"
         }
       ],
       "bestSpace": {
@@ -55790,7 +57459,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "unknown",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.chikuma.lg.jp/material/files/group/30/pabukomekaitou2.pdf",
+          "observedAt": "2026-08-05",
+          "note": "千曲市公式資料は3,000人以上の観客席を持つ施設と説明。正確な席数・固定可動内訳を確認できないため数値欄は空欄とし、市公式施設案内でバスケット2面・バレー2面・バドミントン10面等を確認"
         }
       ],
       "bestSpace": {
@@ -57073,7 +58745,10 @@ export const venueData = {
           "capacityTheater": 1300,
           "capacityFixed": 1300,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.ogaki-tairen.jp/?page_id=611",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式ページで37.4m×47.35m・1,770.89㎡、観客席1,300席、テニス2面・バレー3面・バドミントン10面・ハンドボール1面・バスケット2面を確認"
         },
         {
           "id": "ogaki-second",
@@ -57087,7 +58762,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.ogaki-tairen.jp/?page_id=611",
+          "observedAt": "2026-08-05",
+          "note": "30.32m×34.6m・1,049.07㎡。観客席なし、更衣室にシャワーあり。テニス1面、バレー2面、バドミントン6面、バスケット2面"
         },
         {
           "id": "ogaki-third",
@@ -57101,7 +58779,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.ogaki-tairen.jp/?page_id=611",
+          "observedAt": "2026-08-05",
+          "note": "30m×18m・540㎡。観客席なし、更衣室にシャワーあり。利用可能種目、天井高、床荷重は要確認"
         },
         {
           "id": "ogaki-meeting-1",
@@ -57115,7 +58796,10 @@ export const venueData = {
           "capacityTheater": 72,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.ogaki-tairen.jp/?page_id=611",
+          "observedAt": "2026-08-05",
+          "note": "定員72人。面積、分割可否、通信・映像設備は要確認"
         },
         {
           "id": "ogaki-meeting-2",
@@ -57129,7 +58813,10 @@ export const venueData = {
           "capacityTheater": 20,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.ogaki-tairen.jp/?page_id=611",
+          "observedAt": "2026-08-05",
+          "note": "定員20人。面積、分割可否、通信・映像設備は要確認"
         },
         {
           "id": "ogaki-meeting-3",
@@ -57143,7 +58830,10 @@ export const venueData = {
           "capacityTheater": 10,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.ogaki-tairen.jp/?page_id=611",
+          "observedAt": "2026-08-05",
+          "note": "定員10人。面積、分割可否、通信・映像設備は要確認"
         },
         {
           "id": "ogaki-training",
@@ -57157,7 +58847,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.ogaki-tairen.jp/?page_id=611",
+          "observedAt": "2026-08-05",
+          "note": "215.75㎡。中学生は専門知識を有する指導者の付き添いが必要。機器構成、定員、個人利用条件は要確認"
         },
         {
           "id": "ogaki-training-room",
@@ -57171,7 +58864,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.ogaki-tairen.jp/?page_id=611",
+          "observedAt": "2026-08-05",
+          "note": "定員30人。面積、分割可否、通信・映像設備は要確認"
         },
         {
           "id": "ogaki-tennis",
@@ -57185,7 +58881,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.ogaki-tairen.jp/?page_id=611",
+          "observedAt": "2026-08-05",
+          "note": "全天候型砂入り人工芝4面。硬式・ソフトテニス兼用。貸切不可で混雑時交替、利用後のコートブラシとゴミ持ち帰りが必要"
         },
         {
           "id": "ogaki-japanese-room",
@@ -57199,7 +58898,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.ogaki-tairen.jp/wp-content/uploads/2024/04/%E6%96%99%E9%87%91%E8%A1%A8%EF%BE%8A%EF%BE%9F%EF%BE%9D%EF%BE%8C%E7%94%A8_%E7%B7%8F%E4%BD%932024.pdf",
+          "observedAt": "2026-08-05",
+          "note": "現行指定管理者ページが案内する令和6年4月1日改正料金表で貸出区画を確認。面積、定員、畳数、通信設備は要確認"
         }
       ],
       "bestSpace": {
@@ -57314,7 +59016,10 @@ export const venueData = {
           "capacityTheater": 2020,
           "capacityFixed": 1012,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://city.numazu-sougoutaiikukan.jp/gallery",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式ページで61m×37m・2,257㎡、天井12.5m、固定式1,022席（うち車椅子専用10席）・移動式1,008席を確認。2,020席と固定一般席1,012席は車椅子専用分を除く"
         }
       ],
       "bestSpace": {
@@ -57413,7 +59118,10 @@ export const venueData = {
           "capacityTheater": 3000,
           "capacityFixed": 2000,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.hamada-sports.com/toyohashi-sports/shisetsu/general-gym/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式ページで3,450㎡、一般観覧席2,000席・移動式観覧席1,000席・車椅子用5席を確認。3,000席は一般・移動席の合計で車椅子用スペースは含めない"
         }
       ],
       "bestSpace": {
@@ -61096,7 +62804,10 @@ export const venueData = {
           "capacityTheater": 3512,
           "capacityFixed": 3000,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.yokkaichi.lg.jp/www/contents/1746690057275/simple/youkou.pdf",
+          "observedAt": "2026-08-05",
+          "note": "四日市市公式資料で47m×70.4m・3,308.8㎡、固定3,000席・移動観覧席512席・車椅子16台分を確認。3,512席は固定・移動席の合計で車椅子スペースは含めない"
         },
         {
           "id": "yokkaichi-multi-1",
@@ -61110,7 +62821,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.y-sports.jp/new/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E4%B8%80%E8%A6%A7/tyuouryokuti/so-tai/multi/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者の現行施設HTMLで966㎡・3分割可、音響・壁面鏡・冷暖房・競技用フローリングを確認。ダンス、ヨガ、空手、選手控室等に対応"
         },
         {
           "id": "yokkaichi-multi-2",
@@ -61124,7 +62838,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.y-sports.jp/new/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E4%B8%80%E8%A6%A7/tyuouryokuti/so-tai/multi/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者の現行施設HTMLで663㎡・2分割可、音響・壁面鏡・冷暖房・競技用フローリングを確認。ダンス、ヨガ、空手、選手控室等に対応"
         },
         {
           "id": "yokkaichi-kyudo",
@@ -61138,7 +62855,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.y-sports.jp/new/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E4%B8%80%E8%A6%A7/tyuouryokuti/so-tai/kyudo/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者の現行施設HTMLで全体921㎡、近的・遠的射場、更衣室2室、師範室1室、冷暖房を確認"
         },
         {
           "id": "yokkaichi-kyudo-near",
@@ -61152,7 +62872,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.y-sports.jp/new/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E4%B8%80%E8%A6%A7/tyuouryokuti/so-tai/kyudo/",
+          "observedAt": "2026-08-05",
+          "note": "28m・5人立ち×2射場。射場別面積と観覧定員は要確認"
         },
         {
           "id": "yokkaichi-kyudo-far",
@@ -61166,7 +62889,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.y-sports.jp/new/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E4%B8%80%E8%A6%A7/tyuouryokuti/so-tai/kyudo/",
+          "observedAt": "2026-08-05",
+          "note": "60m・3人立ち×2射場。アーチェリー練習にも対応。射場別面積と観覧定員は要確認"
         },
         {
           "id": "yokkaichi-training",
@@ -61180,7 +62906,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.y-sports.jp/new/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E4%B8%80%E8%A6%A7/tyuouryokuti/so-tai/training/",
+          "observedAt": "2026-08-05",
+          "note": "安全確保のためマシンエリアとフリーウエイトエリアに分離。壁面鏡・冷暖房あり。室内靴必須、クロックス不可"
         },
         {
           "id": "yokkaichi-training-machine",
@@ -61194,7 +62923,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.y-sports.jp/new/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E4%B8%80%E8%A6%A7/tyuouryokuti/so-tai/training/",
+          "observedAt": "2026-08-05",
+          "note": "155㎡。レッグカール、ショルダープレス等を掲載。機器総数・定員は要確認"
         },
         {
           "id": "yokkaichi-training-weights",
@@ -61208,7 +62940,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.y-sports.jp/new/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E4%B8%80%E8%A6%A7/tyuouryokuti/so-tai/training/",
+          "observedAt": "2026-08-05",
+          "note": "96㎡。バーベルセット等を掲載。機器総数・定員は要確認"
         },
         {
           "id": "yokkaichi-walking",
@@ -61222,7 +62957,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.y-sports.jp/new/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E4%B8%80%E8%A6%A7/tyuouryokuti/so-tai/walking/",
+          "observedAt": "2026-08-05",
+          "note": "1周約320m。無料でウォーキング利用可。コース幅が狭く危険なためランニング禁止"
         },
         {
           "id": "yokkaichi-meeting-large",
@@ -61236,7 +62974,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.y-sports.jp/new/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E4%B8%80%E8%A6%A7/tyuouryokuti/so-tai/meeting/",
+          "observedAt": "2026-08-05",
+          "note": "全区画198㎡・分割貸出可。区画A90人、区画B36人だが、全区画時の定員は公式ページに明記されないため推定せず保持。120型スクリーンと55型移動式液晶モニター4台、アリーナ直結"
         },
         {
           "id": "yokkaichi-meeting-large-a",
@@ -61250,7 +62991,10 @@ export const venueData = {
           "capacityTheater": 90,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.y-sports.jp/new/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E4%B8%80%E8%A6%A7/tyuouryokuti/so-tai/meeting/",
+          "observedAt": "2026-08-05",
+          "note": "136㎡・90人。大会議室の分割区画。アリーナへ直接出入り可能"
         },
         {
           "id": "yokkaichi-meeting-large-b",
@@ -61264,7 +63008,10 @@ export const venueData = {
           "capacityTheater": 36,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.y-sports.jp/new/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E4%B8%80%E8%A6%A7/tyuouryokuti/so-tai/meeting/",
+          "observedAt": "2026-08-05",
+          "note": "62㎡・36人。大会議室の分割区画。アリーナへ直接出入り可能"
         },
         {
           "id": "yokkaichi-meeting-small",
@@ -61278,7 +63025,10 @@ export const venueData = {
           "capacityTheater": 51,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.y-sports.jp/new/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85/%E7%AE%A1%E7%90%86%E6%96%BD%E8%A8%AD%E4%B8%80%E8%A6%A7/tyuouryokuti/so-tai/meeting/",
+          "observedAt": "2026-08-05",
+          "note": "105㎡・51人。アリーナへ直接出入り可能"
         }
       ],
       "bestSpace": {
@@ -61377,7 +63127,10 @@ export const venueData = {
           "capacityTheater": 2722,
           "capacityFixed": 1546,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://shisetsu.mizuno.jp/m-7227/gallery",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式ページで57m×45m・2,565㎡、固定1,546席・可動1,176席・車いす席30席を確認。2,722席は固定席と可動席の合計で車いす席を含めない"
         }
       ],
       "bestSpace": {
@@ -61476,7 +63229,10 @@ export const venueData = {
           "capacityTheater": 2500,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.kyoto.lg.jp/bunshi/cmsfiles/contents/0000351/351243/hodo.pdf",
+          "observedAt": "2026-08-05",
+          "note": "京都市公式資料で60m×40m・2,400㎡、観客席2,500席を確認。固定・可動席内訳は不明。指定管理者公式料金表に全面・部分利用があるため分割利用可とした"
         }
       ],
       "bestSpace": {
@@ -61575,7 +63331,10 @@ export const venueData = {
           "capacityTheater": 1400,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.hos-arena.com/facilities/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式ページで60m×36m・2,160㎡、天井13.5〜15.5mのアーチ状、観覧席1,400席、固定舞台18m×6m・高さ0.9m、3分の1分割を確認。天井高欄は公式範囲の最小値"
         }
       ],
       "bestSpace": {
@@ -61674,7 +63433,10 @@ export const venueData = {
           "capacityTheater": 2856,
           "capacityFixed": 1960,
           "stageType": "fixed",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://himeji-machishin.jp/sports/shisetsu/chuotai/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式ページで37m×59m・2,183㎡、天井16m、固定1,960席・移動896席・車椅子6席、固定舞台11m×4.5mを確認。2,856席は固定席と移動席の合計で車椅子席を含めない"
         }
       ],
       "bestSpace": {
@@ -61773,7 +63535,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "unknown",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.nara.lg.jp/uploaded/attachment/185959.pdf",
+          "observedAt": "2026-08-05",
+          "note": "奈良市公式指定管理資料に記載された40.6m×50.3mを乗算して2,042.18㎡とした。公式料金表に全面・2分の1・3分の1利用があるため分割利用可とした。観客席内訳は要確認"
         }
       ],
       "bestSpace": {
@@ -61872,7 +63637,10 @@ export const venueData = {
           "capacityTheater": 475,
           "capacityFixed": null,
           "stageType": "unknown",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.wakayama.wakayama.jp/shisetsu/kouen_sp_shisetsu/1006086/1000981.html",
+          "observedAt": "2026-08-05",
+          "note": "和歌山市公式ページで44m×36m・1,584㎡、観覧席475席、バスケット2面・バレー3面・バドミントン10面等を確認。観覧席の固定・可動内訳は不明"
         }
       ],
       "bestSpace": {
@@ -61971,7 +63739,10 @@ export const venueData = {
           "capacityTheater": 3446,
           "capacityFixed": 2060,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.fuse-sportspark.com/facility-information/prefectural-gymnasium/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式ページで約62m×39m・約2,450㎡、固定2,060席・移動1,386席・車椅子24席、簡易ステージを確認。3,446席は固定席と移動席の合計で車椅子席を含めない"
         }
       ],
       "bestSpace": {
@@ -62054,7 +63825,10 @@ export const venueData = {
           "capacityTheater": 2981,
           "capacityFixed": 1845,
           "stageType": "unknown",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.matsue-sposhin.jp/business/gymnasium/",
+          "observedAt": "2026-08-05",
+          "note": "松江市・指定管理者公式ページで2,747㎡、固定1,845席・移動1,136席・車椅子22席を確認。2,981席は固定席と移動席の合計で車椅子席を含めない。公式料金案内に2分の1・3分の1利用を掲載"
         }
       ],
       "bestSpace": {
@@ -62153,7 +63927,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://soja-facilities.fagiano-okayama.com/facilities/sports-center/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式ページでバドミントン・ソフトバレー・バレー・バスケット・ハンドボール・卓球、15分の1・3分の1・2分の1利用、移動式ステージを確認。競技面積・観客席数は公式HTMLで未観測"
         }
       ],
       "bestSpace": {
@@ -62252,7 +64029,10 @@ export const venueData = {
           "capacityTheater": 2700,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://sports-kure.com/shisetsu/s-510",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式ページで41m×41m・1,681㎡、観客席約2,700席、舞台20m×5m、スポーツ・催物・展示会・文化行事利用を確認。料金案内に2分の1・4分の1練習利用を掲載"
         }
       ],
       "bestSpace": {
@@ -62351,7 +64131,10 @@ export const venueData = {
           "capacityTheater": 7575,
           "capacityFixed": 1386,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.shunan-srt.jp/sports_center/facilities/index.php",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式ページで45m×63m・2,835㎡、最大7,575人、2階席1,386席を確認。最大収容は2階席数とは別で、1階ロールバック客席を含む内訳は要確認。公式料金表に仮設ステージを掲載"
         }
       ],
       "bestSpace": {
@@ -63042,7 +64825,10 @@ export const venueData = {
           "capacityTheater": 4200,
           "capacityFixed": 1550,
           "stageType": "unknown",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.tokushima.tokushima.jp/shisei/machi_keikaku/publicfacility/shitei_kanri/sentei/sentei2024/20190703105231778.files/02_s1_itiran.pdf",
+          "observedAt": "2026-08-05",
+          "note": "徳島市公式指定管理資料で1,485㎡・観客席1,550席、指定管理者公式ページで最大4,200人・2階観覧席1,550席を確認。料金表に全面・3分の2・2分の1・3分の1利用を掲載"
         },
         {
           "id": "tokushima-second",
@@ -63056,7 +64842,10 @@ export const venueData = {
           "capacityTheater": 1000,
           "capacityFixed": null,
           "stageType": "unknown",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.tokushimacity-sports.or.jp/facilities-info/116/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者の現行施設ページで最大1,000人を確認。第二競技場はフットサル利用不可。面積、固定席、天井高、床荷重は要確認"
         },
         {
           "id": "tokushima-meeting-1",
@@ -63070,7 +64859,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.tokushimacity-sports.or.jp/facilities-info/116/",
+          "observedAt": "2026-08-05",
+          "note": "30人収容・冷暖房設備あり。面積、分割可否、通信・映像設備は要確認"
         },
         {
           "id": "tokushima-meeting-2",
@@ -63084,7 +64876,10 @@ export const venueData = {
           "capacityTheater": 60,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.tokushimacity-sports.or.jp/facilities-info/116/",
+          "observedAt": "2026-08-05",
+          "note": "60人収容・冷暖房設備あり。面積、分割可否、通信・映像設備は要確認"
         },
         {
           "id": "tokushima-multipurpose",
@@ -63098,7 +64893,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.tokushimacity-sports.or.jp/facilities-info/116/",
+          "observedAt": "2026-08-05",
+          "note": "200㎡・冷暖房設備あり。定員、床仕様、利用可能種目、通信・映像設備は要確認"
         },
         {
           "id": "tokushima-official-room",
@@ -63112,7 +64910,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.tokushimacity-sports.or.jp/facilities-info/116/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者の現行施設ページに役員室を掲載。面積、定員、設備、貸切条件は要確認"
         },
         {
           "id": "tokushima-childcare",
@@ -63126,7 +64927,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "no"
+          "practiceUse": "no",
+          "sourceUrl": "https://www.tokushimacity-sports.or.jp/facilities-info/116/",
+          "observedAt": "2026-08-05",
+          "note": "育児支援ルーム（託児ルーム）を確認。授乳室・おむつ交換ルームも別に掲載されるが、利用条件や定員は要確認"
         },
         {
           "id": "tokushima-shared-equipment",
@@ -63140,7 +64944,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.tokushimacity-sports.or.jp/facilities-info/116/",
+          "observedAt": "2026-08-05",
+          "note": "各種ボール・ラケット等を有料貸出。品目別在庫、料金、予約可否、イベント利用時の対象設備は要確認"
         }
       ],
       "bestSpace": {
@@ -63239,7 +65046,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "unknown",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.taka-spo.or.jp/sou1.html",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式ページでバレー3面・テニス3面・卓球39台・バスケット2面・バドミントン12面と各種イベント利用を確認。公式料金表に全面・3分の2・2分の1・3分の1利用を掲載。競技面積・観客席数は公式HTMLで未観測"
         }
       ],
       "bestSpace": {
@@ -63354,7 +65164,10 @@ export const venueData = {
           "capacityTheater": 2256,
           "capacityFixed": 2256,
           "stageType": "unknown",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://ehime-spa.jp/wp-content/uploads/2023/08/%E9%81%8B%E5%8B%95%E5%85%AC%E5%9C%92%E3%80%80%E3%83%91%E3%83%B3%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式パンフレットを目視確認。床2,142㎡、固定観客席2,282席のうち車椅子スペース26を除いて2,256席を構造化。公式利用申請書に全面・3分の2・2分の1・3分の1利用を掲載"
         }
       ],
       "bestSpace": {
@@ -63453,7 +65266,10 @@ export const venueData = {
           "capacityTheater": 6630,
           "capacityFixed": 1830,
           "stageType": "unknown",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.kochi-haruno.org/faci/gymnasium",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式HTMLで60m×41m・固定1,830席・移動4,800席を確認。2,460㎡は寸法の乗算値、6,630席は固定席と移動席の合計。料金表に全面・2分の1・3分の1利用を掲載"
         }
       ],
       "bestSpace": {
@@ -63552,7 +65368,10 @@ export const venueData = {
           "capacityTheater": 3364,
           "capacityFixed": 2426,
           "stageType": "unknown",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.sports-fukuokacity.or.jp/facility/gym_fukuoka/facility.html",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式HTMLで36m×49m・1,764㎡、固定2,426席・可動938席を確認。3,364席は固定席と可動席の合計。料金案内に全面・2分の1・3分の1利用を掲載。バスケットボールは大会を除き利用不可"
         }
       ],
       "bestSpace": {
@@ -63667,7 +65486,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://saga-sunrisepark.com/facility/0228_3783/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式HTMLでバレー3面・テニス2面・体操・バスケット2面・バドミントン10面・ハンドボール2面・卓球20台を確認。2026年公式料金表に全面・3分の2・2分の1・3分の1利用と特設ステージを掲載。面積・観客席数は公式HTMLで未観測"
         }
       ],
       "bestSpace": {
@@ -63766,7 +65588,10 @@ export const venueData = {
           "capacityTheater": 5600,
           "capacityFixed": 2342,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.pref.nagasaki.jp/nsfinder/sougou/so_gai.html",
+          "observedAt": "2026-08-05",
+          "note": "長崎県公式HTMLで2,424㎡、固定2,342席・可動1,724席・移動1,534席、最大5,600席、仮設ステージ・吊物・音響・大型映像装置を確認。最大席数は3種の席数の合計"
         }
       ],
       "bestSpace": {
@@ -63865,7 +65690,10 @@ export const venueData = {
           "capacityTheater": 2402,
           "capacityFixed": 1058,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://kc-sks.jp/soutai/floor.html",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式HTMLで38m×50m・1,900㎡、1階移動1,344席・2階固定1,058席、空調を確認。2,402席は移動席と固定席の合計。専用利用打合せ案内に机・椅子・ステージ等の確認を掲載"
         }
       ],
       "bestSpace": {
@@ -63964,7 +65792,10 @@ export const venueData = {
           "capacityTheater": 5088,
           "capacityFixed": 1334,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.oita-oosukouen.com/sougoutaiikukan/facilities_details/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式HTMLで48m×35m・1,680㎡、天井13.8m、固定1,334席・ロールバック754席・フロア椅子3,000席、移動組立式ステージを確認。5,088席は3種の席数の合計で構成条件は要確認"
         }
       ],
       "bestSpace": {
@@ -64079,7 +65910,10 @@ export const venueData = {
           "capacityTheater": 1164,
           "capacityFixed": 1164,
           "stageType": "unknown",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.miyazaki.miyazaki.jp/health/sports/8698.html?code=071518",
+          "observedAt": "2026-08-05",
+          "note": "宮崎市公式案内で2階観覧席1,164席、バレー3面・バスケット2面・バドミントン10面を確認。現行利用者ガイドは全面・3分の2・2分の1・3分の1利用を掲載。面積・固定可動内訳は要確認"
         }
       ],
       "bestSpace": {
@@ -64194,7 +66028,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "unknown",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.satsumasendai.lg.jp/kanko_bunka_sports/sports/2/9053.html",
+          "observedAt": "2026-08-05",
+          "note": "薩摩川内市公式HTMLでバスケット3面・バレー3面を確認。指定管理者公式料金表はスポーツ及び文化行事の専用使用、別表は競技面単位の一部使用を掲載。面積・観客席数は公式HTMLで未観測"
         }
       ],
       "bestSpace": {
@@ -64325,7 +66162,10 @@ export const venueData = {
           "capacityTheater": 3500,
           "capacityFixed": 1319,
           "stageType": "permanent",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.ounoyama.jp/each-facility-guidance/budokan/arena/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式HTMLで競技フロア約2,142㎡、舞台約119㎡、固定1,319席・ロールバック675席・移動1,067席、最大約3,500席を確認。最大席数と席種合計の差は構成条件を要確認"
         }
       ],
       "bestSpace": {
@@ -64379,7 +66219,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.suzuka.lg.jp/shisei/shisetsu/1004371/1004372.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式は大小2アリーナとイベント・研修利用を掲載。面積、客席、天井高、床荷重、舞台、搬入、配信条件は未観測"
         },
         {
           "id": "agf-suzuka-sub",
@@ -64393,7 +66236,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.suzuka.lg.jp/shisei/shisetsu/1004371/1004372.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式はサブアリーナの存在を掲載。面積、客席、天井高、床荷重、舞台、搬入、配信条件は未観測"
         }
       ],
       "bestSpace": {
@@ -64447,7 +66293,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.iga.lg.jp/0000004674.html",
+          "observedAt": "2026-08-05",
+          "note": "木製床。フットサル1面、バスケット2面、バレー2面、バドミントン6面、卓球10台。客席、天井高、床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -64501,7 +66350,10 @@ export const venueData = {
           "capacityTheater": 1288,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.matsusaka.mie.jp/site/kuragi-hall/kuragaiyou.html",
+          "observedAt": "2026-08-05",
+          "note": "客席1,288席。舞台は間口18m・奥行14m・開口高8m。開口高は最低天井高ではないためceiling欄は未入力。客席面積986.97㎡も会場全体の有効面積ではないためarea欄に流用しない"
         }
       ],
       "bestSpace": {
@@ -64555,7 +66407,10 @@ export const venueData = {
           "capacityTheater": 1388,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kuwana.lg.jp/shiminkaikan/bunka/bunkashisetsu/24-11249-235-415.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式案内で客席1,388席を確認。ホール面積、天井高、舞台寸法、固定席の構成は未観測"
         },
         {
           "id": "kaki-city-small",
@@ -64569,7 +66424,10 @@ export const venueData = {
           "capacityTheater": 308,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kuwana.lg.jp/shiminkaikan/bunka/bunkashisetsu/24-11249-235-415.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式案内で客席308席を確認。ホール面積、天井高、舞台寸法、固定席の構成は未観測"
         }
       ],
       "bestSpace": {
@@ -64623,7 +66481,10 @@ export const venueData = {
           "capacityTheater": 714,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nabari.lg.jp/ct/other000022100/129004950-bosyuuyoukou.pdf",
+          "observedAt": "2026-08-05",
+          "note": "市公式資料で客席714席、舞台間口14m・奥行13.7m・開口高8mを確認。開口高は最低天井高ではないためceiling欄は未入力"
         }
       ],
       "bestSpace": {
@@ -64677,7 +66538,10 @@ export const venueData = {
           "capacityTheater": 960,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.owase.lg.jp/cmsfiles/contents/0000023/23481/bosyuuyoukou.pdf",
+          "observedAt": "2026-08-05",
+          "note": "市公式資料で客席960席（身体障害者席4席）、舞台486㎡、客席790㎡を確認。舞台・客席の部分面積は会場全体の有効面積ではないためarea欄は未入力"
         },
         {
           "id": "segiyama-gallery",
@@ -64691,7 +66555,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.owase.lg.jp/cmsfiles/contents/0000023/23481/bosyuuyoukou.pdf",
+          "observedAt": "2026-08-05",
+          "note": "市公式資料で240.0㎡を確認。収容人数、天井高、舞台、床荷重、平土間利用条件は未観測"
         }
       ],
       "bestSpace": {
@@ -64708,11 +66575,11 @@ export const venueData = {
       "name": "三重県総合文化センター",
       "category": "stage_exhibition_conference",
       "fitLevel": "A",
-      "strengths": "運営者公式案内は三重県文化会館大ホール1,903席、オーケストラピット全使用時1,705席、楽屋10室を掲載。センター全体には3棟29会場があり、ホール・ギャラリー・会議室等の詳細資料を公開",
-      "cautions": "大ホール以外の中・小・多目的ホール、会議・展示施設は追加調査が必要。舞台開口高と最低天井高を混同せず、床荷重、搬入寸法、催事回線、現行料金、空き状況は要確認",
-      "sourceUrl": "https://www.center-mie.or.jp/rental/institution/detail/hall01.html",
-      "observedAt": "2026-08-05",
-      "detailCount": 1,
+      "strengths": "運営者公式案内は三重県文化会館の大ホール1,903席、中ホール968席、小ホール最大322席、多目的ホール最大425席を掲載。センター全体には3棟29会場があり、ホール・ギャラリー・会議室等の詳細資料を公開",
+      "cautions": "大・中ホールの公式技術資料は舞台開口高とスノコ高を掲載するが、客席を含む最低天井高ではないため天井検索には不採用。小・多目的ホールも含め、高投げ可否、床荷重、搬入寸法、催事回線、現行料金、空き状況は要確認",
+      "sourceUrl": "https://www.center-mie.or.jp/rental/data/hall.html",
+      "observedAt": "2026-08-06",
+      "detailCount": 4,
       "priceCount": 0,
       "operationCount": 0,
       "historicalCompletedCount": 0,
@@ -64722,12 +66589,12 @@ export const venueData = {
       "maxCapacity": 1903,
       "maxArea": null,
       "maxCeiling": null,
-      "ceilingReferenceCount": 0,
+      "ceilingReferenceCount": 2,
       "filterableCeilingCount": 0,
       "maxFloorLoad": null,
       "hasFixedStage": true,
       "practiceUse": "conditional",
-      "streamingReady": "unknown",
+      "streamingReady": "conditional",
       "minDailyFacilityPrice": null,
       "priceObservations": [],
       "budgetScenarios": [],
@@ -64739,13 +66606,67 @@ export const venueData = {
           "type": "stage_hall",
           "area": null,
           "ceiling": null,
-          "ceilingReference": null,
-          "ceilingType": "unknown",
+          "ceilingReference": 13,
+          "ceilingType": "stage_opening",
           "overheadUseStatus": "unknown",
           "capacityTheater": 1903,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.center-mie.or.jp/main/files/sc/2026dai_tech.pdf",
+          "observedAt": "2026-08-06",
+          "note": "通常1,903席、オーケストラピット使用時1,705席。舞台は約700㎡、プロセニアム高13m、スノコ高28.5m。いずれも客席を含む最低天井高ではないため検索対象外"
+        },
+        {
+          "id": "mie-center-middle",
+          "name": "三重県文化会館 中ホール",
+          "type": "stage_hall",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": 9.1,
+          "ceilingType": "stage_opening",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": 968,
+          "capacityFixed": null,
+          "stageType": "fixed",
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.center-mie.or.jp/main/2026chu_tech.pdf",
+          "observedAt": "2026-08-06",
+          "note": "968席。舞台約900㎡、プロセニアム高9.1m、スノコ高24.6m。いずれも客席を含む最低天井高ではないため検索対象外"
+        },
+        {
+          "id": "mie-center-small",
+          "name": "三重県文化会館 小ホール",
+          "type": "stage_hall",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": 322,
+          "capacityFixed": null,
+          "stageType": "convertible",
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.center-mie.or.jp/rental/institution/detail/hall03.html",
+          "observedAt": "2026-08-06",
+          "note": "通常285席、最大322席まで増設可。移動席とロールバック席でレイアウト変更可能。最低天井高は公式詳細ページで未観測"
+        },
+        {
+          "id": "mie-center-multipurpose",
+          "name": "多目的ホール",
+          "type": "multipurpose_hall",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": 425,
+          "capacityFixed": null,
+          "stageType": "convertible",
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.center-mie.or.jp/rental/institution/detail/hall04.html",
+          "observedAt": "2026-08-06",
+          "note": "通常383席、最大425席まで増設可。移動席とロールバック席でレイアウト変更可能。最低天井高は公式詳細ページで未観測"
         }
       ],
       "bestSpace": {
@@ -64799,7 +66720,10 @@ export const venueData = {
           "capacityTheater": 5786,
           "capacityFixed": 1942,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://mie-sports-stadium.jp/gym",
+          "observedAt": "2026-08-05",
+          "note": "最大5,786人はフロア3,400人・観覧席1,942席・立見444人の合計。半面利用可。アリーナ面積、天井高、床荷重は未観測"
         },
         {
           "id": "mie-ise-annex-gym",
@@ -64813,7 +66737,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://mie-sports-stadium.jp/gym",
+          "observedAt": "2026-08-05",
+          "note": "バスケット1面、バレー2面、バドミントン3面、テニス1面、卓球10台、フットサル1面等。面積、客席、天井高、床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -64867,7 +66794,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kumano.lg.jp/news/detail.html?content=857",
+          "observedAt": "2026-08-05",
+          "note": "市公式の2026年文化公演ページで現行利用を確認。客席、面積、天井高、舞台寸法、貸館条件は未観測"
         }
       ],
       "bestSpace": {
@@ -64921,7 +66851,10 @@ export const venueData = {
           "capacityTheater": 1786,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://yonbun.com/facilities/overview/1st-hall/",
+          "observedAt": "2026-08-05",
+          "note": "1階1,246席（車椅子10席を含む）・2階540席。舞台間口18m・奥行18m・開口高9m。開口高は最低天井高ではないためceiling欄は未入力"
         },
         {
           "id": "yonbun-hall-2",
@@ -64935,7 +66868,10 @@ export const venueData = {
           "capacityTheater": 593,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://city-yokkaichi-kyouiku.jp/sys/wp-content/uploads/2026/03/508dai4kaisiryou.pdf",
+          "observedAt": "2026-08-05",
+          "note": "四日市市教育委員会公式資料で座席数593席を確認。面積、最低天井高、舞台寸法、床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -64989,7 +66925,10 @@ export const venueData = {
           "capacityTheater": 947,
           "capacityFixed": 935,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://kameyama-bunkakaikan.com/institution.html",
+          "observedAt": "2026-08-05",
+          "note": "総数947席の内訳は固定935席・身体障害者席4席・親子席8席。楽屋3室・リハーサル室2室を併設"
         }
       ],
       "bestSpace": {
@@ -65043,7 +66982,10 @@ export const venueData = {
           "capacityTheater": 720,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.tsuhisai-ars.jp/about/hall/",
+          "observedAt": "2026-08-05",
+          "note": "通常720席、前舞台使用時576席。舞台間口14.54〜18.18m・奥行10〜13.3m・開口高8〜10m。開口高は最低天井高ではないためceiling欄は未入力"
         }
       ],
       "bestSpace": {
@@ -65097,7 +67039,10 @@ export const venueData = {
           "capacityTheater": 1206,
           "capacityFixed": 1200,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.ise-kanbun.jp/about/hall_big/",
+          "observedAt": "2026-08-05",
+          "note": "固定1,200席・車椅子6席。客席911.4㎡と舞台226.8㎡は部分面積のためarea欄に流用しない。舞台開口高7.5mも最低天井高ではないためceiling欄は未入力"
         }
       ],
       "bestSpace": {
@@ -65151,7 +67096,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "shared",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.matsusaka.mie.jp/site/sports/43.html",
+          "observedAt": "2026-08-05",
+          "note": "40m×30m。バスケット2面、バレー2面、テニス1面、バドミントン6面、卓球15面、フットサル1面。催し・発表・講演にも利用可能"
         }
       ],
       "bestSpace": {
@@ -65205,7 +67153,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "shared",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.nabari.lg.jp/s062/010/380/201502051835.html",
+          "observedAt": "2026-08-05",
+          "note": "バレー3面、バスケット2面、バドミントン6面、テニス2面、卓球21台。スポーツ以外の利用料金区分あり。面積、客席、天井高は未観測"
         }
       ],
       "bestSpace": {
@@ -65259,7 +67210,10 @@ export const venueData = {
           "capacityTheater": 596,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.toba.mie.jp/soshiki/k_sports/gyomu/shisetsu_annai/1944.html",
+          "observedAt": "2026-08-05",
+          "note": "観客席596席。バレー2面、バスケット2面、バドミントン6面、卓球に対応。競技床面積、固定席構成、天井高は未観測"
         },
         {
           "id": "toba-sub-arena",
@@ -65273,7 +67227,10 @@ export const venueData = {
           "capacityTheater": 512,
           "capacityFixed": 80,
           "stageType": "fixed",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.toba.mie.jp/shisetsuannai/4852.html",
+          "observedAt": "2026-08-05",
+          "note": "可動352席・置式80席・固定80席の計512席。舞台、バレー1面、バドミントン2面。フロアと舞台は個別利用可"
         }
       ],
       "bestSpace": {
@@ -65327,7 +67284,10 @@ export const venueData = {
           "capacityTheater": 1700,
           "capacityFixed": 468,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.shima.mie.jp/kakuka/kyouiku/syogaigakusyusportska/bunkashisetsunogoannai/1454320302241.html",
+          "observedAt": "2026-08-05",
+          "note": "パイプ椅子1,232席・2階固定468席。バスケット・フットサル各1面、バレー2面、バドミントン6面、卓球14台"
         },
         {
           "id": "ago-bay",
@@ -65341,7 +67301,10 @@ export const venueData = {
           "capacityTheater": 512,
           "capacityFixed": null,
           "stageType": "convertible",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.shima.mie.jp/kakuka/kyouiku/syogaigakusyusportska/bunkashisetsunogoannai/1454320302241.html",
+          "observedAt": "2026-08-05",
+          "note": "電動収納椅子によるシアター512席、机使用160〜240席、椅子のみ330席。363㎡は伊勢志摩観光コンベンション機構の公式MICE案内でも確認"
         }
       ],
       "bestSpace": {
@@ -65395,7 +67358,10 @@ export const venueData = {
           "capacityTheater": 466,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.suzuka-hall.jp/cultual-hall/about",
+          "observedAt": "2026-08-05",
+          "note": "466席（親子7・車椅子3を含む）。舞台間口16.5m・奥行11m・開口高7m。開口高は最低天井高ではないためceiling欄は未入力"
         },
         {
           "id": "suzuka-satsuki",
@@ -65409,7 +67375,10 @@ export const venueData = {
           "capacityTheater": 180,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.suzuka-hall.jp/cultual-hall/about",
+          "observedAt": "2026-08-05",
+          "note": "展示会、会議、マルシェ等に対応。可動展示パネル36枚、長机60台、椅子200脚、音響機材あり"
         }
       ],
       "bestSpace": {
@@ -65463,7 +67432,10 @@ export const venueData = {
           "capacityTheater": 776,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.inabe.mie.jp/shisetsu/shikanrenshisetsu/kominkan/1002718.html",
+          "observedAt": "2026-08-05",
+          "note": "収納席776席。リハーサル室80㎡を併設。収納席の平土間構成、最低天井高、舞台寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -65517,7 +67489,10 @@ export const venueData = {
           "capacityTheater": 702,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.toin.lg.jp/soshiki/1017/1/2/427.html",
+          "observedAt": "2026-08-05",
+          "note": "客席702席、楽屋3室、リハーサル室、浴室を併設。固定席構成、面積、最低天井高、舞台寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -65571,7 +67546,10 @@ export const venueData = {
           "capacityTheater": 326,
           "capacityFixed": 216,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yokkaichi.mie.jp/asakeplaza/gaiyo.html",
+          "observedAt": "2026-08-05",
+          "note": "固定216席・移動110席。舞台11m×7.5m。演劇・音楽会・映画会・講演会等に対応"
         },
         {
           "id": "asake-gym",
@@ -65585,7 +67563,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.yokkaichi.mie.jp/asakeplaza/gaiyo.html",
+          "observedAt": "2026-08-05",
+          "note": "バレー2面、バドミントン6面、バスケット2面、卓球12台。観客席、天井高、床荷重、舞台は未観測"
         }
       ],
       "bestSpace": {
@@ -65639,7 +67620,10 @@ export const venueData = {
           "capacityTheater": 630,
           "capacityFixed": 630,
           "stageType": "shared",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.kuwana.lg.jp/documents/9640/04sshisetugaiyou.pdf",
+          "observedAt": "2026-08-05",
+          "note": "43m×31m、桜床。バレー3面、バスケット2面、バドミントン6面、卓球15面。観覧席630席、館内図にステージを掲載"
         },
         {
           "id": "kuwana-yamamori-small",
@@ -65653,7 +67637,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.kuwana.lg.jp/documents/9640/04sshisetugaiyou.pdf",
+          "observedAt": "2026-08-05",
+          "note": "塗装床462㎡、卓球10面。観客席、天井高、床荷重、舞台は未観測"
         }
       ],
       "bestSpace": {
@@ -65707,7 +67694,10 @@ export const venueData = {
           "capacityTheater": 1019,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://kpac.or.jp/wp-content/uploads/2025/08/ar2024.pdf",
+          "observedAt": "2026-08-05",
+          "note": "通常1,019席。オーケストラピット使用時876席。車椅子席4席。面積・最低天井高は未観測"
         },
         {
           "id": "kani-ala-small",
@@ -65721,7 +67711,10 @@ export const venueData = {
           "capacityTheater": 311,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://kpac.or.jp/wp-content/uploads/2025/08/ar2024.pdf",
+          "observedAt": "2026-08-05",
+          "note": "通常311席、張り出し舞台時221席。車椅子席2席。面積・最低天井高は未観測"
         }
       ],
       "bestSpace": {
@@ -65775,7 +67768,10 @@ export const venueData = {
           "capacityTheater": 2000,
           "capacityFixed": null,
           "stageType": "shared",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.hida-center.jp/facilities/facility-conventionhall.html",
+          "observedAt": "2026-08-06",
+          "note": "可動客席480席と平土間1,520席の最大2,000人。昇降式舞台。展示・コンサート・軽スポーツ等に対応"
         },
         {
           "id": "hida-art",
@@ -65789,7 +67785,10 @@ export const venueData = {
           "capacityTheater": 500,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.hida-center.jp/facilities/facility-art.html",
+          "observedAt": "2026-08-05",
+          "note": "500席。面積・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -65843,7 +67842,10 @@ export const venueData = {
           "capacityTheater": 1284,
           "capacityFixed": 1272,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.takayama.lg.jp/shisetsu/1004139/1000042/1001700.html",
+          "observedAt": "2026-08-05",
+          "note": "固定1,272席、車椅子6席、親子6席。面積・最低天井高・舞台寸法は未観測"
         },
         {
           "id": "takayama-small",
@@ -65857,7 +67859,10 @@ export const venueData = {
           "capacityTheater": 399,
           "capacityFixed": 395,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.takayama.lg.jp/shisetsu/1004139/1000042/1001700.html",
+          "observedAt": "2026-08-05",
+          "note": "固定395席、車椅子4席。面積・最低天井高・舞台寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -65911,7 +67916,10 @@ export const venueData = {
           "capacityTheater": 1929,
           "capacityFixed": 1689,
           "stageType": "shared",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.gifu.lg.jp/_res/projects/default_project/_page_/001/011/044/bosyuuyoukou2-kaigijyo_s.pdf",
+          "observedAt": "2026-08-05",
+          "note": "1・2階使用時1,689席、身障者用3席、最大1,929席。舞台・客席可動床。平土間面積・最低天井高は未観測"
         },
         {
           "id": "nagara-main-medium",
@@ -65925,7 +67933,10 @@ export const venueData = {
           "capacityTheater": 1295,
           "capacityFixed": 1295,
           "stageType": "shared",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.gifu.lg.jp/_res/projects/default_project/_page_/001/011/044/bosyuuyoukou2-kaigijyo_s.pdf",
+          "observedAt": "2026-08-05",
+          "note": "1階席のみ1,295席、身障者用3席。舞台・客席可動床。平土間面積・最低天井高は未観測"
         }
       ],
       "bestSpace": {
@@ -65979,7 +67990,10 @@ export const venueData = {
           "capacityTheater": 2000,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.wacaf.or.jp/culturehall/bighall.html",
+          "observedAt": "2026-08-05",
+          "note": "1階1,431席、2階558席、車椅子11席。舞台開口高8mは最低天井高ではないためceiling欄は未入力"
         }
       ],
       "bestSpace": {
@@ -66033,7 +68047,10 @@ export const venueData = {
           "capacityTheater": 954,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.wakayama-johall.jp/about/hall/",
+          "observedAt": "2026-08-05",
+          "note": "954席（車椅子固定6席を含む）。舞台18m×10.8m、開口高12m。開口高は最低天井高ではないためceiling欄は未入力"
         },
         {
           "id": "wakayama-castle-small",
@@ -66047,7 +68064,10 @@ export const venueData = {
           "capacityTheater": 395,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.wakayama-johall.jp/about/hall_small/",
+          "observedAt": "2026-08-05",
+          "note": "395席（車椅子固定6席を含む）。舞台14.5m×9m、開口高9m。開口高は最低天井高ではないためceiling欄は未入力"
         }
       ],
       "bestSpace": {
@@ -66101,7 +68121,10 @@ export const venueData = {
           "capacityTheater": 1224,
           "capacityFixed": 1224,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tanabe.lg.jp/bunshin/files/DK_KOUSOU.pdf",
+          "observedAt": "2026-08-05",
+          "note": "固定742席、オーケストラピット114席、車椅子10席、2階358席。改修・休館状況を要確認"
         },
         {
           "id": "kinan-small",
@@ -66115,7 +68138,10 @@ export const venueData = {
           "capacityTheater": 450,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tanabe.lg.jp/bunshin/files/DK_KOUSOU.pdf",
+          "observedAt": "2026-08-05",
+          "note": "可動席450席。平土間面積・最低天井高・床荷重は未観測。改修・休館状況を要確認"
         }
       ],
       "bestSpace": {
@@ -66169,7 +68195,10 @@ export const venueData = {
           "capacityTheater": 1142,
           "capacityFixed": null,
           "stageType": "shared",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.shingu.lg.jp/div/bunka-1/pdf/tankakuHALL/toiawase.pdf",
+          "observedAt": "2026-08-05",
+          "note": "標準801席、スタッキング席・立見を含む最大1,142人。舞台開口高10.9mは最低天井高ではないためceiling欄は未入力"
         }
       ],
       "bestSpace": {
@@ -66223,7 +68252,10 @@ export const venueData = {
           "capacityTheater": 809,
           "capacityFixed": 809,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.kyoubun.or.jp/riyo.html",
+          "observedAt": "2026-08-05",
+          "note": "固定809席。舞台開口高7mは最低天井高ではないためceiling欄は未入力"
         },
         {
           "id": "awagin-exhibition-large",
@@ -66237,7 +68269,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.kyoubun.or.jp/riyo.html",
+          "observedAt": "2026-08-05",
+          "note": "面積370㎡、内周46.29m。定員、最低天井高、床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -66291,7 +68326,10 @@ export const venueData = {
           "capacityTheater": 607,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://syougai.tokushima-ec.ed.jp/manabihiroba/srch_inst/2016.html",
+          "observedAt": "2026-08-05",
+          "note": "徳島県公式施設案内は607席と掲載。阿南市・施設公式サイトで現在の公演利用を確認。施設側の現行客席資料は要確認"
         }
       ],
       "bestSpace": {
@@ -66345,7 +68383,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.anan.tokushima.jp/event/2026/05/",
+          "observedAt": "2026-08-05",
+          "note": "阿南市公式イベント情報で現在の公演利用を確認。客席数、面積、最低天井高、舞台寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -66399,7 +68440,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.mima.lg.jp/gyosei/docs/29719.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式案内で市民ホールを確認。客席数、面積、最低天井高、舞台寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -66453,7 +68497,10 @@ export const venueData = {
           "capacityTheater": 1800,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.saga.lg.jp/bunka-sports/bunka-geijutsu/3/2852.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式案内は1,800人収容と掲載。詳細客席構成、面積、最低天井高、舞台寸法は未観測"
         },
         {
           "id": "saga-culture-medium",
@@ -66467,7 +68514,10 @@ export const venueData = {
           "capacityTheater": 800,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.saga.lg.jp/bunka-sports/bunka-geijutsu/3/2852.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式案内は800人収容と掲載。詳細客席構成、面積、最低天井高、舞台寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -66521,7 +68571,10 @@ export const venueData = {
           "capacityTheater": 1518,
           "capacityFixed": 1374,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tosu.lg.jp/soshiki/11/3273.html",
+          "observedAt": "2026-08-05",
+          "note": "固定1,374席、オーケストラピット可動130席、車椅子10席、母子4席。舞台開口高8.5mは最低天井高ではないためceiling欄は未入力"
         }
       ],
       "bestSpace": {
@@ -66575,7 +68628,10 @@ export const venueData = {
           "capacityTheater": 1668,
           "capacityFixed": 900,
           "stageType": "shared",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.karatsu.lg.jp/page/2865.html",
+          "observedAt": "2026-08-05",
+          "note": "固定900席・移動式768席。面積約1,442㎡は市公式行政改革資料による。最低天井高・床荷重・舞台寸法は未観測"
         },
         {
           "id": "karatsu-gym-culture",
@@ -66589,7 +68645,10 @@ export const venueData = {
           "capacityTheater": 383,
           "capacityFixed": 378,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.karatsu.lg.jp/page/2865.html",
+          "observedAt": "2026-08-05",
+          "note": "378席と車椅子5席。面積・最低天井高・舞台寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -66643,7 +68702,10 @@ export const venueData = {
           "capacityTheater": 570,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.imari.lg.jp/3963.htm",
+          "observedAt": "2026-08-05",
+          "note": "570席（車椅子2席を含む）。可動プロセニアム開口高7.5〜9.7mは最低天井高ではないためceiling欄は未入力"
         },
         {
           "id": "imari-rehearsal",
@@ -66657,7 +68719,10 @@ export const venueData = {
           "capacityTheater": 72,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.imari.lg.jp/3963.htm",
+          "observedAt": "2026-08-05",
+          "note": "音楽、舞踊、バレエ、ダンス等の練習に対応。収容72人"
         }
       ],
       "bestSpace": {
@@ -66711,7 +68776,10 @@ export const venueData = {
           "capacityTheater": 1990,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kagoshima.lg.jp/shimin/shiminbunka/bunkashinko/documents/shibun_daitaishisetsu0108.pdf",
+          "observedAt": "2026-08-05",
+          "note": "1,990席。現在の利用休止・改修状況と再開時期を要確認"
         },
         {
           "id": "kawasho-second",
@@ -66725,7 +68793,10 @@ export const venueData = {
           "capacityTheater": 952,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kagoshima.lg.jp/shimin/shiminbunka/bunkashinko/documents/shibun_daitaishisetsu0108.pdf",
+          "observedAt": "2026-08-05",
+          "note": "952席。現在の利用休止・改修状況と再開時期を要確認"
         },
         {
           "id": "kawasho-civic",
@@ -66739,7 +68810,10 @@ export const venueData = {
           "capacityTheater": 400,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kagoshima.lg.jp/gikai/seimuchousa/shigikai/koho/shisegaiyo/documents/r207-simin.pdf",
+          "observedAt": "2026-08-05",
+          "note": "平土間形式で約400人。面積・最低天井高・床荷重は未観測。現在の利用休止状況を要確認"
         }
       ],
       "bestSpace": {
@@ -66793,7 +68867,10 @@ export const venueData = {
           "capacityTheater": 1502,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.houzanhall.com/facilities/",
+          "observedAt": "2026-08-05",
+          "note": "1,502席（車椅子4席を含む）。オーケストラピット使用時97席減"
         }
       ],
       "bestSpace": {
@@ -66847,7 +68924,10 @@ export const venueData = {
           "capacityTheater": 5700,
           "capacityFixed": 1312,
           "stageType": "shared",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://nishihara-shokai-arena.jp/guide/outline",
+          "observedAt": "2026-08-06",
+          "note": "競技面42m×65m。固定1,312席、シーティングシステムを含む最大約5,700席。舞台機構あり"
         },
         {
           "id": "nishihara-sub",
@@ -66861,7 +68941,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://nishihara-shokai-arena.jp/guide/outline",
+          "observedAt": "2026-08-06",
+          "note": "競技面36m×28m。観客席、床荷重、舞台は未観測"
         }
       ],
       "bestSpace": {
@@ -66915,7 +68998,10 @@ export const venueData = {
           "capacityTheater": 770,
           "capacityFixed": 770,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://miyama-conseru.or.jp/facility/",
+          "observedAt": "2026-08-05",
+          "note": "1階518席・2階252席の計770席。音楽用途中心。面積・最低天井高は未観測"
         },
         {
           "id": "miyama-rehearsal",
@@ -66929,7 +69015,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://miyama-conseru.or.jp/facility/",
+          "observedAt": "2026-08-05",
+          "note": "施設公式案内でリハーサル室を確認。面積・定員・最低天井高は未観測"
         }
       ],
       "bestSpace": {
@@ -66983,7 +69072,10 @@ export const venueData = {
           "capacityTheater": 1510,
           "capacityFixed": 1510,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.morioka.iwate.jp/kankou/1031454/1049369.html",
+          "observedAt": "2026-08-05",
+          "note": "固定1,510席。全国規模のコンベンションにも対応と市公式資料が掲載。面積・最低天井高は未観測"
         },
         {
           "id": "morioka-civic-small",
@@ -66997,7 +69089,10 @@ export const venueData = {
           "capacityTheater": 350,
           "capacityFixed": 350,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.morioka.iwate.jp/kankou/1031454/1049369.html",
+          "observedAt": "2026-08-05",
+          "note": "パイプオルガン常設、350席。面積・最低天井高は未観測"
         },
         {
           "id": "morioka-civic-exhibition",
@@ -67011,7 +69106,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.morioka.iwate.jp/kankou/1031454/1049369.html",
+          "observedAt": "2026-08-05",
+          "note": "展示面積576㎡。定員、最低天井高、床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -67065,7 +69163,10 @@ export const venueData = {
           "capacityTheater": 1503,
           "capacityFixed": 1310,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.sakurahall.jp/use/gaiyou/",
+          "observedAt": "2026-08-05",
+          "note": "固定1,310席（オーケストラピット114席を含む）、移動席96席、立見193席を含む最大1,503人。プロセニアム高さ11.5mは最低天井高ではないためceiling欄は未入力"
         }
       ],
       "bestSpace": {
@@ -67119,7 +69220,10 @@ export const venueData = {
           "capacityTheater": 1205,
           "capacityFixed": 1205,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ichinoseki.iwate.jp/index.cfm/7%2C190433%2Cc%2Chtml/190433/20251209-170821.pdf",
+          "observedAt": "2026-08-05",
+          "note": "1階820席・2階385席の計1,205席。コンサート、劇場、各種大会・式典に対応"
         },
         {
           "id": "ichinoseki-medium",
@@ -67133,7 +69237,10 @@ export const venueData = {
           "capacityTheater": 470,
           "capacityFixed": 470,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ichinoseki.iwate.jp/index.cfm/7%2C161193%2Cc%2Chtml/161193/20220128-100845.pdf",
+          "observedAt": "2026-08-05",
+          "note": "470席、面積527.36㎡。新劇、歌舞伎、能、舞踊、中規模音楽、集会、式典等に対応"
         },
         {
           "id": "ichinoseki-small",
@@ -67147,7 +69254,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ichinoseki.iwate.jp/index.cfm/7%2C190433%2Cc%2Chtml/190433/20251209-170821.pdf",
+          "observedAt": "2026-08-05",
+          "note": "移動可能な机と椅子を備える。定員、最低天井高、床荷重は未観測"
         },
         {
           "id": "ichinoseki-exhibition",
@@ -67161,7 +69271,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ichinoseki.iwate.jp/index.cfm/7%2C190433%2Cc%2Chtml/190433/20251209-170821.pdf",
+          "observedAt": "2026-08-05",
+          "note": "個展・展示会等に対応。定員、最低天井高、床荷重は未観測"
         },
         {
           "id": "ichinoseki-multipurpose",
@@ -67175,7 +69288,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ichinoseki.iwate.jp/index.cfm/7%2C190433%2Cc%2Chtml/190433/20251209-170821.pdf",
+          "observedAt": "2026-08-05",
+          "note": "会議・研修等に対応。定員、最低天井高、床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -67229,7 +69345,10 @@ export const venueData = {
           "capacityTheater": 1500,
           "capacityFixed": 1500,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.oshu.iwate.jp/material/files/group/77/01234567.pdf",
+          "observedAt": "2026-08-05",
+          "note": "1,500席。リハーサル室、展示室、会議室、練習室、楽屋を併設"
         },
         {
           "id": "oshu-z-medium",
@@ -67243,7 +69362,10 @@ export const venueData = {
           "capacityTheater": 500,
           "capacityFixed": 500,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.oshu.iwate.jp/material/files/group/77/01234567.pdf",
+          "observedAt": "2026-08-05",
+          "note": "500席。面積・最低天井高・舞台寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -67297,7 +69419,10 @@ export const venueData = {
           "capacityTheater": 928,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yokote.lg.jp/shisetsu/1005521/1005099.html",
+          "observedAt": "2026-08-05",
+          "note": "928人（車椅子スペース2人）。舞台・ロビーを含む面積1,045㎡。各種舞台公演に対応"
         }
       ],
       "bestSpace": {
@@ -67351,7 +69476,10 @@ export const venueData = {
           "capacityTheater": 1004,
           "capacityFixed": 998,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.daisen.lg.jp/archive/p20250131160159",
+          "observedAt": "2026-08-05",
+          "note": "固定998席・車椅子6席。歌舞伎本花道を備える。面積・最低天井高は未観測"
         },
         {
           "id": "omagari-small",
@@ -67365,7 +69493,10 @@ export const venueData = {
           "capacityTheater": 482,
           "capacityFixed": 480,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.daisen.lg.jp/archive/p20250131160159",
+          "observedAt": "2026-08-05",
+          "note": "480席・車椅子2席。面積・最低天井高は未観測"
         },
         {
           "id": "omagari-training",
@@ -67379,7 +69510,10 @@ export const venueData = {
           "capacityTheater": 50,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.daisen.lg.jp/archive/p20250131160159",
+          "observedAt": "2026-08-05",
+          "note": "50人程度、長机18台・椅子50脚。最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -67433,7 +69567,10 @@ export const venueData = {
           "capacityTheater": 701,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kazuno.lg.jp/soshiki/shogaigakushu/bunkanomorikoryukan/gyomu/1/1/1263.html",
+          "observedAt": "2026-08-05",
+          "note": "701席（車椅子4席を含む）。最低天井高・床荷重・舞台寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -67487,7 +69624,10 @@ export const venueData = {
           "capacityTheater": 1206,
           "capacityFixed": 1198,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.odate.lg.jp/uploads/public/pages_0000003657_00/R4%E5%B8%82%E6%94%BF%E3%81%AE%E6%A6%82%E8%A6%81/04shisei_14_02kyouikubunka_shisetsu.pdf",
+          "observedAt": "2026-08-05",
+          "note": "収容1,198人、車椅子用4・母子席4。面積・最低天井高・舞台寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -67541,7 +69681,10 @@ export const venueData = {
           "capacityTheater": 2001,
           "capacityFixed": 2001,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.pref.yamagata.jp/documents/3374/11.pdf",
+          "observedAt": "2026-08-05",
+          "note": "県内最大の2,001席。車椅子スペースは固定席ではないため詳細な客席構成は未観測"
         }
       ],
       "bestSpace": {
@@ -67595,7 +69738,10 @@ export const venueData = {
           "capacityTheater": 1135,
           "capacityFixed": 1120,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tsuruoka.lg.jp/shisei/shiyakusyo/zaisei/zaimutact.files/R05_tact_gaiyo.pdf",
+          "observedAt": "2026-08-05",
+          "note": "固定1,120席と多目的鑑賞室15席。面積・最低天井高・舞台寸法は未観測"
         },
         {
           "id": "tsuruoka-tact-small",
@@ -67609,7 +69755,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tsuruoka.lg.jp/shisei/shiyakusyo/zaisei/zaimutact.files/R05_tact_gaiyo.pdf",
+          "observedAt": "2026-08-05",
+          "note": "市公式資料で小ホールを確認。定員、面積、最低天井高、床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -67663,7 +69812,10 @@ export const venueData = {
           "capacityTheater": 1287,
           "capacityFixed": 1287,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.sakata.lg.jp/bunka/geijyutsu/siinkaikanuketuke.files/0401siyousyo.pdf",
+          "observedAt": "2026-08-05",
+          "note": "1階836席（車椅子4席を含む）・2階451席の計1,287席"
         },
         {
           "id": "sakata-kibo-small",
@@ -67677,7 +69829,10 @@ export const venueData = {
           "capacityTheater": 150,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.sakata.lg.jp/bunka/geijyutsu/siinkaikanuketuke.files/0401siyousyo.pdf",
+          "observedAt": "2026-08-05",
+          "note": "スタッキングチェアで最大150席程度。面積・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -67731,7 +69886,10 @@ export const venueData = {
           "capacityTheater": 1036,
           "capacityFixed": 1034,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.shinjo.yamagata.jp/s025/030/20150301150229.html",
+          "observedAt": "2026-08-05",
+          "note": "収容1,034人、障がい者用スペース2人。舞台高さ7.5mは最低天井高ではないためceiling欄は未入力"
         },
         {
           "id": "shinjo-small",
@@ -67745,7 +69903,10 @@ export const venueData = {
           "capacityTheater": 300,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.shinjo.yamagata.jp/li/030/020/030/index.html",
+          "observedAt": "2026-08-05",
+          "note": "300人。会議・研修等に利用。面積・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -67799,7 +69960,10 @@ export const venueData = {
           "capacityTheater": 2004,
           "capacityFixed": 1998,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.bunka-manabi.or.jp/kc-center/institution/categorise/",
+          "observedAt": "2026-08-05",
+          "note": "1,998席・車椅子席6席。面積・最低天井高・舞台寸法は未観測"
         }
       ],
       "bestSpace": {
@@ -67853,7 +70017,10 @@ export const venueData = {
           "capacityTheater": 1007,
           "capacityFixed": 1002,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.f-shinkoukousha.or.jp/ongakudou/hall/",
+          "observedAt": "2026-08-05",
+          "note": "固定1,002席、車椅子スペース5席。パイプオルガンを常設"
         },
         {
           "id": "fukushima-music-small",
@@ -67867,7 +70034,10 @@ export const venueData = {
           "capacityTheater": 200,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.f-shinkoukousha.or.jp/ongakudou/hall/",
+          "observedAt": "2026-08-05",
+          "note": "200席収容の多目的ホール。面積・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -67921,7 +70091,10 @@ export const venueData = {
           "capacityTheater": 1840,
           "capacityFixed": 1705,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://iwaki-alios.jp/cd/sites/files/04_alios_brochure.pdf",
+          "observedAt": "2026-08-05",
+          "note": "通常1,705席、最大1,840席。1・2階のみ使用時1,122席。可動式音響反射板あり"
         },
         {
           "id": "iwaki-alios-medium",
@@ -67935,7 +70108,10 @@ export const venueData = {
           "capacityTheater": 687,
           "capacityFixed": null,
           "stageType": "shared",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://iwaki-alios.jp/cd/sites/files/210228sdcapa.pdf",
+          "observedAt": "2026-08-05",
+          "note": "可変席で最大687席。通常時の客席構成、面積、最低天井高は未観測"
         },
         {
           "id": "iwaki-alios-small",
@@ -67949,7 +70125,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.iwaki.lg.jp/www/contents/1475578924917/index.html",
+          "observedAt": "2026-08-05",
+          "note": "多機能小ホールとして整備。定員、面積、最低天井高、床荷重は未観測"
         },
         {
           "id": "iwaki-alios-music-small",
@@ -67963,7 +70142,10 @@ export const venueData = {
           "capacityTheater": 200,
           "capacityFixed": 200,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://iwaki-alios.jp/cd/sites/files/210228sdcapa.pdf",
+          "observedAt": "2026-08-05",
+          "note": "200席。面積・最低天井高は未観測"
         },
         {
           "id": "iwaki-alios-rehearsal-large",
@@ -67977,7 +70159,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.iwaki.lg.jp/www/contents/1701908013047/simple/H29houkatsu-kekka.pdf",
+          "observedAt": "2026-08-05",
+          "note": "約210㎡。定員、最低天井高、床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -68031,7 +70216,10 @@ export const venueData = {
           "capacityTheater": 1109,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.minamisoma.lg.jp/material/files/group/40/R6kyoikuyoran6.pdf",
+          "observedAt": "2026-08-05",
+          "note": "1階721席・2階388席。1階前3列は取り外し可"
         },
         {
           "id": "minamisoma-yume-multi",
@@ -68045,7 +70233,10 @@ export const venueData = {
           "capacityTheater": 120,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.minamisoma.lg.jp/material/files/group/40/R6kyoikuyoran6.pdf",
+          "observedAt": "2026-08-05",
+          "note": "椅子席120人、スクール形式80人。面積・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -68099,7 +70290,10 @@ export const venueData = {
           "capacityTheater": 1286,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yuki.lg.jp/kosodate-kyouiku/shougaigakushuu/page002073.html",
+          "observedAt": "2026-08-05",
+          "note": "1,286席のワンスロープ式ホール。面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "yuki-across-small",
@@ -68113,7 +70307,10 @@ export const venueData = {
           "capacityTheater": 363,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yuki.lg.jp/kosodate-kyouiku/shougaigakushuu/page002073.html",
+          "observedAt": "2026-08-05",
+          "note": "363席。可変舞台を備える。面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "yuki-across-exhibition",
@@ -68127,7 +70324,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yuki.lg.jp/kosodate-kyouiku/shougaigakushuu/page002073.html",
+          "observedAt": "2026-08-05",
+          "note": "277㎡。定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "yuki-across-rehearsal",
@@ -68141,7 +70341,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.yuki.lg.jp/kosodate-kyouiku/shougaigakushuu/page002073.html",
+          "observedAt": "2026-08-05",
+          "note": "13m×7m、ピアノ・バレエバーを備える。面積換算値、定員、最低天井高、床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -68195,7 +70398,10 @@ export const venueData = {
           "capacityTheater": 1309,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www-source.city.hitachi.lg.jp/shisetsu/kanko_bunka/1003914/1003915.html",
+          "observedAt": "2026-08-05",
+          "note": "1,309人収容。面積・最低天井高・床荷重・客席構成は未観測"
         }
       ],
       "bestSpace": {
@@ -68249,7 +70455,10 @@ export const venueData = {
           "capacityTheater": 1368,
           "capacityFixed": 1150,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hitachinaka.lg.jp/_res/projects/default_project/_page_/001/016/691/taishosisetu.pdf",
+          "observedAt": "2026-08-05",
+          "note": "固定1,150席・可動200席・車椅子10席・親子室8席。舞台は幅40m・奥行16mで、最低天井高ではない"
         },
         {
           "id": "hitachinaka-small",
@@ -68263,7 +70472,10 @@ export const venueData = {
           "capacityTheater": 411,
           "capacityFixed": 399,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hitachinaka.lg.jp/_res/projects/default_project/_page_/001/016/691/taishosisetu.pdf",
+          "observedAt": "2026-08-05",
+          "note": "固定399席・車椅子7席・親子室5席。舞台は幅14.5m・奥行9.5mで、最低天井高ではない"
         }
       ],
       "bestSpace": {
@@ -68317,7 +70529,10 @@ export const venueData = {
           "capacityTheater": 512,
           "capacityFixed": 509,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kasama.lg.jp/page/page001259.html",
+          "observedAt": "2026-08-05",
+          "note": "固定509席・車椅子席3席。舞台は間口12m・奥行8.5m・高さ5.5mで、最低天井高ではない"
         }
       ],
       "bestSpace": {
@@ -68371,7 +70586,10 @@ export const venueData = {
           "capacityTheater": 1530,
           "capacityFixed": 1440,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://isesaki-bunka.com/shisetsu/lhall/",
+          "observedAt": "2026-08-05",
+          "note": "固定1,440席・車椅子スペース6席・親子席8席・立見76人。プロセニアム高さ8mは最低天井高ではない"
         },
         {
           "id": "isesaki-small",
@@ -68385,7 +70603,10 @@ export const venueData = {
           "capacityTheater": 550,
           "capacityFixed": 494,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://isesaki-bunka.com/shisetsu/shall/",
+          "observedAt": "2026-08-05",
+          "note": "固定494席・立見56人。プロセニアム高さ6mは最低天井高ではない"
         },
         {
           "id": "isesaki-rehearsal",
@@ -68399,7 +70620,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://isesaki-bunka.com/guide/price/",
+          "observedAt": "2026-08-05",
+          "note": "63.6㎡。定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -68453,7 +70677,10 @@ export const venueData = {
           "capacityTheater": 1070,
           "capacityFixed": 1066,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tatebayashi.gunma.jp/sp003/020/030/20210107175456.html",
+          "observedAt": "2026-08-05",
+          "note": "固定1,066席・車椅子席4席。オーケストラピット使用時は固定964席のみ使用可。舞台高さ8mは最低天井高ではない"
         },
         {
           "id": "tatebayashi-small",
@@ -68467,7 +70694,10 @@ export const venueData = {
           "capacityTheater": 300,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tatebayashi.gunma.jp/sp003/020/010/20210107181415.html",
+          "observedAt": "2026-08-05",
+          "note": "定員300人。会議・研修会・発表会・展示会等に利用可。舞台高さ3.2mは最低天井高ではない"
         },
         {
           "id": "tatebayashi-rehearsal",
@@ -68481,7 +70711,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.tatebayashi.gunma.jp/sp003/020/030/20210107175456.html",
+          "observedAt": "2026-08-05",
+          "note": "58㎡。定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -68535,7 +70768,10 @@ export const venueData = {
           "capacityTheater": 1100,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tomioka.lg.jp/www/contents/1395971689497/",
+          "observedAt": "2026-08-05",
+          "note": "1階780席・2階320席。車椅子席4席は客席8席減で確保。プロセニアム高さ9mは最低天井高ではない"
         },
         {
           "id": "tomioka-kabura-rehearsal",
@@ -68549,7 +70785,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.tomioka.lg.jp/www/contents/1395971689497/",
+          "observedAt": "2026-08-05",
+          "note": "リハーサル室を備える。面積・定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -68603,7 +70842,10 @@ export const venueData = {
           "capacityTheater": 1100,
           "capacityFixed": 1092,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://mikabomirai.jp/l_hall.html",
+          "observedAt": "2026-08-05",
+          "note": "客席1,092席、親子席4席・車椅子席4席を含む収容1,100人。反射板利用時の高さ13mは最低天井高ではない"
         }
       ],
       "bestSpace": {
@@ -68657,7 +70899,10 @@ export const venueData = {
           "capacityTheater": 1000,
           "capacityFixed": 1000,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.sakuramate.jp/facility/",
+          "observedAt": "2026-08-05",
+          "note": "客席1,000席（グランド803・バルコニー197）、車椅子スペース4台分。主舞台高さ12mは最低天井高ではない"
         },
         {
           "id": "kumagaya-moon",
@@ -68671,7 +70916,10 @@ export const venueData = {
           "capacityTheater": 250,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.sakuramate.jp/facility/",
+          "observedAt": "2026-08-05",
+          "note": "面積270㎡、可動舞台74㎡、収容最高250人。フラットスペースへの転換が可能"
         }
       ],
       "bestSpace": {
@@ -68725,7 +70973,10 @@ export const venueData = {
           "capacityTheater": 2002,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.muse-tokorozawa.or.jp/facility/ark.php",
+          "observedAt": "2026-08-05",
+          "note": "利用形態により最大2,002席。パイプオルガンを備える。最低天井高・床荷重は未観測"
         },
         {
           "id": "tokorozawa-marquee",
@@ -68739,7 +70990,10 @@ export const venueData = {
           "capacityTheater": 798,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.muse-tokorozawa.or.jp/facility/marquee",
+          "observedAt": "2026-08-05",
+          "note": "798席、オーケストラピット使用時710席。1階に車椅子席スペース3席分。舞台高さ9.45mは最低天井高ではない"
         },
         {
           "id": "tokorozawa-cube",
@@ -68753,7 +71007,10 @@ export const venueData = {
           "capacityTheater": 342,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://muse-tokorozawa.or.jp/facility/cube.php",
+          "observedAt": "2026-08-05",
+          "note": "客席318席、ステージ迫り未使用時342席。客席床面積281.2㎡。舞台高さ13.3mは最低天井高ではない"
         },
         {
           "id": "tokorozawa-square",
@@ -68767,7 +71024,10 @@ export const venueData = {
           "capacityTheater": 200,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.muse-tokorozawa.or.jp/guide/",
+          "observedAt": "2026-08-05",
+          "note": "約400㎡、定員200名、約180mのパネル展示空間。最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -68821,7 +71081,10 @@ export const venueData = {
           "capacityTheater": 1288,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://clea-konosu.com/facilities/dai-ho-ru/",
+          "observedAt": "2026-08-05",
+          "note": "最大1,288席、通常1,122席・車椅子席4、最小786席。舞台面積284.24㎡。舞台高さ22.4mは最低天井高ではない"
         },
         {
           "id": "konosu-small",
@@ -68835,7 +71098,10 @@ export const venueData = {
           "capacityTheater": 306,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://clea-konosu.com/facilities/",
+          "observedAt": "2026-08-05",
+          "note": "最大306席、平場で1階客席は可動式。面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "konosu-rehearsal",
@@ -68849,7 +71115,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://clea-konosu.com/facilities/",
+          "observedAt": "2026-08-05",
+          "note": "96.6㎡。定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "konosu-practice",
@@ -68863,7 +71132,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://clea-konosu.com/facilities/",
+          "observedAt": "2026-08-05",
+          "note": "32.5㎡の遮音・吸音に配慮した音楽スタジオ。定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -68917,7 +71189,10 @@ export const venueData = {
           "capacityTheater": 1722,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kawagoe.saitama.jp/_res/projects/default_project/_page_/001/008/271/kobetsu-3c.pdf",
+          "observedAt": "2026-08-05",
+          "note": "川越市公式資料に座席数1,722席。運営者公式は約1,700席と案内。最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -68971,7 +71246,10 @@ export const venueData = {
           "capacityTheater": 1758,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.tekona.net/bunkakaikan/ticket/mainhall/",
+          "observedAt": "2026-08-05",
+          "note": "1階1,190席・2階568席の合計1,758席。オーケストラピット席141席。最低天井高・床荷重は未観測"
         },
         {
           "id": "ichikawa-small",
@@ -68985,7 +71263,10 @@ export const venueData = {
           "capacityTheater": 413,
           "capacityFixed": 403,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.tekona.net/bunkakaikan/facilities/aboutus/smallhall/",
+          "observedAt": "2026-08-05",
+          "note": "413人収容、固定403席・移動10席。プロセニアム高さ6mは最低天井高ではない"
         }
       ],
       "bestSpace": {
@@ -69039,7 +71320,10 @@ export const venueData = {
           "capacityTheater": 1955,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.morinohall21.com/hall21/hall_l.html",
+          "observedAt": "2026-08-05",
+          "note": "通常1,955席、オーケストラピット使用時1,790席。舞台面積740㎡。舞台高さ13mは最低天井高ではない"
         },
         {
           "id": "matsudo-mori-small",
@@ -69053,7 +71337,10 @@ export const venueData = {
           "capacityTheater": 516,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.morinohall21.com/hall21/hall_s.html",
+          "observedAt": "2026-08-05",
+          "note": "通常516席、オーケストラピット使用時436席。馬蹄型客席の演劇重視型多目的ホール"
         }
       ],
       "bestSpace": {
@@ -69107,7 +71394,10 @@ export const venueData = {
           "capacityTheater": 1188,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.narita-bunka.jp/about/hall/",
+          "observedAt": "2026-08-05",
+          "note": "1階930席・2階258席。舞台高さ8mは最低天井高ではない"
         }
       ],
       "bestSpace": {
@@ -69161,7 +71451,10 @@ export const venueData = {
           "capacityTheater": 667,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.sakura.lg.jp/material/files/group/71/gaiyou2.pdf",
+          "observedAt": "2026-08-05",
+          "note": "667席（1階535・2階132）に加え車椅子席3。最低天井高・床荷重は未観測"
         },
         {
           "id": "sakura-practice-1",
@@ -69175,7 +71468,10 @@ export const venueData = {
           "capacityTheater": 50,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.sakura.lg.jp/soshiki/shiminongakuhall/shiseturiyou/4864.html",
+          "observedAt": "2026-08-05",
+          "note": "87㎡・定員50名、フローリング、壁面鏡とグランドピアノを備える。最低天井高・床荷重は未観測"
         },
         {
           "id": "sakura-practice-2",
@@ -69189,7 +71485,10 @@ export const venueData = {
           "capacityTheater": 20,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.sakura.lg.jp/soshiki/shiminongakuhall/shiseturiyou/4864.html",
+          "observedAt": "2026-08-05",
+          "note": "40㎡・定員20名、カーペット敷。最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -69243,7 +71542,10 @@ export const venueData = {
           "capacityTheater": 851,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://komatsu-urara.com/facility/",
+          "observedAt": "2026-08-05",
+          "note": "1階611席・2階240席、桟敷席52席・車椅子席5席を含む。すのこ高さ21mは最低天井高ではない"
         }
       ],
       "bestSpace": {
@@ -69297,7 +71599,10 @@ export const venueData = {
           "capacityTheater": 1186,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://culture.city-hakusan.com/matto_culture_hall/guide/hall/",
+          "observedAt": "2026-08-05",
+          "note": "1,186人（車椅子用6席）。舞台高さ7mは最低天井高ではない"
         }
       ],
       "bestSpace": {
@@ -69351,7 +71656,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://shisetsu.sports-nanao.or.jp/shisetsu/%E4%B8%83%E5%B0%BE%E5%B8%82%E6%96%87%E5%8C%96%E3%83%9B%E3%83%BC%E3%83%AB/",
+          "observedAt": "2026-08-05",
+          "note": "奥行5.2m・幅7.2m。面積換算値、定員、最低天井高、床荷重は未観測"
         },
         {
           "id": "nanao-meeting-24",
@@ -69365,7 +71673,10 @@ export const venueData = {
           "capacityTheater": 100,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://shisetsu.sports-nanao.or.jp/shisetsu/%E4%B8%83%E5%B0%BE%E5%B8%82%E6%96%87%E5%8C%96%E3%83%9B%E3%83%BC%E3%83%AB/",
+          "observedAt": "2026-08-05",
+          "note": "193㎡、机なし100人・机利用64人。エレベーターなし。最低天井高・床荷重は未観測"
         },
         {
           "id": "nanao-meeting-12",
@@ -69379,7 +71690,10 @@ export const venueData = {
           "capacityTheater": 50,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://shisetsu.sports-nanao.or.jp/shisetsu/%E4%B8%83%E5%B0%BE%E5%B8%82%E6%96%87%E5%8C%96%E3%83%9B%E3%83%BC%E3%83%AB/",
+          "observedAt": "2026-08-05",
+          "note": "87㎡、机なし50人・机利用30人。最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -69433,7 +71747,10 @@ export const venueData = {
           "capacityTheater": 1426,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://kagabun.kagashi-ss.com/facilities/hall/",
+          "observedAt": "2026-08-05",
+          "note": "964㎡、客席1,426席（車椅子用6席）。オーケストラピット使用時1,310席。舞台高さ7.5mは最低天井高ではない"
         },
         {
           "id": "kaga-rehearsal",
@@ -69447,7 +71764,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://kagabun.kagashi-ss.com/facilities/hall/",
+          "observedAt": "2026-08-05",
+          "note": "貸出対象のリハーサル室。面積・定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -69501,7 +71821,10 @@ export const venueData = {
           "capacityTheater": 1000,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.nirasaki-bunka.jp/about/hall_big/",
+          "observedAt": "2026-08-05",
+          "note": "1階678席・2階318席・車椅子スペース4席で計1,000席。最低天井高・床荷重は未観測"
         },
         {
           "id": "nirasaki-small",
@@ -69515,7 +71838,10 @@ export const venueData = {
           "capacityTheater": 300,
           "capacityFixed": 296,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.nirasaki-bunka.jp/about/hall_small/",
+          "observedAt": "2026-08-05",
+          "note": "296席・車椅子4席で300席。最低天井高・床荷重は未観測"
         },
         {
           "id": "nirasaki-rehearsal",
@@ -69529,7 +71855,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.nirasaki-bunka.jp/about/list/",
+          "observedAt": "2026-08-05",
+          "note": "14.6m×5.6m（約50畳）。面積換算値、定員、最低天井高、床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -69583,7 +71912,10 @@ export const venueData = {
           "capacityTheater": 400,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://fuefuki-zaidan.jp/faciinfo/20/",
+          "observedAt": "2026-08-05",
+          "note": "546㎡、400名（ロールバックチェアスタンド240席を含む）。最低天井高・床荷重は未観測"
         },
         {
           "id": "fuefuki-schole-gallery",
@@ -69597,7 +71929,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://fuefuki-zaidan.jp/faciinfo/20/",
+          "observedAt": "2026-08-05",
+          "note": "327㎡。定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "fuefuki-schole-exhibit",
@@ -69611,7 +71946,10 @@ export const venueData = {
           "capacityTheater": 45,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://fuefuki-zaidan.jp/faciinfo/20/",
+          "observedAt": "2026-08-05",
+          "note": "126㎡、15名×3室。最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -69665,7 +72003,10 @@ export const venueData = {
           "capacityTheater": 828,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://uguisuhall.jp/onnkyodengen2.pdf",
+          "observedAt": "2026-08-05",
+          "note": "828席。最低天井高・床荷重は未観測"
         },
         {
           "id": "tsuru-uguisu-small",
@@ -69679,7 +72020,10 @@ export const venueData = {
           "capacityTheater": 300,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://uguisuhall.jp/onnkyodengen2.pdf",
+          "observedAt": "2026-08-05",
+          "note": "300席。最低天井高・床荷重は未観測"
         },
         {
           "id": "tsuru-uguisu-practice",
@@ -69693,7 +72037,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.tsuru.yamanashi.jp/material/files/group/2/2015-02-06.pdf",
+          "observedAt": "2026-08-05",
+          "note": "6m×5m、30㎡。練習室は2室。定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -69747,7 +72094,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://shirane-togen.jp/guide",
+          "observedAt": "2026-08-05",
+          "note": "音楽コンサート・演劇・舞踊・ダンス・映画・録音・式典・講演等に対応すると案内。定員・面積・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -69801,7 +72151,10 @@ export const venueData = {
           "capacityTheater": 810,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.sakira-ritto.net/about/hall_big/",
+          "observedAt": "2026-08-05",
+          "note": "810席（1階682・バルコニー114・車椅子6・可動8）。オーケストラピット対応時682席。プロセニアム高さ7〜12mは最低天井高ではない"
         },
         {
           "id": "ritto-sakira-middle",
@@ -69815,7 +72168,10 @@ export const venueData = {
           "capacityTheater": 406,
           "capacityFixed": 392,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.sakira-ritto.net/about/hall_middle/",
+          "observedAt": "2026-08-05",
+          "note": "本席392・車椅子6・可動8で406席。プロセニアム高さ7〜9mは最低天井高ではない"
         },
         {
           "id": "ritto-sakira-small",
@@ -69829,7 +72185,10 @@ export const venueData = {
           "capacityTheater": 200,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.sakira-ritto.net/about/hall_small/",
+          "observedAt": "2026-08-05",
+          "note": "可動席使用時149〜180席、可動席不使用時は最大200席のフリースペース。仮設ステージの高さ情報は最低天井高ではない"
         }
       ],
       "bestSpace": {
@@ -69883,7 +72242,10 @@ export const venueData = {
           "capacityTheater": 737,
           "capacityFixed": 668,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.pref.shiga.lg.jp/shiga-art/hall_gallery/330679.html",
+          "observedAt": "2026-08-05",
+          "note": "固定668席・補助63席・車椅子6席。料金資料はホール面積1,150㎡を掲載。最低天井高・床荷重は未観測"
         },
         {
           "id": "kusatsu-crea-rehearsal",
@@ -69897,7 +72259,10 @@ export const venueData = {
           "capacityTheater": 100,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://kusatsu-art.center/wp/wp-content/uploads/2020/12/pamphlet.pdf",
+          "observedAt": "2026-08-05",
+          "note": "141.8㎡・定員100名。ホール舞台と同じ広さ。天井高さ4mは最低天井高ではない"
         },
         {
           "id": "kusatsu-crea-exhibition",
@@ -69911,7 +72276,10 @@ export const venueData = {
           "capacityTheater": 230,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://kusatsu-art.center/creahall/facilities/",
+          "observedAt": "2026-08-05",
+          "note": "288.6㎡・定員230名。防音設備を備える多目的ホール。最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -69965,7 +72333,10 @@ export const venueData = {
           "capacityTheater": 1300,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.moriyama.lg.jp/_res/projects/default_project/_page_/001/011/098/mrymhkk.pdf",
+          "observedAt": "2026-08-05",
+          "note": "1,300席。最低天井高・床荷重は未観測"
         },
         {
           "id": "moriyama-small",
@@ -69979,7 +72350,10 @@ export const venueData = {
           "capacityTheater": 300,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.moriyama.lg.jp/_res/projects/default_project/_page_/001/011/098/mrymhkk.pdf",
+          "observedAt": "2026-08-05",
+          "note": "300席。最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -70033,7 +72407,10 @@ export const venueData = {
           "capacityTheater": 1130,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.omihachiman.lg.jp/material/files/group/104/daihallzasekinew.pdf",
+          "observedAt": "2026-08-05",
+          "note": "定員1,130名。最低天井高・床荷重は未観測"
         },
         {
           "id": "omihachiman-small",
@@ -70047,7 +72424,10 @@ export const venueData = {
           "capacityTheater": 200,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.pref.shiga.lg.jp/shiga-art/hall_gallery/330683.html",
+          "observedAt": "2026-08-05",
+          "note": "移動席200。最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -70101,7 +72481,10 @@ export const venueData = {
           "capacityTheater": 1032,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yamatotakada.nara.jp/sazankahall/shisetsunogoannai/sonohokanokannaishisetsu/2495.html",
+          "observedAt": "2026-08-05",
+          "note": "椅子席1,032席（1階766・2階266）、車椅子4席分・親子席4席分。床面積787㎡。プロセニアム開口高7〜9mは最低天井高ではない"
         },
         {
           "id": "sazanka-small",
@@ -70115,7 +72498,10 @@ export const venueData = {
           "capacityTheater": 236,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yamatotakada.nara.jp/sazankahall/shisetsunogoannai/sonohokanokannaishisetsu/2501.html",
+          "observedAt": "2026-08-05",
+          "note": "椅子席236席・車椅子2席分、床面積265㎡。オープン形式。最低天井高・床荷重は未観測"
         },
         {
           "id": "sazanka-reception",
@@ -70129,7 +72515,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yamatotakada.nara.jp/sazankahall/shisetsunogoannai/sonohokanokannaishisetsu/2630.html",
+          "observedAt": "2026-08-05",
+          "note": "302㎡。会議160人・立食250人・円卓140人・長机180人。劇場形式の定員、最低天井高・床荷重は未観測"
         },
         {
           "id": "sazanka-exhibition",
@@ -70143,7 +72532,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yamatotakada.nara.jp/sazankahall/shisetsunogoannai/sonohokanokannaishisetsu/2630.html",
+          "observedAt": "2026-08-05",
+          "note": "495㎡、可動パネルで分割利用可。定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -70197,7 +72589,10 @@ export const venueData = {
           "capacityTheater": 928,
           "capacityFixed": 928,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ikoma.lg.jp/cmsfiles/contents/0000038/38690/siryou1.pdf",
+          "observedAt": "2026-08-05",
+          "note": "固定座席928席（1階676・2階252）、面積624㎡。舞台高さ6.5mは最低天井高ではない"
         },
         {
           "id": "takemaru-small",
@@ -70211,7 +72606,10 @@ export const venueData = {
           "capacityTheater": 110,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ikoma.lg.jp/cmsfiles/contents/0000038/38690/siryou1.pdf",
+          "observedAt": "2026-08-05",
+          "note": "舞台付、定員110人、面積102㎡。舞台高さ2.5mは最低天井高ではない"
         },
         {
           "id": "takemaru-training-1-2",
@@ -70225,7 +72623,10 @@ export const venueData = {
           "capacityTheater": 36,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ikoma.lg.jp/cmsfiles/contents/0000038/38690/siryou1.pdf",
+          "observedAt": "2026-08-05",
+          "note": "1室定員18人、2室一体利用時36人。面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "takemaru-multipurpose",
@@ -70239,7 +72640,10 @@ export const venueData = {
           "capacityTheater": 25,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ikoma.lg.jp/cmsfiles/contents/0000038/38690/siryou1.pdf",
+          "observedAt": "2026-08-05",
+          "note": "定員25人。面積・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -70293,7 +72697,10 @@ export const venueData = {
           "capacityTheater": 1005,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.ykjohall.jp/aboutUs.html",
+          "observedAt": "2026-08-05",
+          "note": "プロセニアム形式の全席使用1,005席（車椅子9席含む）。舞台面積478㎡はホール全体面積ではないため検索面積に不採用。舞台高さ8.5mは最低天井高ではない"
         },
         {
           "id": "ykjo-small",
@@ -70307,7 +72714,10 @@ export const venueData = {
           "capacityTheater": 309,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.ykjohall.jp/aboutUs.html",
+          "observedAt": "2026-08-05",
+          "note": "309席（車椅子4席含む）。舞台面積162㎡はホール全体面積ではないため検索面積に不採用。舞台高さ6mは最低天井高ではない"
         }
       ],
       "bestSpace": {
@@ -70361,7 +72771,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "unknown",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.koryo.nara.jp/0000000785.html",
+          "observedAt": "2026-08-05",
+          "note": "町公式の貸出対象。客席数・面積・最低天井高・床荷重は未観測。営利目的利用は不可"
         },
         {
           "id": "koryo-multipurpose",
@@ -70375,7 +72788,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.koryo.nara.jp/0000000785.html",
+          "observedAt": "2026-08-05",
+          "note": "町公式の貸出対象。定員・面積・最低天井高・床荷重は未観測。営利目的利用は不可"
         },
         {
           "id": "koryo-conference",
@@ -70389,7 +72805,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.koryo.nara.jp/0000000785.html",
+          "observedAt": "2026-08-05",
+          "note": "町公式の貸出対象。定員・面積・最低天井高・床荷重は未観測。営利目的利用は不可"
         }
       ],
       "bestSpace": {
@@ -70443,7 +72862,10 @@ export const venueData = {
           "capacityTheater": 2000,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://tottori-caf.or.jp/kenbun/facility/about/",
+          "observedAt": "2026-08-05",
+          "note": "収容人数2,000名。1階客席1,294席・車椅子10席、2階固定316席、3階固定380席。最低天井高・床荷重は未観測"
         },
         {
           "id": "torigin-small",
@@ -70457,7 +72879,10 @@ export const venueData = {
           "capacityTheater": 500,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://tottori-caf.or.jp/kenbun/facility/about/",
+          "observedAt": "2026-08-05",
+          "note": "スタッキング椅子374席・電動式可動客席126席で500名。最低天井高・床荷重は未観測"
         },
         {
           "id": "torigin-rehearsal",
@@ -70471,7 +72896,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://tottori-caf.or.jp/kenbun/facility/about/",
+          "observedAt": "2026-08-05",
+          "note": "210㎡。定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "torigin-practice-4",
@@ -70485,7 +72913,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://tottori-caf.or.jp/kenbun/facility/about/",
+          "observedAt": "2026-08-05",
+          "note": "75㎡。定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "torigin-event",
@@ -70499,7 +72930,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://tottori-caf.or.jp/kenbun/facility/about/",
+          "observedAt": "2026-08-05",
+          "note": "294㎡。定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "torigin-conference-1",
@@ -70513,7 +72947,10 @@ export const venueData = {
           "capacityTheater": 199,
           "capacityFixed": 199,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://tottori-caf.or.jp/kenbun/facility/about/",
+          "observedAt": "2026-08-05",
+          "note": "235㎡、スロープ式固定席199席。最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -70567,7 +73004,10 @@ export const venueData = {
           "capacityTheater": 1503,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://tottori-caf.or.jp/miraichushin/ticket/",
+          "observedAt": "2026-08-05",
+          "note": "最大収容定員1,503名。最低天井高・床荷重は未観測"
         },
         {
           "id": "mirai-small",
@@ -70581,7 +73021,10 @@ export const venueData = {
           "capacityTheater": 310,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.tottori-caf.or.jp/miraichushin/facility/floor_guide/secondary_hall/",
+          "observedAt": "2026-08-05",
+          "note": "最大310名（可動席307・車椅子3）。平土間仕様は床張り210㎡で、可動席収納による同一空間の利用形態。プロセニアム高さ7.2〜9.4mは最低天井高ではない"
         },
         {
           "id": "mirai-rehearsal",
@@ -70595,7 +73038,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://tottori-caf.or.jp/user/filer_public/a4/93/a493866a-a1fc-486e-9cb8-ce9c48ad4d6e/miraich_panf_fin_2412.pdf",
+          "observedAt": "2026-08-05",
+          "note": "141㎡（12.8m×11.0m）、板張り。公式が天井の高さ9.5mと明記"
         },
         {
           "id": "mirai-practice-2",
@@ -70609,7 +73055,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://tottori-caf.or.jp/user/filer_public/a4/93/a493866a-a1fc-486e-9cb8-ce9c48ad4d6e/miraich_panf_fin_2412.pdf",
+          "observedAt": "2026-08-05",
+          "note": "82㎡（13.0m×6.6m）、カーペット。最低天井高・床荷重は未観測"
         },
         {
           "id": "mirai-seminar-3",
@@ -70623,7 +73072,10 @@ export const venueData = {
           "capacityTheater": 180,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://tottori-caf.or.jp/user/filer_public/a4/93/a493866a-a1fc-486e-9cb8-ce9c48ad4d6e/miraich_panf_fin_2412.pdf",
+          "observedAt": "2026-08-05",
+          "note": "教室形式180席・255㎡。最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -70677,7 +73129,10 @@ export const venueData = {
           "capacityTheater": 1126,
           "capacityFixed": 1120,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.yonagobunka.net/publichall/shisetsu/hall/",
+          "observedAt": "2026-08-05",
+          "note": "一般席1,120席・車椅子スペース6席。舞台間口18m×奥行12mは最低天井高ではない"
         },
         {
           "id": "yonago-public-rehearsal",
@@ -70691,7 +73146,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.yonagobunka.net/publichall/shisetsu/hall/",
+          "observedAt": "2026-08-05",
+          "note": "103㎡、ピアノあり。定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "yonago-public-meeting-1-3",
@@ -70705,7 +73163,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.yonagobunka.net/publichall/shisetsu/1/",
+          "observedAt": "2026-08-05",
+          "note": "1階の集会室1〜3は各56㎡で、可動壁により一室利用可。定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -70759,7 +73220,10 @@ export const venueData = {
           "capacityTheater": 808,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://minato-terrace.jp/free/reserve",
+          "observedAt": "2026-08-05",
+          "note": "約560㎡・808名。1階客席を収納して平土間利用可。平土間は同一空間の利用形態であり重複計上しない。最低天井高・床荷重は未観測"
         },
         {
           "id": "minato-large-meeting",
@@ -70773,7 +73237,10 @@ export const venueData = {
           "capacityTheater": 90,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://minato-terrace.jp/free/reserve",
+          "observedAt": "2026-08-05",
+          "note": "約224㎡・約90名、3分割可。収納式ステージ・音響機器・展示用設備あり。最低天井高・床荷重は未観測"
         },
         {
           "id": "minato-middle-meeting",
@@ -70787,7 +73254,10 @@ export const venueData = {
           "capacityTheater": 81,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://minato-terrace.jp/free/reserve",
+          "observedAt": "2026-08-05",
+          "note": "約163㎡・約81名、2分割可。最低天井高・床荷重は未観測"
         },
         {
           "id": "minato-rehearsal",
@@ -70801,7 +73271,10 @@ export const venueData = {
           "capacityTheater": 24,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://minato-terrace.jp/free/reserve",
+          "observedAt": "2026-08-05",
+          "note": "約81㎡・約24名。防音設備、ピアノ、ダンス練習用鏡を掲載。最低天井高・床荷重は未観測"
         },
         {
           "id": "minato-entrance",
@@ -70815,7 +73288,10 @@ export const venueData = {
           "capacityTheater": 85,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://minato-terrace.jp/free/reserve",
+          "observedAt": "2026-08-05",
+          "note": "約170㎡・約85名。展示等に利用可だが、単体利用は行政等による市民サービスまたは誰もが参加可能なイベント等に限定。最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -70869,7 +73345,10 @@ export const venueData = {
           "capacityTheater": 1469,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://scpf.jp/top/rental/",
+          "observedAt": "2026-08-05",
+          "note": "1,469席。最低天井高・床荷重は未観測"
         },
         {
           "id": "shimonoseki-middle",
@@ -70883,7 +73362,10 @@ export const venueData = {
           "capacityTheater": 400,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://scpf.jp/top/rental/mediumhall/",
+          "observedAt": "2026-08-05",
+          "note": "移動席400席。間仕切りにより約240席へ変更可。舞台高さ3.4mは最低天井高ではない。工事による使用休止の時期は要確認"
         },
         {
           "id": "shimonoseki-exhibition",
@@ -70897,7 +73379,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://scpf.jp/top/rental/",
+          "observedAt": "2026-08-05",
+          "note": "床面積422㎡。可動式展示パネルあり。定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "shimonoseki-rehearsal",
@@ -70911,7 +73396,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://scpf.jp/top/rental/largehall/",
+          "observedAt": "2026-08-05",
+          "note": "187㎡。定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "shimonoseki-meeting-1",
@@ -70925,7 +73413,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://scpf.jp/top/rental/",
+          "observedAt": "2026-08-05",
+          "note": "55㎡、スクール形式（レイアウト変更可）。定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -70979,7 +73470,10 @@ export const venueData = {
           "capacityTheater": 602,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://aspirante-hofu.com/wp-content/uploads/2022/04/HP%E7%94%A8%E5%88%A9%E7%94%A8%E6%A1%88%E5%86%85R4.4%EF%BD%9E%EF%BC%89.pdf",
+          "observedAt": "2026-08-05",
+          "note": "795㎡・602名（1階450・2階152）。最低天井高・床荷重は未観測"
         },
         {
           "id": "aspirante-rehearsal",
@@ -70993,7 +73487,10 @@ export const venueData = {
           "capacityTheater": 120,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://aspirante-hofu.com/wp-content/uploads/2022/04/HP%E7%94%A8%E5%88%A9%E7%94%A8%E6%A1%88%E5%86%85R4.4%EF%BD%9E%EF%BC%89.pdf",
+          "observedAt": "2026-08-05",
+          "note": "167㎡・120名。最低天井高・床荷重は未観測"
         },
         {
           "id": "aspirante-practice-1",
@@ -71007,7 +73504,10 @@ export const venueData = {
           "capacityTheater": 10,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://aspirante-hofu.com/wp-content/uploads/2022/04/HP%E7%94%A8%E5%88%A9%E7%94%A8%E6%A1%88%E5%86%85R4.4%EF%BD%9E%EF%BC%89.pdf",
+          "observedAt": "2026-08-05",
+          "note": "38㎡・10名。最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -71061,7 +73561,10 @@ export const venueData = {
           "capacityTheater": 1353,
           "capacityFixed": 1353,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ube.yamaguchi.jp/kyouyou/bunka/kanrenshisetsu/1004728/1004730.html",
+          "observedAt": "2026-08-05",
+          "note": "固定客席1,353席（1階837・2階516）。最低天井高・床荷重は未観測"
         },
         {
           "id": "watanabe-rehearsal",
@@ -71075,7 +73578,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.ube.yamaguchi.jp/kyouyou/bunka/kanrenshisetsu/1004728/1004730.html",
+          "observedAt": "2026-08-05",
+          "note": "84㎡。定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "watanabe-meeting-1",
@@ -71089,7 +73595,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ube.yamaguchi.jp/kyouyou/bunka/kanrenshisetsu/1004728/1004730.html",
+          "observedAt": "2026-08-05",
+          "note": "94.24㎡。定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -71143,7 +73652,10 @@ export const venueData = {
           "capacityTheater": 1205,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.sinfonia-iwakuni.com/facilities/hall.html",
+          "observedAt": "2026-08-05",
+          "note": "客席を含む2,001㎡・1,205席。オーケストラピット又は前舞台使用時1,077席。舞台高さは最低天井高ではない"
         },
         {
           "id": "sinfonia-multipurpose",
@@ -71157,7 +73669,10 @@ export const venueData = {
           "capacityTheater": 374,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.sinfonia-iwakuni.com/facilities/tamokutekihall.html",
+          "observedAt": "2026-08-05",
+          "note": "客席を含む686㎡・最大374席。舞台・客席昇降による平土間利用可で、同一空間の利用形態。最低天井高・床荷重は未観測"
         },
         {
           "id": "sinfonia-orchestra-lounge",
@@ -71171,7 +73686,10 @@ export const venueData = {
           "capacityTheater": 36,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.sinfonia-iwakuni.com/common/pdf/price_eiri.pdf",
+          "observedAt": "2026-08-05",
+          "note": "70.6㎡・定員36人。最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -71225,7 +73743,10 @@ export const venueData = {
           "capacityTheater": 1507,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://kkb-hall.jp/guidance/form/flow_hall.pdf",
+          "observedAt": "2026-08-05",
+          "note": "1,507席（1階1,001・2階506）。舞台高さ9mは最低天井高ではない"
         },
         {
           "id": "kochi-green",
@@ -71239,7 +73760,10 @@ export const venueData = {
           "capacityTheater": 500,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://kkb-hall.jp/guidance/form/flow_hall.pdf",
+          "observedAt": "2026-08-05",
+          "note": "500席。舞台高さ6mは最低天井高ではない"
         }
       ],
       "bestSpace": {
@@ -71293,7 +73817,10 @@ export const venueData = {
           "capacityTheater": 964,
           "capacityFixed": 964,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.susakibunka.com/facility",
+          "observedAt": "2026-08-05",
+          "note": "固定席964席（1階608・2階356、障害者席4）。舞台高さ7.5m（可動プロセニアム移動時9m）は最低天井高ではない"
         },
         {
           "id": "susaki-large-meeting",
@@ -71307,7 +73834,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.susakibunka.com/facility",
+          "observedAt": "2026-08-05",
+          "note": "346.53㎡、A室139.81㎡・B室206.72㎡に間仕切り可。定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "susaki-middle-meeting",
@@ -71321,7 +73851,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.susakibunka.com/facility",
+          "observedAt": "2026-08-05",
+          "note": "51.48㎡。一面鏡がありダンス練習等に利用可。定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "susaki-small-meeting-1",
@@ -71335,7 +73868,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.susakibunka.com/facility",
+          "observedAt": "2026-08-05",
+          "note": "27㎡、15名程度。最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -71389,7 +73925,10 @@ export const venueData = {
           "capacityTheater": 641,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.aki.kochi.jp/life/dtl.php?hdnKey=20",
+          "observedAt": "2026-08-05",
+          "note": "客席641席。最低天井高・床荷重は未観測"
         },
         {
           "id": "aki-meetings",
@@ -71403,7 +73942,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.aki.kochi.jp/life/dtl.php?hdnKey=20",
+          "observedAt": "2026-08-05",
+          "note": "会議室5室を貸出対象として掲載。各室の定員・面積・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -71457,7 +73999,10 @@ export const venueData = {
           "capacityTheater": 805,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.shimanto.lg.jp/uploaded/attachment/9061.pdf",
+          "observedAt": "2026-08-05",
+          "note": "座席805席（1階596・2階209）と車いす席6を掲載。資料上、805席に車いす席が含まれるか不明。最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -71511,7 +74056,10 @@ export const venueData = {
           "capacityTheater": 1966,
           "capacityFixed": 1918,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://emo.or.jp/wp-content/uploads/2025/02/9d004cc2ad2cf5b187d0d47661e3db70.pdf",
+          "observedAt": "2026-08-05",
+          "note": "固定1,918席・脱着可能36席・車椅子専用12席を含む1,966席。舞台面積はホール全体面積ではない。プロセニアム高さ9〜14mは最低天井高ではない"
         },
         {
           "id": "iichiko-oto",
@@ -71525,7 +74073,10 @@ export const venueData = {
           "capacityTheater": 710,
           "capacityFixed": 688,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://emo.or.jp/wp-content/uploads/2025/02/9d004cc2ad2cf5b187d0d47661e3db70.pdf",
+          "observedAt": "2026-08-05",
+          "note": "固定688席・脱着可能16席・車椅子専用6席を含む710席。舞台面積はホール全体面積ではない"
         },
         {
           "id": "iichiko-rehearsal",
@@ -71539,7 +74090,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://emo.or.jp/wp-content/uploads/2025/02/9d004cc2ad2cf5b187d0d47661e3db70.pdf",
+          "observedAt": "2026-08-05",
+          "note": "201㎡。定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "iichiko-large-practice",
@@ -71553,7 +74107,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://emo.or.jp/wp-content/uploads/2025/02/9d004cc2ad2cf5b187d0d47661e3db70.pdf",
+          "observedAt": "2026-08-05",
+          "note": "122㎡。定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "iichiko-gallery",
@@ -71567,7 +74124,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://emo.or.jp/wp-content/uploads/2025/02/9d004cc2ad2cf5b187d0d47661e3db70.pdf",
+          "observedAt": "2026-08-05",
+          "note": "164㎡。定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "iichiko-film",
@@ -71581,7 +74141,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://emo.or.jp/wp-content/uploads/2025/02/9d004cc2ad2cf5b187d0d47661e3db70.pdf",
+          "observedAt": "2026-08-05",
+          "note": "99㎡。定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -71635,7 +74198,10 @@ export const venueData = {
           "capacityTheater": 1008,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hita.oita.jp/soshiki/28/2221.html",
+          "observedAt": "2026-08-05",
+          "note": "1,008席。客席内訳は1階654席・2階354席で、車椅子5席と介助者5席を含む"
         },
         {
           "id": "patria-small",
@@ -71649,7 +74215,10 @@ export const venueData = {
           "capacityTheater": 353,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hita.oita.jp/soshiki/28/2221.html",
+          "observedAt": "2026-08-05",
+          "note": "最大353席。客席を収納して294席・218席・平らなフロアへ変更可能。別空間として重複計上しない"
         },
         {
           "id": "patria-gallery",
@@ -71663,7 +74232,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hita.oita.jp/soshiki/28/2221.html",
+          "observedAt": "2026-08-05",
+          "note": "324㎡、18m×18m。公式に高さ3.5mとあるが最低天井高の対象範囲は未確定"
         },
         {
           "id": "patria-studio-1",
@@ -71677,7 +74249,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.hita.oita.jp/soshiki/28/2221.html",
+          "observedAt": "2026-08-05",
+          "note": "180㎡。定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "patria-creation",
@@ -71691,7 +74266,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.hita.oita.jp/soshiki/28/2221.html",
+          "observedAt": "2026-08-05",
+          "note": "63㎡。定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -71745,7 +74323,10 @@ export const venueData = {
           "capacityTheater": 898,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city-nakatsu.jp/doc/2022033100128/file_contents/5R2.pdf",
+          "observedAt": "2026-08-05",
+          "note": "898席。最低天井高・床荷重・搬入・催事回線は未観測"
         },
         {
           "id": "nakatsu-small",
@@ -71759,7 +74340,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://nakatsu-bunkakaikan.net/%E6%96%87%E5%8C%96%E4%BC%9A%E9%A4%A8/",
+          "observedAt": "2026-08-05",
+          "note": "公式の貸出対象。客席・面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "nakatsu-studios",
@@ -71773,7 +74357,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://nakatsu-bunkakaikan.net/%E6%96%87%E5%8C%96%E4%BC%9A%E9%A4%A8/",
+          "observedAt": "2026-08-05",
+          "note": "公式の貸出対象。各室の面積・定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -71827,7 +74414,10 @@ export const venueData = {
           "capacityTheater": 810,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://sakura-hall-saiki.com/guide",
+          "observedAt": "2026-08-05",
+          "note": "通常は幕形式810席（親子室含む）。シューボックス、アリーナ、平土間への設定変更可。同一空間として記録"
         },
         {
           "id": "saiki-small",
@@ -71841,7 +74431,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://sakura-hall-saiki.com/guide",
+          "observedAt": "2026-08-05",
+          "note": "平土間、常設客席なし。面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "saiki-studios",
@@ -71855,7 +74448,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://sakura-hall-saiki.com/facility",
+          "observedAt": "2026-08-05",
+          "note": "5室。バンド・ダンス練習場。各室の面積・定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -71909,7 +74505,10 @@ export const venueData = {
           "capacityTheater": 1461,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.miyakonojo.miyazaki.jp/soshiki/20/3982.html",
+          "observedAt": "2026-08-05",
+          "note": "1,461席。オーケストラピットとバルコニー席を備える。面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "mj-middle",
@@ -71923,7 +74522,10 @@ export const venueData = {
           "capacityTheater": 682,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.miyakonojo.miyazaki.jp/soshiki/20/3982.html",
+          "observedAt": "2026-08-05",
+          "note": "682席。面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "mj-creative",
@@ -71937,7 +74539,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.miyakonojo.miyazaki.jp/soshiki/20/3982.html",
+          "observedAt": "2026-08-05",
+          "note": "75.2㎡、定員36人。美術・工芸制作、講座、研修に適する"
         },
         {
           "id": "mj-work",
@@ -71951,7 +74556,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.miyakonojo.miyazaki.jp/soshiki/20/3982.html",
+          "observedAt": "2026-08-05",
+          "note": "64.2㎡、定員36人。OA機器を利用した研修に適する"
         },
         {
           "id": "mj-practice-1",
@@ -71965,7 +74573,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.miyakonojo.miyazaki.jp/soshiki/20/3982.html",
+          "observedAt": "2026-08-05",
+          "note": "120.8㎡。音楽・演劇など大人数の練習に適する"
         },
         {
           "id": "mj-practice-2",
@@ -71979,7 +74590,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.miyakonojo.miyazaki.jp/soshiki/20/3982.html",
+          "observedAt": "2026-08-05",
+          "note": "82.7㎡。遮音性能が良く大音量の練習に適する"
         },
         {
           "id": "mj-practice-3",
@@ -71993,7 +74607,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.miyakonojo.miyazaki.jp/soshiki/20/3982.html",
+          "observedAt": "2026-08-05",
+          "note": "25.8㎡。バンド練習に適する"
         },
         {
           "id": "mj-meeting-1",
@@ -72007,7 +74624,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.miyakonojo.miyazaki.jp/soshiki/20/3982.html",
+          "observedAt": "2026-08-05",
+          "note": "113.2㎡、定員72人。プロジェクター等を備える"
         },
         {
           "id": "mj-multi-gallery",
@@ -72021,7 +74641,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.miyakonojo.miyazaki.jp/soshiki/20/3982.html",
+          "observedAt": "2026-08-05",
+          "note": "105㎡。絵画・書・写真等の展示に適する"
         }
       ],
       "bestSpace": {
@@ -72075,7 +74698,10 @@ export const venueData = {
           "capacityTheater": 1114,
           "capacityFixed": 1114,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kobayashi.lg.jp/soshikikarasagasu/kyoikubushakaikyoikuka_bunkakaikan/bunka_geijutsu/1774.html",
+          "observedAt": "2026-08-05",
+          "note": "固定1,114席（1階644席・2階470席）。車椅子2枠、固定席取り外しで最大18枠を確保可能。舞台高さ8.5mは最低天井高ではない"
         },
         {
           "id": "kobayashi-small",
@@ -72089,7 +74715,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kobayashi.lg.jp/soshikikarasagasu/kyoikubushakaikyoikuka_bunkakaikan/bunka_geijutsu/1695.html",
+          "observedAt": "2026-08-05",
+          "note": "公式の貸出対象。客席・面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "kobayashi-rehearsal",
@@ -72103,7 +74732,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.kobayashi.lg.jp/soshikikarasagasu/kyoikubushakaikyoikuka_bunkakaikan/bunka_geijutsu/1695.html",
+          "observedAt": "2026-08-05",
+          "note": "公式の貸出対象。面積・定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "kobayashi-dressing-1",
@@ -72117,7 +74749,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kobayashi.lg.jp/soshikikarasagasu/kyoikubushakaikyoikuka_bunkakaikan/bunka_geijutsu/1774.html",
+          "observedAt": "2026-08-05",
+          "note": "17㎡。定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "kobayashi-dressing-2",
@@ -72131,7 +74766,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kobayashi.lg.jp/soshikikarasagasu/kyoikubushakaikyoikuka_bunkakaikan/bunka_geijutsu/1774.html",
+          "observedAt": "2026-08-05",
+          "note": "41㎡。アコーディオンカーテンで半室に仕切り可能"
         },
         {
           "id": "kobayashi-dressing-3",
@@ -72145,7 +74783,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kobayashi.lg.jp/soshikikarasagasu/kyoikubushakaikyoikuka_bunkakaikan/bunka_geijutsu/1774.html",
+          "observedAt": "2026-08-05",
+          "note": "54㎡。アコーディオンカーテンで半室に仕切り可能"
         }
       ],
       "bestSpace": {
@@ -72199,7 +74840,10 @@ export const venueData = {
           "capacityTheater": 1631,
           "capacityFixed": 1157,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.hyugahall.jp/shisetsu.php",
+          "observedAt": "2026-08-05",
+          "note": "最大1,631人。固定1,157席、ギャラリー272席、補助110席、母子室12席、立見80を掲載。アリーナ状態は同一空間"
         },
         {
           "id": "hyuga-small",
@@ -72213,7 +74857,10 @@ export const venueData = {
           "capacityTheater": 200,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.hyugahall.jp/shisetsu.php",
+          "observedAt": "2026-08-05",
+          "note": "収容200人。昇降床システム、音響・照明設備を掲載"
         },
         {
           "id": "hyuga-rehearsal",
@@ -72227,7 +74874,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.hyugahall.jp/shisetsu.php",
+          "observedAt": "2026-08-05",
+          "note": "壁の一面が鏡張り。面積・定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "hyuga-meeting",
@@ -72241,7 +74891,10 @@ export const venueData = {
           "capacityTheater": 66,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.hyugahall.jp/shisetsu.php",
+          "observedAt": "2026-08-05",
+          "note": "収容66人。移動壁で半分に仕切り可能"
         }
       ],
       "bestSpace": {
@@ -72295,7 +74948,10 @@ export const venueData = {
           "capacityTheater": 415,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.saito.lg.jp/kanko_bunka/culture/post_1759.html",
+          "observedAt": "2026-08-05",
+          "note": "415席（うち車椅子3席）。舞台高さ5.5mは最低天井高ではない"
         },
         {
           "id": "saito-training",
@@ -72309,7 +74965,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.saito.lg.jp/kanko_bunka/culture/post_1759.html",
+          "observedAt": "2026-08-05",
+          "note": "講座・講習会等の貸出対象。面積・定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "saito-light-exercise",
@@ -72323,7 +74982,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.saito.lg.jp/kanko_bunka/culture/post_1759.html",
+          "observedAt": "2026-08-05",
+          "note": "健康づくりを目的とする講座・講習会等の貸出対象。面積・定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -72377,7 +75039,10 @@ export const venueData = {
           "capacityTheater": 552,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hirosaki.aomori.jp/hirosakibunka/bunka_kaijo.html",
+          "observedAt": "2026-08-05",
+          "note": "351㎡、定員552人（車椅子4席分を含む）。舞台高さ7mは最低天井高ではない"
         },
         {
           "id": "hirosaki-center-dressing-1",
@@ -72391,7 +75056,10 @@ export const venueData = {
           "capacityTheater": 7,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hirosaki.aomori.jp/hirosakibunka/bunka_kaijo.html",
+          "observedAt": "2026-08-05",
+          "note": "23㎡、定員7人。大ホール利用者向け"
         },
         {
           "id": "hirosaki-center-dressing-2",
@@ -72405,7 +75073,10 @@ export const venueData = {
           "capacityTheater": 6,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hirosaki.aomori.jp/hirosakibunka/bunka_kaijo.html",
+          "observedAt": "2026-08-05",
+          "note": "18㎡、定員6人。大ホール利用者向け"
         },
         {
           "id": "hirosaki-center-practice-1",
@@ -72419,7 +75090,10 @@ export const venueData = {
           "capacityTheater": 28,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.hirosaki.aomori.jp/hirosakibunka/bunka_kaijo.html",
+          "observedAt": "2026-08-05",
+          "note": "57㎡、定員28人"
         },
         {
           "id": "hirosaki-center-practice-2",
@@ -72433,7 +75107,10 @@ export const venueData = {
           "capacityTheater": 26,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.hirosaki.aomori.jp/hirosakibunka/bunka_kaijo.html",
+          "observedAt": "2026-08-05",
+          "note": "52㎡、定員26人"
         },
         {
           "id": "hirosaki-center-practice-3",
@@ -72447,7 +75124,10 @@ export const venueData = {
           "capacityTheater": 45,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.hirosaki.aomori.jp/hirosakibunka/bunka_kaijo.html",
+          "observedAt": "2026-08-05",
+          "note": "91㎡、定員45人。鏡壁面1面を掲載"
         },
         {
           "id": "hirosaki-center-exhibition",
@@ -72461,7 +75141,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hirosaki.aomori.jp/hirosakibunka/bunka_kaijo.html",
+          "observedAt": "2026-08-05",
+          "note": "121.5㎡。絵画・書道・写真展等に利用可能"
         }
       ],
       "bestSpace": {
@@ -72515,7 +75198,10 @@ export const venueData = {
           "capacityTheater": 998,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.towada.lg.jp/shisei/shisetsu/shisetsu.html",
+          "observedAt": "2026-08-05",
+          "note": "収容998人（車椅子2席）・親子室2組。プロセニアム高さ7.5mは最低天井高ではない"
         },
         {
           "id": "towada-dressing-1",
@@ -72529,7 +75215,10 @@ export const venueData = {
           "capacityTheater": 5,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.towada.lg.jp/shisei/shisetsu/shisetsu.html",
+          "observedAt": "2026-08-05",
+          "note": "16.5㎡、定員5人。出演者控室"
         },
         {
           "id": "towada-dressing-2",
@@ -72543,7 +75232,10 @@ export const venueData = {
           "capacityTheater": 6,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.towada.lg.jp/shisei/shisetsu/shisetsu.html",
+          "observedAt": "2026-08-05",
+          "note": "16.5㎡、定員6人。出演者控室"
         },
         {
           "id": "towada-dressing-3",
@@ -72557,7 +75249,10 @@ export const venueData = {
           "capacityTheater": 10,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.towada.lg.jp/shisei/shisetsu/shisetsu.html",
+          "observedAt": "2026-08-05",
+          "note": "27.2㎡、定員10人。出演者控室"
         },
         {
           "id": "towada-dressing-4",
@@ -72571,7 +75266,10 @@ export const venueData = {
           "capacityTheater": 10,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.towada.lg.jp/shisei/shisetsu/shisetsu.html",
+          "observedAt": "2026-08-05",
+          "note": "31.1㎡、定員10人。出演者控室"
         },
         {
           "id": "towada-learning-hall",
@@ -72585,7 +75283,10 @@ export const venueData = {
           "capacityTheater": 304,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.towada.lg.jp/shisei/shisetsu/shisetsu.html",
+          "observedAt": "2026-08-05",
+          "note": "312.8㎡。電動式座席使用時は300人と車椅子4席、収納時は椅子200人または椅子・テーブル135人。同一空間として記録"
         }
       ],
       "bestSpace": {
@@ -72639,7 +75340,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.goshogawara.lg.jp/jouhou/shisetsu/chuoukouminkansisetuannai.html",
+          "observedAt": "2026-08-05",
+          "note": "平床式。講演会・音楽会・軽スポーツ等に利用可能で、舞台設備とグランドピアノを備える。椅子300脚は備品数であり定員は未観測"
         },
         {
           "id": "goshogawara-music",
@@ -72653,7 +75357,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.goshogawara.lg.jp/jouhou/shisetsu/chuoukouminkansisetuannai.html",
+          "observedAt": "2026-08-05",
+          "note": "ピアノ等を設置し合唱等に適する。面積・定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "goshogawara-craft",
@@ -72667,7 +75374,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.goshogawara.lg.jp/jouhou/shisetsu/chuoukouminkansisetuannai.html",
+          "observedAt": "2026-08-05",
+          "note": "絵画・木工・染色等の創作実習に適する。面積・定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "goshogawara-audiovisual",
@@ -72681,7 +75391,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.goshogawara.lg.jp/jouhou/shisetsu/chuoukouminkansisetuannai.html",
+          "observedAt": "2026-08-05",
+          "note": "プロジェクター、スクリーン、ブルーレイ等を備える。面積・定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "goshogawara-meetings",
@@ -72695,7 +75408,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.goshogawara.lg.jp/jouhou/shisetsu/chuoukouminkansisetuannai.html",
+          "observedAt": "2026-08-05",
+          "note": "第1〜4会議室を掲載。各室の面積・定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -72749,7 +75465,10 @@ export const venueData = {
           "capacityTheater": 480,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tsugaru.aomori.jp/soshiki/kyoiku/shakaikyouikusupotu/syougaku/6149.html",
+          "observedAt": "2026-08-05",
+          "note": "可動席480席。テーブル席約280人、パーテーションで2分割可能。別空間として重複計上しない"
         },
         {
           "id": "tsugaru-gallery",
@@ -72763,7 +75482,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tsugaru.aomori.jp/soshiki/kyoiku/shakaikyouikusupotu/syougaku/6149.html",
+          "observedAt": "2026-08-05",
+          "note": "展示等の多目的コーナー。面積・定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "tsugaru-meeting-b",
@@ -72777,7 +75499,10 @@ export const venueData = {
           "capacityTheater": 40,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tsugaru.aomori.jp/soshiki/kyoiku/shakaikyouikusupotu/syougaku/6149.html",
+          "observedAt": "2026-08-05",
+          "note": "85㎡、収容30〜40人。ウォールミラー2面、2分割可能"
         },
         {
           "id": "tsugaru-meeting-c",
@@ -72791,7 +75516,10 @@ export const venueData = {
           "capacityTheater": 15,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tsugaru.aomori.jp/soshiki/kyoiku/shakaikyouikusupotu/syougaku/6149.html",
+          "observedAt": "2026-08-05",
+          "note": "37㎡、収容10〜15人。ウォールミラー1面"
         },
         {
           "id": "tsugaru-meeting-d",
@@ -72805,7 +75533,10 @@ export const venueData = {
           "capacityTheater": 15,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tsugaru.aomori.jp/soshiki/kyoiku/shakaikyouikusupotu/syougaku/6149.html",
+          "observedAt": "2026-08-05",
+          "note": "54㎡、収容10〜15人。ウォールミラー1面"
         },
         {
           "id": "tsugaru-audiovisual",
@@ -72819,7 +75550,10 @@ export const venueData = {
           "capacityTheater": 80,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tsugaru.aomori.jp/soshiki/kyoiku/shakaikyouikusupotu/syougaku/6149.html",
+          "observedAt": "2026-08-05",
+          "note": "165㎡、収容約80人。2分割可能"
         }
       ],
       "bestSpace": {
@@ -72873,7 +75607,10 @@ export const venueData = {
           "capacityTheater": 1204,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tochigi.lg.jp/uploaded/attachment/54064.pdf",
+          "observedAt": "2026-08-05",
+          "note": "資料掲載の1,204席。改修計画等により予約時の現行座席図を要確認"
         },
         {
           "id": "tochigi-small",
@@ -72887,7 +75624,10 @@ export const venueData = {
           "capacityTheater": 401,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tochigi.lg.jp/uploaded/attachment/54064.pdf",
+          "observedAt": "2026-08-05",
+          "note": "資料掲載の401席。改修計画等により予約時の現行座席図を要確認"
         }
       ],
       "bestSpace": {
@@ -72941,7 +75681,10 @@ export const venueData = {
           "capacityTheater": 1012,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.oyama.tochigi.jp/data/doc/1705049206_doc_41_0.pdf",
+          "observedAt": "2026-08-05",
+          "note": "1,012席（1階778席・2階234席）。舞台高さ8mは最低天井高ではない"
         },
         {
           "id": "oyama-small",
@@ -72955,7 +75698,10 @@ export const venueData = {
           "capacityTheater": 450,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.oyama.tochigi.jp/data/doc/1705049206_doc_41_0.pdf",
+          "observedAt": "2026-08-05",
+          "note": "可動席450席。舞台高さ3.75mは最低天井高ではない"
         },
         {
           "id": "oyama-gallery",
@@ -72969,7 +75715,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.oyama.tochigi.jp/data/doc/1705049206_doc_41_0.pdf",
+          "observedAt": "2026-08-05",
+          "note": "床面積55㎡、壁面積86㎡"
         }
       ],
       "bestSpace": {
@@ -73023,7 +75772,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kanuma.tochigi.jp/0466/info-0000003109-0.html",
+          "observedAt": "2026-08-05",
+          "note": "公式の貸出対象。客席・面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "kanuma-small",
@@ -73037,7 +75789,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kanuma.tochigi.jp/0466/info-0000003109-0.html",
+          "observedAt": "2026-08-05",
+          "note": "公式の貸出対象。客席・面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "kanuma-rehearsal",
@@ -73051,7 +75806,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.kanuma.tochigi.jp/0466/info-0000003109-0.html",
+          "observedAt": "2026-08-05",
+          "note": "公式の貸出対象。面積・定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "kanuma-gallery",
@@ -73065,7 +75823,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kanuma.tochigi.jp/0466/info-0000003109-0.html",
+          "observedAt": "2026-08-05",
+          "note": "公式の貸出対象。面積・定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -73119,7 +75880,10 @@ export const venueData = {
           "capacityTheater": 547,
           "capacityFixed": 520,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.sano-culture.jp/actplaza/hall_big/",
+          "observedAt": "2026-08-05",
+          "note": "547席（固定520席・車椅子19席・親子席8席）。舞台高さ8mは最低天井高ではない"
         },
         {
           "id": "act-dressings",
@@ -73133,7 +75897,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.sano-culture.jp/actplaza/hall_big/",
+          "observedAt": "2026-08-05",
+          "note": "洋室楽屋3室。各室の面積・定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "act-small",
@@ -73147,7 +75914,10 @@ export const venueData = {
           "capacityTheater": 100,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.pref.tochigi.lg.jp/culture/shisetsu/042.html",
+          "observedAt": "2026-08-05",
+          "note": "県公式文化情報ナビ掲載の100席。面積・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -73201,7 +75971,10 @@ export const venueData = {
           "capacityTheater": 670,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nanto.toyama.jp/kanko-bunka-sports/bunka-geijutsu/2/3530.html",
+          "observedAt": "2026-08-05",
+          "note": "670席（1階530席・2階140席）。面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "mint-eight",
@@ -73215,7 +75988,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nanto.toyama.jp/kanko-bunka-sports/bunka-geijutsu/2/3530.html",
+          "observedAt": "2026-08-05",
+          "note": "多目的ホール。客席・面積・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -73269,7 +76045,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kurobe.toyama.jp/attach/EDIT/004/004085.pdf",
+          "observedAt": "2026-08-05",
+          "note": "公式料金表の貸出対象。客席・面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "collare-multi",
@@ -73283,7 +76062,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kurobe.toyama.jp/attach/EDIT/004/004085.pdf",
+          "observedAt": "2026-08-05",
+          "note": "公式料金表の貸出対象。客席・面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "collare-noh",
@@ -73297,7 +76079,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kurobe.toyama.jp/attach/EDIT/004/004085.pdf",
+          "observedAt": "2026-08-05",
+          "note": "能舞台・楽屋・見所を含む公式料金表の貸出対象。各数値は未観測"
         },
         {
           "id": "collare-exhibitions",
@@ -73311,7 +76096,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kurobe.toyama.jp/attach/EDIT/004/004085.pdf",
+          "observedAt": "2026-08-05",
+          "note": "展示室1・2を公式料金表の貸出対象として掲載。各室の面積等は未観測"
         }
       ],
       "bestSpace": {
@@ -73365,7 +76153,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.uozu.toyama.jp/guide/svGuideDtl.aspx?servno=1774",
+          "observedAt": "2026-08-05",
+          "note": "音響反射板を備え多様な用途に対応する大ホールとして市公式が案内。各数値は未観測"
         }
       ],
       "bestSpace": {
@@ -73419,7 +76210,10 @@ export const venueData = {
           "capacityTheater": 300,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.namerikawa.toyama.jp/soshiki/12/merika/nakanamerikawa/nigiwai/8000.html",
+          "observedAt": "2026-08-05",
+          "note": "300人以上規模のイベント・セミナーに利用可能。固定席かは未確定のため固定席数は空欄"
         }
       ],
       "bestSpace": {
@@ -73473,7 +76267,10 @@ export const venueData = {
           "capacityTheater": 1200,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tsuruga.lg.jp/about_city/mayor/shityohenomail.files/0012_20251203.pdf",
+          "observedAt": "2026-08-05",
+          "note": "市公式資料は約1,200人収容と掲載。固定・可動の内訳は未観測"
         },
         {
           "id": "tsuruga-small",
@@ -73487,7 +76284,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tsuruga.lg.jp/page/4005.html",
+          "observedAt": "2026-08-05",
+          "note": "現行施設案内に小ホールと練習室の新設を掲載。客席・面積等は未観測"
         },
         {
           "id": "tsuruga-practice",
@@ -73501,7 +76301,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.tsuruga.lg.jp/page/4005.html",
+          "observedAt": "2026-08-05",
+          "note": "現行施設案内の貸出対象。面積・定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -73555,7 +76358,10 @@ export const venueData = {
           "capacityTheater": 500,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tsuruga.lg.jp/soshiki/94/",
+          "observedAt": "2026-08-05",
+          "note": "能楽堂見所と小ホールを客席として利用する形態で500席。別空間として重複計上しない"
         },
         {
           "id": "banjo-gallery",
@@ -73569,7 +76375,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tsuruga.lg.jp/page/4014.html",
+          "observedAt": "2026-08-05",
+          "note": "多目的室（市民ギャラリー）。面積・定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "banjo-meetings",
@@ -73583,7 +76392,10 @@ export const venueData = {
           "capacityTheater": 40,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tsuruga.lg.jp/page/4014.html",
+          "observedAt": "2026-08-05",
+          "note": "教室型40席の会議室3室およびロの字型20席の会議室1室を掲載"
         }
       ],
       "bestSpace": {
@@ -73637,7 +76449,10 @@ export const venueData = {
           "capacityTheater": 1020,
           "capacityFixed": 1020,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ono.fukui.jp/shisei/seisaku-keikaku/sonota/bunkakaikan.files/0021_20240501.pdf",
+          "observedAt": "2026-08-05",
+          "note": "公式比較資料掲載の固定1,020席。面積・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -73691,7 +76506,10 @@ export const venueData = {
           "capacityTheater": 463,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ono.fukui.jp/shisei/seisaku-keikaku/sonota/bunkakaikan.files/0021_20240501.pdf",
+          "observedAt": "2026-08-05",
+          "note": "公式比較資料掲載の463席、固定と可動の併用。内訳は未観測"
         }
       ],
       "bestSpace": {
@@ -73745,7 +76563,10 @@ export const venueData = {
           "capacityTheater": 990,
           "capacityFixed": 990,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.izumo.shimane.jp/www/contents/1375231014521/html/common/600bba29011.html",
+          "observedAt": "2026-08-05",
+          "note": "固定990席。面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "izumo-civic-meetings",
@@ -73759,7 +76580,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.izumo.shimane.jp/www/job/1111477917380/index_i.html",
+          "observedAt": "2026-08-05",
+          "note": "有料利用対象の会議室。各室の面積・定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -73813,7 +76637,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.izumo.shimane.jp/www/window/index.html",
+          "observedAt": "2026-08-05",
+          "note": "コンサート・講演会対応の有料ホール。正確な定員・面積は未観測"
         },
         {
           "id": "bigheart-black",
@@ -73827,7 +76654,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.izumo.shimane.jp/www/contents/1444295129562/files/bunka.pdf",
+          "observedAt": "2026-08-05",
+          "note": "公式料金表の貸出対象。面積・定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "bigheart-tea",
@@ -73841,7 +76671,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.izumo.shimane.jp/www/contents/1444295129562/files/bunka.pdf",
+          "observedAt": "2026-08-05",
+          "note": "公式料金表の貸出対象。面積・定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "bigheart-gallery",
@@ -73855,7 +76688,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.izumo.shimane.jp/www/contents/1444295129562/files/bunka.pdf",
+          "observedAt": "2026-08-05",
+          "note": "公式料金表の貸出対象。面積・定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -73909,7 +76745,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.izumo.shimane.jp/www/contents/1750992348310/simple/houkoku03.pdf",
+          "observedAt": "2026-08-05",
+          "note": "市公式の料金改定資料に500〜1,000席区分の例として掲載。正確な定員・面積は未観測"
         }
       ],
       "bestSpace": {
@@ -73963,7 +76802,10 @@ export const venueData = {
           "capacityTheater": 200,
           "capacityFixed": 200,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.izumo.shimane.jp/www/contents/1436341014316/html/common/6a290cc5017.html",
+          "observedAt": "2026-08-05",
+          "note": "固定200席。面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "taki-audiovisual",
@@ -73977,7 +76819,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.izumo.shimane.jp/www/contents/1436341014316/html/common/6a290cc5017.html",
+          "observedAt": "2026-08-05",
+          "note": "公式の施設紹介に掲載。面積・定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -74031,7 +76876,10 @@ export const venueData = {
           "capacityTheater": 1200,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kanonji.kagawa.jp/soshiki/43/6735.html",
+          "observedAt": "2026-08-05",
+          "note": "1,200席。1階828席、バルコニー22席、車椅子8席、2階298席、バルコニー40席、車椅子4席を掲載"
         },
         {
           "id": "kanonji-small",
@@ -74045,7 +76893,10 @@ export const venueData = {
           "capacityTheater": 334,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kanonji.kagawa.jp/soshiki/43/6735.html",
+          "observedAt": "2026-08-05",
+          "note": "334席（固定326席・車椅子8席）"
         },
         {
           "id": "kanonji-multi",
@@ -74059,7 +76910,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kanonji.kagawa.jp/soshiki/43/6735.html",
+          "observedAt": "2026-08-05",
+          "note": "535㎡。定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "kanonji-studios",
@@ -74073,7 +76927,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.kanonji.kagawa.jp/soshiki/43/6735.html",
+          "observedAt": "2026-08-05",
+          "note": "会議室・スタジオ等7室。各室の面積等は未観測"
         }
       ],
       "bestSpace": {
@@ -74127,7 +76984,10 @@ export const venueData = {
           "capacityTheater": 702,
           "capacityFixed": 402,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.sakaide.lg.jp/soshiki/bunkashinkou/siminhall.html",
+          "observedAt": "2026-08-05",
+          "note": "1階可動300席・2階固定402席。1階可動席を撤去して展示・物販等に利用可能"
         },
         {
           "id": "sakaide-dressing-3",
@@ -74141,7 +77001,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.sakaide.lg.jp/soshiki/bunkashinkou/siminhall.html",
+          "observedAt": "2026-08-05",
+          "note": "28㎡。定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -74195,7 +77058,10 @@ export const venueData = {
           "capacityTheater": 180,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.sakaide.lg.jp/soshiki/syougaigakusyu/fureai.html",
+          "observedAt": "2026-08-05",
+          "note": "2階の180人収容多目的ホール"
         },
         {
           "id": "sakaide-fureai-board",
@@ -74209,7 +77075,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.sakaide.lg.jp/soshiki/syougaigakusyu/fureai.html",
+          "observedAt": "2026-08-05",
+          "note": "3階の板の間。面積・定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -74263,7 +77132,10 @@ export const venueData = {
           "capacityTheater": 1086,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.marugame.lg.jp/uploaded/attachment/1579.pdf",
+          "observedAt": "2026-08-05",
+          "note": "可動席を収納して平土間利用もできる1,086席ホール。別空間として重複計上しない"
         }
       ],
       "bestSpace": {
@@ -74317,7 +77189,10 @@ export const venueData = {
           "capacityTheater": 1283,
           "capacityFixed": 1283,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.isahaya.nagasaki.jp/uploaded/attachment/18091.pdf",
+          "observedAt": "2026-08-05",
+          "note": "固定1,283席、車椅子用スペース6席。舞台高さ7.2mは最低天井高ではない"
         },
         {
           "id": "isahaya-middle",
@@ -74331,7 +77206,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.isahaya.nagasaki.jp/uploaded/attachment/18091.pdf",
+          "observedAt": "2026-08-05",
+          "note": "平床可動席。客席・面積・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -74385,7 +77263,10 @@ export const venueData = {
           "capacityTheater": 1973,
           "capacityFixed": 500,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hirado.nagasaki.jp/kurashi/bosyu/2023_bosyu/files/bunkasentasiyousyo.pdf",
+          "observedAt": "2026-08-05",
+          "note": "1,973席（電動移動1,473席・固定500席）。別空間として重複計上しない"
         },
         {
           "id": "hirado-middle",
@@ -74399,7 +77280,10 @@ export const venueData = {
           "capacityTheater": 300,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.hirado.nagasaki.jp/kurashi/bosyu/2023_bosyu/files/bunkasentasiyousyo.pdf",
+          "observedAt": "2026-08-05",
+          "note": "柔剣道場兼用、スタッキングチェア300席。面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "hirado-meetings",
@@ -74413,7 +77297,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hirado.nagasaki.jp/kurashi/bosyu/2023_bosyu/files/bunkasentasiyousyo.pdf",
+          "observedAt": "2026-08-05",
+          "note": "洋室96㎡・111㎡、和室30帖。各室を要確認"
         },
         {
           "id": "hirado-rehearsal",
@@ -74427,7 +77314,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.hirado.nagasaki.jp/kurashi/bosyu/2023_bosyu/files/bunkasentasiyousyo.pdf",
+          "observedAt": "2026-08-05",
+          "note": "公式の貸出対象に掲載。面積・定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -74481,7 +77371,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.unzen.nagasaki.jp/kiji0038361/index.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式の有料公演会場。客席・面積・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -74535,7 +77428,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.unzen.nagasaki.jp/kiji0032000/index.html",
+          "observedAt": "2026-08-05",
+          "note": "雲仙市公式が現行の文化会館として掲載。客席・面積・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -74589,7 +77485,10 @@ export const venueData = {
           "capacityTheater": 1075,
           "capacityFixed": 1054,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nago.okinawa.jp/articles/2024060500063/file_contents/nagoshiminkaikan_pamphlet.pdf",
+          "observedAt": "2026-08-05",
+          "note": "1,075名（固定1,054席、車いす席6、親子観覧室約15名）。舞台高さ9.0mは最低天井高ではない"
         },
         {
           "id": "nago-middle",
@@ -74603,7 +77502,10 @@ export const venueData = {
           "capacityTheater": 400,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nago.okinawa.jp/articles/2024060500063/file_contents/nagoshiminkaikan_pamphlet.pdf",
+          "observedAt": "2026-08-05",
+          "note": "可動146席と移動154席で約300席、移動席のみで約400席。同一空間として最大収容のみ検索値に使用"
         },
         {
           "id": "nago-rehearsals",
@@ -74617,7 +77519,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.nago.okinawa.jp/articles/2024060500063/file_contents/nagoshiminkaikan_pamphlet.pdf",
+          "observedAt": "2026-08-05",
+          "note": "第1〜4リハーサル室を公式パンフレットに掲載。各室の面積・定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -74671,7 +77576,10 @@ export const venueData = {
           "capacityTheater": 700,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.itoman.lg.jp/uploaded/attachment/16063.pdf",
+          "observedAt": "2026-08-05",
+          "note": "約720㎡。電動移動観覧席582席、椅子のみ700席。平土間利用可。舞台高さ9.6mは最低天井高ではない"
         },
         {
           "id": "kukuru-multipurpose",
@@ -74685,7 +77593,10 @@ export const venueData = {
           "capacityTheater": 90,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.itoman.lg.jp/uploaded/attachment/16063.pdf",
+          "observedAt": "2026-08-05",
+          "note": "約166㎡、約90人。壁面収納舞台を配置して飲食可"
         },
         {
           "id": "kukuru-activity-1",
@@ -74699,7 +77610,10 @@ export const venueData = {
           "capacityTheater": 32,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.itoman.lg.jp/uploaded/attachment/16063.pdf",
+          "observedAt": "2026-08-05",
+          "note": "約77㎡、約32人"
         }
       ],
       "bestSpace": {
@@ -74753,7 +77667,10 @@ export const venueData = {
           "capacityTheater": 821,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.uruma.lg.jp/documents/6665/sigei.pdf",
+          "observedAt": "2026-08-05",
+          "note": "821人。面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "uruma-tomoshibi",
@@ -74767,7 +77684,10 @@ export const venueData = {
           "capacityTheater": 357,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.uruma.lg.jp/documents/6665/sigei.pdf",
+          "observedAt": "2026-08-05",
+          "note": "357人。面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "uruma-rehearsal",
@@ -74781,7 +77701,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.uruma.lg.jp/3001007000/shisetsu/p000121.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式の現行施設案内に掲載。面積・定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -74835,7 +77758,10 @@ export const venueData = {
           "capacityTheater": 525,
           "capacityFixed": 510,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nanjo.okinawa.jp/sugarhall/facility/hall/",
+          "observedAt": "2026-08-05",
+          "note": "925㎡。固定510席、車イス席7席、親子席8席。ポータル機構高さ6〜10mは最低天井高ではない"
         },
         {
           "id": "sugar-rehearsal",
@@ -74849,7 +77775,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.nanjo.okinawa.jp/sugarhall/facility/hall/",
+          "observedAt": "2026-08-05",
+          "note": "105㎡。ピアノ常設、単独使用可"
         },
         {
           "id": "sugar-lobby",
@@ -74863,7 +77792,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nanjo.okinawa.jp/sugarhall/facility/hall/",
+          "observedAt": "2026-08-05",
+          "note": "565㎡。ロビーコンサート、展示会、軽食販売等に使用"
         }
       ],
       "bestSpace": {
@@ -74917,7 +77849,10 @@ export const venueData = {
           "capacityTheater": 1300,
           "capacityFixed": 1300,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.sado.niigata.jp/site/amuse-sado/12015.html",
+          "observedAt": "2026-08-05",
+          "note": "固定1,300席。面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "sado-hamanasu",
@@ -74931,7 +77866,10 @@ export const venueData = {
           "capacityTheater": 200,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.sado.niigata.jp/site/amuse-sado/12015.html",
+          "observedAt": "2026-08-05",
+          "note": "机あり100席、椅子のみ200席。同一空間として最大収容のみ検索値に使用"
         },
         {
           "id": "sado-practice-1",
@@ -74945,7 +77883,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.sado.niigata.jp/site/amuse-sado/12015.html",
+          "observedAt": "2026-08-05",
+          "note": "公式の施設紹介に掲載。面積・定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "sado-exhibition",
@@ -74959,7 +77900,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.sado.niigata.jp/site/amuse-sado/12015.html",
+          "observedAt": "2026-08-05",
+          "note": "公式の施設紹介に掲載。面積・定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -75013,7 +77957,10 @@ export const venueData = {
           "capacityTheater": 680,
           "capacityFixed": 675,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tsubame.niigata.jp/bunka/bunka/1/1/1/16959.html",
+          "observedAt": "2026-08-05",
+          "note": "680席（一般675席・車椅子5席）。舞台高さ7.5〜6mは最低天井高ではない"
         },
         {
           "id": "tsubame-practice-1",
@@ -75027,7 +77974,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.tsubame.niigata.jp/bunka/bunka/1/1/1/16959.html",
+          "observedAt": "2026-08-05",
+          "note": "96.36㎡。アップライトピアノあり"
         },
         {
           "id": "tsubame-practice-2",
@@ -75041,7 +77991,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.tsubame.niigata.jp/bunka/bunka/1/1/1/16959.html",
+          "observedAt": "2026-08-05",
+          "note": "49.50㎡。アップライトピアノあり"
         },
         {
           "id": "tsubame-exhibition",
@@ -75055,7 +78008,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tsubame.niigata.jp/bunka/bunka/1/1/1/16959.html",
+          "observedAt": "2026-08-05",
+          "note": "142.3㎡。移動式展示パネル22枚を使用可能"
         }
       ],
       "bestSpace": {
@@ -75109,7 +78065,10 @@ export const venueData = {
           "capacityTheater": 478,
           "capacityFixed": 474,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ojiya.niigata.jp/site/shisetsu/shiminn-kaikan.html",
+          "observedAt": "2026-08-05",
+          "note": "478人（固定474席・車椅子4席）。舞台高さ6.0mは最低天井高ではない"
         },
         {
           "id": "ojiya-conference-large",
@@ -75123,7 +78082,10 @@ export const venueData = {
           "capacityTheater": 100,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ojiya.niigata.jp/site/shisetsu/shiminn-kaikan.html",
+          "observedAt": "2026-08-05",
+          "note": "204㎡、100人"
         },
         {
           "id": "ojiya-conference-middle",
@@ -75137,7 +78099,10 @@ export const venueData = {
           "capacityTheater": 36,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ojiya.niigata.jp/site/shisetsu/shiminn-kaikan.html",
+          "observedAt": "2026-08-05",
+          "note": "88㎡、36人。2階1室・3階2室"
         },
         {
           "id": "ojiya-japanese",
@@ -75151,7 +78116,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.ojiya.niigata.jp/site/shisetsu/shiminn-kaikan.html",
+          "observedAt": "2026-08-05",
+          "note": "37㎡（21畳）、30人。2室あり"
         }
       ],
       "bestSpace": {
@@ -75205,7 +78173,10 @@ export const venueData = {
           "capacityTheater": 708,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tokamachi.lg.jp/soshiki/kyoikuiinkai_bunkasportsbu/shogaigakushuka/1/event/1470704243957.html",
+          "observedAt": "2026-08-05",
+          "note": "708席（1階323席、2階377席、親子室4席、ユニバーサル室4席、車椅子席あり）。舞台高さ9mは最低天井高ではない"
         },
         {
           "id": "tokamachi-practice-1",
@@ -75219,7 +78190,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.tokamachi.lg.jp/soshiki/kyoikuiinkai_bunkasportsbu/shogaigakushuka/1/event/1470704243957.html",
+          "observedAt": "2026-08-05",
+          "note": "32㎡、遮音機能あり"
         },
         {
           "id": "tokamachi-practice-3",
@@ -75233,7 +78207,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.tokamachi.lg.jp/soshiki/kyoikuiinkai_bunkasportsbu/shogaigakushuka/1/event/1470704243957.html",
+          "observedAt": "2026-08-05",
+          "note": "74㎡、遮音機能あり"
         },
         {
           "id": "tokamachi-auditorium",
@@ -75247,7 +78224,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tokamachi.lg.jp/soshiki/kyoikuiinkai_bunkasportsbu/shogaigakushuka/1/event/1470704243957.html",
+          "observedAt": "2026-08-05",
+          "note": "123㎡。会議、講演、ミニコンサート等に使用"
         },
         {
           "id": "tokamachi-multipurpose",
@@ -75261,7 +78241,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tokamachi.lg.jp/soshiki/kyoikuiinkai_bunkasportsbu/shogaigakushuka/1/event/1470704243957.html",
+          "observedAt": "2026-08-05",
+          "note": "43㎡・43㎡・45㎡の3室。スライディングウォールで2〜3室連結可。各室を要確認"
         }
       ],
       "bestSpace": {
@@ -75315,7 +78298,10 @@ export const venueData = {
           "capacityTheater": 902,
           "capacityFixed": 902,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kasaoka.okayama.jp/soshiki/39/2503.html",
+          "observedAt": "2026-08-05",
+          "note": "902席。面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "kasaoka-meetings",
@@ -75329,7 +78315,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kasaoka.okayama.jp/soshiki/39/2503.html",
+          "observedAt": "2026-08-05",
+          "note": "8〜150人程度利用可。各室の面積・定員・最低天井高・床荷重は要確認"
         },
         {
           "id": "kasaoka-training",
@@ -75343,7 +78332,10 @@ export const venueData = {
           "capacityTheater": 40,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kasaoka.okayama.jp/soshiki/39/2503.html",
+          "observedAt": "2026-08-05",
+          "note": "40人。面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "kasaoka-multipurpose",
@@ -75357,7 +78349,10 @@ export const venueData = {
           "capacityTheater": 70,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kasaoka.okayama.jp/soshiki/39/2503.html",
+          "observedAt": "2026-08-05",
+          "note": "70人。面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "kasaoka-gallery",
@@ -75371,7 +78366,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kasaoka.okayama.jp/soshiki/39/2503.html",
+          "observedAt": "2026-08-05",
+          "note": "54㎡。定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -75425,7 +78423,10 @@ export const venueData = {
           "capacityTheater": 444,
           "capacityFixed": 44,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.setouchi.lg.jp/soshiki/59/146585.html",
+          "observedAt": "2026-08-05",
+          "note": "444名（可動400席・2階44席）。可動席収納時はフローリング床面として利用可能"
         },
         {
           "id": "setouchi-refresh",
@@ -75439,7 +78440,10 @@ export const venueData = {
           "capacityTheater": 80,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.setouchi.lg.jp/soshiki/59/146585.html",
+          "observedAt": "2026-08-05",
+          "note": "約160㎡、定員約80名。軽微な防音仕様"
         },
         {
           "id": "setouchi-tanpopo",
@@ -75453,7 +78457,10 @@ export const venueData = {
           "capacityTheater": 24,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.setouchi.lg.jp/soshiki/59/146585.html",
+          "observedAt": "2026-08-05",
+          "note": "約99㎡、定員約24名。フローリング部分約54㎡と畳部分10畳"
         },
         {
           "id": "setouchi-meeting",
@@ -75467,7 +78474,10 @@ export const venueData = {
           "capacityTheater": 24,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.setouchi.lg.jp/soshiki/59/146585.html",
+          "observedAt": "2026-08-05",
+          "note": "約50㎡、定員約24名"
         }
       ],
       "bestSpace": {
@@ -75521,7 +78531,10 @@ export const venueData = {
           "capacityTheater": 690,
           "capacityFixed": 690,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.maniwa.lg.jp/site/culturecenter-katsuyama/",
+          "observedAt": "2026-08-05",
+          "note": "固定690席（1階506・2階184）、車椅子用スペース・母子室席8あり。最低天井高は未観測"
         },
         {
           "id": "maniwa-creation",
@@ -75535,7 +78548,10 @@ export const venueData = {
           "capacityTheater": 20,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.maniwa.lg.jp/site/culturecenter-katsuyama/",
+          "observedAt": "2026-08-05",
+          "note": "63.55㎡、20人"
         },
         {
           "id": "maniwa-training",
@@ -75549,7 +78565,10 @@ export const venueData = {
           "capacityTheater": 40,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.maniwa.lg.jp/site/culturecenter-katsuyama/",
+          "observedAt": "2026-08-05",
+          "note": "77.50㎡、40人"
         },
         {
           "id": "maniwa-meeting-1",
@@ -75563,7 +78582,10 @@ export const venueData = {
           "capacityTheater": 200,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.maniwa.lg.jp/site/culturecenter-katsuyama/",
+          "observedAt": "2026-08-05",
+          "note": "341.69㎡、椅子のみ最大200人（机配置時100人程度）"
         },
         {
           "id": "maniwa-community",
@@ -75577,7 +78599,10 @@ export const venueData = {
           "capacityTheater": 50,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.maniwa.lg.jp/site/culturecenter-katsuyama/",
+          "observedAt": "2026-08-05",
+          "note": "146.25㎡、最大50人。鏡壁面・音響設備あり"
         }
       ],
       "bestSpace": {
@@ -75631,7 +78656,10 @@ export const venueData = {
           "capacityTheater": 401,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ibara.okayama.jp/soshiki/35/1397.html",
+          "observedAt": "2026-08-05",
+          "note": "401席。面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "ibara-rehearsal",
@@ -75645,7 +78673,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.ibara.okayama.jp/soshiki/35/1395.html",
+          "observedAt": "2026-08-05",
+          "note": "公式の使用料一覧に掲載。面積・定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "ibara-av",
@@ -75659,7 +78690,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ibara.okayama.jp/soshiki/35/1395.html",
+          "observedAt": "2026-08-05",
+          "note": "公式の使用料一覧に掲載。面積・定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "ibara-multipurpose",
@@ -75673,7 +78707,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ibara.okayama.jp/soshiki/35/1395.html",
+          "observedAt": "2026-08-05",
+          "note": "公式の使用料一覧に掲載。面積・定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -75727,7 +78764,10 @@ export const venueData = {
           "capacityTheater": 1002,
           "capacityFixed": 918,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.imabari.ehime.jp/gikai/siseigaiyou/R7/04.pdf",
+          "observedAt": "2026-08-05",
+          "note": "固定椅子918席・移動椅子84席、合計1,002人。同一空間として重複計上しない"
         }
       ],
       "bestSpace": {
@@ -75781,7 +78821,10 @@ export const venueData = {
           "capacityTheater": 513,
           "capacityFixed": 508,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.shikokuchuo.ehime.jp/map/7530.html",
+          "observedAt": "2026-08-05",
+          "note": "513名（固定508席・車椅子5席）"
         },
         {
           "id": "doi-rehearsal",
@@ -75795,7 +78838,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.shikokuchuo.ehime.jp/map/7530.html",
+          "observedAt": "2026-08-05",
+          "note": "30名。ダンス・ピアノ練習、アトリウム併用で小規模コンサートも可能"
         },
         {
           "id": "doi-music",
@@ -75809,7 +78855,10 @@ export const venueData = {
           "capacityTheater": 8,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.shikokuchuo.ehime.jp/map/7530.html",
+          "observedAt": "2026-08-05",
+          "note": "8名。バンド・楽器練習等に使用"
         },
         {
           "id": "doi-conference-large",
@@ -75823,7 +78872,10 @@ export const venueData = {
           "capacityTheater": 36,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.shikokuchuo.ehime.jp/map/7530.html",
+          "observedAt": "2026-08-05",
+          "note": "各36名。人数に応じて仕切り利用可"
         },
         {
           "id": "doi-craft",
@@ -75837,7 +78889,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.shikokuchuo.ehime.jp/map/7530.html",
+          "observedAt": "2026-08-05",
+          "note": "30名。陶芸・華道・絵画等に使用"
         }
       ],
       "bestSpace": {
@@ -75891,7 +78946,10 @@ export const venueData = {
           "capacityTheater": 812,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yawatahama.ehime.jp/doc/2022011300021/",
+          "observedAt": "2026-08-05",
+          "note": "1,326.70㎡、最大812人。車椅子席10席を別途掲載"
         },
         {
           "id": "yawatahama-sub",
@@ -75905,7 +78963,10 @@ export const venueData = {
           "capacityTheater": 180,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yawatahama.ehime.jp/doc/2022011300021/",
+          "observedAt": "2026-08-05",
+          "note": "316.50㎡。施設規模は200名、最大収容人数表は180人と記載されるため、検索値は180人"
         },
         {
           "id": "yawatahama-training-1",
@@ -75919,7 +78980,10 @@ export const venueData = {
           "capacityTheater": 24,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yawatahama.ehime.jp/doc/2022011300021/",
+          "observedAt": "2026-08-05",
+          "note": "56.42㎡、24人"
         },
         {
           "id": "yawatahama-training-2",
@@ -75933,7 +78997,10 @@ export const venueData = {
           "capacityTheater": 24,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yawatahama.ehime.jp/doc/2022011300021/",
+          "observedAt": "2026-08-05",
+          "note": "56.42㎡、24人"
         },
         {
           "id": "yawatahama-japanese",
@@ -75947,7 +79014,10 @@ export const venueData = {
           "capacityTheater": 16,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.yawatahama.ehime.jp/doc/2022011300021/",
+          "observedAt": "2026-08-05",
+          "note": "44.53㎡（14畳）、16人"
         }
       ],
       "bestSpace": {
@@ -76001,7 +79071,10 @@ export const venueData = {
           "capacityTheater": 778,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ozu.ehime.jp/soshiki/zaisei/0178.html",
+          "observedAt": "2026-08-05",
+          "note": "980㎡、778人（車いす席3席含む）"
         },
         {
           "id": "ozu-middle",
@@ -76015,7 +79088,10 @@ export const venueData = {
           "capacityTheater": 200,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ozu.ehime.jp/soshiki/zaisei/0178.html",
+          "observedAt": "2026-08-05",
+          "note": "200㎡、200人"
         },
         {
           "id": "ozu-meeting-1f2",
@@ -76029,7 +79105,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ozu.ehime.jp/soshiki/zaisei/0178.html",
+          "observedAt": "2026-08-05",
+          "note": "56.25㎡、20〜30人。検索値は上限30人"
         },
         {
           "id": "ozu-meeting-2f1",
@@ -76043,7 +79122,10 @@ export const venueData = {
           "capacityTheater": 60,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ozu.ehime.jp/soshiki/zaisei/0178.html",
+          "observedAt": "2026-08-05",
+          "note": "84㎡、50〜60人。検索値は上限60人"
         },
         {
           "id": "ozu-kitchen",
@@ -76057,7 +79139,10 @@ export const venueData = {
           "capacityTheater": 40,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.ozu.ehime.jp/soshiki/zaisei/0178.html",
+          "observedAt": "2026-08-05",
+          "note": "73.5㎡、30〜40人。検索値は上限40人"
         }
       ],
       "bestSpace": {
@@ -76111,7 +79196,10 @@ export const venueData = {
           "capacityTheater": 600,
           "capacityFixed": 594,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yatsushiro.lg.jp/kiji0031002/index.html",
+          "observedAt": "2026-08-05",
+          "note": "約600人（固定594席、身障者スペース4席、親子室12席）。舞台開口高は最低天井高として未登録"
         },
         {
           "id": "yatsushiro-kagami-rehearsal",
@@ -76125,7 +79213,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.yatsushiro.lg.jp/kiji0031002/index.html",
+          "observedAt": "2026-08-05",
+          "note": "80㎡、フローリング・一面鏡・アップライトピアノあり"
         },
         {
           "id": "yatsushiro-kagami-training",
@@ -76139,7 +79230,10 @@ export const venueData = {
           "capacityTheater": 60,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yatsushiro.lg.jp/kiji0031002/index.html",
+          "observedAt": "2026-08-05",
+          "note": "95㎡、約60人"
         },
         {
           "id": "yatsushiro-kagami-av",
@@ -76153,7 +79247,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yatsushiro.lg.jp/kiji0031002/index.html",
+          "observedAt": "2026-08-05",
+          "note": "70㎡、約30人、100型スクリーンあり"
         }
       ],
       "bestSpace": {
@@ -76207,7 +79304,10 @@ export const venueData = {
           "capacityTheater": 1208,
           "capacityFixed": 1204,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.arao.lg.jp/pdf/dlPq%3D43771_filelib_ed959e7c2dd5faf2bab03cbd9726132d.pdf",
+          "observedAt": "2026-08-05",
+          "note": "1,204席、別途車椅子4席。舞台開口高は最低天井高として未登録"
         },
         {
           "id": "arao-shodai",
@@ -76221,7 +79321,10 @@ export const venueData = {
           "capacityTheater": 420,
           "capacityFixed": 90,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.arao.lg.jp/pdf/dlPq%3D43771_filelib_ed959e7c2dd5faf2bab03cbd9726132d.pdf",
+          "observedAt": "2026-08-05",
+          "note": "平土間290㎡、1階移動席最大330席・2階固定席90席。同一空間として重複計上しない"
         },
         {
           "id": "arao-practice-1",
@@ -76235,7 +79338,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.arao.lg.jp/pdf/dlPq%3D43771_filelib_ed959e7c2dd5faf2bab03cbd9726132d.pdf",
+          "observedAt": "2026-08-05",
+          "note": "73㎡、鏡・手摺バーあり"
         },
         {
           "id": "arao-practice-2",
@@ -76249,7 +79355,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.arao.lg.jp/pdf/dlPq%3D43771_filelib_ed959e7c2dd5faf2bab03cbd9726132d.pdf",
+          "observedAt": "2026-08-05",
+          "note": "42㎡、鏡あり"
         },
         {
           "id": "arao-practice-3",
@@ -76263,7 +79372,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.arao.lg.jp/pdf/dlPq%3D43771_filelib_ed959e7c2dd5faf2bab03cbd9726132d.pdf",
+          "observedAt": "2026-08-05",
+          "note": "73㎡、防音。太鼓・バンド練習等"
         },
         {
           "id": "arao-gallery",
@@ -76277,7 +79389,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.arao.lg.jp/pdf/dlPq%3D43771_filelib_ed959e7c2dd5faf2bab03cbd9726132d.pdf",
+          "observedAt": "2026-08-05",
+          "note": "187㎡、展示壁面長150m"
         },
         {
           "id": "arao-meeting-1",
@@ -76291,7 +79406,10 @@ export const venueData = {
           "capacityTheater": 54,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.arao.lg.jp/pdf/dlPq%3D43771_filelib_ed959e7c2dd5faf2bab03cbd9726132d.pdf",
+          "observedAt": "2026-08-05",
+          "note": "58㎡、54人。会議室2と連結使用可"
         },
         {
           "id": "arao-meeting-2",
@@ -76305,7 +79423,10 @@ export const venueData = {
           "capacityTheater": 54,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.arao.lg.jp/pdf/dlPq%3D43771_filelib_ed959e7c2dd5faf2bab03cbd9726132d.pdf",
+          "observedAt": "2026-08-05",
+          "note": "56㎡、54人。会議室1と連結使用可"
         },
         {
           "id": "arao-meeting-3",
@@ -76319,7 +79440,10 @@ export const venueData = {
           "capacityTheater": 15,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.arao.lg.jp/pdf/dlPq%3D43771_filelib_ed959e7c2dd5faf2bab03cbd9726132d.pdf",
+          "observedAt": "2026-08-05",
+          "note": "34㎡、15人"
         },
         {
           "id": "arao-meeting-4",
@@ -76333,7 +79457,10 @@ export const venueData = {
           "capacityTheater": 24,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.arao.lg.jp/pdf/dlPq%3D43771_filelib_ed959e7c2dd5faf2bab03cbd9726132d.pdf",
+          "observedAt": "2026-08-05",
+          "note": "36㎡、24人"
         },
         {
           "id": "arao-multipurpose",
@@ -76347,7 +79474,10 @@ export const venueData = {
           "capacityTheater": 24,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.arao.lg.jp/pdf/dlPq%3D43771_filelib_ed959e7c2dd5faf2bab03cbd9726132d.pdf",
+          "observedAt": "2026-08-05",
+          "note": "64㎡、24人。会議・打合せ・小展示等"
         },
         {
           "id": "arao-art-forum",
@@ -76361,7 +79491,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.arao.lg.jp/pdf/dlPq%3D43771_filelib_ed959e7c2dd5faf2bab03cbd9726132d.pdf",
+          "observedAt": "2026-08-05",
+          "note": "320㎡、吹き抜けのオープンスペース。小展示・小音楽演奏可"
         }
       ],
       "bestSpace": {
@@ -76415,7 +79548,10 @@ export const venueData = {
           "capacityTheater": 701,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.amakusa.kumamoto.jp/kiji00314169/3_14169_76202_up_jogbq4i8.pdf",
+          "observedAt": "2026-08-05",
+          "note": "701席。展示ホール・大会議室・小会議室・和室を併設"
         },
         {
           "id": "amakusa-gym",
@@ -76429,7 +79565,10 @@ export const venueData = {
           "capacityTheater": 1000,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.amakusa.kumamoto.jp/kiji0035718/index.html",
+          "observedAt": "2026-08-05",
+          "note": "1,540.77㎡、観客席1,000席。バドミントン9面、バレーボール3面等"
         },
         {
           "id": "amakusa-judo",
@@ -76443,7 +79582,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.amakusa.kumamoto.jp/kiji0039798/3_9798_51624_up_0cxmhq0w.pdf",
+          "observedAt": "2026-08-05",
+          "note": "799.27㎡。柔道場2面"
         },
         {
           "id": "amakusa-kendo-training",
@@ -76457,7 +79599,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.amakusa.kumamoto.jp/kiji0039798/3_9798_51624_up_0cxmhq0w.pdf",
+          "observedAt": "2026-08-05",
+          "note": "793.79㎡は剣道場及びトレーニング室の公式合算値。分割面積は未観測"
         },
         {
           "id": "amakusa-archery",
@@ -76471,7 +79616,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.amakusa.kumamoto.jp/kiji0039798/3_9798_51624_up_0cxmhq0w.pdf",
+          "observedAt": "2026-08-05",
+          "note": "402.85㎡、7人立"
         }
       ],
       "bestSpace": {
@@ -76525,7 +79673,10 @@ export const venueData = {
           "capacityTheater": 1332,
           "capacityFixed": 1332,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hitoyoshi.lg.jp/resource.php?e=4ed1e304a1ceafab3df1cfb5d3ee3b4712935cde33ecfe99b80eee20e03115ca238e54d560695d0cbfdd618e5d0bb7ab",
+          "observedAt": "2026-08-05",
+          "note": "固定1,332席。車椅子4席・母子室9席は別途掲載。プロセニアム高・すのこ高は最低天井高として未登録"
         },
         {
           "id": "hitoyoshi-small",
@@ -76539,7 +79690,10 @@ export const venueData = {
           "capacityTheater": 458,
           "capacityFixed": 458,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hitoyoshi.lg.jp/resource.php?e=4ed1e304a1ceafab3df1cfb5d3ee3b4712935cde33ecfe99b80eee20e03115ca238e54d560695d0cbfdd618e5d0bb7ab",
+          "observedAt": "2026-08-05",
+          "note": "固定458席、車椅子4席は別途掲載。プロセニアム高・すのこ高は最低天井高として未登録"
         },
         {
           "id": "hitoyoshi-rehearsal",
@@ -76553,7 +79707,10 @@ export const venueData = {
           "capacityTheater": 20,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.hitoyoshi.lg.jp/resource.php?e=4ed1e304a1ceafab3df1cfb5d3ee3b4712935cde33ecfe99b80eee20e03115ca238e54d560695d0cbfdd618e5d0bb7ab",
+          "observedAt": "2026-08-05",
+          "note": "20人。面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "hitoyoshi-outdoor",
@@ -76567,7 +79724,10 @@ export const venueData = {
           "capacityTheater": 1000,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hitoyoshi.lg.jp/resource.php?e=4ed1e304a1ceafab3df1cfb5d3ee3b4712935cde33ecfe99b80eee20e03115ca238e54d560695d0cbfdd618e5d0bb7ab",
+          "observedAt": "2026-08-05",
+          "note": "1,170㎡、約1,000人"
         },
         {
           "id": "hitoyoshi-planetarium",
@@ -76581,7 +79741,10 @@ export const venueData = {
           "capacityTheater": 101,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hitoyoshi.lg.jp/resource.php?e=4ed1e304a1ceafab3df1cfb5d3ee3b4712935cde33ecfe99b80eee20e03115ca238e54d560695d0cbfdd618e5d0bb7ab",
+          "observedAt": "2026-08-05",
+          "note": "ホール86.84㎡、101人"
         }
       ],
       "bestSpace": {
@@ -76635,7 +79798,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.minamata.lg.jp/kiji003307/",
+          "observedAt": "2026-08-05",
+          "note": "公式案内にホールの貸出時間・使用料と座席表PDFを掲載。座席数等の数値は未観測"
         }
       ],
       "bestSpace": {
@@ -76689,7 +79855,10 @@ export const venueData = {
           "capacityTheater": 1350,
           "capacityFixed": 1350,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.natori.miyagi.jp/uploaded/attachment/21215.pdf",
+          "observedAt": "2026-08-05",
+          "note": "1,350席。本格的な音楽用・演劇用の多機能ホール"
         },
         {
           "id": "natori-middle",
@@ -76703,7 +79872,10 @@ export const venueData = {
           "capacityTheater": 450,
           "capacityFixed": 450,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.natori.miyagi.jp/uploaded/attachment/21215.pdf",
+          "observedAt": "2026-08-05",
+          "note": "450席。室内楽を中心とした音楽専用ホール"
         },
         {
           "id": "natori-small",
@@ -76717,7 +79889,10 @@ export const venueData = {
           "capacityTheater": 200,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.natori.miyagi.jp/uploaded/attachment/21215.pdf",
+          "observedAt": "2026-08-05",
+          "note": "200席。平土間形式で、机使用時100人程度・椅子のみ使用時180人程度"
         },
         {
           "id": "natori-hope",
@@ -76731,7 +79906,10 @@ export const venueData = {
           "capacityTheater": 50,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.natori.miyagi.jp/uploaded/attachment/21215.pdf",
+          "observedAt": "2026-08-05",
+          "note": "50人。面積・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -76785,7 +79963,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.ishinomaki.lg.jp/cont/20206000/3531/annai.pdf",
+          "observedAt": "2026-08-05",
+          "note": "1,425.84㎡。バドミントン10面、バレーボール3面、バスケットボール2面等"
         },
         {
           "id": "ishinomaki-kahoku-dojo",
@@ -76799,7 +79980,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.ishinomaki.lg.jp/cont/20206000/3531/annai.pdf",
+          "observedAt": "2026-08-05",
+          "note": "310.59㎡"
         },
         {
           "id": "ishinomaki-kahoku-training",
@@ -76813,7 +79997,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.ishinomaki.lg.jp/cont/20206000/3531/annai.pdf",
+          "observedAt": "2026-08-05",
+          "note": "134.19㎡"
         },
         {
           "id": "ishinomaki-kahoku-av",
@@ -76827,7 +80014,10 @@ export const venueData = {
           "capacityTheater": 42,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ishinomaki.lg.jp/cont/20206000/3531/annai.pdf",
+          "observedAt": "2026-08-05",
+          "note": "42席、80インチビデオプロジェクター・映写室・ビデオ編集機器あり"
         },
         {
           "id": "ishinomaki-kahoku-meeting-1",
@@ -76841,7 +80031,10 @@ export const venueData = {
           "capacityTheater": 24,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ishinomaki.lg.jp/cont/20206000/3531/annai.pdf",
+          "observedAt": "2026-08-05",
+          "note": "24席。視聴覚室と隣接"
         },
         {
           "id": "ishinomaki-kahoku-meeting-2-3",
@@ -76855,7 +80048,10 @@ export const venueData = {
           "capacityTheater": 48,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ishinomaki.lg.jp/cont/20206000/3531/annai.pdf",
+          "observedAt": "2026-08-05",
+          "note": "各24席、連結使用可。検索値は連結時48席"
         },
         {
           "id": "ishinomaki-kahoku-culture",
@@ -76869,7 +80065,10 @@ export const venueData = {
           "capacityTheater": 402,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ishinomaki.lg.jp/cont/20206000/3531/annai.pdf",
+          "observedAt": "2026-08-05",
+          "note": "280.14㎡、移動観覧席402席。音楽会・発表会・講演会・演劇等"
         },
         {
           "id": "ishinomaki-kahoku-gathering",
@@ -76883,7 +80082,10 @@ export const venueData = {
           "capacityTheater": 105,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.ishinomaki.lg.jp/cont/20206000/3531/annai.pdf",
+          "observedAt": "2026-08-05",
+          "note": "リハーサル室兼用、ステージ付、最大105席"
         }
       ],
       "bestSpace": {
@@ -76937,7 +80139,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.osaki.miyagi.jp/shisei/shiseijoho/shogaigakushu/3/5/4303.html",
+          "observedAt": "2026-08-05",
+          "note": "公式の使用料・座席表に掲載。座席数・面積・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -76991,7 +80196,10 @@ export const venueData = {
           "capacityTheater": 455,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.zao.miyagi.jp/koho/0408/kouhouzao478_gozain.htm",
+          "observedAt": "2026-08-05",
+          "note": "可動455席・親子席。椅子を収納し平土間ホールとしても利用可"
         },
         {
           "id": "zao-meeting-1",
@@ -77005,7 +80213,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.zao.miyagi.jp/kurashi_guide/koukyoushisetsu/gozain/gozain.html",
+          "observedAt": "2026-08-05",
+          "note": "公式の施設一覧に掲載。面積・定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "zao-meeting-2",
@@ -77019,7 +80230,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.zao.miyagi.jp/kurashi_guide/koukyoushisetsu/gozain/gozain.html",
+          "observedAt": "2026-08-05",
+          "note": "公式の施設一覧に掲載。面積・定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "zao-exhibition",
@@ -77033,7 +80247,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.zao.miyagi.jp/kurashi_guide/koukyoushisetsu/gozain/gozain.html",
+          "observedAt": "2026-08-05",
+          "note": "公式の施設一覧に掲載。面積・定員・最低天井高・床荷重は未観測"
         },
         {
           "id": "zao-studio",
@@ -77047,7 +80264,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.town.zao.miyagi.jp/kurashi_guide/koukyoushisetsu/gozain/gozain.html",
+          "observedAt": "2026-08-05",
+          "note": "公式の施設一覧に掲載。面積・定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -77101,7 +80321,10 @@ export const venueData = {
           "capacityTheater": 250,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.town.yamamoto.miyagi.jp/soshiki/20/8035.html",
+          "observedAt": "2026-08-05",
+          "note": "435㎡、可動席収納時250人程度、可動席120席。グランドピアノあり"
         },
         {
           "id": "yamamoto-event",
@@ -77115,7 +80338,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.yamamoto.miyagi.jp/soshiki/20/8035.html",
+          "observedAt": "2026-08-05",
+          "note": "72㎡。定員は未観測"
         },
         {
           "id": "yamamoto-rehearsal",
@@ -77129,7 +80355,10 @@ export const venueData = {
           "capacityTheater": 60,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.town.yamamoto.miyagi.jp/soshiki/20/8035.html",
+          "observedAt": "2026-08-05",
+          "note": "129㎡、60人程度、土足禁止"
         },
         {
           "id": "yamamoto-meeting-5",
@@ -77143,7 +80372,10 @@ export const venueData = {
           "capacityTheater": 90,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.yamamoto.miyagi.jp/soshiki/20/8035.html",
+          "observedAt": "2026-08-05",
+          "note": "159㎡、90人程度"
         },
         {
           "id": "yamamoto-meeting-6",
@@ -77157,7 +80389,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.yamamoto.miyagi.jp/soshiki/20/8035.html",
+          "observedAt": "2026-08-05",
+          "note": "61㎡、30人程度"
         },
         {
           "id": "yamamoto-music-1",
@@ -77171,7 +80406,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.town.yamamoto.miyagi.jp/soshiki/20/8035.html",
+          "observedAt": "2026-08-05",
+          "note": "17㎡、ドラムセットあり"
         },
         {
           "id": "yamamoto-music-2",
@@ -77185,7 +80423,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.town.yamamoto.miyagi.jp/soshiki/20/8035.html",
+          "observedAt": "2026-08-05",
+          "note": "13㎡"
         }
       ],
       "bestSpace": {
@@ -77239,7 +80480,10 @@ export const venueData = {
           "capacityTheater": 400,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.wakuya.miyagi.jp/kurashi/kyoiku/bunka-sports/wakuyakominkan.html",
+          "observedAt": "2026-08-05",
+          "note": "最大400席設置可、ステージ・音響設備あり"
         },
         {
           "id": "wakuya-meeting-1-2",
@@ -77253,7 +80497,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.wakuya.miyagi.jp/kurashi/kyoiku/bunka-sports/wakuyakominkan.html",
+          "observedAt": "2026-08-05",
+          "note": "2部屋を接続・パーテーション分割して利用可。面積・定員は未観測"
         },
         {
           "id": "wakuya-japanese-1-2",
@@ -77267,7 +80514,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.town.wakuya.miyagi.jp/kurashi/kyoiku/bunka-sports/wakuyakominkan.html",
+          "observedAt": "2026-08-05",
+          "note": "2部屋を接続・ふすま分割して利用可。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -77321,7 +80571,10 @@ export const venueData = {
           "capacityTheater": 1294,
           "capacityFixed": 1288,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.iida.lg.jp/site/bunkakaikan/shisetsu-gaiyou.html",
+          "observedAt": "2026-08-05",
+          "note": "1,294席（車椅子席6席を含む）。舞台開口高は最低天井高として未登録"
         },
         {
           "id": "iida-puppet",
@@ -77335,7 +80588,10 @@ export const venueData = {
           "capacityTheater": 200,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.iida.lg.jp/site/bunkakaikan/shisetsu-gaiyou.html",
+          "observedAt": "2026-08-05",
+          "note": "電動式移動席200席。舞台開口高は最低天井高として未登録"
         },
         {
           "id": "iida-exhibition",
@@ -77349,7 +80605,10 @@ export const venueData = {
           "capacityTheater": 120,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.iida.lg.jp/uploaded/attachment/63934.pdf",
+          "observedAt": "2026-08-05",
+          "note": "展示室3室、各室約40人収容。検索値は合計120人"
         },
         {
           "id": "iida-meeting",
@@ -77363,7 +80622,10 @@ export const venueData = {
           "capacityTheater": 120,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.iida.lg.jp/uploaded/attachment/63934.pdf",
+          "observedAt": "2026-08-05",
+          "note": "会議室4室、各室約30人収容。検索値は合計120人"
         },
         {
           "id": "iida-lecture",
@@ -77377,7 +80639,10 @@ export const venueData = {
           "capacityTheater": 50,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.iida.lg.jp/uploaded/attachment/63934.pdf",
+          "observedAt": "2026-08-05",
+          "note": "約50人収容"
         }
       ],
       "bestSpace": {
@@ -77431,7 +80696,10 @@ export const venueData = {
           "capacityTheater": 904,
           "capacityFixed": 904,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.suwa.lg.jp/soshiki/41/",
+          "observedAt": "2026-08-05",
+          "note": "904人（1階518人・2階386人）。大規模改修に伴う予約停止情報は要再確認"
         },
         {
           "id": "suwa-meeting-1",
@@ -77445,7 +80713,10 @@ export const venueData = {
           "capacityTheater": 120,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.suwa.lg.jp/soshiki/41/",
+          "observedAt": "2026-08-05",
+          "note": "174㎡、120人"
         },
         {
           "id": "suwa-meeting-2",
@@ -77459,7 +80730,10 @@ export const venueData = {
           "capacityTheater": 120,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.suwa.lg.jp/soshiki/41/",
+          "observedAt": "2026-08-05",
+          "note": "184㎡、120人"
         },
         {
           "id": "suwa-meeting-3",
@@ -77473,7 +80747,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.suwa.lg.jp/soshiki/41/",
+          "observedAt": "2026-08-05",
+          "note": "108㎡、30人。椅子は36脚と掲載されるが定員30人を検索値とした"
         }
       ],
       "bestSpace": {
@@ -77527,7 +80804,10 @@ export const venueData = {
           "capacityTheater": 800,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.saku.nagano.jp/bunka/sakubun/cosmohall.html",
+          "observedAt": "2026-08-05",
+          "note": "客席527.84㎡、800席。舞台462.96㎡は同一空間の舞台部分"
         },
         {
           "id": "saku-cosmo-small",
@@ -77541,7 +80821,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.saku.nagano.jp/bunka/sakubun/cosmohall.html",
+          "observedAt": "2026-08-05",
+          "note": "公式案内に多目的に利用できる小ホールとして掲載。面積・定員は未観測"
         },
         {
           "id": "saku-cosmo-meeting",
@@ -77555,7 +80838,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.saku.nagano.jp/bunka/sakubun/cosmohall.html",
+          "observedAt": "2026-08-05",
+          "note": "公式案内に会議室として掲載。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -77609,7 +80895,10 @@ export const venueData = {
           "capacityTheater": 780,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.chino.lg.jp/soshiki/shogaigakushu/870.html",
+          "observedAt": "2026-08-05",
+          "note": "劇場形式780席"
         },
         {
           "id": "chino-concert",
@@ -77623,7 +80912,10 @@ export const venueData = {
           "capacityTheater": 300,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.chino.lg.jp/soshiki/shogaigakushu/870.html",
+          "observedAt": "2026-08-05",
+          "note": "300席"
         },
         {
           "id": "chino-atelier",
@@ -77637,7 +80929,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.chino.lg.jp/soshiki/shogaigakushu/870.html",
+          "observedAt": "2026-08-05",
+          "note": "200㎡、リハーサル室"
         },
         {
           "id": "chino-gallery",
@@ -77651,7 +80946,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.chino.lg.jp/soshiki/shogaigakushu/870.html",
+          "observedAt": "2026-08-05",
+          "note": "350㎡"
         },
         {
           "id": "chino-event",
@@ -77665,7 +80963,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.chino.lg.jp/soshiki/shogaigakushu/870.html",
+          "observedAt": "2026-08-05",
+          "note": "110㎡"
         },
         {
           "id": "chino-studios",
@@ -77679,7 +80980,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.chino.lg.jp/soshiki/shogaigakushu/870.html",
+          "observedAt": "2026-08-05",
+          "note": "練習室3室。各室の面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -77733,7 +81037,10 @@ export const venueData = {
           "capacityTheater": 1236,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tajimi.lg.jp/gyose/koho/benri/documents/010-022.pdf",
+          "observedAt": "2026-08-05",
+          "note": "1,236席、車椅子席10席・親子室あり"
         },
         {
           "id": "tajimi-small",
@@ -77747,7 +81054,10 @@ export const venueData = {
           "capacityTheater": 365,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tajimi.lg.jp/gyose/koho/benri/documents/010-022.pdf",
+          "observedAt": "2026-08-05",
+          "note": "365席、車椅子席6席・親子室あり"
         },
         {
           "id": "tajimi-exhibition-a",
@@ -77761,7 +81071,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tajimi.lg.jp/gyose/koho/benri/documents/010-022.pdf",
+          "observedAt": "2026-08-05",
+          "note": "234㎡"
         },
         {
           "id": "tajimi-exhibition-b",
@@ -77775,7 +81088,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tajimi.lg.jp/gyose/koho/benri/documents/010-022.pdf",
+          "observedAt": "2026-08-05",
+          "note": "82㎡"
         },
         {
           "id": "tajimi-conference",
@@ -77789,7 +81105,10 @@ export const venueData = {
           "capacityTheater": 150,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tajimi.lg.jp/gyose/koho/benri/documents/010-022.pdf",
+          "observedAt": "2026-08-05",
+          "note": "250.6㎡、150人"
         },
         {
           "id": "tajimi-practice-1",
@@ -77803,7 +81122,10 @@ export const venueData = {
           "capacityTheater": 28,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.tajimi.lg.jp/gyose/koho/benri/documents/010-022.pdf",
+          "observedAt": "2026-08-05",
+          "note": "68.9㎡、28人"
         },
         {
           "id": "tajimi-practice-2",
@@ -77817,7 +81139,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.tajimi.lg.jp/gyose/koho/benri/documents/010-022.pdf",
+          "observedAt": "2026-08-05",
+          "note": "59.9㎡、30人"
         },
         {
           "id": "tajimi-practice-3",
@@ -77831,7 +81156,10 @@ export const venueData = {
           "capacityTheater": 20,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.tajimi.lg.jp/gyose/koho/benri/documents/010-022.pdf",
+          "observedAt": "2026-08-05",
+          "note": "48.2㎡、20人"
         }
       ],
       "bestSpace": {
@@ -77885,7 +81213,10 @@ export const venueData = {
           "capacityTheater": 826,
           "capacityFixed": 821,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nakatsugawa.lg.jp/tcs/facility/5/4367.html",
+          "observedAt": "2026-08-05",
+          "note": "客席862.20㎡、固定821席・車いす5席。舞台467.03㎡は同一空間の舞台部分"
         },
         {
           "id": "nakatsugawa-small-meeting",
@@ -77899,7 +81230,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nakatsugawa.lg.jp/tcs/facility/5/4367.html",
+          "observedAt": "2026-08-05",
+          "note": "60.52㎡、30人程度、アップライトピアノあり"
         },
         {
           "id": "nakatsugawa-lounge",
@@ -77913,7 +81247,10 @@ export const venueData = {
           "capacityTheater": 10,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nakatsugawa.lg.jp/tcs/facility/5/4367.html",
+          "observedAt": "2026-08-05",
+          "note": "62.87㎡、10人程度"
         },
         {
           "id": "nakatsugawa-multi-training",
@@ -77927,7 +81264,10 @@ export const venueData = {
           "capacityTheater": 170,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nakatsugawa.lg.jp/tcs/facility/5/4367.html",
+          "observedAt": "2026-08-05",
+          "note": "236.07㎡、60〜170人。検索値は上限170人"
         },
         {
           "id": "nakatsugawa-meeting-21",
@@ -77941,7 +81281,10 @@ export const venueData = {
           "capacityTheater": 8,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nakatsugawa.lg.jp/tcs/facility/5/4367.html",
+          "observedAt": "2026-08-05",
+          "note": "31.35㎡、8人程度"
         },
         {
           "id": "nakatsugawa-meeting-22",
@@ -77955,7 +81298,10 @@ export const venueData = {
           "capacityTheater": 16,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nakatsugawa.lg.jp/tcs/facility/5/4367.html",
+          "observedAt": "2026-08-05",
+          "note": "55.87㎡、16人程度"
         },
         {
           "id": "nakatsugawa-meeting-23",
@@ -77969,7 +81315,10 @@ export const venueData = {
           "capacityTheater": 20,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nakatsugawa.lg.jp/tcs/facility/5/4367.html",
+          "observedAt": "2026-08-05",
+          "note": "76.83㎡、20人程度"
         }
       ],
       "bestSpace": {
@@ -78023,7 +81372,10 @@ export const venueData = {
           "capacityTheater": 500,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.motosu.lg.jp/0000001115.html",
+          "observedAt": "2026-08-05",
+          "note": "500人。桟敷席44席・車いす席4席を公式カレンダーに掲載"
         }
       ],
       "bestSpace": {
@@ -78077,7 +81429,10 @@ export const venueData = {
           "capacityTheater": 182,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hashima.lg.jp/secure/2513/sanko69.pdf",
+          "observedAt": "2026-08-05",
+          "note": "364㎡、想定収容182人（市公式避難施設資料）"
         },
         {
           "id": "hashima-rehearsal",
@@ -78091,7 +81446,10 @@ export const venueData = {
           "capacityTheater": 80,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.hashima.lg.jp/secure/2513/sanko69.pdf",
+          "observedAt": "2026-08-05",
+          "note": "161㎡、想定収容80人（市公式避難施設資料）"
         },
         {
           "id": "hashima-dressing",
@@ -78105,7 +81463,10 @@ export const venueData = {
           "capacityTheater": 116,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.hashima.lg.jp/secure/2513/sanko69.pdf",
+          "observedAt": "2026-08-05",
+          "note": "9室合計233㎡、想定収容116人（市公式避難施設資料）"
         },
         {
           "id": "hashima-practice",
@@ -78119,7 +81480,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.hashima.lg.jp/secure/2513/sanko69.pdf",
+          "observedAt": "2026-08-05",
+          "note": "2室合計61㎡、想定収容30人（市公式避難施設資料）"
         },
         {
           "id": "hashima-meeting-201",
@@ -78133,7 +81497,10 @@ export const venueData = {
           "capacityTheater": 99,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hashima.lg.jp/secure/2513/sanko69.pdf",
+          "observedAt": "2026-08-05",
+          "note": "198㎡、想定収容99人（市公式避難施設資料）"
         },
         {
           "id": "hashima-meeting-301",
@@ -78147,7 +81514,10 @@ export const venueData = {
           "capacityTheater": 54,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hashima.lg.jp/secure/2513/sanko69.pdf",
+          "observedAt": "2026-08-05",
+          "note": "109㎡、想定収容54人（市公式避難施設資料）"
         },
         {
           "id": "hashima-training",
@@ -78161,7 +81531,10 @@ export const venueData = {
           "capacityTheater": 45,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hashima.lg.jp/secure/2513/sanko69.pdf",
+          "observedAt": "2026-08-05",
+          "note": "91㎡、想定収容45人（市公式避難施設資料）"
         },
         {
           "id": "hashima-large-meeting",
@@ -78175,7 +81548,10 @@ export const venueData = {
           "capacityTheater": 186,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hashima.lg.jp/secure/2513/sanko69.pdf",
+          "observedAt": "2026-08-05",
+          "note": "372㎡、想定収容186人（市公式避難施設資料）"
         }
       ],
       "bestSpace": {
@@ -78229,7 +81605,10 @@ export const venueData = {
           "capacityTheater": 680,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hashimoto.lg.jp/material/files/group/27/20250911teireikaikaigirokudaigo.pdf",
+          "observedAt": "2026-08-05",
+          "note": "最大680人と市公式会議録に記載。座席内訳・面積は未観測"
         },
         {
           "id": "hashimoto-industry-rehearsal",
@@ -78243,7 +81622,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.hashimoto.lg.jp/section/reiki_honbun/r282RG00001051.html",
+          "observedAt": "2026-08-05",
+          "note": "公式条例の使用料区分に掲載。面積・定員は未観測"
         },
         {
           "id": "hashimoto-industry-meeting-2f",
@@ -78257,7 +81639,10 @@ export const venueData = {
           "capacityTheater": 72,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hashimoto.lg.jp/section/reiki_honbun/r282RG00001051.html",
+          "observedAt": "2026-08-05",
+          "note": "72人収容可能"
         },
         {
           "id": "hashimoto-industry-japanese",
@@ -78271,7 +81656,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.hashimoto.lg.jp/section/reiki_honbun/r282RG00001051.html",
+          "observedAt": "2026-08-05",
+          "note": "1室利用時30人可能。2室に分割可"
         },
         {
           "id": "hashimoto-industry-meeting-3f",
@@ -78285,7 +81673,10 @@ export const venueData = {
           "capacityTheater": 63,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hashimoto.lg.jp/section/reiki_honbun/r282RG00001051.html",
+          "observedAt": "2026-08-05",
+          "note": "2室分割時は33人・30人。検索値は合計63人"
         }
       ],
       "bestSpace": {
@@ -78339,7 +81730,10 @@ export const venueData = {
           "capacityTheater": 512,
           "capacityFixed": 504,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kinokawa.lg.jp/044/01/files/kishigawaryoukinn.10.pdf",
+          "observedAt": "2026-08-05",
+          "note": "客席504席、車椅子スペース8席。舞台開口高は最低天井高として未登録"
         },
         {
           "id": "kinokawa-kishi-entrance",
@@ -78353,7 +81747,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kinokawa.lg.jp/044/01/files/kishigawaryoukinn.10.pdf",
+          "observedAt": "2026-08-05",
+          "note": "461㎡"
         },
         {
           "id": "kinokawa-kishi-exhibition",
@@ -78367,7 +81764,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kinokawa.lg.jp/044/01/files/kishigawaryoukinn.10.pdf",
+          "observedAt": "2026-08-05",
+          "note": "70㎡"
         },
         {
           "id": "kinokawa-kishi-rehearsal",
@@ -78381,7 +81781,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.kinokawa.lg.jp/044/01/files/kishigawaryoukinn.10.pdf",
+          "observedAt": "2026-08-05",
+          "note": "110㎡、アップライトピアノあり、土足厳禁"
         },
         {
           "id": "kinokawa-kishi-dressing-1",
@@ -78395,7 +81798,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.kinokawa.lg.jp/044/01/files/kishigawaryoukinn.10.pdf",
+          "observedAt": "2026-08-05",
+          "note": "35㎡"
         },
         {
           "id": "kinokawa-kishi-dressing-23",
@@ -78409,7 +81815,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.kinokawa.lg.jp/044/01/files/kishigawaryoukinn.10.pdf",
+          "observedAt": "2026-08-05",
+          "note": "34㎡。資料の表記は楽屋2・3"
         }
       ],
       "bestSpace": {
@@ -78463,7 +81872,10 @@ export const venueData = {
           "capacityTheater": 714,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.arida.lg.jp/kurashi/sportsbunka/bunka/1000905/1001963.html",
+          "observedAt": "2026-08-05",
+          "note": "924.95㎡、714人。公式は収容人数が消防法上の収容人員と異なると注記"
         },
         {
           "id": "arida-meeting-1",
@@ -78477,7 +81889,10 @@ export const venueData = {
           "capacityTheater": 120,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.arida.lg.jp/kurashi/sportsbunka/bunka/1000905/1001963.html",
+          "observedAt": "2026-08-05",
+          "note": "106.5㎡、120人（机使用時60人）。検索値は上限120人"
         },
         {
           "id": "arida-meeting-2",
@@ -78491,7 +81906,10 @@ export const venueData = {
           "capacityTheater": 50,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.arida.lg.jp/kurashi/sportsbunka/bunka/1000905/1001963.html",
+          "observedAt": "2026-08-05",
+          "note": "51.12㎡、50人（机使用時24人）。検索値は上限50人"
         },
         {
           "id": "arida-dressing-a",
@@ -78505,7 +81923,10 @@ export const venueData = {
           "capacityTheater": 8,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.arida.lg.jp/kurashi/sportsbunka/bunka/1000905/1001963.html",
+          "observedAt": "2026-08-05",
+          "note": "22.26㎡、8人。楽屋・会議・楽器練習に使用"
         },
         {
           "id": "arida-dressing-b",
@@ -78519,7 +81940,10 @@ export const venueData = {
           "capacityTheater": 8,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.arida.lg.jp/kurashi/sportsbunka/bunka/1000905/1001963.html",
+          "observedAt": "2026-08-05",
+          "note": "23.72㎡、8人。楽屋・会議・楽器練習に使用"
         }
       ],
       "bestSpace": {
@@ -78573,7 +81997,10 @@ export const venueData = {
           "capacityTheater": 777,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.gobo.lg.jp/material/files/group/7/r6_syuyouseika.pdf",
+          "observedAt": "2026-08-05",
+          "note": "市公式のNHK番組実績資料で777席の観覧者数上限を掲載。固定・可動内訳は未観測"
         },
         {
           "id": "gobo-small",
@@ -78587,7 +82014,10 @@ export const venueData = {
           "capacityTheater": 150,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.gobo.lg.jp/material/files/group/3/200912_zentai.pdf",
+          "observedAt": "2026-08-05",
+          "note": "市公式広報で定員150人と掲載。現行の定員・面積は要再確認"
         }
       ],
       "bestSpace": {
@@ -78641,7 +82071,10 @@ export const venueData = {
           "capacityTheater": 320,
           "capacityFixed": 88,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.komatsushima.lg.jp/docs/4368863.html",
+          "observedAt": "2026-08-05",
+          "note": "総客席320席（移動220・固定88・母子室6・車椅子席6）。舞台開口高は最低天井高として未登録"
         },
         {
           "id": "komatsushima-sound-dressing-1",
@@ -78655,7 +82088,10 @@ export const venueData = {
           "capacityTheater": 7,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.komatsushima.lg.jp/docs/4368863.html",
+          "observedAt": "2026-08-05",
+          "note": "定員7人"
         },
         {
           "id": "komatsushima-sound-dressing-2",
@@ -78669,7 +82105,10 @@ export const venueData = {
           "capacityTheater": 16,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.komatsushima.lg.jp/docs/4368863.html",
+          "observedAt": "2026-08-05",
+          "note": "定員16人"
         }
       ],
       "bestSpace": {
@@ -78723,7 +82162,10 @@ export const venueData = {
           "capacityTheater": 300,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.yoshinogawa.lg.jp/docs/2013090400016/",
+          "observedAt": "2026-08-05",
+          "note": "定員300人。講演会のほかバドミントン・卓球等に利用"
         },
         {
           "id": "yoshinogawa-exchange-meeting",
@@ -78737,7 +82179,10 @@ export const venueData = {
           "capacityTheater": 70,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yoshinogawa.lg.jp/docs/2013090400016/",
+          "observedAt": "2026-08-05",
+          "note": "定員70人"
         },
         {
           "id": "yoshinogawa-exchange-japanese-12",
@@ -78751,7 +82196,10 @@ export const venueData = {
           "capacityTheater": 40,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.yoshinogawa.lg.jp/docs/2013090400016/",
+          "observedAt": "2026-08-05",
+          "note": "各室定員20人。2室合計の検索値は40人"
         },
         {
           "id": "yoshinogawa-exchange-japanese-34",
@@ -78765,7 +82213,10 @@ export const venueData = {
           "capacityTheater": 60,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.yoshinogawa.lg.jp/docs/2013090400016/",
+          "observedAt": "2026-08-05",
+          "note": "各室定員30人。2室合計の検索値は60人"
         },
         {
           "id": "yoshinogawa-exchange-cooking",
@@ -78779,7 +82230,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yoshinogawa.lg.jp/docs/2013090400016/",
+          "observedAt": "2026-08-05",
+          "note": "定員30人"
         }
       ],
       "bestSpace": {
@@ -78833,7 +82287,10 @@ export const venueData = {
           "capacityTheater": 633,
           "capacityFixed": 629,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.aizumi.lg.jp/bunka-h/docs/2023031400036/",
+          "observedAt": "2026-08-05",
+          "note": "総客席633席。1階416席（車椅子4席を含む）と2階217席で、固定席検索値は629席"
         },
         {
           "id": "aizumi-small-hall",
@@ -78847,7 +82304,10 @@ export const venueData = {
           "capacityTheater": 80,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.aizumi.lg.jp/bunka-h/docs/2023031400036/",
+          "observedAt": "2026-08-05",
+          "note": "定員80人"
         },
         {
           "id": "aizumi-exchange-2",
@@ -78861,7 +82321,10 @@ export const venueData = {
           "capacityTheater": 64,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.aizumi.lg.jp/bunka-h/docs/2023031400036/",
+          "observedAt": "2026-08-05",
+          "note": "全室定員64人。半室利用時24人"
         },
         {
           "id": "aizumi-exchange-3",
@@ -78875,7 +82338,10 @@ export const venueData = {
           "capacityTheater": 16,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.aizumi.lg.jp/bunka-h/docs/2023031400036/",
+          "observedAt": "2026-08-05",
+          "note": "定員16人"
         },
         {
           "id": "aizumi-studio",
@@ -78889,7 +82355,10 @@ export const venueData = {
           "capacityTheater": 5,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.town.aizumi.lg.jp/bunka-h/docs/2023031400036/",
+          "observedAt": "2026-08-05",
+          "note": "定員5人"
         },
         {
           "id": "aizumi-japanese",
@@ -78903,7 +82372,10 @@ export const venueData = {
           "capacityTheater": 16,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.town.aizumi.lg.jp/bunka-h/docs/2023031400036/",
+          "observedAt": "2026-08-05",
+          "note": "定員16人"
         },
         {
           "id": "aizumi-cooking",
@@ -78917,7 +82389,10 @@ export const venueData = {
           "capacityTheater": 36,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.aizumi.lg.jp/bunka-h/docs/2023031400036/",
+          "observedAt": "2026-08-05",
+          "note": "定員36人"
         }
       ],
       "bestSpace": {
@@ -78971,7 +82446,10 @@ export const venueData = {
           "capacityTheater": 600,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.ishii.lg.jp/docs/2011031501945/",
+          "observedAt": "2026-08-05",
+          "note": "定員600席。固定・可動の内訳は未観測"
         },
         {
           "id": "ishii-central-large-meeting",
@@ -78985,7 +82463,10 @@ export const venueData = {
           "capacityTheater": 90,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.ishii.lg.jp/docs/2011031501945/",
+          "observedAt": "2026-08-05",
+          "note": "141.31㎡、定員90人"
         },
         {
           "id": "ishii-central-small-meeting",
@@ -78999,7 +82480,10 @@ export const venueData = {
           "capacityTheater": 16,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.ishii.lg.jp/docs/2011031501945/",
+          "observedAt": "2026-08-05",
+          "note": "47.68㎡、定員16人"
         },
         {
           "id": "ishii-central-multipurpose-large",
@@ -79013,7 +82497,10 @@ export const venueData = {
           "capacityTheater": 16,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.ishii.lg.jp/docs/2011031501945/",
+          "observedAt": "2026-08-05",
+          "note": "54.25㎡、定員16人"
         }
       ],
       "bestSpace": {
@@ -79067,7 +82554,10 @@ export const venueData = {
           "capacityTheater": 402,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.matsushige.tokushima.jp/docs/2018053100019/",
+          "observedAt": "2026-08-05",
+          "note": "402席（前方平土間134席・後方段床268席）"
         },
         {
           "id": "matsushige-general-meeting-1",
@@ -79081,7 +82571,10 @@ export const venueData = {
           "capacityTheater": 72,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.matsushige.tokushima.jp/docs/2018053100019/",
+          "observedAt": "2026-08-05",
+          "note": "定員72人"
         }
       ],
       "bestSpace": {
@@ -79135,7 +82628,10 @@ export const venueData = {
           "capacityTheater": 756,
           "capacityFixed": 751,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.asobo-saga.jp/business/conventions/detail/931ac00e-c2d6-4614-8453-a9f3ecd96a47",
+          "observedAt": "2026-08-05",
+          "note": "固定751席、車椅子席5席。佐賀県公式観光サイトの会場情報。舞台寸法は最低天井高として未登録"
         },
         {
           "id": "kashima-sakuras-practice",
@@ -79149,7 +82645,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.saga-kashima.lg.jp/main/18066.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式が練習室1室を掲載。面積・定員は未観測"
         },
         {
           "id": "kashima-sakuras-multipurpose-1",
@@ -79163,7 +82662,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.saga-kashima.lg.jp/site_files/file/soumuka/siminkaikan/%E9%B9%BF%E5%B3%B6%E5%B8%82%E6%B0%91%E6%96%87%E5%8C%96%E3%83%9B%E3%83%BC%E3%83%AB%E5%AE%8C%E6%88%90%E8%A8%98%E5%BF%B5%E8%AA%8C%EF%BC%88%E5%AF%84%E9%99%84%E8%80%85%E6%8E%B2%E8%BC%89%E7%89%88%EF%BC%89.pdf",
+          "observedAt": "2026-08-05",
+          "note": "完成記念誌で多目的室1・2の設置を確認。多目的室1は企画展示を想定"
         },
         {
           "id": "kashima-sakuras-multipurpose-2",
@@ -79177,7 +82679,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.saga-kashima.lg.jp/site_files/file/soumuka/siminkaikan/%E9%B9%BF%E5%B3%B6%E5%B8%82%E6%B0%91%E6%96%87%E5%8C%96%E3%83%9B%E3%83%BC%E3%83%AB%E5%AE%8C%E6%88%90%E8%A8%98%E5%BF%B5%E8%AA%8C%EF%BC%88%E5%AF%84%E9%99%84%E8%80%85%E6%8E%B2%E8%BC%89%E7%89%88%EF%BC%89.pdf",
+          "observedAt": "2026-08-05",
+          "note": "完成記念誌で多目的室1・2の設置を確認"
         }
       ],
       "bestSpace": {
@@ -79231,7 +82736,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.ureshino.lg.jp/shisetsu/liberty/_23949.html",
+          "observedAt": "2026-08-05",
+          "note": "約1,300㎡、センター部天井高約14.5m。バスケット2面・バドミントン6面・バレーボール2面対応"
         },
         {
           "id": "ureshino-liberty-sub-arena",
@@ -79245,7 +82753,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.ureshino.lg.jp/shisetsu/liberty/_23949.html",
+          "observedAt": "2026-08-05",
+          "note": "14.5m×14.5m。柔道・剣道等に使用可"
         },
         {
           "id": "ureshino-liberty-culture-hall",
@@ -79259,7 +82770,10 @@ export const venueData = {
           "capacityTheater": 463,
           "capacityFixed": 293,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ureshino.lg.jp/shisetsu/liberty/_23949.html",
+          "observedAt": "2026-08-05",
+          "note": "固定293席・可動170席、合計463席。舞台奥行・幅は最低天井高として未登録"
         },
         {
           "id": "ureshino-liberty-rehearsal",
@@ -79273,7 +82787,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.ureshino.lg.jp/shisetsu/liberty/_23949.html",
+          "observedAt": "2026-08-05",
+          "note": "約6.5m×6.5m。音楽スタジオ機能のあるリハーサル室"
         },
         {
           "id": "ureshino-liberty-meeting",
@@ -79287,7 +82804,10 @@ export const venueData = {
           "capacityTheater": 24,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ureshino.lg.jp/shisetsu/liberty/_23949.html",
+          "observedAt": "2026-08-05",
+          "note": "約7m×5m、椅子24脚"
         }
       ],
       "bestSpace": {
@@ -79341,7 +82861,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://kouhoku-navel.com/facility/",
+          "observedAt": "2026-08-05",
+          "note": "床面積2,226㎡。バスケット・バレー各2面、バドミントン8面のほか式典・発表会に対応"
         },
         {
           "id": "kouhoku-navel-learning",
@@ -79355,7 +82878,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://kouhoku-navel.com/facility/",
+          "observedAt": "2026-08-05",
+          "note": "会議・研修会場として利用可能。面積・定員は未観測"
         },
         {
           "id": "kouhoku-navel-computer",
@@ -79369,7 +82895,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://kouhoku-navel.com/facility/",
+          "observedAt": "2026-08-05",
+          "note": "PC・タブレット教室等に利用可能。面積・定員は未観測"
         },
         {
           "id": "kouhoku-navel-cooking",
@@ -79383,7 +82912,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://kouhoku-navel.com/facility/",
+          "observedAt": "2026-08-05",
+          "note": "最大30人程度の調理に対応"
         },
         {
           "id": "kouhoku-navel-japanese",
@@ -79397,7 +82929,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://kouhoku-navel.com/facility/",
+          "observedAt": "2026-08-05",
+          "note": "茶道・生け花・茶話会等に利用可能な和室"
         }
       ],
       "bestSpace": {
@@ -79451,7 +82986,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.arita.lg.jp/reiki_int/reiki_honbun/r306RG00000476.html",
+          "observedAt": "2026-08-05",
+          "note": "有田町公式条例が焱の博記念堂内の文化ホールとして定義。規模は未観測"
         },
         {
           "id": "arita-hono-convention",
@@ -79465,7 +83003,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.arita.lg.jp/reiki_int/reiki_honbun/r306RG00000476.html",
+          "observedAt": "2026-08-05",
+          "note": "有田町公式条例が焱の博記念堂の文化ホール以外の施設として定義。規模は未観測"
         }
       ],
       "bestSpace": {
@@ -79519,7 +83060,10 @@ export const venueData = {
           "capacityTheater": 1002,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://kanoyashi-bunkakaikan.jpn.org/",
+          "observedAt": "2026-08-05",
+          "note": "客席1,002席。固定・可動の内訳は未観測"
         },
         {
           "id": "kanoya-culture-rehearsal",
@@ -79533,7 +83077,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.kanoya.lg.jp/documents/11369/koukikihonnkeikaku.pdf",
+          "observedAt": "2026-08-05",
+          "note": "鹿屋市公式計画がリハーサル室を掲載。面積・定員は未観測"
         },
         {
           "id": "kanoya-culture-dressing",
@@ -79547,7 +83094,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.kanoya.lg.jp/documents/11369/koukikihonnkeikaku.pdf",
+          "observedAt": "2026-08-05",
+          "note": "鹿屋市公式計画が楽屋5室を掲載。合計面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -79601,7 +83151,10 @@ export const venueData = {
           "capacityTheater": 1004,
           "capacityFixed": 1004,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tarumizu.lg.jp/bunka/shisetsu/kyoiku-bunka-sports/15.html",
+          "observedAt": "2026-08-05",
+          "note": "1階748席・2階256席、合計1,004席"
         },
         {
           "id": "tarumizu-culture-rehearsal",
@@ -79615,7 +83168,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.tarumizu.lg.jp/bunka/shisetsu/kyoiku-bunka-sports/15.html",
+          "observedAt": "2026-08-05",
+          "note": "119㎡"
         },
         {
           "id": "tarumizu-culture-meeting",
@@ -79629,7 +83185,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tarumizu.lg.jp/bunka/shisetsu/kyoiku-bunka-sports/15.html",
+          "observedAt": "2026-08-05",
+          "note": "26.5㎡"
         },
         {
           "id": "tarumizu-culture-dressing-12",
@@ -79643,7 +83202,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.tarumizu.lg.jp/bunka/shisetsu/kyoiku-bunka-sports/15.html",
+          "observedAt": "2026-08-05",
+          "note": "個室2室、各15.4㎡。検索値は合計30.8㎡"
         },
         {
           "id": "tarumizu-culture-dressing-34",
@@ -79657,7 +83219,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.tarumizu.lg.jp/bunka/shisetsu/kyoiku-bunka-sports/15.html",
+          "observedAt": "2026-08-05",
+          "note": "和室2室、各27.2㎡。検索値は合計54.4㎡"
         },
         {
           "id": "tarumizu-culture-dressing-5",
@@ -79671,7 +83236,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.tarumizu.lg.jp/bunka/shisetsu/kyoiku-bunka-sports/15.html",
+          "observedAt": "2026-08-05",
+          "note": "洋室46.5㎡"
         }
       ],
       "bestSpace": {
@@ -79725,7 +83293,10 @@ export const venueData = {
           "capacityTheater": 1208,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://buken.co.jp/ijyuin/hall-guide/",
+          "observedAt": "2026-08-05",
+          "note": "ワンスロープ1,208席。オーケストラピット120席・身障者用可動席30席を含むため、固定席内訳は未登録"
         },
         {
           "id": "hioki-ijuin-rehearsal",
@@ -79739,7 +83310,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://buken.co.jp/ijyuin/hall-guide/",
+          "observedAt": "2026-08-05",
+          "note": "1室、定員30人"
         },
         {
           "id": "hioki-ijuin-practice-1",
@@ -79753,7 +83327,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://buken.co.jp/ijyuin/hall-guide/",
+          "observedAt": "2026-08-05",
+          "note": "施設公式が練習室1を掲載。面積・定員は未観測"
         },
         {
           "id": "hioki-ijuin-practice-2",
@@ -79767,7 +83344,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://buken.co.jp/ijyuin/hall-guide/",
+          "observedAt": "2026-08-05",
+          "note": "施設公式が練習室2を掲載。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -79821,7 +83401,10 @@ export const venueData = {
           "capacityTheater": 3800,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.kagoshima-izumi.lg.jp/site_data/izumi07/forms/39-1_01.pdf",
+          "observedAt": "2026-08-05",
+          "note": "収容人員3,800人。バレーボール3面・バスケットボール2面・バドミントン12面・卓球10台に対応"
         },
         {
           "id": "izumi-sports-meeting-1",
@@ -79835,7 +83418,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kagoshima-izumi.lg.jp/site_data/izumi07/forms/39-1_01.pdf",
+          "observedAt": "2026-08-05",
+          "note": "施設資料が会議室2室を掲載。面積・定員は未観測"
         },
         {
           "id": "izumi-sports-meeting-2",
@@ -79849,7 +83435,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kagoshima-izumi.lg.jp/site_data/izumi07/forms/39-1_01.pdf",
+          "observedAt": "2026-08-05",
+          "note": "施設資料が会議室2室を掲載。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -79903,7 +83492,10 @@ export const venueData = {
           "capacityTheater": 1012,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://iwate-arts-miyako.jp/facility/",
+          "observedAt": "2026-08-05",
+          "note": "総席数1,012席"
         },
         {
           "id": "miyako-culture-medium",
@@ -79917,7 +83509,10 @@ export const venueData = {
           "capacityTheater": 362,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://iwate-arts-miyako.jp/facility/",
+          "observedAt": "2026-08-05",
+          "note": "最大362席"
         },
         {
           "id": "miyako-culture-exhibition",
@@ -79931,7 +83526,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://iwate-arts-miyako.jp/facility/",
+          "observedAt": "2026-08-05",
+          "note": "約250㎡"
         },
         {
           "id": "miyako-culture-training",
@@ -79945,7 +83543,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://iwate-arts-miyako.jp/facility/",
+          "observedAt": "2026-08-05",
+          "note": "約90㎡、アップライトピアノ常設。演劇・音楽の練習、会議・説明会等に利用"
         },
         {
           "id": "miyako-culture-meeting",
@@ -79959,7 +83560,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://iwate-arts-miyako.jp/facility/",
+          "observedAt": "2026-08-05",
+          "note": "約36㎡"
         }
       ],
       "bestSpace": {
@@ -80013,7 +83617,10 @@ export const venueData = {
           "capacityTheater": 1178,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kuji.lg.jp/kanko_bunka_sports/kujisi_bunka_kaikan/4/2905.html",
+          "observedAt": "2026-08-05",
+          "note": "1,178席（車椅子6席・親子席8席を含む）。舞台高は最低天井高として未登録"
         },
         {
           "id": "kuji-amber-small",
@@ -80027,7 +83634,10 @@ export const venueData = {
           "capacityTheater": 351,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kuji.lg.jp/kanko_bunka_sports/kujisi_bunka_kaikan/4/2905.html",
+          "observedAt": "2026-08-05",
+          "note": "351席（車椅子2席・親子席5席を含む）。舞台高は最低天井高として未登録"
         },
         {
           "id": "kuji-amber-exhibition",
@@ -80041,7 +83651,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kuji.lg.jp/kanko_bunka_sports/kujisi_bunka_kaikan/4/2905.html",
+          "observedAt": "2026-08-05",
+          "note": "回廊型、床面積約500㎡"
         },
         {
           "id": "kuji-amber-practice",
@@ -80055,7 +83668,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.kuji.lg.jp/kanko_bunka_sports/kujisi_bunka_kaikan/4/2905.html",
+          "observedAt": "2026-08-05",
+          "note": "約105㎡。吹奏楽・合唱・バレエ・舞踏・バンド等に利用"
         },
         {
           "id": "kuji-amber-audiovisual",
@@ -80069,7 +83685,10 @@ export const venueData = {
           "capacityTheater": 40,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kuji.lg.jp/kanko_bunka_sports/kujisi_bunka_kaikan/4/2905.html",
+          "observedAt": "2026-08-05",
+          "note": "約88㎡、会議・研修・小規模映画会等に利用。定員40人（テーブル使用時）"
         },
         {
           "id": "kuji-amber-meeting-1",
@@ -80083,7 +83702,10 @@ export const venueData = {
           "capacityTheater": 20,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kuji.lg.jp/kanko_bunka_sports/kujisi_bunka_kaikan/5/2254.html",
+          "observedAt": "2026-08-05",
+          "note": "定員20人（テーブル使用時）。第1〜3会議室は可動パネルで一体利用可"
         },
         {
           "id": "kuji-amber-meeting-2",
@@ -80097,7 +83719,10 @@ export const venueData = {
           "capacityTheater": 20,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kuji.lg.jp/kanko_bunka_sports/kujisi_bunka_kaikan/5/2254.html",
+          "observedAt": "2026-08-05",
+          "note": "定員20人（テーブル使用時）。第1〜3会議室は可動パネルで一体利用可"
         },
         {
           "id": "kuji-amber-meeting-3",
@@ -80111,7 +83736,10 @@ export const venueData = {
           "capacityTheater": 20,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kuji.lg.jp/kanko_bunka_sports/kujisi_bunka_kaikan/5/2254.html",
+          "observedAt": "2026-08-05",
+          "note": "定員20人（テーブル使用時）。第1〜3会議室は可動パネルで一体利用可"
         }
       ],
       "bestSpace": {
@@ -80165,7 +83793,10 @@ export const venueData = {
           "capacityTheater": 1215,
           "capacityFixed": 358,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kamaishi.iwate.jp/docs/2017121800097/file_contents/2017121800097_www_city_kamaishi_iwate_jp_tanoshimu_shisetsu_shimin_hall___icsFiles_afieldfile_2017_12_18_shisetu-gaiyou_2.pdf",
+          "observedAt": "2026-08-05",
+          "note": "客席838席（1階480・2階固定358）、最大1,215人（1階スタンディング857・2階358）。1階は平土間に設定可"
         },
         {
           "id": "kamaishi-tetto-b",
@@ -80179,7 +83810,10 @@ export const venueData = {
           "capacityTheater": 440,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kamaishi.iwate.jp/docs/2017121800097/file_contents/2017121800097_www_city_kamaishi_iwate_jp_tanoshimu_shisetsu_shimin_hall___icsFiles_afieldfile_2017_12_18_shisetu-gaiyou_2.pdf",
+          "observedAt": "2026-08-05",
+          "note": "209㎡の平土間。スタッキングチェア使用時218人、スタンディング440人。検索値は最大440人"
         },
         {
           "id": "kamaishi-tetto-studios",
@@ -80193,7 +83827,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.kamaishi.iwate.jp/docs/2017121800097/file_contents/2017121800097_www_city_kamaishi_iwate_jp_tanoshimu_shisetsu_shimin_hall___icsFiles_afieldfile_2017_12_18_shisetu-gaiyou_2.pdf",
+          "observedAt": "2026-08-05",
+          "note": "3室のうち1室は浮床式完全防音室。個別の面積・定員は未観測"
         },
         {
           "id": "kamaishi-tetto-gallery",
@@ -80207,7 +83844,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kamaishi.iwate.jp/docs/2017121800097/file_contents/2017121800097_www_city_kamaishi_iwate_jp_tanoshimu_shisetsu_shimin_hall___icsFiles_afieldfile_2017_12_18_shisetu-gaiyou_2.pdf",
+          "observedAt": "2026-08-05",
+          "note": "110㎡"
         },
         {
           "id": "kamaishi-tetto-piano-practice",
@@ -80221,7 +83861,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.kamaishi.iwate.jp/docs/2017121800097/file_contents/2017121800097_www_city_kamaishi_iwate_jp_tanoshimu_shisetsu_shimin_hall___icsFiles_afieldfile_2017_12_18_shisetu-gaiyou_2.pdf",
+          "observedAt": "2026-08-05",
+          "note": "施設概要に掲載。面積・定員は未観測"
         },
         {
           "id": "kamaishi-tetto-japanese",
@@ -80235,7 +83878,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.kamaishi.iwate.jp/docs/2017121800097/file_contents/2017121800097_www_city_kamaishi_iwate_jp_tanoshimu_shisetsu_shimin_hall___icsFiles_afieldfile_2017_12_18_shisetu-gaiyou_2.pdf",
+          "observedAt": "2026-08-05",
+          "note": "8畳2室、水屋付き。個別の定員は未観測"
         },
         {
           "id": "kamaishi-tetto-meeting",
@@ -80249,7 +83895,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kamaishi.iwate.jp/docs/2017121800097/file_contents/2017121800097_www_city_kamaishi_iwate_jp_tanoshimu_shisetsu_shimin_hall___icsFiles_afieldfile_2017_12_18_shisetu-gaiyou_2.pdf",
+          "observedAt": "2026-08-05",
+          "note": "施設概要に掲載。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -80303,7 +83952,10 @@ export const venueData = {
           "capacityTheater": 924,
           "capacityFixed": 839,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tono.iwate.jp/index.cfm/45%2C14160%2C254%2Chtml",
+          "observedAt": "2026-08-05",
+          "note": "1階401席（移動席85席を含む）・2階523席、合計924席。固定席検索値は839席。舞台高は最低天井高として未登録"
         },
         {
           "id": "tono-civic-dressing-1",
@@ -80317,7 +83969,10 @@ export const venueData = {
           "capacityTheater": 20,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.tono.iwate.jp/index.cfm/45%2C14160%2C254%2Chtml",
+          "observedAt": "2026-08-05",
+          "note": "洋室、定員20人"
         },
         {
           "id": "tono-civic-dressing-2",
@@ -80331,7 +83986,10 @@ export const venueData = {
           "capacityTheater": 10,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.tono.iwate.jp/index.cfm/45%2C14160%2C254%2Chtml",
+          "observedAt": "2026-08-05",
+          "note": "和室、定員10人"
         },
         {
           "id": "tono-civic-dressing-3",
@@ -80345,7 +84003,10 @@ export const venueData = {
           "capacityTheater": 20,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.tono.iwate.jp/index.cfm/45%2C14160%2C254%2Chtml",
+          "observedAt": "2026-08-05",
+          "note": "洋室、定員20人"
         },
         {
           "id": "tono-civic-meeting-1",
@@ -80359,7 +84020,10 @@ export const venueData = {
           "capacityTheater": 20,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tono.iwate.jp/index.cfm/45%2C14160%2C254%2Chtml",
+          "observedAt": "2026-08-05",
+          "note": "52㎡、定員20人"
         },
         {
           "id": "tono-civic-meeting-2",
@@ -80373,7 +84037,10 @@ export const venueData = {
           "capacityTheater": 20,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tono.iwate.jp/index.cfm/45%2C14160%2C254%2Chtml",
+          "observedAt": "2026-08-05",
+          "note": "50㎡、定員20人"
         },
         {
           "id": "tono-civic-lecture",
@@ -80387,7 +84054,10 @@ export const venueData = {
           "capacityTheater": 50,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tono.iwate.jp/index.cfm/45%2C14160%2C254%2Chtml",
+          "observedAt": "2026-08-05",
+          "note": "90㎡、定員50人。アップライトピアノ・プロジェクター等あり"
         },
         {
           "id": "tono-civic-practical",
@@ -80401,7 +84071,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tono.iwate.jp/index.cfm/45%2C14160%2C254%2Chtml",
+          "observedAt": "2026-08-05",
+          "note": "30㎡、ガスオーブン・ガスレンジ等あり"
         },
         {
           "id": "tono-civic-reception",
@@ -80415,7 +84088,10 @@ export const venueData = {
           "capacityTheater": 10,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tono.iwate.jp/index.cfm/45%2C14160%2C254%2Chtml",
+          "observedAt": "2026-08-05",
+          "note": "41㎡、定員10人（補助席あり）"
         }
       ],
       "bestSpace": {
@@ -80469,7 +84145,10 @@ export const venueData = {
           "capacityTheater": 1024,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.semboku.akita.jp/facility_sys/shiminkaikan.html",
+          "observedAt": "2026-08-05",
+          "note": "客席数1,024。固定・可動の内訳は未観測"
         },
         {
           "id": "semboku-civic-practice",
@@ -80483,7 +84162,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.semboku.akita.jp/facility_sys/shiminkaikan.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式が練習室を掲載。面積・定員は未観測"
         },
         {
           "id": "semboku-civic-dressing-1",
@@ -80497,7 +84179,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.semboku.akita.jp/facility_sys/shiminkaikan.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式が楽屋第一を掲載。面積・定員は未観測"
         },
         {
           "id": "semboku-civic-dressing-2",
@@ -80511,7 +84196,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.semboku.akita.jp/facility_sys/shiminkaikan.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式が楽屋第二を掲載。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -80565,7 +84253,10 @@ export const venueData = {
           "capacityTheater": 1020,
           "capacityFixed": 1012,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.oga.akita.jp/soshik/shimimbunkakaikan/ogashimimbunkakaikan/1231.html",
+          "observedAt": "2026-08-05",
+          "note": "定席1,012席、母子席4・身障者席4を加え1,020席。舞台高は最低天井高として未登録"
         },
         {
           "id": "oga-culture-small",
@@ -80579,7 +84270,10 @@ export const venueData = {
           "capacityTheater": 410,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.oga.akita.jp/soshik/shimimbunkakaikan/ogashimimbunkakaikan/1231.html",
+          "observedAt": "2026-08-05",
+          "note": "移動席410席。舞台高は最低天井高として未登録"
         },
         {
           "id": "oga-culture-rehearsal",
@@ -80593,7 +84287,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.oga.akita.jp/soshik/shimimbunkakaikan/ogashimimbunkakaikan/1231.html",
+          "observedAt": "2026-08-05",
+          "note": "会議室としても使用可。面積・定員は未観測"
         },
         {
           "id": "oga-culture-practice",
@@ -80607,7 +84304,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.oga.akita.jp/soshik/shimimbunkakaikan/ogashimimbunkakaikan/1231.html",
+          "observedAt": "2026-08-05",
+          "note": "2室、会議室としても使用可。個別の面積・定員は未観測"
         },
         {
           "id": "oga-culture-large-meeting",
@@ -80621,7 +84321,10 @@ export const venueData = {
           "capacityTheater": 126,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.oga.akita.jp/soshik/shimimbunkakaikan/ogashimimbunkakaikan/1231.html",
+          "observedAt": "2026-08-05",
+          "note": "定員126人"
         },
         {
           "id": "oga-culture-small-meeting",
@@ -80635,7 +84338,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.oga.akita.jp/soshik/shimimbunkakaikan/ogashimimbunkakaikan/1231.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式が1室を掲載。面積・定員は未観測"
         },
         {
           "id": "oga-culture-japanese",
@@ -80649,7 +84355,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.oga.akita.jp/soshik/shimimbunkakaikan/ogashimimbunkakaikan/1231.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式が和室2室を掲載。個別の面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -80703,7 +84412,10 @@ export const venueData = {
           "capacityTheater": 350,
           "capacityFixed": 50,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.ugo.lg.jp/sightseeing/detail.html?category_id=210&id=1283",
+          "observedAt": "2026-08-05",
+          "note": "移動観覧席300席・2階固定席50席、合計350席。客席未設置時は飲食利用可"
         },
         {
           "id": "ugo-mirione-dressing",
@@ -80717,7 +84429,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.town.ugo.lg.jp/sightseeing/detail.html?category_id=210&id=1283",
+          "observedAt": "2026-08-05",
+          "note": "間仕切り2間も可能。テーブル6台・椅子16脚（定員としては未登録）"
         },
         {
           "id": "ugo-mirione-circle",
@@ -80731,7 +84446,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.town.ugo.lg.jp/sightseeing/detail.html?category_id=210&id=1283",
+          "observedAt": "2026-08-05",
+          "note": "会議・研修、音楽・舞踊練習に利用可。テーブル20台・椅子60脚（定員としては未登録）"
         },
         {
           "id": "ugo-mirione-japanese-a",
@@ -80745,7 +84463,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.town.ugo.lg.jp/sightseeing/detail.html?category_id=210&id=1283",
+          "observedAt": "2026-08-05",
+          "note": "18畳。打合せ・会議等に利用可"
         },
         {
           "id": "ugo-mirione-japanese-b",
@@ -80759,7 +84480,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.town.ugo.lg.jp/sightseeing/detail.html?category_id=210&id=1283",
+          "observedAt": "2026-08-05",
+          "note": "18畳。打合せ・会議等に利用可"
         },
         {
           "id": "ugo-mirione-cooking",
@@ -80773,7 +84497,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.ugo.lg.jp/sightseeing/detail.html?category_id=210&id=1283",
+          "observedAt": "2026-08-05",
+          "note": "IH・スチームオーブン付き調理台4卓、ガスコンロ1台、丸椅子16脚（定員としては未登録）"
         }
       ],
       "bestSpace": {
@@ -80827,7 +84554,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city-yuzawa.jp/site/y-bunka/",
+          "observedAt": "2026-08-05",
+          "note": "湯沢市公式が大ホールを掲載。面積・定員は未観測"
         },
         {
           "id": "yuzawa-hall-medium",
@@ -80841,7 +84571,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city-yuzawa.jp/site/y-bunka/",
+          "observedAt": "2026-08-05",
+          "note": "湯沢市公式が中ホールを掲載。面積・定員は未観測"
         },
         {
           "id": "yuzawa-special-meeting",
@@ -80855,7 +84588,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city-yuzawa.jp/site/y-bunka/",
+          "observedAt": "2026-08-05",
+          "note": "湯沢市公式が特別会議室を掲載。面積・定員は未観測"
         },
         {
           "id": "yuzawa-meeting-1",
@@ -80869,7 +84605,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city-yuzawa.jp/site/y-bunka/",
+          "observedAt": "2026-08-05",
+          "note": "湯沢市公式が第1会議室を掲載。面積・定員は未観測"
         },
         {
           "id": "yuzawa-meeting-2",
@@ -80883,7 +84622,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city-yuzawa.jp/site/y-bunka/",
+          "observedAt": "2026-08-05",
+          "note": "湯沢市公式が第2会議室を掲載。面積・定員は未観測"
         },
         {
           "id": "yuzawa-meeting-3",
@@ -80897,7 +84639,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city-yuzawa.jp/site/y-bunka/",
+          "observedAt": "2026-08-05",
+          "note": "湯沢市公式が第3会議室を掲載。面積・定員は未観測"
         },
         {
           "id": "yuzawa-meeting-4",
@@ -80911,7 +84656,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city-yuzawa.jp/site/y-bunka/",
+          "observedAt": "2026-08-05",
+          "note": "湯沢市公式が第4会議室を掲載。面積・定員は未観測"
         },
         {
           "id": "yuzawa-exhibition",
@@ -80925,7 +84673,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city-yuzawa.jp/site/y-bunka/",
+          "observedAt": "2026-08-05",
+          "note": "湯沢市公式が展示室を掲載。面積・定員は未観測"
         },
         {
           "id": "yuzawa-rehearsal",
@@ -80939,7 +84690,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city-yuzawa.jp/site/y-bunka/",
+          "observedAt": "2026-08-05",
+          "note": "湯沢市公式がリハーサル室を掲載。面積・定員は未観測"
         },
         {
           "id": "yuzawa-practice",
@@ -80953,7 +84707,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city-yuzawa.jp/site/y-bunka/",
+          "observedAt": "2026-08-05",
+          "note": "湯沢市公式が練習室を掲載。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -81007,7 +84764,10 @@ export const venueData = {
           "capacityTheater": 1005,
           "capacityFixed": 1005,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.yonebunka.jp/guide/outline/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式が固定1,005席を掲載。面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "yonezawa-meeting-prep",
@@ -81021,7 +84781,10 @@ export const venueData = {
           "capacityTheater": 60,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.yonebunka.jp/guide/outline/",
+          "observedAt": "2026-08-05",
+          "note": "112.5㎡・60人。会議室と準備室を一体表記する公式案内に基づく"
         },
         {
           "id": "yonezawa-waiting",
@@ -81035,7 +84798,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.yonebunka.jp/guide/outline/",
+          "observedAt": "2026-08-05",
+          "note": "30㎡。定員・最低天井高・床荷重は未観測"
         }
       ],
       "bestSpace": {
@@ -81089,7 +84855,10 @@ export const venueData = {
           "capacityTheater": 1110,
           "capacityFixed": 1110,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://tendo-bunka.com/facility",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式が固定1,110席を掲載。面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "tendo-exhibition",
@@ -81103,7 +84872,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://tendo-bunka.com/facility",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式が展示室を掲載。面積・定員は未観測"
         },
         {
           "id": "tendo-large-assembly",
@@ -81117,7 +84889,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://tendo-bunka.com/facility",
+          "observedAt": "2026-08-05",
+          "note": "小コンサートやスポーツにも利用できると公式案内。面積・定員は未観測"
         },
         {
           "id": "tendo-meeting",
@@ -81131,7 +84906,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://tendo-bunka.com/facility",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式が会議室を掲載。面積・定員は未観測"
         },
         {
           "id": "tendo-japanese",
@@ -81145,7 +84923,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://tendo-bunka.com/facility",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式が和室を掲載。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -81199,7 +84980,10 @@ export const venueData = {
           "capacityTheater": 640,
           "capacityFixed": 640,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://yamagata-sc.jp/sportsfacilities/obanazawacity/salnert-gymnasium/",
+          "observedAt": "2026-08-05",
+          "note": "2階固定席640席を記録。ロールバック1,216席、パイプ椅子最大900席も案内されるが、同時利用可能席数としては未確認のためcapacity_theaterには採用しない"
         },
         {
           "id": "salnert-convention",
@@ -81213,7 +84997,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://yamagata-sc.jp/sportsfacilities/obanazawacity/salnert-gymnasium/",
+          "observedAt": "2026-08-05",
+          "note": "山形県スポーツコミッション公式がコンベンションホールを掲載。面積・定員は未観測"
         },
         {
           "id": "salnert-meeting",
@@ -81227,7 +85014,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://yamagata-sc.jp/sportsfacilities/obanazawacity/salnert-gymnasium/",
+          "observedAt": "2026-08-05",
+          "note": "山形県スポーツコミッション公式が会議室を掲載。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -81281,7 +85071,10 @@ export const venueData = {
           "capacityTheater": 1403,
           "capacityFixed": 1403,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://nanyoshi-bunkakaikan.jp/guide/",
+          "observedAt": "2026-08-05",
+          "note": "最大1,403席のプロセニアム形式多機能ホール。面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "nanyo-small",
@@ -81295,7 +85088,10 @@ export const venueData = {
           "capacityTheater": 500,
           "capacityFixed": 350,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://nanyoshi-bunkakaikan.jp/guide/",
+          "observedAt": "2026-08-05",
+          "note": "平土間型。500人収容、概ね350席と公式案内。固定客席ではないためcapacity_fixedに350を記録"
         },
         {
           "id": "nanyo-gallery",
@@ -81309,7 +85105,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://nanyoshi-bunkakaikan.jp/guide/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式が展示ギャラリーを掲載。面積・定員は未観測"
         },
         {
           "id": "nanyo-workshop",
@@ -81323,7 +85122,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://nanyoshi-bunkakaikan.jp/guide/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式が総合工房を掲載。面積・定員は未観測"
         },
         {
           "id": "nanyo-practice",
@@ -81337,7 +85139,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://nanyoshi-bunkakaikan.jp/guide/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式が練習室1を掲載。面積・定員は未観測"
         },
         {
           "id": "nanyo-meeting",
@@ -81351,7 +85156,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://nanyoshi-bunkakaikan.jp/guide/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式が会議室を掲載。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -81405,7 +85213,10 @@ export const venueData = {
           "capacityTheater": 1758,
           "capacityFixed": 1752,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.aizuwakamatsu.fukushima.jp/docs/2024073000055/file_contents/zentaiban.pdf",
+          "observedAt": "2026-08-05",
+          "note": "固定席1,752席・車椅子席6席。計1,758席をcapacity_theaterに記録"
         },
         {
           "id": "aizu-fugado-rehearsal",
@@ -81419,7 +85230,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.aizuwakamatsu.fukushima.jp/docs/2024073000055/file_contents/zentaiban.pdf",
+          "observedAt": "2026-08-05",
+          "note": "市公式資料がリハーサル室を掲載。面積・定員は未観測"
         },
         {
           "id": "aizu-fugado-meeting-west",
@@ -81433,7 +85247,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.aizuwakamatsu.fukushima.jp/docs/2024073000055/file_contents/zentaiban.pdf",
+          "observedAt": "2026-08-05",
+          "note": "市公式資料が洋室会議室を掲載。面積・定員は未観測"
         },
         {
           "id": "aizu-fugado-meeting-japanese",
@@ -81447,7 +85264,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.aizuwakamatsu.fukushima.jp/docs/2024073000055/file_contents/zentaiban.pdf",
+          "observedAt": "2026-08-05",
+          "note": "市公式資料が和室会議室を掲載。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -81501,7 +85321,10 @@ export const venueData = {
           "capacityTheater": 1104,
           "capacityFixed": 1104,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://cominess.jp/rent",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式の貸館案内が1,104人収容を掲載。面積・最低天井高・床荷重は未観測"
         },
         {
           "id": "cominess-small",
@@ -81515,7 +85338,10 @@ export const venueData = {
           "capacityTheater": 321,
           "capacityFixed": 317,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://cominess.jp/facility",
+          "observedAt": "2026-08-05",
+          "note": "最多321席（固定317席・多目的鑑賞室4席）、平土間転換可。天井高10mを記録し、キャットウォークまで7.5mは別値として扱う"
         },
         {
           "id": "cominess-meeting",
@@ -81529,7 +85355,10 @@ export const venueData = {
           "capacityTheater": 14,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://cominess.jp/facility",
+          "observedAt": "2026-08-05",
+          "note": "23.7㎡・14人"
         },
         {
           "id": "cominess-practice-1",
@@ -81543,7 +85372,10 @@ export const venueData = {
           "capacityTheater": 18,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://cominess.jp/facility",
+          "observedAt": "2026-08-05",
+          "note": "30.5㎡・18人。楽器演奏・合唱・演劇・バレエ練習向けの遮音室"
         },
         {
           "id": "cominess-practice-2",
@@ -81557,7 +85389,10 @@ export const venueData = {
           "capacityTheater": 35,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://cominess.jp/facility",
+          "observedAt": "2026-08-05",
+          "note": "60.6㎡・35人。楽器演奏・合唱・演劇・バレエ練習向けの遮音室"
         }
       ],
       "bestSpace": {
@@ -81611,7 +85446,10 @@ export const venueData = {
           "capacityTheater": 1215,
           "capacityFixed": 1203,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nihonmatsu.lg.jp/kurashi_tetsuduki/shisetsu_yoyaku/koukyo_yoyaku/koukyo_ichiran/page002377.html",
+          "observedAt": "2026-08-05",
+          "note": "客席1,203席・車椅子席12席。計1,215人をcapacity_theaterに記録"
         }
       ],
       "bestSpace": {
@@ -81665,7 +85503,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www01.s-tette.jp/about/005793.html",
+          "observedAt": "2026-08-05",
+          "note": "防音仕様・ロールバックチェア・照明・音響・可動ステージを備える。公式の人数の目安200人は設営条件を含むため収容人数欄には未登録"
         },
         {
           "id": "tette-denzen",
@@ -81679,7 +85520,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www01.s-tette.jp/about/005793.html",
+          "observedAt": "2026-08-05",
+          "note": "講演会・展示会・映画上映等の用途。公式の人数の目安50人は設営条件を含むため収容人数欄には未登録"
         },
         {
           "id": "tette-room-1-1",
@@ -81693,7 +85537,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www01.s-tette.jp/about/005793.html",
+          "observedAt": "2026-08-05",
+          "note": "会議・講演会・展示会等の用途。公式の人数の目安65人は設営条件を含むため収容人数欄には未登録"
         },
         {
           "id": "tette-room-3-1",
@@ -81707,7 +85554,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www01.s-tette.jp/about/005793.html",
+          "observedAt": "2026-08-05",
+          "note": "パソコン教室・小会議等の用途。公式の人数の目安17人は設営条件を含むため収容人数欄には未登録"
         },
         {
           "id": "tette-room-3-2",
@@ -81721,7 +85571,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www01.s-tette.jp/about/005793.html",
+          "observedAt": "2026-08-05",
+          "note": "手芸・工作教室・会議等の用途。公式の人数の目安20人は設営条件を含むため収容人数欄には未登録"
         },
         {
           "id": "tette-room-3-3",
@@ -81735,7 +85588,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www01.s-tette.jp/about/005793.html",
+          "observedAt": "2026-08-05",
+          "note": "会議・試食会等の用途。公式の人数の目安25人は設営条件を含むため収容人数欄には未登録"
         },
         {
           "id": "tette-cooking",
@@ -81749,7 +85605,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www01.s-tette.jp/about/005793.html",
+          "observedAt": "2026-08-05",
+          "note": "料理教室向け。公式の人数の目安37人は設営条件を含むため収容人数欄には未登録"
         },
         {
           "id": "tette-tatami",
@@ -81763,7 +85622,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www01.s-tette.jp/about/005793.html",
+          "observedAt": "2026-08-05",
+          "note": "茶道・生け花・囲碁・将棋等の用途。公式の人数の目安30人は2室合わせた値であり、収容人数欄には未登録"
         },
         {
           "id": "tette-room-4-1",
@@ -81777,7 +85639,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www01.s-tette.jp/about/005793.html",
+          "observedAt": "2026-08-05",
+          "note": "ヨガ・ダンス・会議等の用途。大型鏡・手すりあり。公式の人数の目安26人は設営条件を含むため収容人数欄には未登録"
         },
         {
           "id": "tette-room-4-2",
@@ -81791,7 +85656,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www01.s-tette.jp/about/005793.html",
+          "observedAt": "2026-08-05",
+          "note": "ヨガ・ダンス・会議等の用途。大型鏡・手すり・音響・プロジェクタあり。公式の人数の目安58人は設営条件を含むため収容人数欄には未登録"
         },
         {
           "id": "tette-room-4-3",
@@ -81805,7 +85673,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www01.s-tette.jp/about/005793.html",
+          "observedAt": "2026-08-05",
+          "note": "合唱・楽器練習等の防音室。公式の人数の目安15人は設営条件を含むため収容人数欄には未登録"
         },
         {
           "id": "tette-room-4-4",
@@ -81819,7 +85690,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www01.s-tette.jp/about/005793.html",
+          "observedAt": "2026-08-05",
+          "note": "バンド演奏・楽器練習等の防音室。公式の人数の目安5人は設営条件を含むため収容人数欄には未登録"
         },
         {
           "id": "tette-room-4-5",
@@ -81833,7 +85707,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www01.s-tette.jp/about/005793.html",
+          "observedAt": "2026-08-05",
+          "note": "バンド演奏・楽器練習等の防音室。公式の人数の目安4人は設営条件を含むため収容人数欄には未登録"
         },
         {
           "id": "tette-room-4-6",
@@ -81847,7 +85724,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www01.s-tette.jp/about/005793.html",
+          "observedAt": "2026-08-05",
+          "note": "合唱・楽器練習等の防音室。公式の人数の目安6人は設営条件を含むため収容人数欄には未登録"
         },
         {
           "id": "tette-room-5-1",
@@ -81861,7 +85741,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www01.s-tette.jp/about/005793.html",
+          "observedAt": "2026-08-05",
+          "note": "会議・講演会等の用途。公式の人数の目安49人は設営条件を含むため収容人数欄には未登録"
         }
       ],
       "bestSpace": {
@@ -81915,7 +85798,10 @@ export const venueData = {
           "capacityTheater": 1200,
           "capacityFixed": 1195,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.ryubun.org/%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85-https-www-ryubun-org-%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85-%E6%96%BD%E8%A8%AD%E6%A6%82%E8%A6%81/%E6%96%BD%E8%A8%AD%E6%A6%82%E8%A6%81/",
+          "observedAt": "2026-08-05",
+          "note": "固定1,195席・車椅子5席、計1,200人。舞台高さ8mは最低天井高ではないため未入力"
         },
         {
           "id": "ryugasaki-small",
@@ -81929,7 +85815,10 @@ export const venueData = {
           "capacityTheater": 250,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.ryubun.org/%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85-https-www-ryubun-org-%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85-%E6%96%BD%E8%A8%AD%E6%A6%82%E8%A6%81/%E6%96%BD%E8%A8%AD%E6%A6%82%E8%A6%81/",
+          "observedAt": "2026-08-05",
+          "note": "205㎡・250人。移動ステージ使用時の舞台高さ4.9mは最低天井高ではないため未入力"
         },
         {
           "id": "ryugasaki-dressing-1",
@@ -81943,7 +85832,10 @@ export const venueData = {
           "capacityTheater": 10,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.ryubun.org/%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85-https-www-ryubun-org-%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85-%E6%96%BD%E8%A8%AD%E6%A6%82%E8%A6%81/%E6%96%BD%E8%A8%AD%E6%A6%82%E8%A6%81/",
+          "observedAt": "2026-08-05",
+          "note": "26㎡・10人"
         },
         {
           "id": "ryugasaki-dressing-2",
@@ -81957,7 +85849,10 @@ export const venueData = {
           "capacityTheater": 10,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.ryubun.org/%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85-https-www-ryubun-org-%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85-%E6%96%BD%E8%A8%AD%E6%A6%82%E8%A6%81/%E6%96%BD%E8%A8%AD%E6%A6%82%E8%A6%81/",
+          "observedAt": "2026-08-05",
+          "note": "26㎡・10人"
         },
         {
           "id": "ryugasaki-dressing-3",
@@ -81971,7 +85866,10 @@ export const venueData = {
           "capacityTheater": 10,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.ryubun.org/%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85-https-www-ryubun-org-%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85-%E6%96%BD%E8%A8%AD%E6%A6%82%E8%A6%81/%E6%96%BD%E8%A8%AD%E6%A6%82%E8%A6%81/",
+          "observedAt": "2026-08-05",
+          "note": "26㎡・10人"
         },
         {
           "id": "ryugasaki-rehearsal",
@@ -81985,7 +85883,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.ryubun.org/%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85-https-www-ryubun-org-%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85-%E6%96%BD%E8%A8%AD%E6%A6%82%E8%A6%81/%E6%96%BD%E8%A8%AD%E6%A6%82%E8%A6%81/",
+          "observedAt": "2026-08-05",
+          "note": "54㎡・30人。バレエ練習用手摺あり"
         },
         {
           "id": "ryugasaki-japanese",
@@ -81999,7 +85900,10 @@ export const venueData = {
           "capacityTheater": 36,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.ryubun.org/%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85-https-www-ryubun-org-%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85-%E6%96%BD%E8%A8%AD%E6%A6%82%E8%A6%81/%E6%96%BD%E8%A8%AD%E6%A6%82%E8%A6%81/",
+          "observedAt": "2026-08-05",
+          "note": "90㎡・36人・18畳2間。可分割のためdivisible=yes"
         },
         {
           "id": "ryugasaki-meeting",
@@ -82013,7 +85917,10 @@ export const venueData = {
           "capacityTheater": 16,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.ryubun.org/%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85-https-www-ryubun-org-%E6%96%BD%E8%A8%AD%E6%A1%88%E5%86%85-%E6%96%BD%E8%A8%AD%E6%A6%82%E8%A6%81/%E6%96%BD%E8%A8%AD%E6%A6%82%E8%A6%81/",
+          "observedAt": "2026-08-05",
+          "note": "37.5㎡・16人"
         }
       ],
       "bestSpace": {
@@ -82067,7 +85974,10 @@ export const venueData = {
           "capacityTheater": 240,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.joso.lg.jp/kurashi_gyousei/kurashi/shisetsu_koukyou/facility/shogaigakushucenter.html",
+          "observedAt": "2026-08-05",
+          "note": "215㎡・240人（収納式稼働140、スタッキング100）。客席収納時はダンス練習・軽運動にも活用"
         },
         {
           "id": "joso-meeting-1",
@@ -82081,7 +85991,10 @@ export const venueData = {
           "capacityTheater": 12,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.joso.lg.jp/kurashi_gyousei/kurashi/shisetsu_koukyou/facility/shogaigakushucenter.html",
+          "observedAt": "2026-08-05",
+          "note": "34㎡・12人"
         },
         {
           "id": "joso-meeting-2",
@@ -82095,7 +86008,10 @@ export const venueData = {
           "capacityTheater": 43,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.joso.lg.jp/kurashi_gyousei/kurashi/shisetsu_koukyou/facility/shogaigakushucenter.html",
+          "observedAt": "2026-08-05",
+          "note": "67㎡・43人"
         },
         {
           "id": "joso-exhibition-1",
@@ -82109,7 +86025,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.joso.lg.jp/kurashi_gyousei/kurashi/shisetsu_koukyou/facility/shogaigakushucenter.html",
+          "observedAt": "2026-08-05",
+          "note": "146㎡。定員は公式未掲載"
         },
         {
           "id": "joso-training",
@@ -82123,7 +86042,10 @@ export const venueData = {
           "capacityTheater": 64,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.joso.lg.jp/kurashi_gyousei/kurashi/shisetsu_koukyou/facility/shogaigakushucenter.html",
+          "observedAt": "2026-08-05",
+          "note": "96㎡・64人"
         },
         {
           "id": "joso-japanese",
@@ -82137,7 +86059,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.joso.lg.jp/kurashi_gyousei/kurashi/shisetsu_koukyou/facility/shogaigakushucenter.html",
+          "observedAt": "2026-08-05",
+          "note": "48畳。定員・面積は公式未掲載"
         },
         {
           "id": "joso-creation-1",
@@ -82151,7 +86076,10 @@ export const venueData = {
           "capacityTheater": 16,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.joso.lg.jp/kurashi_gyousei/kurashi/shisetsu_koukyou/facility/shogaigakushucenter.html",
+          "observedAt": "2026-08-05",
+          "note": "46㎡・16人。ろくろあり"
         },
         {
           "id": "joso-creation-2",
@@ -82165,7 +86093,10 @@ export const venueData = {
           "capacityTheater": 25,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.joso.lg.jp/kurashi_gyousei/kurashi/shisetsu_koukyou/facility/shogaigakushucenter.html",
+          "observedAt": "2026-08-05",
+          "note": "72㎡・25人。彫刻・デッサン等に利用"
         },
         {
           "id": "joso-exhibition-2",
@@ -82179,7 +86110,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.joso.lg.jp/kurashi_gyousei/kurashi/shisetsu_koukyou/facility/shogaigakushucenter.html",
+          "observedAt": "2026-08-05",
+          "note": "84㎡。定員は公式未掲載"
         }
       ],
       "bestSpace": {
@@ -82233,7 +86167,10 @@ export const venueData = {
           "capacityTheater": 1000,
           "capacityFixed": 995,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.toridebunka.com/toride-civiccenter/",
+          "observedAt": "2026-08-05",
+          "note": "固定995席・車椅子5席、計1,000人。親子室は別に定員10人であり客席収容には加算しない"
         },
         {
           "id": "toride-dressing-101",
@@ -82247,7 +86184,10 @@ export const venueData = {
           "capacityTheater": 5,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.toridebunka.com/toride-civiccenter/",
+          "observedAt": "2026-08-05",
+          "note": "15㎡・5人。車椅子対応"
         },
         {
           "id": "toride-dressing-201",
@@ -82261,7 +86201,10 @@ export const venueData = {
           "capacityTheater": 15,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.toridebunka.com/toride-civiccenter/",
+          "observedAt": "2026-08-05",
+          "note": "31㎡・15人"
         },
         {
           "id": "toride-dressing-202",
@@ -82275,7 +86218,10 @@ export const venueData = {
           "capacityTheater": 4,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.toridebunka.com/toride-civiccenter/",
+          "observedAt": "2026-08-05",
+          "note": "約10㎡・4人"
         },
         {
           "id": "toride-dressing-203",
@@ -82289,7 +86235,10 @@ export const venueData = {
           "capacityTheater": 20,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.toridebunka.com/toride-civiccenter/",
+          "observedAt": "2026-08-05",
+          "note": "約42㎡・20人。和室8畳あり"
         },
         {
           "id": "toride-lobby",
@@ -82303,7 +86252,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.toridebunka.com/toride-civiccenter/",
+          "observedAt": "2026-08-05",
+          "note": "単独貸出がありロビーコンサート利用可。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -82357,7 +86309,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ibaraki-koga.lg.jp/bunrui/shiseimatidukuri/facility_info/8/4369.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式が会議・研修・展示会・販売会等の利用対象として掲載。面積・定員は未観測"
         },
         {
           "id": "koga-meeting",
@@ -82371,7 +86326,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ibaraki-koga.lg.jp/bunrui/shiseimatidukuri/facility_info/8/4369.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式が会議室を掲載。面積・定員は未観測"
         },
         {
           "id": "koga-japanese",
@@ -82385,7 +86343,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.ibaraki-koga.lg.jp/bunrui/shiseimatidukuri/facility_info/8/4369.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式が和室を掲載。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -82439,7 +86400,10 @@ export const venueData = {
           "capacityTheater": 1501,
           "capacityFixed": 1390,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.otacivichall.net/facility/hall/",
+          "observedAt": "2026-08-05",
+          "note": "計1,501席（固定1,390席、立見77席、車椅子2席、親子席8席、その他24席）。有線LAN・無線LANは事前打合せで利用可。プロセニアム高さ10.5mは最低天井高ではないため未入力"
         },
         {
           "id": "ota-dressing-1",
@@ -82453,7 +86417,10 @@ export const venueData = {
           "capacityTheater": 9,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.otacivichall.net/facility/hall/",
+          "observedAt": "2026-08-05",
+          "note": "24.4㎡・9人"
         },
         {
           "id": "ota-dressing-2",
@@ -82467,7 +86434,10 @@ export const venueData = {
           "capacityTheater": 5,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.otacivichall.net/facility/hall/",
+          "observedAt": "2026-08-05",
+          "note": "22.2㎡・5人"
         },
         {
           "id": "ota-dressing-3",
@@ -82481,7 +86451,10 @@ export const venueData = {
           "capacityTheater": 4,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.otacivichall.net/facility/hall/",
+          "observedAt": "2026-08-05",
+          "note": "24.4㎡・4人"
         },
         {
           "id": "ota-dressing-4",
@@ -82495,7 +86468,10 @@ export const venueData = {
           "capacityTheater": 10,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.otacivichall.net/facility/hall/",
+          "observedAt": "2026-08-05",
+          "note": "29.5㎡・10人"
         },
         {
           "id": "ota-dressing-5",
@@ -82509,7 +86485,10 @@ export const venueData = {
           "capacityTheater": 10,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.otacivichall.net/facility/hall/",
+          "observedAt": "2026-08-05",
+          "note": "28.1㎡・10人"
         },
         {
           "id": "ota-dressing-6",
@@ -82523,7 +86502,10 @@ export const venueData = {
           "capacityTheater": 10,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.otacivichall.net/facility/hall/",
+          "observedAt": "2026-08-05",
+          "note": "28.1㎡・10人"
         },
         {
           "id": "ota-dressing-7",
@@ -82537,7 +86519,10 @@ export const venueData = {
           "capacityTheater": 10,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.otacivichall.net/facility/hall/",
+          "observedAt": "2026-08-05",
+          "note": "32.2㎡・10人"
         },
         {
           "id": "ota-studio",
@@ -82551,7 +86536,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.otacivichall.net/facility/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式がスタジオを掲載。有線LAN・無線LANは事前打合せで利用可。面積・定員は未観測"
         },
         {
           "id": "ota-multipurpose",
@@ -82565,7 +86553,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.otacivichall.net/facility/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式が多目的室を掲載。面積・定員は未観測"
         },
         {
           "id": "ota-meeting",
@@ -82579,7 +86570,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.otacivichall.net/facility/",
+          "observedAt": "2026-08-05",
+          "note": "指定管理者公式が会議室を掲載。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -82633,7 +86627,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kiryu.lg.jp/_res/projects/default_project/_page_/001/020/951/shisetsu_besshi1.pdf",
+          "observedAt": "2026-08-05",
+          "note": "桐生市公式の予約対象室場一覧がシルクホールを掲載。面積・定員は未観測"
         },
         {
           "id": "kiryu-small",
@@ -82647,7 +86644,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kiryu.lg.jp/_res/projects/default_project/_page_/001/020/951/shisetsu_besshi1.pdf",
+          "observedAt": "2026-08-05",
+          "note": "桐生市公式の予約対象室場一覧が小ホールを掲載。面積・定員は未観測"
         },
         {
           "id": "kiryu-exhibition",
@@ -82661,7 +86661,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kiryu.lg.jp/_res/projects/default_project/_page_/001/020/951/shisetsu_besshi1.pdf",
+          "observedAt": "2026-08-05",
+          "note": "全室・半室の予約区分を市公式が掲載。面積・定員は未観測"
         },
         {
           "id": "kiryu-rehearsal-1",
@@ -82675,7 +86678,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.kiryu.lg.jp/_res/projects/default_project/_page_/001/020/951/shisetsu_besshi1.pdf",
+          "observedAt": "2026-08-05",
+          "note": "桐生市公式の予約対象室場一覧が掲載。面積・定員は未観測"
         },
         {
           "id": "kiryu-rehearsal-2",
@@ -82689,7 +86695,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.kiryu.lg.jp/_res/projects/default_project/_page_/001/020/951/shisetsu_besshi1.pdf",
+          "observedAt": "2026-08-05",
+          "note": "桐生市公式の予約対象室場一覧が掲載。面積・定員は未観測"
         },
         {
           "id": "kiryu-practice-1",
@@ -82703,7 +86712,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.kiryu.lg.jp/_res/projects/default_project/_page_/001/020/951/shisetsu_besshi1.pdf",
+          "observedAt": "2026-08-05",
+          "note": "桐生市公式の予約対象室場一覧が掲載。面積・定員は未観測"
         },
         {
           "id": "kiryu-practice-2",
@@ -82717,7 +86729,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.kiryu.lg.jp/_res/projects/default_project/_page_/001/020/951/shisetsu_besshi1.pdf",
+          "observedAt": "2026-08-05",
+          "note": "桐生市公式の予約対象室場一覧が掲載。面積・定員は未観測"
         },
         {
           "id": "kiryu-music",
@@ -82731,7 +86746,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.kiryu.lg.jp/_res/projects/default_project/_page_/001/020/951/shisetsu_besshi1.pdf",
+          "observedAt": "2026-08-05",
+          "note": "桐生市公式の予約対象室場一覧が掲載。面積・定員は未観測"
         },
         {
           "id": "kiryu-dance",
@@ -82745,7 +86763,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.kiryu.lg.jp/_res/projects/default_project/_page_/001/020/951/shisetsu_besshi1.pdf",
+          "observedAt": "2026-08-05",
+          "note": "桐生市公式の予約対象室場一覧が掲載。面積・定員は未観測"
         },
         {
           "id": "kiryu-ateliers",
@@ -82759,7 +86780,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kiryu.lg.jp/_res/projects/default_project/_page_/001/020/951/shisetsu_besshi1.pdf",
+          "observedAt": "2026-08-05",
+          "note": "アトリエA・Bを市公式が掲載。個別面積・定員は未観測"
         },
         {
           "id": "kiryu-sky",
@@ -82773,7 +86797,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kiryu.lg.jp/_res/projects/default_project/_page_/001/020/951/shisetsu_besshi1.pdf",
+          "observedAt": "2026-08-05",
+          "note": "全室・A・Bの予約区分を市公式が掲載。面積・定員は未観測"
         },
         {
           "id": "kiryu-meeting-1",
@@ -82787,7 +86814,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kiryu.lg.jp/_res/projects/default_project/_page_/001/020/951/shisetsu_besshi1.pdf",
+          "observedAt": "2026-08-05",
+          "note": "桐生市公式の予約対象室場一覧が掲載。面積・定員は未観測"
         },
         {
           "id": "kiryu-meeting-2",
@@ -82801,7 +86831,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kiryu.lg.jp/_res/projects/default_project/_page_/001/020/951/shisetsu_besshi1.pdf",
+          "observedAt": "2026-08-05",
+          "note": "桐生市公式の予約対象室場一覧が掲載。面積・定員は未観測"
         },
         {
           "id": "kiryu-international",
@@ -82815,7 +86848,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kiryu.lg.jp/_res/projects/default_project/_page_/001/020/951/shisetsu_besshi1.pdf",
+          "observedAt": "2026-08-05",
+          "note": "桐生市公式の予約対象室場一覧が掲載。面積・定員は未観測"
         },
         {
           "id": "kiryu-japanese",
@@ -82829,7 +86865,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kiryu.lg.jp/_res/projects/default_project/_page_/001/020/951/shisetsu_besshi1.pdf",
+          "observedAt": "2026-08-05",
+          "note": "桐生市公式の予約対象室場一覧が掲載。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -82883,7 +86922,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.shibukawa.lg.jp/shisetsu/000351/p001042.html",
+          "observedAt": "2026-08-05",
+          "note": "渋川市公式が大ホールを掲載。車椅子用特別席12席を案内するが通常席数は未観測"
         },
         {
           "id": "shibukawa-small",
@@ -82897,7 +86939,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.shibukawa.lg.jp/shisetsu/000351/p001042.html",
+          "observedAt": "2026-08-05",
+          "note": "渋川市公式が小ホールを掲載。面積・定員は未観測"
         },
         {
           "id": "shibukawa-meeting",
@@ -82911,7 +86956,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.shibukawa.lg.jp/shisetsu/000351/p001042.html",
+          "observedAt": "2026-08-05",
+          "note": "渋川市公式が2〜3階の会議室を掲載。個別室数・面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -82965,7 +87013,10 @@ export const venueData = {
           "capacityTheater": 1019,
           "capacityFixed": 1011,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.midori.gunma.jp/kosodate/1001647/pal/1003398/1003609.html",
+          "observedAt": "2026-08-05",
+          "note": "固定1,011席・車椅子3席・母子席5席を合計して1,019席。舞台高さ・ポータルブリッジ高さは最低天井高ではないため未入力"
         },
         {
           "id": "midori-rehearsal",
@@ -82979,7 +87030,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.midori.gunma.jp/kosodate/1001647/pal/1003608.html",
+          "observedAt": "2026-08-05",
+          "note": "みどり市公式がリハーサル室の利用受付を掲載。面積・定員は未観測"
         },
         {
           "id": "midori-meeting",
@@ -82993,7 +87047,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.midori.gunma.jp/kosodate/1001647/pal/1003608.html",
+          "observedAt": "2026-08-05",
+          "note": "みどり市公式が会議室の利用受付を掲載。面積・定員は未観測"
         },
         {
           "id": "midori-gallery",
@@ -83007,7 +87064,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.midori.gunma.jp/kosodate/1001647/pal/1003608.html",
+          "observedAt": "2026-08-05",
+          "note": "みどり市公式がギャラリーの利用受付を掲載。面積・定員は未観測"
         },
         {
           "id": "midori-outdoor",
@@ -83021,7 +87081,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.midori.gunma.jp/kosodate/1001647/pal/1003608.html",
+          "observedAt": "2026-08-05",
+          "note": "みどり市公式が屋外ステージの利用受付を掲載。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -83075,7 +87138,10 @@ export const venueData = {
           "capacityTheater": 1218,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kuki.lg.jp/shisei/shisetsu/community_center/1006615.html",
+          "observedAt": "2026-08-05",
+          "note": "1,218人。車椅子席を含む定員で、固定席内訳は未観測"
         },
         {
           "id": "kuki-small",
@@ -83089,7 +87155,10 @@ export const venueData = {
           "capacityTheater": 308,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kuki.lg.jp/shisei/shisetsu/community_center/1006615.html",
+          "observedAt": "2026-08-05",
+          "note": "308人。車椅子席を含む定員で、固定席内訳は未観測"
         },
         {
           "id": "kuki-training-1",
@@ -83103,7 +87172,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kuki.lg.jp/shisei/shisetsu/community_center/1006615.html",
+          "observedAt": "2026-08-05",
+          "note": "73㎡・30人"
         },
         {
           "id": "kuki-training-2",
@@ -83117,7 +87189,10 @@ export const venueData = {
           "capacityTheater": 18,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kuki.lg.jp/shisei/shisetsu/community_center/1006615.html",
+          "observedAt": "2026-08-05",
+          "note": "37㎡・18人"
         },
         {
           "id": "kuki-japanese-1",
@@ -83131,7 +87206,10 @@ export const venueData = {
           "capacityTheater": 12,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kuki.lg.jp/shisei/shisetsu/community_center/1006615.html",
+          "observedAt": "2026-08-05",
+          "note": "12畳・12人。面積は畳数のみ掲載"
         },
         {
           "id": "kuki-japanese-2",
@@ -83145,7 +87223,10 @@ export const venueData = {
           "capacityTheater": 12,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kuki.lg.jp/shisei/shisetsu/community_center/1006615.html",
+          "observedAt": "2026-08-05",
+          "note": "12畳・12人。面積は畳数のみ掲載"
         },
         {
           "id": "kuki-meeting",
@@ -83159,7 +87240,10 @@ export const venueData = {
           "capacityTheater": 24,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kuki.lg.jp/shisei/shisetsu/community_center/1006615.html",
+          "observedAt": "2026-08-05",
+          "note": "57㎡・24人"
         },
         {
           "id": "kuki-exhibition",
@@ -83173,7 +87257,10 @@ export const venueData = {
           "capacityTheater": 180,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kuki.lg.jp/shisei/shisetsu/community_center/1006615.html",
+          "observedAt": "2026-08-05",
+          "note": "173㎡・180人"
         },
         {
           "id": "kuki-media",
@@ -83187,7 +87274,10 @@ export const venueData = {
           "capacityTheater": 36,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kuki.lg.jp/shisei/shisetsu/community_center/1006615.html",
+          "observedAt": "2026-08-05",
+          "note": "61㎡・36人"
         },
         {
           "id": "kuki-training-3",
@@ -83201,7 +87291,10 @@ export const venueData = {
           "capacityTheater": 18,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kuki.lg.jp/shisei/shisetsu/community_center/1006615.html",
+          "observedAt": "2026-08-05",
+          "note": "43㎡・18人"
         }
       ],
       "bestSpace": {
@@ -83255,7 +87348,10 @@ export const venueData = {
           "capacityTheater": 359,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.ageo-kousya.or.jp/community/",
+          "observedAt": "2026-08-05",
+          "note": "359人収容のホール。固定席内訳・面積は未観測"
         },
         {
           "id": "ageo-dressing-1",
@@ -83269,7 +87365,10 @@ export const venueData = {
           "capacityTheater": 6,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.ageo-kousya.or.jp/community/detail.php?eid=00001",
+          "observedAt": "2026-08-05",
+          "note": "18.97㎡・6人"
         },
         {
           "id": "ageo-dressing-2",
@@ -83283,7 +87382,10 @@ export const venueData = {
           "capacityTheater": 8,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.ageo-kousya.or.jp/community/detail.php?eid=00001",
+          "observedAt": "2026-08-05",
+          "note": "21.27㎡・8人"
         },
         {
           "id": "ageo-multipurpose-1",
@@ -83297,7 +87399,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.ageo-kousya.or.jp/community/detail.php?eid=00001",
+          "observedAt": "2026-08-05",
+          "note": "88.34㎡・30人。運動利用可"
         },
         {
           "id": "ageo-japanese",
@@ -83311,7 +87416,10 @@ export const venueData = {
           "capacityTheater": 12,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.ageo-kousya.or.jp/community/detail.php?eid=00001",
+          "observedAt": "2026-08-05",
+          "note": "21.12㎡（15畳）・12人"
         },
         {
           "id": "ageo-assembly-4",
@@ -83325,7 +87433,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.ageo-kousya.or.jp/community/detail.php?eid=00001",
+          "observedAt": "2026-08-05",
+          "note": "第2〜4集会室は可動式間仕切りで一室利用可。本行は第4集会室の52.4㎡・30人を記録し、全室合計の面積・定員は未観測"
         },
         {
           "id": "ageo-assembly-5",
@@ -83339,7 +87450,10 @@ export const venueData = {
           "capacityTheater": 24,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.ageo-kousya.or.jp/community/detail.php?eid=00001",
+          "observedAt": "2026-08-05",
+          "note": "44.2㎡・24人"
         },
         {
           "id": "ageo-music",
@@ -83353,7 +87467,10 @@ export const venueData = {
           "capacityTheater": 50,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.ageo-kousya.or.jp/community/detail.php?eid=00001",
+          "observedAt": "2026-08-05",
+          "note": "110.34㎡・50人。グランドピアノ・電子ピアノ・バンドセットを備える"
         },
         {
           "id": "ageo-multipurpose-2",
@@ -83367,7 +87484,10 @@ export const venueData = {
           "capacityTheater": 42,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.ageo-kousya.or.jp/community/detail.php?eid=00001",
+          "observedAt": "2026-08-05",
+          "note": "98㎡・42人。フローリングで運動利用可"
         }
       ],
       "bestSpace": {
@@ -83421,7 +87541,10 @@ export const venueData = {
           "capacityTheater": 1164,
           "capacityFixed": 1164,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://fukaya-connect.com/bunka/facility/",
+          "observedAt": "2026-08-05",
+          "note": "1,164席。オーケストラピット使用時は1,018席。車椅子4席・親子席6席は別に案内"
         },
         {
           "id": "fukaya-small",
@@ -83435,7 +87558,10 @@ export const venueData = {
           "capacityTheater": 324,
           "capacityFixed": 324,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://fukaya-connect.com/bunka/facility/",
+          "observedAt": "2026-08-05",
+          "note": "324席。舞台高さ4.5mは最低天井高ではないため未入力"
         },
         {
           "id": "fukaya-exhibition",
@@ -83449,7 +87575,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://fukaya-connect.com/bunka/facility/",
+          "observedAt": "2026-08-05",
+          "note": "有効239㎡。定員は未観測"
         },
         {
           "id": "fukaya-rehearsal",
@@ -83463,7 +87592,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://fukaya-connect.com/bunka/facility/",
+          "observedAt": "2026-08-05",
+          "note": "延床63㎡。鏡・レッスンバー・モニターテレビあり。ホール利用者のみ使用可"
         }
       ],
       "bestSpace": {
@@ -83517,7 +87649,10 @@ export const venueData = {
           "capacityTheater": 922,
           "capacityFixed": 922,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.asaka.lg.jp/soshiki/12/yumepala200110.html",
+          "observedAt": "2026-08-05",
+          "note": "大ホール922席。舞台・音響・照明設備を備え、音楽会・演劇・講演等に利用可"
         },
         {
           "id": "asaka-rehearsal",
@@ -83531,7 +87666,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.asaka.lg.jp/soshiki/12/yumepala200110.html",
+          "observedAt": "2026-08-05",
+          "note": "フローリング。舞台リハーサル・稽古・ダンス・会議・講演に利用可。面積・定員は未観測"
         },
         {
           "id": "asaka-meetings",
@@ -83545,7 +87683,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.asaka.lg.jp/soshiki/12/yumepala200110.html",
+          "observedAt": "2026-08-05",
+          "note": "大・小会議室7室を市公式が掲載。個別面積・定員は未観測"
         },
         {
           "id": "asaka-banquet",
@@ -83559,7 +87700,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.asaka.lg.jp/soshiki/12/ennkairiyou.html",
+          "observedAt": "2026-08-05",
+          "note": "高砂・松・竹の3室を市公式が掲載。個別面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -83613,7 +87757,10 @@ export const venueData = {
           "capacityTheater": 1338,
           "capacityFixed": 1338,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kashiwa.lg.jp/facilities/culture/bunkakaikan.html",
+          "observedAt": "2026-08-05",
+          "note": "定員1,338人。楽屋はホール貸出に付随"
         },
         {
           "id": "kashiwa-small",
@@ -83627,7 +87774,10 @@ export const venueData = {
           "capacityTheater": 300,
           "capacityFixed": 300,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kashiwa.lg.jp/facilities/culture/bunkakaikan.html",
+          "observedAt": "2026-08-05",
+          "note": "定員300人。楽屋はホール貸出に付随"
         }
       ],
       "bestSpace": {
@@ -83681,7 +87831,10 @@ export const venueData = {
           "capacityTheater": 1265,
           "capacityFixed": 1260,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yachiyo.lg.jp/soshiki/79/4802.html",
+          "observedAt": "2026-08-05",
+          "note": "一般席1,260席・車椅子席5席"
         },
         {
           "id": "yachiyo-small",
@@ -83695,7 +87848,10 @@ export const venueData = {
           "capacityTheater": 439,
           "capacityFixed": 437,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yachiyo.lg.jp/soshiki/79/4802.html",
+          "observedAt": "2026-08-05",
+          "note": "一般席437席・車椅子席2席"
         },
         {
           "id": "yachiyo-meeting-1",
@@ -83709,7 +87865,10 @@ export const venueData = {
           "capacityTheater": 27,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yachiyo.lg.jp/soshiki/79/4802.html",
+          "observedAt": "2026-08-05",
+          "note": "定員27人"
         },
         {
           "id": "yachiyo-meeting-2",
@@ -83723,7 +87882,10 @@ export const venueData = {
           "capacityTheater": 27,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yachiyo.lg.jp/soshiki/79/4802.html",
+          "observedAt": "2026-08-05",
+          "note": "定員27人"
         },
         {
           "id": "yachiyo-meeting-3",
@@ -83737,7 +87899,10 @@ export const venueData = {
           "capacityTheater": 111,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yachiyo.lg.jp/soshiki/79/4802.html",
+          "observedAt": "2026-08-05",
+          "note": "定員111人"
         },
         {
           "id": "yachiyo-meeting-4",
@@ -83751,7 +87916,10 @@ export const venueData = {
           "capacityTheater": 81,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yachiyo.lg.jp/soshiki/79/4802.html",
+          "observedAt": "2026-08-05",
+          "note": "定員81人"
         },
         {
           "id": "yachiyo-meeting-5",
@@ -83765,7 +87933,10 @@ export const venueData = {
           "capacityTheater": 51,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yachiyo.lg.jp/soshiki/79/4802.html",
+          "observedAt": "2026-08-05",
+          "note": "定員51人"
         },
         {
           "id": "yachiyo-meeting-6",
@@ -83779,7 +87950,10 @@ export const venueData = {
           "capacityTheater": 33,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yachiyo.lg.jp/soshiki/79/4802.html",
+          "observedAt": "2026-08-05",
+          "note": "定員33人"
         },
         {
           "id": "yachiyo-special-meeting",
@@ -83793,7 +87967,10 @@ export const venueData = {
           "capacityTheater": 22,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yachiyo.lg.jp/soshiki/79/4802.html",
+          "observedAt": "2026-08-05",
+          "note": "定員22人"
         },
         {
           "id": "yachiyo-multipurpose",
@@ -83807,7 +87984,10 @@ export const venueData = {
           "capacityTheater": 33,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yachiyo.lg.jp/soshiki/79/4802.html",
+          "observedAt": "2026-08-05",
+          "note": "定員33人"
         },
         {
           "id": "yachiyo-rehearsal",
@@ -83821,7 +88001,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.yachiyo.lg.jp/soshiki/79/4802.html",
+          "observedAt": "2026-08-05",
+          "note": "156㎡"
         },
         {
           "id": "yachiyo-music-1",
@@ -83835,7 +88018,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.yachiyo.lg.jp/soshiki/79/4802.html",
+          "observedAt": "2026-08-05",
+          "note": "27㎡"
         },
         {
           "id": "yachiyo-music-2",
@@ -83849,7 +88035,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.yachiyo.lg.jp/soshiki/79/4802.html",
+          "observedAt": "2026-08-05",
+          "note": "23㎡"
         }
       ],
       "bestSpace": {
@@ -83903,7 +88092,10 @@ export const venueData = {
           "capacityTheater": 540,
           "capacityFixed": 530,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://kamagaya-kirarihall.jp/shisetsu/index.html",
+          "observedAt": "2026-08-05",
+          "note": "固定席530・車椅子席2・親子室8。舞台高さ9mは最低天井高ではないため未入力"
         },
         {
           "id": "kamagaya-practice",
@@ -83917,7 +88109,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://kamagaya-kirarihall.jp/shisetsu/index.html",
+          "observedAt": "2026-08-05",
+          "note": "52㎡・ピアノあり"
         },
         {
           "id": "kamagaya-dressing-1",
@@ -83931,7 +88126,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://kamagaya-kirarihall.jp/shisetsu/index.html",
+          "observedAt": "2026-08-05",
+          "note": "47.1㎡・カウンター14席"
         },
         {
           "id": "kamagaya-dressing-2",
@@ -83945,7 +88143,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://kamagaya-kirarihall.jp/shisetsu/index.html",
+          "observedAt": "2026-08-05",
+          "note": "28.0㎡・カウンター8席・畳6畳"
         },
         {
           "id": "kamagaya-foyer",
@@ -83959,7 +88160,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://kamagaya-kirarihall.jp/shisetsu/index.html",
+          "observedAt": "2026-08-05",
+          "note": "189㎡"
         },
         {
           "id": "kamagaya-lobby",
@@ -83973,7 +88177,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://kamagaya-kirarihall.jp/shisetsu/index.html",
+          "observedAt": "2026-08-05",
+          "note": "367㎡"
         }
       ],
       "bestSpace": {
@@ -84027,7 +88234,10 @@ export const venueData = {
           "capacityTheater": 338,
           "capacityFixed": 332,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.mobara.chiba.jp/0000000750.html",
+          "observedAt": "2026-08-05",
+          "note": "255㎡、338席（うち車椅子用6席）。舞台高さ7m・5mは最低天井高ではないため未入力"
         },
         {
           "id": "mobara-sports",
@@ -84041,7 +88251,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.mobara.chiba.jp/0000000759.html",
+          "observedAt": "2026-08-05",
+          "note": "バスケットコート・バレーボール・テニス各1面、バドミントン3面、卓球台7台の利用を市公式が案内。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -84095,7 +88308,10 @@ export const venueData = {
           "capacityTheater": 900,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hakui.lg.jp/kankou/kankoushisetsu/12882.html",
+          "observedAt": "2026-08-05",
+          "note": "900人収容可能な多目的大ホール。楽屋等併設"
         },
         {
           "id": "hakui-rotonda",
@@ -84109,7 +88325,10 @@ export const venueData = {
           "capacityTheater": 270,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hakui.lg.jp/kankou/kankoushisetsu/12882.html",
+          "observedAt": "2026-08-05",
+          "note": "270人収容可能な円形多目的小ホール"
         },
         {
           "id": "hakui-training-1",
@@ -84123,7 +88342,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hakui.lg.jp/kankou/kankoushisetsu/12882.html",
+          "observedAt": "2026-08-05",
+          "note": "定員30人。間仕切りを外して大研修室としても利用可"
         },
         {
           "id": "hakui-training-2",
@@ -84137,7 +88359,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hakui.lg.jp/kankou/kankoushisetsu/12882.html",
+          "observedAt": "2026-08-05",
+          "note": "定員30人。間仕切りを外して大研修室としても利用可"
         },
         {
           "id": "hakui-training-3",
@@ -84151,7 +88376,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.hakui.lg.jp/kankou/kankoushisetsu/12882.html",
+          "observedAt": "2026-08-05",
+          "note": "定員30人。間仕切りを外して大研修室としても利用可"
         }
       ],
       "bestSpace": {
@@ -84205,7 +88433,10 @@ export const venueData = {
           "capacityTheater": 538,
           "capacityFixed": 534,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.suzu.lg.jp/site/laporte-suzu/1365.html",
+          "observedAt": "2026-08-05",
+          "note": "538席（車椅子4席含む）・794㎡"
         },
         {
           "id": "suzu-salon",
@@ -84219,7 +88450,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.suzu.lg.jp/site/laporte-suzu/1365.html",
+          "observedAt": "2026-08-05",
+          "note": "90㎡。サロンコンサート・音楽教室・展示会等に対応"
         },
         {
           "id": "suzu-atelier",
@@ -84233,7 +88467,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.suzu.lg.jp/site/laporte-suzu/1365.html",
+          "observedAt": "2026-08-05",
+          "note": "107㎡"
         },
         {
           "id": "suzu-multipurpose-1",
@@ -84247,7 +88484,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.suzu.lg.jp/site/laporte-suzu/1365.html",
+          "observedAt": "2026-08-05",
+          "note": "44㎡"
         },
         {
           "id": "suzu-multipurpose-2",
@@ -84261,7 +88501,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.suzu.lg.jp/site/laporte-suzu/1365.html",
+          "observedAt": "2026-08-05",
+          "note": "25㎡"
         },
         {
           "id": "suzu-dressing",
@@ -84275,7 +88518,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.suzu.lg.jp/site/laporte-suzu/1365.html",
+          "observedAt": "2026-08-05",
+          "note": "各14.5㎡。料金表は楽屋1〜3を案内"
         },
         {
           "id": "suzu-gallery-lobby",
@@ -84289,7 +88535,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.suzu.lg.jp/site/laporte-suzu/1365.html",
+          "observedAt": "2026-08-05",
+          "note": "市民ロビー・市民ギャラリーの合計1,027㎡"
         }
       ],
       "bestSpace": {
@@ -84343,7 +88592,10 @@ export const venueData = {
           "capacityTheater": 704,
           "capacityFixed": 704,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nomi.lg.jp/docs/822.html",
+          "observedAt": "2026-08-05",
+          "note": "定員704人。音響・照明操作技術者の派遣が必要な利用は締切条件あり"
         },
         {
           "id": "nomi-circle",
@@ -84357,7 +88609,10 @@ export const venueData = {
           "capacityTheater": 1500,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nomi.lg.jp/docs/822.html",
+          "observedAt": "2026-08-05",
+          "note": "定員1,500人。料金表掲載値であり座席構成は未観測"
         },
         {
           "id": "nomi-small",
@@ -84371,7 +88626,10 @@ export const venueData = {
           "capacityTheater": 150,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nomi.lg.jp/docs/822.html",
+          "observedAt": "2026-08-05",
+          "note": "定員150人"
         },
         {
           "id": "nomi-meeting-201",
@@ -84385,7 +88643,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nomi.lg.jp/docs/822.html",
+          "observedAt": "2026-08-05",
+          "note": "定員30人"
         },
         {
           "id": "nomi-meeting-202",
@@ -84399,7 +88660,10 @@ export const venueData = {
           "capacityTheater": 25,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nomi.lg.jp/docs/822.html",
+          "observedAt": "2026-08-05",
+          "note": "定員25人"
         },
         {
           "id": "nomi-chorus",
@@ -84413,7 +88677,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.nomi.lg.jp/docs/822.html",
+          "observedAt": "2026-08-05",
+          "note": "定員30人"
         },
         {
           "id": "nomi-training",
@@ -84427,7 +88694,10 @@ export const venueData = {
           "capacityTheater": 60,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nomi.lg.jp/docs/822.html",
+          "observedAt": "2026-08-05",
+          "note": "定員60人"
         },
         {
           "id": "nomi-standby",
@@ -84441,7 +88711,10 @@ export const venueData = {
           "capacityTheater": 12,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nomi.lg.jp/docs/822.html",
+          "observedAt": "2026-08-05",
+          "note": "定員12人"
         },
         {
           "id": "nomi-japanese",
@@ -84455,7 +88728,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nomi.lg.jp/docs/822.html",
+          "observedAt": "2026-08-05",
+          "note": "料金表は101和室と102・103楽屋を同列に掲載。個別定員は未観測"
         },
         {
           "id": "nomi-gallery",
@@ -84469,7 +88745,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nomi.lg.jp/docs/822.html",
+          "observedAt": "2026-08-05",
+          "note": "5日を超える利用も可能と案内。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -84523,7 +88802,10 @@ export const venueData = {
           "capacityTheater": 820,
           "capacityFixed": 802,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.tsubata.lg.jp/page/1013.html",
+          "observedAt": "2026-08-05",
+          "note": "802席（1階638・2階146）に親子室6席・車椅子ブース12席。プロセニアム高さは最低天井高ではないため未入力"
         },
         {
           "id": "tsubata-dressing",
@@ -84537,7 +88819,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.tsubata.lg.jp/page/1013.html",
+          "observedAt": "2026-08-05",
+          "note": "ホール付属施設として公式掲載。個別面積・定員は未観測"
         },
         {
           "id": "tsubata-performer-room",
@@ -84551,7 +88836,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.tsubata.lg.jp/page/1013.html",
+          "observedAt": "2026-08-05",
+          "note": "ホール付属施設として公式掲載。面積・定員は未観測"
         },
         {
           "id": "tsubata-rehearsal",
@@ -84565,7 +88853,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.town.tsubata.lg.jp/page/1013.html",
+          "observedAt": "2026-08-05",
+          "note": "ホール付属施設として公式掲載。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -84619,7 +88910,10 @@ export const venueData = {
           "capacityTheater": 440,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yamanashi.yamanashi.jp/uploaded/attachment/6931.pdf",
+          "observedAt": "2026-08-05",
+          "note": "440席・554㎡。市公式指定管理仕様書掲載"
         },
         {
           "id": "yamanashi-dressing-1",
@@ -84633,7 +88927,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yamanashi.yamanashi.jp/uploaded/attachment/6931.pdf",
+          "observedAt": "2026-08-05",
+          "note": "22㎡。市公式指定管理仕様書掲載"
         },
         {
           "id": "yamanashi-dressing-2",
@@ -84647,7 +88944,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.yamanashi.yamanashi.jp/uploaded/attachment/6931.pdf",
+          "observedAt": "2026-08-05",
+          "note": "49㎡。市公式指定管理仕様書掲載"
         }
       ],
       "bestSpace": {
@@ -84701,7 +89001,10 @@ export const venueData = {
           "capacityTheater": 757,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.otsuki.yamanashi.jp/bunka/shisetsu/shiminkaikan_shisetukasidashi.html",
+          "observedAt": "2026-08-05",
+          "note": "757席・530.0㎡"
         },
         {
           "id": "otsuki-training-1f",
@@ -84715,7 +89018,10 @@ export const venueData = {
           "capacityTheater": 20,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.otsuki.yamanashi.jp/bunka/shisetsu/shiminkaikan_shisetukasidashi.html",
+          "observedAt": "2026-08-05",
+          "note": "定員20人・43.7㎡。市公式表記による一体項目"
         },
         {
           "id": "otsuki-training",
@@ -84729,7 +89035,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.otsuki.yamanashi.jp/bunka/shisetsu/shiminkaikan_shisetukasidashi.html",
+          "observedAt": "2026-08-05",
+          "note": "63.9㎡"
         },
         {
           "id": "otsuki-exhibition",
@@ -84743,7 +89052,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.otsuki.yamanashi.jp/bunka/shisetsu/shiminkaikan_shisetukasidashi.html",
+          "observedAt": "2026-08-05",
+          "note": "78.1㎡"
         },
         {
           "id": "otsuki-gallery",
@@ -84757,7 +89069,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.otsuki.yamanashi.jp/bunka/shisetsu/shiminkaikan_shisetukasidashi.html",
+          "observedAt": "2026-08-05",
+          "note": "267.0㎡"
         },
         {
           "id": "otsuki-auditorium",
@@ -84771,7 +89086,10 @@ export const venueData = {
           "capacityTheater": 250,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.otsuki.yamanashi.jp/bunka/shisetsu/shiminkaikan_shisetukasidashi.html",
+          "observedAt": "2026-08-05",
+          "note": "定員250人・350.4㎡"
         },
         {
           "id": "otsuki-training-beauty",
@@ -84785,7 +89103,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.otsuki.yamanashi.jp/bunka/shisetsu/shiminkaikan_shisetukasidashi.html",
+          "observedAt": "2026-08-05",
+          "note": "48.8㎡"
         },
         {
           "id": "otsuki-training-waiting",
@@ -84799,7 +89120,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.otsuki.yamanashi.jp/bunka/shisetsu/shiminkaikan_shisetukasidashi.html",
+          "observedAt": "2026-08-05",
+          "note": "定員30人・61.3㎡"
         },
         {
           "id": "otsuki-training-ceremony",
@@ -84813,7 +89137,10 @@ export const venueData = {
           "capacityTheater": 51,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.otsuki.yamanashi.jp/bunka/shisetsu/shiminkaikan_shisetukasidashi.html",
+          "observedAt": "2026-08-05",
+          "note": "定員51人・80.9㎡"
         },
         {
           "id": "otsuki-av",
@@ -84827,7 +89154,10 @@ export const venueData = {
           "capacityTheater": 150,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.otsuki.yamanashi.jp/bunka/shisetsu/shiminkaikan_shisetukasidashi.html",
+          "observedAt": "2026-08-05",
+          "note": "定員150人・190.8㎡"
         },
         {
           "id": "otsuki-meeting",
@@ -84841,7 +89171,10 @@ export const venueData = {
           "capacityTheater": 32,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.otsuki.yamanashi.jp/bunka/shisetsu/shiminkaikan_shisetukasidashi.html",
+          "observedAt": "2026-08-05",
+          "note": "定員32人・87.0㎡"
         },
         {
           "id": "otsuki-cooking",
@@ -84855,7 +89188,10 @@ export const venueData = {
           "capacityTheater": 36,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.otsuki.yamanashi.jp/bunka/shisetsu/shiminkaikan_shisetukasidashi.html",
+          "observedAt": "2026-08-05",
+          "note": "定員36人・74.8㎡"
         },
         {
           "id": "otsuki-tea",
@@ -84869,7 +89205,10 @@ export const venueData = {
           "capacityTheater": 40,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.otsuki.yamanashi.jp/bunka/shisetsu/shiminkaikan_shisetukasidashi.html",
+          "observedAt": "2026-08-05",
+          "note": "定員40人・42.4㎡"
         },
         {
           "id": "otsuki-japanese-1",
@@ -84883,7 +89222,10 @@ export const venueData = {
           "capacityTheater": 20,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.otsuki.yamanashi.jp/bunka/shisetsu/shiminkaikan_shisetukasidashi.html",
+          "observedAt": "2026-08-05",
+          "note": "定員20人・40.9㎡"
         },
         {
           "id": "otsuki-training-4f",
@@ -84897,7 +89239,10 @@ export const venueData = {
           "capacityTheater": 20,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.otsuki.yamanashi.jp/bunka/shisetsu/shiminkaikan_shisetukasidashi.html",
+          "observedAt": "2026-08-05",
+          "note": "定員20人・38.3㎡"
         },
         {
           "id": "otsuki-child",
@@ -84911,7 +89256,10 @@ export const venueData = {
           "capacityTheater": 20,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.otsuki.yamanashi.jp/bunka/shisetsu/shiminkaikan_shisetukasidashi.html",
+          "observedAt": "2026-08-05",
+          "note": "定員20人・70.1㎡"
         }
       ],
       "bestSpace": {
@@ -84965,7 +89313,10 @@ export const venueData = {
           "capacityTheater": 500,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kai.yamanashi.jp/page/4967.html",
+          "observedAt": "2026-08-05",
+          "note": "500人収容のホール"
         },
         {
           "id": "kai-meeting",
@@ -84979,7 +89330,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kai.yamanashi.jp/page/4967.html",
+          "observedAt": "2026-08-05",
+          "note": "施設利用料金表掲載。面積・定員は未観測"
         },
         {
           "id": "kai-japanese",
@@ -84993,7 +89347,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kai.yamanashi.jp/page/4967.html",
+          "observedAt": "2026-08-05",
+          "note": "施設利用料金表掲載。面積・定員は未観測"
         },
         {
           "id": "kai-dressing",
@@ -85007,7 +89364,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kai.yamanashi.jp/page/4967.html",
+          "observedAt": "2026-08-05",
+          "note": "施設利用料金表掲載。個別面積・定員は未観測"
         },
         {
           "id": "kai-rehearsal",
@@ -85021,7 +89381,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.kai.yamanashi.jp/page/4967.html",
+          "observedAt": "2026-08-05",
+          "note": "施設利用料金表掲載。面積・定員は未観測"
         },
         {
           "id": "kai-av",
@@ -85035,7 +89398,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kai.yamanashi.jp/page/4967.html",
+          "observedAt": "2026-08-05",
+          "note": "施設利用料金表掲載。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -85089,7 +89455,10 @@ export const venueData = {
           "capacityTheater": 403,
           "capacityFixed": 400,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.minobu.lg.jp/page/1907.html",
+          "observedAt": "2026-08-05",
+          "note": "ワンスロープ400席・車椅子席3席。舞台324.7㎡。プロセニアム高さ8mは最低天井高ではないため未入力"
         },
         {
           "id": "minobu-lesson",
@@ -85103,7 +89472,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.town.minobu.lg.jp/page/1907.html",
+          "observedAt": "2026-08-05",
+          "note": "88.0㎡。壁一面鏡・バレエ練習用バーあり"
         },
         {
           "id": "minobu-recording",
@@ -85117,7 +89489,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.town.minobu.lg.jp/page/1907.html",
+          "observedAt": "2026-08-05",
+          "note": "35.7㎡。音楽・合唱等の記録や楽器練習に利用可"
         },
         {
           "id": "minobu-dressing-a",
@@ -85131,7 +89506,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.minobu.lg.jp/page/1907.html",
+          "observedAt": "2026-08-05",
+          "note": "21.0㎡。主任出演者用"
         },
         {
           "id": "minobu-dressing-b",
@@ -85145,7 +89523,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.minobu.lg.jp/page/1907.html",
+          "observedAt": "2026-08-05",
+          "note": "31.4㎡。出演者用"
         },
         {
           "id": "minobu-dressing-c",
@@ -85159,7 +89540,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.minobu.lg.jp/page/1907.html",
+          "observedAt": "2026-08-05",
+          "note": "35.7㎡。出演者用"
         },
         {
           "id": "minobu-waiting",
@@ -85173,7 +89557,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.minobu.lg.jp/page/1907.html",
+          "observedAt": "2026-08-05",
+          "note": "45.0㎡。スタッフミーティングおよび楽屋として利用可"
         },
         {
           "id": "minobu-meeting",
@@ -85187,7 +89574,10 @@ export const venueData = {
           "capacityTheater": 48,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.minobu.lg.jp/page/1907.html",
+          "observedAt": "2026-08-05",
+          "note": "48名・159.9㎡。会議室1と2に分割可。テーブルなしでは最大100名"
         },
         {
           "id": "minobu-media",
@@ -85201,7 +89591,10 @@ export const venueData = {
           "capacityTheater": 24,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.minobu.lg.jp/page/1907.html",
+          "observedAt": "2026-08-05",
+          "note": "24名・82.4㎡。最大45名"
         },
         {
           "id": "minobu-japanese",
@@ -85215,7 +89608,10 @@ export const venueData = {
           "capacityTheater": 33,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.minobu.lg.jp/page/1907.html",
+          "observedAt": "2026-08-05",
+          "note": "最大33名・82.4㎡"
         },
         {
           "id": "minobu-foyer",
@@ -85229,7 +89625,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.minobu.lg.jp/page/1907.html",
+          "observedAt": "2026-08-05",
+          "note": "337.0㎡"
         }
       ],
       "bestSpace": {
@@ -85283,7 +89682,10 @@ export const venueData = {
           "capacityTheater": 1508,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.iwata.shizuoka.jp/shisetsu_guide/toshokan_bunka/hall/1010434.html",
+          "observedAt": "2026-08-05",
+          "note": "1,508席（1階1,042・2階466）・1,847㎡。舞台高さ12mは最低天井高ではないため未入力"
         },
         {
           "id": "iwata-rehearsal",
@@ -85297,7 +89699,10 @@ export const venueData = {
           "capacityTheater": 150,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.iwata.shizuoka.jp/shisetsu_guide/toshokan_bunka/hall/1010434.html",
+          "observedAt": "2026-08-05",
+          "note": "260㎡・150人。小規模公演・講演会等にも利用可"
         },
         {
           "id": "iwata-activity-1",
@@ -85311,7 +89716,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.iwata.shizuoka.jp/shisetsu_guide/toshokan_bunka/hall/1010434.html",
+          "observedAt": "2026-08-05",
+          "note": "76㎡・30人。小規模講演会やイベント向け"
         },
         {
           "id": "iwata-activity-2",
@@ -85325,7 +89733,10 @@ export const venueData = {
           "capacityTheater": 6,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.iwata.shizuoka.jp/shisetsu_guide/toshokan_bunka/hall/1010434.html",
+          "observedAt": "2026-08-05",
+          "note": "18㎡・6人。遮音構造・ドラムセット常設"
         },
         {
           "id": "iwata-activity-3",
@@ -85339,7 +89750,10 @@ export const venueData = {
           "capacityTheater": 18,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.iwata.shizuoka.jp/shisetsu_guide/toshokan_bunka/hall/1010434.html",
+          "observedAt": "2026-08-05",
+          "note": "40㎡・18人。遮音構造"
         },
         {
           "id": "iwata-activity-4",
@@ -85353,7 +89767,10 @@ export const venueData = {
           "capacityTheater": 12,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.iwata.shizuoka.jp/shisetsu_guide/toshokan_bunka/hall/1010434.html",
+          "observedAt": "2026-08-05",
+          "note": "27㎡・12人。遮音構造"
         }
       ],
       "bestSpace": {
@@ -85407,7 +89824,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.fujieda.shizuoka.jp/soshiki/_shisetsu/1445918020284.html",
+          "observedAt": "2026-08-05",
+          "note": "2026年4月から7月は空調更新のため休業。客席数・面積は未観測"
         },
         {
           "id": "fujieda-rehearsal",
@@ -85421,7 +89841,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.fujieda.shizuoka.jp/soshiki/_shisetsu/1445918020284.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式は2026年4月から7月も通常利用可能と案内。面積・定員は未観測"
         },
         {
           "id": "fujieda-meeting-1",
@@ -85435,7 +89858,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.fujieda.shizuoka.jp/soshiki/_shisetsu/1445918020284.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式は2026年4月から7月も通常利用可能と案内。面積・定員は未観測"
         },
         {
           "id": "fujieda-meeting-2",
@@ -85449,7 +89875,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.fujieda.shizuoka.jp/soshiki/_shisetsu/1445918020284.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式は2026年4月から7月も通常利用可能と案内。面積・定員は未観測"
         },
         {
           "id": "fujieda-meeting-3",
@@ -85463,7 +89892,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.fujieda.shizuoka.jp/soshiki/_shisetsu/1445918020284.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式は2026年4月から7月も通常利用可能と案内。面積・定員は未観測"
         },
         {
           "id": "fujieda-dressing",
@@ -85477,7 +89909,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.fujieda.shizuoka.jp/soshiki/_shisetsu/1445918020284.html",
+          "observedAt": "2026-08-05",
+          "note": "2026年4月から7月は空調更新のため休業。個別面積・定員は未観測"
         },
         {
           "id": "fujieda-lobby",
@@ -85491,7 +89926,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.fujieda.shizuoka.jp/soshiki/_shisetsu/1445918020284.html",
+          "observedAt": "2026-08-05",
+          "note": "市公式は2026年4月から7月も通常利用可能と案内。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -85545,7 +89983,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.gotemba.lg.jp/kyouiku/d-4/d-4-2/246.html",
+          "observedAt": "2026-08-05",
+          "note": "1,000人以上収容可能と市公式が案内。正確な客席数は未観測"
         },
         {
           "id": "gotemba-small",
@@ -85559,7 +90000,10 @@ export const venueData = {
           "capacityTheater": 400,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.gotemba.lg.jp/kyouiku/d-4/d-4-2/246.html",
+          "observedAt": "2026-08-05",
+          "note": "400人収容可能"
         },
         {
           "id": "gotemba-rehearsal",
@@ -85573,7 +90017,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.gotemba.lg.jp/kyouiku/kanri/assets/uploads/2021/06/6783f917ba60c96ae473ad4328d833a9.pdf",
+          "observedAt": "2026-08-05",
+          "note": "市公式利用料金表掲載。面積・定員は未観測"
         },
         {
           "id": "gotemba-training",
@@ -85587,7 +90034,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.gotemba.lg.jp/kyouiku/kanri/assets/uploads/2021/06/6783f917ba60c96ae473ad4328d833a9.pdf",
+          "observedAt": "2026-08-05",
+          "note": "第1研修室24名、第2研修室36名。個別比較は要確認"
         },
         {
           "id": "gotemba-multipurpose",
@@ -85601,7 +90051,10 @@ export const venueData = {
           "capacityTheater": 80,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.gotemba.lg.jp/kyouiku/kanri/assets/uploads/2021/06/6783f917ba60c96ae473ad4328d833a9.pdf",
+          "observedAt": "2026-08-05",
+          "note": "80名。壁面鏡あり"
         },
         {
           "id": "gotemba-planning",
@@ -85615,7 +90068,10 @@ export const venueData = {
           "capacityTheater": 13,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.gotemba.lg.jp/kyouiku/kanri/assets/uploads/2021/06/6783f917ba60c96ae473ad4328d833a9.pdf",
+          "observedAt": "2026-08-05",
+          "note": "13名"
         },
         {
           "id": "gotemba-av",
@@ -85629,7 +90085,10 @@ export const venueData = {
           "capacityTheater": 48,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.gotemba.lg.jp/kyouiku/kanri/assets/uploads/2021/06/6783f917ba60c96ae473ad4328d833a9.pdf",
+          "observedAt": "2026-08-05",
+          "note": "48名・ピアノあり"
         },
         {
           "id": "gotemba-japanese",
@@ -85643,7 +90102,10 @@ export const venueData = {
           "capacityTheater": 100,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.gotemba.lg.jp/kyouiku/kanri/assets/uploads/2021/06/6783f917ba60c96ae473ad4328d833a9.pdf",
+          "observedAt": "2026-08-05",
+          "note": "100名"
         },
         {
           "id": "gotemba-cooking",
@@ -85657,7 +90119,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.gotemba.lg.jp/kyouiku/kanri/assets/uploads/2021/06/6783f917ba60c96ae473ad4328d833a9.pdf",
+          "observedAt": "2026-08-05",
+          "note": "30名・調理台5台"
         },
         {
           "id": "gotemba-tea",
@@ -85671,7 +90136,10 @@ export const venueData = {
           "capacityTheater": 10,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.gotemba.lg.jp/kyouiku/kanri/assets/uploads/2021/06/6783f917ba60c96ae473ad4328d833a9.pdf",
+          "observedAt": "2026-08-05",
+          "note": "10名"
         },
         {
           "id": "gotemba-meetings",
@@ -85685,7 +90153,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.gotemba.lg.jp/kyouiku/kanri/assets/uploads/2021/06/6783f917ba60c96ae473ad4328d833a9.pdf",
+          "observedAt": "2026-08-05",
+          "note": "第1〜7会議室を市公式料金表が掲載。連結使用可能な組合せあり。個別比較は要確認"
         },
         {
           "id": "gotemba-exhibition",
@@ -85699,7 +90170,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.gotemba.lg.jp/kyouiku/kanri/assets/uploads/2021/06/6783f917ba60c96ae473ad4328d833a9.pdf",
+          "observedAt": "2026-08-05",
+          "note": "可動式展示ボードを料金表が掲載。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -85753,7 +90227,10 @@ export const venueData = {
           "capacityTheater": 500,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kosai.shizuoka.jp/material/files/group/1/araichiikicenter_ryokin_20240701.pdf",
+          "observedAt": "2026-08-05",
+          "note": "定員500人。3階ホールの音響機器本体は借用申請不要"
         },
         {
           "id": "kosai-av",
@@ -85767,7 +90244,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kosai.shizuoka.jp/kosodate_kyoiku/kyoiku_bunka/bunka_shogaigakushu/4335.html",
+          "observedAt": "2026-08-05",
+          "note": "施設案内掲載。面積・定員は未観測"
         },
         {
           "id": "kosai-meeting",
@@ -85781,7 +90261,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kosai.shizuoka.jp/kosodate_kyoiku/kyoiku_bunka/bunka_shogaigakushu/4335.html",
+          "observedAt": "2026-08-05",
+          "note": "施設案内掲載。個別面積・定員は未観測"
         },
         {
           "id": "kosai-japanese",
@@ -85795,7 +90278,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kosai.shizuoka.jp/kosodate_kyoiku/kyoiku_bunka/bunka_shogaigakushu/4335.html",
+          "observedAt": "2026-08-05",
+          "note": "施設案内掲載。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -85849,7 +90335,10 @@ export const venueData = {
           "capacityTheater": 850,
           "capacityFixed": 772,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.koka.lg.jp/2217.htm",
+          "observedAt": "2026-08-05",
+          "note": "固定772席・補助席を含む最大850席。舞台高さ7mは最低天井高ではないため未入力"
         },
         {
           "id": "koka-practice-1",
@@ -85863,7 +90352,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.koka.lg.jp/2217.htm",
+          "observedAt": "2026-08-05",
+          "note": "37㎡"
         },
         {
           "id": "koka-practice-2",
@@ -85877,7 +90369,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.koka.lg.jp/2217.htm",
+          "observedAt": "2026-08-05",
+          "note": "46㎡"
         },
         {
           "id": "koka-practice-3",
@@ -85891,7 +90386,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.koka.lg.jp/2217.htm",
+          "observedAt": "2026-08-05",
+          "note": "106㎡・レッスンバー・壁・アップライトピアノあり"
         },
         {
           "id": "koka-japanese",
@@ -85905,7 +90403,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.koka.lg.jp/2217.htm",
+          "observedAt": "2026-08-05",
+          "note": "10畳・8畳の茶室"
         },
         {
           "id": "koka-exhibition",
@@ -85919,7 +90420,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.koka.lg.jp/2217.htm",
+          "observedAt": "2026-08-05",
+          "note": "260㎡。1/2利用料金あり"
         },
         {
           "id": "koka-dressing",
@@ -85933,7 +90437,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.koka.lg.jp/2217.htm",
+          "observedAt": "2026-08-05",
+          "note": "4室。個別面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -85987,7 +90494,10 @@ export const venueData = {
           "capacityTheater": 456,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nagahama.lg.jp/cmsfiles/contents/0000016/16153/R7-18bunsupo.pdf",
+          "observedAt": "2026-08-05",
+          "note": "456席・640.0㎡"
         },
         {
           "id": "nagahama-practice",
@@ -86001,7 +90511,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.nagahama.lg.jp/cmsfiles/contents/0000016/16153/R7-18bunsupo.pdf",
+          "observedAt": "2026-08-05",
+          "note": "76.0㎡"
         },
         {
           "id": "nagahama-japanese",
@@ -86015,7 +90528,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nagahama.lg.jp/cmsfiles/contents/0000016/16153/R7-18bunsupo.pdf",
+          "observedAt": "2026-08-05",
+          "note": "36.0㎡"
         },
         {
           "id": "nagahama-exhibition-1",
@@ -86029,7 +90545,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nagahama.lg.jp/cmsfiles/contents/0000016/16153/R7-18bunsupo.pdf",
+          "observedAt": "2026-08-05",
+          "note": "97.7㎡"
         },
         {
           "id": "nagahama-exhibition-2",
@@ -86043,7 +90562,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nagahama.lg.jp/cmsfiles/contents/0000016/16153/R7-18bunsupo.pdf",
+          "observedAt": "2026-08-05",
+          "note": "308.9㎡"
         },
         {
           "id": "nagahama-lobby",
@@ -86057,7 +90579,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nagahama.lg.jp/cmsfiles/contents/0000016/16153/R7-18bunsupo.pdf",
+          "observedAt": "2026-08-05",
+          "note": "59.4㎡"
         },
         {
           "id": "nagahama-study",
@@ -86071,7 +90596,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nagahama.lg.jp/cmsfiles/contents/0000016/16153/R7-18bunsupo.pdf",
+          "observedAt": "2026-08-05",
+          "note": "45.7㎡"
         }
       ],
       "bestSpace": {
@@ -86125,7 +90653,10 @@ export const venueData = {
           "capacityTheater": 1024,
           "capacityFixed": 1024,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.takashima.lg.jp/soshiki/bunkasports/takashimashiminkaikan/1_1/3/10287.html",
+          "observedAt": "2026-08-05",
+          "note": "1,024席（1階718・2階306）。舞台高さ7mは最低天井高ではないため未入力"
         },
         {
           "id": "takashima-rehearsal",
@@ -86139,7 +90670,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.takashima.lg.jp/soshiki/bunkasports/takashimashiminkaikan/1_1/3/10287.html",
+          "observedAt": "2026-08-05",
+          "note": "111㎡"
         },
         {
           "id": "takashima-performer",
@@ -86153,7 +90687,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.takashima.lg.jp/soshiki/bunkasports/takashimashiminkaikan/1_1/3/10287.html",
+          "observedAt": "2026-08-05",
+          "note": "45㎡"
         },
         {
           "id": "takashima-dressing-west",
@@ -86167,7 +90704,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.takashima.lg.jp/soshiki/bunkasports/takashimashiminkaikan/1_1/3/10287.html",
+          "observedAt": "2026-08-05",
+          "note": "2室。個別面積・定員は未観測"
         },
         {
           "id": "takashima-dressing-japanese",
@@ -86181,7 +90721,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.takashima.lg.jp/soshiki/bunkasports/takashimashiminkaikan/1_1/3/10287.html",
+          "observedAt": "2026-08-05",
+          "note": "2室。個別面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -86235,7 +90778,10 @@ export const venueData = {
           "capacityTheater": 483,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nagahama.lg.jp/0000010603.html",
+          "observedAt": "2026-08-05",
+          "note": "483席"
         },
         {
           "id": "nagahama-asai-multi",
@@ -86249,7 +90795,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nagahama.lg.jp/0000010603.html",
+          "observedAt": "2026-08-05",
+          "note": "施設概要掲載。面積・定員は未観測"
         },
         {
           "id": "nagahama-asai-art",
@@ -86263,7 +90812,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nagahama.lg.jp/0000010603.html",
+          "observedAt": "2026-08-05",
+          "note": "施設概要掲載。面積・定員は未観測"
         },
         {
           "id": "nagahama-asai-cooking",
@@ -86277,7 +90829,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.nagahama.lg.jp/0000010603.html",
+          "observedAt": "2026-08-05",
+          "note": "施設概要掲載。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -86331,7 +90886,10 @@ export const venueData = {
           "capacityTheater": 221,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.gose.nara.jp/0000000562.html",
+          "observedAt": "2026-08-05",
+          "note": "収容221人・可動席72席。固定席数は未観測"
         },
         {
           "id": "gose-azalea-meeting",
@@ -86345,7 +90903,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.gose.nara.jp/0000000562.html",
+          "observedAt": "2026-08-05",
+          "note": "ラウンド型会議テーブル。面積・定員は未観測"
         },
         {
           "id": "gose-azalea-audiovisual",
@@ -86359,7 +90920,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.gose.nara.jp/0000000562.html",
+          "observedAt": "2026-08-05",
+          "note": "面積・定員は未観測"
         },
         {
           "id": "gose-azalea-multipurpose",
@@ -86373,7 +90937,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.gose.nara.jp/0000000562.html",
+          "observedAt": "2026-08-05",
+          "note": "面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -86427,7 +90994,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tenri.nara.jp/shisetsu/kyouikubunkacommunity/bunkacenter/1390958001066.html",
+          "observedAt": "2026-08-05",
+          "note": "274㎡"
         },
         {
           "id": "tenri-center-special-exhibition",
@@ -86441,7 +91011,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tenri.nara.jp/shisetsu/kyouikubunkacommunity/bunkacenter/1390958001066.html",
+          "observedAt": "2026-08-05",
+          "note": "28㎡"
         },
         {
           "id": "tenri-center-hall",
@@ -86455,7 +91028,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tenri.nara.jp/shisetsu/kyouikubunkacommunity/bunkacenter/1390958001066.html",
+          "observedAt": "2026-08-05",
+          "note": "212㎡。客席数は未観測"
         },
         {
           "id": "tenri-center-japanese",
@@ -86469,7 +91045,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tenri.nara.jp/shisetsu/kyouikubunkacommunity/bunkacenter/1390958001066.html",
+          "observedAt": "2026-08-05",
+          "note": "梅・銀杏・杉の計85㎡"
         },
         {
           "id": "tenri-center-meeting",
@@ -86483,7 +91062,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tenri.nara.jp/shisetsu/kyouikubunkacommunity/bunkacenter/1390958001066.html",
+          "observedAt": "2026-08-05",
+          "note": "63㎡"
         },
         {
           "id": "tenri-center-audio",
@@ -86497,7 +91079,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tenri.nara.jp/shisetsu/kyouikubunkacommunity/bunkacenter/1390958001066.html",
+          "observedAt": "2026-08-05",
+          "note": "67㎡"
         },
         {
           "id": "tenri-center-audiovisual",
@@ -86511,7 +91096,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.tenri.nara.jp/shisetsu/kyouikubunkacommunity/bunkacenter/1390958001066.html",
+          "observedAt": "2026-08-05",
+          "note": "87㎡"
         }
       ],
       "bestSpace": {
@@ -86565,7 +91153,10 @@ export const venueData = {
           "capacityTheater": 500,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.uda.nara.jp/g-keiei/documents/udasikoukyousisetukannrikeikaku.pdf",
+          "observedAt": "2026-08-05",
+          "note": "500人規模。出典の利用状況は2014年度実績"
         },
         {
           "id": "uda-training",
@@ -86579,7 +91170,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.uda.nara.jp/g-keiei/documents/udasikoukyousisetukannrikeikaku.pdf",
+          "observedAt": "2026-08-05",
+          "note": "面積・定員は未観測"
         },
         {
           "id": "uda-exhibition",
@@ -86593,7 +91187,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.uda.nara.jp/g-keiei/documents/udasikoukyousisetukannrikeikaku.pdf",
+          "observedAt": "2026-08-05",
+          "note": "面積・定員は未観測"
         },
         {
           "id": "uda-creation",
@@ -86607,7 +91204,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.uda.nara.jp/g-keiei/documents/udasikoukyousisetukannrikeikaku.pdf",
+          "observedAt": "2026-08-05",
+          "note": "面積・定員は未観測"
         },
         {
           "id": "uda-seminar",
@@ -86621,7 +91221,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.uda.nara.jp/g-keiei/documents/udasikoukyousisetukannrikeikaku.pdf",
+          "observedAt": "2026-08-05",
+          "note": "面積・定員は未観測"
         },
         {
           "id": "uda-media",
@@ -86635,7 +91238,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.uda.nara.jp/g-keiei/documents/udasikoukyousisetukannrikeikaku.pdf",
+          "observedAt": "2026-08-05",
+          "note": "面積・定員は未観測"
         },
         {
           "id": "uda-japanese",
@@ -86649,7 +91255,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.uda.nara.jp/g-keiei/documents/udasikoukyousisetukannrikeikaku.pdf",
+          "observedAt": "2026-08-05",
+          "note": "面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -86703,7 +91312,10 @@ export const venueData = {
           "capacityTheater": 310,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kashiba.lg.jp/uploaded/attachment/25072.pdf",
+          "observedAt": "2026-08-05",
+          "note": "280㎡・移動観覧席310席。座席収納時は展示会等に利用可"
         },
         {
           "id": "kashiba-small-hall",
@@ -86717,7 +91329,10 @@ export const venueData = {
           "capacityTheater": 50,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kashiba.lg.jp/uploaded/attachment/25072.pdf",
+          "observedAt": "2026-08-05",
+          "note": "50席"
         },
         {
           "id": "kashiba-meeting-1",
@@ -86731,7 +91346,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kashiba.lg.jp/uploaded/attachment/25072.pdf",
+          "observedAt": "2026-08-05",
+          "note": "30席"
         },
         {
           "id": "kashiba-meeting-2",
@@ -86745,7 +91363,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kashiba.lg.jp/uploaded/attachment/25072.pdf",
+          "observedAt": "2026-08-05",
+          "note": "30席"
         },
         {
           "id": "kashiba-meeting-3",
@@ -86759,7 +91380,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kashiba.lg.jp/uploaded/attachment/25072.pdf",
+          "observedAt": "2026-08-05",
+          "note": "30席"
         },
         {
           "id": "kashiba-meeting-4",
@@ -86773,7 +91397,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kashiba.lg.jp/uploaded/attachment/25072.pdf",
+          "observedAt": "2026-08-05",
+          "note": "30席・壁面ミラーあり"
         },
         {
           "id": "kashiba-gallery",
@@ -86787,7 +91414,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kashiba.lg.jp/uploaded/attachment/25072.pdf",
+          "observedAt": "2026-08-05",
+          "note": "個展やグループ展示に利用可。面積・定員は未観測"
         },
         {
           "id": "kashiba-japanese",
@@ -86801,7 +91431,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kashiba.lg.jp/uploaded/attachment/25072.pdf",
+          "observedAt": "2026-08-05",
+          "note": "面積・定員は未観測"
         },
         {
           "id": "kashiba-dressing",
@@ -86815,7 +91448,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.city.kashiba.lg.jp/uploaded/attachment/25072.pdf",
+          "observedAt": "2026-08-05",
+          "note": "面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -86869,7 +91505,10 @@ export const venueData = {
           "capacityTheater": 340,
           "capacityFixed": null,
           "stageType": "temporary",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.iwami.gr.jp/secure/6748/%E3%83%AA%E3%83%BC%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf",
+          "observedAt": "2026-08-05",
+          "note": "340席（電動160・移動140・2階40）・415.5㎡。ステージ等を含む"
         },
         {
           "id": "iwami-rehearsal",
@@ -86883,7 +91522,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.iwami.gr.jp/secure/6748/%E3%83%AA%E3%83%BC%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf",
+          "observedAt": "2026-08-05",
+          "note": "93.5㎡・30席"
         },
         {
           "id": "iwami-dressing-1",
@@ -86897,7 +91539,10 @@ export const venueData = {
           "capacityTheater": 4,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.iwami.gr.jp/secure/6748/%E3%83%AA%E3%83%BC%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf",
+          "observedAt": "2026-08-05",
+          "note": "20.3㎡・4席・ミニキッチン・トイレ"
         },
         {
           "id": "iwami-dressing-2",
@@ -86911,7 +91556,10 @@ export const venueData = {
           "capacityTheater": 12,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.iwami.gr.jp/secure/6748/%E3%83%AA%E3%83%BC%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf",
+          "observedAt": "2026-08-05",
+          "note": "25.5㎡・12席"
         },
         {
           "id": "iwami-japanese",
@@ -86925,7 +91573,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.iwami.gr.jp/secure/6748/%E3%83%AA%E3%83%BC%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf",
+          "observedAt": "2026-08-05",
+          "note": "144.5㎡・28畳"
         },
         {
           "id": "iwami-cooking",
@@ -86939,7 +91590,10 @@ export const venueData = {
           "capacityTheater": 40,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.iwami.gr.jp/secure/6748/%E3%83%AA%E3%83%BC%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf",
+          "observedAt": "2026-08-05",
+          "note": "93.5㎡・丸椅子40脚・調理台7台"
         },
         {
           "id": "iwami-support",
@@ -86953,7 +91607,10 @@ export const venueData = {
           "capacityTheater": 8,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.iwami.gr.jp/secure/6748/%E3%83%AA%E3%83%BC%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf",
+          "observedAt": "2026-08-05",
+          "note": "30.0㎡・8席"
         },
         {
           "id": "iwami-training-1",
@@ -86967,7 +91624,10 @@ export const venueData = {
           "capacityTheater": 78,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.iwami.gr.jp/secure/6748/%E3%83%AA%E3%83%BC%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf",
+          "observedAt": "2026-08-05",
+          "note": "110.5㎡・78席"
         },
         {
           "id": "iwami-training-2",
@@ -86981,7 +91641,10 @@ export const venueData = {
           "capacityTheater": 30,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.iwami.gr.jp/secure/6748/%E3%83%AA%E3%83%BC%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf",
+          "observedAt": "2026-08-05",
+          "note": "55.2㎡・30席"
         },
         {
           "id": "iwami-training-3",
@@ -86995,7 +91658,10 @@ export const venueData = {
           "capacityTheater": 24,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.iwami.gr.jp/secure/6748/%E3%83%AA%E3%83%BC%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf",
+          "observedAt": "2026-08-05",
+          "note": "52.8㎡・24席"
         },
         {
           "id": "iwami-training-4",
@@ -87009,7 +91675,10 @@ export const venueData = {
           "capacityTheater": 45,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.iwami.gr.jp/secure/6748/%E3%83%AA%E3%83%BC%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf",
+          "observedAt": "2026-08-05",
+          "note": "69.9㎡・45席"
         },
         {
           "id": "iwami-training-5",
@@ -87023,7 +91692,10 @@ export const venueData = {
           "capacityTheater": 18,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.iwami.gr.jp/secure/6748/%E3%83%AA%E3%83%BC%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf",
+          "observedAt": "2026-08-05",
+          "note": "34.6㎡・18席"
         }
       ],
       "bestSpace": {
@@ -87077,7 +91749,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.yazu.tottori.jp/soshiki/28/1089.html",
+          "observedAt": "2026-08-05",
+          "note": "音響映像・演出ライトの利用区分あり。面積・定員は未観測"
         },
         {
           "id": "yazu-hatto-cooking",
@@ -87091,7 +91766,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.yazu.tottori.jp/soshiki/28/1089.html",
+          "observedAt": "2026-08-05",
+          "note": "面積・定員は未観測"
         },
         {
           "id": "yazu-hatto-meeting-west",
@@ -87105,7 +91783,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.yazu.tottori.jp/soshiki/28/1089.html",
+          "observedAt": "2026-08-05",
+          "note": "面積・定員は未観測"
         },
         {
           "id": "yazu-hatto-meeting-japanese",
@@ -87119,7 +91800,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.yazu.tottori.jp/soshiki/28/1089.html",
+          "observedAt": "2026-08-05",
+          "note": "面積・定員は未観測"
         },
         {
           "id": "yazu-hatto-entrance",
@@ -87133,7 +91817,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "none",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.yazu.tottori.jp/soshiki/28/1089.html",
+          "observedAt": "2026-08-05",
+          "note": "1・2階の利用区分。面積・定員は未観測"
         },
         {
           "id": "yazu-hatto-arena",
@@ -87147,7 +91834,10 @@ export const venueData = {
           "capacityTheater": null,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "yes"
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.town.yazu.tottori.jp/soshiki/28/1089.html",
+          "observedAt": "2026-08-05",
+          "note": "アリーナ単独およびアリーナ・ステージの利用区分あり。面積・定員は未観測"
         }
       ],
       "bestSpace": {
@@ -87201,7 +91891,10 @@ export const venueData = {
           "capacityTheater": 172,
           "capacityFixed": null,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.kotoura.tottori.jp/docs/2014032400064/",
+          "observedAt": "2026-08-05",
+          "note": "172席。可動椅子・映像・舞台照明・音響設備の利用区分あり"
         }
       ],
       "bestSpace": {
@@ -87255,7 +91948,10 @@ export const venueData = {
           "capacityTheater": 245,
           "capacityFixed": 245,
           "stageType": "fixed",
-          "practiceUse": "conditional"
+          "practiceUse": "conditional",
+          "sourceUrl": "https://www.town.hino.tottori.jp/1255.htm",
+          "observedAt": "2026-08-05",
+          "note": "固定245席"
         }
       ],
       "bestSpace": {
