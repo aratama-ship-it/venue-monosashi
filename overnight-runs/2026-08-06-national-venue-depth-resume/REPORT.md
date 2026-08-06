@@ -134,6 +134,10 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Wave 38 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Ishikawa is now 15 candidates, 13 municipalities, and 62 spaces; national remaining deficits are 548 candidates and 224 spaces.
 - Wave 38 deployment passed: production version 83 was deployed successfully from commit `e3facb1231ff18948177e4f2d386cf542b77a050`; the Sites URL and `https://venue.art-monosashi.com/?release=e3facb1` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
+- Wave 39 source data: added eight official-source-backed Yamanashi facilities — 上野原市文化ホール（もみじホール）、須玉ふれあい館ホール、長坂コミュニティ・ステーションホール、八ヶ岳やまびこホール、富士河口湖町中央公民館、豊富中央公民館、中央市立玉穂生涯学習館、山中湖村役場平野コミュニティセンター — and 34 searchable spaces, increasing the national total to 635 facilities and 2,642 spaces. Sources are the official pages of 上野原市、北杜市、富士河口湖町、中央市、山中湖村.
+- Recorded only explicit capacities and floor areas; no ceiling or price value was inferred. All unreported conditions remain `要確認`.
+- Wave 39 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Yamanashi is now 19 candidates, 15 municipalities, and 84 spaces; national remaining deficits are 540 candidates and 223 spaces. Public deployment and custom-domain verification remain to be completed for this wave.
+
 ## Verification
 
 - Wave 14 audit and validation passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 531 venues and 2,823 price observations.
