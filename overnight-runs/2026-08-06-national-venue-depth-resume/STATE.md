@@ -117,6 +117,7 @@
 - Wave 32 source data: added four official-source-backed Yamagata facilities — 寒河江市市民文化会館（寒河江市）、長井市民文化会館（長井市）、村山市民会館（村山市）、白鷹町文化交流センター あゆーむ（白鷹町） — and 33 independently searchable spaces. Yamagata is now 15 candidates, 13 municipalities, and 66 spaces.
 - Official sources: 寒河江市、長井市、村山市、白鷹町. Explicit capacities and floor areas were recorded only where the official sources stated them; no ceiling or price observation was inferred. Published stage heights and stage areas remain notes only, and all unreported conditions remain `要確認`.
 - Wave 32 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-record warning. Public deployment remains to be completed for this wave.
+- Wave 32 deployment passed: production version 77 was deployed successfully; the Sites URL and `https://venue.art-monosashi.com/?release=d7a3e32` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
 - Wave 21 source data: added four official-source-backed Kanagawa facilities — 厚木市文化会館（厚木市）、カルッツかわさき（川崎市）、鎌倉芸術館（鎌倉市）、小田原三の丸ホール（小田原市） — and 68 independently searchable spaces. Kanagawa is now 14 candidates, 7 municipalities, and 93 spaces.
 - Official sources: 厚木市、カルッツかわさき公式運営者、鎌倉芸術館公式運営者、小田原三の丸ホール公式運営者. Explicit room ceiling values were recorded only for カルッツかわさき（アクトスタジオ4.5m、大会議室3.0m、中会議室3.0m、小会議室2.8m）. Stage dimensions at the halls remain notes only and no price observation was added.
