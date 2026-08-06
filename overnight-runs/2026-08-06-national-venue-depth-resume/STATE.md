@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-06 Asia/Tokyo
-- Current wave: Wave 13 — Kagawa official-source expansion.
+- Current wave: Wave 13 — Kagawa official-source expansion, validated and awaiting deployment.
 
 ## Baseline
 
@@ -61,11 +61,13 @@
 
 ## Current Wave
 
-- Wave 13 objective: add a bounded set of official-source-backed Kagawa facilities and independently searchable spaces. Kagawa is in the lowest candidate-depth group at 8 candidates, 4 municipalities, and 15 spaces; confirm current depth before editing and preserve unknown ceilings and pricing as `要確認`.
+- Wave 13 source data: added four Kagawa candidates — 善通寺市民会館（善通寺市）、東かがわ市交流プラザ（東かがわ市）、源内音楽ホール（さぬき市）、ユープラザうたづ（宇多津町） — and 26 independently searchable spaces. Kagawa is now 12 candidates, 8 municipalities, and 41 spaces.
+- Official sources: 善通寺市、東かがわ市交流プラザ運営者、さぬき市、宇多津町振興財団。料金・最低天井高に直接根拠がない区画は追加せず、要確認のままとした。
+- Wave verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. Audit has 0 errors and the pre-existing historical-event warning only.
 
 ## Next Action
 
-- Research and complete one bounded Kagawa official-source wave, then run the required generation, audit, depth report, validation, public deployment, and endpoint verification sequence.
+- Commit and deploy the validated Wave 13 source, verify the public custom domain, then select Fukuoka (8 candidates, 3 municipalities, 14 spaces) as the next lowest-depth wave.
 
 ## Blockers
 

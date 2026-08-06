@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 12 is published; the next bounded wave targets Kagawa.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 13 is validated and awaiting public deployment; the next bounded wave will target Fukuoka.
 
 ## Changes
 
@@ -41,11 +41,13 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added four official-source-backed Shimane facilities — 島根県芸術文化センター グラントワ、安来市総合文化ホール アルテピア、加茂文化ホール ラメール、石央文化ホール — and 22 searchable spaces, increasing the national total to 523 facilities and 1,897 spaces. The sources are the official pages of グラントワ、安来市・アルテピア、雲南市・ラメール、浜田市.
 - Only グラントワ多目的ギャラリーの公式「天井の高さ」3.7mを検索値として追加した。他の新規区画は天井高を要確認のままとし、舞台・プロセニアム・建物高さを転用していない。
 - Validated and deployed Wave 12 to the existing public site (version 57); the established custom domain returned the site response.
+- Added four official-source-backed Kagawa facilities — 善通寺市民会館、東かがわ市交流プラザ、源内音楽ホール、ユープラザうたづ — and 26 searchable spaces, increasing the national total to 527 facilities and 1,923 spaces. The sources are the official pages of 善通寺市、東かがわ市交流プラザ、さぬき市、宇多津町振興財団.
+- No Kagawa ceiling value was added to the searchable filter. All new room ceiling values remain unknown; no stage, proscenium, or building-height statement was used as a ceiling value.
 
 ## Verification
 
-- Wave 12 audit and validation passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 523 venues and 2,823 price observations.
-- Current depth report: 652 candidate gaps and 606 space gaps. Shimane is 12 candidates, 6 municipalities, and 37 spaces; Kagawa, Fukuoka, Nagasaki, and Okinawa now form the lowest candidate-depth group at 8 candidates.
+- Wave 13 audit and validation passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 527 venues and 2,823 price observations.
+- Current depth report: 648 candidate gaps and 580 space gaps. Kagawa is 12 candidates, 8 municipalities, and 41 spaces; Fukuoka, Nagasaki, and Okinawa now form the lowest candidate-depth group at 8 candidates.
 
 ## Pre-existing State Preserved
 
