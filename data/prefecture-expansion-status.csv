@@ -16,7 +16,7 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 新潟県,甲信越,13,10,40,19,27,5,12,5,11,foundation_plus
 富山県,北陸,16,13,97,25,20,3,9,2,0,expanding
 石川県,北陸,15,13,62,34,27,3,10,2,0,expanding
-福井県,北陸,12,9,64,20,4,0,13,6,0,foundation_plus
+福井県,北陸,16,13,92,29,4,0,9,2,0,expanding
 山梨県,甲信越,19,15,84,34,44,2,6,0,0,expanding
 長野県,甲信越,14,12,74,34,45,8,11,3,0,foundation_plus
 岐阜県,東海,14,8,81,41,28,2,11,7,0,foundation_plus
