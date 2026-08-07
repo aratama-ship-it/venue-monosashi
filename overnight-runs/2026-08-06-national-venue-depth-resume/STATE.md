@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 75 — Shizuoka official-source expansion (public deployment pending).
+- Current wave: Wave 76 — Tottori official-source expansion (next).
 
 ## Baseline
 
@@ -270,7 +270,8 @@
 - Wave 75 source data: added four official-source-backed Shizuoka facilities — 富士市文化会館（ロゼシアター）（富士市）、長岡総合会館（アクシスかつらぎ）（伊豆の国市）、牧之原市多目的体育館（牧之原市）、森町文化会館（ミキホール）（森町） — and 57 independently searchable spaces. 静岡県 is now 19 candidates, 16 municipalities, and 118 spaces; national totals are 780 candidates and 3,640 spaces. Remaining candidate and space deficits are 395 and 34.
 - Official sources: 富士市・富士市文化振興財団、伊豆の国市、牧之原市、森町の公開施設案内を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Published stage and proscenium heights were not converted to ceiling data, and all unreported conditions remain `要確認`.
 - Wave 75 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` is to be restored before commit and deployment.
-- Next action: restore tracked build output, commit and deploy the validated Wave 75 source, then verify the Sites and custom-domain responses.
+- Wave 75 deployment passed: source commit `c8740ee9b18309fac5572d3354119f124c5d18e5` was pushed to the authorized Sites repository; production version 120 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=c8740ee` returned the established site marker. Tracked `web/dist` output was restored.
+- Next action: research and integrate the next lowest-depth official-source wave for 鳥取県.
 
 - Wave 74 source data: added four official-source-backed Fukushima facilities — 喜多方プラザ文化センター（喜多方市）、国見町観月台文化センター（国見町）、矢吹町文化センター（矢吹町）、桑折町中央公民館（イコーゼ！）（桑折町） — and 38 independently searchable spaces. 福島県 is now 19 candidates, 15 municipalities, and 114 spaces; national totals are 776 candidates and 3,583 spaces. Remaining candidate and space deficits are 399 and 34.
 - Official sources: 喜多方プラザ文化センター公式運営者、国見町、矢吹町、桑折町の公開施設案内・予約情報を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Published stage and proscenium heights were not converted to ceiling data, and all unreported conditions remain `要確認`.
