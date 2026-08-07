@@ -233,7 +233,8 @@
 - Wave 48 verification and deployment passed: `npm run validate` passed with only the pre-existing historical-record warning; source commit `08d5ac1e19e808049301efb1bf1ccee0f9ee63b6` was pushed to the authorized Sites source repository, production version 93 deployed successfully, and the Sites URL plus `https://venue.art-monosashi.com/?release=08d5ac1` returned the established marker. Tracked `web/dist` output was restored.
 - Wave 49 source data: added four official-source-backed Miyagi facilities — 栗原文化会館（アポロプラザ）、気仙沼中央公民館、槻木生涯学習センター（槻木文化センター）、大張まちづくりセンター — and 30 searchable spaces. Miyagi is now 16 candidates, 12 municipalities, and 79 spaces.
 - Official sources: 栗原市、気仙沼市、柴田町、丸森町。Only explicit capacities and floor areas were recorded. No ceiling or price value was inferred; all unreported conditions remain `要確認`.
-- Wave 49 local verification passed: app-data generation, audit, depth-report generation, and whitespace check passed with only the pre-existing historical-record warning. `npm run validate`, source commit, public deployment, and custom-domain verification remain to be completed.
+- Wave 49 local verification passed: app-data generation, audit, depth-report generation, and whitespace check passed with only the pre-existing historical-record warning.
+- Wave 49 verification and deployment passed: `npm run validate` passed with only the pre-existing historical-record warning; source commit `e005b69a674ccca429b79a9d256086a78eb469fc` was pushed to the authorized Sites source repository, production version 94 deployed successfully, and the Sites URL plus `https://venue.art-monosashi.com/?release=e005b69` returned the established marker. Tracked `web/dist` output was restored.
 - Research one bounded official-source wave for 栃木県, the next lowest candidate-depth prefecture at 12 candidates, then regenerate all reports and deploy after validation.
 
 ## Blockers
