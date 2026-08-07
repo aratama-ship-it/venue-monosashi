@@ -270,6 +270,7 @@
 - Wave 60 source data: added four official-source-backed Okinawa facilities — 石垣市民会館、宮古島市文化ホール（マティダ市民劇場）、かでな文化センター、読谷村文化センター（鳳ホール・ふれあい交流館） — and 31 independently searchable spaces. Okinawa is now 16 candidates, 11 municipalities, and 56 spaces.
 - Official sources: 石垣市、宮古島市、嘉手納町、読谷村。Only source-explicit capacity and area values were recorded. The Matida theater's stage height was not used as a ceiling value, and no price observation was added; all unreported conditions remain `要確認`.
 - Wave 60 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before source commit and deployment.
+- Wave 60 deployment is pending: the authorization gate rejected the external Git push to the Sites repository despite the prepared, validated source commit. No alternate push or deployment was attempted. Await a fresh destination-specific approval before deployment; research for the next Niigata wave may continue read-only.
 - Next wave: research one bounded official-source wave for 新潟県, the next lowest candidate-depth prefecture at 13 candidates.
 
 - Wave 59 source data: added four official-source-backed Nagasaki facilities — 島原文化会館、五島市立福江文化会館、西彼教育文化センター、松浦市文化会館 — and 19 independently searchable spaces. Nagasaki is now 16 candidates, 10 municipalities, and 53 spaces.
