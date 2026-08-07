@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 73 — Saga official-source expansion (deployment in progress).
+- Current wave: Wave 74 — Fukushima official-source expansion (next).
 
 ## Baseline
 
@@ -270,7 +270,8 @@
 - Wave 73 source data: added four official-source-backed Saga facilities — 吉野ヶ里町文化体育館（吉野ヶ里町）、基山町総合体育館（基山町）、玄海町社会体育館（玄海町）、みやき町中原体育館（みやき町） — and 22 independently searchable spaces. 佐賀県 is now 18 candidates, 16 municipalities, and 76 spaces; national totals are 772 candidates and 3,545 spaces. Remaining candidate and space deficits are 403 and 34.
 - Official sources: 吉野ヶ里町、基山町、玄海町、みやき町の公開施設案内・予約情報を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Stage and reservation-zone labels were not converted to ceiling data, and all unreported conditions remain `要確認`.
 - Wave 73 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before commit and deployment.
-- Next step: deploy the validated Wave 73 source commit, then continue with 福島県.
+- Wave 73 deployment passed: source commit `d0d652c36008b505845af413413ca5bac23db81b` was pushed to the authorized Sites repository; production version 118 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=d0d652c` returned the established site marker. Tracked `web/dist` output was restored.
+- Next wave: research and integrate the lowest-depth official-source wave for 福島県.
 
 - Wave 72 source data: added four official-source-backed Kagoshima facilities — 金峰文化センター（南さつま市）、コミュニティセンター知覧文化会館（南九州市）、阿久根市民交流センター（風テラスあくね）（阿久根市）、西之表市民会館（西之表市） — and 40 independently searchable spaces. 鹿児島県 is now 18 candidates, 15 municipalities, and 99 spaces; national totals are 768 candidates and 3,523 spaces. Remaining candidate and space deficits are 407 and 34.
 - Official sources: 南さつま市、南九州市、阿久根市、西之表市の現行公開資料を使用。Only source-explicit capacity and area values were recorded; no ceiling height or price observation was inferred. Stage heights and capacity ranges were not converted to searchable values, and all unreported conditions remain `要確認`.
