@@ -241,8 +241,9 @@
 - Wave 50 deployment passed: source commit `d6ae1dc322fad721c73d21bdc98ff12cd03b1fd8` was pushed to the authorized Sites source repository; production version 95 deployed successfully, and both `https://venue-monosashi.juggler-arata.chatgpt.site` and `https://venue.art-monosashi.com/?release=d6ae1dc` returned the established site marker. Tracked `web/dist` output was restored.
 - Wave 51 source data: added four official-source-backed Toyama facilities — 氷見市芸術文化館、入善町民会館（コスモホール）、舟橋会館、戸出コミュニティセンター — and 48 searchable spaces. Toyama is now 16 candidates, 13 municipalities, and 97 spaces.
 - Official sources: 氷見市文化振興財団、入善町、舟橋村、高岡市。Only explicit capacity and area values were recorded. 氷見市芸術文化館のピロティ高さ5mと入善町民会館の舞台高さ7.8mは室内天井高ではないため検索値に流用せず、価格は追加していない。
-- Wave 51 local verification passed: app-data generation, audit, depth-report generation, whitespace check, and `npm run validate` passed with only the pre-existing historical-record warning. Source commit, public deployment, and custom-domain verification are next.
-- Research one bounded official-source wave for 福井県, the next lowest candidate-depth prefecture at 12 candidates, after Wave 51 deployment is checkpointed.
+- Wave 51 local verification passed: app-data generation, audit, depth-report generation, whitespace check, and `npm run validate` passed with only the pre-existing historical-record warning.
+- Wave 51 deployment passed: source commit `c6c9e18b66c90733272671a46d0ad7cd84e042be` was pushed to the authorized Sites source repository; production version 96 deployed successfully, and both `https://venue-monosashi.juggler-arata.chatgpt.site` and `https://venue.art-monosashi.com/?release=c6c9e18` returned the established site marker. Tracked `web/dist` output was restored.
+- Research one bounded official-source wave for 福井県, the next lowest candidate-depth prefecture at 12 candidates.
 
 ## Blockers
 
