@@ -4,14 +4,14 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-07 Asia/Tokyo
-- Current wave: Wave 44 — Yamaguchi official-source expansion (next).
+- Current wave: Wave 45 — Tokushima official-source expansion (next).
 
 ## Baseline
 
 - Git branch and commit: `agent/add-competition-and-small-theater-coverage` at `5c0946bc6e73c553c168f3f8b13468e64790da72`.
-- Data counts: 652 candidate facilities, 2,714 searchable spaces, 2,823 price observations, and 222 operation rows.
-- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 523 candidates and 198 spaces; municipality deficit is measured by the generated report.
-- Canonical hashes: `candidate-venues.csv` `1dae0d71942a30d7e8b8de3b78cded22421141abc0bd8d2faf1f77b5e7266877`; `venue-details.csv` `2f8b632fa172c0aff2956b7dd5de65eb217a108d9271a119a23daaacef4021f0`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
+- Data counts: 656 candidate facilities, 2,731 searchable spaces, 2,823 price observations, and 222 operation rows.
+- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 519 candidates and 198 spaces; municipality deficit is measured by the generated report.
+- Canonical hashes: `candidate-venues.csv` `0a5035715ea5a4e10ad6586e861912e96c92ca01441f998ca127701e9f687aeb`; `venue-details.csv` `c9e3e9d7f756d897f5c45966a5b479eeab67fb97cc0070a20e851f38ed32c0c8`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
 
@@ -211,7 +211,11 @@
 - Official sources: 湯梨浜町、三朝町、南部町、智頭町。Explicit capacities and floor areas only were recorded. No ceiling or price observation was added; all unreported conditions remain `要確認`.
 - Wave 43 verification and deployment passed: `npm run validate` passed with only the pre-existing historical-record warning; source commit `cb805ffc7a5621e88c6859d0554f32a71943d608` was pushed to the authorized Sites source repository, production version 88 deployed successfully, and the Sites URL plus `https://venue.art-monosashi.com/?release=cb805ff` returned the established marker. Tracked `web/dist` output was restored.
 
-- Research one bounded official-source wave for 山口県, the next lowest candidate-depth prefecture at 11 candidates, then regenerate all reports and deploy after validation.
+- Wave 44 source data: added four official-source-backed Yamaguchi facilities — 光市民ホール、長門市文化会館 ラポールゆや、柳東文化会館、和木町文化会館 — and 17 independently searchable spaces. Yamaguchi is now 15 candidates, 14 municipalities, and 76 spaces.
+- Official sources: 光市、長門市、柳井市、和木町。Explicit room areas only were recorded; no ceiling or price observation was added and all unreported conditions remain `要確認`.
+- Wave 44 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-record warning. `npm run validate`, source commit, public deployment, and custom-domain verification remain to be completed.
+
+- Research one bounded official-source wave for 徳島県, the next lowest candidate-depth prefecture at 11 candidates, then regenerate all reports and deploy after validation.
 
 ## Blockers
 
