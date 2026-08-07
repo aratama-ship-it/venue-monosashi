@@ -4,14 +4,14 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-07 Asia/Tokyo
-- Current wave: Wave 47 — Miyazaki official-source expansion (next).
+- Current wave: Wave 48 — Aomori official-source expansion (next).
 
 ## Baseline
 
 - Git branch and commit: `agent/add-competition-and-small-theater-coverage` at `5c0946bc6e73c553c168f3f8b13468e64790da72`.
-- Data counts: 664 candidate facilities, 2,776 searchable spaces, 2,823 price observations, and 222 operation rows.
-- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 511 candidates and 182 spaces; municipality deficit is measured by the generated report.
-- Canonical hashes: `candidate-venues.csv` `5b9b301ef9921fe40b6d1d2614e8140f6d435bfd7286a6c82150d0160ca4627a`; `venue-details.csv` `aabfd1bd63914d07d8d99ad6bb7d549b027182ee0186a738c9f9732f7956703c`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
+- Data counts: 668 candidate facilities, 2,801 searchable spaces, 2,823 price observations, and 222 operation rows.
+- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 507 candidates and 182 spaces; municipality deficit is measured by the generated report.
+- Canonical hashes: `candidate-venues.csv` `d151e63f0608e17e271f1d8fbf67f8fa9d997cfaec019661bb551f3528c643f4`; `venue-details.csv` `9965085334688ea2677b84f9d6a3f5310187eda626a2a6499342ed60ebd97327`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
 
@@ -223,7 +223,10 @@
 - Official sources: 津久見市、杵築市、竹田市、臼杵市。Only explicit capacity, area, and the official キナーレ ceiling height were recorded. Stage heights were not converted to ceiling values, and no price observation was added; all unreported conditions remain `要確認`.
 - Wave 46 verification and deployment passed: `npm run validate` passed with only the pre-existing historical-record warning; source commit `7b6391480e81a2ef639c8c684b2a269ec80f70e7` was pushed to the authorized Sites source repository, production version 91 deployed successfully, and the Sites URL plus `https://venue.art-monosashi.com/?release=7b63914` returned the established marker. Tracked `web/dist` output was restored.
 
-- Research one bounded official-source wave for 宮崎県, the next lowest candidate-depth prefecture at 11 candidates, then regenerate all reports and deploy after validation.
+- Wave 47 source data: added four official-source-backed Miyazaki facilities — サンA川南文化ホール、木城町総合交流センター リバリス、新富町文化会館 ルピナスみらい、綾町中央公民館・文化ホール — and 25 searchable spaces. Miyazaki is now 15 candidates, 14 municipalities, and 78 spaces.
+- Official sources: 川南町、木城町、新富町と新富町文化会館公式運営者、綾町。Only explicit capacities and floor areas were recorded. The 800 main-hall seats at ルピナスみらい exclude the separately stated parent and wheelchair spaces; no ceiling or price value was inferred, and all unreported conditions remain `要確認`.
+- Wave 47 local verification passed: app-data generation, audit, depth-report generation, and whitespace check passed with only the pre-existing historical-record warning. `npm run validate`, source commit, public deployment, and custom-domain verification remain to be completed.
+- Research one bounded official-source wave for 青森県, the next lowest candidate-depth prefecture at 12 candidates, then regenerate all reports and deploy after validation.
 
 ## Blockers
 
