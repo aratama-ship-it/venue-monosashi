@@ -256,6 +256,7 @@
 - Wave 54 source data: added four official-source-backed Kyoto facilities — 宇治市文化センター、ガレリアかめおか、木津川市中央交流会館（いずみホール）、南丹市園部文化会館（アスエルそのべ） — and 18 independently searchable spaces. Kyoto is now 16 candidates, 9 municipalities, and 90 spaces.
 - Official sources: 宇治市、亀岡市、木津川市、南丹市。Only explicit capacity values were recorded. Published stage-opening and building/plan dimensions were not converted to ceiling data; no price observation was added and all unreported conditions remain `要確認`.
 - Wave 54 local verification passed: app-data generation, audit, depth-report generation, whitespace check, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before commit and deployment.
+- Wave 54 deployment passed: source commit `19a428f578ad9e8bbd684bbf6c9aae421b3b7982` was pushed to the authorized Sites source repository; production version 99 deployed successfully, and both `https://venue-monosashi.juggler-arata.chatgpt.site` and `https://venue.art-monosashi.com/?release=19a428f` returned the established site marker. Tracked `web/dist` output was restored.
 - Research one bounded official-source wave for 兵庫県, the next lowest candidate-depth prefecture at 12 candidates.
 
 ## Blockers
