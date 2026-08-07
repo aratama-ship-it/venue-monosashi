@@ -267,6 +267,11 @@
 
 ## Blockers
 
+- Wave 59 source data: added four official-source-backed Nagasaki facilities — 島原文化会館、五島市立福江文化会館、西彼教育文化センター、松浦市文化会館 — and 19 independently searchable spaces. Nagasaki is now 16 candidates, 10 municipalities, and 53 spaces.
+- Official sources: 島原市、五島市、西海市、松浦市。Only source-explicit capacity and area values were recorded. No ceiling height or price observation was inferred; all unreported conditions remain `要確認`.
+- Wave 59 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before source commit and deployment.
+- Next wave: research one bounded official-source wave for 沖縄県, the next lowest candidate-depth prefecture at 12 candidates.
+
 - Wave 58 source data: added four official-source-backed Fukuoka facilities — 宗像ユリックス、筑紫野市文化会館、ユメニティのおがた、柳川市民文化会館 水都やながわ — and 43 searchable spaces. Fukuoka is now 16 candidates, 11 municipalities, and 68 spaces.
 - Official sources: 宗像ユリックス公式運営者、筑紫野市文化振興財団、直方市及びユメニティのおがた指定管理者、柳川市民文化会館公式運営者。Only source-explicit capacity, floor area, and the exhibition gallery's explicit ceiling height were recorded. Stage/proscenium heights were not converted to ceiling values, and no price observation was added; all unreported conditions remain `要確認`.
 - Wave 58 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output is restored before source commit and deployment.
