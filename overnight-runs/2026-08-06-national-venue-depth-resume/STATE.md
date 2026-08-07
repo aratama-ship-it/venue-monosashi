@@ -267,6 +267,11 @@
 
 ## Blockers
 
+- Wave 61 source data: added four official-source-backed Niigata facilities — 新発田市民文化会館、たいぶん（三条市体育文化会館）、胎内市産業文化会館、見附市文化ホール アルカディア — and 24 independently searchable spaces. Niigata is now 17 candidates, 14 municipalities, and 64 spaces.
+- Official sources: 新発田市、三条市、胎内市、見附市。Only source-explicit capacity and area values were recorded. No ceiling height or price observation was inferred; all unreported conditions remain `要確認`.
+- Wave 61 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before source commit and deployment.
+- Next wave: integrate the ready official-source wave for 岡山県.
+
 - Wave 60 source data: added four official-source-backed Okinawa facilities — 石垣市民会館、宮古島市文化ホール（マティダ市民劇場）、かでな文化センター、読谷村文化センター（鳳ホール・ふれあい交流館） — and 31 independently searchable spaces. Okinawa is now 16 candidates, 11 municipalities, and 56 spaces.
 - Official sources: 石垣市、宮古島市、嘉手納町、読谷村。Only source-explicit capacity and area values were recorded. The Matida theater's stage height was not used as a ceiling value, and no price observation was added; all unreported conditions remain `要確認`.
 - Wave 60 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before source commit and deployment.

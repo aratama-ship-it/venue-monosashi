@@ -281,3 +281,11 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next lowest-depth wave is Niigata.
 - Deployment pending: the external Git push to the Sites source repository was rejected by the authorization gate. The validated source commit remains local; no workaround or alternate external destination was used.
 - Deployment passed after fresh user authorization: source commit `d2f266aef72e79ab34d18cedb86c017fd480fa8f` was pushed to the authorized Sites repository; production version 105 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=d2f266a` returned the established site marker after deployment. Tracked `web/dist` output was restored.
+
+## Wave 61 — Niigata official-source expansion
+
+- Added four candidates: 新発田市民文化会館（新発田市）、たいぶん（三条市体育文化会館）（三条市）、胎内市産業文化会館（胎内市）、見附市文化ホール アルカディア（見附市）。
+- Added 24 independently searchable spaces. 新潟県 is now 17 candidates, 14 municipalities, and 64 spaces; national totals are 724 candidates and 3,206 spaces. Remaining candidate and space deficits are 451 and 66.
+- Official source status: 新発田市、三条市、胎内市、見附市の公式施設資料を使用。Only source-explicit capacity and area values were recorded; no ceiling height or price observation was inferred. Current availability and unreported values remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next ready wave is Okayama.
