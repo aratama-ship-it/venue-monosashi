@@ -4,14 +4,14 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-07 Asia/Tokyo
-- Current wave: Wave 54 — Kyoto official-source expansion (next).
+- Current wave: Wave 55 — Hyogo official-source expansion (next).
 
 ## Baseline
 
 - Git branch and commit: `agent/add-competition-and-small-theater-coverage` at `5c0946bc6e73c553c168f3f8b13468e64790da72`.
-- Data counts: 692 candidate facilities, 3,005 searchable spaces, 2,823 price observations, and 222 operation rows.
-- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 483 candidates and 170 spaces; municipality deficit is measured by the generated report.
-- Canonical hashes: `candidate-venues.csv` `ee8b6a3d8c61ac5147186215ec5ed6bfd1d549ac6900accde1ad29df7444b9ce`; `venue-details.csv` `d3ee265b9c5bc7084503824503c89267a7c9852d9b89166ccfe16d020001174c`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
+- Data counts: 696 candidate facilities, 3,023 searchable spaces, 2,823 price observations, and 222 operation rows.
+- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 479 candidates and 170 spaces; municipality deficit is measured by the generated report.
+- Canonical hashes: `candidate-venues.csv` `41819caaaabe1d60bf3d52aa7308937ce4aee77b7329e64399964290c1d4200a`; `venue-details.csv` `146cdff0688e71def6b6446c4a8b9e286616708217b902d2b0229e8baec04400`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
 
@@ -252,6 +252,11 @@
 - Wave 53 local verification passed: app-data generation, audit, depth-report generation, whitespace check, and `npm run validate` passed with only the pre-existing historical-record warning.
 - Wave 53 deployment passed: source commit `b83c906ecd9ec4d3508ce20d532b40f45d113587` was pushed to the authorized Sites source repository; production version 98 deployed successfully, and both `https://venue-monosashi.juggler-arata.chatgpt.site` and `https://venue.art-monosashi.com/?release=b83c906` returned the established site marker. Tracked `web/dist` output was restored.
 - Research one bounded official-source wave for 京都府, the next lowest candidate-depth prefecture at 12 candidates.
+
+- Wave 54 source data: added four official-source-backed Kyoto facilities — 宇治市文化センター、ガレリアかめおか、木津川市中央交流会館（いずみホール）、南丹市園部文化会館（アスエルそのべ） — and 18 independently searchable spaces. Kyoto is now 16 candidates, 9 municipalities, and 90 spaces.
+- Official sources: 宇治市、亀岡市、木津川市、南丹市。Only explicit capacity values were recorded. Published stage-opening and building/plan dimensions were not converted to ceiling data; no price observation was added and all unreported conditions remain `要確認`.
+- Wave 54 local verification passed: app-data generation, audit, depth-report generation, whitespace check, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before commit and deployment.
+- Research one bounded official-source wave for 兵庫県, the next lowest candidate-depth prefecture at 12 candidates.
 
 ## Blockers
 

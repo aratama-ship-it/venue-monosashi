@@ -24,7 +24,7 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 愛知県,東海,16,12,114,61,38,6,9,3,0,expanding
 三重県,東海,25,15,79,49,48,22,0,0,0,reference_depth
 滋賀県,近畿,16,9,43,22,21,0,9,6,8,expanding
-京都府,近畿,12,6,72,47,47,2,13,9,0,foundation_plus
+京都府,近畿,16,9,90,62,47,2,9,6,0,expanding
 大阪府,近畿,17,4,43,27,28,15,8,11,8,expanding
 兵庫県,近畿,12,6,53,32,25,21,13,9,0,foundation_plus
 奈良県,近畿,15,13,69,42,39,6,10,2,0,expanding
