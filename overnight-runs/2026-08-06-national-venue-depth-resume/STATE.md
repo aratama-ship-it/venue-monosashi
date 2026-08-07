@@ -267,6 +267,11 @@
 
 ## Blockers
 
+- Wave 70 source data: added four official-source-backed Kochi facilities — 佐川町立桜座（佐川町）、のいちふれあいセンター（香南市）、土佐清水市立中央公民館（土佐清水市）、窪川四万十会館（四万十町） — and 25 independently searchable spaces. 高知県 is now 18 candidates, 11 municipalities, and 102 spaces; national totals are 760 candidates and 3,454 spaces. Remaining candidate and space deficits are 415 and 34.
+- Official sources: 佐川町立桜座公式運営者、香南市、土佐清水市立中央公民館、四万十町。Only source-explicit capacity and area values were recorded; no ceiling height or price observation was inferred. Approximate capacity figures were retained as notes rather than numeric filters, and all unreported conditions remain `要確認`.
+- Wave 70 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before source commit and deployment.
+- Batch result: all ten requested prefectural waves (新潟・岡山・愛媛・北海道・神奈川・長野・岐阜・和歌山・広島・高知) are source-integrated and awaiting or completed public deployment checkpoints.
+
 - Wave 69 source data: added four official-source-backed Hiroshima facilities — 三次市民ホール きりり（三次市）、みどりしんきんホール（庄原市民会館）（庄原市）、アゼリアおおたけ（大竹会館・アゼリアホール）（大竹市）、せら文化センター（世羅町） — and 29 independently searchable spaces. 広島県 is now 18 candidates, 11 municipalities, and 58 spaces; national totals are 756 candidates and 3,429 spaces. Remaining candidate and space deficits are 419 and 34.
 - Official sources: 三次市民ホール指定管理者、庄原市民会館指定管理者、大竹市、世羅町。Only source-explicit capacity and area values were recorded; no ceiling height or price observation was inferred. Stage and loading dimensions were not converted into ceiling data. The current 大竹会館緞帳・ステージ safety restriction is retained as a caveat.
 - Wave 69 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before source commit and deployment.

@@ -362,3 +362,11 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next ready wave is Kochi.
 - Deployment passed: source commit `d3630336cddbd11044ca2f432b700a71aa5edd1c` was pushed to the authorized Sites repository; production version 114 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=d363033` returned the established site marker after deployment. Tracked `web/dist` output was restored.
+
+## Wave 70 — Kochi official-source expansion
+
+- Added four candidates: 佐川町立桜座（佐川町）、のいちふれあいセンター（香南市）、土佐清水市立中央公民館（土佐清水市）、窪川四万十会館（四万十町）。
+- Added 25 independently searchable spaces. 高知県 is now 18 candidates, 11 municipalities, and 102 spaces; national totals are 760 candidates and 3,454 spaces. Remaining candidate and space deficits are 415 and 34.
+- Official source status: 佐川町立桜座公式運営者、香南市、土佐清水市立中央公民館、四万十町の公式施設資料を使用。Only source-explicit capacity and area values were added; no ceiling height or price observation was inferred. Approximate capacities remain notes rather than numeric filters, and all unreported conditions remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. This completes the requested ten-prefecture batch.
