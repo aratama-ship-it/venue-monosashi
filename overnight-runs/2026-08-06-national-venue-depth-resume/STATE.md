@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 72 — Kagoshima official-source expansion (deployment in progress).
+- Current wave: Wave 73 — Saga official-source expansion (next).
 
 ## Baseline
 
@@ -270,7 +270,8 @@
 - Wave 72 source data: added four official-source-backed Kagoshima facilities — 金峰文化センター（南さつま市）、コミュニティセンター知覧文化会館（南九州市）、阿久根市民交流センター（風テラスあくね）（阿久根市）、西之表市民会館（西之表市） — and 40 independently searchable spaces. 鹿児島県 is now 18 candidates, 15 municipalities, and 99 spaces; national totals are 768 candidates and 3,523 spaces. Remaining candidate and space deficits are 407 and 34.
 - Official sources: 南さつま市、南九州市、阿久根市、西之表市の現行公開資料を使用。Only source-explicit capacity and area values were recorded; no ceiling height or price observation was inferred. Stage heights and capacity ranges were not converted to searchable values, and all unreported conditions remain `要確認`.
 - Wave 72 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before commit and deployment.
-- Deployment is next: commit named source files, deploy this validated source to the authorized Sites project, and verify the Sites and custom-domain responses before starting 佐賀県.
+- Wave 72 deployment passed: source commit `352750a3e27ab8c3b7a4028e5ee0e166af6f2659` was pushed to the authorized Sites repository; production version 117 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=352750a` returned the established site marker. Tracked `web/dist` output was restored.
+- Next wave: research and integrate the lowest-depth official-source wave for 佐賀県.
 
 - Wave 71 source data: added four official-source-backed Kumamoto facilities — 玉名市民会館（玉名市）、大津町生涯学習センター（文化ホール）（大津町）、阿蘇市阿蘇体育館（阿蘇市）、御船町カルチャーセンター（御船町） — and 29 independently searchable spaces. 熊本県 is now 18 candidates, 15 municipalities, and 96 spaces; national totals are 764 candidates and 3,483 spaces. Remaining candidate and space deficits are 411 and 34.
 - Official sources: 玉名市、大津町、阿蘇市、御船町の現行公開資料を使用。Only source-explicit capacity and area values were recorded; no ceiling height or price observation was inferred. Published stage heights and approximate capacities remain outside searchable filters, and all unreported conditions remain `要確認`.
