@@ -237,7 +237,8 @@
 - Wave 49 verification and deployment passed: `npm run validate` passed with only the pre-existing historical-record warning; source commit `e005b69a674ccca429b79a9d256086a78eb469fc` was pushed to the authorized Sites source repository, production version 94 deployed successfully, and the Sites URL plus `https://venue.art-monosashi.com/?release=e005b69` returned the established marker. Tracked `web/dist` output was restored.
 - Wave 50 source data: added four official-source-backed Tochigi facilities — グリムの館、壬生中央公民館、芳賀町民会館（生涯学習センター祖母井分館）、烏山公民館 — and 21 searchable spaces. Tochigi is now 16 candidates, 14 municipalities, and 64 spaces.
 - Official sources: 下野市、壬生町、芳賀町、那須烏山市。Only explicit capacity and area values were recorded. 芳賀町民会館の舞台高さ8.5m is retained as a note only, not as a ceiling measurement; no price value was added and all unreported conditions remain `要確認`.
-- Wave 50 local verification passed: app-data generation, audit, depth-report generation, whitespace check, and `npm run validate` passed with only the pre-existing historical-record warning. Source commit, public deployment, and custom-domain verification are next.
+- Wave 50 local verification passed: app-data generation, audit, depth-report generation, whitespace check, and `npm run validate` passed with only the pre-existing historical-record warning.
+- Wave 50 deployment passed: source commit `d6ae1dc322fad721c73d21bdc98ff12cd03b1fd8` was pushed to the authorized Sites source repository; production version 95 deployed successfully, and both `https://venue-monosashi.juggler-arata.chatgpt.site` and `https://venue.art-monosashi.com/?release=d6ae1dc` returned the established site marker. Tracked `web/dist` output was restored.
 - Research one bounded official-source wave for 富山県, the next lowest candidate-depth prefecture at 12 candidates, after Wave 50 deployment is checkpointed.
 
 ## Blockers
