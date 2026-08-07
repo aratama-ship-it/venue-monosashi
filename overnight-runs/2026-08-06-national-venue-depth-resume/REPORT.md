@@ -146,6 +146,14 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Wave 40 local validation passed with 0 audit errors and the pre-existing historical-record warning only. Shizuoka is now 15 candidates, 12 municipalities, and 61 spaces; national remaining deficits are 536 candidates and 215 spaces. Deployment remains to be completed.
 - Wave 40 deployment passed: production version 85 was deployed successfully from commit `56a8980cb46c76dd5537a1ec331309ca9e1d1fe3`; the Sites URL and `https://venue.art-monosashi.com/?release=56a8980` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
+- Wave 41 source data: added five official-source-backed Shiga facilities — 大津市民会館、大津市北部地域文化センター、大津市和邇文化センター、ひこね市文化プラザ、草津アミカホール — and 5 searchable spaces, increasing the national total to 644 facilities and 2,665 spaces. Sources are the official pages/documents of 滋賀県 and 草津市.
+- No ceiling or price value was inferred. Explicit capacities only were recorded and all unreported conditions remain `要確認`.
+- Wave 41 validation and deployment passed: source commit `f4360dc2e45181d049139cb1446c9b1345390011` was pushed to the authorized Sites source repository; production version 86 deployed successfully and both the Sites URL and `https://venue.art-monosashi.com/?release=f4360dc` returned the established site marker. Tracked `web/dist` output was restored.
+
+- Wave 42 source data: added four official-source-backed Nara facilities — 葛城市當麻文化会館、葛城市新庄文化会館、五條市立西吉野コミュニティセンター、桜井市まほろばセンター — and 22 searchable spaces, increasing the national total to 648 facilities and 2,687 spaces. Sources are the official pages of 葛城市、五條市、桜井市.
+- Recorded only explicit official capacities and floor areas. The 新庄文化会館 stage height remains a descriptive note, never a ceiling measurement; no price observation was added and all unreported conditions remain `要確認`.
+- Wave 42 local verification passed: app-data generation, audit, depth-report generation, and whitespace check passed with only the pre-existing historical-record warning. Nara is now 15 candidates, 13 municipalities, and 69 spaces; national remaining deficits are 527 candidates and 206 spaces. Deployment remains to be completed.
+
 - Wave 14 audit and validation passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 531 venues and 2,823 price observations.
 - Current depth report: 612 candidate gaps and 405 space gaps. Nagano is now 14 candidates, 12 municipalities, and 74 spaces; the next lowest candidate-depth is 10 candidates in 岐阜県、和歌山県、広島県、高知県、佐賀県、熊本県、鹿児島県.
 

@@ -4,14 +4,14 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-07 Asia/Tokyo
-- Current wave: Wave 41 — Shiga official-source expansion (next).
+- Current wave: Wave 43 — Tottori official-source expansion (next).
 
 ## Baseline
 
 - Git branch and commit: `agent/add-competition-and-small-theater-coverage` at `5c0946bc6e73c553c168f3f8b13468e64790da72`.
-- Data counts: 644 candidate facilities, 2,665 searchable spaces, 2,823 price observations, and 222 operation rows.
-- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 531 candidates and 210 spaces; municipality deficit is measured by the generated report.
-- Canonical hashes: `candidate-venues.csv` `dc2976c8362153223edd203f627b728dbb1a56241b92f284ce842711c89bf9ee`; `venue-details.csv` `2ecac5bbdb107507dbcfa73e463a97d5092ec470ffedeac0480bfab679c0ec32`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
+- Data counts: 648 candidate facilities, 2,687 searchable spaces, 2,823 price observations, and 222 operation rows.
+- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 527 candidates and 206 spaces; municipality deficit is measured by the generated report.
+- Canonical hashes: `candidate-venues.csv` `8ade70d9fa1795d0f25bd4c813bbb2b92829a05c6c759be570f604144d85f254`; `venue-details.csv` `7d45472ef5e46a1a78beebe4bb4dc85db1967dc6ea14d8d02d1ea73eb04f5ebb`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
 
@@ -199,7 +199,15 @@
 - Wave 40 local verification passed: app-data generation, audit, depth-report generation, and whitespace check passed with only the pre-existing historical-record warning. `npm run validate`, source commit, public deployment, and custom-domain verification remain to be completed.
 - Wave 40 deployment passed: production version 85 was deployed successfully from commit `56a8980cb46c76dd5537a1ec331309ca9e1d1fe3`; the Sites URL and `https://venue.art-monosashi.com/?release=56a8980` returned the established site marker. Tracked `web/dist` output was restored after deployment.
 
-- Research one bounded official-source wave for 滋賀県, the next lowest candidate-depth prefecture tied at 11 candidates, then regenerate all reports and deploy after validation.
+- Wave 41 source data: added five official-source-backed Shiga facilities — 大津市民会館、大津市北部地域文化センター、大津市和邇文化センター、ひこね市文化プラザ、草津アミカホール — and 5 independently searchable spaces. Shiga is now 16 candidates, 9 municipalities, and 43 spaces.
+- Official sources: 滋賀県、草津市。Only explicitly published capacities were recorded; no ceiling or price value was inferred and all unreported conditions remain `要確認`.
+- Wave 41 verification and deployment passed: `npm run validate` passed with only the pre-existing historical-record warning; source commit `f4360dc2e45181d049139cb1446c9b1345390011` was pushed to the authorized Sites source repository, production version 86 deployed successfully, and the Sites URL plus `https://venue.art-monosashi.com/?release=f4360dc` returned the established marker. Tracked `web/dist` output was restored.
+
+- Wave 42 source data: added four official-source-backed Nara facilities — 葛城市當麻文化会館、葛城市新庄文化会館、五條市立西吉野コミュニティセンター、桜井市まほろばセンター — and 22 independently searchable spaces. Nara is now 15 candidates, 13 municipalities, and 69 spaces.
+- Official sources: 葛城市、五條市、桜井市。Explicit capacities and floor areas only were recorded. No ceiling or price observation was added; published stage height at 新庄文化会館 remains a note only, and all unreported conditions remain `要確認`.
+- Wave 42 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-record warning. `npm run validate`, source commit, public deployment, and custom-domain verification remain to be completed.
+
+- Research one bounded official-source wave for 鳥取県, the next lowest candidate-depth prefecture at 11 candidates, then regenerate all reports and deploy after validation.
 
 ## Blockers
 
