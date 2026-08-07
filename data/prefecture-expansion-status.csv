@@ -7,7 +7,7 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 山形県,東北,15,13,66,30,30,3,10,2,0,expanding
 福島県,東北,15,11,76,33,21,6,10,4,0,expanding
 茨城県,関東,15,13,66,48,42,2,10,2,0,expanding
-栃木県,関東,12,10,43,32,14,6,13,5,8,foundation_plus
+栃木県,関東,16,14,64,42,22,6,9,1,0,expanding
 群馬県,関東,15,13,75,34,32,3,10,2,0,expanding
 埼玉県,関東,15,13,79,67,40,0,10,2,0,expanding
 千葉県,関東,15,14,68,44,23,2,10,1,0,expanding
