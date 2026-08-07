@@ -308,3 +308,11 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next ready wave is Hokkaido.
 - Deployment passed: source commit `7063ff3a6b6bf070ef7c4c35c20ab83063abb516` was pushed to the authorized Sites repository; production version 108 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=7063ff3` returned the established site marker after deployment. Tracked `web/dist` output was restored.
+
+## Wave 64 — Hokkaido official-source expansion
+
+- Added four candidates: 千歳市民文化センター（北ガス文化ホール）（千歳市）、室ガス文化センター（室蘭市文化センター）（室蘭市）、まなみーる 岩見沢市民会館（岩見沢市）、北広島市芸術文化ホール（花ホール）（北広島市）。
+- Added 27 independently searchable spaces. 北海道 is now 18 candidates, 12 municipalities, and 75 spaces; national totals are 736 candidates and 3,297 spaces. Remaining candidate and space deficits are 439 and 63.
+- Official source status: 千歳市、室蘭市、岩見沢市、北広島市の公式施設資料を使用。Only source-explicit capacity and area values were recorded; no ceiling height or price observation was inferred. Current availability and unreported values remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next ready wave is Kanagawa.
