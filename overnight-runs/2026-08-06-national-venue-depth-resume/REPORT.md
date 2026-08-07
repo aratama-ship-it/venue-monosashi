@@ -353,3 +353,11 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next ready wave is Hiroshima.
 - Deployment passed: source commit `f7c6b679a57ea2857c43193062dcb5c8c3034a56` was pushed to the authorized Sites repository; production version 113 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=f7c6b67` returned the established site marker after deployment. Tracked `web/dist` output was restored.
+
+## Wave 69 — Hiroshima official-source expansion
+
+- Added four candidates: 三次市民ホール きりり（三次市）、みどりしんきんホール（庄原市民会館）（庄原市）、アゼリアおおたけ（大竹会館・アゼリアホール）（大竹市）、せら文化センター（世羅町）。
+- Added 29 independently searchable spaces. 広島県 is now 18 candidates, 11 municipalities, and 58 spaces; national totals are 756 candidates and 3,429 spaces. Remaining candidate and space deficits are 419 and 34.
+- Official source status: 三次市民ホール指定管理者、庄原市民会館指定管理者、大竹市、世羅町の公式施設資料を使用。Only source-explicit capacity and area values were added; no ceiling height or price observation was inferred. Stage and loading dimensions were not converted into ceiling data. 大竹会館の緞帳・ステージ安全確認中の告知を要確認として残した。
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next ready wave is Kochi.

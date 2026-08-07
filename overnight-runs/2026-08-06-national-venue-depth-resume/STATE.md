@@ -267,6 +267,11 @@
 
 ## Blockers
 
+- Wave 69 source data: added four official-source-backed Hiroshima facilities — 三次市民ホール きりり（三次市）、みどりしんきんホール（庄原市民会館）（庄原市）、アゼリアおおたけ（大竹会館・アゼリアホール）（大竹市）、せら文化センター（世羅町） — and 29 independently searchable spaces. 広島県 is now 18 candidates, 11 municipalities, and 58 spaces; national totals are 756 candidates and 3,429 spaces. Remaining candidate and space deficits are 419 and 34.
+- Official sources: 三次市民ホール指定管理者、庄原市民会館指定管理者、大竹市、世羅町。Only source-explicit capacity and area values were recorded; no ceiling height or price observation was inferred. Stage and loading dimensions were not converted into ceiling data. The current 大竹会館緞帳・ステージ safety restriction is retained as a caveat.
+- Wave 69 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before source commit and deployment.
+- Next wave: integrate the ready official-source wave for 高知県.
+
 - Wave 68 source data: added four official-source-backed Wakayama facilities — 紀美野町文化センター（紀美野町）、かつらぎ総合文化会館 あじさいホール（かつらぎ町）、湯浅町役場 なぎホール（湯浅町）、有田川町地域交流センター ALEC（有田川町） — and 14 independently searchable spaces. 和歌山県 is now 18 candidates, 14 municipalities, and 58 spaces; national totals are 752 candidates and 3,400 spaces. Remaining candidate and space deficits are 423 and 56.
 - Official sources: 紀美野町、かつらぎ町、湯浅町、有田川町。Only source-explicit capacity and area values were recorded; no ceiling height or price observation was inferred. Stage dimensions and building sizes were not converted into ceiling or space-area data, and all unreported conditions remain `要確認`.
 - Wave 68 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before source commit and deployment.
