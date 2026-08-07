@@ -229,7 +229,8 @@
 - Wave 47 verification and deployment passed: `npm run validate` passed with only the pre-existing historical-record warning; source commit `d07255cb7e461bbd5f738fa353f4b4389d01e53c` was pushed to the authorized Sites source repository, production version 92 deployed successfully, and the Sites URL plus `https://venue.art-monosashi.com/?release=d07255c` returned the established marker. Tracked `web/dist` output was restored.
 - Wave 48 source data: added four official-source-backed Aomori facilities — 三沢市公会堂・三沢市立中央公民館、おいらせ町民交流センター、七戸中央公民館、三戸町中央公民館 — and 27 searchable spaces. Aomori is now 16 candidates, 14 municipalities, and 90 spaces.
 - Official sources: 三沢市、おいらせ町、七戸町、三戸町。Only explicit capacities and floor areas were recorded. No ceiling or price value was inferred; all unreported conditions remain `要確認`.
-- Wave 48 local verification passed: app-data generation, audit, depth-report generation, and whitespace check passed with only the pre-existing historical-record warning. `npm run validate`, source commit, public deployment, and custom-domain verification remain to be completed.
+- Wave 48 local verification passed: app-data generation, audit, depth-report generation, and whitespace check passed with only the pre-existing historical-record warning.
+- Wave 48 verification and deployment passed: `npm run validate` passed with only the pre-existing historical-record warning; source commit `08d5ac1e19e808049301efb1bf1ccee0f9ee63b6` was pushed to the authorized Sites source repository, production version 93 deployed successfully, and the Sites URL plus `https://venue.art-monosashi.com/?release=08d5ac1` returned the established marker. Tracked `web/dist` output was restored.
 - Research one bounded official-source wave for 宮城県, the next lowest candidate-depth prefecture at 12 candidates, then regenerate all reports and deploy after validation.
 
 ## Blockers
