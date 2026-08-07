@@ -4,14 +4,14 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-07 Asia/Tokyo
-- Current wave: Wave 43 — Tottori official-source expansion (next).
+- Current wave: Wave 44 — Yamaguchi official-source expansion (next).
 
 ## Baseline
 
 - Git branch and commit: `agent/add-competition-and-small-theater-coverage` at `5c0946bc6e73c553c168f3f8b13468e64790da72`.
-- Data counts: 648 candidate facilities, 2,687 searchable spaces, 2,823 price observations, and 222 operation rows.
-- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 527 candidates and 206 spaces; municipality deficit is measured by the generated report.
-- Canonical hashes: `candidate-venues.csv` `8ade70d9fa1795d0f25bd4c813bbb2b92829a05c6c759be570f604144d85f254`; `venue-details.csv` `7d45472ef5e46a1a78beebe4bb4dc85db1967dc6ea14d8d02d1ea73eb04f5ebb`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
+- Data counts: 652 candidate facilities, 2,714 searchable spaces, 2,823 price observations, and 222 operation rows.
+- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 523 candidates and 198 spaces; municipality deficit is measured by the generated report.
+- Canonical hashes: `candidate-venues.csv` `1dae0d71942a30d7e8b8de3b78cded22421141abc0bd8d2faf1f77b5e7266877`; `venue-details.csv` `2f8b632fa172c0aff2956b7dd5de65eb217a108d9271a119a23daaacef4021f0`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
 
@@ -207,7 +207,11 @@
 - Official sources: 葛城市、五條市、桜井市。Explicit capacities and floor areas only were recorded. No ceiling or price observation was added; published stage height at 新庄文化会館 remains a note only, and all unreported conditions remain `要確認`.
 - Wave 42 verification and deployment passed: `npm run validate` passed with only the pre-existing historical-record warning; source commit `6e0fde743f4c781515975ef014d24830aae97ef1` was pushed to the authorized Sites source repository, production version 87 deployed successfully, and the Sites URL plus `https://venue.art-monosashi.com/?release=6e0fde7` returned the established marker. Tracked `web/dist` output was restored.
 
-- Research one bounded official-source wave for 鳥取県, the next lowest candidate-depth prefecture at 11 candidates, then regenerate all reports and deploy after validation.
+- Wave 43 source data: added four official-source-backed Tottori facilities — ハワイアロハホール、三朝町総合文化ホール、南部町公民館（富有まんてんホール）、智頭町総合センター・中央公民館 — and 27 independently searchable spaces. Tottori is now 15 candidates, 12 municipalities, and 70 spaces.
+- Official sources: 湯梨浜町、三朝町、南部町、智頭町。Explicit capacities and floor areas only were recorded. No ceiling or price observation was added; all unreported conditions remain `要確認`.
+- Wave 43 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-record warning. `npm run validate`, source commit, public deployment, and custom-domain verification remain to be completed.
+
+- Research one bounded official-source wave for 山口県, the next lowest candidate-depth prefecture at 11 candidates, then regenerate all reports and deploy after validation.
 
 ## Blockers
 

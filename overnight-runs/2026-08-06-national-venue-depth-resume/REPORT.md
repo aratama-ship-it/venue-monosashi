@@ -172,3 +172,9 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 ## Morning Decisions
 
 - None while the run remains active.
+
+## Latest Wave
+
+- Wave 43 source data: added four official-source-backed Tottori facilities — ハワイアロハホール、三朝町総合文化ホール、南部町公民館（富有まんてんホール）、智頭町総合センター・中央公民館 — and 27 searchable spaces, increasing the national total to 652 facilities and 2,714 spaces. Sources are the official pages of 湯梨浜町、三朝町、南部町、智頭町.
+- Recorded only explicit official capacities and floor areas. No ceiling or price value was inferred; all unreported conditions remain `要確認`.
+- Wave 43 local verification passed: app-data generation, audit, depth-report generation, and whitespace check passed with only the pre-existing historical-record warning. Tottori is now 15 candidates, 12 municipalities, and 70 spaces; national remaining deficits are 523 candidates and 198 spaces. Deployment remains to be completed.
