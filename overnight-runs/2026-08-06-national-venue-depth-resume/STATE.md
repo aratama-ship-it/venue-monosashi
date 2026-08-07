@@ -4,14 +4,14 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-07 Asia/Tokyo
-- Current wave: Wave 49 — Miyagi official-source expansion (next).
+- Current wave: Wave 50 — Tochigi official-source expansion (next).
 
 ## Baseline
 
 - Git branch and commit: `agent/add-competition-and-small-theater-coverage` at `5c0946bc6e73c553c168f3f8b13468e64790da72`.
-- Data counts: 672 candidate facilities, 2,828 searchable spaces, 2,823 price observations, and 222 operation rows.
-- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 503 candidates and 182 spaces; municipality deficit is measured by the generated report.
-- Canonical hashes: `candidate-venues.csv` `5e4bdaa0481db4d1000fd1eb16e147fbf7f9451d752872cf761282e9bc72ecd7`; `venue-details.csv` `6abbb7eb004043320980b7687e0bb9f3946836d414b0b3d4206fa9c8b564a804`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
+- Data counts: 676 candidate facilities, 2,858 searchable spaces, 2,823 price observations, and 222 operation rows.
+- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 499 candidates and 180 spaces; municipality deficit is measured by the generated report.
+- Canonical hashes: `candidate-venues.csv` `38ee424e486d824836c342a763ac727e22105ad4281f68d0525b0d354438ab73`; `venue-details.csv` `a3f248e070ca3e7c6d341f1759947c103836ae138d040143008b335258a435af`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
 
@@ -231,7 +231,10 @@
 - Official sources: 三沢市、おいらせ町、七戸町、三戸町。Only explicit capacities and floor areas were recorded. No ceiling or price value was inferred; all unreported conditions remain `要確認`.
 - Wave 48 local verification passed: app-data generation, audit, depth-report generation, and whitespace check passed with only the pre-existing historical-record warning.
 - Wave 48 verification and deployment passed: `npm run validate` passed with only the pre-existing historical-record warning; source commit `08d5ac1e19e808049301efb1bf1ccee0f9ee63b6` was pushed to the authorized Sites source repository, production version 93 deployed successfully, and the Sites URL plus `https://venue.art-monosashi.com/?release=08d5ac1` returned the established marker. Tracked `web/dist` output was restored.
-- Research one bounded official-source wave for 宮城県, the next lowest candidate-depth prefecture at 12 candidates, then regenerate all reports and deploy after validation.
+- Wave 49 source data: added four official-source-backed Miyagi facilities — 栗原文化会館（アポロプラザ）、気仙沼中央公民館、槻木生涯学習センター（槻木文化センター）、大張まちづくりセンター — and 30 searchable spaces. Miyagi is now 16 candidates, 12 municipalities, and 79 spaces.
+- Official sources: 栗原市、気仙沼市、柴田町、丸森町。Only explicit capacities and floor areas were recorded. No ceiling or price value was inferred; all unreported conditions remain `要確認`.
+- Wave 49 local verification passed: app-data generation, audit, depth-report generation, and whitespace check passed with only the pre-existing historical-record warning. `npm run validate`, source commit, public deployment, and custom-domain verification remain to be completed.
+- Research one bounded official-source wave for 栃木県, the next lowest candidate-depth prefecture at 12 candidates, then regenerate all reports and deploy after validation.
 
 ## Blockers
 
