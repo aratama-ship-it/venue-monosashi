@@ -317,3 +317,11 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next ready wave is Kanagawa.
 - Deployment passed: source commit `3c15363523100354c8685a960bfafd926ee680d8` was pushed to the authorized Sites repository; production version 109 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=3c15363` returned the established site marker after deployment. Tracked `web/dist` output was restored.
+
+## Wave 65 — Kanagawa official-source expansion
+
+- Added four candidates: 横須賀市文化会館（横須賀市）、相模女子大学グリーンホール（相模原市文化会館）（相模原市）、やまと芸術文化ホール（大和市）、海老名市文化会館・海老名市民ギャラリー（海老名市）。
+- Added 25 independently searchable spaces. 神奈川県 is now 18 candidates, 11 municipalities, and 118 spaces; national totals are 740 candidates and 3,322 spaces. Remaining candidate and space deficits are 435 and 63.
+- Official source status: 横須賀市、相模原市、各公式運営者の施設資料を使用。Only source-explicit capacity and area values were recorded; no ceiling height or price observation was inferred. 相模女子大学グリーンホールの大ホール定員は可変構成であるため最大値と注記を併記。Current availability and unreported values remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next ready wave is Nagano.
