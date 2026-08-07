@@ -270,6 +270,7 @@
 - Wave 64 source data: added four official-source-backed Hokkaido facilities — 千歳市民文化センター（北ガス文化ホール）、室ガス文化センター（室蘭市文化センター）、まなみーる 岩見沢市民会館、北広島市芸術文化ホール（花ホール） — and 27 independently searchable spaces. Hokkaido is now 18 candidates, 12 municipalities, and 75 spaces.
 - Official sources: 千歳市、室蘭市、岩見沢市、北広島市。Only source-explicit capacity and area values were recorded. No ceiling height or price observation was inferred; all unreported conditions remain `要確認`.
 - Wave 64 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before source commit and deployment.
+- Wave 64 deployment passed: source commit `3c15363523100354c8685a960bfafd926ee680d8` was pushed to the authorized Sites repository; production version 109 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=3c15363` returned the established site marker. Tracked `web/dist` output was restored.
 - Next wave: integrate the ready official-source wave for 神奈川県.
 
 - Wave 63 source data: added four official-source-backed Ehime facilities — 伊予市文化交流センター IYO夢みらい館、内子町文化交流センター スバル、西予市宇和文化会館、新居浜市市民文化センター — and 27 independently searchable spaces. Ehime is now 17 candidates, 12 municipalities, and 85 spaces.
