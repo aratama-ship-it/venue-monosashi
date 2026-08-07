@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 79 — Yamagata official-source expansion (source data validated; public deployment pending).
+- Current wave: Wave 80 — Ibaraki official-source expansion (next).
 
 ## Baseline
 
@@ -415,4 +415,5 @@
 - Official source status: 高畠町、川西町、河北町、東根市の公開施設案内・使用料案内・公式行事カレンダーを使用。Only source-explicit capacity values were recorded; no ceiling height, derived floor area, or price observation was inferred. The サハトべに花 dome diameter was not converted into a floor-area or ceiling value. Current availability and unreported conditions remain `要確認`.
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment pending from the validated source commit. Next wave: Ibaraki official-source expansion after deployment verification.
+- Deployment passed: source commit `946101b909495b093ce0b93a05110988334b0cb3` was pushed to the authorized Sites repository; production version 124 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=946101b` returned the established site marker after deployment. Tracked `web/dist` output was restored.
+- Next wave: Ibaraki official-source expansion.
