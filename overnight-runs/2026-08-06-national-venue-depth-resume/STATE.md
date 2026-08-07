@@ -4,14 +4,14 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-07 Asia/Tokyo
-- Current wave: Wave 56 — Shimane official-source expansion (next).
+- Current wave: Wave 57 — Kagawa official-source expansion (next).
 
 ## Baseline
 
 - Git branch and commit: `agent/add-competition-and-small-theater-coverage` at `5c0946bc6e73c553c168f3f8b13468e64790da72`.
-- Data counts: 700 candidate facilities, 3,051 searchable spaces, 2,823 price observations, and 222 operation rows.
-- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 475 candidates and 170 spaces; municipality deficit is measured by the generated report.
-- Canonical hashes: `candidate-venues.csv` `f87a63a6fb6a446b50f18cfde6b2769162ae5f6d962be1959aecddac94ae5798`; `venue-details.csv` `c9f5243889d32948b6480334644b36a18bbe263b2dade31e7d20105ee1e79cec`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
+- Data counts: 704 candidate facilities, 3,069 searchable spaces, 2,823 price observations, and 222 operation rows.
+- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 471 candidates and 156 spaces; municipality deficit is measured by the generated report.
+- Canonical hashes: `candidate-venues.csv` `2a9fc918776d8144dea948e555fefbf59e2afc52c573a2a28cfa74fa0b3774f7`; `venue-details.csv` `0ec3e3c58e715ab13868907b0d98fe8c6b32e1ccf8d91653174a15746d0c4da6`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
 
@@ -266,5 +266,10 @@
 - Research one bounded official-source wave for 島根県, the next lowest candidate-depth prefecture at 12 candidates.
 
 ## Blockers
+
+- Wave 56 source data: added four official-source-backed Shimane facilities — 江津市総合市民センター（ミルキーウェイホール）、カルチャープラザ仁多、隠岐開発総合センター、六日市基幹集落センター — and 18 searchable spaces. Shimane is now 16 candidates, 10 municipalities, and 55 spaces.
+- Official sources: 江津市、奥出雲町、海士町、吉賀町。Only explicit capacity and floor-area values were recorded. 江津市資料と吉賀町個別施設計画の建物・延床面積、畳数、舞台・建築関連の寸法は区画面積又は天井値へ転用していない。No ceiling or price observation was added; all unreported conditions remain `要確認`.
+- Wave 56 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output is restored before source commit and deployment.
+- Next wave: research one bounded official-source wave for 香川県, the next lowest candidate-depth prefecture at 12 candidates.
 
 - None. The repository safety blocker was cleared by destination-specific user authorization, and Wave 31 deployed successfully without DNS, secret, or account-setting changes.

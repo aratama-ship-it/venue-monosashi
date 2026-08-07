@@ -235,3 +235,11 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Recorded only explicit capacity and area values. No ceiling or price value was inferred; stage and building dimensions were not converted to ceiling data, and all unreported conditions remain `要確認`. Hyogo is now 16 candidates, 10 municipalities, and 81 spaces; national remaining deficits are 475 candidates and 170 spaces.
 - Wave 55 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Deployment checkpoint follows after the source commit and public verification.
 - Wave 55 deployment passed: source commit `625fd65bd4dcbff4563a825711f80b140ddaf73f` was pushed to the authorized Sites source repository; production version 100 deployed successfully, and both `https://venue-monosashi.juggler-arata.chatgpt.site` and `https://venue.art-monosashi.com/?release=625fd65` returned the established site marker. Tracked `web/dist` output was restored.
+
+## Wave 56 — Shimane official-source expansion
+
+- Added four candidates: 江津市総合市民センター（ミルキーウェイホール）（江津市）、カルチャープラザ仁多（奥出雲町）、隠岐開発総合センター（海士町）、六日市基幹集落センター（吉賀町）。
+- Added 18 independently searchable spaces. 島根県 is now 16 candidates, 10 municipalities, and 55 spaces; national totals are 704 candidates and 3,069 spaces. Remaining candidate and space deficits are 471 and 156.
+- Official source status: 江津市公式の施設白書/担当窓口、奥出雲町公式の施設予約案内、海士町公式の施設案内、吉賀町公式個別施設計画を使用。Only source-explicit capacities and areas were added; no ceiling height or price observation was inferred. Current availability and unreported values remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next lowest-depth wave is Kagawa.
