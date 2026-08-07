@@ -217,7 +217,7 @@
 
 - Wave 45 source data: added four official-source-backed Tokushima facilities — 牟岐町海の総合文化センター、板野町歴史文化公園・文化の館、つるぎ町貞光中央公民館、吉野中央ふれあいセンター — and 21 independently searchable spaces. Tokushima is now 15 candidates, 12 municipalities, and 56 spaces.
 - Official sources: 牟岐町、板野町、つるぎ町、阿波市。Only explicit capacity and area values were recorded. The 板野町さくらホール's approximate seat count remains a descriptive note, not a numeric filter value. No ceiling or price observation was added; all unreported conditions remain `要確認`.
-- Wave 45 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-record warning. `npm run validate`, source commit, public deployment, and custom-domain verification remain to be completed.
+- Wave 45 verification and deployment passed: `npm run validate` passed with only the pre-existing historical-record warning; source commit `a1e5cb71474d08dcafa396d75f285cd01f5e7574` was pushed to the authorized Sites source repository, production version 90 deployed successfully, and the Sites URL plus `https://venue.art-monosashi.com/?release=a1e5cb7` returned the established marker. Tracked `web/dist` output was restored.
 
 - Research one bounded official-source wave for 大分県, the next lowest candidate-depth prefecture at 11 candidates, then regenerate all reports and deploy after validation.
 
