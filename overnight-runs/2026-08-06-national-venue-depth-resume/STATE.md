@@ -4,14 +4,14 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-07 Asia/Tokyo
-- Current wave: Wave 58 — Fukuoka official-source expansion (next).
+- Current wave: Wave 59 — Nagasaki official-source expansion (next).
 
 ## Baseline
 
 - Git branch and commit: `agent/add-competition-and-small-theater-coverage` at `5c0946bc6e73c553c168f3f8b13468e64790da72`.
-- Data counts: 708 candidate facilities, 3,089 searchable spaces, 2,823 price observations, and 222 operation rows.
-- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 467 candidates and 146 spaces; municipality deficit is measured by the generated report.
-- Canonical hashes: `candidate-venues.csv` `ca918917c3429af5e27b07ea6f136d680aad605a4687a0168fcf637d19ea7017`; `venue-details.csv` `bc6f8e24333d65c7fe97a3d7830f7d9af6dc7a2a0aa8ce1f4a88cb27512d3f21`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
+- Data counts: 712 candidate facilities, 3,132 searchable spaces, 2,823 price observations, and 222 operation rows.
+- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 463 candidates and 120 spaces; municipality deficit is measured by the generated report.
+- Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
 
@@ -266,6 +266,11 @@
 - Research one bounded official-source wave for 島根県, the next lowest candidate-depth prefecture at 12 candidates.
 
 ## Blockers
+
+- Wave 58 source data: added four official-source-backed Fukuoka facilities — 宗像ユリックス、筑紫野市文化会館、ユメニティのおがた、柳川市民文化会館 水都やながわ — and 43 searchable spaces. Fukuoka is now 16 candidates, 11 municipalities, and 68 spaces.
+- Official sources: 宗像ユリックス公式運営者、筑紫野市文化振興財団、直方市及びユメニティのおがた指定管理者、柳川市民文化会館公式運営者。Only source-explicit capacity, floor area, and the exhibition gallery's explicit ceiling height were recorded. Stage/proscenium heights were not converted to ceiling values, and no price observation was added; all unreported conditions remain `要確認`.
+- Wave 58 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output is restored before source commit and deployment.
+- Next wave: research one bounded official-source wave for 長崎県, the next lowest candidate-depth prefecture at 12 candidates.
 
 - Wave 57 source data: added four official-source-backed Kagawa facilities — 三豊市文化会館マリンウェーブ、まんのう町町民文化ホール、サクラートたどつ（多度津町民会館）、琴平町公会堂 — and 20 searchable spaces. Kagawa is now 16 candidates, 12 municipalities, and 61 spaces.
 - Official sources: 三豊市、まんのう町、多度津町、琴平町。Only source-explicit fixed seating was recorded. 「千席」、固定・移動席の合計、建築寸法及び畳数は検索値に転用していない。No ceiling or price observation was added; all unreported conditions remain `要確認`.

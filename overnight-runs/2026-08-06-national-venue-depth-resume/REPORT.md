@@ -253,3 +253,11 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next lowest-depth wave is Fukuoka.
 - Deployment passed: source commit `3f830ce75002f155e6085b24705e5f239179b34e` was pushed to the authorized Sites repository; production version 102 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=3f830ce` returned the established site marker after deployment. Tracked `web/dist` output was restored.
+
+## Wave 58 — Fukuoka official-source expansion
+
+- Added four candidates: 宗像ユリックス（宗像市）、筑紫野市文化会館（筑紫野市）、ユメニティのおがた（直方市）、柳川市民文化会館 水都やながわ（柳川市）。
+- Added 43 independently searchable spaces. 福岡県 is now 16 candidates, 11 municipalities, and 68 spaces; national totals are 712 candidates and 3,132 spaces. Remaining candidate and space deficits are 463 and 120.
+- Official source status: 宗像ユリックス、筑紫野市文化振興財団、直方市/指定管理者、柳川市民文化会館公式の現行案内を使用。Only source-explicit capacity, area, and one explicit gallery ceiling height were recorded; no stage/proscenium value or price observation was inferred. Current availability and unreported values remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next lowest-depth wave is Nagasaki.
