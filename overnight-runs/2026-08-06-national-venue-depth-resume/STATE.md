@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 71 — Kumamoto official-source expansion (deployment in progress).
+- Current wave: Wave 72 — Kagoshima official-source expansion (next).
 
 ## Baseline
 
@@ -270,7 +270,8 @@
 - Wave 71 source data: added four official-source-backed Kumamoto facilities — 玉名市民会館（玉名市）、大津町生涯学習センター（文化ホール）（大津町）、阿蘇市阿蘇体育館（阿蘇市）、御船町カルチャーセンター（御船町） — and 29 independently searchable spaces. 熊本県 is now 18 candidates, 15 municipalities, and 96 spaces; national totals are 764 candidates and 3,483 spaces. Remaining candidate and space deficits are 411 and 34.
 - Official sources: 玉名市、大津町、阿蘇市、御船町の現行公開資料を使用。Only source-explicit capacity and area values were recorded; no ceiling height or price observation was inferred. Published stage heights and approximate capacities remain outside searchable filters, and all unreported conditions remain `要確認`.
 - Wave 71 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before commit and deployment.
-- Deployment is next: commit named source files, deploy this validated source to the authorized Sites project, and verify the Sites and custom-domain responses before starting 鹿児島県.
+- Wave 71 deployment passed: source commit `ca2ca4f28254411bc489ce41ff5bee483c52af41` was pushed to the authorized Sites repository; production version 116 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=ca2ca4f` returned the established site marker. Tracked `web/dist` output was restored.
+- Next wave: research and integrate the lowest-depth official-source wave for 鹿児島県.
 
 - Wave 70 source data: added four official-source-backed Kochi facilities — 佐川町立桜座（佐川町）、のいちふれあいセンター（香南市）、土佐清水市立中央公民館（土佐清水市）、窪川四万十会館（四万十町） — and 25 independently searchable spaces. 高知県 is now 18 candidates, 11 municipalities, and 102 spaces; national totals are 760 candidates and 3,454 spaces. Remaining candidate and space deficits are 415 and 34.
 - Official sources: 佐川町立桜座公式運営者、香南市、土佐清水市立中央公民館、四万十町。Only source-explicit capacity and area values were recorded; no ceiling height or price observation was inferred. Approximate capacity figures were retained as notes rather than numeric filters, and all unreported conditions remain `要確認`.
