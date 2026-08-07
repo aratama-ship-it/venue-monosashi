@@ -249,8 +249,9 @@
 - Wave 52 deployment passed: source commit `a621ab8adeb52ea37450dcf386535185c3d0fcc5` was pushed to the authorized Sites source repository; production version 97 deployed successfully, and both `https://venue-monosashi.juggler-arata.chatgpt.site` and `https://venue.art-monosashi.com/?release=a621ab8` returned the established site marker. Tracked `web/dist` output was restored.
 - Wave 53 source data: added four official-source-backed Aichi facilities — 岡崎市民会館（あおいホール）、へきしんギャラクシープラザ、にししん文化会館 茶々っとホール、一宮スポーツ文化センター — and 50 searchable spaces. Aichi is now 16 candidates, 12 municipalities, and 114 spaces.
 - Official sources: 岡崎市、安城市、西尾市、一宮市。Only explicit capacities were recorded. No ceiling or price observation was added; no stage or building value was converted to ceiling data, and all unreported conditions remain `要確認`.
-- Wave 53 local verification passed: app-data generation, audit, depth-report generation, whitespace check, and `npm run validate` passed with only the pre-existing historical-record warning. Source commit, public deployment, and custom-domain verification are next.
-- Research one bounded official-source wave for 京都府, the next lowest candidate-depth prefecture at 12 candidates, after Wave 53 deployment is checkpointed.
+- Wave 53 local verification passed: app-data generation, audit, depth-report generation, whitespace check, and `npm run validate` passed with only the pre-existing historical-record warning.
+- Wave 53 deployment passed: source commit `b83c906ecd9ec4d3508ce20d532b40f45d113587` was pushed to the authorized Sites source repository; production version 98 deployed successfully, and both `https://venue-monosashi.juggler-arata.chatgpt.site` and `https://venue.art-monosashi.com/?release=b83c906` returned the established site marker. Tracked `web/dist` output was restored.
+- Research one bounded official-source wave for 京都府, the next lowest candidate-depth prefecture at 12 candidates.
 
 ## Blockers
 
