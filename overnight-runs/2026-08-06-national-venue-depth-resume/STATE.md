@@ -270,6 +270,7 @@
 - Wave 58 source data: added four official-source-backed Fukuoka facilities — 宗像ユリックス、筑紫野市文化会館、ユメニティのおがた、柳川市民文化会館 水都やながわ — and 43 searchable spaces. Fukuoka is now 16 candidates, 11 municipalities, and 68 spaces.
 - Official sources: 宗像ユリックス公式運営者、筑紫野市文化振興財団、直方市及びユメニティのおがた指定管理者、柳川市民文化会館公式運営者。Only source-explicit capacity, floor area, and the exhibition gallery's explicit ceiling height were recorded. Stage/proscenium heights were not converted to ceiling values, and no price observation was added; all unreported conditions remain `要確認`.
 - Wave 58 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output is restored before source commit and deployment.
+- Wave 58 deployment passed: source commit `ce1496692114a88226d2cfbe85df31b39d2f46f1` was pushed to the authorized Sites source repository; production version 103 deployed successfully, and both `https://venue-monosashi.juggler-arata.chatgpt.site` and `https://venue.art-monosashi.com/?release=ce14966` returned the established site marker. Tracked `web/dist` output was restored.
 - Next wave: research one bounded official-source wave for 長崎県, the next lowest candidate-depth prefecture at 12 candidates.
 
 - Wave 57 source data: added four official-source-backed Kagawa facilities — 三豊市文化会館マリンウェーブ、まんのう町町民文化ホール、サクラートたどつ（多度津町民会館）、琴平町公会堂 — and 20 searchable spaces. Kagawa is now 16 candidates, 12 municipalities, and 61 spaces.
