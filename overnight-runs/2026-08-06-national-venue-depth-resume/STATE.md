@@ -221,7 +221,7 @@
 
 - Wave 46 source data: added four official-source-backed Oita facilities — 津久見市民会館、つぶらなカボスアリーナ（杵築市文化体育館）、竹田市総合文化ホール グランツたけた、臼杵市民会館 — and 24 independently searchable spaces. Oita is now 15 candidates, 13 municipalities, and 80 spaces.
 - Official sources: 津久見市、杵築市、竹田市、臼杵市。Only explicit capacity, area, and the official キナーレ ceiling height were recorded. Stage heights were not converted to ceiling values, and no price observation was added; all unreported conditions remain `要確認`.
-- Wave 46 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-record warning. `npm run validate`, source commit, public deployment, and custom-domain verification remain to be completed.
+- Wave 46 verification and deployment passed: `npm run validate` passed with only the pre-existing historical-record warning; source commit `7b6391480e81a2ef639c8c684b2a269ec80f70e7` was pushed to the authorized Sites source repository, production version 91 deployed successfully, and the Sites URL plus `https://venue.art-monosashi.com/?release=7b63914` returned the established marker. Tracked `web/dist` output was restored.
 
 - Research one bounded official-source wave for 宮崎県, the next lowest candidate-depth prefecture at 11 candidates, then regenerate all reports and deploy after validation.
 
