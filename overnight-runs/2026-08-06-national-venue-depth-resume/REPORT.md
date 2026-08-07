@@ -404,6 +404,13 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Official source status: 富士市・富士市文化振興財団、伊豆の国市、牧之原市、森町の公開施設案内を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Published stage and proscenium heights were not converted into ceiling data. Current availability and unreported conditions remain `要確認`.
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` will be restored before deployment.
 - Deployment passed: source commit `c8740ee9b18309fac5572d3354119f124c5d18e5` was pushed to the authorized Sites repository; production version 120 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=c8740ee` returned the established site marker after deployment. Tracked `web/dist` output was restored.
+
+## Wave 76 — Tottori official-source expansion
+
+- Added four candidates: 伯耆町鬼の館（伯耆町）、江府町運動公園総合体育館（江府町）、日南町総合文化センター（日南町）、若桜町立第1町民体育館（若桜町）。
+- Added 19 independently searchable spaces. 鳥取県 is now 19 candidates, 16 municipalities, and 89 spaces; national totals are 784 candidates and 3,659 spaces. Remaining candidate and space deficits are 391 and 34.
+- Official source status: 伯耆町、江府町、日南町、若桜町の公開施設案内・予約対象・利用案内を使用。Only source-explicit capacity values were recorded; no ceiling height, derived floor area, or price observation was inferred. Stage and sports-zone dimensions were not converted into searchable values. Current availability and unreported conditions remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
 - Deployment passed: source commit `a402f5aaa19e9121d83434b4f0f4266dcaacebdd` was pushed to the authorized Sites repository; production version 119 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=a402f5a` returned the established site marker after deployment. Tracked `web/dist` output was restored.
 - Deployment passed: source commit `d0d652c36008b505845af413413ca5bac23db81b` was pushed to the authorized Sites repository; production version 118 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=d0d652c` returned the established site marker after deployment. Tracked `web/dist` output was restored.
 

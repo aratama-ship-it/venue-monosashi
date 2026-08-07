@@ -29,7 +29,7 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 兵庫県,近畿,16,10,81,38,27,21,9,5,0,expanding
 奈良県,近畿,15,13,69,42,39,6,10,2,0,expanding
 和歌山県,近畿,18,14,58,29,19,0,7,1,0,expanding
-鳥取県,中国,15,12,70,41,42,1,10,3,0,expanding
+鳥取県,中国,19,16,89,44,42,1,6,0,0,expanding
 島根県,中国,16,10,55,22,13,3,9,5,0,expanding
 岡山県,中国,17,13,93,37,31,2,8,2,0,expanding
 広島県,中国,18,11,58,29,39,5,7,4,0,expanding
