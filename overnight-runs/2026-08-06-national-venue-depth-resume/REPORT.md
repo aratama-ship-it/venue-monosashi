@@ -380,3 +380,11 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next intended wave is 鹿児島県 after public deployment verification.
 - Deployment passed: source commit `ca2ca4f28254411bc489ce41ff5bee483c52af41` was pushed to the authorized Sites repository; production version 116 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=ca2ca4f` returned the established site marker after deployment. Tracked `web/dist` output was restored.
+
+## Wave 72 — Kagoshima official-source expansion
+
+- Added four candidates: 金峰文化センター（南さつま市）、コミュニティセンター知覧文化会館（南九州市）、阿久根市民交流センター（風テラスあくね）（阿久根市）、西之表市民会館（西之表市）。
+- Added 40 independently searchable spaces. 鹿児島県 is now 18 candidates, 15 municipalities, and 99 spaces; national totals are 768 candidates and 3,523 spaces. Remaining candidate and space deficits are 407 and 34.
+- Official source status: 南さつま市、南九州市、阿久根市、西之表市の公開資料を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Stage heights and capacity ranges were not converted to searchable values. Current availability and unreported conditions remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next intended wave is 佐賀県 after public deployment verification.
