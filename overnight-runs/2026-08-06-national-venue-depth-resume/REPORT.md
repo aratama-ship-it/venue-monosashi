@@ -290,3 +290,11 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next ready wave is Okayama.
 - Deployment passed: source commit `c300f686f2acc5054d5fd3833359ebde2e9f8db7` was pushed to the authorized Sites repository; production version 106 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=c300f68` returned the established site marker after deployment. Tracked `web/dist` output was restored.
+
+## Wave 62 — Okayama official-source expansion
+
+- Added four candidates: 倉敷市芸文館（倉敷市）、新見市新見文化交流館（まなび広場にいみ）（新見市）、高梁総合文化会館（高梁市）、山陽ふれあい公園 総合体育館（赤磐市）。
+- Added 37 independently searchable spaces. 岡山県 is now 17 candidates, 13 municipalities, and 93 spaces; national totals are 728 candidates and 3,243 spaces. Remaining candidate and space deficits are 447 and 66.
+- Official source status: 倉敷市の公式運営者、新見市の公式運営者、高梁市、赤磐市の公式施設資料を使用。Only source-explicit capacity and area values were recorded; no ceiling height or price observation was inferred. Current availability and unreported values remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next ready wave is Ehime.
