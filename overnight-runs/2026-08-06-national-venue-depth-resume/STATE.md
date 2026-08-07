@@ -4,14 +4,14 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-07 Asia/Tokyo
-- Current wave: Wave 51 — Toyama official-source expansion (next).
+- Current wave: Wave 52 — Fukui official-source expansion (next).
 
 ## Baseline
 
 - Git branch and commit: `agent/add-competition-and-small-theater-coverage` at `5c0946bc6e73c553c168f3f8b13468e64790da72`.
-- Data counts: 680 candidate facilities, 2,879 searchable spaces, 2,823 price observations, and 222 operation rows.
-- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 495 candidates and 172 spaces; municipality deficit is measured by the generated report.
-- Canonical hashes: `candidate-venues.csv` `e9950a10940b243ab0d9489ed9804fde04c2d26c16d0ea0a9d5170dbe9123aeb`; `venue-details.csv` `a2f116252c0a7c75c6f4e27d3c184a187de9f8b64cd595fa0ba4066925dfd03d`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
+- Data counts: 684 candidate facilities, 2,927 searchable spaces, 2,823 price observations, and 222 operation rows.
+- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 491 candidates and 170 spaces; municipality deficit is measured by the generated report.
+- Canonical hashes: `candidate-venues.csv` `30cb14600484437aab6dd3098c84c72153aa66f3a698432390b8d48ea19fa76f`; `venue-details.csv` `17bde0d5c601425c0462ef5d21be68f1598786189bf8e0e754b15df8a4f5783e`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
 
@@ -239,7 +239,10 @@
 - Official sources: 下野市、壬生町、芳賀町、那須烏山市。Only explicit capacity and area values were recorded. 芳賀町民会館の舞台高さ8.5m is retained as a note only, not as a ceiling measurement; no price value was added and all unreported conditions remain `要確認`.
 - Wave 50 local verification passed: app-data generation, audit, depth-report generation, whitespace check, and `npm run validate` passed with only the pre-existing historical-record warning.
 - Wave 50 deployment passed: source commit `d6ae1dc322fad721c73d21bdc98ff12cd03b1fd8` was pushed to the authorized Sites source repository; production version 95 deployed successfully, and both `https://venue-monosashi.juggler-arata.chatgpt.site` and `https://venue.art-monosashi.com/?release=d6ae1dc` returned the established site marker. Tracked `web/dist` output was restored.
-- Research one bounded official-source wave for 富山県, the next lowest candidate-depth prefecture at 12 candidates, after Wave 50 deployment is checkpointed.
+- Wave 51 source data: added four official-source-backed Toyama facilities — 氷見市芸術文化館、入善町民会館（コスモホール）、舟橋会館、戸出コミュニティセンター — and 48 searchable spaces. Toyama is now 16 candidates, 13 municipalities, and 97 spaces.
+- Official sources: 氷見市文化振興財団、入善町、舟橋村、高岡市。Only explicit capacity and area values were recorded. 氷見市芸術文化館のピロティ高さ5mと入善町民会館の舞台高さ7.8mは室内天井高ではないため検索値に流用せず、価格は追加していない。
+- Wave 51 local verification passed: app-data generation, audit, depth-report generation, whitespace check, and `npm run validate` passed with only the pre-existing historical-record warning. Source commit, public deployment, and custom-domain verification are next.
+- Research one bounded official-source wave for 福井県, the next lowest candidate-depth prefecture at 12 candidates, after Wave 51 deployment is checkpointed.
 
 ## Blockers
 

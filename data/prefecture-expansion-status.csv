@@ -14,7 +14,7 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 東京都,関東,16,8,33,21,23,8,9,7,18,expanding
 神奈川県,関東,14,7,93,51,41,13,11,8,0,foundation_plus
 新潟県,甲信越,13,10,40,19,27,5,12,5,11,foundation_plus
-富山県,北陸,12,10,49,8,6,3,13,5,2,foundation_plus
+富山県,北陸,16,13,97,25,20,3,9,2,0,expanding
 石川県,北陸,15,13,62,34,27,3,10,2,0,expanding
 福井県,北陸,12,9,64,20,4,0,13,6,0,foundation_plus
 山梨県,甲信越,19,15,84,34,44,2,6,0,0,expanding
