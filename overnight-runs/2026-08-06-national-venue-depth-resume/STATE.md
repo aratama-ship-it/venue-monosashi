@@ -270,6 +270,7 @@
 - Wave 57 source data: added four official-source-backed Kagawa facilities — 三豊市文化会館マリンウェーブ、まんのう町町民文化ホール、サクラートたどつ（多度津町民会館）、琴平町公会堂 — and 20 searchable spaces. Kagawa is now 16 candidates, 12 municipalities, and 61 spaces.
 - Official sources: 三豊市、まんのう町、多度津町、琴平町。Only source-explicit fixed seating was recorded. 「千席」、固定・移動席の合計、建築寸法及び畳数は検索値に転用していない。No ceiling or price observation was added; all unreported conditions remain `要確認`.
 - Wave 57 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output is restored before source commit and deployment.
+- Wave 57 deployment passed: source commit `3f830ce75002f155e6085b24705e5f239179b34e` was pushed to the authorized Sites source repository; production version 102 deployed successfully, and both `https://venue-monosashi.juggler-arata.chatgpt.site` and `https://venue.art-monosashi.com/?release=3f830ce` returned the established site marker. Tracked `web/dist` output was restored.
 - Next wave: research one bounded official-source wave for 福岡県, the next lowest candidate-depth prefecture at 12 candidates.
 
 - Wave 56 source data: added four official-source-backed Shimane facilities — 江津市総合市民センター（ミルキーウェイホール）、カルチャープラザ仁多、隠岐開発総合センター、六日市基幹集落センター — and 18 searchable spaces. Shimane is now 16 candidates, 10 municipalities, and 55 spaces.
