@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 77 — Tokushima official-source expansion (public deployment pending).
+- Current wave: Wave 78 — Iwate official-source expansion (next).
 
 ## Baseline
 
@@ -270,6 +270,8 @@
 - Wave 77 source data: added four official-source-backed Tokushima facilities — 北島町立図書館・創世ホール（北島町）、海陽町海南文化館（阿波海南文化村）（海陽町）、三好市池田総合体育館（三好市）、東みよし町中央公民館（老人福祉センター）（東みよし町） — and 27 independently searchable spaces. 徳島県 is now 19 candidates, 16 municipalities, and 83 spaces; national totals are 788 candidates and 3,686 spaces. Remaining candidate and space deficits are 387 and 34.
 - Official sources: 北島町、海陽町、三好市、東みよし町の公開施設案内・条例・公共施設報告書を使用。Only source-explicit capacities and floor-area values were recorded; no ceiling height or price observation was inferred. Historical maximum-use figures and stage/lighting data were not converted into searchable capacity or ceiling values, and all unreported conditions remain `要確認`.
 - Wave 77 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` was restored before commit and deployment.
+- Wave 77 deployment passed: source commit `73c0e3bfd1baad7791a9d8079c224875ae573743` was pushed to the authorized Sites repository; production version 122 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=73c0e3b` returned the established site marker. Tracked `web/dist` output was restored.
+- Next action: research and integrate the next lowest-depth official-source wave for 岩手県.
 
 - Wave 76 source data: added four official-source-backed Tottori facilities — 伯耆町鬼の館（伯耆町）、江府町運動公園総合体育館（江府町）、日南町総合文化センター（日南町）、若桜町立第1町民体育館（若桜町） — and 19 independently searchable spaces. 鳥取県 is now 19 candidates, 16 municipalities, and 89 spaces; national totals are 784 candidates and 3,659 spaces. Remaining candidate and space deficits are 391 and 34.
 - Official sources: 伯耆町、江府町、日南町、若桜町の公開施設案内・予約対象・利用案内を使用。Only source-explicit capacities were recorded; no ceiling height, derived floor area, or price observation was inferred. Published stage and sport-zone dimensions were not converted into ceiling or area search values, and all unreported conditions remain `要確認`.
