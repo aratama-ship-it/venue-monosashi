@@ -270,6 +270,7 @@
 - Wave 62 source data: added four official-source-backed Okayama facilities — 倉敷市芸文館、新見市新見文化交流館（まなび広場にいみ）、高梁総合文化会館、山陽ふれあい公園 総合体育館 — and 37 independently searchable spaces. Okayama is now 17 candidates, 13 municipalities, and 93 spaces.
 - Official sources: 倉敷市の公式運営者、新見市の公式運営者、高梁市、赤磐市。Only source-explicit capacity and area values were recorded. No ceiling height or price observation was inferred; all unreported conditions remain `要確認`.
 - Wave 62 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before source commit and deployment.
+- Wave 62 deployment passed: source commit `5f4f140bd403b871b67c8bab4e05811813eef3c5` was pushed to the authorized Sites repository; production version 107 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=5f4f140` returned the established site marker. Tracked `web/dist` output was restored.
 - Next wave: integrate the ready official-source wave for 愛媛県.
 
 - Wave 61 source data: added four official-source-backed Niigata facilities — 新発田市民文化会館、たいぶん（三条市体育文化会館）、胎内市産業文化会館、見附市文化ホール アルカディア — and 24 independently searchable spaces. Niigata is now 17 candidates, 14 municipalities, and 64 spaces.
