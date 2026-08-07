@@ -225,7 +225,8 @@
 
 - Wave 47 source data: added four official-source-backed Miyazaki facilities — サンA川南文化ホール、木城町総合交流センター リバリス、新富町文化会館 ルピナスみらい、綾町中央公民館・文化ホール — and 25 searchable spaces. Miyazaki is now 15 candidates, 14 municipalities, and 78 spaces.
 - Official sources: 川南町、木城町、新富町と新富町文化会館公式運営者、綾町。Only explicit capacities and floor areas were recorded. The 800 main-hall seats at ルピナスみらい exclude the separately stated parent and wheelchair spaces; no ceiling or price value was inferred, and all unreported conditions remain `要確認`.
-- Wave 47 local verification passed: app-data generation, audit, depth-report generation, and whitespace check passed with only the pre-existing historical-record warning. `npm run validate`, source commit, public deployment, and custom-domain verification remain to be completed.
+- Wave 47 local verification passed: app-data generation, audit, depth-report generation, and whitespace check passed with only the pre-existing historical-record warning.
+- Wave 47 verification and deployment passed: `npm run validate` passed with only the pre-existing historical-record warning; source commit `d07255cb7e461bbd5f738fa353f4b4389d01e53c` was pushed to the authorized Sites source repository, production version 92 deployed successfully, and the Sites URL plus `https://venue.art-monosashi.com/?release=d07255c` returned the established marker. Tracked `web/dist` output was restored.
 - Research one bounded official-source wave for 青森県, the next lowest candidate-depth prefecture at 12 candidates, then regenerate all reports and deploy after validation.
 
 ## Blockers
