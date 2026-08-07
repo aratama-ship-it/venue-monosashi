@@ -326,3 +326,11 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next ready wave is Nagano.
 - Deployment passed: source commit `9f02751e9b351fb3d44ea68080acad5765460656` was pushed to the authorized Sites repository; production version 110 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=9f02751` returned the established site marker after deployment. Tracked `web/dist` output was restored.
+
+## Wave 66 — Nagano official-source expansion
+
+- Added four candidates: レザンホール（塩尻市文化会館）（塩尻市）、岡谷市文化会館カノラホール（岡谷市）、小諸市文化会館（小諸市）、サントミューゼ（上田市交流文化芸術センター）（上田市）。
+- Added 19 independently searchable spaces. 長野県 is now 18 candidates, 15 municipalities, and 93 spaces; national totals are 744 candidates and 3,341 spaces. Remaining candidate and space deficits are 431 and 63.
+- Official source status: 塩尻市文化振興事業団、岡谷市文化会館、小諸市、上田市の公式施設資料を使用。Only source-explicit capacity and area values were added; no ceiling height or price observation was inferred. Stage and opening dimensions were not converted into ceiling data, and all unreported conditions remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next ready wave is Gifu.
