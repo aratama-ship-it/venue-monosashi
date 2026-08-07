@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 79 — Yamagata official-source expansion (next).
+- Current wave: Wave 79 — Yamagata official-source expansion (source data validated; public deployment pending).
 
 ## Baseline
 
@@ -407,3 +407,12 @@
 - Next wave: research one bounded official-source wave for 香川県, the next lowest candidate-depth prefecture at 12 candidates.
 
 - None. The repository safety blocker was cleared by destination-specific user authorization, and Wave 31 deployed successfully without DNS, secret, or account-setting changes.
+
+## Wave 79 — Yamagata official-source expansion
+
+- Added four candidates: 高畠町文化ホールまほら（高畠町）、川西町フレンドリープラザ（川西町）、河北町総合交流センター サハトべに花（河北町）、さくらんぼタントクルセンター（東根市）。
+- Added 18 independently searchable spaces. 山形県 is now 19 candidates, 17 municipalities, and 84 spaces; national totals are 796 candidates and 3,733 spaces. Remaining candidate and space deficits are 379 and 34.
+- Official source status: 高畠町、川西町、河北町、東根市の公開施設案内・使用料案内・公式行事カレンダーを使用。Only source-explicit capacity values were recorded; no ceiling height, derived floor area, or price observation was inferred. The サハトべに花 dome diameter was not converted into a floor-area or ceiling value. Current availability and unreported conditions remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Public deployment pending from the validated source commit. Next wave: Ibaraki official-source expansion after deployment verification.
