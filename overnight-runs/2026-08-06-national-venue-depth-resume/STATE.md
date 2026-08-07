@@ -205,7 +205,7 @@
 
 - Wave 42 source data: added four official-source-backed Nara facilities — 葛城市當麻文化会館、葛城市新庄文化会館、五條市立西吉野コミュニティセンター、桜井市まほろばセンター — and 22 independently searchable spaces. Nara is now 15 candidates, 13 municipalities, and 69 spaces.
 - Official sources: 葛城市、五條市、桜井市。Explicit capacities and floor areas only were recorded. No ceiling or price observation was added; published stage height at 新庄文化会館 remains a note only, and all unreported conditions remain `要確認`.
-- Wave 42 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-record warning. `npm run validate`, source commit, public deployment, and custom-domain verification remain to be completed.
+- Wave 42 verification and deployment passed: `npm run validate` passed with only the pre-existing historical-record warning; source commit `6e0fde743f4c781515975ef014d24830aae97ef1` was pushed to the authorized Sites source repository, production version 87 deployed successfully, and the Sites URL plus `https://venue.art-monosashi.com/?release=6e0fde7` returned the established marker. Tracked `web/dist` output was restored.
 
 - Research one bounded official-source wave for 鳥取県, the next lowest candidate-depth prefecture at 11 candidates, then regenerate all reports and deploy after validation.
 

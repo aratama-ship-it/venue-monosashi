@@ -152,7 +152,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 
 - Wave 42 source data: added four official-source-backed Nara facilities — 葛城市當麻文化会館、葛城市新庄文化会館、五條市立西吉野コミュニティセンター、桜井市まほろばセンター — and 22 searchable spaces, increasing the national total to 648 facilities and 2,687 spaces. Sources are the official pages of 葛城市、五條市、桜井市.
 - Recorded only explicit official capacities and floor areas. The 新庄文化会館 stage height remains a descriptive note, never a ceiling measurement; no price observation was added and all unreported conditions remain `要確認`.
-- Wave 42 local verification passed: app-data generation, audit, depth-report generation, and whitespace check passed with only the pre-existing historical-record warning. Nara is now 15 candidates, 13 municipalities, and 69 spaces; national remaining deficits are 527 candidates and 206 spaces. Deployment remains to be completed.
+- Wave 42 verification and deployment passed: `npm run validate` passed with only the pre-existing historical-record warning; source commit `6e0fde743f4c781515975ef014d24830aae97ef1` was pushed to the authorized Sites source repository, production version 87 deployed successfully, and both the Sites URL and `https://venue.art-monosashi.com/?release=6e0fde7` returned the established site marker. Tracked `web/dist` output was restored.
 
 - Wave 14 audit and validation passed with 0 errors and the pre-existing historical-record warning only. Generated app data contains 531 venues and 2,823 price observations.
 - Current depth report: 612 candidate gaps and 405 space gaps. Nagano is now 14 candidates, 12 municipalities, and 74 spaces; the next lowest candidate-depth is 10 candidates in 岐阜県、和歌山県、広島県、高知県、佐賀県、熊本県、鹿児島県.
