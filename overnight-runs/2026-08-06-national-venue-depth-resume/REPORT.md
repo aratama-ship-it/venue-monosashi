@@ -397,3 +397,10 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Official source status: 吉野ヶ里町、基山町、玄海町、みやき町の公開施設案内・予約情報を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Stage and reservation-zone labels were not converted into ceiling data, and all unreported conditions remain `要確認`.
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
 - Deployment passed: source commit `d0d652c36008b505845af413413ca5bac23db81b` was pushed to the authorized Sites repository; production version 118 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=d0d652c` returned the established site marker after deployment. Tracked `web/dist` output was restored.
+
+## Wave 74 — Fukushima official-source expansion
+
+- Added four candidates: 喜多方プラザ文化センター（喜多方市）、国見町観月台文化センター（国見町）、矢吹町文化センター（矢吹町）、桑折町中央公民館（イコーゼ！）（桑折町）。
+- Added 38 independently searchable spaces. 福島県 is now 19 candidates, 15 municipalities, and 114 spaces; national totals are 776 candidates and 3,583 spaces. Remaining candidate and space deficits are 399 and 34.
+- Official source status: 喜多方プラザ文化センター公式運営者、国見町、矢吹町、桑折町の公開施設案内・予約情報を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Published stage and proscenium heights were not converted into ceiling data, and all unreported conditions remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.

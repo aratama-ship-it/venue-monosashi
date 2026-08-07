@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 74 — Fukushima official-source expansion (next).
+- Current wave: Wave 74 — Fukushima official-source expansion (deployment in progress).
 
 ## Baseline
 
@@ -266,6 +266,11 @@
 - Research one bounded official-source wave for 島根県, the next lowest candidate-depth prefecture at 12 candidates.
 
 ## Blockers
+
+- Wave 74 source data: added four official-source-backed Fukushima facilities — 喜多方プラザ文化センター（喜多方市）、国見町観月台文化センター（国見町）、矢吹町文化センター（矢吹町）、桑折町中央公民館（イコーゼ！）（桑折町） — and 38 independently searchable spaces. 福島県 is now 19 candidates, 15 municipalities, and 114 spaces; national totals are 776 candidates and 3,583 spaces. Remaining candidate and space deficits are 399 and 34.
+- Official sources: 喜多方プラザ文化センター公式運営者、国見町、矢吹町、桑折町の公開施設案内・予約情報を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Published stage and proscenium heights were not converted to ceiling data, and all unreported conditions remain `要確認`.
+- Wave 74 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before commit and deployment.
+- Next step: deploy the validated Wave 74 source commit, then continue with 静岡県.
 
 - Wave 73 source data: added four official-source-backed Saga facilities — 吉野ヶ里町文化体育館（吉野ヶ里町）、基山町総合体育館（基山町）、玄海町社会体育館（玄海町）、みやき町中原体育館（みやき町） — and 22 independently searchable spaces. 佐賀県 is now 18 candidates, 16 municipalities, and 76 spaces; national totals are 772 candidates and 3,545 spaces. Remaining candidate and space deficits are 403 and 34.
 - Official sources: 吉野ヶ里町、基山町、玄海町、みやき町の公開施設案内・予約情報を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Stage and reservation-zone labels were not converted to ceiling data, and all unreported conditions remain `要確認`.
