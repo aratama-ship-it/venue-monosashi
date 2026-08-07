@@ -396,6 +396,13 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added 22 independently searchable spaces. 佐賀県 is now 18 candidates, 16 municipalities, and 76 spaces; national totals are 772 candidates and 3,545 spaces. Remaining candidate and space deficits are 403 and 34.
 - Official source status: 吉野ヶ里町、基山町、玄海町、みやき町の公開施設案内・予約情報を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Stage and reservation-zone labels were not converted into ceiling data, and all unreported conditions remain `要確認`.
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
+
+## Wave 75 — Shizuoka official-source expansion
+
+- Added four candidates: 富士市文化会館（ロゼシアター）（富士市）、長岡総合会館（アクシスかつらぎ）（伊豆の国市）、牧之原市多目的体育館（牧之原市）、森町文化会館（ミキホール）（森町）。
+- Added 57 independently searchable spaces. 静岡県 is now 19 candidates, 16 municipalities, and 118 spaces; national totals are 780 candidates and 3,640 spaces. Remaining candidate and space deficits are 395 and 34.
+- Official source status: 富士市・富士市文化振興財団、伊豆の国市、牧之原市、森町の公開施設案内を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Published stage and proscenium heights were not converted into ceiling data. Current availability and unreported conditions remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` will be restored before deployment.
 - Deployment passed: source commit `a402f5aaa19e9121d83434b4f0f4266dcaacebdd` was pushed to the authorized Sites repository; production version 119 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=a402f5a` returned the established site marker after deployment. Tracked `web/dist` output was restored.
 - Deployment passed: source commit `d0d652c36008b505845af413413ca5bac23db81b` was pushed to the authorized Sites repository; production version 118 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=d0d652c` returned the established site marker after deployment. Tracked `web/dist` output was restored.
 

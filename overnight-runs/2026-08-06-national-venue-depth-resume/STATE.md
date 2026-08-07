@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 75 — Shizuoka official-source expansion (next).
+- Current wave: Wave 75 — Shizuoka official-source expansion (public deployment pending).
 
 ## Baseline
 
@@ -266,6 +266,11 @@
 - Research one bounded official-source wave for 島根県, the next lowest candidate-depth prefecture at 12 candidates.
 
 ## Blockers
+
+- Wave 75 source data: added four official-source-backed Shizuoka facilities — 富士市文化会館（ロゼシアター）（富士市）、長岡総合会館（アクシスかつらぎ）（伊豆の国市）、牧之原市多目的体育館（牧之原市）、森町文化会館（ミキホール）（森町） — and 57 independently searchable spaces. 静岡県 is now 19 candidates, 16 municipalities, and 118 spaces; national totals are 780 candidates and 3,640 spaces. Remaining candidate and space deficits are 395 and 34.
+- Official sources: 富士市・富士市文化振興財団、伊豆の国市、牧之原市、森町の公開施設案内を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Published stage and proscenium heights were not converted to ceiling data, and all unreported conditions remain `要確認`.
+- Wave 75 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` is to be restored before commit and deployment.
+- Next action: restore tracked build output, commit and deploy the validated Wave 75 source, then verify the Sites and custom-domain responses.
 
 - Wave 74 source data: added four official-source-backed Fukushima facilities — 喜多方プラザ文化センター（喜多方市）、国見町観月台文化センター（国見町）、矢吹町文化センター（矢吹町）、桑折町中央公民館（イコーゼ！）（桑折町） — and 38 independently searchable spaces. 福島県 is now 19 candidates, 15 municipalities, and 114 spaces; national totals are 776 candidates and 3,583 spaces. Remaining candidate and space deficits are 399 and 34.
 - Official sources: 喜多方プラザ文化センター公式運営者、国見町、矢吹町、桑折町の公開施設案内・予約情報を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Published stage and proscenium heights were not converted to ceiling data, and all unreported conditions remain `要確認`.
