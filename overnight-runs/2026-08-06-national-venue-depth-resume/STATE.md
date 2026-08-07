@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 80 — Ibaraki official-source expansion (source data validated; public deployment pending).
+- Current wave: Wave 80 — Ibaraki official-source expansion (source committed; public deployment blocked pending a fresh external Git-push approval).
 
 ## Baseline
 
@@ -425,4 +425,4 @@
 - Official source status: 小美玉市・四季文化館みの～れ、土浦市、大洗町、稲敷市の公開施設案内・貸館案内を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Stage dimensions, stage heights, and approximate room dimensions were not converted into searchable ceiling or area values. Current availability and unreported conditions remain `要確認`.
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending source commit and public Sites verification.
+- Deployment blocker: source commit `20c6d90e30e580bcabccf39ff15a65244061c00e` is complete locally. The authorized push to the existing Sites source repository was submitted twice, but the platform's automatic permission review expired before either push started. No alternate source push or public deployment was attempted. A fresh approved external-push retry is required before public verification.

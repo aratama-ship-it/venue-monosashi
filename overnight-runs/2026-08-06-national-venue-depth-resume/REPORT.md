@@ -423,7 +423,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added 40 independently searchable spaces. 茨城県 is now 19 candidates, 17 municipalities, and 106 spaces; national totals are 800 candidates and 3,773 spaces. Remaining candidate and space deficits are 375 and 34.
 - Official sources: 小美玉市・四季文化館みの～れ、土浦市、大洗町、稲敷市。Only directly stated capacities and floor areas were structured. All ceiling values remain unknown; stage openings, stage heights, and approximate dimensions remain explanatory notes only. No price observation was added.
 - Validation passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The only warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
-- Public deployment is pending the validated source commit and production verification.
+- Public deployment blocker: source commit `20c6d90e30e580bcabccf39ff15a65244061c00e` is validated locally. The authorized push to the existing Sites source repository was submitted twice, but the platform's automatic permission review expired before either push started. No alternate source push or public deployment was attempted, so the public URLs remain on the previous version.
 
 ## Wave 77 — Tokushima official-source expansion
 
