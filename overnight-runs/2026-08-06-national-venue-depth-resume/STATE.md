@@ -4,14 +4,14 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-07 Asia/Tokyo
-- Current wave: Wave 46 — Oita official-source expansion (next).
+- Current wave: Wave 47 — Miyazaki official-source expansion (next).
 
 ## Baseline
 
 - Git branch and commit: `agent/add-competition-and-small-theater-coverage` at `5c0946bc6e73c553c168f3f8b13468e64790da72`.
-- Data counts: 660 candidate facilities, 2,752 searchable spaces, 2,823 price observations, and 222 operation rows.
-- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 515 candidates and 182 spaces; municipality deficit is measured by the generated report.
-- Canonical hashes: `candidate-venues.csv` `758c08a71c0b197a3100dd544b3710a62b2e9097b3856cac0885ea4a4699eab2`; `venue-details.csv` `17305c291d8183e519eb2e690e8980113bcf6dcdb23f8f1b2b4e6682cc05d77c`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
+- Data counts: 664 candidate facilities, 2,776 searchable spaces, 2,823 price observations, and 222 operation rows.
+- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 511 candidates and 182 spaces; municipality deficit is measured by the generated report.
+- Canonical hashes: `candidate-venues.csv` `5b9b301ef9921fe40b6d1d2614e8140f6d435bfd7286a6c82150d0160ca4627a`; `venue-details.csv` `aabfd1bd63914d07d8d99ad6bb7d549b027182ee0186a738c9f9732f7956703c`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
 
@@ -219,7 +219,11 @@
 - Official sources: 牟岐町、板野町、つるぎ町、阿波市。Only explicit capacity and area values were recorded. The 板野町さくらホール's approximate seat count remains a descriptive note, not a numeric filter value. No ceiling or price observation was added; all unreported conditions remain `要確認`.
 - Wave 45 verification and deployment passed: `npm run validate` passed with only the pre-existing historical-record warning; source commit `a1e5cb71474d08dcafa396d75f285cd01f5e7574` was pushed to the authorized Sites source repository, production version 90 deployed successfully, and the Sites URL plus `https://venue.art-monosashi.com/?release=a1e5cb7` returned the established marker. Tracked `web/dist` output was restored.
 
-- Research one bounded official-source wave for 大分県, the next lowest candidate-depth prefecture at 11 candidates, then regenerate all reports and deploy after validation.
+- Wave 46 source data: added four official-source-backed Oita facilities — 津久見市民会館、つぶらなカボスアリーナ（杵築市文化体育館）、竹田市総合文化ホール グランツたけた、臼杵市民会館 — and 24 independently searchable spaces. Oita is now 15 candidates, 13 municipalities, and 80 spaces.
+- Official sources: 津久見市、杵築市、竹田市、臼杵市。Only explicit capacity, area, and the official キナーレ ceiling height were recorded. Stage heights were not converted to ceiling values, and no price observation was added; all unreported conditions remain `要確認`.
+- Wave 46 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-record warning. `npm run validate`, source commit, public deployment, and custom-domain verification remain to be completed.
+
+- Research one bounded official-source wave for 宮崎県, the next lowest candidate-depth prefecture at 11 candidates, then regenerate all reports and deploy after validation.
 
 ## Blockers
 
