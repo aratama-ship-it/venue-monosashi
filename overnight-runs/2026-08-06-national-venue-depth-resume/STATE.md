@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 80 — Ibaraki official-source expansion (next).
+- Current wave: Wave 80 — Ibaraki official-source expansion (source data validated; public deployment pending).
 
 ## Baseline
 
@@ -417,3 +417,12 @@
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
 - Deployment passed: source commit `946101b909495b093ce0b93a05110988334b0cb3` was pushed to the authorized Sites repository; production version 124 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=946101b` returned the established site marker after deployment. Tracked `web/dist` output was restored.
 - Next wave: Ibaraki official-source expansion.
+
+## Wave 80 — Ibaraki official-source expansion
+
+- Added four candidates: 小美玉市四季文化館みの～れ（小美玉市）、クラフトシビックホール土浦（土浦市立土浦市民会館）（土浦市）、トヨペット スマイルホール 大洗（大洗町民会館）（大洗町）、稲敷市あずま生涯学習センター（稲敷市）。
+- Added 40 independently searchable spaces. 茨城県 is now 19 candidates, 17 municipalities, and 106 spaces; national totals are 800 candidates and 3,773 spaces. Remaining candidate and space deficits are 375 and 34.
+- Official source status: 小美玉市・四季文化館みの～れ、土浦市、大洗町、稲敷市の公開施設案内・貸館案内を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Stage dimensions, stage heights, and approximate room dimensions were not converted into searchable ceiling or area values. Current availability and unreported conditions remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending source commit and public Sites verification.

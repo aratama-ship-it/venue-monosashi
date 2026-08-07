@@ -417,6 +417,14 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Deployment passed: source commit `946101b909495b093ce0b93a05110988334b0cb3` was pushed to the authorized Sites repository; production version 124 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=946101b` returned the established site marker after deployment. Tracked `web/dist` output was restored.
 - Next wave: Ibaraki official-source expansion.
 
+## Wave 80 — Ibaraki official-source expansion
+
+- Added four candidates: 小美玉市四季文化館みの～れ（小美玉市）、クラフトシビックホール土浦（土浦市立土浦市民会館）（土浦市）、トヨペット スマイルホール 大洗（大洗町民会館）（大洗町）、稲敷市あずま生涯学習センター（稲敷市）。
+- Added 40 independently searchable spaces. 茨城県 is now 19 candidates, 17 municipalities, and 106 spaces; national totals are 800 candidates and 3,773 spaces. Remaining candidate and space deficits are 375 and 34.
+- Official sources: 小美玉市・四季文化館みの～れ、土浦市、大洗町、稲敷市。Only directly stated capacities and floor areas were structured. All ceiling values remain unknown; stage openings, stage heights, and approximate dimensions remain explanatory notes only. No price observation was added.
+- Validation passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The only warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
+- Public deployment is pending the validated source commit and production verification.
+
 ## Wave 77 — Tokushima official-source expansion
 
 - Added four candidates: 北島町立図書館・創世ホール（北島町）、海陽町海南文化館（阿波海南文化村）（海陽町）、三好市池田総合体育館（三好市）、東みよし町中央公民館（老人福祉センター）（東みよし町）。
