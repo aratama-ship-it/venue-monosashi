@@ -270,6 +270,7 @@
 - Wave 66 source data: added four official-source-backed Nagano facilities — レザンホール（塩尻市文化会館）（塩尻市）、岡谷市文化会館カノラホール（岡谷市）、小諸市文化会館（小諸市）、サントミューゼ（上田市交流文化芸術センター）（上田市） — and 19 independently searchable spaces. 長野県 is now 18 candidates, 15 municipalities, and 93 spaces; national totals are 744 candidates and 3,341 spaces. Remaining candidate and space deficits are 431 and 63.
 - Official sources: 塩尻市文化振興事業団、岡谷市文化会館、小諸市、上田市。Only source-explicit capacity and area values were recorded. No ceiling height or price observation was inferred; stage and opening dimensions were not converted into ceiling data, and all unreported conditions remain `要確認`.
 - Wave 66 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before source commit and deployment.
+- Wave 66 deployment passed: source commit `7f93c665722be07395fb8963369c3389be372bfc` was pushed to the authorized Sites repository; production version 111 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=7f93c66` returned the established site marker. Tracked `web/dist` output was restored.
 - Next wave: integrate the ready official-source wave for 岐阜県.
 
 - Wave 65 source data: added four official-source-backed Kanagawa facilities — 横須賀市文化会館、相模女子大学グリーンホール（相模原市文化会館）、やまと芸術文化ホール、海老名市文化会館・海老名市民ギャラリー — and 25 independently searchable spaces. Kanagawa is now 18 candidates, 11 municipalities, and 118 spaces.
