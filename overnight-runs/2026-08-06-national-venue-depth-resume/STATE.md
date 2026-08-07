@@ -4,14 +4,14 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-07 Asia/Tokyo
-- Current wave: Wave 53 — Aichi official-source expansion (next).
+- Current wave: Wave 54 — Kyoto official-source expansion (next).
 
 ## Baseline
 
 - Git branch and commit: `agent/add-competition-and-small-theater-coverage` at `5c0946bc6e73c553c168f3f8b13468e64790da72`.
-- Data counts: 688 candidate facilities, 2,955 searchable spaces, 2,823 price observations, and 222 operation rows.
-- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 487 candidates and 170 spaces; municipality deficit is measured by the generated report.
-- Canonical hashes: `candidate-venues.csv` `00833cb766f5f817a319ac700c0985f4819a27dbe644ebc3ad06d7c662e5da5d`; `venue-details.csv` `db6534c260f8c2841a0e3ccac8875c719b8687ea01269c90e0e9fc0566d4fc28`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
+- Data counts: 692 candidate facilities, 3,005 searchable spaces, 2,823 price observations, and 222 operation rows.
+- Depth target: 25 candidates, 15 municipalities, and 51 spaces per prefecture. Remaining deficits: 483 candidates and 170 spaces; municipality deficit is measured by the generated report.
+- Canonical hashes: `candidate-venues.csv` `ee8b6a3d8c61ac5147186215ec5ed6bfd1d549ac6900accde1ad29df7444b9ce`; `venue-details.csv` `d3ee265b9c5bc7084503824503c89267a7c9852d9b89166ccfe16d020001174c`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
 
@@ -247,7 +247,10 @@
 - Official sources: 小浜市、南越前町、永平寺町、越前町。Only explicit capacities were recorded. No ceiling or price observation was added; stage and room use data were not converted to ceiling values, and all unreported conditions remain `要確認`.
 - Wave 52 local verification passed: app-data generation, audit, depth-report generation, whitespace check, and `npm run validate` passed with only the pre-existing historical-record warning.
 - Wave 52 deployment passed: source commit `a621ab8adeb52ea37450dcf386535185c3d0fcc5` was pushed to the authorized Sites source repository; production version 97 deployed successfully, and both `https://venue-monosashi.juggler-arata.chatgpt.site` and `https://venue.art-monosashi.com/?release=a621ab8` returned the established site marker. Tracked `web/dist` output was restored.
-- Research one bounded official-source wave for 愛知県, the next lowest candidate-depth prefecture at 12 candidates.
+- Wave 53 source data: added four official-source-backed Aichi facilities — 岡崎市民会館（あおいホール）、へきしんギャラクシープラザ、にししん文化会館 茶々っとホール、一宮スポーツ文化センター — and 50 searchable spaces. Aichi is now 16 candidates, 12 municipalities, and 114 spaces.
+- Official sources: 岡崎市、安城市、西尾市、一宮市。Only explicit capacities were recorded. No ceiling or price observation was added; no stage or building value was converted to ceiling data, and all unreported conditions remain `要確認`.
+- Wave 53 local verification passed: app-data generation, audit, depth-report generation, whitespace check, and `npm run validate` passed with only the pre-existing historical-record warning. Source commit, public deployment, and custom-domain verification are next.
+- Research one bounded official-source wave for 京都府, the next lowest candidate-depth prefecture at 12 candidates, after Wave 53 deployment is checkpointed.
 
 ## Blockers
 
