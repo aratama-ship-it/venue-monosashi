@@ -209,7 +209,7 @@
 
 - Wave 43 source data: added four official-source-backed Tottori facilities — ハワイアロハホール、三朝町総合文化ホール、南部町公民館（富有まんてんホール）、智頭町総合センター・中央公民館 — and 27 independently searchable spaces. Tottori is now 15 candidates, 12 municipalities, and 70 spaces.
 - Official sources: 湯梨浜町、三朝町、南部町、智頭町。Explicit capacities and floor areas only were recorded. No ceiling or price observation was added; all unreported conditions remain `要確認`.
-- Wave 43 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-record warning. `npm run validate`, source commit, public deployment, and custom-domain verification remain to be completed.
+- Wave 43 verification and deployment passed: `npm run validate` passed with only the pre-existing historical-record warning; source commit `cb805ffc7a5621e88c6859d0554f32a71943d608` was pushed to the authorized Sites source repository, production version 88 deployed successfully, and the Sites URL plus `https://venue.art-monosashi.com/?release=cb805ff` returned the established marker. Tracked `web/dist` output was restored.
 
 - Research one bounded official-source wave for 山口県, the next lowest candidate-depth prefecture at 11 candidates, then regenerate all reports and deploy after validation.
 
