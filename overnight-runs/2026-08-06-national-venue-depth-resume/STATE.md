@@ -213,7 +213,7 @@
 
 - Wave 44 source data: added four official-source-backed Yamaguchi facilities — 光市民ホール、長門市文化会館 ラポールゆや、柳東文化会館、和木町文化会館 — and 17 independently searchable spaces. Yamaguchi is now 15 candidates, 14 municipalities, and 76 spaces.
 - Official sources: 光市、長門市、柳井市、和木町。Explicit room areas only were recorded; no ceiling or price observation was added and all unreported conditions remain `要確認`.
-- Wave 44 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, and `git diff --check` passed with only the pre-existing historical-record warning. `npm run validate`, source commit, public deployment, and custom-domain verification remain to be completed.
+- Wave 44 verification and deployment passed: `npm run validate` passed with only the pre-existing historical-record warning; source commit `8ac0888232ad94b3045c2b5557e29a7850be241b` was pushed to the authorized Sites source repository, production version 89 deployed successfully, and the Sites URL plus `https://venue.art-monosashi.com/?release=8ac0888` returned the established marker. Tracked `web/dist` output was restored.
 
 - Research one bounded official-source wave for 徳島県, the next lowest candidate-depth prefecture at 11 candidates, then regenerate all reports and deploy after validation.
 
