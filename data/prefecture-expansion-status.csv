@@ -1,7 +1,7 @@
 prefecture,region,candidate_count,municipality_count,space_count,capacity_known_count,area_known_count,ceiling_known_count,candidate_gap,municipality_gap,space_gap,status
 北海道,北海道,18,12,75,23,20,2,7,3,0,expanding
 青森県,東北,16,14,90,41,52,2,9,1,0,expanding
-岩手県,東北,15,13,83,30,27,0,10,2,0,expanding
+岩手県,東北,19,17,112,33,27,0,6,0,0,expanding
 宮城県,東北,16,12,79,37,38,6,9,3,0,expanding
 秋田県,東北,15,14,55,15,6,0,10,1,0,expanding
 山形県,東北,15,13,66,30,30,3,10,2,0,expanding

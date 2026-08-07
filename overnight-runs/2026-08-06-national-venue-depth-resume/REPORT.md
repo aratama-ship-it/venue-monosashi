@@ -397,6 +397,13 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Official source status: 吉野ヶ里町、基山町、玄海町、みやき町の公開施設案内・予約情報を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Stage and reservation-zone labels were not converted into ceiling data, and all unreported conditions remain `要確認`.
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
 - Deployment passed: source commit `73c0e3bfd1baad7791a9d8079c224875ae573743` was pushed to the authorized Sites repository; production version 122 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=73c0e3b` returned the established site marker after deployment. Tracked `web/dist` output was restored.
+
+## Wave 78 — Iwate official-source expansion
+
+- Added four candidates: 滝沢市交流拠点複合施設（ビッグルーフ滝沢）（滝沢市）、紫波町情報交流館（紫波町）、矢巾町文化会館（田園ホール）（矢巾町）、岩手町スポーツ文化センター「森のアリーナ」（岩手町）。
+- Added 29 independently searchable spaces. 岩手県 is now 19 candidates, 17 municipalities, and 112 spaces; national totals are 792 candidates and 3,715 spaces. Remaining candidate and space deficits are 383 and 34.
+- Official source status: 滝沢市、紫波町、矢巾町、岩手町の公開施設案内・予約システムを使用。Only source-explicit capacity values were recorded; no ceiling height, derived floor area, or price observation was inferred. Stage dimensions, approximate areas, seat counts described as approximate, and movable-seat equipment counts were not converted into unsupported searchable values. Current availability and unreported conditions remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
 - Deployment passed: source commit `b7119de320631c8fe4aa8052ea0457cdefcbbd08` was pushed to the authorized Sites repository; production version 121 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=b7119de` returned the established site marker after deployment. Tracked `web/dist` output was restored.
 
 ## Wave 77 — Tokushima official-source expansion
