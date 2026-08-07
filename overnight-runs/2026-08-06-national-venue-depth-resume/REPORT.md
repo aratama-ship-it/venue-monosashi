@@ -389,3 +389,10 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next intended wave is 佐賀県 after public deployment verification.
 - Deployment passed: source commit `352750a3e27ab8c3b7a4028e5ee0e166af6f2659` was pushed to the authorized Sites repository; production version 117 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=352750a` returned the established site marker after deployment. Tracked `web/dist` output was restored.
+
+## Wave 73 — Saga official-source expansion
+
+- Added four candidates: 吉野ヶ里町文化体育館（吉野ヶ里町）、基山町総合体育館（基山町）、玄海町社会体育館（玄海町）、みやき町中原体育館（みやき町）。
+- Added 22 independently searchable spaces. 佐賀県 is now 18 candidates, 16 municipalities, and 76 spaces; national totals are 772 candidates and 3,545 spaces. Remaining candidate and space deficits are 403 and 34.
+- Official source status: 吉野ヶ里町、基山町、玄海町、みやき町の公開施設案内・予約情報を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Stage and reservation-zone labels were not converted into ceiling data, and all unreported conditions remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
