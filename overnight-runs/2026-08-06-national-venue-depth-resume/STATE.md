@@ -245,8 +245,9 @@
 - Wave 51 deployment passed: source commit `c6c9e18b66c90733272671a46d0ad7cd84e042be` was pushed to the authorized Sites source repository; production version 96 deployed successfully, and both `https://venue-monosashi.juggler-arata.chatgpt.site` and `https://venue.art-monosashi.com/?release=c6c9e18` returned the established site marker. Tracked `web/dist` output was restored.
 - Wave 52 source data: added four official-source-backed Fukui facilities — 小浜市文化会館、南越前文化会館、上志比公民館、朝日多目的ホール「カメリアホール」 — and 28 searchable spaces. Fukui is now 16 candidates, 13 municipalities, and 92 spaces.
 - Official sources: 小浜市、南越前町、永平寺町、越前町。Only explicit capacities were recorded. No ceiling or price observation was added; stage and room use data were not converted to ceiling values, and all unreported conditions remain `要確認`.
-- Wave 52 local verification passed: app-data generation, audit, depth-report generation, whitespace check, and `npm run validate` passed with only the pre-existing historical-record warning. Source commit, public deployment, and custom-domain verification are next.
-- Research one bounded official-source wave for 愛知県, the next lowest candidate-depth prefecture at 12 candidates, after Wave 52 deployment is checkpointed.
+- Wave 52 local verification passed: app-data generation, audit, depth-report generation, whitespace check, and `npm run validate` passed with only the pre-existing historical-record warning.
+- Wave 52 deployment passed: source commit `a621ab8adeb52ea37450dcf386535185c3d0fcc5` was pushed to the authorized Sites source repository; production version 97 deployed successfully, and both `https://venue-monosashi.juggler-arata.chatgpt.site` and `https://venue.art-monosashi.com/?release=a621ab8` returned the established site marker. Tracked `web/dist` output was restored.
+- Research one bounded official-source wave for 愛知県, the next lowest candidate-depth prefecture at 12 candidates.
 
 ## Blockers
 
