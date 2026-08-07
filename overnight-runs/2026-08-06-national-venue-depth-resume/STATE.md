@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 78 — Iwate official-source expansion (public deployment pending).
+- Current wave: Wave 79 — Yamagata official-source expansion (next).
 
 ## Baseline
 
@@ -270,6 +270,8 @@
 - Wave 78 source data: added four official-source-backed Iwate facilities — 滝沢市交流拠点複合施設（ビッグルーフ滝沢）（滝沢市）、紫波町情報交流館（紫波町）、矢巾町文化会館（田園ホール）（矢巾町）、岩手町スポーツ文化センター「森のアリーナ」（岩手町） — and 29 independently searchable spaces. 岩手県 is now 19 candidates, 17 municipalities, and 112 spaces; national totals are 792 candidates and 3,715 spaces. Remaining candidate and space deficits are 383 and 34.
 - Official sources: 滝沢市、紫波町、矢巾町、岩手町の公開施設案内・予約システムを使用。Only source-explicit capacity values were recorded; no ceiling height, derived floor area, or price observation was inferred. Stage dimensions, approximate areas, seat counts described as approximate, and movable-seat equipment counts were not converted into unsupported searchable values, and all unreported conditions remain `要確認`.
 - Wave 78 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` was restored before commit and deployment.
+- Wave 78 deployment passed: source commit `e5540d2f86034382738d31c354fda6518fe8442c` was pushed to the authorized Sites repository; production version 123 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=e5540d2` returned the established site marker. Tracked `web/dist` output was restored.
+- Next action: research and integrate the next lowest-depth official-source wave for 山形県.
 
 - Wave 77 source data: added four official-source-backed Tokushima facilities — 北島町立図書館・創世ホール（北島町）、海陽町海南文化館（阿波海南文化村）（海陽町）、三好市池田総合体育館（三好市）、東みよし町中央公民館（老人福祉センター）（東みよし町） — and 27 independently searchable spaces. 徳島県 is now 19 candidates, 16 municipalities, and 83 spaces; national totals are 788 candidates and 3,686 spaces. Remaining candidate and space deficits are 387 and 34.
 - Official sources: 北島町、海陽町、三好市、東みよし町の公開施設案内・条例・公共施設報告書を使用。Only source-explicit capacities and floor-area values were recorded; no ceiling height or price observation was inferred. Historical maximum-use figures and stage/lighting data were not converted into searchable capacity or ceiling values, and all unreported conditions remain `要確認`.
