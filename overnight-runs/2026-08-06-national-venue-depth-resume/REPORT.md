@@ -271,3 +271,11 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next lowest-depth wave is Okinawa.
 - Deployment passed: source commit `1734ad123701b9e0b4e8622bd5cfbebb64b63aad` was pushed to the authorized Sites repository; production version 104 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=1734ad1` returned the established site marker after deployment. Tracked `web/dist` output was restored.
+
+## Wave 60 — Okinawa official-source expansion
+
+- Added four candidates: 石垣市民会館（石垣市）、宮古島市文化ホール（マティダ市民劇場）（宮古島市）、かでな文化センター（嘉手納町）、読谷村文化センター（鳳ホール・ふれあい交流館）（読谷村）。
+- Added 31 independently searchable spaces. 沖縄県 is now 16 candidates, 11 municipalities, and 56 spaces; national totals are 720 candidates and 3,182 spaces. Remaining candidate and space deficits are 455 and 77.
+- Official source status: 石垣市、宮古島市、嘉手納町、読谷村の公式施設案内を使用。Only source-explicit capacity and area values were recorded; no ceiling height or price observation was inferred. The Matida theater's published stage height was not converted to a ceiling value. Current availability and unreported values remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next lowest-depth wave is Niigata.
