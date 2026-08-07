@@ -244,3 +244,11 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next lowest-depth wave is Kagawa.
 - Deployment passed: source commit `ea0148ef514a1824a6f02295b3e33ca9db739bc5` was pushed to the authorized Sites repository; production version 101 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=ea0148e` returned the established site marker after deployment. Tracked `web/dist` output was restored.
+
+## Wave 57 — Kagawa official-source expansion
+
+- Added four candidates: 三豊市文化会館マリンウェーブ（三豊市）、まんのう町町民文化ホール（まんのう町）、サクラートたどつ（多度津町民会館）（多度津町）、琴平町公会堂（琴平町）。
+- Added 20 independently searchable spaces. 香川県 is now 16 candidates, 12 municipalities, and 61 spaces; national totals are 708 candidates and 3,089 spaces. Remaining candidate and space deficits are 467 and 146.
+- Official source status: 三豊市公式の2026年公営施設一覧、まんのう町公式施設案内、多度津町公式公共施設案内、琴平町公式施設案内を使用。Only source-explicit fixed seating was recorded; no ceiling height or price observation was inferred. Current availability and unreported values remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next lowest-depth wave is Fukuoka.
