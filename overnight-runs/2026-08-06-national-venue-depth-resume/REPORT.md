@@ -371,3 +371,11 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. This completes the requested ten-prefecture batch.
 - Deployment passed: source commit `a574bf32d42570a07c85c0d5f8832ec1de45df2f` was pushed to the authorized Sites repository; production version 115 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=a574bf3` returned the established site marker after deployment. Tracked `web/dist` output was restored.
+
+## Wave 71 — Kumamoto official-source expansion
+
+- Added four candidates: 玉名市民会館（玉名市）、大津町生涯学習センター（文化ホール）（大津町）、阿蘇市阿蘇体育館（阿蘇市）、御船町カルチャーセンター（御船町）。
+- Added 29 independently searchable spaces. 熊本県 is now 18 candidates, 15 municipalities, and 96 spaces; national totals are 764 candidates and 3,483 spaces. Remaining candidate and space deficits are 411 and 34.
+- Official source status: 玉名市、大津町、阿蘇市、御船町の公開資料を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Stage heights and approximate capacities were not converted to searchable values. Current availability and unreported conditions remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next intended wave is 鹿児島県 after public deployment verification.
