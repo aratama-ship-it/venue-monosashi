@@ -270,6 +270,7 @@
 - Wave 59 source data: added four official-source-backed Nagasaki facilities — 島原文化会館、五島市立福江文化会館、西彼教育文化センター、松浦市文化会館 — and 19 independently searchable spaces. Nagasaki is now 16 candidates, 10 municipalities, and 53 spaces.
 - Official sources: 島原市、五島市、西海市、松浦市。Only source-explicit capacity and area values were recorded. No ceiling height or price observation was inferred; all unreported conditions remain `要確認`.
 - Wave 59 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before source commit and deployment.
+- Wave 59 deployment passed: source commit `1734ad123701b9e0b4e8622bd5cfbebb64b63aad` was pushed to the authorized Sites repository; production version 104 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=1734ad1` returned the established site marker. Tracked `web/dist` output was restored.
 - Next wave: research one bounded official-source wave for 沖縄県, the next lowest candidate-depth prefecture at 12 candidates.
 
 - Wave 58 source data: added four official-source-backed Fukuoka facilities — 宗像ユリックス、筑紫野市文化会館、ユメニティのおがた、柳川市民文化会館 水都やながわ — and 43 searchable spaces. Fukuoka is now 16 candidates, 11 municipalities, and 68 spaces.
