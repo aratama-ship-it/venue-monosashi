@@ -270,6 +270,7 @@
 - Wave 56 source data: added four official-source-backed Shimane facilities — 江津市総合市民センター（ミルキーウェイホール）、カルチャープラザ仁多、隠岐開発総合センター、六日市基幹集落センター — and 18 searchable spaces. Shimane is now 16 candidates, 10 municipalities, and 55 spaces.
 - Official sources: 江津市、奥出雲町、海士町、吉賀町。Only explicit capacity and floor-area values were recorded. 江津市資料と吉賀町個別施設計画の建物・延床面積、畳数、舞台・建築関連の寸法は区画面積又は天井値へ転用していない。No ceiling or price observation was added; all unreported conditions remain `要確認`.
 - Wave 56 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output is restored before source commit and deployment.
+- Wave 56 deployment passed: source commit `ea0148ef514a1824a6f02295b3e33ca9db739bc5` was pushed to the authorized Sites source repository; production version 101 deployed successfully, and both `https://venue-monosashi.juggler-arata.chatgpt.site` and `https://venue.art-monosashi.com/?release=ea0148e` returned the established site marker. Tracked `web/dist` output was restored.
 - Next wave: research one bounded official-source wave for 香川県, the next lowest candidate-depth prefecture at 12 candidates.
 
 - None. The repository safety blocker was cleared by destination-specific user authorization, and Wave 31 deployed successfully without DNS, secret, or account-setting changes.
