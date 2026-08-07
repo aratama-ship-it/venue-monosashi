@@ -398,6 +398,13 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
 - Deployment passed: source commit `b7119de320631c8fe4aa8052ea0457cdefcbbd08` was pushed to the authorized Sites repository; production version 121 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=b7119de` returned the established site marker after deployment. Tracked `web/dist` output was restored.
 
+## Wave 77 — Tokushima official-source expansion
+
+- Added four candidates: 北島町立図書館・創世ホール（北島町）、海陽町海南文化館（阿波海南文化村）（海陽町）、三好市池田総合体育館（三好市）、東みよし町中央公民館（老人福祉センター）（東みよし町）。
+- Added 27 independently searchable spaces. 徳島県 is now 19 candidates, 16 municipalities, and 83 spaces; national totals are 788 candidates and 3,686 spaces. Remaining candidate and space deficits are 387 and 34.
+- Official source status: 北島町、海陽町、三好市、東みよし町の公開施設案内・条例・公共施設報告書を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Historical maximum-use figures and stage/lighting data were not converted into searchable capacity or ceiling values. Current availability and unreported conditions remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
+
 ## Wave 75 — Shizuoka official-source expansion
 
 - Added four candidates: 富士市文化会館（ロゼシアター）（富士市）、長岡総合会館（アクシスかつらぎ）（伊豆の国市）、牧之原市多目的体育館（牧之原市）、森町文化会館（ミキホール）（森町）。
