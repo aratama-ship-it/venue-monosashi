@@ -270,6 +270,7 @@
 - Wave 63 source data: added four official-source-backed Ehime facilities — 伊予市文化交流センター IYO夢みらい館、内子町文化交流センター スバル、西予市宇和文化会館、新居浜市市民文化センター — and 27 independently searchable spaces. Ehime is now 17 candidates, 12 municipalities, and 85 spaces.
 - Official sources: 伊予市、内子町、西予市、新居浜市。Only source-explicit capacity and area values were recorded. No ceiling height or price observation was inferred; all unreported conditions remain `要確認`.
 - Wave 63 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before source commit and deployment.
+- Wave 63 deployment passed: source commit `7063ff3a6b6bf070ef7c4c35c20ab83063abb516` was pushed to the authorized Sites repository; production version 108 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=7063ff3` returned the established site marker. Tracked `web/dist` output was restored.
 - Next wave: integrate the ready official-source wave for 北海道.
 
 - Wave 62 source data: added four official-source-backed Okayama facilities — 倉敷市芸文館、新見市新見文化交流館（まなび広場にいみ）、高梁総合文化会館、山陽ふれあい公園 総合体育館 — and 37 independently searchable spaces. Okayama is now 17 candidates, 13 municipalities, and 93 spaces.
