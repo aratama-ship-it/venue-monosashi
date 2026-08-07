@@ -267,6 +267,11 @@
 
 ## Blockers
 
+- Wave 68 source data: added four official-source-backed Wakayama facilities — 紀美野町文化センター（紀美野町）、かつらぎ総合文化会館 あじさいホール（かつらぎ町）、湯浅町役場 なぎホール（湯浅町）、有田川町地域交流センター ALEC（有田川町） — and 14 independently searchable spaces. 和歌山県 is now 18 candidates, 14 municipalities, and 58 spaces; national totals are 752 candidates and 3,400 spaces. Remaining candidate and space deficits are 423 and 56.
+- Official sources: 紀美野町、かつらぎ町、湯浅町、有田川町。Only source-explicit capacity and area values were recorded; no ceiling height or price observation was inferred. Stage dimensions and building sizes were not converted into ceiling or space-area data, and all unreported conditions remain `要確認`.
+- Wave 68 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before source commit and deployment.
+- Next wave: integrate the ready official-source wave for 広島県.
+
 - Wave 67 source data: added four official-source-backed Gifu facilities — 美濃加茂市文化会館（美濃加茂市）、プリニーの文化ホール（各務原市文化ホール）（各務原市）、関市文化会館（関市）、郡上市総合文化センター（郡上市） — and 45 independently searchable spaces. 岐阜県 is now 18 candidates, 12 municipalities, and 126 spaces; national totals are 748 candidates and 3,386 spaces. Remaining candidate and space deficits are 427 and 63.
 - Official sources: 美濃加茂市文化会館公式運営者、各務原市、関市文化会館公式運営者、郡上市。Only source-explicit capacity and area values were recorded; no ceiling height or price observation was inferred. Approximate floor areas remain source-labelled in notes, and all unreported conditions remain `要確認`.
 - Wave 67 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before source commit and deployment.
