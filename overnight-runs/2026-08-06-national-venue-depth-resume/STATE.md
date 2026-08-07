@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 76 — Tottori official-source expansion (public deployment pending).
+- Current wave: Wave 77 — Tokushima official-source expansion (next).
 
 ## Baseline
 
@@ -270,6 +270,8 @@
 - Wave 76 source data: added four official-source-backed Tottori facilities — 伯耆町鬼の館（伯耆町）、江府町運動公園総合体育館（江府町）、日南町総合文化センター（日南町）、若桜町立第1町民体育館（若桜町） — and 19 independently searchable spaces. 鳥取県 is now 19 candidates, 16 municipalities, and 89 spaces; national totals are 784 candidates and 3,659 spaces. Remaining candidate and space deficits are 391 and 34.
 - Official sources: 伯耆町、江府町、日南町、若桜町の公開施設案内・予約対象・利用案内を使用。Only source-explicit capacities were recorded; no ceiling height, derived floor area, or price observation was inferred. Published stage and sport-zone dimensions were not converted into ceiling or area search values, and all unreported conditions remain `要確認`.
 - Wave 76 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` was restored before commit and deployment.
+- Wave 76 deployment passed: source commit `b7119de320631c8fe4aa8052ea0457cdefcbbd08` was pushed to the authorized Sites repository; production version 121 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=b7119de` returned the established site marker. Tracked `web/dist` output was restored.
+- Next action: research and integrate the next lowest-depth official-source wave for 徳島県.
 
 - Wave 75 source data: added four official-source-backed Shizuoka facilities — 富士市文化会館（ロゼシアター）（富士市）、長岡総合会館（アクシスかつらぎ）（伊豆の国市）、牧之原市多目的体育館（牧之原市）、森町文化会館（ミキホール）（森町） — and 57 independently searchable spaces. 静岡県 is now 19 candidates, 16 municipalities, and 118 spaces; national totals are 780 candidates and 3,640 spaces. Remaining candidate and space deficits are 395 and 34.
 - Official sources: 富士市・富士市文化振興財団、伊豆の国市、牧之原市、森町の公開施設案内を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Published stage and proscenium heights were not converted to ceiling data, and all unreported conditions remain `要確認`.
