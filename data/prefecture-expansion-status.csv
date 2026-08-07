@@ -36,7 +36,7 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 山口県,中国,15,14,76,45,39,1,10,1,0,expanding
 徳島県,四国,15,12,56,29,12,1,10,3,0,expanding
 香川県,四国,16,12,61,14,24,0,9,3,0,expanding
-愛媛県,四国,13,8,58,36,22,0,12,7,0,foundation_plus
+愛媛県,四国,17,12,85,42,34,0,8,3,0,expanding
 高知県,四国,14,7,77,22,40,1,11,8,0,foundation_plus
 福岡県,九州,16,11,68,48,43,7,9,4,0,expanding
 佐賀県,九州,14,12,54,23,9,2,11,3,0,foundation_plus

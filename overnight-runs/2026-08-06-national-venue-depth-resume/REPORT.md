@@ -299,3 +299,11 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next ready wave is Ehime.
 - Deployment passed: source commit `5f4f140bd403b871b67c8bab4e05811813eef3c5` was pushed to the authorized Sites repository; production version 107 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=5f4f140` returned the established site marker after deployment. Tracked `web/dist` output was restored.
+
+## Wave 63 — Ehime official-source expansion
+
+- Added four candidates: 伊予市文化交流センター IYO夢みらい館（伊予市）、内子町文化交流センター スバル（内子町）、西予市宇和文化会館（西予市）、新居浜市市民文化センター（新居浜市）。
+- Added 27 independently searchable spaces. 愛媛県 is now 17 candidates, 12 municipalities, and 85 spaces; national totals are 732 candidates and 3,270 spaces. Remaining candidate and space deficits are 443 and 66.
+- Official source status: 伊予市、内子町、西予市、新居浜市の公式施設資料を使用。Only source-explicit capacity and area values were recorded; no ceiling height or price observation was inferred. 新居浜市民文化センター is under rebuilding/repair consideration; current availability and unreported values remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next ready wave is Hokkaido.
