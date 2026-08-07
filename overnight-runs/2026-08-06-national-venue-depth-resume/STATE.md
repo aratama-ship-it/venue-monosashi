@@ -270,6 +270,7 @@
 - Wave 65 source data: added four official-source-backed Kanagawa facilities — 横須賀市文化会館、相模女子大学グリーンホール（相模原市文化会館）、やまと芸術文化ホール、海老名市文化会館・海老名市民ギャラリー — and 25 independently searchable spaces. Kanagawa is now 18 candidates, 11 municipalities, and 118 spaces.
 - Official sources: 横須賀市、相模原市、各公式運営者。Only source-explicit capacity and area values were recorded. No ceiling height or price observation was inferred; all unreported conditions remain `要確認`.
 - Wave 65 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before source commit and deployment.
+- Wave 65 deployment passed: source commit `9f02751e9b351fb3d44ea68080acad5765460656` was pushed to the authorized Sites repository; production version 110 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=9f02751` returned the established site marker. Tracked `web/dist` output was restored.
 - Next wave: integrate the ready official-source wave for 長野県.
 
 - Wave 64 source data: added four official-source-backed Hokkaido facilities — 千歳市民文化センター（北ガス文化ホール）、室ガス文化センター（室蘭市文化センター）、まなみーる 岩見沢市民会館、北広島市芸術文化ホール（花ホール） — and 27 independently searchable spaces. Hokkaido is now 18 candidates, 12 municipalities, and 75 spaces.
