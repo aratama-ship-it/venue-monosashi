@@ -267,6 +267,11 @@
 
 ## Blockers
 
+- Wave 67 source data: added four official-source-backed Gifu facilities — 美濃加茂市文化会館（美濃加茂市）、プリニーの文化ホール（各務原市文化ホール）（各務原市）、関市文化会館（関市）、郡上市総合文化センター（郡上市） — and 45 independently searchable spaces. 岐阜県 is now 18 candidates, 12 municipalities, and 126 spaces; national totals are 748 candidates and 3,386 spaces. Remaining candidate and space deficits are 427 and 63.
+- Official sources: 美濃加茂市文化会館公式運営者、各務原市、関市文化会館公式運営者、郡上市。Only source-explicit capacity and area values were recorded; no ceiling height or price observation was inferred. Approximate floor areas remain source-labelled in notes, and all unreported conditions remain `要確認`.
+- Wave 67 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before source commit and deployment.
+- Next wave: integrate the ready official-source wave for 和歌山県.
+
 - Wave 66 source data: added four official-source-backed Nagano facilities — レザンホール（塩尻市文化会館）（塩尻市）、岡谷市文化会館カノラホール（岡谷市）、小諸市文化会館（小諸市）、サントミューゼ（上田市交流文化芸術センター）（上田市） — and 19 independently searchable spaces. 長野県 is now 18 candidates, 15 municipalities, and 93 spaces; national totals are 744 candidates and 3,341 spaces. Remaining candidate and space deficits are 431 and 63.
 - Official sources: 塩尻市文化振興事業団、岡谷市文化会館、小諸市、上田市。Only source-explicit capacity and area values were recorded. No ceiling height or price observation was inferred; stage and opening dimensions were not converted into ceiling data, and all unreported conditions remain `要確認`.
 - Wave 66 local verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored before source commit and deployment.

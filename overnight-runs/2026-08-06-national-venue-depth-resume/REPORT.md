@@ -335,3 +335,11 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next ready wave is Gifu.
 - Deployment passed: source commit `7f93c665722be07395fb8963369c3389be372bfc` was pushed to the authorized Sites repository; production version 111 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=7f93c66` returned the established site marker after deployment. Tracked `web/dist` output was restored.
+
+## Wave 67 — Gifu official-source expansion
+
+- Added four candidates: 美濃加茂市文化会館（美濃加茂市）、プリニーの文化ホール（各務原市文化ホール）（各務原市）、関市文化会館（関市）、郡上市総合文化センター（郡上市）。
+- Added 45 independently searchable spaces. 岐阜県 is now 18 candidates, 12 municipalities, and 126 spaces; national totals are 748 candidates and 3,386 spaces. Remaining candidate and space deficits are 427 and 63.
+- Official source status: 美濃加茂市文化会館公式運営者、各務原市、関市文化会館公式運営者、郡上市の公式施設資料を使用。Only source-explicit capacity and area values were added; no ceiling height or price observation was inferred. Approximate areas remain identified in their notes and all unreported conditions remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. The next ready wave is Wakayama.
