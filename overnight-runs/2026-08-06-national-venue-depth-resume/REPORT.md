@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 134 Oita has passed local validation; public deployment is pending. The next lowest-depth wave is 宮崎県.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 134 Oita has been publicly deployed and verified. The next lowest-depth wave is 宮崎県.
 
 ## Latest Wave
 
@@ -11,7 +11,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Price observations: five exact daily rates were added from current official pricing material. アートプラザ uses its 2026-04-01 booking-rate table; 荷揚BASE rates include equipment, HVAC, and consumption tax as the city explicitly states. Neither source supplies a commercial/nonprofit distinction for these rows, so they remain `all` rather than being misclassified.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment: pending source commit, authorized Sites source push, deployment, and verification of both public URLs. Next wave: 宮崎県 (19 candidates).
+- Public deployment passed: source commit `1bcae66f78f074e8e82aedb889cf243f63391609` was pushed to the authorized Sites source repository with the confirmed Tokushima release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_8957c65be25c8191890aaa6d4612a2c0` (deployment `appgdep_6a773abb1b5c8191888cd461f5a36b4f`) deployed successfully. Both public URLs returned HTTP 200 for `?q=アートプラザ&release=1bcae66` and contained the new アートプラザ marker. Tracked `web/dist` was restored after the deployment build. Next wave: 宮崎県 (19 candidates).
 
 - Wave 133 — Tokushima: added シビックセンター、徳島県立21世紀館、阿波おどり会館、ふれあい健康館（徳島市生涯福祉センター）、美波町コミュニティホール、鳴門市文化会館 and 40 named searchable spaces. 徳島県 is now 25 candidates, 18 municipalities, and 123 spaces; national totals are 1,076 candidates, 6,462 spaces, and 2,870 price observations. Remaining candidate and space deficits are 99 and 0.
 - Official source status: current official city, town, prefectural, and designated-operator material only. Exact areas and capacities are retained only where published. No stage, proscenium, atrium, or building dimension was converted into a searchable ceiling height. The only construction-status addition, 鳴門市文化会館, is explicitly marked with actual availability `要確認` because the official opening is planned for June 2027; its approximate capacity is not a search value.

@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 134 — Oita official-source expansion validated locally; public deployment pending. 宮崎県 is next after deployment.
+- Current wave: Wave 134 — Oita official-source expansion and public deployment verified; 宮崎県 is next.
 
 ## Baseline
 
@@ -22,7 +22,7 @@
 - Price observations: added five current, precisely sourced daily facility prices: アートプラザのアートホール17,080円・市民ギャラリーA9,440円・市民ギャラリーB4,080円（2026-04-01予約分から）、荷揚BASEのコモンスペース1全室12,960円・コモンスペース2 10,160円. The official materials do not distinguish commercial/nonprofit rates for these records, so each remains in the `all` fee class rather than falsely appearing under either filter.
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending source commit, user-authorized Sites source push, production deployment, and both public-URL marker checks. The next eligible lowest-depth prefecture is 宮崎県 (19 candidates).
+- Deployment: source commit `1bcae66f78f074e8e82aedb889cf243f63391609` was pushed to the user-authorized Sites source repository with the confirmed Tokushima release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_8957c65be25c8191890aaa6d4612a2c0` (deployment `appgdep_6a773abb1b5c8191888cd461f5a36b4f`) deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E3%82%A2%E3%83%BC%E3%83%88%E3%83%97%E3%83%A9%E3%82%B6&release=1bcae66` and `https://venue.art-monosashi.com/?q=%E3%82%A2%E3%83%BC%E3%83%88%E3%83%97%E3%83%A9%E3%82%B6&release=1bcae66` returned HTTP 200 and contained the new アートプラザ marker. Tracked `web/dist` was restored after the deployment build. The next eligible lowest-depth prefecture is 宮崎県 (19 candidates).
 
 ## Wave 133 Local Checkpoint
 
