@@ -2,9 +2,17 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 145 Hyogo has been validated and publicly deployed. The next lowest-depth group starts at 20 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 146 Shimane has been validated and publicly deployed. The next lowest-depth group starts at 20 candidates.
 
 ## Latest Wave
+
+- Wave 146 — Shimane: added 島根県民会館、島根県市町村振興センター（タウンプラザしまね）、松江テルサ、島根県立男女共同参画センター あすてらす、津和野町民センター and 44 named searchable spaces. 島根県 is now 25 candidates, 15 municipalities, and 133 spaces; national totals are 1,143 candidates, 7,307 spaces, and 2,881 price observations. Remaining candidate and space deficits are 32 and 0; 38 of 47 prefectures meet the reference depth.
+- Official source status: current official cultural-center, municipal-association, designated-operator, public-facility, and town material only. The additions retain source-explicit halls, exhibition and multi-purpose halls, conference and Japanese rooms, rehearsal/training/practice/workshop rooms, dressing room, sports hall, and public community space. No inferred spaces were added.
+- Availability and ceiling safety: 島根県民会館 is explicitly closed for major renovation from June 2026, so it and every listed space remain needs_check. 津和野町民センター is documented by the town only as a current election venue, not as a confirmed general rental, so it also remains needs_check. Current availability of selected あすてらす ancillary rooms remains needs_check. No new filterable ceiling height was added; no stage, lift-stage, or building dimension was converted into ceiling data.
+- Price observations: none added. Current fees vary by time unit, weekday/holiday, commercial/nonprofit or purpose class, seating, room partition, equipment, HVAC, booking, and other terms, so no ambiguous amount was normalized into the daily-budget filter.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing historical-events.csv:173 row; tracked web/dist was restored after validation and deployment.
+- Changed source files: data/candidate-venues.csv, data/venue-details.csv, generated data/prefecture-expansion-status.csv, generated web/app/generated-data.ts, and this run ledger.
+- Public deployment passed: source commit 73b6622b717c2b7ba6858c960cbf0a103bb6747b was pushed to the authorized Sites repository with a force-with-lease guard from a747879741840f4cdf510677f9ae5213fe4788a5. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_ddb68e3f4da88191a276b2c8b90d6610 (deployment appgdep_6a776c7bac60819199b9d8a66f1668fe) succeeded. Both public URLs returned HTTP 200. Next wave: 香川県 and 福岡県 at 20 candidates.
 
 - Wave 145 — Hyogo: added 尼崎市総合文化センター あましんアルカイックホール・オクト、高砂市文化会館、加西市民会館、淡路市立サンシャインホール、丹波篠山市立田園交響ホール and 46 named searchable spaces. 兵庫県 is now 25 candidates, 19 municipalities, and 157 spaces; national totals are 1,138 candidates, 7,263 spaces, and 2,881 price observations. Remaining candidate and space deficits are 37 and 0; 37 of 47 prefectures meet the reference depth.
 - Official source status: current official cultural-foundation, designated-operator, municipal-facility, and city material only. The additions retain source-explicit halls, exhibition and assembly space, foyer, rehearsal and practice rooms, dressing rooms, meeting, training, workshop, Japanese, and special-control rooms. No inferred spaces were added.
