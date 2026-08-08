@@ -2,17 +2,17 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 110 Kanagawa is validated and publicly deployed; the next bounded wave is 長野県.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 111 Nagano is locally validated; public deployment and verification are next.
 
 ## Latest Wave
 
-- Wave 110 — Kanagawa: added 茅ヶ崎市民文化会館、ハーモニーホール座間、逗子文化プラザホール、伊勢原市民文化会館 and 60 named searchable spaces. 神奈川県 is now 22 candidates, 15 municipalities, and 178 spaces; national totals are 930 candidates, 5,059 spaces, and 2,870 price observations. Remaining candidate and space deficits are 245 and 0.
-- Official source status: current official municipal or operator pages from 茅ヶ崎市・茅ヶ崎市文化振興財団、座間市、逗子市・逗子文化プラザホール、伊勢原市. Only source-explicit room names, seat counts, and floor areas were structured. Stage, proscenium, building, and drawing dimensions were not converted into ceiling values; unreported ceilings stay `要確認`.
-- Price observations: eight current tax-included full-day base fees were added for ハーモニーホール座間. Commercial-use, admission, equipment, and other conditional amounts stay source notes rather than a general day-price.
+- Wave 111 — Nagano: added 豊科交流学習センター「きぼう」、飯山市文化交流館なちゅら、東御市文化会館 サンテラスホール、エコールみよた、軽井沢大賀ホール、大町市文化会館（エコーホール）、佐久穂町生涯学習館「花の郷・茂来館」 and 63 named searchable spaces. 長野県 is now 25 candidates, 22 municipalities, and 156 spaces; national totals are 937 candidates, 5,122 spaces, and 2,870 price observations. Remaining candidate and space deficits are 238 and 0.
+- Official source status: current municipal or operator pages and facility guides from 安曇野市、飯山市、東御市、御代田町、軽井沢町・軽井沢大賀ホール、大町市、佐久穂町. Only source-explicit room names, seat counts, and floor areas were structured. Stage, proscenium, building, and drawing dimensions were not converted into ceiling values; unreported ceilings stay `要確認`.
+- Price observations: none added. Available fee information is time-band, historical, or use-condition dependent, so it remains unnormalized rather than becoming a misleading general day-price.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
-- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment passed: source commit `880013088e5a28ec71bd5f6051a17670eb0af6db` was pushed to the authorized Sites source repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_afc784fad1dc81918b2953dd5476bae3` (deployment `appgdep_6a76efb5aec0819189056b07b854688b`) deployed successfully. Both public URLs returned the `?release=8800130` page and contained the newly added `ハーモニーホール座間` marker. Tracked `web/dist` was restored after the deployment build.
-- Next wave: 長野県, tied at the lowest candidate depth (18 candidates) in the regenerated report.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Public deployment: pending. The next action is to commit the validated source, deploy it to the authorized Sites project, and verify both public URLs.
+- Next wave: 岐阜県, tied at the lowest candidate depth (18 candidates) in the regenerated report.
 
 - Wave 105 — Niigata: added 柏崎市文化会館アルフォーレ、南魚沼市民会館、魚沼市響きの森文化会館、村上市民ふれあいセンター、妙高市文化ホール、新潟県民会館、新潟市江南区文化会館、新潟市秋葉区文化会館 and 94 named searchable spaces. 新潟県 is now 25 candidates, 19 municipalities, and 158 spaces; national totals are 906 candidates, 4,746 spaces, and 2,842 price observations. Remaining candidate and space deficits are 269 and 8.
 - Official source status: current facility pages from 柏崎市、南魚沼市、魚沼市、村上市、妙高市、新潟県民会館、新潟市 and the corresponding official operators. Only source-explicit room names, seat counts, and floor areas were structured. Stage, proscenium, building, and drawing dimensions were never converted into ceiling values.
