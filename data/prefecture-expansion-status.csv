@@ -9,7 +9,7 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 茨城県,関東,19,17,106,67,66,2,6,0,0,expanding
 栃木県,関東,16,14,64,42,22,6,9,1,0,expanding
 群馬県,関東,19,17,103,41,38,3,6,0,0,expanding
-埼玉県,関東,15,13,79,67,40,0,10,2,0,expanding
+埼玉県,関東,19,17,123,94,42,0,6,0,0,expanding
 千葉県,関東,15,14,68,44,23,2,10,1,0,expanding
 東京都,関東,16,8,33,21,23,8,9,7,18,expanding
 神奈川県,関東,18,11,118,72,51,13,7,4,0,expanding
