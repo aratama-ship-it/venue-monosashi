@@ -2,9 +2,16 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 148 Fukuoka has been validated and publicly deployed. The next lowest-depth prefectures are Okayama, Ehime, Nagasaki, and Okinawa at 21 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 149 Okayama is locally validated; its public runtime recovery is in progress before it is declared deployed. The next lowest-depth prefectures are Ehime, Nagasaki, and Okinawa at 21 candidates.
 
 ## Latest Wave
+
+- Wave 149 — Okayama: added 岡山芸術創造劇場ハレノワ、岡山県天神山文化プラザ、ルネスホール（バンクオブアーツ岡山）、岡山シティミュージアム and 38 named searchable spaces. 岡山県 is now 25 candidates, 17 municipalities, and 150 spaces; national totals are 1,157 candidates, 7,516 spaces, and 2,881 price observations. Remaining candidate and space deficits are 18 and 0; 41 of 47 prefectures meet the reference depth.
+- Official source status: current official operator, prefectural, and municipal material only. The additions retain source-explicit major, middle, and small theatres; art salon, gallery, 11 practice rooms; a hall, five exhibition rooms, five practice rooms, and two conference rooms; a multi-purpose hall, workroom, suite rooms, galleries, studio; and a museum lecture room. No inferred spaces were added.
+- Availability and ceiling safety: the only newly filterable ceiling value is the explicitly labelled 9m ceiling at ルネスホール多目的ホール. No stage, proscenium, room-stage, or building dimension was converted into a ceiling filter. Haranowa practice-room use is conditional: commercial and open-to-the-public practice use are not permitted. All other unreported operating conditions remain 要確認.
+- Price observations: none added. Current fees vary by time unit, purpose, commercial/nonprofit use, admission, season, equipment, room, rehearsal/performance, and other terms, so no ambiguous amount was normalized into the daily-budget filter.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing historical-events.csv:173 row.
+- Public deployment recovery: source commit ba290ed944196aad027cca25922d2114fecb3b47 was pushed with a force-with-lease guard from 5ed7d25de1356dff7be57220ed4636d2ae4e5123. Saved version 195 reported a deployment success but the public worker returned HTTP 500 (Cloudflare 1101, missing hashed SSR module). The rebuilt archive was checked to contain its referenced module; a fresh source/state revision is being saved and deployed before public success is recorded.
 
 - Wave 148 — Fukuoka: added 福岡市民ホール、アクロス福岡、SAWARAPIA（福岡県立ももち文化センター）、福岡市科学館、黒崎ひびしんホール and 104 named searchable spaces. 福岡県 is now 25 candidates, 15 municipalities, and 250 spaces; national totals are 1,153 candidates, 7,478 spaces, and 2,881 price observations. Remaining candidate and space deficits are 22 and 0; 40 of 47 prefectures meet the reference depth.
 - Official source status: current official designated-operator, city, foundation, and municipal material only. The additions retain source-explicit halls, a science hall and planetarium, exhibition halls and gallery, conference and seminar rooms, rehearsal and practice rooms, individually named support/green rooms, outdoor event space, and instrument storage. No inferred spaces were added.

@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-09 Asia/Tokyo
-- Current wave: Wave 148 — Fukuoka official-source expansion and public deployment verified; 岡山県・愛媛県・長崎県・沖縄県 are next at the lowest candidate depth.
+- Current wave: Wave 149 — Okayama official-source expansion is locally validated; runtime recovery of the saved Sites version is in progress before public verification. 愛媛県・長崎県・沖縄県 are next at the lowest candidate depth.
 
 ## Baseline
 
@@ -14,6 +14,16 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 149 Local Checkpoint
+
+- Okayama: added four candidates — 岡山芸術創造劇場ハレノワ、岡山県天神山文化プラザ、ルネスホール（バンクオブアーツ岡山）、岡山シティミュージアム — and 38 named independently searchable spaces. 岡山県 is now 25 candidates, 17 municipalities, and 150 spaces. National totals are 1,157 candidates, 7,516 spaces, and 2,881 price observations; remaining candidate and space deficits are 18 and 0, and 41 of 47 prefectures meet the full reference depth.
+- Official source status: current operator, prefectural, and municipal material only: https://okayama-pat.jp/aboutus/ 、https://okayama-pat.jp/rental/grand-theatre/ 、https://okayama-pat.jp/rental/playhouse/ 、https://okayama-pat.jp/rental/pit-theatre/ 、https://okayama-pat.jp/rental/studio/ 、https://www.pref.okayama.jp/page/detail-79925.html 、https://www.city.okayama.jp/life/0000040886.html 、https://renaiss.or.jp/hall 、https://renaiss.or.jp/kinkoto 、https://www.city.okayama.jp/okayama-city-museum/0000022328.html 。追加したのは、公式に個別名が掲載された劇場、展示・会議・練習室、ギャラリー、スタジオ、講義室だけであり、推測した区画は追加していない。
+- Availability and ceiling safety: ルネスホール多目的ホールの公式掲載「天井高9m」だけを単一室の `published_clear` として検索可能にした。ハレノワ小劇場、天神山文化プラザホールの舞台仕様に併記された高さは、室内最低天井高に転用していない。ハレノワ練習室は営利的行為・不特定多数が出入りする利用を不可とするため条件を明示した。その他の最低天井高、床荷重、搬入、吊り可否、催事回線、空き状況は要確認。
+- Price observations: none added. ハレノワ、天神山、ルネス、岡山シティミュージアムの料金は時間帯、営利非営利、入場料、季節、設備、展示・練習・本番等の条件により変動するため、今回の候補深度拡張では曖昧な日額に正規化していない。
+- Local verification: npm --prefix web run data:generate、npm run audit、npm run depth-report:write、git diff --check、npm run validate passed. The only audit warning is the pre-existing historical-events.csv:173 row. Tracked web/dist was rebuilt for the archive and will be restored after final public verification.
+- Changed source files: data/candidate-venues.csv、data/venue-details.csv、generated data/prefecture-expansion-status.csv、and generated web/app/generated-data.ts; this local checkpoint updates STATE.md and REPORT.md.
+- Deployment recovery: source commit ba290ed944196aad027cca25922d2114fecb3b47 was safely pushed with the prior remote head 5ed7d25de1356dff7be57220ed4636d2ae4e5123 as a force-with-lease guard. Sites saved version 195 reported deployment success, but public probes subsequently returned HTTP 500 with worker error code 1101 and a missing hashed SSR module. A freshly rebuilt archive contains its currently referenced hashed module; an archive/state revision will be saved and deployed before this wave is marked public-verified.
 
 ## Wave 148 Local Checkpoint
 
