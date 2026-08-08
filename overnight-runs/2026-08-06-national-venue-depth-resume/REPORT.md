@@ -2,9 +2,17 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 111 Nagano is validated and publicly deployed; the next bounded wave is 岐阜県.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 112 Gifu is locally validated and awaiting its approved public deployment.
 
 ## Latest Wave
+
+- Wave 112 — Gifu: added 恵那文化センター、瑞浪市総合文化センター、下呂市民会館、美濃市文化会館、文化の里 花咲きホール、飛騨市文化交流センター、海津市文化センター（海津公民館＋海津農村環境改善センター） and 60 named searchable spaces. 岐阜県 is now 25 candidates, 19 municipalities, and 186 spaces; national totals are 944 candidates, 5,182 spaces, and 2,870 price observations. Remaining candidate and space deficits are 231 and 0.
+- Official source status: current municipal, operator, and ordinance pages from 恵那市、瑞浪市、下呂市、美濃市、山県市、飛騨市、海津市. Only source-explicit room names, seat counts, and floor areas were structured. Stage, proscenium, opening, and building dimensions were not converted into ceiling values; unreported ceilings stay `要確認`.
+- Price observations: none added. Available fee information is time-band, configuration-dependent, or use-condition dependent, so it remains unnormalized rather than becoming a misleading general day-price.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Public deployment: pending approved Sites source push, deployment, and both-URL verification.
+- Next wave: one of 和歌山県、広島県、高知県、佐賀県、熊本県、鹿児島県, tied at the lowest candidate depth (18 candidates) in the regenerated report.
 
 - Wave 111 — Nagano: added 豊科交流学習センター「きぼう」、飯山市文化交流館なちゅら、東御市文化会館 サンテラスホール、エコールみよた、軽井沢大賀ホール、大町市文化会館（エコーホール）、佐久穂町生涯学習館「花の郷・茂来館」 and 63 named searchable spaces. 長野県 is now 25 candidates, 22 municipalities, and 156 spaces; national totals are 937 candidates, 5,122 spaces, and 2,870 price observations. Remaining candidate and space deficits are 238 and 0.
 - Official source status: current municipal or operator pages and facility guides from 安曇野市、飯山市、東御市、御代田町、軽井沢町・軽井沢大賀ホール、大町市、佐久穂町. Only source-explicit room names, seat counts, and floor areas were structured. Stage, proscenium, building, and drawing dimensions were not converted into ceiling values; unreported ceilings stay `要確認`.

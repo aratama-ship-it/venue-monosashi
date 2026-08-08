@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 111 — Nagano official-source expansion completed and deployed; select 岐阜県 from the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 112 — Gifu official-source expansion validated; commit and deploy the source, then select one of 和歌山県・広島県・高知県・佐賀県・熊本県・鹿児島県 from the next bounded lowest-depth wave.
 
 ## Baseline
 
@@ -14,6 +14,16 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 112 Checkpoint
+
+- Gifu: added seven candidates — 恵那文化センター（恵那市）、瑞浪市総合文化センター（瑞浪市）、下呂市民会館（下呂市）、美濃市文化会館（美濃市）、文化の里 花咲きホール（山県市）、飛騨市文化交流センター（飛騨市）、海津市文化センター（海津公民館＋海津農村環境改善センター）（海津市） — and 60 named, independently searchable spaces. 岐阜県 is now 25 candidates, 19 municipalities, and 186 spaces. National totals are 944 candidates, 5,182 spaces, and 2,870 price observations; remaining candidate and space deficits are 231 and 0.
+- Official source status: current municipal, official-operator, and municipal-ordinance pages from 恵那市、瑞浪市、下呂市、美濃市、山県市、飛騨市、海津市. Only source-explicit room names, areas, capacities, and present facility facts were structured. Stage, proscenium, opening, and building dimensions were not converted into ceiling values; all unpublished ceilings remain `要確認`.
+- Price observations: none added. The available fee tables are time-band, configuration-dependent, or use-condition dependent and were not normalized into a current generally applicable day-price filter.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending source commit, approved Sites push, deployment, and public verification.
+- Next action after deployment: select one of 和歌山県、広島県、高知県、佐賀県、熊本県、鹿児島県, tied at the current lowest candidate depth (18 candidates), for the next bounded official-source wave.
 
 ## Wave 111 Checkpoint
 
