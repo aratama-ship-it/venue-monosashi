@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 105 — Niigata official-source expansion completed and deployed; select Osaka, Okayama, or Ehime from the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 106 — Osaka official-source expansion locally validated; preparing the user-authorized source commit and public deployment.
 
 ## Baseline
 
@@ -54,6 +54,16 @@
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
 - Deployment: source commit `ce828a3dd21454da4083c01ec864edb93c0ce745` was pushed to the authorized Sites repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_63e3bafcc76c81918d0bdc9ffa03c57f` (deployment `appgdep_6a76e090e2848191b7cb04ec313be6fa`) deployed successfully. Both public URLs returned HTTP 200 for `?release=ce828a3`, and live search returned the new 新潟市秋葉区文化会館 marker on both.
 - Next action: select 大阪府、岡山県、愛媛県, tied at the lowest candidate depth (17 candidates), for the next bounded official-source wave.
+
+## Wave 106 Checkpoint
+
+- Osaka: added eight candidates — 豊中市立文化芸術センター（豊中市）、高槻城公園芸術文化劇場（高槻市）、枚方市総合文化芸術センター（枚方市）、茨木市文化・子育て複合施設 おにクル（茨木市）、河内長野市立文化会館 ラブリーホール（河内長野市）、南海浪切ホール（岸和田市立浪切ホール）（岸和田市）、エブノ泉の森ホール（泉佐野市立文化会館）（泉佐野市）、フェニーチェ堺（堺市民芸術文化ホール）（堺市） — and 139 named, independently searchable spaces. 大阪府 is now 25 candidates, 12 municipalities, and 182 spaces. National totals are 914 candidates, 4,885 spaces, and 2,842 price observations; remaining candidate and space deficits are 261 and 0.
+- Official source status: current official operator or municipal pages from 豊中市立文化芸術センター、高槻城公園芸術文化劇場、枚方市総合文化芸術センター、おにクル、河内長野市、南海浪切ホール、エブノ泉の森ホール、フェニーチェ堺. Only source-explicit facility names, areas, capacities, layouts, and current use notes were structured. The three 枚方美術ギャラリー values use the explicit published ceiling-height wording; all stage, proscenium, and drawing heights remain notes, never searchable ceiling data.
+- Price observations: none added. The currently published price schemes vary by purpose, admission, resident status, time band, and/or additional equipment; no ambiguous condition was normalized as a day-price filter.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending user-authorized source commit, Sites deployment, and public verification.
+- Next action: after public verification, select 岡山県 or 愛媛県, tied at the new lowest candidate depth (17 candidates), for the next bounded official-source wave.
 
 ## Completed Waves
 

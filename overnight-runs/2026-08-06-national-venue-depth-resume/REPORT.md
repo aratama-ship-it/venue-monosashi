@@ -2,9 +2,17 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 105 Niigata is deployed; the next bounded wave will select from Osaka, Okayama, and Ehime.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 106 Osaka is locally validated and ready for its user-authorized public deployment; the next bounded wave will select Okayama or Ehime.
 
 ## Latest Wave
+
+- Wave 106 — Osaka: added 豊中市立文化芸術センター、高槻城公園芸術文化劇場、枚方市総合文化芸術センター、茨木市文化・子育て複合施設 おにクル、河内長野市立文化会館 ラブリーホール、南海浪切ホール（岸和田市立浪切ホール）、エブノ泉の森ホール（泉佐野市立文化会館）、フェニーチェ堺（堺市民芸術文化ホール） and 139 named searchable spaces. 大阪府 is now 25 candidates, 12 municipalities, and 182 spaces; national totals are 914 candidates, 4,885 spaces, and 2,842 price observations. Remaining candidate and space deficits are 261 and 0.
+- Official source status: current operator or municipal facility pages from all eight facilities. Only source-explicit room names, capacities, floor areas, current rental conditions, and usage facts were structured. The three 枚方美術ギャラリー values are explicitly published ceiling heights; stage, proscenium, building, and drawing dimensions were never converted into ceiling values.
+- Price observations: none added. The observed public fees vary by use purpose, admission, residency, time band, or equipment conditions and were not normalized as misleading day-price filters.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Public deployment: pending source commit, Sites deployment, and live verification at both public URLs.
+- Next wave: 岡山県 and 愛媛県 are tied at the lowest candidate depth (17 candidates) in the regenerated report.
 
 - Wave 105 — Niigata: added 柏崎市文化会館アルフォーレ、南魚沼市民会館、魚沼市響きの森文化会館、村上市民ふれあいセンター、妙高市文化ホール、新潟県民会館、新潟市江南区文化会館、新潟市秋葉区文化会館 and 94 named searchable spaces. 新潟県 is now 25 candidates, 19 municipalities, and 158 spaces; national totals are 906 candidates, 4,746 spaces, and 2,842 price observations. Remaining candidate and space deficits are 269 and 8.
 - Official source status: current facility pages from 柏崎市、南魚沼市、魚沼市、村上市、妙高市、新潟県民会館、新潟市 and the corresponding official operators. Only source-explicit room names, seat counts, and floor areas were structured. Stage, proscenium, building, and drawing dimensions were never converted into ceiling values.
