@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 133 — Tokushima official-source expansion verified locally; public deployment pending. 大分県 is next after deployment.
+- Current wave: Wave 133 — Tokushima official-source expansion and public deployment verified; 大分県 is next.
 
 ## Baseline
 
@@ -23,7 +23,7 @@
 - Price observations: none added. The current official fee tables vary by time band, cooling/heating, admission, commercial use, residence, preparation, attached equipment, or pre-opening conditions, so no ambiguous or future price was generalized into the day-price filter.
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending source commit, authorized Sites source push, public build, deployment, and both-URL marker verification. The next eligible lowest-depth prefecture after that checkpoint is 大分県, tied with 宮崎県 at 19 candidates.
+- Deployment: source commit `bbe496e4da47833ed7a6554bba76197d2cef10b8` was pushed to the user-authorized Sites source repository with the confirmed Yamaguchi release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_ff45f738f49c81918e22c39eeb3a6773` (deployment `appgdep_6a7736debf70819194bab4f09736eb4b`) deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E5%BE%B3%E5%B3%B6%E7%9C%8C%E7%AB%8B21%E4%B8%96%E7%B4%80%E9%A4%A8&release=bbe496e` and `https://venue.art-monosashi.com/?q=%E5%BE%B3%E5%B3%B6%E7%9C%8C%E7%AB%8B21%E4%B8%96%E7%B4%80%E9%A4%A8&release=bbe496e` returned HTTP 200 and contained the new 徳島県立21世紀館 marker. Tracked `web/dist` was restored after the deployment build. The next eligible lowest-depth prefecture is 大分県, tied with 宮崎県 at 19 candidates.
 
 ## Wave 132 Local Checkpoint
 
