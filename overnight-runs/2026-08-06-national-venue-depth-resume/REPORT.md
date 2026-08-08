@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 128 Yamanashi is locally validated and awaiting its authorized public deployment.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 128 Yamanashi has been publicly deployed and verified; the next lowest-depth wave is 静岡県.
 
 ## Latest Wave
 
@@ -11,7 +11,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Price observations: none added. Time band, admission, review, use-category, room-configuration, and equipment conditions vary, so no fee was generalized into a misleading day-price filter.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment: pending the source commit and authorized Sites deployment. Next wave: 静岡県, tied with 奈良県、鳥取県、山口県、徳島県、大分県、宮崎県 at 19 candidates in the regenerated report.
+- Public deployment: source commit `32d1203b3aa558681db57d350d99cb3ee6ed1a74` was pushed to the user-authorized Sites source repository with the confirmed Ishikawa release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_21b3ccf889c4819184d194cacb7548ca` (deployment `appgdep_6a77259319bc8191bec6529de0824bdc`) deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?q=YCC%E7%9C%8C%E6%B0%91%E6%96%87%E5%8C%96%E3%83%9B%E3%83%BC%E3%83%AB&release=32d1203` returned HTTP 200 and contained the new YCC県民文化ホール marker. Tracked `web/dist` was restored after the deployment build. Next wave: 静岡県, tied with 奈良県、鳥取県、山口県、徳島県、大分県、宮崎県 at 19 candidates in the regenerated report.
 
 - Wave 127 — Ishikawa: added 金沢歌劇座、金沢市文化ホール、金沢市アートホール、石川県立音楽堂、金沢市ものづくり会館、のとふれあい文化センター（文化ホール棟） and 104 named searchable spaces. 石川県 is now 25 candidates, 18 municipalities, and 187 spaces; national totals are 1,040 candidates, 6,031 spaces, and 2,870 price observations. Remaining candidate and space deficits are 135 and 0.
 - Official source status: current official operator, municipal, prefectural-facility, and town pages from 金沢歌劇座、金沢市文化ホール、金沢市アートホール、石川県立音楽堂、金沢市、穴水町. Only source-explicit room names, named room groups, capacities, areas, divisibility, and use conditions were structured. The official 交流ホール drawing gives a 7.3〜8.4m room-height range, so its lower bound 7.3m is the sole new filterable ceiling value; stage/proscenium and non-ceiling dimensions were not converted into ceiling height. All unreported operational conditions remain `要確認`.

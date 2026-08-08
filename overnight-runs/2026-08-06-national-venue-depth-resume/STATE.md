@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 128 — Yamanashi official-source expansion locally validated; public deployment is pending.
+- Current wave: Wave 128 — Yamanashi official-source expansion and public deployment verified; 静岡県 is next.
 
 ## Baseline
 
@@ -22,7 +22,7 @@
 - Price observations: none added. Current fees vary by time band, admission, art-use eligibility, booking review, room configuration, or equipment, so this candidate-depth wave does not normalize them into the general day-price filter.
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending the source commit and authorized Sites deployment. The next eligible lowest-depth prefecture after this wave is 静岡県, tied with 奈良県、鳥取県、山口県、徳島県、大分県、宮崎県 at 19 candidates.
+- Deployment: source commit `32d1203b3aa558681db57d350d99cb3ee6ed1a74` was pushed to the user-authorized Sites source repository with the confirmed Ishikawa release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_21b3ccf889c4819184d194cacb7548ca` (deployment `appgdep_6a77259319bc8191bec6529de0824bdc`) deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=YCC%E7%9C%8C%E6%B0%91%E6%96%87%E5%8C%96%E3%83%9B%E3%83%BC%E3%83%AB&release=32d1203` and `https://venue.art-monosashi.com/?q=YCC%E7%9C%8C%E6%B0%91%E6%96%87%E5%8C%96%E3%83%9B%E3%83%BC%E3%83%AB&release=32d1203` returned HTTP 200 and contained the new YCC県民文化ホール marker. Tracked `web/dist` was restored after the deployment build. The next eligible lowest-depth prefecture is 静岡県, tied with 奈良県、鳥取県、山口県、徳島県、大分県、宮崎県 at 19 candidates.
 
 ## Wave 127 Local Checkpoint
 
