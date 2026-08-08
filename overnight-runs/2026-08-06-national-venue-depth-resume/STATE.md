@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 111 — Nagano official-source expansion validated; commit and deploy the validated source next.
+- Current wave: Wave 111 — Nagano official-source expansion completed and deployed; select 岐阜県 from the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -22,7 +22,7 @@
 - Price observations: none added. The available fee information is time-band, historical, or use-condition dependent, and was not normalized into a current generally applicable day-price filter.
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending — commit the validated source, push it to the user-authorized Sites source repository, deploy it, and verify both public URLs.
+- Deployment: source commit `92c50e9cc7f9a21bd8a474dce3e3a007cb108160` was pushed to the user-authorized Sites source repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_5d8c000f404481918f8e252409e81d39` (deployment `appgdep_6a76f2e39b68819196638f8a10b767a2`) deployed successfully. Both public URLs returned the `?release=92c50e9` page and contained the newly added `飯山市文化交流館なちゅら` marker. Tracked `web/dist` was restored after the deployment build.
 - Next action after deployment: select 岐阜県, tied at the current lowest candidate depth (18 candidates), for the next bounded official-source wave.
 
 ## Wave 110 Checkpoint

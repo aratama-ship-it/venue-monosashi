@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 111 Nagano is locally validated; public deployment and verification are next.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 111 Nagano is validated and publicly deployed; the next bounded wave is 岐阜県.
 
 ## Latest Wave
 
@@ -11,7 +11,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Price observations: none added. Available fee information is time-band, historical, or use-condition dependent, so it remains unnormalized rather than becoming a misleading general day-price.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment: pending. The next action is to commit the validated source, deploy it to the authorized Sites project, and verify both public URLs.
+- Public deployment passed: source commit `92c50e9cc7f9a21bd8a474dce3e3a007cb108160` was pushed to the authorized Sites source repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_5d8c000f404481918f8e252409e81d39` (deployment `appgdep_6a76f2e39b68819196638f8a10b767a2`) deployed successfully. Both public URLs returned the `?release=92c50e9` page and contained the newly added `飯山市文化交流館なちゅら` marker. Tracked `web/dist` was restored after the deployment build.
 - Next wave: 岐阜県, tied at the lowest candidate depth (18 candidates) in the regenerated report.
 
 - Wave 105 — Niigata: added 柏崎市文化会館アルフォーレ、南魚沼市民会館、魚沼市響きの森文化会館、村上市民ふれあいセンター、妙高市文化ホール、新潟県民会館、新潟市江南区文化会館、新潟市秋葉区文化会館 and 94 named searchable spaces. 新潟県 is now 25 candidates, 19 municipalities, and 158 spaces; national totals are 906 candidates, 4,746 spaces, and 2,842 price observations. Remaining candidate and space deficits are 269 and 8.
