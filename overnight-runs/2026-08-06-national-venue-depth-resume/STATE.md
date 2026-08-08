@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-09 Asia/Tokyo
-- Current wave: Wave 143 — Shiga official-source expansion and public deployment verified; 京都府・兵庫県・島根県・香川県・福岡県 are next at the lowest candidate depth.
+- Current wave: Wave 144 — Kyoto official-source expansion and public deployment verified; 兵庫県・島根県・香川県・福岡県 are next at the lowest candidate depth.
 
 ## Baseline
 
@@ -14,6 +14,16 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 144 Local Checkpoint
+
+- Kyoto: added five candidates — 京都府丹後文化会館、京都市呉竹文化センター、みやづ歴史の館、峰山地域公民館、京丹波町わち地域交流拠点施設（わち夢広場） — and 30 named independently searchable spaces. 京都府 is now 25 candidates, 16 municipalities, and 144 spaces. National totals are 1,133 candidates, 7,217 spaces, and 2,881 price observations; remaining candidate and space deficits are 42 and 0, and 36 of 47 prefectures meet the full reference depth.
+- Official source status: current official prefectural, municipal, designated-operator, and municipal cultural-foundation material only. The entries retain source-explicit halls, foyer/exhibition space, outdoor stage, rehearsal/practice rooms, activity rooms, meeting rooms, Japanese rooms, dressing rooms, public-community rooms, and indoor/outdoor multi-purpose spaces. 京都市呉竹文化センターの2023年公式定員表に限っては、現在の定員・利用条件を needs_check に残した。
+- Ceiling safety: no new filterable ceiling value was added. 京都市呉竹文化センターのプロセニアム高さ7mとみやづ歴史の館の舞台高さ5.5mは、最低有効高に転用していない。わち夢広場の約24m×54mは公式の近似寸法として注記に留め、面積へ換算していない。未公表の天井高、床荷重、搬入、催事回線、空き状況は要確認。
+- Price observations: none added. 京都府丹後文化会館、呉竹文化センター、みやづ歴史の館、わち夢広場の料金は、時間帯、平日休日、営利非営利、入場料、設備、居住地その他の条件で変動するため、確認済み日額として誤って正規化しなかった。
+- Local verification: npm --prefix web run data:generate、npm run audit、npm run depth-report:write、git diff --check、npm run validate passed. The only audit warning is the pre-existing historical-events.csv:173 row. Tracked web/dist was restored after validation and after the deployment build.
+- Changed source files: data/candidate-venues.csv、data/venue-details.csv、generated data/prefecture-expansion-status.csv、and generated web/app/generated-data.ts; this local checkpoint updates STATE.md and REPORT.md.
+- Deployment: source commit bb3baeb39b659cc8d938f742852dcc9f8debfdbf was pushed to the user-authorized Sites source repository with the prior 797017586700230a8879f371ce85b5f8f1ddb3d9 remote head as a force-with-lease guard. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_8b5e2c6771a4819189b7166f12a85f1b and deployment appgdep_6a7765f2f5648191ba85694775ed6aee succeeded. Both https://venue-monosashi.juggler-arata.chatgpt.site and https://venue.art-monosashi.com returned HTTP 200 and served the new 京都府丹後文化会館 marker in the direct search response. The next eligible lowest-depth prefectures are 兵庫県、島根県、香川県、福岡県 at 20 candidates.
 
 ## Wave 143 Local Checkpoint
 

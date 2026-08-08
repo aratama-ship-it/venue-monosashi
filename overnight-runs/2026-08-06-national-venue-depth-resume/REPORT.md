@@ -2,9 +2,17 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 143 Shiga has been validated and publicly deployed. The next lowest-depth group starts at 20 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 144 Kyoto has been validated and publicly deployed. The next lowest-depth group starts at 20 candidates.
 
 ## Latest Wave
+
+- Wave 144 — Kyoto: added 京都府丹後文化会館、京都市呉竹文化センター、みやづ歴史の館、峰山地域公民館、京丹波町わち地域交流拠点施設（わち夢広場） and 30 named searchable spaces. 京都府 is now 25 candidates, 16 municipalities, and 144 spaces; national totals are 1,133 candidates, 7,217 spaces, and 2,881 price observations. Remaining candidate and space deficits are 42 and 0; 36 of 47 prefectures meet the reference depth.
+- Official source status: current official prefectural, municipal, designated-operator, and municipal cultural-foundation material only. The additions retain source-explicit halls, foyer/exhibition space, outdoor stage, rehearsal and practice rooms, activity rooms, meeting rooms, Japanese rooms, dressing rooms, public-community rooms, and indoor/outdoor multi-purpose spaces. No inferred spaces were added. The dated 2023 official capacity table for 京都市呉竹文化センター remains needs_check for current capacity and use conditions.
+- Ceiling safety: no new filterable ceiling value was added. The Kuretake 7m proscenium height and Miyazu 5.5m stage height remain outside the ceiling filter. わち夢広場の約24m×54m is retained as an official approximate-dimension note rather than a derived floor-area value. No stage, proscenium, loading, or building dimension was converted into a ceiling filter.
+- Price observations: none added. Current fees vary by time unit, weekday/holiday, commercial/nonprofit use, admission, equipment, residency, booking, and other terms, so no ambiguous amount was normalized into the daily-budget filter.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing historical-events.csv:173 row; tracked web/dist was restored after validation and deployment.
+- Changed source files: data/candidate-venues.csv, data/venue-details.csv, generated data/prefecture-expansion-status.csv, generated web/app/generated-data.ts, and this run ledger.
+- Public deployment passed: source commit bb3baeb39b659cc8d938f742852dcc9f8debfdbf was pushed to the authorized Sites repository with a force-with-lease guard from 797017586700230a8879f371ce85b5f8f1ddb3d9. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_8b5e2c6771a4819189b7166f12a85f1b (deployment appgdep_6a7765f2f5648191ba85694775ed6aee) succeeded. Both public URLs returned HTTP 200 and served the new 京都府丹後文化会館 marker in the direct search response. Next wave: 兵庫県、島根県、香川県、福岡県 at 20 candidates.
 
 - Wave 143 — Shiga: added 滋賀県立芸術劇場びわ湖ホール、滋賀県立文化産業交流会館、野洲文化小劇場、八日市文化芸術会館、竜王町公民館 and 34 named searchable spaces. 滋賀県 is now 25 candidates, 16 municipalities, and 108 spaces; national totals are 1,128 candidates, 7,187 spaces, and 2,881 price observations. Remaining candidate and space deficits are 47 and 0; 35 of 47 prefectures meet the reference depth.
 - Official source status: current official facility, municipal, prefectural, and designated-operator material only. The entries retain source-explicit halls, rehearsal and practice rooms, training rooms, an event hall, small theater, conference rooms, an exhibition room, Japanese room, kitchen, workshop, music room, public activity floors, and outdoor children’s space. No inferred spaces were added.
