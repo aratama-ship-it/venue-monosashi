@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 126 — Chiba official-source expansion locally verified; source commit and public deployment are pending.
+- Current wave: Wave 126 — Chiba official-source expansion deployed and publicly verified; next is a bounded official-source wave for Ishikawa.
 
 ## Baseline
 
@@ -22,7 +22,7 @@
 - Price observations: none added. Published fees vary by time block, municipality, commercial purpose, admission, equipment, or room type, so this candidate-depth wave does not normalize them into the general day-price filter.
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending source commit and user-authorized Sites push/deployment. The next eligible lowest-depth prefecture after completion is 石川県, tied with 山梨県、静岡県、奈良県、鳥取県、山口県、徳島県、大分県、宮崎県 at 19 candidates.
+- Deployment: source commit `f3abd5cb8c02ff9ba5333e428c9a7ffbe87fb022` was pushed to the user-authorized Sites source repository with the confirmed Saitama release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_f3df5f7052508191b800c9fd12d96c11` (deployment `appgdep_6a771e552df4819186cd7ced13a86496`) deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E5%B8%82%E5%8E%9F%E5%B8%82%E5%B8%82%E6%B0%91%E4%BC%9A%E9%A4%A8&release=f3abd5c` and `https://venue.art-monosashi.com/?q=%E5%B8%82%E5%8E%9F%E5%B8%82%E5%B8%82%E6%B0%91%E4%BC%9A%E9%A4%A8&release=f3abd5c` returned HTTP 200 and contained the newly added 市原市市民会館 marker. Tracked `web/dist` was restored after the deployment build. The next eligible lowest-depth prefecture is 石川県, tied with 山梨県、静岡県、奈良県、鳥取県、山口県、徳島県、大分県、宮崎県 at 19 candidates.
 
 ## Wave 124 Local Checkpoint
 

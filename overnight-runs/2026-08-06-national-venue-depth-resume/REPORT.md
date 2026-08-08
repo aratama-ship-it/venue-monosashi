@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 126 Chiba is locally verified and pending its authorized public deployment.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 126 Chiba is deployed and publicly verified; the next bounded wave is Ishikawa.
 
 ## Latest Wave
 
@@ -11,8 +11,8 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Price observations: none added. Fee schemes vary by time block, municipality, commercial purpose, admission, equipment, or room type, so they are not generalized into a misleading day-price filter.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment: pending source commit and user-authorized Sites push/deployment.
-- Next wave after deployment: 石川県, tied with 山梨県、静岡県、奈良県、鳥取県、山口県、徳島県、大分県、宮崎県 at 19 candidates in the regenerated report.
+- Public deployment passed: source commit `f3abd5cb8c02ff9ba5333e428c9a7ffbe87fb022` was pushed to the authorized Sites repository with the confirmed Saitama release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_f3df5f7052508191b800c9fd12d96c11` (deployment `appgdep_6a771e552df4819186cd7ced13a86496`) deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E5%B8%82%E5%8E%9F%E5%B8%82%E5%B8%82%E6%B0%91%E4%BC%9A%E9%A4%A8&release=f3abd5c` and `https://venue.art-monosashi.com/?q=%E5%B8%82%E5%8E%9F%E5%B8%82%E5%B8%82%E6%B0%91%E4%BC%9A%E9%A4%A8&release=f3abd5c` returned HTTP 200 and contained the new 市原市市民会館 marker. Tracked `web/dist` was restored after the deployment build.
+- Next wave: 石川県, tied with 山梨県、静岡県、奈良県、鳥取県、山口県、徳島県、大分県、宮崎県 at 19 candidates in the regenerated report.
 
 - Wave 125 — Saitama: added 彩の国さいたま芸術劇場、RaiBoC Hall（さいたま市民会館おおみや）、東松山市民文化センター、正和工業にじいろホール（春日部市民文化会館）、埼玉会館、菖蒲文化会館（アミーゴ） and 74 named searchable spaces. 埼玉県 is now 25 candidates, 19 municipalities, and 197 spaces; national totals are 1,028 candidates, 5,865 spaces, and 2,870 price observations. Remaining candidate and space deficits are 147 and 0.
 - Official source status: current official foundation, city, and operator pages from 埼玉県芸術文化振興財団、さいたま市、東松山市民文化センター運営者、春日部市、久喜市文化施設運営者. Only source-explicit room names, capacities, areas, room-counts, and use conditions were structured. Stage/proscenium/grid/sunoko dimensions were not converted into ceiling height; all unpublished ceilings and operational conditions remain `要確認`.
