@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 22 Nagano is validated locally and awaits public deployment; the next bounded wave is selected from the regenerated lowest-depth report.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 93 Tokyo is validated locally and awaits public deployment; the next bounded wave is selected from the regenerated lowest-depth report.
 
 ## Changes
 
@@ -563,6 +563,15 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added 38 independently searchable spaces. 福島県 is now 19 candidates, 15 municipalities, and 114 spaces; national totals are 776 candidates and 3,583 spaces. Remaining candidate and space deficits are 399 and 34.
 - Official source status: 喜多方プラザ文化センター公式運営者、国見町、矢吹町、桑折町の公開施設案内・予約情報を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Published stage and proscenium heights were not converted into ceiling data, and all unreported conditions remain `要確認`.
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
+# Wave 93 — Tokyo official-source expansion
+
+- Added four candidates: 練馬区立練馬文化センター（練馬区）、赤羽文化センター（北区）、かつしかシンフォニーヒルズ（葛飾区）、杉並公会堂（杉並区）。
+- Added 90 independently searchable spaces. 東京都 is now 20 candidates, 12 municipalities, and 123 spaces; national totals are 852 candidates and 4,214 spaces. Remaining candidate and space deficits are 323 and 16.
+- Official source status: 練馬区立練馬文化センター公式、北区、葛飾区と現行利用料金PDF、杉並公会堂公式を使用。Only source-explicit room names, capacities, floor-area values, and explicitly labelled ceiling heights were recorded. The 2.8m Nerima gallery and 6m Suginami small hall ceilings are explicit official values; no stage, proscenium, or building dimension was converted into ceiling data. All unreported conditions remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment pending: commit and push the validated Wave 93 source, deploy it through Sites, and verify both public URLs before choosing the next 16-candidate prefectural wave.
+
 # Wave 92 — Tochigi official-source expansion
 
 - Added four candidates: 那須町文化センター（那須公民館）（那須町）、日光市中央公民館（日光市）、日東工業エニスホール（野木町文化会館）（野木町）、上三川町ORIGAMIプラザ（上三川町）。
