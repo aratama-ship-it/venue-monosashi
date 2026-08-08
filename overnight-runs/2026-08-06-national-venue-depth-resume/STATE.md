@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 120 — Akita official-source expansion deployed and publicly verified; Wave 121 Yamagata selection is next.
+- Current wave: Wave 121 — Yamagata official-source expansion is locally validated; public source push and deployment are pending.
 
 ## Baseline
 
@@ -14,6 +14,16 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 121 Checkpoint
+
+- Yamagata: added six candidates — 山形市中央公民館（アズ七日町）（山形市）、山形県産業創造支援センター（山形市）、飯豊町町民総合センター「あ〜す」（飯豊町）、大江町町民ふれあい会館（大江町）、大蔵村中央公民館（大蔵村）、遊佐町生涯学習センター（遊佐町） — and 61 named, independently searchable spaces. 山形県 is now 25 candidates, 21 municipalities, and 145 spaces. National totals are 1,004 candidates, 5,622 spaces, and 2,870 price observations; remaining candidate and space deficits are 171 and 0.
+- Official source status: current official municipality, municipal-facility, and designated-operator pages from 山形市、飯豊町、大江町、大蔵村、遊佐町 and the 山形県産業創造支援センター designated operator. All detailed room names follow source-published named units; only source-explicit areas, capacities, floor load, and facility conditions were structured. 山形市中央公民館、飯豊町町民総合センター、大江町町民ふれあい会館の舞台寸法・舞台高さは最低天井高へ変換していない。未公表の最低天井高、搬入、回線、空き状況は `要確認` のままとした。
+- Price observations: none added. 公開料金は時間帯・営利・飲酒・冷暖房・練習利用・休日等の条件差を含むため、一般の日額予算フィルターに誤って正規化していない。
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending. The next step is to commit the validated named files, push to the user-authorized Sites source repository with the confirmed Akita release as a force-with-lease guard, deploy the generated build, and check both public URLs for a new Yamagata marker.
+- Next action after deployment: select 福島県, tied with 茨城県、群馬県、埼玉県、千葉県、石川県、山梨県、静岡県、奈良県、鳥取県 at 19 candidates, for the next bounded official-source wave.
 
 ## Wave 120 Checkpoint
 
