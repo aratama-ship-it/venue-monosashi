@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 133 — Tokushima official-source expansion and public deployment verified; 大分県 is next.
+- Current wave: Wave 134 — Oita official-source expansion validated locally; public deployment pending. 宮崎県 is next after deployment.
 
 ## Baseline
 
@@ -14,6 +14,15 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 134 Local Checkpoint
+
+- Oita: added six candidates — J:COM ホルトホール大分、コンパルホール、大分県立美術館（OPAM）、平和市民公園能楽堂、荷揚BASE（大分市役所別館）、アートプラザ — and 35 named independently searchable spaces. 大分県 is now 25 candidates, 17 municipalities, and 155 spaces. National totals are 1,082 candidates, 6,497 spaces, and 2,875 price observations; remaining candidate and space deficits are 93 and 0.
+- Official source status: current official operator, prefectural, municipal, and city-operated facility pages only. Source-explicit halls, transformable halls, foyers, dressing rooms, rehearsal/practice rooms, meeting rooms, galleries/exhibition rooms, an atrium, a noh stage/viewing room, common spaces, and named art-facility spaces were structured. The only filterable ceiling values are direct room-height values: コンパルホール音楽練習室2.5m、荷揚BASEの各室2.7/2.8m、アートプラザのギャラリーA/B2.85m・アートホール5.14m・実技室4.05m・研修室4.66m. No stage, proscenium, baton, atrium, or building dimension was converted into a ceiling-height filter; unreported ceilings, floor loads, loading, streaming, availability, and ordinary lending conditions remain `要確認`.
+- Price observations: added five current, precisely sourced daily facility prices: アートプラザのアートホール17,080円・市民ギャラリーA9,440円・市民ギャラリーB4,080円（2026-04-01予約分から）、荷揚BASEのコモンスペース1全室12,960円・コモンスペース2 10,160円. The official materials do not distinguish commercial/nonprofit rates for these records, so each remains in the `all` fee class rather than falsely appearing under either filter.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending source commit, user-authorized Sites source push, production deployment, and both public-URL marker checks. The next eligible lowest-depth prefecture is 宮崎県 (19 candidates).
 
 ## Wave 133 Local Checkpoint
 

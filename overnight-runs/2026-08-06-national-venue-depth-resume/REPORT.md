@@ -2,9 +2,16 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 133 Tokushima has been publicly deployed and verified; the next lowest-depth wave is 大分県.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 134 Oita has passed local validation; public deployment is pending. The next lowest-depth wave is 宮崎県.
 
 ## Latest Wave
+
+- Wave 134 — Oita: added J:COM ホルトホール大分、コンパルホール、大分県立美術館（OPAM）、平和市民公園能楽堂、荷揚BASE（大分市役所別館）、アートプラザ and 35 named searchable spaces. 大分県 is now 25 candidates, 17 municipalities, and 155 spaces; national totals are 1,082 candidates, 6,497 spaces, and 2,875 price observations. Remaining candidate and space deficits are 93 and 0.
+- Official source status: current official operator, prefectural, municipal, and city-operated facility material only. Exact areas, capacities, and direct room-height figures are retained only where published. The new searchable ceilings are the explicit room heights at コンパルホール音楽練習室、荷揚BASE、アートプラザ; stage height, proscenium, baton, atrium, and building dimensions are not ceiling-height evidence and remain outside the filter. Other unreported conditions remain `要確認`.
+- Price observations: five exact daily rates were added from current official pricing material. アートプラザ uses its 2026-04-01 booking-rate table; 荷揚BASE rates include equipment, HVAC, and consumption tax as the city explicitly states. Neither source supplies a commercial/nonprofit distinction for these rows, so they remain `all` rather than being misclassified.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Public deployment: pending source commit, authorized Sites source push, deployment, and verification of both public URLs. Next wave: 宮崎県 (19 candidates).
 
 - Wave 133 — Tokushima: added シビックセンター、徳島県立21世紀館、阿波おどり会館、ふれあい健康館（徳島市生涯福祉センター）、美波町コミュニティホール、鳴門市文化会館 and 40 named searchable spaces. 徳島県 is now 25 candidates, 18 municipalities, and 123 spaces; national totals are 1,076 candidates, 6,462 spaces, and 2,870 price observations. Remaining candidate and space deficits are 99 and 0.
 - Official source status: current official city, town, prefectural, and designated-operator material only. Exact areas and capacities are retained only where published. No stage, proscenium, atrium, or building dimension was converted into a searchable ceiling height. The only construction-status addition, 鳴門市文化会館, is explicitly marked with actual availability `要確認` because the official opening is planned for June 2027; its approximate capacity is not a search value.
