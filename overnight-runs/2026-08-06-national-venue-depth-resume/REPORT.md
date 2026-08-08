@@ -2,9 +2,16 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 132 Yamaguchi has been publicly deployed and verified; the next lowest-depth wave is 徳島県.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 133 Tokushima has passed local verification and is awaiting its user-authorized public deployment; the next lowest-depth wave after it is 大分県.
 
 ## Latest Wave
+
+- Wave 133 — Tokushima: added シビックセンター、徳島県立21世紀館、阿波おどり会館、ふれあい健康館（徳島市生涯福祉センター）、美波町コミュニティホール、鳴門市文化会館 and 40 named searchable spaces. 徳島県 is now 25 candidates, 18 municipalities, and 123 spaces; national totals are 1,076 candidates, 6,462 spaces, and 2,870 price observations. Remaining candidate and space deficits are 99 and 0.
+- Official source status: current official city, town, prefectural, and designated-operator material only. Exact areas and capacities are retained only where published. No stage, proscenium, atrium, or building dimension was converted into a searchable ceiling height. The only construction-status addition, 鳴門市文化会館, is explicitly marked with actual availability `要確認` because the official opening is planned for June 2027; its approximate capacity is not a search value.
+- Price observations: none added. Published rates have time-band, HVAC, admission, commercial-use, eligibility, and pre-opening dependencies that cannot be truthfully normalized into a current general day-price filter.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Public deployment: pending the source commit, authorized Sites source push, and public URL checks. Next wave: 大分県, tied with 宮崎県 at 19 candidates.
 
 - Wave 132 — Yamaguchi: added 山口市民会館、下関市生涯学習プラザ（ドリームシップ）、周南市文化会館、ルネッサながと（山口県民芸術文化ホールながと）、山口情報芸術センター［YCAM］、ヒストリア宇部 and 96 named searchable spaces. 山口県 is now 25 candidates, 18 municipalities, and 188 spaces; national totals are 1,070 candidates, 6,422 spaces, and 2,870 price observations. Remaining candidate and space deficits are 105 and 0.
 - Official source status: current official city and designated-operator pages. Only source-explicit room names, areas, capacities, seating composition, ceiling height, and use conditions were structured. 下関市生涯学習プラザ・風のホール is the only new space with an explicit floor-to-ceiling height of about 8m, stored as the published minimum-clearance value. No stage, sunoko, proscenium, opening, or building-height figure became a ceiling-height filter; unknown ceilings, floor loads, loading, streaming, fee applicability, availability, and ordinary lending scope remain `要確認`.

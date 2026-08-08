@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 132 — Yamaguchi official-source expansion and public deployment verified; 徳島県 is next.
+- Current wave: Wave 133 — Tokushima official-source expansion verified locally; public deployment pending. 大分県 is next after deployment.
 
 ## Baseline
 
@@ -14,6 +14,16 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 133 Local Checkpoint
+
+- Tokushima: added six candidates — シビックセンター、徳島県立21世紀館、阿波おどり会館、ふれあい健康館（徳島市生涯福祉センター）、美波町コミュニティホール、鳴門市文化会館 — and 40 named independently searchable spaces. 徳島県 is now 25 candidates, 18 municipalities, and 123 spaces. National totals are 1,076 candidates, 6,462 spaces, and 2,870 price observations; remaining candidate and space deficits are 99 and 0.
+- Official source status: current official city, town, prefectural, and designated-operator pages from シビックセンター、徳島県立21世紀館、阿波おどり会館、ふれあい健康館、美波町、鳴門市文化会館開館準備室. Source-explicit halls, activities/practice rooms, meeting rooms, galleries, outdoor performance space, rehearsal room, foyers, lobby, and support rooms were structured. The exact measurements retained are limited to published floor area and capacity. No ceiling field was populated: 鳴門市文化会館の約10mの吹抜け、舞台・座席・図面の高さや仕様は最低天井高として扱わず、未公表の天井高、床荷重、搬入、催事回線、通常利用条件、空き状況は `要確認` とした。
+- Availability caveats retained: 鳴門市文化会館 is under construction for a planned June 2027 renewal opening, so every new detail is retained with actual availability `要確認`; the numerical seats on its page are approximate and not searchable. ふれあい健康館の視聴覚室 is listed as not currently available for general rental. 阿波おどり会館の活動室 source explicitly says internet is unavailable and that activity-room chair counts are reference-use counts.
+- Price observations: none added. The current official fee tables vary by time band, cooling/heating, admission, commercial use, residence, preparation, attached equipment, or pre-opening conditions, so no ambiguous or future price was generalized into the day-price filter.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending source commit, authorized Sites source push, public build, deployment, and both-URL marker verification. The next eligible lowest-depth prefecture after that checkpoint is 大分県, tied with 宮崎県 at 19 candidates.
 
 ## Wave 132 Local Checkpoint
 
