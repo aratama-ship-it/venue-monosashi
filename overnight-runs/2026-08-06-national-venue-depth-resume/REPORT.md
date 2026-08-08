@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 107 Okayama has passed local validation and is being committed, deployed, and publicly verified before the next bounded wave.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 107 Okayama is deployed and publicly verified; the next bounded wave will select 愛媛県.
 
 ## Latest Wave
 
@@ -11,7 +11,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Price observations: none added. The available 早島町 fees have purpose, weekday/holiday, admission, and air-conditioning conditions; they were kept out of the day-price filter until a condition-safe normalization is possible.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment: pending commit and user-authorized Sites publication of this validated revision.
+- Public deployment passed: source commit `eb13272fce7686800d81b5974b5ce9f5b05feb2e` was pushed to the authorized Sites source repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_3922792ee1a48191aa619584e895417c` deployed successfully. Both public URLs returned HTTP 200 for `?release=eb13272`, and their public search assets contained the newly added `やかげ文化センター` marker. Tracked `web/dist` was restored after the deployment build.
 - Next wave: 愛媛県 is the lowest candidate-depth prefecture (17 candidates) in the regenerated report.
 
 - Wave 105 — Niigata: added 柏崎市文化会館アルフォーレ、南魚沼市民会館、魚沼市響きの森文化会館、村上市民ふれあいセンター、妙高市文化ホール、新潟県民会館、新潟市江南区文化会館、新潟市秋葉区文化会館 and 94 named searchable spaces. 新潟県 is now 25 candidates, 19 municipalities, and 158 spaces; national totals are 906 candidates, 4,746 spaces, and 2,842 price observations. Remaining candidate and space deficits are 269 and 8.

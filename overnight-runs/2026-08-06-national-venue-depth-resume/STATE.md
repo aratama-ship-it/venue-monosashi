@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 107 — Okayama official-source expansion validated locally; commit, deploy, and verify the bounded wave before selecting the next lowest-depth prefecture.
+- Current wave: Wave 107 — Okayama official-source expansion completed and deployed; select 愛媛県 from the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -72,8 +72,8 @@
 - Price observations: none added. 早島町の公開料金は利用目的、平日・休日、入場料、空調等で分岐するため、誤って一般化した日額検索値にはせず、価格精査対象として残した。
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending — commit the named source files, push the validated revision to the user-authorized Sites repository, deploy, and verify both public URLs.
-- Next action: after public verification, select 愛媛県 as the lowest candidate-depth prefecture (17 candidates) for the next bounded official-source wave.
+- Deployment: source commit `eb13272fce7686800d81b5974b5ce9f5b05feb2e` was pushed to the authorized Sites repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_3922792ee1a48191aa619584e895417c` (deployment `appgdep_6a76e78d87dc81919095f2bca5aaed65`) deployed successfully. Both public URLs returned HTTP 200 for `?release=eb13272`, and the public search asset contained the new `やかげ文化センター` marker on both. Tracked `web/dist` was restored after the deployment build.
+- Next action: select 愛媛県 as the lowest candidate-depth prefecture (17 candidates) for the next bounded official-source wave.
 
 ## Completed Waves
 
