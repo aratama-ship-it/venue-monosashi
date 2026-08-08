@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 129 — Shizuoka official-source expansion is locally validated; public deployment is pending. 奈良県 is next after the release check.
+- Current wave: Wave 129 — Shizuoka official-source expansion and public deployment verified; 奈良県 is next.
 
 ## Baseline
 
@@ -22,7 +22,7 @@
 - Price observations: none added. The official price tables vary by time band, weekday/holiday, admission, equipment, room configuration, or other use conditions, so this candidate-depth wave does not generalize them into the day-price filter.
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending user-authorized Sites source push, build, public deployment, and verification. The next eligible lowest-depth prefecture is 奈良県, tied with 鳥取県、山口県、徳島県、大分県、宮崎県 at 19 candidates.
+- Deployment: source commit `a7de3184835bf2dbe78ebe1765b5eaee330cd2a6` was pushed to the user-authorized Sites source repository with the confirmed Yamanashi release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_50b85f4967d8819190006246bb4593c1` (deployment `appgdep_6a7728a37f588191995f69d86d2a4f2e`) deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E3%83%9E%E3%83%AA%E3%83%8A%E3%83%BC%E3%83%88&release=a7de318` and `https://venue.art-monosashi.com/?q=%E3%83%9E%E3%83%AA%E3%83%8A%E3%83%BC%E3%83%88&release=a7de318` returned HTTP 200 and contained the new マリナート marker. Tracked `web/dist` was restored after the deployment build. The next eligible lowest-depth prefecture is 奈良県, tied with 鳥取県、山口県、徳島県、大分県、宮崎県 at 19 candidates.
 
 ## Wave 128 Local Checkpoint
 
