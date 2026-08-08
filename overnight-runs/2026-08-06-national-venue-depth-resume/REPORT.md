@@ -570,7 +570,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Official source status: 富山県文化振興財団、高岡市ふくおか総合文化センター指定管理者、朝日町、立山町元気交流ステーション公式の現行施設案内・料金表を使用。Only source-explicit room names, capacities, floor-area values, and explicitly labelled ceiling heights were recorded. No stage, proscenium, or building dimension was converted into ceiling data. All unreported conditions remain `要確認`.
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment pending: commit and push the validated Wave 94 source, deploy it through Sites, and verify both public URLs before choosing the next 16-candidate prefectural wave.
+- Deployment passed: source commit `ec457ee387d7fda76036a0d1fe6f57a94f727566` was pushed to the authorized Sites repository; Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_6e4af6f734348191aecf799633a8a16b` deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E9%AB%98%E5%B2%A1%E6%96%87%E5%8C%96%E3%83%9B%E3%83%BC%E3%83%AB&release=ec457ee` and `https://venue.art-monosashi.com/?q=%E9%AB%98%E5%B2%A1%E6%96%87%E5%8C%96%E3%83%9B%E3%83%BC%E3%83%AB&release=ec457ee` returned HTTP 200. Tracked `web/dist` output was restored.
 
 # Wave 93 — Tokyo official-source expansion
 
