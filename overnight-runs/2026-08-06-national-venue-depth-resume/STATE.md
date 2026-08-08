@@ -22,7 +22,7 @@
 - Price observations: none added. The official price schemes vary by time band, weekday/holiday, admission, commercial purpose, room configuration, and other conditions, so no ambiguous amount was generalized into the daily-budget filter.
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending the user-authorized Sites source push and public deployment after the named source commit. The next eligible lowest-depth prefecture after deployment is 宮城県, tied with 栃木県、東京都、富山県、福井県、愛知県、滋賀県、京都府、兵庫県、島根県 at 20 candidates.
+- Deployment: the first saved version packaged a stale root-level build output, so it is not treated as a successful data release. Packaging has been corrected to the tracked `web` site root; the user-authorized source push and public deployment of the corrected package are next. The next eligible lowest-depth prefecture after deployment is 宮城県, tied with 栃木県、東京都、富山県、福井県、愛知県、滋賀県、京都府、兵庫県、島根県 at 20 candidates.
 
 ## Wave 135 Local Checkpoint
 
