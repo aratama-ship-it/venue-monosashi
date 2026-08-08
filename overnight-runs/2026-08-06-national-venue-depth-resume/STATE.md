@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 92 — Tochigi official-source expansion validated locally; commit and deploy the authorized source, then select the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 92 — Tochigi official-source expansion completed and deployed; select the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -198,6 +198,7 @@
 - Official sources: 那須町、日光市、野木町・公式運営者、上三川町の現行施設案内・予約案内を使用。Only source-explicit room names, capacities, and floor-area values were structured. No ceiling height or price observation was inferred; all stage dimensions/heights remain explanatory notes, not ceiling values. 今市文化会館は公式に予約停止中のため候補へ追加せず、現行利用可能な日光市中央公民館を採用した。All unreported conditions remain `要確認`.
 - Wave 92 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing `historical-events.csv:173` warning. Tracked `web/dist` output was restored after the validation build.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Wave 92 deployment passed: source commit `3048403a1717b4d0e4f6584b07574c1c9aa35fc5` was pushed to the authorized Sites repository; Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_2a7ed2b4eea08191b5a1d6b1154061ac` deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E9%82%A3%E9%A0%88%E7%94%BA%E6%96%87%E5%8C%96%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=3048403` and `https://venue.art-monosashi.com/?q=%E9%82%A3%E9%A0%88%E7%94%BA%E6%96%87%E5%8C%96%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=3048403` returned the new 那須町文化センター search result. Tracked `web/dist` output was restored.
 - Next lowest-depth wave after publication: 東京都, 富山県, 福井県, 愛知県, 滋賀県, 京都府, 兵庫県, 島根県, 香川県, 福岡県 (all 16 candidates).
 
 - Wave 91 source data: added four official-source-backed Miyagi facilities — 白石市文化体育活動センター（ホワイトキューブ）（白石市）、登米祝祭劇場（水の里ホール・Abebisou）（登米市）、角田市市民センター（かくだ田園ホール）（角田市）、岩沼市民会館（岩沼市） — and 27 independently searchable spaces. 宮城県 is now 20 candidates, 16 municipalities, and 106 spaces; national totals are 844 candidates and 4,084 spaces. Remaining candidate and space deficits are 331 and 34.
