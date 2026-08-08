@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 114 — Hiroshima official-source expansion completed and deployed; select one of 高知県・佐賀県・熊本県・鹿児島県 from the next bounded lowest-depth wave.
+- Current wave: Wave 115 — Kagoshima official-source expansion validated; source commit and public deployment pending.
 
 ## Baseline
 
@@ -14,6 +14,16 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 115 Checkpoint
+
+- Kagoshima: added seven candidates — カクイックス交流センター（かごしま県民交流センター）（鹿児島市）、谷山サザンホール（鹿児島市）、サンエールかごしま（鹿児島市）、改新交流センター（鹿児島市）、川内駅コンベンションセンター（SSプラザせんだい）（薩摩川内市）、入来文化ホール（薩摩川内市）、指宿総合体育館（指宿市） — and 41 named, independently searchable spaces. 鹿児島県 is now 25 candidates, 15 municipalities, and 140 spaces. National totals are 965 candidates, 5,311 spaces, and 2,870 price observations; remaining candidate and space deficits are 210 and 0.
+- Official source status: current prefectural, municipal, current-fee, current facility, and municipal use-condition pages from 鹿児島県、鹿児島市、薩摩川内市、指宿市. Only source-explicit room names, capacities, and current-use facts were structured. Stage, opening, building, and project dimensions were not converted into ceiling values; every unpublished ceiling remains `要確認`.
+- Price observations: none added. Published fees are hourly, period-based, municipality/residency/営利条件-dependent, or equipment-inclusive; they were not normalized into a misleading general day-price filter.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending. Commit the named source files, push the exact source commit to the user-authorized Sites source repository, deploy the generated site, and verify both public URLs before recording the deployment checkpoint.
+- Next action after deployment: select one of 高知県、佐賀県、熊本県, tied at the current lowest candidate depth (18 candidates), for the next bounded official-source wave.
 
 ## Wave 114 Checkpoint
 
