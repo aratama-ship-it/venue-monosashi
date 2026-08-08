@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 99 Hyogo is deployed and publicly reachable; the next bounded wave will be selected from the regenerated lowest-depth report.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 100 Shimane is locally validated and awaiting its authorized source push, public deployment, and public-URL checks; the next bounded wave will be selected from the regenerated lowest-depth report.
 
 ## Changes
 
@@ -174,6 +174,10 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - None while the run remains active.
 
 ## Latest Wave
+
+- Wave 100 source data: added four official-source-backed Shimane facilities — 大田市民会館、隠岐島文化会館、西ノ島町中央公民館、島根県中山間地域研究センター — and 34 searchable spaces, increasing the national total to 880 facilities and 4,428 spaces. Sources are the current official facility and use pages of 大田市・大田市民会館指定管理者、隠岐の島町、西ノ島町、島根県.
+- Structured only explicit room names, capacities, and areas. No ceiling value was inferred: 大田市民会館の舞台高さ8mと隠岐島文化会館の舞台高さ6m remain outside the room-ceiling filter. Five current 9〜17時 basic price observations were added for the 飯南町 facility from the 2026-04-01 prefectural table; cooling, equipment, and overtime charges remain excluded conditions. All unreported conditions remain `要確認`.
+- Wave 100 local validation passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored. Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Deployment is pending the authorized source push and public checks.
 
 - Wave 99 source data: added four official-source-backed Hyogo facilities — 東リ いたみホール（伊丹市立文化会館）、川西市キセラホール、たつの市総合文化会館 赤とんぼ文化ホール、加東市やしろ国際学習塾 — and 30 searchable spaces, increasing the national total to 876 facilities and 4,394 spaces. Sources are the current official facility pages and use information of 伊丹市、川西市、キセラホール公式運営者、たつの市、赤とんぼ文化ホール公式運営者、加東市.
 - Structured only explicit room names and capacities. The approximate 1,200 seats at 伊丹市立文化会館 were not turned into a numeric search filter. No ceiling value was inferred: stage, proscenium, and building dimensions were not used as room ceilings. No price observation was added because current fees vary by room, time, purpose, or attached equipment; all unreported conditions remain `要確認`.
