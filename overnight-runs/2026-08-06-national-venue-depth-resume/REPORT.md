@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 125 Saitama is locally validated; source commit and public deployment are next.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 125 Saitama is deployed and publicly verified; the next bounded wave is Chiba.
 
 ## Latest Wave
 
@@ -11,7 +11,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Price observations: none added. Fee schemes vary by time band, admission, purpose, city/outside-city status, or room type, so they are not generalized into a misleading day-price filter.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment: pending named source commit, protected Sites repository push, build, deploy, and both-public-URL verification.
+- Public deployment passed: source commit `b13ee1ac63add960d5e995e80544c736115e2d1f` was pushed to the authorized Sites repository with the confirmed Gunma release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_72def61255e881918317d0e43efc0a45` (deployment `appgdep_6a771b3d137c819180aa5e528009f91b`) deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E5%BD%A9%E3%81%AE%E5%9B%BD%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE%E8%8A%B8%E8%A1%93%E5%8A%87%E5%A0%B4&release=b13ee1a` and `https://venue.art-monosashi.com/?q=%E5%BD%A9%E3%81%AE%E5%9B%BD%E3%81%95%E3%81%84%E3%81%9F%E3%81%BE%E8%8A%B8%E8%A1%93%E5%8A%87%E5%A0%B4&release=b13ee1a` returned HTTP 200 and contained the new 彩の国さいたま芸術劇場 marker. Tracked `web/dist` was restored after the deployment build.
 - Next wave: 千葉県, tied with 石川県、山梨県、静岡県、奈良県、鳥取県、山口県、徳島県、大分県、宮崎県 at 19 candidates in the regenerated report.
 
 - Wave 124 — Gunma: added 高崎芸術劇場、昌賢学園まえばしホール（前橋市民文化会館）、群馬音楽センター、甘楽町文化会館、長野原町住民総合センター、バイテック文化ホール（中之条町文化会館） and 43 named searchable spaces. 群馬県 is now 25 candidates, 20 municipalities, and 146 spaces; national totals are 1,022 candidates, 5,791 spaces, and 2,870 price observations. Remaining candidate and space deficits are 153 and 0.
