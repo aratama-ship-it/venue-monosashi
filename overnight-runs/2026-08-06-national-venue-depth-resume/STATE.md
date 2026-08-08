@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 124 — Gunma official-source expansion locally validated; guarded source push and public deployment are next.
+- Current wave: Wave 124 — Gunma official-source expansion deployed and publicly verified; next is a bounded official-source wave for Saitama.
 
 ## Baseline
 
@@ -22,8 +22,8 @@
 - Price observations: none added. Fee schedules differ by time band, residency, commercial purpose, equipment, and layout, so this candidate-depth wave does not normalize them into the general day-price filter.
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending the source commit. The user has explicitly authorized the validated source push and public deployment after each wave; the next step is the guarded Sites source push, deploy, and both-public-URL verification.
-- Next action after deployment: select 埼玉県, tied with 千葉県、石川県、山梨県、静岡県、奈良県、鳥取県、山口県、徳島県、大分県 at 19 candidates, for the next bounded official-source wave.
+- Deployment: source commit `551532f09cad0e327ac3ff503f134bf7694c0457` was pushed to the user-authorized Sites source repository with the confirmed Ibaraki release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_9e6f8e223e448191b7c0ad29d3d39b35` (deployment `appgdep_6a7718990fd881919d26580c95a02e29`) deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E9%AB%98%E5%B4%8E%E8%8A%B8%E8%A1%93%E5%8A%87%E5%A0%B4&release=551532f` and `https://venue.art-monosashi.com/?q=%E9%AB%98%E5%B4%8E%E8%8A%B8%E8%A1%93%E5%8A%87%E5%A0%B4&release=551532f` returned HTTP 200 and contained the newly added 高崎芸術劇場 marker. Tracked `web/dist` was restored after the deployment build.
+- Next action: select 埼玉県, tied with 千葉県、石川県、山梨県、静岡県、奈良県、鳥取県、山口県、徳島県、大分県 at 19 candidates, for the next bounded official-source wave.
 
 ## Wave 123 Local Checkpoint
 
