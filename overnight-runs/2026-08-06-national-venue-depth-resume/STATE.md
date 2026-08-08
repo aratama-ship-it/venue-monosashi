@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 116 — Kochi official-source expansion validated; source commit and public deployment pending.
+- Current wave: Wave 116 — Kochi official-source expansion deployed and publicly verified; Wave 117 Saga selection is next.
 
 ## Baseline
 
@@ -22,8 +22,8 @@
 - Price observations: none added. Available fee tables are hourly, time-band, day-band, cooling/heating, or commercial-use dependent; they were not normalized into a misleading general day-price filter.
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending. Commit the named source files, push the exact source commit to the user-authorized Sites source repository, deploy the generated site, and verify both public URLs before recording the deployment checkpoint.
-- Next action after deployment: select one of 佐賀県、熊本県, tied at the current lowest candidate depth (18 candidates), for the next bounded official-source wave.
+- Deployment: source commit `9a018f103d6c660e5a118d76b42cc0fececdbb39` was pushed to the user-authorized Sites source repository with the confirmed prior release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_02190fc1408081919424d1eafbea9d06` (deployment `appgdep_6a7701727e848191b8829779e7b95dba`) deployed successfully. Both public URLs returned the `?release=9a018f1` page and contained the new `香美市立中央公民館` marker. Tracked `web/dist` was restored after the deployment build.
+- Next action: select 佐賀県, tied with 熊本県 at the current lowest candidate depth (18 candidates), for the next bounded official-source wave.
 
 ## Wave 115 Checkpoint
 

@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 116 Kochi is locally validated and ready for its authorized public deployment; the next bounded wave will be selected from 佐賀県 and 熊本県, tied at 18 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 116 Kochi is publicly deployed and verified; the next bounded wave is 佐賀県, selected from the two prefectures tied at 18 candidates.
 
 ## Latest Wave
 
@@ -11,8 +11,8 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Price observations: none added. Published fees are hourly, time-band, day-band, cooling/heating, or commercial-use dependent, so they are not generalized into a misleading day-price filter.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment: pending source commit and authorized Sites release. After it is live, verify both public URLs with a new Kochi marker before starting the next source wave.
-- Next wave: one of 佐賀県、熊本県, tied at the lowest candidate depth (18 candidates) in the regenerated report.
+- Public deployment passed: source commit `9a018f103d6c660e5a118d76b42cc0fececdbb39` was pushed to the authorized Sites source repository with the confirmed prior release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_02190fc1408081919424d1eafbea9d06` (deployment `appgdep_6a7701727e848191b8829779e7b95dba`) deployed successfully. Both public URLs returned the `?release=9a018f1` page and contained the newly added `香美市立中央公民館` marker. Tracked `web/dist` was restored after the deployment build.
+- Next wave: 佐賀県, tied with 熊本県 at the lowest candidate depth (18 candidates) in the regenerated report.
 
 - Wave 115 — Kagoshima: added カクイックス交流センター（かごしま県民交流センター）、谷山サザンホール、サンエールかごしま、改新交流センター、川内駅コンベンションセンター（SSプラザせんだい）、入来文化ホール、指宿総合体育館 and 41 named searchable spaces. 鹿児島県 is now 25 candidates, 15 municipalities, and 140 spaces; national totals are 965 candidates, 5,311 spaces, and 2,870 price observations. Remaining candidate and space deficits are 210 and 0.
 - Official source status: current prefectural, municipal, current-fee, current facility, and municipal use-condition pages from 鹿児島県、鹿児島市、薩摩川内市、指宿市. Only source-explicit room names, capacities, and current-use facts were structured. Stage, opening, building, and project dimensions were not converted into ceiling values; unreported ceilings stay `要確認`.
