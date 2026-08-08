@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 120 — Akita official-source expansion is locally validated; public source push and deployment are pending.
+- Current wave: Wave 120 — Akita official-source expansion deployed and publicly verified; Wave 121 Yamagata selection is next.
 
 ## Baseline
 
@@ -22,8 +22,8 @@
 - Price observations: none added. 公開料金は時間帯・用途・町内外・宿泊・設備・税等の条件差を含むため、一般の日額予算フィルターに誤って正規化していない。
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending. The next step is to commit the validated named files, push to the user-authorized Sites source repository with the confirmed Iwate release as a force-with-lease guard, deploy the generated build, and check both public URLs for a new Akita marker.
-- Next action after deployment: select 山形県, tied with 福島県、茨城県、群馬県、埼玉県、千葉県、石川県、山梨県、静岡県、奈良県 at 19 candidates, for the next bounded official-source wave.
+- Deployment: source commit `54812dc60adab3bb7564fe44a15656b186ab3e4e` was pushed to the user-authorized Sites source repository with the confirmed Iwate release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_ea4040d1d6688191902593fbb9e93a5a` (deployment `appgdep_6a770bc42acc8191a5789f6803140b44`) deployed successfully. Both public URLs returned the `?q=上小阿仁村生涯学習センター&release=54812dc` page with HTTP 200 and contained the new `上小阿仁村生涯学習センター` marker. Tracked `web/dist` was restored after the deployment build.
+- Next action: select 山形県, tied with 福島県、茨城県、群馬県、埼玉県、千葉県、石川県、山梨県、静岡県、奈良県 at 19 candidates, for the next bounded official-source wave.
 
 ## Wave 119 Checkpoint
 

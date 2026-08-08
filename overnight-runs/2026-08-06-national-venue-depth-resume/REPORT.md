@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 120 Akita is locally validated and ready for the user-authorized public release; the next bounded wave after release is 山形県, at 19 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 120 Akita is publicly deployed and verified; the next bounded wave is 山形県, at 19 candidates.
 
 ## Latest Wave
 
@@ -11,8 +11,8 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Price observations: none added. Published fees vary by time band, purpose, municipality, lodging, equipment, or tax conditions, so they are not generalized into a misleading day-price filter.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment is pending: commit the named validated files, push them to the user-authorized Sites repository using the confirmed Iwate release as a force-with-lease guard, deploy the build, then check both public URLs for a new Akita marker.
-- Next wave after release: 山形県, tied with 福島県、茨城県、群馬県、埼玉県、千葉県、石川県、山梨県、静岡県、奈良県 at the lowest candidate depth (19 candidates) in the regenerated report.
+- Public deployment passed: source commit `54812dc60adab3bb7564fe44a15656b186ab3e4e` was pushed to the authorized Sites repository with the confirmed Iwate release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_ea4040d1d6688191902593fbb9e93a5a` (deployment `appgdep_6a770bc42acc8191a5789f6803140b44`) deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E4%B8%8A%E5%B0%8F%E9%98%BF%E4%BB%81%E6%9D%91%E7%94%9F%E6%B6%AF%E5%AD%A6%E7%BF%92%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=54812dc` and `https://venue.art-monosashi.com/?q=%E4%B8%8A%E5%B0%8F%E9%98%BF%E4%BB%81%E6%9D%91%E7%94%9F%E6%B6%AF%E5%AD%A6%E7%BF%92%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=54812dc` returned HTTP 200 and the newly added 上小阿仁村生涯学習センター. Tracked `web/dist` was restored after the deployment build.
+- Next wave: 山形県, tied with 福島県、茨城県、群馬県、埼玉県、千葉県、石川県、山梨県、静岡県、奈良県 at the lowest candidate depth (19 candidates) in the regenerated report.
 
 - Wave 119 — Iwate: added 雫石公民館、山田町まちなか交流センター、洋野町民文化会館セシリアホール、かるまい文化交流センター 宇漢米館、西和賀町文化創造館 銀河ホール、金ケ崎町文化体育館 and 50 named searchable spaces. 岩手県 is now 25 candidates, 23 municipalities, and 162 spaces; national totals are 992 candidates, 5,512 spaces, and 2,870 price observations. Remaining candidate and space deficits are 183 and 0.
 - Official source status: current municipality, facility, use-fee, and booking pages from 雫石町、山田町、洋野町、軽米町、西和賀町、金ケ崎町. Source-published room names and source-published numbered room groups are shown in detail. Only explicit areas and capacities were structured. 西和賀町文化創造館の舞台高さ6.3m、舞台間口・奥行、移動式プロセニアムは最低天井高へ変換していない。Unreported ceilings, floor loads, loading, stream conditions, and availability stay `要確認`.
