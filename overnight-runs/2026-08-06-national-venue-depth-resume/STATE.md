@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 129 — Shizuoka official-source expansion and public deployment verified; 奈良県 is next.
+- Current wave: Wave 130 — Nara official-source expansion validated locally; public deployment is next.
 
 ## Baseline
 
@@ -14,6 +14,15 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 130 Local Checkpoint
+
+- Nara: added six candidates — 奈良県文化会館、奈良県橿原文化会館、なら100年会館、奈良県立図書情報館、田原本青垣生涯学習センター 弥生の里ホール、川西文化会館 — and 97 named, independently searchable spaces. 奈良県 is now 25 candidates, 19 municipalities, and 208 spaces. National totals are 1,058 candidates, 6,255 spaces, and 2,870 price observations; remaining candidate and space deficits are 117 and 0.
+- Official source status: current official prefectural, city, town, library, and designated-operator pages from 奈良県文化会館、奈良県橿原文化会館、なら100年会館、奈良県立図書情報館、田原本町、川西町. All source-explicit halls, meeting rooms, exhibition rooms, library paid rooms, rehearsal and music rooms, dressing/green rooms, outdoor court, and support rooms were structured. Publicly stated stage and proscenium heights at 奈良県文化会館、奈良県橿原文化会館、なら100年会館、川西文化会館 were not converted into ceiling-height filters. Unknown ceilings, floor loads, loading, streaming, price applicability, and availability remain `要確認`.
+- Price observations: none added. Published fees vary by time band, use condition, room configuration, eligibility, weekday/holiday, admission, or equipment, so this candidate-depth wave does not generalize them into the day-price filter.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending for the validated source commit. The next eligible lowest-depth prefecture after deployment is 鳥取県, tied with 山口県、徳島県、大分県、宮崎県 at 19 candidates.
 
 ## Wave 129 Local Checkpoint
 
