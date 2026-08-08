@@ -2,9 +2,16 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 101 Kagawa is deployed and publicly verified; the next bounded wave will be selected from the regenerated lowest-depth report.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 102 Fukuoka is locally validated and awaiting the user-authorized source push and public deployment.
 
 ## Latest Wave
+
+- Wave 102 — Fukuoka: added リーパスプラザこが、大野城まどかぴあ、春日市ふれあい文化センター、小郡市文化会館 and 78 named searchable spaces. 福岡県 is now 20 candidates, 15 municipalities, and 146 spaces; national totals are 888 candidates, 4,534 spaces, and 2,842 price observations. Remaining candidate and space deficits are 287 and 8.
+- Official source status: live official pages from 古賀市、大野城市、春日市、小郡市 and the 春日市ふれあい文化センター designated operator. The collection keeps source-explicit room names, capacities, areas, usage/availability, and current fee conditions. It does not convert any stage height, proscenium, or building dimension into a ceiling value; approximate seating remains a note.
+- Current verified fees: six tax-included full-day basic fees were added for the Spring Hall, Sun Hall, and Ogori main hall. Cooling, auxiliary equipment, admission, commercial-use, and future-work conditions remain explicit exclusions or notes rather than silently normalized values.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row. Deployment is the next step; `web/dist` will be restored after the published build is verified.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Next wave after deployment: 長崎県, tied at the lowest candidate depth (16 candidates) in the regenerated report.
 
 - Wave 101 — Kagawa: added 三木町文化交流プラザ、土庄町中央公民館、綾川町総合運動公園、サン・オリーブ and 28 independently searchable spaces. 香川県 is now 20 candidates, 16 municipalities, and 89 spaces; national totals are 884 candidates, 4,456 spaces, and 2,836 price observations. Remaining candidate and space deficits are 291 and 8.
 - Official source status: current facility pages, ordinances, and fee tables published by 三木町、土庄町、綾川町、小豆島町. Only source-explicit room names, capacity, and floor-area values were structured. No ceiling was inferred; the 綾川町 arena's reported 4,693㎡ total floor area remains a note, not a searchable space area. Current fees were added only for the directly stated 土庄町 central-hall and サン・オリーブ base conditions, retaining purpose, resident, electricity, and equipment exclusions.

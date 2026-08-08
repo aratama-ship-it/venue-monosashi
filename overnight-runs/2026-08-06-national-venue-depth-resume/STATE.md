@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 101 — Kagawa official-source expansion completed and deployed; select Fukuoka from the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 102 — Fukuoka official-source expansion locally validated; commit and deploy the validated source, then select Nagasaki from the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -14,6 +14,15 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 102 Checkpoint
+
+- Fukuoka: added four candidates — リーパスプラザこが（古賀市）、大野城まどかぴあ（大野城市）、春日市ふれあい文化センター（春日市）、小郡市文化会館（小郡市） — and 78 named, independently searchable spaces. 福岡県 is now 20 candidates, 15 municipalities, and 146 spaces. National totals are 888 candidates, 4,534 spaces, and 2,842 price observations; remaining candidate and space deficits are 287 and 8.
+- Official source status: 古賀市、大野城市、春日市、春日市ふれあい文化センター指定管理者、小郡市. Source-exact capacity, area, availability, and current basic price facts were retained; approximate seating was left out of numeric capacity. No ceiling was inferred from stage dimensions.
+- Price observations: added six current, tax-included full-day basic fees for 春日市ふれあい文化センターのスプリングホール・サンホール and 小郡市文化会館大ホール. Commercial/additional equipment, admission, cooling, and future works conditions remain exclusions or notes.
+- Local verification: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing historical-events row. `web/dist` is currently build output and must be restored after deployment.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Next action: commit named Wave 102 source files, push to the user-authorized Sites source repository, deploy the exact validated build, verify both public URLs, restore `web/dist`, then record the deployment checkpoint.
 
 ## Completed Waves
 
