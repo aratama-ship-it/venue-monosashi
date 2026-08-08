@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 130 Nara has passed local validation and is being published; the next lowest-depth wave is 鳥取県.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 130 Nara has been publicly deployed and verified; the next lowest-depth wave is 鳥取県.
 
 ## Latest Wave
 
@@ -11,7 +11,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Price observations: none added. Published fees vary by time band, eligibility, admission, room configuration, weekday/holiday, and equipment, so no ambiguous fee was generalized into a day-price filter.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment: pending for the validated source commit. Next wave: 鳥取県, tied with 山口県、徳島県、大分県、宮崎県 at 19 candidates.
+- Public deployment: source commit `c243ee1b2852060603b5e89c56e60f6a68437fae` was pushed to the authorized Sites source repository with the confirmed Shizuoka release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_e3a1c11190048191b63ba75c05d5bf17` deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E5%A5%88%E8%89%AF%E7%9C%8C%E6%96%87%E5%8C%96%E4%BC%9A%E9%A4%A8&release=c243ee1` and `https://venue.art-monosashi.com/?q=%E5%A5%88%E8%89%AF%E7%9C%8C%E6%96%87%E5%8C%96%E4%BC%9A%E9%A4%A8&release=c243ee1` returned HTTP 200 and contained the newly added 奈良県文化会館 marker. Tracked `web/dist` was restored after the deployment build. Next wave: 鳥取県, tied with 山口県、徳島県、大分県、宮崎県 at 19 candidates.
 - Wave 128 — Yamanashi: added YCC県民文化ホール（山梨県立県民文化ホール）、ふじさんホール（富士五湖文化センター）・富士吉田市民会館、山梨県立図書館、山梨県立美術館、山梨県立文学館、山梨県立青少年センター and 70 named searchable spaces. 山梨県 is now 25 candidates, 15 municipalities, and 154 spaces; national totals are 1,046 candidates, 6,101 spaces, and 2,870 price observations. Remaining candidate and space deficits are 129 and 0.
 - Official source status: current official operator, prefectural, municipal, library, museum, and center pages from YCC県民文化ホール、富士吉田文化振興協会・富士吉田市、山梨県立図書館、山梨県立美術館、山梨県立文学館、山梨県教育委員会. Only source-explicit room names, capacities, areas, divisibility, equipment, and use conditions were structured. The new YCC hall pages list proscenium heights of 10m and 8m, not ceiling heights, so neither is filterable; all unreported operational conditions remain `要確認`.
 - Price observations: none added. Time band, admission, review, use-category, room-configuration, and equipment conditions vary, so no fee was generalized into a misleading day-price filter.

@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 130 — Nara official-source expansion validated locally; public deployment is next.
+- Current wave: Wave 130 — Nara official-source expansion and public deployment verified; 鳥取県 is next.
 
 ## Baseline
 
@@ -22,7 +22,7 @@
 - Price observations: none added. Published fees vary by time band, use condition, room configuration, eligibility, weekday/holiday, admission, or equipment, so this candidate-depth wave does not generalize them into the day-price filter.
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending for the validated source commit. The next eligible lowest-depth prefecture after deployment is 鳥取県, tied with 山口県、徳島県、大分県、宮崎県 at 19 candidates.
+- Deployment: source commit `c243ee1b2852060603b5e89c56e60f6a68437fae` was pushed to the user-authorized Sites source repository with the confirmed Shizuoka release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_e3a1c11190048191b63ba75c05d5bf17` (deployment `appgdep_6a772c8edd8481918c99e567762e3600`) deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E5%A5%88%E8%89%AF%E7%9C%8C%E6%96%87%E5%8C%96%E4%BC%9A%E9%A4%A8&release=c243ee1` and `https://venue.art-monosashi.com/?q=%E5%A5%88%E8%89%AF%E7%9C%8C%E6%96%87%E5%8C%96%E4%BC%9A%E9%A4%A8&release=c243ee1` returned HTTP 200 and contained the new 奈良県文化会館 marker. Tracked `web/dist` was restored after the deployment build. The next eligible lowest-depth prefecture is 鳥取県, tied with 山口県、徳島県、大分県、宮崎県 at 19 candidates.
 
 ## Wave 129 Local Checkpoint
 
