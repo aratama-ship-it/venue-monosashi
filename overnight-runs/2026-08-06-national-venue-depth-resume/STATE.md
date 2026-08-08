@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 125 — Saitama official-source expansion deployed and publicly verified; next is a bounded official-source wave for Chiba.
+- Current wave: Wave 126 — Chiba official-source expansion locally verified; source commit and public deployment are pending.
 
 ## Baseline
 
@@ -14,6 +14,15 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 126 Local Checkpoint
+
+- Chiba: added six candidates — 市原市市民会館（市原市）、君津市民文化ホール（君津市）、四街道市文化センター（四街道市）、流山市文化会館（流山市）、勝浦市芸術文化交流センター キュステ（勝浦市）、印西市文化ホール（印西市） — and 62 named, independently searchable spaces. 千葉県 is now 25 candidates, 24 municipalities, and 159 spaces. National totals are 1,034 candidates, 5,927 spaces, and 2,870 price observations; remaining candidate and space deficits are 141 and 0.
+- Official source status: current official operator and municipal pages from 市原市文化振興財団、君津市文化振興財団、四街道市、流山市、勝浦市・指定管理者、印西市文化ホール. Only explicitly published room names, room counts, capacities, areas, facility use conditions, and application rules were structured. Published stage, proscenium, and sunoko heights were not converted into searchable ceiling data; unpublished ceilings, floor loads, loading, streaming, and availability remain `要確認`.
+- Price observations: none added. Published fees vary by time block, municipality, commercial purpose, admission, equipment, or room type, so this candidate-depth wave does not normalize them into the general day-price filter.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending source commit and user-authorized Sites push/deployment. The next eligible lowest-depth prefecture after completion is 石川県, tied with 山梨県、静岡県、奈良県、鳥取県、山口県、徳島県、大分県、宮崎県 at 19 candidates.
 
 ## Wave 124 Local Checkpoint
 

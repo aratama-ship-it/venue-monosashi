@@ -2,9 +2,17 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 125 Saitama is deployed and publicly verified; the next bounded wave is Chiba.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 126 Chiba is locally verified and pending its authorized public deployment.
 
 ## Latest Wave
+
+- Wave 126 — Chiba: added 市原市市民会館、君津市民文化ホール、四街道市文化センター、流山市文化会館、勝浦市芸術文化交流センター キュステ、印西市文化ホール and 62 named searchable spaces. 千葉県 is now 25 candidates, 24 municipalities, and 159 spaces; national totals are 1,034 candidates, 5,927 spaces, and 2,870 price observations. Remaining candidate and space deficits are 141 and 0.
+- Official source status: current official operator and municipal pages from 市原市文化振興財団、君津市文化振興財団、四街道市、流山市、勝浦市・指定管理者、印西市文化ホール. Only source-explicit room names, room counts, capacities, areas, and application conditions were structured. Stage/proscenium/sunoko dimensions were not converted into ceiling height; all unpublished ceilings and operational conditions remain `要確認`.
+- Price observations: none added. Fee schemes vary by time block, municipality, commercial purpose, admission, equipment, or room type, so they are not generalized into a misleading day-price filter.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Public deployment: pending source commit and user-authorized Sites push/deployment.
+- Next wave after deployment: 石川県, tied with 山梨県、静岡県、奈良県、鳥取県、山口県、徳島県、大分県、宮崎県 at 19 candidates in the regenerated report.
 
 - Wave 125 — Saitama: added 彩の国さいたま芸術劇場、RaiBoC Hall（さいたま市民会館おおみや）、東松山市民文化センター、正和工業にじいろホール（春日部市民文化会館）、埼玉会館、菖蒲文化会館（アミーゴ） and 74 named searchable spaces. 埼玉県 is now 25 candidates, 19 municipalities, and 197 spaces; national totals are 1,028 candidates, 5,865 spaces, and 2,870 price observations. Remaining candidate and space deficits are 147 and 0.
 - Official source status: current official foundation, city, and operator pages from 埼玉県芸術文化振興財団、さいたま市、東松山市民文化センター運営者、春日部市、久喜市文化施設運営者. Only source-explicit room names, capacities, areas, room-counts, and use conditions were structured. Stage/proscenium/grid/sunoko dimensions were not converted into ceiling height; all unpublished ceilings and operational conditions remain `要確認`.
