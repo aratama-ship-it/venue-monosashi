@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 85 — Ishikawa official-source expansion completed and deployed; select the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 86 — Nara official-source expansion locally validated; public deployment is next.
 
 ## Baseline
 
@@ -193,6 +193,12 @@
 - Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
 
 ## Next Action
+
+- Wave 86 source data: added four official-source-backed Nara facilities — いかるがホール（斑鳩町）、平群町総合文化センター（くまがしホール）（平群町）、王寺町地域交流センター（リーベルホール）（王寺町）、三郷町文化センター（三郷町） — and 42 independently searchable spaces. 奈良県 is now 19 candidates, 17 municipalities, and 111 spaces; national totals are 824 candidates and 3,968 spaces. Remaining candidate and space deficits are 351 and 34.
+- Official sources: 斑鳩町、平群町、王寺町、三郷町の公式施設案内を使用。Only source-explicit capacity and floor-area values were structured. No ceiling height or price observation was inferred; approximate areas, stage dimensions, chair/equipment counts, and tatami counts were not converted into searchable numeric values. All unreported conditions remain `要確認`.
+- Wave 86 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing `historical-events.csv:173` warning. Tracked `web/dist` output was restored.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Public deployment is pending.
+- Next lowest-depth wave after deployment: 山口県.
 
 - Wave 85 source data: added four official-source-backed Ishikawa facilities — カルチャーセンター飛翔（中能登町）、宝達志水総合体育館（宝達志水町）、川北町総合体育館（川北町）、輪島市総合体育館（輪島市） — and 21 independently searchable spaces. 石川県 is now 19 candidates, 17 municipalities, and 83 spaces; national totals are 820 candidates and 3,926 spaces. Remaining candidate and space deficits are 355 and 34.
 - Official sources: 中能登町、宝達志水町、川北町、輪島市の公式施設案内を使用。Only source-explicit capacities and floor areas were structured. No ceiling height or price observation was inferred; arena dimensions were not calculated into area, and all unreported conditions remain `要確認`.

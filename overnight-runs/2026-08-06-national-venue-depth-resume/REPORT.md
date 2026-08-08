@@ -397,6 +397,14 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Official source status: 吉野ヶ里町、基山町、玄海町、みやき町の公開施設案内・予約情報を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Stage and reservation-zone labels were not converted into ceiling data, and all unreported conditions remain `要確認`.
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
 
+## Wave 86 — Nara official-source expansion
+
+- Added four candidates: いかるがホール（斑鳩町）、平群町総合文化センター（くまがしホール）（平群町）、王寺町地域交流センター（リーベルホール）（王寺町）、三郷町文化センター（三郷町）。
+- Added 42 independently searchable spaces. 奈良県 is now 19 candidates, 17 municipalities, and 111 spaces; national totals are 824 candidates and 3,968 spaces. Remaining candidate and space deficits are 351 and 34.
+- Official source status: 斑鳩町、平群町、王寺町、三郷町の公式施設案内を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Approximate areas, stage dimensions, chair/equipment counts, and tatami counts were not converted into searchable numeric values. Current availability and unreported conditions remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Public deployment is pending; next intended wave is 山口県.
+
 ## Wave 83 — Saitama official-source expansion
 
 - Added four candidates: 新座市民会館（新座市）、戸田市文化会館（戸田市）、坂戸市文化会館「ふれあ」（坂戸市）、本庄市児玉文化会館（セルディ）（本庄市）。
