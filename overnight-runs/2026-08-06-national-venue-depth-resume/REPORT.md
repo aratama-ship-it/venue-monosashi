@@ -403,7 +403,9 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added 42 independently searchable spaces. 奈良県 is now 19 candidates, 17 municipalities, and 111 spaces; national totals are 824 candidates and 3,968 spaces. Remaining candidate and space deficits are 351 and 34.
 - Official source status: 斑鳩町、平群町、王寺町、三郷町の公式施設案内を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Approximate areas, stage dimensions, chair/equipment counts, and tatami counts were not converted into searchable numeric values. Current availability and unreported conditions remain `要確認`.
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
-- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Public deployment is pending; next intended wave is 山口県.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Public deployment passed: source commit `b6c077892d7737bd83bc17f9b05d2130f8492f92` was pushed to the authorized Sites repository; production version 131 deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E5%B9%B3%E7%BE%A4%E7%94%BA%E7%B7%8F%E5%90%88%E6%96%87%E5%8C%96%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=b6c0778` and `https://venue.art-monosashi.com/?q=%E5%B9%B3%E7%BE%A4%E7%94%BA%E7%B7%8F%E5%90%88%E6%96%87%E5%8C%96%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=b6c0778` returned the newly added 平群町総合文化センター. Tracked `web/dist` output was restored.
+- Next intended wave: 山口県.
 
 ## Wave 83 — Saitama official-source expansion
 
