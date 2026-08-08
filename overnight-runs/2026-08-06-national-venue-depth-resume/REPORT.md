@@ -2,9 +2,17 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 118 Kumamoto is publicly deployed and verified; the next bounded wave is 岩手県, at 19 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 119 Iwate is locally validated and ready for its authorized source push and public deployment; the next bounded wave after release is 秋田県, at 19 candidates.
 
 ## Latest Wave
+
+- Wave 119 — Iwate: added 雫石公民館、山田町まちなか交流センター、洋野町民文化会館セシリアホール、かるまい文化交流センター 宇漢米館、西和賀町文化創造館 銀河ホール、金ケ崎町文化体育館 and 50 named searchable spaces. 岩手県 is now 25 candidates, 23 municipalities, and 162 spaces; national totals are 992 candidates, 5,512 spaces, and 2,870 price observations. Remaining candidate and space deficits are 183 and 0.
+- Official source status: current municipality, facility, use-fee, and booking pages from 雫石町、山田町、洋野町、軽米町、西和賀町、金ケ崎町. Source-published room names and source-published numbered room groups are shown in detail. Only explicit areas and capacities were structured. 西和賀町文化創造館の舞台高さ6.3m、舞台間口・奥行、移動式プロセニアムは最低天井高へ変換していない。Unreported ceilings, floor loads, loading, stream conditions, and availability stay `要確認`.
+- Price observations: none added. Published fees are time-band, four-hour, admission-fee, commercial-use, municipal-residency, equipment, or tax dependent, so they are not generalized into a misleading day-price filter.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Public deployment: pending authorized source push, Sites deployment, and marker verification at both public URLs.
+- Next wave: 秋田県, tied with 山形県、福島県、茨城県、群馬県、埼玉県、千葉県、石川県、山梨県、静岡県 at the lowest candidate depth (19 candidates) in the regenerated report.
 
 - Wave 118 — Kumamoto: added 熊本県立劇場、市民会館シアーズホーム夢ホール（熊本市民会館）、菊陽町総合体育館、ecowin宇土アリーナ（宇土市民体育館）、甲佐町生涯学習センター「輝」、久木野総合センター、交流館石倉（えびす広場） and 60 named searchable spaces. 熊本県 is now 25 candidates, 20 municipalities, and 156 spaces; national totals are 986 candidates, 5,462 spaces, and 2,870 price observations. Remaining candidate and space deficits are 189 and 0.
 - Official source status: current official operator, municipality, municipal-booking, town-ordinance, and government pages from 熊本県立劇場、熊本市、菊陽町、宇土市、甲佐町、南阿蘇村、多良木町. Only source-explicit room names, seat counts, floor areas, and current-use facts were structured. The three source-published 熊本県立劇場 room-height values are stored as raw `highest_point` observations only; they are not minimum-clearance filter values. Stage, proscenium, and building dimensions were not converted into ceiling values; unreported ceilings stay `要確認`.

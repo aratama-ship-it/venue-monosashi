@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 118 — Kumamoto official-source expansion deployed and publicly verified; Wave 119 Iwate selection is next.
+- Current wave: Wave 119 — Iwate official-source expansion is locally validated; public source push and deployment are pending.
 
 ## Baseline
 
@@ -14,6 +14,16 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 119 Checkpoint
+
+- Iwate: added six candidates — 雫石公民館（雫石町）、山田町まちなか交流センター（山田町）、洋野町民文化会館セシリアホール（洋野町）、かるまい文化交流センター 宇漢米館（軽米町）、西和賀町文化創造館 銀河ホール（西和賀町）、金ケ崎町文化体育館（金ケ崎町） — and 50 named, independently searchable spaces. 岩手県 is now 25 candidates, 23 municipalities, and 162 spaces. National totals are 992 candidates, 5,512 spaces, and 2,870 price observations; remaining candidate and space deficits are 183 and 0.
+- Official source status: current official municipality, municipal-facility, current-use-fee, and booking pages from 雫石町、山田町、洋野町、軽米町、西和賀町、金ケ崎町. All room names in the detail view follow source-published named units or source-published numbered room groups; only source-explicit areas and capacities were structured. 西和賀町文化創造館の舞台高さ6.3m、舞台間口・奥行、移動式プロセニアムは天井値へ転用していない。未公表の最低天井高、床荷重、搬入、回線、空き状況は `要確認` のままとした。
+- Price observations: none added. 公開料金は時間帯・4時間単位・入場料・営利利用・町内外・設備・税等の条件差を含むため、一般の日額予算フィルターに誤って正規化していない。
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending source commit, authorized Sites repository push, production deployment, and both-public-URL marker verification.
+- Next action after deployment: select 秋田県, tied with 山形県、福島県、茨城県、群馬県、埼玉県、千葉県、石川県、山梨県、静岡県 at 19 candidates, for the next bounded official-source wave.
 
 ## Wave 118 Checkpoint
 
