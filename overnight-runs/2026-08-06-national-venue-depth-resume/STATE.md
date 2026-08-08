@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 106 — Osaka official-source expansion locally validated; preparing the user-authorized source commit and public deployment.
+- Current wave: Wave 106 — Osaka official-source expansion completed and deployed; select Okayama or Ehime from the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -62,8 +62,8 @@
 - Price observations: none added. The currently published price schemes vary by purpose, admission, resident status, time band, and/or additional equipment; no ambiguous condition was normalized as a day-price filter.
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending user-authorized source commit, Sites deployment, and public verification.
-- Next action: after public verification, select 岡山県 or 愛媛県, tied at the new lowest candidate depth (17 candidates), for the next bounded official-source wave.
+- Deployment: source commit `e4dac22195875254c2b03ed3e8385458a4857c27` was pushed to the authorized Sites repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_ee8efdd254d08191b2758e4e1aff684f` (deployment `appgdep_6a76e4de249481918fe31971679e37fc`) deployed successfully. Both public URLs returned HTTP 200 for `?release=e4dac22`, and live search returned the new `高槻城公園芸術文化劇場` marker on both. Tracked `web/dist` was restored after the deployment build.
+- Next action: select 岡山県 or 愛媛県, tied at the new lowest candidate depth (17 candidates), for the next bounded official-source wave.
 
 ## Completed Waves
 
