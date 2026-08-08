@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 132 — Yamaguchi official-source expansion validated; source commit and public deployment pending.
+- Current wave: Wave 132 — Yamaguchi official-source expansion and public deployment verified; 徳島県 is next.
 
 ## Baseline
 
@@ -22,7 +22,7 @@
 - Price observations: none added. The published tables vary by time band, booking conditions, eligibility, admission, equipment, room configuration, commercial use, or venue-specific rules, so no ambiguous amount was generalized into the day-price filter.
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending the validated source commit, Sites source push, public release, and two-URL verification. The next eligible lowest-depth prefecture after this wave is 徳島県, tied with 大分県、宮崎県 at 19 candidates.
+- Deployment: source commit `ad18ac00b804f1c1c7ed4f3b0053d5a0509c6acd` was pushed to the user-authorized Sites source repository with the confirmed Tottori release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_9c7b22b49d708191a295146a9838663d` (deployment `appgdep_6a7733f5b9488191af5fc7f179f15b3e`) deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E5%B1%B1%E5%8F%A3%E5%B8%82%E6%B0%91%E4%BC%9A%E9%A4%A8&release=ad18ac0` and `https://venue.art-monosashi.com/?q=%E5%B1%B1%E5%8F%A3%E5%B8%82%E6%B0%91%E4%BC%9A%E9%A4%A8&release=ad18ac0` returned HTTP 200 and contained the new 山口市民会館 marker. Tracked `web/dist` was restored after the deployment build. The next eligible lowest-depth prefecture is 徳島県, tied with 大分県、宮崎県 at 19 candidates.
 
 ## Wave 131 Local Checkpoint
 
