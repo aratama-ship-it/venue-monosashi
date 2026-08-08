@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 87 — Yamaguchi official-source expansion passed local verification; source push and public deployment are pending.
+- Current wave: Wave 87 — Yamaguchi official-source expansion completed and deployed; select the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -196,9 +196,9 @@
 
 - Wave 87 source data: added four official-source-backed Yamaguchi facilities — 田布施町スポーツセンター（田布施町）、平生町体育館・武道館・音楽道場（平生町）、上関町総合文化センター（中央公民館）（上関町）、周防大島町B&G海洋センター（周防大島町） — and 16 independently searchable spaces. 山口県 is now 19 candidates, 18 municipalities, and 92 spaces; national totals are 828 candidates and 3,984 spaces. Remaining candidate and space deficits are 347 and 34.
 - Official sources: 田布施町、平生町、上関町、周防大島町の現行公式施設案内を使用。Only source-explicit facility names, use categories, and room names were structured. No ceiling height or price observation was inferred; court counts were not converted into floor area, and all unreported conditions remain `要確認`.
-- Wave 87 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing `historical-events.csv:173` warning. Tracked `web/dist` output must be restored after the deployment build.
+- Wave 87 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing `historical-events.csv:173` warning. Tracked `web/dist` output was restored after the deployment build.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Wave 87 source push, public deployment, and both public URL checks: pending after the named source commit.
+- Wave 87 deployment passed: source commit `6295f626d2e1a5bb2cb8c25e048726c636dc420e` was pushed to the authorized Sites repository; production version 132 deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E4%B8%8A%E9%96%A2%E7%94%BA%E7%B7%8F%E5%90%88%E6%96%87%E5%8C%96%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=6295f62` and `https://venue.art-monosashi.com/?q=%E4%B8%8A%E9%96%A2%E7%94%BA%E7%B7%8F%E5%90%88%E6%96%87%E5%8C%96%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=6295f62` returned the newly added 上関町総合文化センター. Tracked `web/dist` output was restored.
 - Next lowest-depth wave after publication: 大分県.
 
 - Wave 86 source data: added four official-source-backed Nara facilities — いかるがホール（斑鳩町）、平群町総合文化センター（くまがしホール）（平群町）、王寺町地域交流センター（リーベルホール）（王寺町）、三郷町文化センター（三郷町） — and 42 independently searchable spaces. 奈良県 is now 19 candidates, 17 municipalities, and 111 spaces; national totals are 824 candidates and 3,968 spaces. Remaining candidate and space deficits are 351 and 34.
