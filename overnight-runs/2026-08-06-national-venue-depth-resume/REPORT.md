@@ -2,9 +2,16 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 136 Aomori has passed local validation and is proceeding to public deployment. The next lowest-depth group starts at 20 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 137 Miyagi has been validated and publicly deployed. The next lowest-depth group starts at 20 candidates.
 
 ## Latest Wave
+
+- Wave 137 — Miyagi: added 仙台市太白区文化センター（楽楽楽ホール）、仙台市若林区文化センター、仙台市宮城野区文化センター（パトナホール・パトナシアター）、仙台銀行ホール イズミティ21（仙台市泉文化創造センター）、日立システムズホール仙台（仙台市青年文化センター） and 118 named searchable spaces. 宮城県 is now 25 candidates, 16 municipalities, and 224 spaces; national totals are 1,098 candidates, 6,762 spaces, and 2,875 price observations. Remaining candidate and space deficits are 77 and 0.
+- Official source status: current official Sendai City-designated-operator and public-facility material only. Halls, flat-floor halls, exhibition rooms, rehearsal/practice rooms, studios, named dressing rooms, meeting/training rooms, Japanese rooms, galleries, support spaces, and public activity spaces were retained only where the name or condition is source-explicit. The イズミティ21 exhibition-room 3.6m highest-point reference remains out of the ceiling filter. Stage and proscenium dimensions were not converted into ceiling-height data; all other unreported operating conditions remain `要確認`.
+- Price observations: none added. Fee terms vary by time block, weekday/holiday, admission, commercial purpose, equipment, HVAC, configuration, and other conditions, so no potentially misleading day-rate value was generalized.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation and deployment.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Public deployment passed: source commit `adc32bc348258cd36e0e26edffe3b8096465cd76` was pushed to the authorized Sites repository with a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_e58636268a248191a729d585a7306314` (deployment `appgdep_6a7748d629c88191b68b7213a661d417`) succeeded. Both public URLs browser-rendered the new 日立システムズホール仙台（仙台市青年文化センター） result as `1 / 1098施設` with 43 named spaces and no console errors; its details view rendered named hall and practice-room records. Next wave: 栃木県、東京都、富山県、福井県、愛知県、滋賀県、京都府、兵庫県、島根県、香川県 at 20 candidates.
 
 - Wave 136 — Aomori: added リンクステーションホール青森、弘前市民会館、リンクモア平安閣市民ホール（青森市民ホール）、SG GROUP ホールはちのへ（八戸市公会堂・公民館）、五所川原市ふるさと交流圏民センター（オルテンシア） and 75 named searchable spaces. 青森県 is now 25 candidates, 18 municipalities, and 186 spaces; national totals are 1,093 candidates, 6,644 spaces, and 2,875 price observations. Remaining candidate and space deficits are 82 and 0.
 - Official source status: current municipal material from 青森市、弘前市、八戸市、五所川原市 only. Source-explicit halls, practice rooms, dressing rooms, meeting rooms, Japanese rooms, tea rooms, exhibition rooms, foyer/lobby areas, and support spaces were structured. No published ceiling-height figure was added: stage and proscenium dimensions were not converted into ceiling values, and all unreported operating conditions remain `要確認`.

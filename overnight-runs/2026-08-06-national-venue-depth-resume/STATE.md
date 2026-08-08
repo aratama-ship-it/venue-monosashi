@@ -3,8 +3,8 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 136 — Aomori official-source expansion and public deployment verified; 宮城県 is next.
+- Last updated: 2026-08-09 Asia/Tokyo
+- Current wave: Wave 137 — Miyagi official-source expansion and public deployment verified; 栃木県 is next.
 
 ## Baseline
 
@@ -14,6 +14,15 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 137 Local Checkpoint
+
+- Miyagi: added five candidates — 仙台市太白区文化センター（楽楽楽ホール）、仙台市若林区文化センター、仙台市宮城野区文化センター（パトナホール・パトナシアター）、仙台銀行ホール イズミティ21（仙台市泉文化創造センター）、日立システムズホール仙台（仙台市青年文化センター） — and 118 named independently searchable spaces. 宮城県 is now 25 candidates, 16 municipalities, and 224 spaces. National totals are 1,098 candidates, 6,762 spaces, and 2,875 price observations; remaining candidate and space deficits are 77 and 0.
+- Official source status: current Sendai City-designated-operator and public-facility material only, including 仙台市市民文化事業団、仙台市市民センター、仙台銀行ホール イズミティ21、日立システムズホール仙台. Source-explicit halls, flat-floor halls, exhibition rooms, rehearsal/practice rooms, studios, named dressing rooms, meeting/training rooms, Japanese rooms, galleries, support spaces, and public activity spaces were structured. The イズミティ21 exhibition-room 3.6m value is retained only as a `highest_point` reference and is not a ceiling-search value. Stage and proscenium dimensions, including 日立システムズホール仙台の15.5m and 8.5m stage dimensions, were not converted into ceiling-height evidence. Other unreported ceiling, floor-load, loading, streaming, fee applicability, and availability conditions remain `要確認`.
+- Price observations: none added. The current official fee materials vary by time band, weekday/holiday, admission, commercial purpose, equipment, HVAC, configuration, and related conditions, so no ambiguous amount was generalized into the daily-budget filter.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation and after the deployment build.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: source commit `adc32bc348258cd36e0e26edffe3b8096465cd76` was pushed to the user-authorized Sites source repository with `6007a2400941c1247ada3bb70ce6081702bb7dfe` as the force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_e58636268a248191a729d585a7306314` and deployment `appgdep_6a7748d629c88191b68b7213a661d417` succeeded. Browser verification at both `https://venue-monosashi.juggler-arata.chatgpt.site` and `https://venue.art-monosashi.com` found the free-search result 日立システムズホール仙台（仙台市青年文化センター） as `1 / 1098施設`; its card showed 43 named spaces and no console errors. The selected details view also rendered the named コンサートホール、シアターホール、練習室4 records. The next eligible lowest-depth prefectures are 栃木県、東京都、富山県、福井県、愛知県、滋賀県、京都府、兵庫県、島根県、香川県 at 20 candidates.
 
 ## Wave 136 Local Checkpoint
 
