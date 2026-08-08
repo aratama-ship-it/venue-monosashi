@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 127 — Ishikawa official-source expansion and public deployment verified; 山梨県 is next.
+- Current wave: Wave 128 — Yamanashi official-source expansion locally validated; public deployment is pending.
 
 ## Baseline
 
@@ -14,6 +14,15 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 128 Local Checkpoint
+
+- Yamanashi: added six candidates — YCC県民文化ホール（山梨県立県民文化ホール）、ふじさんホール（富士五湖文化センター）・富士吉田市民会館、山梨県立図書館、山梨県立美術館、山梨県立文学館、山梨県立青少年センター — and 70 named, independently searchable spaces. 山梨県 is now 25 candidates, 15 municipalities, and 154 spaces. National totals are 1,046 candidates, 6,101 spaces, and 2,870 price observations; remaining candidate and space deficits are 129 and 0.
+- Official source status: current official operator, prefectural, municipal, library, museum, and center pages from YCC県民文化ホール、富士吉田文化振興協会・富士吉田市、山梨県立図書館、山梨県立美術館、山梨県立文学館、山梨県教育委員会. All source-explicit named halls, meeting rooms, rehearsal/practice rooms, dressing rooms, galleries, library exchange rooms, research rooms, tea-room zones, and youth-center spaces were structured. The only height-like figures on the new YCC hall pages are proscenium heights (10m and 8m), so neither was converted into searchable ceiling height; unpublished ceilings, floor loads, loading, streaming, and availability remain `要確認`.
+- Price observations: none added. Current fees vary by time band, admission, art-use eligibility, booking review, room configuration, or equipment, so this candidate-depth wave does not normalize them into the general day-price filter.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending the source commit and authorized Sites deployment. The next eligible lowest-depth prefecture after this wave is 静岡県, tied with 奈良県、鳥取県、山口県、徳島県、大分県、宮崎県 at 19 candidates.
 
 ## Wave 127 Local Checkpoint
 
