@@ -563,3 +563,11 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added 38 independently searchable spaces. 福島県 is now 19 candidates, 15 municipalities, and 114 spaces; national totals are 776 candidates and 3,583 spaces. Remaining candidate and space deficits are 399 and 34.
 - Official source status: 喜多方プラザ文化センター公式運営者、国見町、矢吹町、桑折町の公開施設案内・予約情報を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Published stage and proscenium heights were not converted into ceiling data, and all unreported conditions remain `要確認`.
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
+# Wave 92 — Tochigi official-source expansion
+
+- Added four candidates: 那須町文化センター（那須公民館）（那須町）、日光市中央公民館（日光市）、日東工業エニスホール（野木町文化会館）（野木町）、上三川町ORIGAMIプラザ（上三川町）。
+- Added 40 independently searchable spaces. 栃木県 is now 20 candidates, 18 municipalities, and 104 spaces; national totals are 848 candidates and 4,124 spaces. Remaining candidate and space deficits are 327 and 34.
+- Official source status: 那須町、日光市、野木町・公式運営者、上三川町の現行施設案内・予約案内を使用。Only source-explicit room names, capacities, and floor-area values were structured. No ceiling height or price observation was inferred. Stage dimensions and stage heights were not converted into ceiling data; the officially reservation-stopped 今市文化会館 was not added. Current availability and unreported conditions remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending authorized source push and public verification.

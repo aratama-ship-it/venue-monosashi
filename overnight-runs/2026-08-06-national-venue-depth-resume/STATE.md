@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 91 — Miyagi official-source expansion completed and deployed; select the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 92 — Tochigi official-source expansion validated locally; commit and deploy the authorized source, then select the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -193,6 +193,12 @@
 - Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
 
 ## Next Action
+
+- Wave 92 source data: added four official-source-backed Tochigi facilities — 那須町文化センター（那須公民館）（那須町）、日光市中央公民館（日光市）、日東工業エニスホール（野木町文化会館）（野木町）、上三川町ORIGAMIプラザ（上三川町） — and 40 independently searchable spaces. 栃木県 is now 20 candidates, 18 municipalities, and 104 spaces; national totals are 848 candidates and 4,124 spaces. Remaining candidate and space deficits are 327 and 34.
+- Official sources: 那須町、日光市、野木町・公式運営者、上三川町の現行施設案内・予約案内を使用。Only source-explicit room names, capacities, and floor-area values were structured. No ceiling height or price observation was inferred; all stage dimensions/heights remain explanatory notes, not ceiling values. 今市文化会館は公式に予約停止中のため候補へ追加せず、現行利用可能な日光市中央公民館を採用した。All unreported conditions remain `要確認`.
+- Wave 92 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing `historical-events.csv:173` warning. Tracked `web/dist` output was restored after the validation build.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Next lowest-depth wave after publication: 東京都, 富山県, 福井県, 愛知県, 滋賀県, 京都府, 兵庫県, 島根県, 香川県, 福岡県 (all 16 candidates).
 
 - Wave 91 source data: added four official-source-backed Miyagi facilities — 白石市文化体育活動センター（ホワイトキューブ）（白石市）、登米祝祭劇場（水の里ホール・Abebisou）（登米市）、角田市市民センター（かくだ田園ホール）（角田市）、岩沼市民会館（岩沼市） — and 27 independently searchable spaces. 宮城県 is now 20 candidates, 16 municipalities, and 106 spaces; national totals are 844 candidates and 4,084 spaces. Remaining candidate and space deficits are 331 and 34.
 - Official sources: 白石市、登米市、角田市、岩沼市の現行公式施設案内・条例・市政報告を使用。Only source-explicit room names, precise floor-area values, and the 610-seat / 630-seat hall capacities were structured. No ceiling height or price observation was inferred; competition-court counts, 「程度」/「～」capacity notation, tatami counts, and the use-fee upper/lower limits were not converted into search values. All unreported conditions remain `要確認`.
