@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 134 — Oita official-source expansion and public deployment verified; 宮崎県 is next.
+- Current wave: Wave 135 — Miyazaki official-source expansion locally validated; public deployment is next.
 
 ## Baseline
 
@@ -14,6 +14,14 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 135 Local Checkpoint
+
+- Miyazaki: added six candidates — 宮崎市民文化ホール、メディキット県民文化センター（宮崎県立芸術劇場）、延岡総合文化センター、宮崎市民プラザ、宮崎市清武文化会館、宮崎市佐土原総合文化センター — and 72 named independently searchable spaces. 宮崎県 is now 25 candidates, 18 municipalities, and 162 spaces. National totals are 1,088 candidates, 6,569 spaces, and 2,875 price observations; remaining candidate and space deficits are 87 and 0.
+- Official source status: current designated-operator, public foundation, and Miyazaki City material only. The additions retain source-explicit halls, movable-seating halls, foyers, dressing rooms, rehearsal/practice rooms, meeting/training rooms, Japanese rooms, exhibition rooms, library-adjacent rooms, and public common spaces. The only new filterable ceiling values are 延岡総合文化センター展示室1の3.5m and 展示室2の5.0m, each published as that room's height. Stage, portal, sunoko, pit, and building dimensions were not converted into ceiling-height search values. Other unreported ceiling, floor-load, loading, streaming, fee applicability, and availability conditions remain `要確認`.
+- Price observations: none added. The current official fee schemes vary by time band, weekday/holiday, admission, commercial purpose, configuration, air-conditioning, and preparation conditions, so no ambiguous amount was generalized into the daily-budget filter.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Next action: commit, public deployment, and both-URL verification; then 青森県、宮城県、栃木県、東京都、富山県、福井県、愛知県、滋賀県、京都府、兵庫県 tied at 20 candidates are eligible for the next lowest-depth wave.
 
 ## Wave 134 Local Checkpoint
 
