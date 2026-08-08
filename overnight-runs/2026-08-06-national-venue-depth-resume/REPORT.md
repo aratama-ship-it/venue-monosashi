@@ -424,7 +424,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Official sources: 玖珠町、九重町、日出町、由布市の現行公式施設案内。公式に示された716席、500席、416㎡などのみを構造化し、プロセニアム/舞台高さを天井高にせず、畳数・競技面数・調理台数も検索数値へ転用しなかった。
 - Result: 大分県は19 candidates、17 municipalities、120 spaces。全国は832 candidates、4,024 spaces、remaining candidate gap 343、space gap 34。
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
-- Source push, public deployment, and both public URL checks: pending after the named source commit. Tracked `web/dist` output must be restored after the deployment build.
+- Public deployment passed: source commit `afeb9be97f1bcfe30b7c178146d8ef09d62f15a2` was pushed to the authorized Sites repository; production version 133 deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E6%8C%BE%E9%96%93%E5%85%AC%E6%B0%91%E9%A4%A8&release=afeb9be` and `https://venue.art-monosashi.com/?q=%E6%8C%BE%E9%96%93%E5%85%AC%E6%B0%91%E9%A4%A8&release=afeb9be` returned the newly added 挾間公民館. Tracked `web/dist` output was restored.
 - Next intended wave: 宮崎県.
 
 ## Wave 83 — Saitama official-source expansion
