@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 96 — Aichi official-source expansion locally validated; commit and deploy this bounded wave.
+- Current wave: Wave 96 — Aichi official-source expansion completed and deployed; select the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -198,7 +198,8 @@
 - Official sources: 豊明市、稲沢市、東海市、瀬戸市の現行施設案内・市公式資料を使用。Only source-explicit room names, capacities, and floor areas were structured. 稲沢市民会館のホール舞台高さ、区画別の未公表天井高・床荷重・搬入・催事回線は検索値に転用せず要確認に保持し、東海市芸術劇場の料金は曜日・入場料・区域外・販売条件で変動するため日額検索値に転用していない。
 - Wave 96 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing `historical-events.csv:173` warning. Tracked `web/dist` output was restored after the validation build.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Next action: commit the validated Aichi source wave, push it to the authorized Sites repository, deploy and verify both public URLs, then select the next lowest-depth prefectural wave (滋賀県、京都府、兵庫県、島根県、香川県、福岡県、長崎県、沖縄県、新潟県、または大阪府).
+- Wave 96 deployment passed: source commit `a212f40dd1f5a2857be3b2d7ebca0353d8480ffd` was pushed to the authorized Sites repository; Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_74ad3926a3508191ae99e02863113a44` deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E6%9D%B1%E6%B5%B7%E5%B8%82%E8%8A%B8%E8%A1%93%E5%8A%87%E5%A0%B4&release=a212f40` and `https://venue.art-monosashi.com/?q=%E6%9D%B1%E6%B5%B7%E5%B8%82%E8%8A%B8%E8%A1%93%E5%8A%87%E5%A0%B4&release=a212f40` returned HTTP 200. Tracked `web/dist` output was restored after the deployment build.
+- Next lowest-depth wave after publication: 滋賀県、京都府、兵庫県、島根県、香川県、福岡県、長崎県、沖縄県、新潟県、または大阪府.
 
 - Wave 95 source data: added four official-source-backed Fukui facilities — 美浜町生涯学習センターなびあす（美浜町）、おおい町里山文化交流センター ぶらっと（おおい町）、あみーシャン大飯（おおい町）、大野市和泉地域交流センター（大野市） — and 18 independently searchable spaces. 福井県 is now 20 candidates, 16 municipalities, and 110 spaces; national totals are 860 candidates and 4,273 spaces. Remaining candidate and space deficits are 315 and 16.
 - Official sources: 美浜町、おおい町、大野市の現行施設案内を使用。Only source-explicit room names and the なびあすホール固定489席 were structured. コミュニティルームの用途別範囲、カラオケルームの「6人ぐらい」、椅子数、競技面数、時間単価は検索用数値に転用せず、天井高、面積、床荷重、搬入、催事回線、日額料金、空き状況を要確認に保持した。
