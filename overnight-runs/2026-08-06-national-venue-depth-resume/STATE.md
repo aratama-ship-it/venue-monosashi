@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 93 — Tokyo official-source expansion completed and deployed; select the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 94 — Toyama official-source expansion is locally validated; publish the validated source, then select the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -193,6 +193,12 @@
 - Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
 
 ## Next Action
+
+- Wave 94 source data: added four official-source-backed Toyama facilities — 富山県高岡文化ホール（高岡市）、高岡市ふくおか総合文化センター（Uホール）（高岡市）、朝日町文化体育センター（サンリーナ）（朝日町）、立山町元気交流ステーション みらいぶ（立山町） — and 41 independently searchable spaces. 富山県 is now 20 candidates, 15 municipalities, and 138 spaces; national totals are 856 candidates and 4,255 spaces. Remaining candidate and space deficits are 319 and 16.
+- Official sources: 富山県文化振興財団、高岡市ふくおか総合文化センター指定管理者、朝日町、立山町元気交流ステーション公式の現行施設案内・料金表を使用。Only source-explicit room names, capacities, floor areas, and explicitly labelled ceiling heights were structured. 高岡文化ホールの多目的小ホール・練習室・スタジオ・展示施設、サンリーナ第1・第2体育室のみを明記値で検索可能な天井高として登録し、舞台・プロセニアム寸法は天井値に転用していない。All unreported conditions remain `要確認`.
+- Wave 94 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing `historical-events.csv:173` warning. Tracked `web/dist` output was restored after the validation build.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Next action: commit Wave 94, push the explicitly authorized source to the existing Sites repository, deploy it, and verify both public URLs. Then select 福井県, 愛知県, 滋賀県, 京都府, 兵庫県, 島根県, 香川県, 福岡県, 長崎県, or 沖縄県 (all 16 candidates) as the next bounded lowest-depth wave.
 
 - Wave 93 source data: added four official-source-backed Tokyo facilities — 練馬区立練馬文化センター（練馬区）、赤羽文化センター（北区）、かつしかシンフォニーヒルズ（葛飾区）、杉並公会堂（杉並区） — and 90 independently searchable spaces. 東京都 is now 20 candidates, 12 municipalities, and 123 spaces; national totals are 852 candidates and 4,214 spaces. Remaining candidate and space deficits are 323 and 16.
 - Official sources: 練馬区立練馬文化センター公式、北区、葛飾区と現行利用料金PDF、杉並公会堂公式を使用。Only source-explicit room names, capacities, floor-area values, and explicitly labelled ceiling heights were structured. 練馬文化センターギャラリー2.8mと杉並公会堂小ホール6mのみを検索可能な天井高として記録し、舞台・プロセニアムの寸法や高さは天井値に転用していない。All unreported conditions remain `要確認`.

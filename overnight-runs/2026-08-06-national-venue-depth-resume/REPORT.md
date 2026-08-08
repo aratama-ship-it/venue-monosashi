@@ -563,6 +563,15 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added 38 independently searchable spaces. 福島県 is now 19 candidates, 15 municipalities, and 114 spaces; national totals are 776 candidates and 3,583 spaces. Remaining candidate and space deficits are 399 and 34.
 - Official source status: 喜多方プラザ文化センター公式運営者、国見町、矢吹町、桑折町の公開施設案内・予約情報を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Published stage and proscenium heights were not converted into ceiling data, and all unreported conditions remain `要確認`.
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
+# Wave 94 — Toyama official-source expansion
+
+- Added four candidates: 富山県高岡文化ホール（高岡市）、高岡市ふくおか総合文化センター（Uホール）（高岡市）、朝日町文化体育センター（サンリーナ）（朝日町）、立山町元気交流ステーション みらいぶ（立山町）。
+- Added 41 independently searchable spaces. 富山県 is now 20 candidates, 15 municipalities, and 138 spaces; national totals are 856 candidates and 4,255 spaces. Remaining candidate and space deficits are 319 and 16.
+- Official source status: 富山県文化振興財団、高岡市ふくおか総合文化センター指定管理者、朝日町、立山町元気交流ステーション公式の現行施設案内・料金表を使用。Only source-explicit room names, capacities, floor-area values, and explicitly labelled ceiling heights were recorded. No stage, proscenium, or building dimension was converted into ceiling data. All unreported conditions remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment pending: commit and push the validated Wave 94 source, deploy it through Sites, and verify both public URLs before choosing the next 16-candidate prefectural wave.
+
 # Wave 93 — Tokyo official-source expansion
 
 - Added four candidates: 練馬区立練馬文化センター（練馬区）、赤羽文化センター（北区）、かつしかシンフォニーヒルズ（葛飾区）、杉並公会堂（杉並区）。
