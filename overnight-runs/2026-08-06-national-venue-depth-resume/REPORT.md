@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 119 Iwate is locally validated and ready for its authorized source push and public deployment; the next bounded wave after release is 秋田県, at 19 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 119 Iwate is publicly deployed and verified; the next bounded wave is 秋田県, at 19 candidates.
 
 ## Latest Wave
 
@@ -11,7 +11,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Price observations: none added. Published fees are time-band, four-hour, admission-fee, commercial-use, municipal-residency, equipment, or tax dependent, so they are not generalized into a misleading day-price filter.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment: pending authorized source push, Sites deployment, and marker verification at both public URLs.
+- Public deployment passed: source commit `88c081b307e44ff6de9ed50d11d5271f960e6f40` was pushed to the authorized Sites repository with the confirmed Kumamoto release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_b73443b07bb08191b834a388131acec3` (deployment `appgdep_6a77092a73f881918ff2a6f80eb3a65c`) deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E9%9B%AB%E7%9F%B3%E5%85%AC%E6%B0%91%E9%A4%A8&release=88c081b` and `https://venue.art-monosashi.com/?q=%E9%9B%AB%E7%9F%B3%E5%85%AC%E6%B0%91%E9%A4%A8&release=88c081b` returned the newly added 雫石公民館. Tracked `web/dist` was restored after the deployment build.
 - Next wave: 秋田県, tied with 山形県、福島県、茨城県、群馬県、埼玉県、千葉県、石川県、山梨県、静岡県 at the lowest candidate depth (19 candidates) in the regenerated report.
 
 - Wave 118 — Kumamoto: added 熊本県立劇場、市民会館シアーズホーム夢ホール（熊本市民会館）、菊陽町総合体育館、ecowin宇土アリーナ（宇土市民体育館）、甲佐町生涯学習センター「輝」、久木野総合センター、交流館石倉（えびす広場） and 60 named searchable spaces. 熊本県 is now 25 candidates, 20 municipalities, and 156 spaces; national totals are 986 candidates, 5,462 spaces, and 2,870 price observations. Remaining candidate and space deficits are 189 and 0.

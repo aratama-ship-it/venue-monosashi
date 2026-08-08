@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 119 — Iwate official-source expansion is locally validated; public source push and deployment are pending.
+- Current wave: Wave 119 — Iwate official-source expansion deployed and publicly verified; Wave 120 Akita selection is next.
 
 ## Baseline
 
@@ -22,7 +22,7 @@
 - Price observations: none added. 公開料金は時間帯・4時間単位・入場料・営利利用・町内外・設備・税等の条件差を含むため、一般の日額予算フィルターに誤って正規化していない。
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending source commit, authorized Sites repository push, production deployment, and both-public-URL marker verification.
+- Deployment: source commit `88c081b307e44ff6de9ed50d11d5271f960e6f40` was pushed to the user-authorized Sites source repository with the confirmed Kumamoto release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_b73443b07bb08191b834a388131acec3` (deployment `appgdep_6a77092a73f881918ff2a6f80eb3a65c`) deployed successfully. Both public URLs returned the `?q=雫石公民館&release=88c081b` page and contained the new `雫石公民館` marker. Tracked `web/dist` was restored after the deployment build.
 - Next action after deployment: select 秋田県, tied with 山形県、福島県、茨城県、群馬県、埼玉県、千葉県、石川県、山梨県、静岡県 at 19 candidates, for the next bounded official-source wave.
 
 ## Wave 118 Checkpoint
