@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-09 Asia/Tokyo
-- Current wave: Wave 144 — Kyoto official-source expansion and public deployment verified; 兵庫県・島根県・香川県・福岡県 are next at the lowest candidate depth.
+- Current wave: Wave 145 — Hyogo official-source expansion and public deployment verified; 島根県・香川県・福岡県 are next at the lowest candidate depth.
 
 ## Baseline
 
@@ -14,6 +14,16 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 145 Local Checkpoint
+
+- Hyogo: added five candidates — 尼崎市総合文化センター あましんアルカイックホール・オクト、高砂市文化会館、加西市民会館、淡路市立サンシャインホール、丹波篠山市立田園交響ホール — and 46 named independently searchable spaces. 兵庫県 is now 25 candidates, 19 municipalities, and 157 spaces. National totals are 1,138 candidates, 7,263 spaces, and 2,881 price observations; remaining candidate and space deficits are 37 and 0, and 37 of 47 prefectures meet the full reference depth.
+- Official source status: current official cultural-foundation, designated-operator, municipal-facility, and city pages only: https://www.archaic.or.jp/center/oct/ 、https://www.takasago-klp.com/about-kaikan/ 、https://www.takasago-klp.com/about-center/ 、https://www.kasai-shimin.jp/about/outline/ 、https://www.kasai-shimin.jp/about/bunka-hall/ 、https://www.kasai-shimin.jp/about/hall_small/ 、https://www.kasai-shimin.jp/about/other/ 、https://sunshinehall.jp/facility/ 、https://www.city.tambasasayama.lg.jp/denen/facility/21381.html 。追加したのは、明示されたホール、展示・集会室、ホワイエ、リハーサル・練習室、楽屋、会議・研修・創作・和室、特別控室だけであり、推測した区画は追加していない。
+- Availability and ceiling safety: 尼崎市総合文化センターでは、公式が継続営業とするオクトだけを候補に入れ、2026年4月から休館と公表された文化棟・大ホール棟は候補・区画に追加していない。オクトの天井高7mは最低有効高未確認の nominal_review 参照値に留め、加西市民会館・淡路市立サンシャインホール・田園交響ホール・高砂市文化会館の舞台、プロセニアム、フロア寸法は天井高に転用していない。新たなフィルタ可能天井高はない。未公表の床荷重、搬入、催事回線、料金適用、空き状況は要確認。
+- Price observations: none added. 各施設の現行料金は時間帯、曜日、営利非営利、入場料、設備、冷暖房、構成、予約その他の条件で変動するため、確認済み日額として誤って正規化しなかった。
+- Local verification: npm --prefix web run data:generate、npm run audit、npm run depth-report:write、git diff --check、npm run validate passed. The only audit warning is the pre-existing historical-events.csv:173 row. Tracked web/dist was restored after validation and after the deployment build.
+- Changed source files: data/candidate-venues.csv、data/venue-details.csv、generated data/prefecture-expansion-status.csv、and generated web/app/generated-data.ts; this local checkpoint updates STATE.md and REPORT.md.
+- Deployment: source commit a747879741840f4cdf510677f9ae5213fe4788a5 was pushed to the user-authorized Sites source repository with the prior bb3baeb39b659cc8d938f742852dcc9f8debfdbf remote head as a force-with-lease guard. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_60ce783a69a081918e32d2e39176625f and deployment appgdep_6a7768bd846881918134584480bee08d succeeded. Both https://venue-monosashi.juggler-arata.chatgpt.site and https://venue.art-monosashi.com returned HTTP 200. Browser verification on both public URLs found 加西市民会館 as 1 / 1138施設 and rendered its 21区画 / 天井検索対象0区画 detail count. The next eligible lowest-depth prefectures are 島根県、香川県、福岡県 at 20 candidates.
 
 ## Wave 144 Local Checkpoint
 
