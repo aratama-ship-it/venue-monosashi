@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 93 Tokyo is validated locally and awaits public deployment; the next bounded wave is selected from the regenerated lowest-depth report.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 95 Fukui is validated locally and awaits public deployment; the next bounded wave will be selected from the regenerated lowest-depth report.
 
 ## Changes
 
@@ -174,6 +174,10 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - None while the run remains active.
 
 ## Latest Wave
+
+- Wave 95 source data: added four official-source-backed Fukui facilities — 美浜町生涯学習センターなびあす、おおい町里山文化交流センター ぶらっと、あみーシャン大飯、大野市和泉地域交流センター — and 18 searchable spaces, increasing the national total to 860 facilities and 4,273 spaces. Sources are the current official facility pages of 美浜町、おおい町、大野市.
+- Structured only source-explicit room names and the 489 fixed seats of なびあすホール. Purpose-dependent capacity ranges, "6人ぐらい" use guidance, chair counts, court counts, and hourly prices were not converted into search values. No ceiling value was inferred; all unreported conditions remain `要確認`.
+- Wave 95 local validation passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-record warning. Public deployment remains to be completed.
 
 - Wave 43 source data: added four official-source-backed Tottori facilities — ハワイアロハホール、三朝町総合文化ホール、南部町公民館（富有まんてんホール）、智頭町総合センター・中央公民館 — and 27 searchable spaces, increasing the national total to 652 facilities and 2,714 spaces. Sources are the official pages of 湯梨浜町、三朝町、南部町、智頭町.
 - Recorded only explicit official capacities and floor areas. No ceiling or price value was inferred; all unreported conditions remain `要確認`.
