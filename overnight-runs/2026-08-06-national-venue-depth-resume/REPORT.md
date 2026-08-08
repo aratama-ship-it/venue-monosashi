@@ -447,6 +447,14 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Public deployment passed: source commit `e41a8ac8bae1db0b5f48d9fdd2d44a11f96ef07a` was pushed to the authorized Sites repository; production version 135 deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E5%85%AD%E6%88%B8%E7%94%BA%E6%96%87%E5%8C%96%E3%83%9B%E3%83%BC%E3%83%AB&release=e41a8ac` and `https://venue.art-monosashi.com/?q=%E5%85%AD%E6%88%B8%E7%94%BA%E6%96%87%E5%8C%96%E3%83%9B%E3%83%BC%E3%83%AB&release=e41a8ac` returned the newly added 六戸町文化ホール. Tracked `web/dist` output was restored.
 - Next intended wave: 宮城県 (lowest candidate depth group).
 
+## Wave 91 — Miyagi official-source expansion
+
+- Added four candidates: 白石市文化体育活動センター（ホワイトキューブ）（白石市）、登米祝祭劇場（水の里ホール・Abebisou）（登米市）、角田市市民センター（かくだ田園ホール）（角田市）、岩沼市民会館（岩沼市）。
+- Added 27 independently searchable spaces: 白石市のホール・リハーサル・アリーナ等、登米祝祭劇場の大・小ホール、角田市市民センターのホール・控室・研修棟諸室、岩沼市民会館の大・中ホール。
+- Official sources: 白石市、登米市、角田市、岩沼市の現行公式施設案内・条例・市政報告。公式に示された室名・精密な面積・610席/630席だけを構造化し、競技面数、「程度」/「～」表記の定員、畳数、料金上限・下限を検索数値へ転用しなかった。天井高・料金は推定していない。
+- Result: 宮城県は20 candidates、16 municipalities、106 spaces。全国は844 candidates、4,084 spaces、remaining candidate gap 331、space gap 34。
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Public deployment is pending; tracked `web/dist` is to be restored before the source commit.
+
 ## Wave 83 — Saitama official-source expansion
 
 - Added four candidates: 新座市民会館（新座市）、戸田市文化会館（戸田市）、坂戸市文化会館「ふれあ」（坂戸市）、本庄市児玉文化会館（セルディ）（本庄市）。
