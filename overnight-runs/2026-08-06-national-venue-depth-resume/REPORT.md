@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 97 Shiga is locally validated and awaiting the user-authorized source push, public deployment, and dual-URL verification; the next bounded wave will be selected from the regenerated lowest-depth report after publication.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 97 Shiga is deployed and publicly reachable; the next bounded wave will be selected from the regenerated lowest-depth report.
 
 ## Changes
 
@@ -178,7 +178,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Wave 97 source data: added four official-source-backed Shiga facilities — 米原市民交流プラザ（ルッチプラザ）、湖南市甲西文化ホール、日野町町民会館わたむきホール虹、愛荘町立ハーティーセンター秦荘 — and 31 searchable spaces, increasing the national total to 868 facilities and 4,340 spaces. Sources are the current official facility pages of 米原市、湖南市、日野町町民会館指定管理者、愛荘町立ハーティーセンター指定管理者.
 - Structured only explicit room names and fixed or expressly movable seats. No ceiling value was inferred: the published 10m value at ベルホール310 is a stage dimension, and 湖南市の建物全体面積1,935.43㎡ is not a room area. No price observation was added because the current fee tables depend on date, user location, admission or purpose conditions; all unreported conditions remain `要確認`.
 - Wave 97 local validation passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored. Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Wave 97 public deployment is pending: the next action is to commit the validated source, push it to the user-authorized Sites source repository, deploy it, and verify both public URLs.
+- Wave 97 deployment passed: source commit `f523c871eacde34c6a876fc7c209b65721e39a56` was pushed to the user-authorized Sites source repository. Sites deployed version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_37e52e71840881919553f4ee8127fc0d` successfully, and both public URLs returned HTTP 200 for `?release=f523c87`. Tracked `web/dist` output was restored.
 
 - Wave 96 source data: added four official-source-backed Aichi facilities — 豊明市文化会館、名古屋文理大学文化フォーラム（稲沢市民会館）、東海市芸術劇場、瀬戸市文化センター — and 36 searchable spaces, increasing the national total to 864 facilities and 4,309 spaces. Sources are the current official facility pages and official public-facility material of 豊明市、稲沢市、東海市、瀬戸市.
 - Structured only explicit room names, capacities, and floor areas. No ceiling value was inferred: the published hall-stage heights at 稲沢市民会館 remain notes only. Price observations were not added because the cited facility charge tables depend on time slot, date, admission fee, or user condition; all unreported conditions remain `要確認`.

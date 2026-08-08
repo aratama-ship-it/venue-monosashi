@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 97 — Shiga official-source expansion is locally validated; commit, push, deploy, and verify both public URLs before selecting the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 97 — Shiga official-source expansion completed and deployed; select Kyoto from the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -198,7 +198,7 @@
 - Official sources: 米原市、湖南市、日野町町民会館指定管理者、愛荘町立ハーティーセンター指定管理者の現行施設案内・使用案内を使用。Only source-explicit room names and fixed or explicitly movable seats were structured. 米原市ベルホール310の舞台高さ10mは最低天井高に転用せず、湖南市の建物全体面積1,935.43㎡も室別面積に転用していない。湖南市・日野町の料金は利用日・目的・市外等で変動するため日額検索値に転用していない。All unreported conditions remain `要確認`.
 - Wave 97 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing `historical-events.csv:173` warning. Tracked `web/dist` output was restored after the validation build.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Wave 97 deployment is pending: commit the validated source, push it to the user-authorized Sites source repository, deploy it, and verify both public URLs. Next lowest-depth wave after publication: 京都府、兵庫県、島根県、香川県、福岡県、長崎県、沖縄県、新潟県、大阪府、または岡山県.
+- Wave 97 deployment passed: source commit `f523c871eacde34c6a876fc7c209b65721e39a56` was pushed to the user-authorized Sites repository; Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_37e52e71840881919553f4ee8127fc0d` deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?release=f523c87` and `https://venue.art-monosashi.com/?release=f523c87` returned HTTP 200. Tracked `web/dist` output was restored after the deployment build. Next lowest-depth wave: 京都府、兵庫県、島根県、香川県、福岡県、長崎県、沖縄県、新潟県、大阪府、または岡山県.
 
 - Wave 96 source data: added four official-source-backed Aichi facilities — 豊明市文化会館（豊明市）、名古屋文理大学文化フォーラム（稲沢市民会館）（稲沢市）、東海市芸術劇場（東海市）、瀬戸市文化センター（瀬戸市） — and 36 independently searchable spaces. 愛知県 is now 20 candidates, 16 municipalities, and 150 spaces; national totals are 864 candidates and 4,309 spaces. Remaining candidate and space deficits are 311 and 16.
 - Official sources: 豊明市、稲沢市、東海市、瀬戸市の現行施設案内・市公式資料を使用。Only source-explicit room names, capacities, and floor areas were structured. 稲沢市民会館のホール舞台高さ、区画別の未公表天井高・床荷重・搬入・催事回線は検索値に転用せず要確認に保持し、東海市芸術劇場の料金は曜日・入場料・区域外・販売条件で変動するため日額検索値に転用していない。
