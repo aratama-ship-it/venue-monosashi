@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 109 — Hokkaido official-source expansion validated; public deployment is next.
+- Current wave: Wave 109 — Hokkaido official-source expansion completed and deployed; select 神奈川県 from the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -92,8 +92,8 @@
 - Price observations: added five current, full-day basic fees for 稚内総合文化センターの大ホール・小ホール・リハーサル室. 土日祝、営利・入場料、冷暖房、備付物件などの分岐は明示的な除外条件として保持した。
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending. The validated source must be committed, sent to the user-authorized Sites source repository, deployed, and verified on both existing public URLs before selecting the next wave.
-- Next action: deploy this validated Hokkaido wave, then select 神奈川県 from the lowest candidate-depth group (18 candidates).
+- Deployment: source commit `aead0d9d6fe31a23931ef1c7a71fce5adac166df` was pushed to the authorized Sites source repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_2ffc58d47ce8819194b5716905f12d85` (deployment `appgdep_6a76ecff2b8c8191bb548b0ef9520019`) deployed successfully. Both public URLs returned the `?release=aead0d9` page and contained the new `稚内総合文化センター` marker. Tracked `web/dist` was restored after the deployment build.
+- Next action: select 神奈川県 from the lowest candidate-depth group (18 candidates).
 
 ## Completed Waves
 
