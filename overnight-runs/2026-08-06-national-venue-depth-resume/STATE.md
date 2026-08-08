@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 136 — Aomori official-source expansion passed local validation; source commit and public deployment are next.
+- Current wave: Wave 136 — Aomori official-source expansion and public deployment verified; 宮城県 is next.
 
 ## Baseline
 
@@ -22,7 +22,7 @@
 - Price observations: none added. The official price schemes vary by time band, weekday/holiday, admission, commercial purpose, room configuration, and other conditions, so no ambiguous amount was generalized into the daily-budget filter.
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: the first saved version packaged a stale root-level build output, so it is not treated as a successful data release. Packaging has been corrected to the tracked `web` site root; the user-authorized source push and public deployment of the corrected package are next. The next eligible lowest-depth prefecture after deployment is 宮城県, tied with 栃木県、東京都、富山県、福井県、愛知県、滋賀県、京都府、兵庫県、島根県 at 20 candidates.
+- Deployment: source commit `4f9a242fab71281fc2ae7c19654924dbf88eb111` was pushed with the confirmed Miyazaki release as a force-with-lease guard; a follow-up packaging-only commit `6007a2400941c1247ada3bb70ce6081702bb7dfe` was pushed with `4f9a242` as the lease guard after the first archive was found to contain stale root-level output. The corrected tracked-`web` package saved as Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_4ec7ee930de4819184ee9ca186eb8284` and deployment `appgdep_6a7743d9a9708191b3eb4101c919bad9` succeeded. Browser verification at both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%9B%E3%83%BC%E3%83%AB%E9%9D%92%E6%A3%AE&release=6007a24` and `https://venue.art-monosashi.com/?q=%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%9B%E3%83%BC%E3%83%AB%E9%9D%92%E6%A3%AE&release=6007a24` rendered `1 / 1093施設`, the new リンクステーションホール青森 result, and its 19 named spaces without console errors. Tracked `web/dist` was restored after deployment. The next eligible lowest-depth prefecture is 宮城県, tied with 栃木県、東京都、富山県、福井県、愛知県、滋賀県、京都府、兵庫県、島根県 at 20 candidates.
 
 ## Wave 135 Local Checkpoint
 
