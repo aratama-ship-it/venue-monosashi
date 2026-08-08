@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 115 Kagoshima is locally validated and ready for its authorized public deployment; the next bounded wave will be selected from the three prefectures tied at 18 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 115 Kagoshima is publicly deployed and verified; the next bounded wave is 高知県, selected from the three prefectures tied at 18 candidates.
 
 ## Latest Wave
 
@@ -11,8 +11,8 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Price observations: none added. The published fees are hourly, period-based, or vary with municipality/residency/営利 and equipment conditions, so they are not generalized into a misleading day-price filter.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment: pending source commit and authorized Sites release. After it is live, verify both public URLs with a new Kagoshima marker before starting the next source wave.
-- Next wave: one of 高知県、佐賀県、熊本県, tied at the lowest candidate depth (18 candidates) in the regenerated report.
+- Public deployment passed: source commit `b365a6967219560896f7de43130465fe63f78288` was pushed to the authorized Sites source repository with the confirmed prior release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_6df10a7e5ae48191a7944aa55ee3f328` (deployment `appgdep_6a76fee526488191ab80e92b203edd28`) deployed successfully. Both public URLs returned the `?release=b365a69` page and contained the newly added `サンエールかごしま` marker. Tracked `web/dist` was restored after the deployment build.
+- Next wave: 高知県, tied with 佐賀県 and 熊本県 at the lowest candidate depth (18 candidates) in the regenerated report.
 
 - Wave 114 — Hiroshima: added 竹原市民館、ジーベックホール（府中市文化センター）、安芸高田市民文化センター クリスタルアージョ、大崎上島文化センター、芸北文化ホール（芸北地域づくりセンター・芸北農村環境改善センター）、さんわ総合センター（やまなみ文化ホール・高蓋ふれあい交流施設）、川・森・文化・交流センター（やまびこホール） and 47 named searchable spaces. 広島県 is now 25 candidates, 18 municipalities, and 105 spaces; national totals are 958 candidates, 5,270 spaces, and 2,870 price observations. Remaining candidate and space deficits are 217 and 0.
 - Official source status: municipal facility, current-use, current-event, and official application pages from 竹原市、府中市、安芸高田市、大崎上島町、北広島町、神石高原町、安芸太田町. Only source-explicit room names, seat counts, fixed seating, and floor areas were structured. Stage, opening, building, and facility-overview dimensions were not converted into ceiling values; unreported ceilings stay `要確認`.
