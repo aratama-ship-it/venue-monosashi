@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 100 — Shimane official-source expansion completed and deployed; select Kagawa from the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 101 — Kagawa official-source expansion is locally validated; commit, public deployment, and both-URL verification are pending.
 
 ## Baseline
 
@@ -193,6 +193,11 @@
 - Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
 
 ## Next Action
+
+- Wave 101 source data: added four official-source-backed Kagawa facilities — 三木町文化交流プラザ（三木町）、土庄町中央公民館（土庄町）、綾川町総合運動公園（綾川町）、サン・オリーブ（小豆島町健康生きがい中核施設）（小豆島町） — and 28 independently searchable spaces. 香川県 is now 20 candidates, 16 municipalities, and 89 spaces; national totals are 884 candidates, 4,456 spaces, and 2,836 price observations. Remaining candidate and space deficits are 291 and 8.
+- Official source status: 三木町、土庄町、綾川町、小豆島町の現行施設案内・条例・使用料表を使用。Only source-explicit room names, capacities, and floor areas were structured. 綾川町アリーナの4,693㎡は「延床面積」表記のため観測面積に転用していない。新規の最低天井高は推測せず、舞台設備・舞台高さ・建物寸法は検索用天井値に転用していない。土庄町中央公民館とサン・オリーブの8価格は現行の基準額のみで、営利・入場料・町民料金・特別電気・附属設備等の条件を除外として記録した。All unreported conditions remain `要確認`.
+- Wave 101 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing `historical-events.csv:173` warning. Tracked `web/dist` output was restored after the validation build.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Deployment is pending the named source commit and public verification. Next lowest-depth wave: 福岡県 (then 長崎県・沖縄県・新潟県・大阪府・岡山県・愛媛県・北海道・神奈川県・長野県).
 
 - Wave 100 source data: added four official-source-backed Shimane facilities — 大田市民会館（大田市）、隠岐島文化会館（隠岐の島町）、西ノ島町中央公民館（西ノ島町）、島根県中山間地域研究センター（飯南町） — and 34 independently searchable spaces. 島根県 is now 20 candidates, 14 municipalities, and 89 spaces; national totals are 880 candidates, 4,428 spaces, and 2,828 price observations. Remaining candidate and space deficits are 295 and 8.
 - Official sources: 大田市と大田市民会館指定管理者、隠岐の島町、隠岐の島町の令和8年度指定管理募集資料、西ノ島町、島根県の現行施設案内・使用料を使用。Only source-explicit room names, capacity, and area values were structured. 大田市民会館の舞台高さ8mと隠岐島文化会館の舞台高さ6mは最低天井高に転用していない。飯南町の5価格は令和8年4月1日改正の9〜17時基本額で、冷暖房3割・設備・時間外料金を除外して記録した。All unreported conditions remain `要確認`.
