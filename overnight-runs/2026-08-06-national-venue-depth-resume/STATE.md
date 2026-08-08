@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-09 Asia/Tokyo
-- Current wave: Wave 152 — Okinawa official-source expansion and public deployment are verified. 北海道・神奈川県 are next at the lowest candidate depth.
+- Current wave: Wave 153 — Hokkaido official-source expansion and public deployment are verified. 神奈川県 is next at the lowest candidate depth; 大阪府 has a remaining municipality-depth gap.
 
 ## Baseline
 
@@ -14,6 +14,16 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 153 Local Checkpoint
+
+- Hokkaido: added three candidates — 北斗市総合文化センター・かなで～る、深川市文化交流ホール「み・らい」、士別市民文化センター — and 43 named independently searchable spaces. 北海道 is now 25 candidates, 19 municipalities, and 168 spaces. National totals are 1,172 candidates, 7,667 spaces, and 2,881 price observations; remaining candidate and space deficits are 3 and 0, and 45 of 47 prefectures meet the full reference depth. 神奈川県 has a 3-candidate gap; 大阪府 has a 3-municipality gap.
+- Official source status: current municipal material only: https://www.city.hokuto.hokkaido.jp/docs/1981.html 、https://www.city.hokuto.hokkaido.jp/docs/1980.html 、https://www.city.fukagawa.lg.jp/cms/section/gakuspo/ik75k4000000lt5t.html 、https://www.city.fukagawa.lg.jp/cms/section/gakumu/oiemv60000000ve1-att/oiemv60000000vio.pdf 、https://www.city.shibetsu.lg.jp/soshikikarasagasu/chuokominkan/1093.html 。公式に個別名・面積・客席又は現行の貸館区画として明示されたホール、楽屋、リハーサル、会議・和室、音楽・調理、展示・研修・工芸・幼児区画だけを構造化し、資料準備室など公式に貸館開放していない区画は追加していない。
+- Availability and ceiling safety: 新たなフィルタ可能天井高は追加していない。かなで～る、み・らいの舞台・図面・可動音響反射板の仕様は最低天井高に転用していない。かなで～るの楽屋・リハーサル室はホール使用に付随しない利用が現行案内で除外され、み・らいの控室・創作活動室はホール利用に付帯する場合がある。士別市民文化センターの各室は現行の時間貸し対象だが、定員・最低天井高・床荷重・搬入・催事回線・営利又は入場料条件・空き状況は要確認。
+- Price observations: none added. 新規3施設の料金は時間帯、平日休日、入場料、販売・市内外、冷暖房、設備、付帯利用又は利用条件で変動するため、今回の候補深度拡張では曖昧な日額に正規化していない。
+- Local verification: npm --prefix web run data:generate、npm run audit、npm run depth-report:write、git diff --check、npm run validate passed. The only audit warning is the pre-existing historical-events.csv:173 row. Tracked web/dist was rebuilt for the archive and restored after final public verification.
+- Changed source files: data/candidate-venues.csv、data/venue-details.csv、generated data/prefecture-expansion-status.csv、and generated web/app/generated-data.ts; this checkpoint updates STATE.md and REPORT.md.
+- Deployment and public verification: source commit 44341046183ee6aee87d538548d138a6c4815c79 was pushed to the user-authorized Sites source repository with a4d63ca2c2f496adfd740a863b7114e8972686d6 as its force-with-lease guard. Fresh archive verification included the referenced SSR venue-search asset. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_ef7aeb720cd88191a6b509e962cc9ad1 and deployment appgdep_6a778379ebb08191ad58be790cfbbb7a succeeded. Both https://venue-monosashi.juggler-arata.chatgpt.site and https://venue.art-monosashi.com returned HTTP 200; each page's deployed venue-search client asset contained the 北斗市総合文化センター・かなで～る marker. Next eligible waves: 神奈川県 at 22 candidates, then 大阪府 for its 3-municipality gap.
 
 ## Wave 152 Local Checkpoint
 

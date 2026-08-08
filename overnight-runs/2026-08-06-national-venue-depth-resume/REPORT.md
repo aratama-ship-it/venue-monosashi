@@ -2,9 +2,16 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 152 Okinawa is validated and publicly deployed. The next lowest-depth prefectures are Hokkaido and Kanagawa at 22 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 153 Hokkaido is validated and publicly deployed. The next lowest-depth prefecture is Kanagawa at 22 candidates; Osaka has a remaining municipality-depth gap.
 
 ## Latest Wave
+
+- Wave 153 — Hokkaido: added 北斗市総合文化センター・かなで～る、深川市文化交流ホール「み・らい」、士別市民文化センター and 43 named searchable spaces. 北海道 is now 25 candidates, 19 municipalities, and 168 spaces; national totals are 1,172 candidates, 7,667 spaces, and 2,881 price observations. Remaining candidate and space deficits are 3 and 0; 45 of 47 prefectures meet the reference depth. 神奈川県 has a 3-candidate gap and 大阪府 has a 3-municipality gap.
+- Official source status: current municipal pages and a municipal education outline only. The additions retain source-explicit halls, dressing/green rooms, rehearsal, property storage, meeting/Japanese/music/cooking/exhibition rooms, workshop, gallery, and support spaces. 北斗市の未開放資料室など、公式に貸館開放していない区画は追加していない。
+- Availability and ceiling safety: no new filterable ceiling value was added. 北斗・深川の舞台、図面、可動音響反射板などの仕様は天井高に転用していない。かなで～るの楽屋・リハーサル室はホール使用に付随しない利用が除外され、み・らいの控室・創作活動室はホール利用に付帯する場合がある。未公表の天井高、床荷重、搬入、料金適用、営利・入場料条件、空き状況は要確認。
+- Price observations: none added. Current fees vary by time band, weekday/holiday, admission, sales or residency, HVAC, equipment, ancillary use, and other conditions, so no ambiguous amount was normalized into the daily-budget filter.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing historical-events.csv:173 row.
+- Public deployment passed: source commit 44341046183ee6aee87d538548d138a6c4815c79 was pushed to the authorized Sites repository with a force-with-lease guard from a4d63ca2c2f496adfd740a863b7114e8972686d6. Fresh archive inspection confirmed the referenced SSR search asset. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_ef7aeb720cd88191a6b509e962cc9ad1 (deployment appgdep_6a778379ebb08191ad58be790cfbbb7a) succeeded. Both public URLs returned HTTP 200, and the deployed venue-search client asset at each URL contained the 北斗市総合文化センター・かなで～る marker; tracked web/dist was restored. Next waves: 神奈川県 at 22 candidates, then 大阪府 for its municipality gap.
 
 - Wave 152 — Okinawa: added 那覇文化芸術劇場なはーと、豊見城市立中央公民館、ちゃたんニライセンター（カナイホール・ギャラリー北谷）、北中城村あやかりの杜 and 36 named searchable spaces. 沖縄県 is now 25 candidates, 19 municipalities, and 150 spaces; national totals are 1,169 candidates, 7,624 spaces, and 2,881 price observations. Remaining candidate and space deficits are 6 and 0; 44 of 47 prefectures meet the reference depth.
 - Official source status: current official municipality and facility materials only. The additions retain source-explicit theatres, studios, practice rooms, halls, meeting and training rooms, Japanese/cooking/support rooms, exchange and outdoor spaces, gallery, dressing/green rooms, and learning spaces. No inferred spaces were added.
