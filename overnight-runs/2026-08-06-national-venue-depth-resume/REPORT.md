@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 122 Fukushima is locally validated and ready for its user-authorized public deployment; the next bounded wave after that is 茨城県, at 19 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 122 Fukushima is publicly deployed and verified; the next bounded wave is 茨城県, at 19 candidates.
 
 ## Latest Wave
 
@@ -11,8 +11,8 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Price observations: none added. Fees vary by hour, half/full day, equipment, waiver, admission, layout, or purpose, so they are not generalized into a misleading day-price filter.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment: pending user-authorized source push, Sites build/deploy, and marker checks on both public URLs.
-- Next wave after deployment: 茨城県, tied with 群馬県、埼玉県、千葉県、石川県、山梨県、静岡県、奈良県、鳥取県、山口県 at the lowest candidate depth (19 candidates) in the regenerated report.
+- Public deployment passed: source commit `3096d17bb2985b414768fefcb9c5d8ebef7a0361` was pushed to the authorized Sites repository with the confirmed Yamagata release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_9656f00288c48191b739975b037ae55b` (deployment `appgdep_6a7711917f488191a555deedbe5577d1`) deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E3%81%A8%E3%81%86%E3%81%BB%E3%81%86%E3%83%BB%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E6%96%87%E5%8C%96%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=3096d17` and `https://venue.art-monosashi.com/?q=%E3%81%A8%E3%81%86%E3%81%BB%E3%81%86%E3%83%BB%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E6%96%87%E5%8C%96%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=3096d17` returned HTTP 200 and contained the newly added とうほう・みんなの文化センター. Tracked `web/dist` was restored after the deployment build.
+- Next wave: 茨城県, tied with 群馬県、埼玉県、千葉県、石川県、山梨県、静岡県、奈良県、鳥取県、山口県 at the lowest candidate depth (19 candidates) in the regenerated report.
 
 - Wave 121 — Yamagata: added 山形市中央公民館（アズ七日町）、山形県産業創造支援センター、飯豊町町民総合センター「あ〜す」、大江町町民ふれあい会館、大蔵村中央公民館、遊佐町生涯学習センター and 61 named searchable spaces. 山形県 is now 25 candidates, 21 municipalities, and 145 spaces; national totals are 1,004 candidates, 5,622 spaces, and 2,870 price observations. Remaining candidate and space deficits are 171 and 0.
 - Official source status: current municipal, municipal-facility, and designated-operator pages from 山形市、飯豊町、大江町、大蔵村、遊佐町 and the 山形県産業創造支援センター operator. Only source-explicit areas, capacities, floor load, and facility conditions were structured. Stage dimensions and stage heights in the source material were not converted into minimum ceiling height. Unreported ceilings, loading, stream conditions, and availability stay `要確認`.

@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 122 — Fukushima official-source expansion locally validated; authorized public deployment is next.
+- Current wave: Wave 122 — Fukushima official-source expansion deployed and publicly verified; Wave 123 Ibaraki selection is next.
 
 ## Baseline
 
@@ -22,8 +22,8 @@
 - Price observations: none added. Published charges vary by hourly/half-day/full-day usage, layout, equipment, waivers, admission, or purpose; they are not normalized into the general day-price filter.
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending the user-authorized Sites source push, build, deployment, and verification at both public URLs.
-- Next action after deployment: select 茨城県, tied with 群馬県、埼玉県、千葉県、石川県、山梨県、静岡県、奈良県、鳥取県、山口県 at 19 candidates, for the next bounded official-source wave.
+- Deployment: source commit `3096d17bb2985b414768fefcb9c5d8ebef7a0361` was pushed to the user-authorized Sites source repository with the confirmed Yamagata release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_9656f00288c48191b739975b037ae55b` (deployment `appgdep_6a7711917f488191a555deedbe5577d1`) deployed successfully. Both public URLs returned HTTP 200 for `?q=とうほう・みんなの文化センター&release=3096d17` and contained the new `とうほう・みんなの文化センター` marker. Tracked `web/dist` was restored after the deployment build.
+- Next action: select 茨城県, tied with 群馬県、埼玉県、千葉県、石川県、山梨県、静岡県、奈良県、鳥取県、山口県 at 19 candidates, for the next bounded official-source wave.
 
 ## Wave 121 Checkpoint
 
