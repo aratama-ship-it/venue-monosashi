@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 97 — Shiga official-source expansion completed and deployed; select Kyoto from the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 98 — Kyoto official-source expansion is locally validated; commit, push, deploy, and verify both public URLs before selecting the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -193,6 +193,12 @@
 - Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
 
 ## Next Action
+
+- Wave 98 source data: added four official-source-backed Kyoto facilities — 中丹文化会館（綾部市）、八幡市立生涯学習センター（八幡市）、京田辺市コミュニティホール（京田辺市）、永守重信市民会館（向日市） — and 24 independently searchable spaces. 京都府 is now 20 candidates, 13 municipalities, and 114 spaces; national totals are 872 candidates and 4,364 spaces. Remaining candidate and space deficits are 303 and 8.
+- Official sources: 綾部市、八幡市、京田辺市、向日市の現行施設案内・使用案内・予約案内を使用。Only source-explicit room names, floor area, and capacities were structured. 京田辺市の3mバトン長、向日市のホール舞台面積は最低天井高・観測面積に転用していない。料金は時間帯、冷暖房、曜日、市外、商行為、入場料等の条件で変動するため日額検索値に転用していない。All unreported conditions remain `要確認`.
+- Wave 98 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing `historical-events.csv:173` warning. Tracked `web/dist` output was restored after the validation build.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Wave 98 deployment is pending: commit the validated source, push it to the user-authorized Sites source repository, deploy it, and verify both public URLs. Next lowest-depth wave after publication: 兵庫県、島根県、香川県、福岡県、長崎県、沖縄県、新潟県、大阪府、岡山県、または愛媛県.
 
 - Wave 97 source data: added four official-source-backed Shiga facilities — 米原市民交流プラザ（ルッチプラザ）（米原市）、湖南市甲西文化ホール（湖南市）、日野町町民会館わたむきホール虹（日野町）、愛荘町立ハーティーセンター秦荘（愛荘町） — and 31 independently searchable spaces. 滋賀県 is now 20 candidates, 13 municipalities, and 74 spaces; national totals are 868 candidates and 4,340 spaces. Remaining candidate and space deficits are 307 and 8.
 - Official sources: 米原市、湖南市、日野町町民会館指定管理者、愛荘町立ハーティーセンター指定管理者の現行施設案内・使用案内を使用。Only source-explicit room names and fixed or explicitly movable seats were structured. 米原市ベルホール310の舞台高さ10mは最低天井高に転用せず、湖南市の建物全体面積1,935.43㎡も室別面積に転用していない。湖南市・日野町の料金は利用日・目的・市外等で変動するため日額検索値に転用していない。All unreported conditions remain `要確認`.
