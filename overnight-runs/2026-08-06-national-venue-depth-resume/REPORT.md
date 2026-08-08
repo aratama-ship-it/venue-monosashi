@@ -2,17 +2,17 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 106 Osaka is deployed and publicly verified; the next bounded wave will select Okayama or Ehime.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 107 Okayama has passed local validation and is being committed, deployed, and publicly verified before the next bounded wave.
 
 ## Latest Wave
 
-- Wave 106 — Osaka: added 豊中市立文化芸術センター、高槻城公園芸術文化劇場、枚方市総合文化芸術センター、茨木市文化・子育て複合施設 おにクル、河内長野市立文化会館 ラブリーホール、南海浪切ホール（岸和田市立浪切ホール）、エブノ泉の森ホール（泉佐野市立文化会館）、フェニーチェ堺（堺市民芸術文化ホール） and 139 named searchable spaces. 大阪府 is now 25 candidates, 12 municipalities, and 182 spaces; national totals are 914 candidates, 4,885 spaces, and 2,842 price observations. Remaining candidate and space deficits are 261 and 0.
-- Official source status: current operator or municipal facility pages from all eight facilities. Only source-explicit room names, capacities, floor areas, current rental conditions, and usage facts were structured. The three 枚方美術ギャラリー values are explicitly published ceiling heights; stage, proscenium, building, and drawing dimensions were never converted into ceiling values.
-- Price observations: none added. The observed public fees vary by use purpose, admission, residency, time band, or equipment conditions and were not normalized as misleading day-price filters.
+- Wave 107 — Okayama: added 早島町町民総合会館 ゆるびの舎、里庄総合文化ホール「フロイデ」、やかげ文化センター、備前市市民センター and 19 named searchable spaces. 岡山県 is now 21 candidates, 17 municipalities, and 112 spaces; national totals are 918 candidates, 4,904 spaces, and 2,842 price observations. Remaining candidate and space deficits are 257 and 0.
+- Official source status: current public-use, cultural-facility, and municipal facility pages from 早島町、里庄町、矢掛町、備前市. Only source-explicit facility and room names, and the published capacity values for the three halls, were structured. The 備前市ホールのスノコ・プロセニアム高さ was retained only as a caveat and never converted into a ceiling value.
+- Price observations: none added. The available 早島町 fees have purpose, weekday/holiday, admission, and air-conditioning conditions; they were kept out of the day-price filter until a condition-safe normalization is possible.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment passed: source commit `e4dac22195875254c2b03ed3e8385458a4857c27` was pushed to the authorized Sites source repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_ee8efdd254d08191b2758e4e1aff684f` deployed successfully. Both public URLs returned HTTP 200 for `?release=e4dac22`, and each returned the query marker `高槻城公園芸術文化劇場`. Tracked `web/dist` was restored after the deployment build.
-- Next wave: 岡山県 and 愛媛県 are tied at the lowest candidate depth (17 candidates) in the regenerated report.
+- Public deployment: pending commit and user-authorized Sites publication of this validated revision.
+- Next wave: 愛媛県 is the lowest candidate-depth prefecture (17 candidates) in the regenerated report.
 
 - Wave 105 — Niigata: added 柏崎市文化会館アルフォーレ、南魚沼市民会館、魚沼市響きの森文化会館、村上市民ふれあいセンター、妙高市文化ホール、新潟県民会館、新潟市江南区文化会館、新潟市秋葉区文化会館 and 94 named searchable spaces. 新潟県 is now 25 candidates, 19 municipalities, and 158 spaces; national totals are 906 candidates, 4,746 spaces, and 2,842 price observations. Remaining candidate and space deficits are 269 and 8.
 - Official source status: current facility pages from 柏崎市、南魚沼市、魚沼市、村上市、妙高市、新潟県民会館、新潟市 and the corresponding official operators. Only source-explicit room names, seat counts, and floor areas were structured. Stage, proscenium, building, and drawing dimensions were never converted into ceiling values.

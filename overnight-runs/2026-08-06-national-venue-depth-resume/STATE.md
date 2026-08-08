@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 106 — Osaka official-source expansion completed and deployed; select Okayama or Ehime from the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 107 — Okayama official-source expansion validated locally; commit, deploy, and verify the bounded wave before selecting the next lowest-depth prefecture.
 
 ## Baseline
 
@@ -64,6 +64,16 @@
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
 - Deployment: source commit `e4dac22195875254c2b03ed3e8385458a4857c27` was pushed to the authorized Sites repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_ee8efdd254d08191b2758e4e1aff684f` (deployment `appgdep_6a76e4de249481918fe31971679e37fc`) deployed successfully. Both public URLs returned HTTP 200 for `?release=e4dac22`, and live search returned the new `高槻城公園芸術文化劇場` marker on both. Tracked `web/dist` was restored after the deployment build.
 - Next action: select 岡山県 or 愛媛県, tied at the new lowest candidate depth (17 candidates), for the next bounded official-source wave.
+
+## Wave 107 Checkpoint
+
+- Okayama: added four candidates — 早島町町民総合会館 ゆるびの舎（早島町）、里庄総合文化ホール「フロイデ」（里庄町）、やかげ文化センター（矢掛町）、備前市市民センター（備前市） — and 19 named, independently searchable spaces. 岡山県 is now 21 candidates, 17 municipalities, and 112 spaces. National totals are 918 candidates, 4,904 spaces, and 2,842 price observations; remaining candidate and space deficits are 257 and 0.
+- Official source status: current official public-use, cultural-facility, and municipal facility pages from 早島町、里庄町、矢掛町、備前市. Only source-explicit facility and room names, plus the published 1,012/754/790 capacity values and 備前市ホール固定694席, were structured. No stage, proscenium, or grid height was converted into a ceiling value.
+- Price observations: none added. 早島町の公開料金は利用目的、平日・休日、入場料、空調等で分岐するため、誤って一般化した日額検索値にはせず、価格精査対象として残した。
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending — commit the named source files, push the validated revision to the user-authorized Sites repository, deploy, and verify both public URLs.
+- Next action: after public verification, select 愛媛県 as the lowest candidate-depth prefecture (17 candidates) for the next bounded official-source wave.
 
 ## Completed Waves
 
