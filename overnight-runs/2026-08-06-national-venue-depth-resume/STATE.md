@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 124 — Gunma official-source expansion deployed and publicly verified; next is a bounded official-source wave for Saitama.
+- Current wave: Wave 125 — Saitama official-source expansion locally verified; source commit and public deployment pending.
 
 ## Baseline
 
@@ -16,6 +16,16 @@
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
 
 ## Wave 124 Local Checkpoint
+
+## Wave 125 Local Checkpoint
+
+- Saitama: added six candidates — 彩の国さいたま芸術劇場（さいたま市）、RaiBoC Hall（さいたま市民会館おおみや）（さいたま市）、東松山市民文化センター（東松山市）、正和工業にじいろホール（春日部市民文化会館）（春日部市）、埼玉会館（さいたま市）、菖蒲文化会館（アミーゴ）（久喜市） — and 74 named, independently searchable spaces. 埼玉県 is now 25 candidates, 19 municipalities, and 197 spaces. National totals are 1,028 candidates, 5,865 spaces, and 2,870 price observations; remaining candidate and space deficits are 147 and 0.
+- Official source status: current official foundation, city, and operator pages from 埼玉県芸術文化振興財団、さいたま市、東松山市民文化センター運営者、春日部市、久喜市文化施設運営者. Only source-explicit facility names, room names, capacities, areas, room-counts, and application constraints were structured. Source-published stage, proscenium, and grid/sunoko heights were not converted into searchable ceiling data; unpublished ceilings, floor loads, loading, streaming, and availability remain `要確認`.
+- Price observations: none added. Fee schedules vary by time band, city/outside-city status, admission, commercial purpose, or facility type, so this candidate-depth wave does not normalize them into the general day-price filter.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending a named source commit, protected push to the user-authorized Sites source repository, build, and public URL verification.
+- Next action: deploy this validated Saitama wave, then select 千葉県 from the next lowest-depth group.
 
 - Gunma: added six candidates — 高崎芸術劇場（高崎市）、昌賢学園まえばしホール（前橋市民文化会館）（前橋市）、群馬音楽センター（高崎市）、甘楽町文化会館（甘楽町）、長野原町住民総合センター（長野原町）、バイテック文化ホール（中之条町文化会館）（中之条町） — and 43 named, independently searchable spaces. 群馬県 is now 25 candidates, 20 municipalities, and 146 spaces. National totals are 1,022 candidates, 5,791 spaces, and 2,870 price observations; remaining candidate and space deficits are 153 and 0.
 - Official source status: current official foundation, municipal, town, and prefectural pages from 公益財団法人高崎財団、前橋市まちづくり公社、中之条町、甘楽町、長野原町、群馬県文化振興課. Only source-explicit room names, capacities, areas, and use conditions were structured. Source-published stage/proscenium/building dimensions and the studio-theatre measurement to a beam were not converted into searchable ceiling data. Unpublished ceilings, floor loads, streaming, and current availability remain `要確認`.
