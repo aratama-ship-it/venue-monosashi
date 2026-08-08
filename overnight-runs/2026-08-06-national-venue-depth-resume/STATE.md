@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 95 — Fukui official-source expansion locally validated; commit and deploy this bounded wave.
+- Current wave: Wave 95 — Fukui official-source expansion completed and deployed; select the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -198,7 +198,8 @@
 - Official sources: 美浜町、おおい町、大野市の現行施設案内を使用。Only source-explicit room names and the なびあすホール固定489席 were structured. コミュニティルームの用途別範囲、カラオケルームの「6人ぐらい」、椅子数、競技面数、時間単価は検索用数値に転用せず、天井高、面積、床荷重、搬入、催事回線、日額料金、空き状況を要確認に保持した。
 - Wave 95 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing `historical-events.csv:173` warning. Tracked `web/dist` output was restored after the validation build.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Next action: commit the validated Fukui source wave, push it to the authorized Sites repository, deploy and verify both public URLs, then select the next lowest-depth prefectural wave (愛知県、滋賀県、京都府、兵庫県、島根県、香川県、福岡県、長崎県、沖縄県、または新潟県).
+- Wave 95 deployment passed: source commit `0f3cd5e3c2bffdbcd3da3d17b8f3f756bccf8f68` was pushed to the authorized Sites repository; Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_cdb00b922efc81918e7253ba21f82b60` deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E3%81%AA%E3%81%B3%E3%81%82%E3%81%99&release=0f3cd5e` and `https://venue.art-monosashi.com/?q=%E3%81%AA%E3%81%B3%E3%81%82%E3%81%99&release=0f3cd5e` returned HTTP 200. Tracked `web/dist` output was restored after the deployment build.
+- Next lowest-depth wave after publication: 愛知県、滋賀県、京都府、兵庫県、島根県、香川県、福岡県、長崎県、沖縄県、または新潟県.
 
 - Wave 94 source data: added four official-source-backed Toyama facilities — 富山県高岡文化ホール（高岡市）、高岡市ふくおか総合文化センター（Uホール）（高岡市）、朝日町文化体育センター（サンリーナ）（朝日町）、立山町元気交流ステーション みらいぶ（立山町） — and 41 independently searchable spaces. 富山県 is now 20 candidates, 15 municipalities, and 138 spaces; national totals are 856 candidates and 4,255 spaces. Remaining candidate and space deficits are 319 and 16.
 - Official sources: 富山県文化振興財団、高岡市ふくおか総合文化センター指定管理者、朝日町、立山町元気交流ステーション公式の現行施設案内・料金表を使用。Only source-explicit room names, capacities, floor areas, and explicitly labelled ceiling heights were structured. 高岡文化ホールの多目的小ホール・練習室・スタジオ・展示施設、サンリーナ第1・第2体育室のみを明記値で検索可能な天井高として登録し、舞台・プロセニアム寸法は天井値に転用していない。All unreported conditions remain `要確認`.
