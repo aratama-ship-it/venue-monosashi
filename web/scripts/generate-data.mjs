@@ -60,6 +60,29 @@ function nullableUrl(value) {
   return value || null;
 }
 
+function websiteUrl(sourceUrl, explicitUrl) {
+  const officialUrl = nullableUrl(sourceUrl);
+  const verifiedWebsiteUrl = nullableUrl(explicitUrl);
+
+  if (verifiedWebsiteUrl && verifiedWebsiteUrl !== officialUrl) return verifiedWebsiteUrl;
+  if (!officialUrl) return null;
+
+  try {
+    const source = new URL(officialUrl);
+    const host = source.hostname.toLowerCase();
+    const isGovernmentHost =
+      host.endsWith(".lg.jp") ||
+      host.endsWith(".go.jp") ||
+      /(^|\.)(city|town|village|pref|prefecture)\./.test(host);
+    if (isGovernmentHost) return null;
+
+    const homepage = `${source.protocol}//${source.host}/`;
+    return homepage === source.href ? null : homepage;
+  } catch {
+    return null;
+  }
+}
+
 const [
   candidates,
   details,
@@ -69,6 +92,7 @@ const [
   historicalVenueAliases,
   budgetScenarios,
   smallTheaters,
+  venueWebsites,
 ] = await Promise.all([
   load("candidate-venues.csv"),
   load("venue-details.csv"),
@@ -78,7 +102,12 @@ const [
   load("historical-venue-aliases.csv"),
   load("budget-scenarios.csv"),
   load("small-theater-research.csv"),
+  load("venue-websites.csv"),
 ]);
+
+const websiteByCandidateId = new Map(
+  venueWebsites.map((website) => [website.candidate_id, website]),
+);
 
 const smallTheaterVerificationCounts = Object.fromEntries(
   [
@@ -129,6 +158,7 @@ const observationDates = [
   ...operations.map((item) => item.observed_at),
   ...budgetScenarios.map((item) => item.observed_at),
   ...smallTheaters.map((item) => item.official_observed_at),
+  ...venueWebsites.map((item) => item.observed_at),
 ].filter((value) => /^\d{4}-\d{2}-\d{2}$/.test(value));
 const sortedObservationDates = [...new Set(observationDates)].sort();
 const freshness = {
@@ -245,6 +275,10 @@ const venues = candidates.map((candidate) => {
     strengths: candidate.verified_public_facts,
     cautions: candidate.inference_or_risk,
     sourceUrl: candidate.official_url,
+    websiteUrl: websiteUrl(
+      candidate.official_url,
+      websiteByCandidateId.get(candidate.candidate_id)?.website_url,
+    ),
     observedAt: venueObservationDates.at(-1) ?? null,
     detailCount: venueDetails.length,
     priceCount: venuePrices.length,

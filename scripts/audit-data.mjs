@@ -54,6 +54,7 @@ const priceObservations = loadCsv("data/price-observations.csv");
 const venueOperations = loadCsv("data/venue-operations.csv");
 const historicalVenueAliases = loadCsv("data/historical-venue-aliases.csv");
 const budgetScenarios = loadCsv("data/budget-scenarios.csv");
+const venueWebsites = loadCsv("data/venue-websites.csv");
 const errors = [];
 const warnings = [];
 
@@ -195,6 +196,18 @@ requireFields(
   ],
   "budget-scenarios.csv",
 );
+requireFields(
+  venueWebsites,
+  [
+    "website_id",
+    "candidate_id",
+    "website_url",
+    "observed_at",
+    "verification_status",
+    "source_url",
+  ],
+  "venue-websites.csv",
+);
 checkUnique(historical, "event_id", "historical-events.csv");
 checkUnique(candidates, "candidate_id", "candidate-venues.csv");
 checkUnique(prefectureCoverage, "prefecture", "prefecture-coverage.csv");
@@ -204,6 +217,8 @@ checkUnique(priceObservations, "price_id", "price-observations.csv");
 checkUnique(venueOperations, "operation_id", "venue-operations.csv");
 checkUnique(historicalVenueAliases, "alias_id", "historical-venue-aliases.csv");
 checkUnique(budgetScenarios, "scenario_id", "budget-scenarios.csv");
+checkUnique(venueWebsites, "website_id", "venue-websites.csv");
+checkUnique(venueWebsites, "candidate_id", "venue-websites.csv");
 [
   ["historical-events.csv", historical],
   ["candidate-venues.csv", candidates],
@@ -214,6 +229,7 @@ checkUnique(budgetScenarios, "scenario_id", "budget-scenarios.csv");
   ["venue-operations.csv", venueOperations],
   ["historical-venue-aliases.csv", historicalVenueAliases],
   ["budget-scenarios.csv", budgetScenarios],
+  ["venue-websites.csv", venueWebsites],
 ].forEach(([dataset, rows]) => checkWhitespaceOnly(rows, dataset));
 
 const eventStatuses = new Set([
@@ -261,6 +277,26 @@ candidates.forEach((row, index) => {
 });
 
 const candidateIds = new Set(candidates.map((row) => row.candidate_id));
+venueWebsites.forEach((row, index) => {
+  const line = index + 2;
+  if (!candidateIds.has(row.candidate_id)) {
+    errors.push(`venue-websites.csv:${line} unknown candidate_id=${row.candidate_id}`);
+  }
+  if (!/^https:\/\//.test(row.website_url)) {
+    errors.push(`venue-websites.csv:${line} non-https website_url`);
+  }
+  if (!/^https:\/\//.test(row.source_url)) {
+    errors.push(`venue-websites.csv:${line} non-https source_url`);
+  }
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(row.observed_at)) {
+    errors.push(`venue-websites.csv:${line} invalid observed_at=${row.observed_at}`);
+  }
+  if (!verificationStatuses.has(row.verification_status)) {
+    errors.push(
+      `venue-websites.csv:${line} invalid verification_status=${row.verification_status}`,
+    );
+  }
+});
 const japanesePrefectures = [
   "北海道",
   "青森県",
@@ -697,6 +733,7 @@ console.log(`price_observation_rows=${priceObservations.length}`);
 console.log(`venue_operation_rows=${venueOperations.length}`);
 console.log(`historical_venue_alias_rows=${historicalVenueAliases.length}`);
 console.log(`budget_scenario_rows=${budgetScenarios.length}`);
+console.log(`venue_website_rows=${venueWebsites.length}`);
 console.log(`warnings=${warnings.length}`);
 warnings.forEach((warning) => console.log(`WARN ${warning}`));
 console.log(`errors=${errors.length}`);

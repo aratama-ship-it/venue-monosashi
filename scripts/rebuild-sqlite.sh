@@ -25,6 +25,7 @@ CREATE TABLE price_observations(price_id TEXT, candidate_id TEXT, space_id TEXT,
 CREATE TABLE venue_operations(operation_id TEXT, candidate_id TEXT, scope_space_id TEXT, nearest_station TEXT, walk_minutes TEXT, station_access TEXT, airport_access TEXT, parking_spaces_on_site TEXT, large_vehicle_access TEXT, loading_access TEXT, booking_open_months TEXT, booking_close_days TEXT, consecutive_use TEXT, setup_teardown_policy TEXT, food_policy TEXT, merch_policy TEXT, network_policy TEXT, lodging_note TEXT, access_source_url TEXT, booking_source_url TEXT, operations_source_url TEXT, observed_at TEXT, verification_status TEXT, note TEXT);
 CREATE TABLE historical_venue_aliases(alias_id TEXT, candidate_id TEXT, venue_name_contains TEXT, verification_status TEXT, note TEXT);
 CREATE TABLE budget_scenarios(scenario_id TEXT, candidate_id TEXT, space_id TEXT, scenario_label TEXT, use_case TEXT, day_type TEXT, time_span TEXT, total_amount_jpy TEXT, tax_status TEXT, derivation_method TEXT, component_price_ids TEXT, component_quantities TEXT, valid_from TEXT, observed_at TEXT, verification_status TEXT, source_url TEXT, exclusions TEXT, note TEXT);
+CREATE TABLE venue_websites(website_id TEXT, candidate_id TEXT, website_url TEXT, observed_at TEXT, verification_status TEXT, source_url TEXT, note TEXT);
 .mode csv
 .import --skip 1 data/historical-events.csv historical_events
 .import --skip 1 data/candidate-venues.csv candidate_venues
@@ -35,6 +36,7 @@ CREATE TABLE budget_scenarios(scenario_id TEXT, candidate_id TEXT, space_id TEXT
 .import --skip 1 data/venue-operations.csv venue_operations
 .import --skip 1 data/historical-venue-aliases.csv historical_venue_aliases
 .import --skip 1 data/budget-scenarios.csv budget_scenarios
+.import --skip 1 data/venue-websites.csv venue_websites
 CREATE UNIQUE INDEX idx_historical_event_id ON historical_events(event_id);
 CREATE UNIQUE INDEX idx_candidate_id ON candidate_venues(candidate_id);
 CREATE UNIQUE INDEX idx_prefecture_coverage ON prefecture_coverage(prefecture);
@@ -44,6 +46,8 @@ CREATE UNIQUE INDEX idx_price_id ON price_observations(price_id);
 CREATE UNIQUE INDEX idx_operation_id ON venue_operations(operation_id);
 CREATE UNIQUE INDEX idx_historical_alias_id ON historical_venue_aliases(alias_id);
 CREATE UNIQUE INDEX idx_budget_scenario_id ON budget_scenarios(scenario_id);
+CREATE UNIQUE INDEX idx_venue_website_id ON venue_websites(website_id);
+CREATE UNIQUE INDEX idx_venue_website_candidate ON venue_websites(candidate_id);
 CREATE INDEX idx_historical_series_year ON historical_events(series, year);
 CREATE INDEX idx_candidate_prefecture ON candidate_venues(prefecture);
 CREATE INDEX idx_detail_candidate_space ON venue_details(candidate_id, space_id);
@@ -72,5 +76,6 @@ UNION ALL SELECT "ceiling_rechecks", count(*) FROM ceiling_rechecks
 UNION ALL SELECT "price_observations", count(*) FROM price_observations
 UNION ALL SELECT "venue_operations", count(*) FROM venue_operations
 UNION ALL SELECT "historical_venue_aliases", count(*) FROM historical_venue_aliases
-UNION ALL SELECT "budget_scenarios", count(*) FROM budget_scenarios;
+UNION ALL SELECT "budget_scenarios", count(*) FROM budget_scenarios
+UNION ALL SELECT "venue_websites", count(*) FROM venue_websites;
 '

@@ -27,7 +27,8 @@ WebアプリだけをGitHubへ置くと、CIが原本CSVを再生成できませ
 ## 現在の成果物
 
 - `data/historical-events.csv`: 開催年ごとの過去会場台帳（225行）
-- `data/candidate-venues.csv`: 全国の類似会場候補（183施設・47都道府県）
+- `data/candidate-venues.csv`: 全国の類似会場候補（1,178施設・47都道府県）
+- `data/venue-websites.csv`: 公式根拠ページとは別に確認できた会場サイトのリンク
 - `data/prefecture-coverage.csv`: 各都道府県の代表候補と確認状態
 - `data/venue-details.csv`: 施設内の貸出区画ごとの面積・天井・収容・舞台等
 - `data/price-observations.csv`: 利用目的・曜日・時間帯・税込条件を保持した料金観測

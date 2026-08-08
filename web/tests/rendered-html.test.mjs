@@ -103,6 +103,8 @@ test("server-renders the venue search shell", async () => {
     /大ホール全部・営利宣伝目的・入場料1000円以下・平日3区分/,
   );
   assert.match(generatedData, /"amount": 288320/);
+  assert.match(generatedData, /"websiteUrl": "https:\/\/prismhall\.jp\/"/);
+  assert.match(venueSearchSource, /ウェブサイト ↗/);
   assert.match(html, /区画ごとの情報を見る/);
   assert.equal([...html.matchAll(/区画ごとの情報を見る/g)].length, 40);
   assert.equal([...html.matchAll(/観測した料金・運用を確認/g)].length, 40);

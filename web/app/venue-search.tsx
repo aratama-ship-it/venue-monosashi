@@ -1734,14 +1734,26 @@ export function VenueSearch() {
                           </span>
                         )}
                       </div>
-                      <a
-                        className="source-link"
-                        href={venue.sourceUrl}
-                        rel="noreferrer"
-                        target="_blank"
-                      >
-                        公式情報を確認 ↗
-                      </a>
+                      <div className="venue-links">
+                        <a
+                          className="source-link"
+                          href={venue.sourceUrl}
+                          rel="noreferrer"
+                          target="_blank"
+                        >
+                          公式情報を確認 ↗
+                        </a>
+                        {venue.websiteUrl && (
+                          <a
+                            className="source-link"
+                            href={venue.websiteUrl}
+                            rel="noreferrer"
+                            target="_blank"
+                          >
+                            ウェブサイト ↗
+                          </a>
+                        )}
+                      </div>
                     </div>
 
                     <details className="evidence-drawer space-drawer">

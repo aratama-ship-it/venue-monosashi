@@ -151,10 +151,11 @@ a {
 
 .hero-copy {
   margin: 26px 0 0;
-  max-width: 620px;
+  max-width: none;
   color: #3f4843;
   font-size: clamp(0.96rem, 1.25vw, 1.08rem);
   line-height: 1.9;
+  text-wrap: pretty;
 }
 
 .reference-block {
@@ -684,6 +685,14 @@ a {
   margin-top: 14px;
 }
 
+.venue-links {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px 14px;
+}
+
 .status-line {
   display: flex;
   flex-wrap: wrap;
@@ -1181,6 +1190,10 @@ a {
   .venue-foot {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .venue-links {
+    justify-content: flex-start;
   }
 
   .method-inner {
