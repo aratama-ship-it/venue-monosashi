@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 104 Okinawa is locally validated and ready for the user-authorized source push and public deployment.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 104 Okinawa is deployed; the next bounded wave is Niigata.
 
 ## Latest Wave
 
@@ -10,8 +10,8 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Official source status: live official pages and a current designated-manager specification from 浦添市、西原町、中城村、本部町、南風原町. Only source-explicit room names, areas, and exact capacities were structured; range/approximate capacity remains a note. Stage, proscenium, and drawing dimensions were never converted into ceiling values.
 - Price observations: none added. The observed public fees are hourly or vary by municipality/residency, time band, cooling, or other conditions; none was normalized as a falsely general day price.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row.
-- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Tracked `web/dist` will be restored after the deployment build.
-- Public deployment: pending the user-authorized source push and Sites deployment of the validated source commit.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Tracked `web/dist` was restored after the deployment build.
+- Public deployment passed: source commit `30dd162528f5170a173aae0252c5a55b5f9ef0e5` was pushed to the authorized Sites source repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_84e3ddd938508191b9528ecadab97f52` deployed successfully. Both public URLs returned HTTP 200 for `?release=30dd162`, and each returned the query marker `南風原文化センター`.
 - Next wave: 新潟県, now the lowest candidate-depth prefecture (17 candidates) in the regenerated report.
 
 - Wave 103 — Nagasaki: added 壱岐の島ホール、波佐見町総合文化会館（ウェイブホール）、深江ふるさと伝承館、東彼杵町総合会館文化ホール（グリーンハートホール）、とぎつカナリーホール and 60 named searchable spaces. 長崎県 is now 21 candidates, 15 municipalities, and 113 spaces; national totals are 893 candidates, 4,594 spaces, and 2,842 price observations. Remaining candidate and space deficits are 282 and 8.
