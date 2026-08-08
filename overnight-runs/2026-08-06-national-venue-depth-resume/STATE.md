@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 102 — Fukuoka official-source expansion locally validated; commit and deploy the validated source, then select Nagasaki from the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 102 — Fukuoka official-source expansion completed and deployed; select Nagasaki from the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -20,9 +20,10 @@
 - Fukuoka: added four candidates — リーパスプラザこが（古賀市）、大野城まどかぴあ（大野城市）、春日市ふれあい文化センター（春日市）、小郡市文化会館（小郡市） — and 78 named, independently searchable spaces. 福岡県 is now 20 candidates, 15 municipalities, and 146 spaces. National totals are 888 candidates, 4,534 spaces, and 2,842 price observations; remaining candidate and space deficits are 287 and 8.
 - Official source status: 古賀市、大野城市、春日市、春日市ふれあい文化センター指定管理者、小郡市. Source-exact capacity, area, availability, and current basic price facts were retained; approximate seating was left out of numeric capacity. No ceiling was inferred from stage dimensions.
 - Price observations: added six current, tax-included full-day basic fees for 春日市ふれあい文化センターのスプリングホール・サンホール and 小郡市文化会館大ホール. Commercial/additional equipment, admission, cooling, and future works conditions remain exclusions or notes.
-- Local verification: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing historical-events row. `web/dist` is currently build output and must be restored after deployment.
+- Local verification: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing historical-events row.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Next action: commit named Wave 102 source files, push to the user-authorized Sites source repository, deploy the exact validated build, verify both public URLs, restore `web/dist`, then record the deployment checkpoint.
+- Deployment: source commit `845c09a98219a82b655dd4f7831e164769d17243` was pushed to the user-authorized Sites repository. Sites version 147 deployed successfully. Both public URLs returned HTTP 200 for `?release=845c09a`, and live search returned the new 小郡市文化会館 marker on both. Tracked `web/dist` was restored.
+- Next action: select and research 長崎県, tied at the lowest candidate depth (16 candidates), as the next bounded official-source wave.
 
 ## Completed Waves
 
