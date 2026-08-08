@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 116 — Kochi official-source expansion deployed and publicly verified; Wave 117 Saga selection is next.
+- Current wave: Wave 117 — Saga official-source expansion validated; source commit and public deployment pending.
 
 ## Baseline
 
@@ -14,6 +14,16 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 117 Checkpoint
+
+- Saga: added seven candidates — 白石町総合センター、福富ゆうあい館（白石町）、上峰町民センター、太良町中央公民館、佐賀市産業振興会館、唐津市民交流プラザ、唐津市厳木コミュニティセンター（厳木公民館） — and 51 named, independently searchable spaces. 佐賀県 is now 25 candidates, 19 municipalities, and 127 spaces. National totals are 979 candidates, 5,402 spaces, and 2,870 price observations; remaining candidate and space deficits are 196 and 0.
+- Official source status: current municipal facility, rental, use-condition, and ordinance pages from 白石町、上峰町、太良町、佐賀市、唐津市. Only source-explicit room names, areas, capacities, published usage conditions, and service facts were structured. Stage, opening, building, and project dimensions were not converted into ceiling values; every unpublished ceiling remains `要確認`.
+- Price observations: none added. Available fees are time-band, admission-fee, commercial-use, cooling/heating, configuration, or room-condition dependent; they were not normalized into a misleading general day-price filter.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending. Commit the named source files, push the exact source commit to the user-authorized Sites source repository, deploy the generated site, and verify both public URLs before recording the deployment checkpoint.
+- Next action after deployment: select 熊本県, the current lowest candidate-depth prefecture at 18 candidates, for the next bounded official-source wave.
 
 ## Wave 116 Checkpoint
 

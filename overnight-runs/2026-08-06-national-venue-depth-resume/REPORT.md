@@ -2,9 +2,17 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 116 Kochi is publicly deployed and verified; the next bounded wave is 佐賀県, selected from the two prefectures tied at 18 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 117 Saga is locally validated and ready for its authorized public deployment; the next bounded wave is 熊本県, at 18 candidates.
 
 ## Latest Wave
+
+- Wave 117 — Saga: added 白石町総合センター、福富ゆうあい館、上峰町民センター、太良町中央公民館、佐賀市産業振興会館、唐津市民交流プラザ、唐津市厳木コミュニティセンター and 51 named searchable spaces. 佐賀県 is now 25 candidates, 19 municipalities, and 127 spaces; national totals are 979 candidates, 5,402 spaces, and 2,870 price observations. Remaining candidate and space deficits are 196 and 0.
+- Official source status: current municipal facility, rental, use-condition, and ordinance pages from 白石町、上峰町、太良町、佐賀市、唐津市. Only source-explicit room names, areas, capacities, current-use facts, and current service conditions were structured. Stage, opening, building, and project dimensions were not converted into ceiling values; unreported ceilings stay `要確認`.
+- Price observations: none added. Published fees are time-band, admission-fee, commercial-use, cooling/heating, configuration, or room-condition dependent, so they are not generalized into a misleading day-price filter.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Public deployment: pending source commit and authorized Sites release. After it is live, verify both public URLs with a new Saga marker before starting the next source wave.
+- Next wave: 熊本県, the lowest candidate-depth prefecture (18 candidates) in the regenerated report.
 
 - Wave 116 — Kochi: added 香美市立中央公民館、本山町プラチナセンター、仁淀川町交流センター、黒潮町総合センター、大月町立中央公民館（図書館）、奈半利町町民会館、大豊町総合ふれあいセンター and 40 named searchable spaces. 高知県 is now 25 candidates, 18 municipalities, and 142 spaces; national totals are 972 candidates, 5,351 spaces, and 2,870 price observations. Remaining candidate and space deficits are 203 and 0.
 - Official source status: current municipal facility and use-condition pages from 香美市、本山町、黒潮町、大月町, plus 高知県's current municipal-provided facility sheets for 仁淀川町、奈半利町、大豊町. Only source-explicit room names, areas, capacities, and current-use facts were structured. Stage, opening, building, and project dimensions were not converted into ceiling values; unreported ceilings stay `要確認`.
