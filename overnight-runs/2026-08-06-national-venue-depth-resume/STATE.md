@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 112 — Gifu official-source expansion validated; commit and deploy the source, then select one of 和歌山県・広島県・高知県・佐賀県・熊本県・鹿児島県 from the next bounded lowest-depth wave.
+- Current wave: Wave 112 — Gifu official-source expansion completed and deployed; select one of 和歌山県・広島県・高知県・佐賀県・熊本県・鹿児島県 from the next bounded lowest-depth wave.
 
 ## Baseline
 
@@ -22,7 +22,7 @@
 - Price observations: none added. The available fee tables are time-band, configuration-dependent, or use-condition dependent and were not normalized into a current generally applicable day-price filter.
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending source commit, approved Sites push, deployment, and public verification.
+- Deployment: source commit `5b993581446e849cd6f5ed3cd465a3d73561932e` was pushed to the user-authorized Sites source repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_720ebf928894819185d251e2c66684c0` (deployment `appgdep_6a76f630dde08191a738deae256f1eea`) deployed successfully. Both public URLs returned the `?release=5b99358` page and contained the newly added `飛騨市文化交流センター` marker. Tracked `web/dist` was restored after the deployment build.
 - Next action after deployment: select one of 和歌山県、広島県、高知県、佐賀県、熊本県、鹿児島県, tied at the current lowest candidate depth (18 candidates), for the next bounded official-source wave.
 
 ## Wave 111 Checkpoint
