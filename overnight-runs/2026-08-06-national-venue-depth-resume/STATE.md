@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 99 — Hyogo official-source expansion is locally validated; commit, push, deploy, and verify both public URLs before selecting the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 99 — Hyogo official-source expansion completed and deployed; select Shimane from the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -197,7 +197,7 @@
 - Wave 99 source data: added four official-source-backed Hyogo facilities — 東リ いたみホール（伊丹市立文化会館）（伊丹市）、川西市キセラホール（川西市）、たつの市総合文化会館 赤とんぼ文化ホール（たつの市）、加東市やしろ国際学習塾（加東市） — and 30 independently searchable spaces. 兵庫県 is now 20 candidates, 14 municipalities, and 111 spaces; national totals are 876 candidates and 4,394 spaces. Remaining candidate and space deficits are 299 and 8.
 - Official sources: 伊丹市、川西市、キセラホール公式運営者、たつの市、赤とんぼ文化ホール公式運営者、加東市の現行施設案内・利用申込書を使用。Only source-explicit room names and capacities were structured. 伊丹市大ホールの「約1,200席」は概数のため検索定員に転用していない。Stage、proscenium、or building values were not used as ceiling data, and no price observation was added because current fees vary by room, time, purpose, or attachments. All unreported conditions remain `要確認`.
 - Wave 99 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing `historical-events.csv:173` warning. Tracked `web/dist` output was restored after the validation build.
-- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Deployment is pending the named source commit, push, Sites deployment, and both URL checks. Next lowest-depth wave: 島根県、香川県、福岡県、長崎県、沖縄県、新潟県、大阪府、岡山県、愛媛県、または北海道.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Deployment passed: source commit `e7e0ad43132daa2e9b0b40b60feb3909e7975e79` was pushed to the user-authorized Sites repository; Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_6bdb82dd17708191ab1b93131b002d62` deployed successfully. Both public URLs returned HTTP 200 for `?release=e7e0ad4`, and each returned the query marker `キセラ`. Tracked `web/dist` output was restored after the deployment build. Next lowest-depth wave: 島根県、香川県、福岡県、長崎県、沖縄県、新潟県、大阪府、岡山県、愛媛県、または北海道.
 
 - Wave 98 source data: added four official-source-backed Kyoto facilities — 中丹文化会館（綾部市）、八幡市立生涯学習センター（八幡市）、京田辺市コミュニティホール（京田辺市）、永守重信市民会館（向日市） — and 24 independently searchable spaces. 京都府 is now 20 candidates, 13 municipalities, and 114 spaces; national totals are 872 candidates and 4,364 spaces. Remaining candidate and space deficits are 303 and 8.
 - Official sources: 綾部市、八幡市、京田辺市、向日市の現行施設案内・使用案内・予約案内を使用。Only source-explicit room names, floor area, and capacities were structured. 京田辺市の3mバトン長、向日市のホール舞台面積は最低天井高・観測面積に転用していない。料金は時間帯、冷暖房、曜日、市外、商行為、入場料等の条件で変動するため日額検索値に転用していない。All unreported conditions remain `要確認`.
