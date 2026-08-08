@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 98 Kyoto is deployed and publicly reachable; the next bounded wave will be selected from the regenerated lowest-depth report.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 99 Hyogo is locally validated and awaiting its authorized source push, public deployment, and public-URL checks; the next bounded wave will be selected from the regenerated lowest-depth report.
 
 ## Changes
 
@@ -174,6 +174,10 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - None while the run remains active.
 
 ## Latest Wave
+
+- Wave 99 source data: added four official-source-backed Hyogo facilities — 東リ いたみホール（伊丹市立文化会館）、川西市キセラホール、たつの市総合文化会館 赤とんぼ文化ホール、加東市やしろ国際学習塾 — and 30 searchable spaces, increasing the national total to 876 facilities and 4,394 spaces. Sources are the current official facility pages and use information of 伊丹市、川西市、キセラホール公式運営者、たつの市、赤とんぼ文化ホール公式運営者、加東市.
+- Structured only explicit room names and capacities. The approximate 1,200 seats at 伊丹市立文化会館 were not turned into a numeric search filter. No ceiling value was inferred: stage, proscenium, and building dimensions were not used as room ceilings. No price observation was added because current fees vary by room, time, purpose, or attached equipment; all unreported conditions remain `要確認`.
+- Wave 99 local validation passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored. Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Deployment is pending the authorized source push and public checks.
 
 - Wave 98 source data: added four official-source-backed Kyoto facilities — 中丹文化会館、八幡市立生涯学習センター、京田辺市コミュニティホール、永守重信市民会館 — and 24 searchable spaces, increasing the national total to 872 facilities and 4,364 spaces. Sources are the current official facility pages and public-use information of 綾部市、八幡市、京田辺市、向日市.
 - Structured only explicit room names, capacities, and one expressly stated floor area. No ceiling value was inferred: 京田辺市の3mバトン長は横断幕掲示用であり、向日市のホール舞台面積は観測面積に転用していない。No price observation was added because the current fee tables depend on time, cooling, date, residency, commercial or admission conditions; all unreported conditions remain `要確認`.
