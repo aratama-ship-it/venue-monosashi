@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 98 Kyoto is locally validated and awaiting the user-authorized source push, public deployment, and dual-URL verification; the next bounded wave will be selected from the regenerated lowest-depth report after publication.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 98 Kyoto is deployed and publicly reachable; the next bounded wave will be selected from the regenerated lowest-depth report.
 
 ## Changes
 
@@ -178,7 +178,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Wave 98 source data: added four official-source-backed Kyoto facilities — 中丹文化会館、八幡市立生涯学習センター、京田辺市コミュニティホール、永守重信市民会館 — and 24 searchable spaces, increasing the national total to 872 facilities and 4,364 spaces. Sources are the current official facility pages and public-use information of 綾部市、八幡市、京田辺市、向日市.
 - Structured only explicit room names, capacities, and one expressly stated floor area. No ceiling value was inferred: 京田辺市の3mバトン長は横断幕掲示用であり、向日市のホール舞台面積は観測面積に転用していない。No price observation was added because the current fee tables depend on time, cooling, date, residency, commercial or admission conditions; all unreported conditions remain `要確認`.
 - Wave 98 local validation passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-record warning. Tracked `web/dist` output was restored. Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Wave 98 public deployment is pending: the next action is to commit the validated source, push it to the user-authorized Sites source repository, deploy it, and verify both public URLs.
+- Wave 98 deployment passed: source commit `acd3e3bceda3928eb7345651d154238d9d307db2` was pushed to the user-authorized Sites source repository. Sites deployed version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_4d2aeb5c372c819186976238e2b3978b` successfully, and both public URLs returned HTTP 200 for `?release=acd3e3b`. Tracked `web/dist` output was restored.
 
 - Wave 97 source data: added four official-source-backed Shiga facilities — 米原市民交流プラザ（ルッチプラザ）、湖南市甲西文化ホール、日野町町民会館わたむきホール虹、愛荘町立ハーティーセンター秦荘 — and 31 searchable spaces, increasing the national total to 868 facilities and 4,340 spaces. Sources are the current official facility pages of 米原市、湖南市、日野町町民会館指定管理者、愛荘町立ハーティーセンター指定管理者.
 - Structured only explicit room names and fixed or expressly movable seats. No ceiling value was inferred: the published 10m value at ベルホール310 is a stage dimension, and 湖南市の建物全体面積1,935.43㎡ is not a room area. No price observation was added because the current fee tables depend on date, user location, admission or purpose conditions; all unreported conditions remain `要確認`.
