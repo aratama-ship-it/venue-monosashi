@@ -2,9 +2,17 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 146 Shimane has been validated and publicly deployed. The next lowest-depth group starts at 20 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 147 Kagawa has been validated and publicly deployed. The next lowest-depth prefecture is Fukuoka at 20 candidates.
 
 ## Latest Wave
+
+- Wave 147 — Kagawa: added サンポートホール高松、高松市生涯学習センター（まなびCAN）、香川県社会福祉総合センター、直島ホール（直島町民会館）、香川県立ミュージアム and 67 named searchable spaces. 香川県 is now 25 candidates, 17 municipalities, and 156 spaces; national totals are 1,148 candidates, 7,374 spaces, and 2,881 price observations. Remaining candidate and space deficits are 27 and 0; 39 of 47 prefectures meet the reference depth.
+- Official source status: current official prefectural, municipal, designated-operator, and public-facility material only. The additions retain source-explicit halls, conference rooms, training and workshop rooms, Japanese rooms, rehearsal and practice rooms, green rooms, a gymnasium, exhibition rooms, a gallery, and a museum auditorium. No inferred spaces were added.
+- Availability and ceiling safety: only the directly labelled 7.5m ceiling at サンポートホール高松第2小ホール was retained, as a non-filterable nominal_review reference because the official source does not establish a minimum clear height. No stage, proscenium, sunoko, building, or floor dimension was converted into a ceiling value. 香川県立ミュージアム特別展示室 remains needs_check because its loan is limited to times when the museum does not use it.
+- Price observations: none added. Current fees vary by time unit, commercial/nonprofit use, admission, outside-area use, HVAC, equipment, full/half-room use, booking, and other terms, so no ambiguous amount was normalized into the daily-budget filter.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing historical-events.csv:173 row; tracked web/dist was restored after validation and deployment.
+- Changed source files: data/candidate-venues.csv, data/venue-details.csv, generated data/prefecture-expansion-status.csv, generated web/app/generated-data.ts, and this run ledger.
+- Public deployment passed: source commit f7df5be2cd1685a34f26167c980e33dbe8f71ce5 was pushed to the authorized Sites repository with a force-with-lease guard from 73b6622b717c2b7ba6858c960cbf0a103bb6747b. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_fa19b39e75c48191b4c94ab7804a3dee (deployment appgdep_6a7771d863808191b568a63bf98415b3) succeeded. Both public URLs returned HTTP 200. Next wave: 福岡県 at 20 candidates.
 
 - Wave 146 — Shimane: added 島根県民会館、島根県市町村振興センター（タウンプラザしまね）、松江テルサ、島根県立男女共同参画センター あすてらす、津和野町民センター and 44 named searchable spaces. 島根県 is now 25 candidates, 15 municipalities, and 133 spaces; national totals are 1,143 candidates, 7,307 spaces, and 2,881 price observations. Remaining candidate and space deficits are 32 and 0; 38 of 47 prefectures meet the reference depth.
 - Official source status: current official cultural-center, municipal-association, designated-operator, public-facility, and town material only. The additions retain source-explicit halls, exhibition and multi-purpose halls, conference and Japanese rooms, rehearsal/training/practice/workshop rooms, dressing room, sports hall, and public community space. No inferred spaces were added.

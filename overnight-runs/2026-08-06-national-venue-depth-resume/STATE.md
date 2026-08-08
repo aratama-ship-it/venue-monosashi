@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-09 Asia/Tokyo
-- Current wave: Wave 146 — Shimane official-source expansion and public deployment verified; 香川県・福岡県 are next at the lowest candidate depth.
+- Current wave: Wave 147 — Kagawa official-source expansion and public deployment verified; 福岡県 is next at the lowest candidate depth.
 
 ## Baseline
 
@@ -14,6 +14,16 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 147 Local Checkpoint
+
+- Kagawa: added five candidates — サンポートホール高松、高松市生涯学習センター（まなびCAN）、香川県社会福祉総合センター、直島ホール（直島町民会館）、香川県立ミュージアム — and 67 named independently searchable spaces. 香川県 is now 25 candidates, 17 municipalities, and 156 spaces. National totals are 1,148 candidates, 7,374 spaces, and 2,881 price observations; remaining candidate and space deficits are 27 and 0, and 39 of 47 prefectures meet the full reference depth.
+- Official source status: current official prefectural, municipal, designated-operator, and public-facility pages only: https://www.sunport-hall.jp/facilities/ 、https://www.sunport-hall.jp/facilities/main.html 、https://www.sunport-hall.jp/facilities/small1.html 、https://www.sunport-hall.jp/facilities/small2.html 、https://www.sunport-hall.jp/facilities/meeting.html 、https://www.sunport-hall.jp/facilities/village1.html 、https://www.sunport-hall.jp/facilities/village2.html 、https://www.sunport-hall.jp/facilities/convenient.html 、https://www.city.takamatsu.kagawa.jp/kurashi/kosodate/shougai_gakushu/manabican/gaiyou.html 、https://www.city.takamatsu.kagawa.jp/kurashi/kosodate/shougai_gakushu/manabican/map.html 、https://kagawa-swc.or.jp/home/pdf/260325.pdf 、https://kagawa-swc.or.jp/home/room/price.pdf 、https://www.town.naoshima.lg.jp/tetsuduki/item/naoshima_hall_20251125.pdf 、https://www.kmuseum.pref.kagawa.lg.jp/rental-building/ 。追加したのは、公式で名前・面積・定員または利用区画として確認できるホール、会議・研修・実習・和室、リハーサル・練習・楽屋、体育室、展示室だけであり、推測した区画は追加していない。
+- Availability and ceiling safety: サンポートホール高松第2小ホールの公式天井高7.5mは最低有効高未確認の `nominal_review` 参照値に留め、検索値には使わない。大・第1小ホールのプロセニアム・すのこ高、直島ホールの舞台寸法、その他の舞台・建物・設備寸法を天井高に転用していない。香川県立ミュージアム特別展示室は館の非使用時のみ貸出対象のため `needs_check`。未公表の床荷重、搬入、吊り可否、催事回線、料金適用、空き状況は要確認。
+- Price observations: none added. まなびCAN、香川県社会福祉総合センター、直島ホールなどの料金は時間帯、営利非営利、入場料、市外利用、空調、設備、全面・半面等の条件で変動するため、確認済み日額として誤って正規化しなかった。
+- Local verification: npm --prefix web run data:generate、npm run audit、npm run depth-report:write、git diff --check、npm run validate passed. The only audit warning is the pre-existing historical-events.csv:173 row. Tracked web/dist was restored after validation and after the deployment build.
+- Changed source files: data/candidate-venues.csv、data/venue-details.csv、generated data/prefecture-expansion-status.csv、and generated web/app/generated-data.ts; this local checkpoint updates STATE.md and REPORT.md.
+- Deployment: source commit f7df5be2cd1685a34f26167c980e33dbe8f71ce5 was pushed to the user-authorized Sites source repository with the prior 73b6622b717c2b7ba6858c960cbf0a103bb6747b remote head as a force-with-lease guard. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_fa19b39e75c48191b4c94ab7804a3dee and deployment appgdep_6a7771d863808191b568a63bf98415b3 succeeded. Both https://venue-monosashi.juggler-arata.chatgpt.site and https://venue.art-monosashi.com returned HTTP 200. The next eligible lowest-depth prefecture is 福岡県 at 20 candidates.
 
 ## Wave 146 Local Checkpoint
 
