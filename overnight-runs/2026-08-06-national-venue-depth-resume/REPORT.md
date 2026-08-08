@@ -407,6 +407,16 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Public deployment passed: source commit `b6c077892d7737bd83bc17f9b05d2130f8492f92` was pushed to the authorized Sites repository; production version 131 deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E5%B9%B3%E7%BE%A4%E7%94%BA%E7%B7%8F%E5%90%88%E6%96%87%E5%8C%96%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=b6c0778` and `https://venue.art-monosashi.com/?q=%E5%B9%B3%E7%BE%A4%E7%94%BA%E7%B7%8F%E5%90%88%E6%96%87%E5%8C%96%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=b6c0778` returned the newly added 平群町総合文化センター. Tracked `web/dist` output was restored.
 - Next intended wave: 山口県.
 
+## Wave 87 — Yamaguchi official-source expansion
+
+- Added four candidates: 田布施町スポーツセンター（田布施町）、平生町体育館・武道館・音楽道場（平生町）、上関町総合文化センター（中央公民館）（上関町）、周防大島町B&G海洋センター（周防大島町）。
+- Added 16 independently searchable spaces: 田布施町スポーツセンターの第一・第二体育館とミーティングルーム、平生町の体育館・武道館・音楽道場、上関町中央公民館の研修室群・調理室・講座室・視聴覚室、周防大島町B&G海洋センターの体育館・温水プール・艇庫。
+- Official sources: 田布施町、平生町、上関町、周防大島町の現行公式施設案内。施設名・利用カテゴリ・公式に列挙された区画名だけを構造化し、競技面数は面積へ換算せず、天井高・料金は推定しなかった。
+- Result: 山口県は19 candidates、18 municipalities、92 spaces。全国は828 candidates、3,984 spaces、remaining candidate gap 347、space gap 34。
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
+- Source push, public deployment, and both public URL checks: pending after the named source commit. Tracked `web/dist` output must be restored after the deployment build.
+- Next intended wave: 大分県.
+
 ## Wave 83 — Saitama official-source expansion
 
 - Added four candidates: 新座市民会館（新座市）、戸田市文化会館（戸田市）、坂戸市文化会館「ふれあ」（坂戸市）、本庄市児玉文化会館（セルディ）（本庄市）。
