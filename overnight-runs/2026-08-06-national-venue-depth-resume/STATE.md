@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 127 — Ishikawa official-source expansion locally validated; public deployment is pending.
+- Current wave: Wave 127 — Ishikawa official-source expansion and public deployment verified; 山梨県 is next.
 
 ## Baseline
 
@@ -22,7 +22,7 @@
 - Price observations: none added. Current fees vary by time band, season, air-conditioning, room configuration, commercial purpose, admission, or exclusive-use condition, so this candidate-depth wave does not normalize them into the general day-price filter.
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending the source commit and authorized Sites deployment. The next eligible lowest-depth prefecture after this wave is 山梨県, tied with 静岡県、奈良県、鳥取県、山口県、徳島県、大分県、宮崎県 at 19 candidates.
+- Deployment: source commit `d24d9dec6baf9c630782a08bb125d8e89590a0c4` was pushed to the user-authorized Sites source repository with the confirmed Chiba release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_03e0d643fc048191bb7acb834b4cb8e7` (deployment `appgdep_6a77230baf008191b49d7ad11c9d12d4`) deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E9%87%91%E6%B2%A2%E6%AD%8C%E5%8A%87%E5%BA%A7&release=d24d9de` and `https://venue.art-monosashi.com/?q=%E9%87%91%E6%B2%A2%E6%AD%8C%E5%8A%87%E5%BA%A7&release=d24d9de` returned HTTP 200 and contained the new 金沢歌劇座 marker. Tracked `web/dist` was restored after the deployment build. The next eligible lowest-depth prefecture is 山梨県, tied with 静岡県、奈良県、鳥取県、山口県、徳島県、大分県、宮崎県 at 19 candidates.
 
 ## Wave 126 Local Checkpoint
 

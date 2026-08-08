@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 127 Ishikawa is locally validated and awaiting its authorized public deployment.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 127 Ishikawa has been publicly deployed and verified; the next lowest-depth wave is 山梨県.
 
 ## Latest Wave
 
@@ -11,7 +11,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Price observations: none added. Fee schemes vary by time block, season, cooling/heating, configuration, exclusive use, commercial purpose, or admission, so they are not generalized into a misleading day-price filter.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment: pending the source commit and authorized Sites deployment. Next wave: 山梨県, tied with 静岡県、奈良県、鳥取県、山口県、徳島県、大分県、宮崎県 at 19 candidates in the regenerated report.
+- Public deployment: source commit `d24d9dec6baf9c630782a08bb125d8e89590a0c4` was pushed to the user-authorized Sites source repository with the confirmed Chiba release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_03e0d643fc048191bb7acb834b4cb8e7` (deployment `appgdep_6a77230baf008191b49d7ad11c9d12d4`) deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?q=%E9%87%91%E6%B2%A2%E6%AD%8C%E5%8A%87%E5%BA%A7&release=d24d9de` returned HTTP 200 and contained the new 金沢歌劇座 marker. Tracked `web/dist` was restored after the deployment build. Next wave: 山梨県, tied with 静岡県、奈良県、鳥取県、山口県、徳島県、大分県、宮崎県 at 19 candidates in the regenerated report.
 
 - Wave 126 — Chiba: added 市原市市民会館、君津市民文化ホール、四街道市文化センター、流山市文化会館、勝浦市芸術文化交流センター キュステ、印西市文化ホール and 62 named searchable spaces. 千葉県 is now 25 candidates, 24 municipalities, and 159 spaces; national totals are 1,034 candidates, 5,927 spaces, and 2,870 price observations. Remaining candidate and space deficits are 141 and 0.
 - Official source status: current official operator and municipal pages from 市原市文化振興財団、君津市文化振興財団、四街道市、流山市、勝浦市・指定管理者、印西市文化ホール. Only source-explicit room names, room counts, capacities, areas, and application conditions were structured. Stage/proscenium/sunoko dimensions were not converted into ceiling height; all unpublished ceilings and operational conditions remain `要確認`.
