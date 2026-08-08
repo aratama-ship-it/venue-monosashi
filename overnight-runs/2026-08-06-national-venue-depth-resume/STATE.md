@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-09 Asia/Tokyo
-- Current wave: Wave 137 — Miyagi official-source expansion and public deployment verified; 栃木県 is next.
+- Current wave: Wave 138 — Tochigi official-source expansion and public deployment verified; 東京都・富山県・福井県・愛知県・滋賀県・京都府・兵庫県・島根県・香川県・福岡県 are next at the lowest candidate depth.
 
 ## Baseline
 
@@ -14,6 +14,15 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 138 Local Checkpoint
+
+- Tochigi: added five candidates — 宇都宮市文化会館、栃木県総合文化センター、那須野が原ハーモニーホール、ピアートホール、栃木市大平文化会館 — and 51 named independently searchable spaces. 栃木県 is now 25 candidates, 18 municipalities, and 155 spaces. National totals are 1,103 candidates, 6,813 spaces, and 2,879 price observations; remaining candidate and space deficits are 72 and 0, and 30 of 47 prefectures meet the full reference depth.
+- Official source status: current public operator, prefectural, municipal, and city sources only. Source-explicit halls, movable or temporary halls, galleries, exhibition rooms, rehearsal/practice rooms, named dressing rooms, conference rooms, training rooms, Japanese rooms, and support spaces were structured. The only filterable ceiling values are direct current room-height values at 宇都宮市文化会館 and the directly published 8.6m ceiling for 栃木県総合文化センター第1ギャラリー. Stage and proscenium dimensions were not converted into ceiling data; unreported ceiling, floor-load, loading, streaming, fee applicability, and availability conditions remain `要確認`.
+- Price observations: added four current, precisely sourced daily base prices for ピアートホール — cultural hall weekday 25,000円, weekend/holiday 30,000円, rehearsal room 1,500円, and dressing room 1,000円. The city also specifies admission-fee, commercial-promotion, outside-area, equipment, and availability conditions, so these remain `all` fee-class base observations rather than being misclassified as commercial or nonprofit rates.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation and after the deployment build.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: source commit `75732927b46800ba64d47d971b183f155c2e5937` was pushed to the user-authorized Sites source repository with the previous `adc32bc348258cd36e0e26edffe3b8096465cd76` remote head as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_b432553fdc5c81919d824d2a88218104` and deployment `appgdep_6a774e322bbc8191aa79d9ab550a4a47` succeeded. Both `https://venue-monosashi.juggler-arata.chatgpt.site` and `https://venue.art-monosashi.com` served the newly added 宇都宮市文化会館 marker after deployment. The next eligible lowest-depth prefectures are 東京都、富山県、福井県、愛知県、滋賀県、京都府、兵庫県、島根県、香川県、福岡県 at 20 candidates.
 
 ## Wave 137 Local Checkpoint
 
