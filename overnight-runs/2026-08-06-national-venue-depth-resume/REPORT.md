@@ -437,6 +437,14 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Public deployment passed: source commit `5975e912f72fe984022fd817fe88e29332655c7d` was pushed to the authorized Sites repository; production version 134 deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E9%AB%98%E5%8D%83%E7%A9%82%E7%94%BA%E4%B8%AD%E5%A4%AE%E4%BD%93%E8%82%B2%E9%A4%A8&release=5975e91` and `https://venue.art-monosashi.com/?q=%E9%AB%98%E5%8D%83%E7%A9%82%E7%94%BA%E4%B8%AD%E5%A4%AE%E4%BD%93%E8%82%B2%E9%A4%A8&release=5975e91` returned the newly added 高千穂町中央体育館. Tracked `web/dist` output was restored.
 - Next intended wave: 青森県 (lowest candidate depth group).
 
+## Wave 90 — Aomori official-source expansion
+
+- Added four candidates: 黒石市産業会館（黒石市）、平内町立体育館・浅所分館（平内町）、田子町中央公民館（田子町）、六戸町文化ホール（メイプルホール）（六戸町）。
+- Added 21 independently searchable spaces: 黒石市産業会館の展示・会議室、平内町の体育館・分館、田子町中央公民館のホール・和室・研修・調理・テラス・会議室、六戸町文化ホールのホール・視聴覚・和室・控室・楽屋・ロビー区画。
+- Official sources: 黒石市、平内町、田子町、六戸町の現行公式施設案内・条例。公式に明記された室名・使用区分・厳密な面積だけを構造化し、「程度」表記の収容人数、六戸町文化ホールの506席内訳と500人上限の不一致、競技面数を検索数値へ転用しなかった。天井高・料金は推定していない。
+- Result: 青森県は20 candidates、18 municipalities、111 spaces。全国は840 candidates、4,057 spaces、remaining candidate gap 335、space gap 34。
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Public deployment is pending; tracked `web/dist` is to be restored before the source commit.
+
 ## Wave 83 — Saitama official-source expansion
 
 - Added four candidates: 新座市民会館（新座市）、戸田市文化会館（戸田市）、坂戸市文化会館「ふれあ」（坂戸市）、本庄市児玉文化会館（セルディ）（本庄市）。
