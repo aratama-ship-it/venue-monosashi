@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 130 — Nara official-source expansion and public deployment verified; 鳥取県 is next.
+- Current wave: Wave 131 — Tottori official-source expansion validated; source commit and public deployment pending.
 
 ## Baseline
 
@@ -14,6 +14,15 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 131 Local Checkpoint
+
+- Tottori: added six candidates — 鳥取市文化センター・鳥取市文化ホール、鳥取市民会館、米子市文化ホール、米子市淀江文化センター（さなめホール）、ヴィレステひえづ、大山町中山公民館 — and 71 named, independently searchable spaces. 鳥取県 is now 25 candidates, 18 municipalities, and 160 spaces. National totals are 1,064 candidates, 6,326 spaces, and 2,870 price observations; remaining candidate and space deficits are 111 and 0.
+- Official source status: current official city, town, and designated-operator pages from 鳥取市文化センター、鳥取市民会館、米子市文化ホール、米子市淀江文化センター、日吉津村、大山町. Source-explicit halls, foyers, exhibition and event rooms, meeting rooms, rehearsal/practice rooms, dressing/green rooms, galleries, support spaces, and named public-facility zones were structured. 米子市淀江文化センター・イベントホール alone explicitly publishes a 5.25m ceiling height, which is stored as the minimum-clearance value. Published stage height, sunoko height, and other stage dimensions were not used as ceiling-height evidence; unknown ceilings, floor loads, loading, streaming, price applicability, availability, and ordinary lending scope remain `要確認`.
+- Price observations: none added. Available fee information varies by room, time band, configuration, eligibility, admission, use purpose, equipment, or commercial condition, so no ambiguous amount was generalized into the day-price filter.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending the validated source commit, Sites source push, public release, and two-URL verification. The next eligible lowest-depth prefecture after this wave is 山口県, tied with 徳島県、大分県、宮崎県 at 19 candidates.
 
 ## Wave 130 Local Checkpoint
 
