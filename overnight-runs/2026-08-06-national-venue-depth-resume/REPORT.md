@@ -417,6 +417,16 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Public deployment passed: source commit `6295f626d2e1a5bb2cb8c25e048726c636dc420e` was pushed to the authorized Sites repository; production version 132 deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E4%B8%8A%E9%96%A2%E7%94%BA%E7%B7%8F%E5%90%88%E6%96%87%E5%8C%96%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=6295f62` and `https://venue.art-monosashi.com/?q=%E4%B8%8A%E9%96%A2%E7%94%BA%E7%B7%8F%E5%90%88%E6%96%87%E5%8C%96%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=6295f62` returned the newly added 上関町総合文化センター. Tracked `web/dist` output was restored.
 - Next intended wave: 大分県.
 
+## Wave 88 — Oita official-source expansion
+
+- Added four candidates: くすまちメルサンホール（玖珠町）、九重文化センター（九重町）、日出町中央公民館（日出町）、挾間公民館（はさま未来館・DENKENホール）（由布市）。
+- Added 40 independently searchable spaces: 玖珠町の町民ホール・公民館区画・楽屋、九重町文化センターのスポーツ・会議区画、日出町中央公民館のフロアー図で確認できる室、由布市挾間公民館のDENKENホール・研修室群・市民ギャラリー等。
+- Official sources: 玖珠町、九重町、日出町、由布市の現行公式施設案内。公式に示された716席、500席、416㎡などのみを構造化し、プロセニアム/舞台高さを天井高にせず、畳数・競技面数・調理台数も検索数値へ転用しなかった。
+- Result: 大分県は19 candidates、17 municipalities、120 spaces。全国は832 candidates、4,024 spaces、remaining candidate gap 343、space gap 34。
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row.
+- Source push, public deployment, and both public URL checks: pending after the named source commit. Tracked `web/dist` output must be restored after the deployment build.
+- Next intended wave: 宮崎県.
+
 ## Wave 83 — Saitama official-source expansion
 
 - Added four candidates: 新座市民会館（新座市）、戸田市文化会館（戸田市）、坂戸市文化会館「ふれあ」（坂戸市）、本庄市児玉文化会館（セルディ）（本庄市）。

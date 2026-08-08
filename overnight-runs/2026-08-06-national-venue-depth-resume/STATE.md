@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 87 — Yamaguchi official-source expansion completed and deployed; select the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 88 — Oita official-source expansion passed local verification; source push and public deployment are pending.
 
 ## Baseline
 
@@ -193,6 +193,13 @@
 - Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
 
 ## Next Action
+
+- Wave 88 source data: added four official-source-backed Oita facilities — くすまちメルサンホール（玖珠町）、九重文化センター（九重町）、日出町中央公民館（日出町）、挾間公民館（はさま未来館・DENKENホール）（由布市） — and 40 independently searchable spaces. 大分県 is now 19 candidates, 17 municipalities, and 120 spaces; national totals are 832 candidates and 4,024 spaces. Remaining candidate and space deficits are 343 and 34.
+- Official sources: 玖珠町、九重町、日出町、由布市の現行公式施設案内を使用。Only source-explicit room names, capacity, and floor-area values were structured. No ceiling height or price observation was inferred; proscenium/stage heights were not converted into ceiling values, and tatami counts, court counts, and cooking-table counts were not converted into floor area or capacity. All unreported conditions remain `要確認`.
+- Wave 88 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing `historical-events.csv:173` warning. Tracked `web/dist` output must be restored after the deployment build.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Wave 88 source push, public deployment, and both public URL checks: pending after the named source commit.
+- Next lowest-depth wave after publication: 宮崎県.
 
 - Wave 87 source data: added four official-source-backed Yamaguchi facilities — 田布施町スポーツセンター（田布施町）、平生町体育館・武道館・音楽道場（平生町）、上関町総合文化センター（中央公民館）（上関町）、周防大島町B&G海洋センター（周防大島町） — and 16 independently searchable spaces. 山口県 is now 19 candidates, 18 municipalities, and 92 spaces; national totals are 828 candidates and 3,984 spaces. Remaining candidate and space deficits are 347 and 34.
 - Official sources: 田布施町、平生町、上関町、周防大島町の現行公式施設案内を使用。Only source-explicit facility names, use categories, and room names were structured. No ceiling height or price observation was inferred; court counts were not converted into floor area, and all unreported conditions remain `要確認`.
