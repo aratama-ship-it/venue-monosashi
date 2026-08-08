@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 128 — Yamanashi official-source expansion and public deployment verified; 静岡県 is next.
+- Current wave: Wave 129 — Shizuoka official-source expansion is locally validated; public deployment is pending. 奈良県 is next after the release check.
 
 ## Baseline
 
@@ -14,6 +14,15 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 129 Local Checkpoint
+
+- Shizuoka: added six candidates — 静岡市清水文化会館（マリナート）、菊川文化会館アエル、長泉町文化センター ベルフォーレ、裾野市民文化センター（アザレアホール）、富士宮市民文化会館、小山町総合文化会館 — and 57 named, independently searchable spaces. 静岡県 is now 25 candidates, 21 municipalities, and 175 spaces. National totals are 1,052 candidates, 6,158 spaces, and 2,870 price observations; remaining candidate and space deficits are 123 and 0.
+- Official source status: current official city, town, designated-operator, and prefectural facility pages from 静岡市清水文化会館、菊川市、長泉町文化センター、裾野市民文化センター、富士宮市民文化会館・富士宮市振興公社、小山町生涯学習施設. All explicit halls, event/multipurpose rooms, rehearsal and practice rooms, galleries, workshops, meeting rooms, dressing rooms, and support rooms were structured. 富士宮市民文化会館 is retained with its official closure/reopening notice: it is closed for renovation through 2026-11-30 with a 2026-12-01 reopening plan, so current use availability stays `要確認`. Published stage and opening heights at アエル、ベルフォーレ、裾野市民文化センター are not ceiling-height evidence and were not made filterable.
+- Price observations: none added. The official price tables vary by time band, weekday/holiday, admission, equipment, room configuration, or other use conditions, so this candidate-depth wave does not generalize them into the day-price filter.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending user-authorized Sites source push, build, public deployment, and verification. The next eligible lowest-depth prefecture is 奈良県, tied with 鳥取県、山口県、徳島県、大分県、宮崎県 at 19 candidates.
 
 ## Wave 128 Local Checkpoint
 

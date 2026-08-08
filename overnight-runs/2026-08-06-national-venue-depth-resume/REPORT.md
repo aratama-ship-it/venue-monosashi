@@ -2,9 +2,16 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 128 Yamanashi has been publicly deployed and verified; the next lowest-depth wave is 静岡県.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 129 Shizuoka is locally validated and awaiting its user-authorized public deployment; the next lowest-depth wave is 奈良県.
 
 ## Latest Wave
+
+- Wave 129 — Shizuoka: added 静岡市清水文化会館（マリナート）、菊川文化会館アエル、長泉町文化センター ベルフォーレ、裾野市民文化センター（アザレアホール）、富士宮市民文化会館、小山町総合文化会館 and 57 named searchable spaces. 静岡県 is now 25 candidates, 21 municipalities, and 175 spaces; national totals are 1,052 candidates, 6,158 spaces, and 2,870 price observations. Remaining candidate and space deficits are 123 and 0.
+- Official source status: current official city, town, designated-operator, and prefectural facility pages from 静岡市清水文化会館、菊川市、長泉町文化センター、裾野市民文化センター、富士宮市民文化会館・富士宮市振興公社、小山町生涯学習施設. Only source-explicit room names, capacities, areas, seating composition, and use conditions were structured. 富士宮市民文化会館 is explicitly marked closed for renovation until the planned 2026-12-01 reopening, not presented as currently available. Stage or opening heights at アエル、ベルフォーレ、裾野市民文化センター were not converted into ceiling-height filters.
+- Price observations: none added. Fees vary by time band, weekday/holiday, admission, equipment, room configuration, or use condition, so no ambiguous fee was generalized into a day-price filter.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Public deployment: pending user-authorized Sites source push, build, deployment, and public URL verification. Next wave: 奈良県, tied with 鳥取県、山口県、徳島県、大分県、宮崎県 at 19 candidates in the regenerated report.
 
 - Wave 128 — Yamanashi: added YCC県民文化ホール（山梨県立県民文化ホール）、ふじさんホール（富士五湖文化センター）・富士吉田市民会館、山梨県立図書館、山梨県立美術館、山梨県立文学館、山梨県立青少年センター and 70 named searchable spaces. 山梨県 is now 25 candidates, 15 municipalities, and 154 spaces; national totals are 1,046 candidates, 6,101 spaces, and 2,870 price observations. Remaining candidate and space deficits are 129 and 0.
 - Official source status: current official operator, prefectural, municipal, library, museum, and center pages from YCC県民文化ホール、富士吉田文化振興協会・富士吉田市、山梨県立図書館、山梨県立美術館、山梨県立文学館、山梨県教育委員会. Only source-explicit room names, capacities, areas, divisibility, equipment, and use conditions were structured. The new YCC hall pages list proscenium heights of 10m and 8m, not ceiling heights, so neither is filterable; all unreported operational conditions remain `要確認`.

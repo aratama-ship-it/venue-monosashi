@@ -20,7 +20,7 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 山梨県,甲信越,25,15,154,63,73,2,0,0,0,reference_depth
 長野県,甲信越,25,22,156,76,80,8,0,0,0,reference_depth
 岐阜県,東海,25,19,186,98,85,2,0,0,0,reference_depth
-静岡県,東海,19,16,118,59,30,10,6,0,0,expanding
+静岡県,東海,25,21,175,100,54,10,0,0,0,reference_depth
 愛知県,東海,20,16,150,73,47,6,5,0,0,expanding
 三重県,東海,25,15,79,49,48,22,0,0,0,reference_depth
 滋賀県,近畿,20,13,74,26,21,0,5,2,0,expanding
