@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 100 — Shimane official-source expansion is locally validated; commit, push, deploy, and verify both public URLs before selecting the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 100 — Shimane official-source expansion completed and deployed; select Kagawa from the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -197,7 +197,7 @@
 - Wave 100 source data: added four official-source-backed Shimane facilities — 大田市民会館（大田市）、隠岐島文化会館（隠岐の島町）、西ノ島町中央公民館（西ノ島町）、島根県中山間地域研究センター（飯南町） — and 34 independently searchable spaces. 島根県 is now 20 candidates, 14 municipalities, and 89 spaces; national totals are 880 candidates, 4,428 spaces, and 2,828 price observations. Remaining candidate and space deficits are 295 and 8.
 - Official sources: 大田市と大田市民会館指定管理者、隠岐の島町、隠岐の島町の令和8年度指定管理募集資料、西ノ島町、島根県の現行施設案内・使用料を使用。Only source-explicit room names, capacity, and area values were structured. 大田市民会館の舞台高さ8mと隠岐島文化会館の舞台高さ6mは最低天井高に転用していない。飯南町の5価格は令和8年4月1日改正の9〜17時基本額で、冷暖房3割・設備・時間外料金を除外して記録した。All unreported conditions remain `要確認`.
 - Wave 100 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing `historical-events.csv:173` warning. Tracked `web/dist` output was restored after the validation build.
-- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Deployment is pending the named source commit, push, Sites deployment, and both URL checks. Next lowest-depth wave: 香川県、福岡県、長崎県、沖縄県、新潟県、大阪府、岡山県、愛媛県、北海道、または神奈川県.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Deployment passed: source commit `a8f6e0c351d27d4ed82c6d124d51cd80c9ad6fc6` was pushed to the user-authorized Sites repository; Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_d0f0c1dc975881919ac87439521a358d` deployed successfully. Both public URLs returned HTTP 200 for `?release=a8f6e0c`, and each returned the query marker `中山間地域研究センター`. Tracked `web/dist` output was restored after the deployment build. Next lowest-depth wave: 香川県、福岡県、長崎県、沖縄県、新潟県、大阪府、岡山県、愛媛県、北海道、または神奈川県.
 
 - Wave 99 source data: added four official-source-backed Hyogo facilities — 東リ いたみホール（伊丹市立文化会館）（伊丹市）、川西市キセラホール（川西市）、たつの市総合文化会館 赤とんぼ文化ホール（たつの市）、加東市やしろ国際学習塾（加東市） — and 30 independently searchable spaces. 兵庫県 is now 20 candidates, 14 municipalities, and 111 spaces; national totals are 876 candidates and 4,394 spaces. Remaining candidate and space deficits are 299 and 8.
 - Official sources: 伊丹市、川西市、キセラホール公式運営者、たつの市、赤とんぼ文化ホール公式運営者、加東市の現行施設案内・利用申込書を使用。Only source-explicit room names and capacities were structured. 伊丹市大ホールの「約1,200席」は概数のため検索定員に転用していない。Stage、proscenium、or building values were not used as ceiling data, and no price observation was added because current fees vary by room, time, purpose, or attachments. All unreported conditions remain `要確認`.
