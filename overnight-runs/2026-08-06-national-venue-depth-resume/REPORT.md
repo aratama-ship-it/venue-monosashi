@@ -453,7 +453,9 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added 27 independently searchable spaces: 白石市のホール・リハーサル・アリーナ等、登米祝祭劇場の大・小ホール、角田市市民センターのホール・控室・研修棟諸室、岩沼市民会館の大・中ホール。
 - Official sources: 白石市、登米市、角田市、岩沼市の現行公式施設案内・条例・市政報告。公式に示された室名・精密な面積・610席/630席だけを構造化し、競技面数、「程度」/「～」表記の定員、畳数、料金上限・下限を検索数値へ転用しなかった。天井高・料金は推定していない。
 - Result: 宮城県は20 candidates、16 municipalities、106 spaces。全国は844 candidates、4,084 spaces、remaining candidate gap 331、space gap 34。
-- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Public deployment is pending; tracked `web/dist` is to be restored before the source commit.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after the deployment build.
+- Public deployment passed: source commit `b2464255f09f0bc20fed786f171604d84c43d2d4` was pushed to the authorized Sites repository; production version 136 deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E8%A7%92%E7%94%B0%E5%B8%82%E5%B8%82%E6%B0%91%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=b246425` and `https://venue.art-monosashi.com/?q=%E8%A7%92%E7%94%B0%E5%B8%82%E5%B8%82%E6%B0%91%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=b246425` returned the newly added 角田市市民センター. Tracked `web/dist` output was restored.
+- Next intended wave: 栃木県 (lowest candidate depth group).
 
 ## Wave 83 — Saitama official-source expansion
 
