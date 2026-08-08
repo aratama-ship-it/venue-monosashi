@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 81 — Akita official-source expansion source data validated; public deployment pending.
+- Current wave: Wave 81 — Akita official-source expansion completed and deployed; select the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -198,7 +198,8 @@
 - Official sources: 五城目町、美郷町、大潟村の公式公共施設予約システム・生涯学習施設案内、潟上市の市民センター案内・令和7年施行の公民館条例。Only source-explicit floor areas and one explicitly stated movable-seat count were structured. No ceiling height or price observation was inferred; room/stage dimensions and approximate capacities remain notes only, and all unreported conditions remain `要確認`.
 - Wave 81 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing `historical-events.csv:173` warning. Tracked `web/dist` output was restored.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment pending: commit the named validated source files, push to the authorized Sites repository, deploy the saved version, and check both public URLs. Next lowest-depth wave after publication: 群馬県.
+- Wave 81 deployment passed: source commit `e7c2160ec7b53ac68c1ecae2b69683e5abe75e9e` was pushed to the authorized Sites repository; production version 126 deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E4%BA%94%E5%9F%8E%E9%A4%A8&release=e7c2160` and `https://venue.art-monosashi.com/?q=%E4%BA%94%E5%9F%8E%E9%A4%A8&release=e7c2160` returned the newly added 五城館 after deployment. Tracked `web/dist` output was restored.
+- Next lowest-depth wave: 群馬県.
 
 - Wave 40 source data: added four official-source-backed Shizuoka facilities — 三島市民文化会館、焼津文化会館、掛川市文化会館シオーネ、かなや会館 — and 18 independently searchable spaces. Shizuoka is now 15 candidates, 12 municipalities, and 61 spaces.
 - Official sources: 三島市、焼津市、掛川市、島田市。Explicit capacities and floor areas only were recorded. No ceiling or price observation was added; all unreported conditions remain `要確認`.

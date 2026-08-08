@@ -431,7 +431,8 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added 31 independently searchable spaces. 秋田県 is now 19 candidates, 18 municipalities, and 86 spaces; national totals are 804 candidates and 3,804 spaces. Remaining candidate and space deficits are 371 and 34.
 - Official source status: 五城目町、美郷町、大潟村の公式公共施設予約システム・生涯学習施設案内、潟上市の市民センター案内・令和7年施行の公民館条例を使用。Only source-explicit floor areas and one explicitly stated movable-seat count were recorded. No ceiling height or price observation was inferred; room/stage dimensions and approximate capacities remain notes rather than filter values. Current availability and unreported conditions remain `要確認`.
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
-- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Public deployment is pending the named source commit and authorized Sites release.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Public deployment passed: source commit `e7c2160ec7b53ac68c1ecae2b69683e5abe75e9e` was pushed to the authorized Sites repository; production version 126 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?q=%E4%BA%94%E5%9F%8E%E9%A4%A8&release=e7c2160` returned the newly added 五城館 after deployment. Tracked `web/dist` output was restored.
 
 ## Wave 77 — Tokushima official-source expansion
 
