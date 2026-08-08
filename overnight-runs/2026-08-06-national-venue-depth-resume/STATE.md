@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 121 — Yamagata official-source expansion is locally validated; public source push and deployment are pending.
+- Current wave: Wave 121 — Yamagata official-source expansion deployed and publicly verified; Wave 122 Fukushima selection is next.
 
 ## Baseline
 
@@ -22,8 +22,8 @@
 - Price observations: none added. 公開料金は時間帯・営利・飲酒・冷暖房・練習利用・休日等の条件差を含むため、一般の日額予算フィルターに誤って正規化していない。
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending. The next step is to commit the validated named files, push to the user-authorized Sites source repository with the confirmed Akita release as a force-with-lease guard, deploy the generated build, and check both public URLs for a new Yamagata marker.
-- Next action after deployment: select 福島県, tied with 茨城県、群馬県、埼玉県、千葉県、石川県、山梨県、静岡県、奈良県、鳥取県 at 19 candidates, for the next bounded official-source wave.
+- Deployment: source commit `ab00e03745404d1801652fb54835929e5a404571` was pushed to the user-authorized Sites source repository with the confirmed Akita release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_695ff063c4808191822903f55e070cdd` (deployment `appgdep_6a770ec5bf188191893a09e181d3b27d`) deployed successfully. Both public URLs returned the `?q=山形市中央公民館&release=ab00e03` page with HTTP 200 and contained the new `山形市中央公民館` marker. Tracked `web/dist` was restored after the deployment build.
+- Next action: select 福島県, tied with 茨城県、群馬県、埼玉県、千葉県、石川県、山梨県、静岡県、奈良県、鳥取県 at 19 candidates, for the next bounded official-source wave.
 
 ## Wave 120 Checkpoint
 

@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 121 Yamagata is locally validated and ready for the user-authorized public release; the next bounded wave after release is 福島県, at 19 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 121 Yamagata is publicly deployed and verified; the next bounded wave is 福島県, at 19 candidates.
 
 ## Latest Wave
 
@@ -11,8 +11,8 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Price observations: none added. Published fees vary by time band, commercial use, drinking, cooling/heating, rehearsal use, or holiday conditions, so they are not generalized into a misleading day-price filter.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment is pending: commit the named validated files, push them to the user-authorized Sites repository using the confirmed Akita release as a force-with-lease guard, deploy the build, then check both public URLs for a new Yamagata marker.
-- Next wave after release: 福島県, tied with 茨城県、群馬県、埼玉県、千葉県、石川県、山梨県、静岡県、奈良県、鳥取県 at the lowest candidate depth (19 candidates) in the regenerated report.
+- Public deployment passed: source commit `ab00e03745404d1801652fb54835929e5a404571` was pushed to the authorized Sites repository with the confirmed Akita release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_695ff063c4808191822903f55e070cdd` (deployment `appgdep_6a770ec5bf188191893a09e181d3b27d`) deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E5%B1%B1%E5%BD%A2%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%85%AC%E6%B0%91%E9%A4%A8&release=ab00e03` and `https://venue.art-monosashi.com/?q=%E5%B1%B1%E5%BD%A2%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%85%AC%E6%B0%91%E9%A4%A8&release=ab00e03` returned HTTP 200 and the newly added 山形市中央公民館. Tracked `web/dist` was restored after the deployment build.
+- Next wave: 福島県, tied with 茨城県、群馬県、埼玉県、千葉県、石川県、山梨県、静岡県、奈良県、鳥取県 at the lowest candidate depth (19 candidates) in the regenerated report.
 
 - Wave 120 — Akita: added 小坂町交流センター「セパーム」、上小阿仁村生涯学習センター、コアニティー（上小阿仁村集住型宿泊交流拠点施設）、えきまえ交流館「はちパル」、子育て支援多世代交流館「みなくる」、かもや堂 and 49 named searchable spaces. 秋田県 is now 25 candidates, 23 municipalities, and 135 spaces; national totals are 998 candidates, 5,561 spaces, and 2,870 price observations. Remaining candidate and space deficits are 177 and 0.
 - Official source status: current official facility guides, use-form material, and official town/village pages from 小坂町、上小阿仁村、八郎潟町、井川町、藤里町. Only source-explicit areas and capacities were structured. 上小阿仁村生涯学習センターの舞台開口・奥行・プロセニアム高は最低天井高へ変換していない。Unreported ceilings, floor loads, loading, stream conditions, and availability stay `要確認`.
