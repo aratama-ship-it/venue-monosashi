@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-09 Asia/Tokyo
-- Current wave: Wave 153 — Hokkaido official-source expansion and public deployment are verified. 神奈川県 is next at the lowest candidate depth; 大阪府 has a remaining municipality-depth gap.
+- Current wave: Wave 154 — Kanagawa official-source expansion and public deployment are verified. 大阪府 is the only remaining prefecture below the municipality-depth target.
 
 ## Baseline
 
@@ -14,6 +14,16 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 154 Local Checkpoint
+
+- Kanagawa: added three candidates — 愛川町文化会館、南足柄市文化会館（金太郎みらいホール）、綾瀬市オーエンス文化会館 — and 38 named independently searchable spaces. 神奈川県 is now 25 candidates, 18 municipalities, and 216 spaces. National totals are 1,175 candidates, 7,705 spaces, and 2,881 price observations; remaining candidate and space deficits are 0 and 0, and 46 of 47 prefectures meet the full reference depth. 大阪府 has the only remaining gap: 3 municipalities.
+- Official source status: current town, municipal, and designated-operator material only: https://www.town.aikawa.kanagawa.jp/soshiki/kyouikuiinkai/shogaigakusyu/bunka/1422277729724.html 、https://kintaromirai-hall.com/facility/ 、https://kintaromirai-hall.com/guide/ 、https://www.ayase-bunka.com/about/hall/ 、https://www.ayase-bunka.com/about/hall_small/ 、https://www.ayase-bunka.com/about/rehearsal/ 、https://www.ayase-bunka.com/about/stage/ 。公式に個別名・面積・定員又は現行の貸館区画として明示されたホール、展示・リハーサル・練習・会議・多目的・和室、楽屋、屋外ステージ、付帯区画だけを構造化した。
+- Availability and ceiling safety: 新たなフィルタ可能天井高は追加していない。金太郎みらいホールの可動プロセニアムと迫り、綾瀬市オーエンス文化会館の舞台高さ・可変舞台高は最低天井高に転用していない。金太郎みらいホールの応接室・多目的室・楽屋・主催者控室と、綾瀬の楽屋はホール利用に付随する現行条件があるため `needs_check` とした。未公表の天井高、床荷重、搬入、料金適用、営利・入場料条件、空き状況は要確認。
+- Price observations: none added. 新規3施設の料金は時間帯、平日休日、入場料、営利非営利、市内外、設備又は利用条件で変動するため、曖昧な日額に正規化していない。
+- Local verification: npm --prefix web run data:generate、npm run audit、npm run depth-report:write、git diff --check、npm run validate passed. The only audit warning is the pre-existing historical-events.csv:173 row. Tracked web/dist was rebuilt for the archive and restored after final public verification.
+- Changed source files: data/candidate-venues.csv、data/venue-details.csv、generated data/prefecture-expansion-status.csv、and generated web/app/generated-data.ts; this checkpoint updates STATE.md and REPORT.md.
+- Deployment and public verification: source commit 7f9074c9d638082ce831fe0d96338e76dca33d1d was pushed to the user-authorized Sites source repository with 44341046183ee6aee87d538548d138a6c4815c79 as its force-with-lease guard. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_727a620014c88191823a85be53c037e0 and deployment appgdep_6a7785aea6a08191b7cb8454c7fb1354 succeeded. Both https://venue-monosashi.juggler-arata.chatgpt.site and https://venue.art-monosashi.com returned HTTP 200; each page's deployed venue-search client asset contained the 綾瀬市オーエンス文化会館 marker. Next eligible wave: 大阪府 for its 3-municipality gap.
 
 ## Wave 153 Local Checkpoint
 

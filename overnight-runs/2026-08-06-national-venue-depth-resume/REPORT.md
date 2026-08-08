@@ -2,9 +2,16 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 153 Hokkaido is validated and publicly deployed. The next lowest-depth prefecture is Kanagawa at 22 candidates; Osaka has a remaining municipality-depth gap.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 154 Kanagawa is validated and publicly deployed. Osaka is the only remaining prefecture below the reference depth, with a municipality-depth gap.
 
 ## Latest Wave
+
+- Wave 154 — Kanagawa: added 愛川町文化会館、南足柄市文化会館（金太郎みらいホール）、綾瀬市オーエンス文化会館 and 38 named searchable spaces. 神奈川県 is now 25 candidates, 18 municipalities, and 216 spaces; national totals are 1,175 candidates, 7,705 spaces, and 2,881 price observations. Candidate and space deficits are zero; 46 of 47 prefectures meet the reference depth, and 大阪府 alone remains 3 municipalities short.
+- Official source status: current official town, municipality, and designated-operator material only. Source-explicit halls, exhibition, rehearsal, practice, meeting, multipurpose, Japanese, dressing, organizer, reception, and outdoor-stage spaces were retained. 金太郎みらいホールの応接室・多目的室等と綾瀬の楽屋はホール利用に付随する条件があるため `needs_check` に保ち、推測した区画は追加していない。
+- Availability and ceiling safety: no new filterable ceiling value was added. 金太郎みらいホールの可動プロセニアムと迫り、綾瀬の舞台高・可変舞台高は最低天井高に転用していない。All other unpublished ceilings, floor loads, loading, fee applicability, and availability remain `要確認`.
+- Price observations: none added. Current fees vary by time band, weekday/holiday, admission, commercial/noncommercial status, municipal eligibility, equipment, and use condition, so no ambiguous amount was normalized into the daily-budget filter.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing historical-events.csv:173 row.
+- Public deployment passed: source commit 7f9074c9d638082ce831fe0d96338e76dca33d1d was pushed to the authorized Sites repository with 44341046183ee6aee87d538548d138a6c4815c79 as the force-with-lease guard. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_727a620014c88191823a85be53c037e0 (deployment appgdep_6a7785aea6a08191b7cb8454c7fb1354) succeeded. Both public URLs returned HTTP 200 and their deployed search asset contained the 綾瀬市オーエンス文化会館 marker; tracked web/dist was restored. Next wave: 大阪府 for its 3-municipality gap.
 
 - Wave 153 — Hokkaido: added 北斗市総合文化センター・かなで～る、深川市文化交流ホール「み・らい」、士別市民文化センター and 43 named searchable spaces. 北海道 is now 25 candidates, 19 municipalities, and 168 spaces; national totals are 1,172 candidates, 7,667 spaces, and 2,881 price observations. Remaining candidate and space deficits are 3 and 0; 45 of 47 prefectures meet the reference depth. 神奈川県 has a 3-candidate gap and 大阪府 has a 3-municipality gap.
 - Official source status: current municipal pages and a municipal education outline only. The additions retain source-explicit halls, dressing/green rooms, rehearsal, property storage, meeting/Japanese/music/cooking/exhibition rooms, workshop, gallery, and support spaces. 北斗市の未開放資料室など、公式に貸館開放していない区画は追加していない。
