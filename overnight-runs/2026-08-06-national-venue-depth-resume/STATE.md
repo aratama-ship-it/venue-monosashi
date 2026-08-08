@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 88 — Oita official-source expansion completed and deployed; select the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 89 — Miyazaki official-source expansion validated locally; source commit and public deployment pending.
 
 ## Baseline
 
@@ -193,6 +193,12 @@
 - Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
 
 ## Next Action
+
+- Wave 89 source data: added four official-source-backed Miyazaki facilities — 高原町民体育館・分館（高原町）、都農町民体育館（都農町）、国富町総合文化会館（国富町）、高千穂町中央体育館（高千穂町） — and 12 independently searchable spaces. 宮崎県 is now 19 candidates, 18 municipalities, and 90 spaces; national totals are 836 candidates and 4,036 spaces. Remaining candidate and space deficits are 339 and 34.
+- Official sources: 高原町、都農町、国富町、高千穂町の現行公式施設案内・規則を使用。Only source-explicit facility names, room/use-category names, and the 24畳 note were structured. No ceiling height or price observation was inferred; the 24畳表記、競技場の全館・半面、舞台は検索数値や重複した独立区画に転用していない。All unreported conditions remain `要確認`.
+- Wave 89 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing `historical-events.csv:173` warning. Tracked `web/dist` output must be restored before commit/deployment.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Next deployment action: restore tracked `web/dist`, commit the named Wave 89 files, push the authorized Sites source repository, deploy, and verify both public URLs with a newly added Miyazaki facility.
 
 - Wave 88 source data: added four official-source-backed Oita facilities — くすまちメルサンホール（玖珠町）、九重文化センター（九重町）、日出町中央公民館（日出町）、挾間公民館（はさま未来館・DENKENホール）（由布市） — and 40 independently searchable spaces. 大分県 is now 19 candidates, 17 municipalities, and 120 spaces; national totals are 832 candidates and 4,024 spaces. Remaining candidate and space deficits are 343 and 34.
 - Official sources: 玖珠町、九重町、日出町、由布市の現行公式施設案内を使用。Only source-explicit room names, capacity, and floor-area values were structured. No ceiling height or price observation was inferred; proscenium/stage heights were not converted into ceiling values, and tatami counts, court counts, and cooking-table counts were not converted into floor area or capacity. All unreported conditions remain `要確認`.

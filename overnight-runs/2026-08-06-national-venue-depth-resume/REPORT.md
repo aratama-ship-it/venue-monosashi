@@ -427,6 +427,14 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Public deployment passed: source commit `afeb9be97f1bcfe30b7c178146d8ef09d62f15a2` was pushed to the authorized Sites repository; production version 133 deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E6%8C%BE%E9%96%93%E5%85%AC%E6%B0%91%E9%A4%A8&release=afeb9be` and `https://venue.art-monosashi.com/?q=%E6%8C%BE%E9%96%93%E5%85%AC%E6%B0%91%E9%A4%A8&release=afeb9be` returned the newly added 挾間公民館. Tracked `web/dist` output was restored.
 - Next intended wave: 宮崎県.
 
+## Wave 89 — Miyazaki official-source expansion
+
+- Added four candidates: 高原町民体育館・分館（高原町）、都農町民体育館（都農町）、国富町総合文化会館（国富町）、高千穂町中央体育館（高千穂町）。
+- Added 12 independently searchable spaces: 高原町の体育館・分館、都農町民体育館の体育室、国富町総合文化会館の展示・和室・会議・ギャラリー区画、高千穂町中央体育館の競技場・卓球場・会議室・サブコート。
+- Official sources: 高原町、都農町、国富町、高千穂町の現行公式施設案内・規則。公式に列挙された施設名・室名・使用区分だけを構造化し、24畳表記を面積・定員へ換算せず、競技場の全館・半面や舞台も重複する独立区画にしなかった。天井高・料金は推定していない。
+- Result: 宮崎県は19 candidates、18 municipalities、90 spaces。全国は836 candidates、4,036 spaces、remaining candidate gap 339、space gap 34。
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Public deployment is pending; tracked `web/dist` is to be restored before the source commit.
+
 ## Wave 83 — Saitama official-source expansion
 
 - Added four candidates: 新座市民会館（新座市）、戸田市文化会館（戸田市）、坂戸市文化会館「ふれあ」（坂戸市）、本庄市児玉文化会館（セルディ）（本庄市）。
