@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 90 — Aomori official-source expansion validated locally; source commit and public deployment pending.
+- Current wave: Wave 90 — Aomori official-source expansion completed and deployed; select the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -196,9 +196,10 @@
 
 - Wave 90 source data: added four official-source-backed Aomori facilities — 黒石市産業会館（黒石市）、平内町立体育館・浅所分館（平内町）、田子町中央公民館（田子町）、六戸町文化ホール（メイプルホール）（六戸町） — and 21 independently searchable spaces. 青森県 is now 20 candidates, 18 municipalities, and 111 spaces; national totals are 840 candidates and 4,057 spaces. Remaining candidate and space deficits are 335 and 34.
 - Official sources: 黒石市、平内町、田子町、六戸町の現行公式施設案内・条例を使用。Only source-explicit room names, use categories, and precise floor-area values were structured. No ceiling height or price observation was inferred; room capacities marked 「程度」 and the 六戸町文化ホールの506席内訳/500人上限の不一致は単一の検索定員へ転用していない。Court counts were not converted into floor area or capacity. All unreported conditions remain `要確認`.
-- Wave 90 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing `historical-events.csv:173` warning. Tracked `web/dist` output must be restored before commit/deployment.
+- Wave 90 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing `historical-events.csv:173` warning. Tracked `web/dist` output was restored after the deployment build.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Next deployment action: restore tracked `web/dist`, commit the named Wave 90 files, push the authorized Sites source repository, deploy, and verify both public URLs with a newly added Aomori facility.
+- Wave 90 deployment passed: source commit `e41a8ac8bae1db0b5f48d9fdd2d44a11f96ef07a` was pushed to the authorized Sites repository; production version 135 deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E5%85%AD%E6%88%B8%E7%94%BA%E6%96%87%E5%8C%96%E3%83%9B%E3%83%BC%E3%83%AB&release=e41a8ac` and `https://venue.art-monosashi.com/?q=%E5%85%AD%E6%88%B8%E7%94%BA%E6%96%87%E5%8C%96%E3%83%9B%E3%83%BC%E3%83%AB&release=e41a8ac` returned the newly added 六戸町文化ホール. Tracked `web/dist` output was restored.
+- Next lowest-depth wave after publication: 宮城県, 栃木県, 東京都, 富山県, 福井県, 愛知県, 滋賀県, 京都府, 兵庫県, 島根県 (all 16 candidates).
 
 - Wave 89 source data: added four official-source-backed Miyazaki facilities — 高原町民体育館・分館（高原町）、都農町民体育館（都農町）、国富町総合文化会館（国富町）、高千穂町中央体育館（高千穂町） — and 12 independently searchable spaces. 宮崎県 is now 19 candidates, 18 municipalities, and 90 spaces; national totals are 836 candidates and 4,036 spaces. Remaining candidate and space deficits are 339 and 34.
 - Official sources: 高原町、都農町、国富町、高千穂町の現行公式施設案内・規則を使用。Only source-explicit facility names, room/use-category names, and the 24畳 note were structured. No ceiling height or price observation was inferred; the 24畳表記、競技場の全館・半面、舞台は検索数値や重複した独立区画に転用していない。All unreported conditions remain `要確認`.

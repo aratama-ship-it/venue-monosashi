@@ -443,7 +443,9 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added 21 independently searchable spaces: 黒石市産業会館の展示・会議室、平内町の体育館・分館、田子町中央公民館のホール・和室・研修・調理・テラス・会議室、六戸町文化ホールのホール・視聴覚・和室・控室・楽屋・ロビー区画。
 - Official sources: 黒石市、平内町、田子町、六戸町の現行公式施設案内・条例。公式に明記された室名・使用区分・厳密な面積だけを構造化し、「程度」表記の収容人数、六戸町文化ホールの506席内訳と500人上限の不一致、競技面数を検索数値へ転用しなかった。天井高・料金は推定していない。
 - Result: 青森県は20 candidates、18 municipalities、111 spaces。全国は840 candidates、4,057 spaces、remaining candidate gap 335、space gap 34。
-- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Public deployment is pending; tracked `web/dist` is to be restored before the source commit.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after the deployment build.
+- Public deployment passed: source commit `e41a8ac8bae1db0b5f48d9fdd2d44a11f96ef07a` was pushed to the authorized Sites repository; production version 135 deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E5%85%AD%E6%88%B8%E7%94%BA%E6%96%87%E5%8C%96%E3%83%9B%E3%83%BC%E3%83%AB&release=e41a8ac` and `https://venue.art-monosashi.com/?q=%E5%85%AD%E6%88%B8%E7%94%BA%E6%96%87%E5%8C%96%E3%83%9B%E3%83%BC%E3%83%AB&release=e41a8ac` returned the newly added 六戸町文化ホール. Tracked `web/dist` output was restored.
+- Next intended wave: 宮城県 (lowest candidate depth group).
 
 ## Wave 83 — Saitama official-source expansion
 
