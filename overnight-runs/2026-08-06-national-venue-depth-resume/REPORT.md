@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 117 Saga is locally validated and ready for its authorized public deployment; the next bounded wave is 熊本県, at 18 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 117 Saga is publicly deployed and verified; the next bounded wave is 熊本県, at 18 candidates.
 
 ## Latest Wave
 
@@ -11,7 +11,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Price observations: none added. Published fees are time-band, admission-fee, commercial-use, cooling/heating, configuration, or room-condition dependent, so they are not generalized into a misleading day-price filter.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment: pending source commit and authorized Sites release. After it is live, verify both public URLs with a new Saga marker before starting the next source wave.
+- Public deployment passed: source commit `cfe5d24498275f5532caa78a70bd3d93486ae7a6` was pushed to the authorized Sites repository with the confirmed prior release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_e08061b69c0c81918e2dbc95f5db2fa1` (deployment `appgdep_6a770346e1c081918955b1fd2a36265e`) deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E7%99%BD%E7%9F%B3%E7%94%BA%E7%B7%8F%E5%90%88%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=cfe5d24` and `https://venue.art-monosashi.com/?q=%E7%99%BD%E7%9F%B3%E7%94%BA%E7%B7%8F%E5%90%88%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=cfe5d24` returned the newly added 白石町総合センター. Tracked `web/dist` was restored after the deployment build.
 - Next wave: 熊本県, the lowest candidate-depth prefecture (18 candidates) in the regenerated report.
 
 - Wave 116 — Kochi: added 香美市立中央公民館、本山町プラチナセンター、仁淀川町交流センター、黒潮町総合センター、大月町立中央公民館（図書館）、奈半利町町民会館、大豊町総合ふれあいセンター and 40 named searchable spaces. 高知県 is now 25 candidates, 18 municipalities, and 142 spaces; national totals are 972 candidates, 5,351 spaces, and 2,870 price observations. Remaining candidate and space deficits are 203 and 0.
