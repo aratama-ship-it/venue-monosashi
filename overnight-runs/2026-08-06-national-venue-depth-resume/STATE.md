@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 108 — Ehime official-source expansion completed and deployed; select 北海道 from the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 109 — Hokkaido official-source expansion validated; public deployment is next.
 
 ## Baseline
 
@@ -84,6 +84,16 @@
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
 - Deployment: source commit `51e23635b5a7f3eff0e59c1a561741e589e2354a` was pushed to the authorized Sites source repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_31bbf3aa2f84819192065876047b8d67` (deployment `appgdep_6a76ea649678819184153e141761caf7`) deployed successfully. Both public URLs returned HTTP 200 for `?release=51e2363`, and each public page contained the new `松前総合文化センター` marker. Tracked `web/dist` was restored after the deployment build.
 - Next action: select 北海道, tied at the lowest candidate depth (18 candidates), for the next bounded official-source wave.
+
+## Wave 109 Checkpoint
+
+- Hokkaido: added four candidates — 稚内総合文化センター（稚内市）、網走市民会館（網走市）、江別市民会館（江別市）、滝川市民交流プラザ（滝川市） — and 50 named, independently searchable spaces. 北海道 is now 22 candidates, 16 municipalities, and 125 spaces. National totals are 926 candidates, 4,999 spaces, and 2,862 price observations; remaining candidate and space deficits are 249 and 0.
+- Official source status: current public-use or operator pages from 稚内市、網走市、江別市・江別市民会館指定管理者、滝川市. Only source-explicit room names, floor areas, capacity values, and facility-use facts were structured. 稚内・江別・滝川の舞台又は開口高さは最低天井高に転用していない。江別市仕様書の曖昧な「24,15」表記は面積を空欄にし、要確認として残した。
+- Price observations: added five current, full-day basic fees for 稚内総合文化センターの大ホール・小ホール・リハーサル室. 土日祝、営利・入場料、冷暖房、備付物件などの分岐は明示的な除外条件として保持した。
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending. The validated source must be committed, sent to the user-authorized Sites source repository, deployed, and verified on both existing public URLs before selecting the next wave.
+- Next action: deploy this validated Hokkaido wave, then select 神奈川県 from the lowest candidate-depth group (18 candidates).
 
 ## Completed Waves
 

@@ -2,17 +2,17 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 108 Ehime is deployed and publicly verified; the next bounded wave will select 北海道, tied at 18 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 109 Hokkaido is locally validated; its public deployment and two-URL verification are next.
 
 ## Latest Wave
 
-- Wave 108 — Ehime: added 砥部町文化会館、松前総合文化センター、久万高原町産業文化会館、愛南町御荘文化センター and 45 named searchable spaces. 愛媛県 is now 21 candidates, 16 municipalities, and 130 spaces; national totals are 922 candidates, 4,949 spaces, and 2,857 price observations. Remaining candidate and space deficits are 253 and 0.
-- Official source status: current public-use and cultural-facility pages from 砥部町、松前総合文化センター公式運営者、久万高原町、愛南町. The structured facts are source-explicit names, areas, capacities, fixed-seat statements, and current use conditions only. The 289㎡ stage observation at 久万高原町 is recorded as a stage area, never as ceiling data; other unreported ceilings remain `要確認`.
-- Price observations: 15 current full-day weekday base fees were added: 11 for 松前総合文化センター and 4 for 久万高原町産業文化会館. Weekend, cooling, commercial-use, admission, out-of-town, equipment, and extension rules remain explicit exclusions/notes.
+- Wave 109 — Hokkaido: added 稚内総合文化センター、網走市民会館、江別市民会館、滝川市民交流プラザ and 50 named searchable spaces. 北海道 is now 22 candidates, 16 municipalities, and 125 spaces; national totals are 926 candidates, 4,999 spaces, and 2,862 price observations. Remaining candidate and space deficits are 249 and 0.
+- Official source status: current public-use and operator pages from 稚内市、網走市、江別市・江別市民会館指定管理者、滝川市. Only source-explicit room names, capacities, and floor areas were structured. Stage opening and stage-height information was not converted into a searchable ceiling value. The ambiguous 江別市仕様書 value「24,15」remains blank and `要確認` rather than being inferred.
+- Price observations: five current full-day basic fees were added for 稚内総合文化センターの大ホール・小ホール・リハーサル室. Weekend, commercial/admission, cooling, and equipment conditions remain explicit exclusions/notes.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment passed: source commit `51e23635b5a7f3eff0e59c1a561741e589e2354a` was pushed to the authorized Sites source repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_31bbf3aa2f84819192065876047b8d67` (deployment `appgdep_6a76ea649678819184153e141761caf7`) deployed successfully. Both public URLs returned HTTP 200 for `?release=51e2363`, and each public page contained the newly added `松前総合文化センター` marker. Tracked `web/dist` was restored after the deployment build.
-- Next wave: 北海道 is tied at the lowest candidate depth (18 candidates) in the regenerated report.
+- Public deployment: pending. The validated source will be sent to the authorized Sites source repository, deployed, then checked on both existing public URLs before the next wave.
+- Next wave after deployment: 神奈川県, tied at the lowest candidate depth (18 candidates) in the regenerated report.
 
 - Wave 105 — Niigata: added 柏崎市文化会館アルフォーレ、南魚沼市民会館、魚沼市響きの森文化会館、村上市民ふれあいセンター、妙高市文化ホール、新潟県民会館、新潟市江南区文化会館、新潟市秋葉区文化会館 and 94 named searchable spaces. 新潟県 is now 25 candidates, 19 municipalities, and 158 spaces; national totals are 906 candidates, 4,746 spaces, and 2,842 price observations. Remaining candidate and space deficits are 269 and 8.
 - Official source status: current facility pages from 柏崎市、南魚沼市、魚沼市、村上市、妙高市、新潟県民会館、新潟市 and the corresponding official operators. Only source-explicit room names, seat counts, and floor areas were structured. Stage, proscenium, building, and drawing dimensions were never converted into ceiling values.
