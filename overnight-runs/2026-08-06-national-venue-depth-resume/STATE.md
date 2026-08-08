@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 122 — Fukushima official-source expansion deployed and publicly verified; Wave 123 Ibaraki selection is next.
+- Current wave: Wave 123 — Ibaraki official-source expansion locally validated; source commit and public deployment are next.
 
 ## Baseline
 
@@ -14,6 +14,16 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 123 Local Checkpoint
+
+- Ibaraki: added six candidates — ザ・ヒロサワ・シティ会館（茨城県立県民文化センター）（水戸市）、ノバホール（つくば市）、筑西市立生涯学習センター（ペアーノ）（筑西市）、常陸太田市民交流センター・パルティホール（常陸太田市）、つくば市ふれあいプラザ（つくば市）、牛久市中央生涯学習センター・文化ホール（牛久市） — and 82 named, independently searchable spaces. 茨城県 is now 25 candidates, 20 municipalities, and 188 spaces. National totals are 1,016 candidates, 5,748 spaces, and 2,870 price observations; remaining candidate and space deficits are 159 and 0.
+- Official source status: current official foundation, municipality, and designated-operator facility pages from ザ・ヒロサワ・シティ会館、公益財団法人つくば文化振興財団、筑西市、常陸太田市民交流センター、つくば市ふれあいプラザ、牛久市. Only explicitly published room names, areas, capacities, equipment, and use conditions were structured. Stage, proscenium, grid, opening, and building measurements were not converted into searchable ceiling data. Unpublished ceilings, floor loads, loading, streaming, and current availability remain `要確認`.
+- Price observations: none added. Although some facilities publish daily or hourly fees, their usage-purpose, admission, weekday/holiday, commercial, city-residency, equipment, or time-unit conditions differ, so this bounded candidate-depth wave does not normalize them into the general budget filter.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending the source commit. The user has explicitly authorized the validated source push and public deployment after each wave; the next step is the guarded Sites source push, deploy, and both-public-URL verification.
+- Next action after deployment: select 群馬県, tied with 埼玉県、千葉県、石川県、山梨県、静岡県、奈良県、鳥取県、山口県、徳島県 at 19 candidates, for the next bounded official-source wave.
 
 ## Wave 122 Checkpoint
 

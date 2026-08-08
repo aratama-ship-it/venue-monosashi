@@ -2,9 +2,17 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 122 Fukushima is publicly deployed and verified; the next bounded wave is 茨城県, at 19 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 123 Ibaraki is locally validated; its guarded source push and public deployment are next.
 
 ## Latest Wave
+
+- Wave 123 — Ibaraki: added ザ・ヒロサワ・シティ会館（茨城県立県民文化センター）、ノバホール、筑西市立生涯学習センター（ペアーノ）、常陸太田市民交流センター・パルティホール、つくば市ふれあいプラザ、牛久市中央生涯学習センター・文化ホール and 82 named searchable spaces. 茨城県 is now 25 candidates, 20 municipalities, and 188 spaces; national totals are 1,016 candidates, 5,748 spaces, and 2,870 price observations. Remaining candidate and space deficits are 159 and 0.
+- Official source status: current official foundation, municipal, and designated-operator pages from ザ・ヒロサワ・シティ会館、公益財団法人つくば文化振興財団、筑西市、常陸太田市民交流センター、つくば市ふれあいプラザ、牛久市. Only source-explicit room names, areas, capacities, equipment, and conditions were structured. Stage/proscenium/grid/opening/building measurements were not converted into ceiling height; all unpublished ceilings and operational conditions remain `要確認`.
+- Price observations: none added. Fee schemes vary by time unit, purpose, admission, weekday/holiday, commercial use, residency, or equipment, so they are not generalized into a misleading day-price filter.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Public deployment is pending the source commit. The user has authorized the guarded push, Sites deployment, and both-public-URL verification for this validated wave.
+- Next wave after deployment: 群馬県, tied with 埼玉県、千葉県、石川県、山梨県、静岡県、奈良県、鳥取県、山口県、徳島県 at 19 candidates in the regenerated report.
 
 - Wave 122 — Fukushima: added とうほう・みんなの文化センター（福島県文化センター）、福島県農業総合センター、コミュタン福島（福島県環境創造センター交流棟）、コラッセふくしま、吾妻学習センター、福島空港公園 21世紀建設館 and 44 named searchable spaces. 福島県 is now 25 candidates, 16 municipalities, and 158 spaces; national totals are 1,010 candidates, 5,666 spaces, and 2,870 price observations. Remaining candidate and space deficits are 165 and 0.
 - Official source status: official foundation, prefectural, municipal, and facility pages from 福島県文化振興財団、福島県農業総合センター、福島県環境創造センター、福島県産業振興センター、福島市、福島空港公園. The 21世紀建設館 facility overview is older (2019), but the current 2025 prefectural fee guide still lists the rentable room; its capacity and availability remain `要確認`. Only source-explicit areas, capacities, room names, equipment, and conditions were structured. Stage/proscenium/building measurements were not converted into ceiling height.
