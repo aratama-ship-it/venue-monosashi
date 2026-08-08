@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 84 — Chiba official-source expansion locally validated; public deployment is next.
+- Current wave: Wave 84 — Chiba official-source expansion completed and deployed; select the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -197,8 +197,9 @@
 - Wave 84 source data: added four official-source-backed Chiba facilities — 野田市生涯学習センター（欅のホール）（野田市）、木更津市中央地域交流センター（木更津市）、館山市コミュニティセンター（中央公民館）（館山市）、鴨川市文化体育館（鴨川市） — and 29 independently searchable spaces. 千葉県 is now 19 candidates, 18 municipalities, and 97 spaces; national totals are 816 candidates and 3,905 spaces. Remaining candidate and space deficits are 359 and 34.
 - Official sources: 野田市、木更津市、館山市、鴨川市の公式施設案内・公式管理資料を使用。Only source-explicit capacities and floor areas were structured. No ceiling height or price observation was inferred; building, stage, or grouped-room figures were not converted into unsupported per-room measurements, and all unreported conditions remain `要確認`.
 - Wave 84 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing `historical-events.csv:173` warning. Tracked `web/dist` output was restored.
-- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Public deployment is pending.
-- Next lowest-depth wave after deployment: 石川県.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Wave 84 deployment passed: source commit `e457144a8a0473885e8536edbb4c90416f4afe6d` was pushed to the authorized Sites repository; production version 129 deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E6%9C%A8%E6%9B%B4%E6%B4%A5%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%9C%B0%E5%9F%9F%E4%BA%A4%E6%B5%81%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=e457144` and `https://venue.art-monosashi.com/?q=%E6%9C%A8%E6%9B%B4%E6%B4%A5%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%9C%B0%E5%9F%9F%E4%BA%A4%E6%B5%81%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=e457144` returned the newly added 木更津市中央地域交流センター. Tracked `web/dist` output was restored.
+- Next lowest-depth wave: 石川県.
 
 - Wave 83 source data: added four official-source-backed Saitama facilities — 新座市民会館（新座市）、戸田市文化会館（戸田市）、坂戸市文化会館「ふれあ」（坂戸市）、本庄市児玉文化会館（セルディ）（本庄市） — and 44 independently searchable spaces. 埼玉県 is now 19 candidates, 17 municipalities, and 123 spaces; national totals are 812 candidates and 3,876 spaces. Remaining candidate and space deficits are 363 and 34.
 - Official sources: 新座市、戸田市、坂戸市、本庄市の公式施設案内・公開資料を使用。Only source-explicit capacities and floor areas were structured. No ceiling height or price observation was inferred; stage dimensions and all unreported conditions remain `要確認`.
