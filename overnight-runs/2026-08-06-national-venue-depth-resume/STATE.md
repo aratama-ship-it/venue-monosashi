@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 123 — Ibaraki official-source expansion locally validated; source commit and public deployment are next.
+- Current wave: Wave 123 — Ibaraki official-source expansion deployed and publicly verified; next is a bounded official-source wave for Gunma.
 
 ## Baseline
 
@@ -22,8 +22,8 @@
 - Price observations: none added. Although some facilities publish daily or hourly fees, their usage-purpose, admission, weekday/holiday, commercial, city-residency, equipment, or time-unit conditions differ, so this bounded candidate-depth wave does not normalize them into the general budget filter.
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending the source commit. The user has explicitly authorized the validated source push and public deployment after each wave; the next step is the guarded Sites source push, deploy, and both-public-URL verification.
-- Next action after deployment: select 群馬県, tied with 埼玉県、千葉県、石川県、山梨県、静岡県、奈良県、鳥取県、山口県、徳島県 at 19 candidates, for the next bounded official-source wave.
+- Deployment: source commit `1b87dc1cf9ffb60312a09a3c9a7ed450734c25fd` was pushed to the user-authorized Sites source repository with the confirmed Fukushima release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_095b57fada0081919393741bbdbeea4d` (deployment `appgdep_6a7715b1d9dc8191acc6b2ee11ba47b4`) deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E3%82%B6%E3%83%BB%E3%83%92%E3%83%AD%E3%82%B5%E3%83%AF%E3%83%BB%E3%82%B7%E3%83%86%E3%82%A3%E4%BC%9A%E9%A4%A8&release=1b87dc1` and `https://venue.art-monosashi.com/?q=%E3%82%B6%E3%83%BB%E3%83%92%E3%83%AD%E3%82%B5%E3%83%AF%E3%83%BB%E3%82%B7%E3%83%86%E3%82%A3%E4%BC%9A%E9%A4%A8&release=1b87dc1` returned HTTP 200 and contained the newly added ザ・ヒロサワ・シティ会館 marker. Tracked `web/dist` was restored after the deployment build.
+- Next action: select 群馬県, tied with 埼玉県、千葉県、石川県、山梨県、静岡県、奈良県、鳥取県、山口県、徳島県 at 19 candidates, for the next bounded official-source wave.
 
 ## Wave 122 Checkpoint
 

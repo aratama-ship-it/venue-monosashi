@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 123 Ibaraki is locally validated; its guarded source push and public deployment are next.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 123 Ibaraki is deployed and publicly verified; the next bounded wave is Gunma.
 
 ## Latest Wave
 
@@ -11,8 +11,8 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Price observations: none added. Fee schemes vary by time unit, purpose, admission, weekday/holiday, commercial use, residency, or equipment, so they are not generalized into a misleading day-price filter.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment is pending the source commit. The user has authorized the guarded push, Sites deployment, and both-public-URL verification for this validated wave.
-- Next wave after deployment: 群馬県, tied with 埼玉県、千葉県、石川県、山梨県、静岡県、奈良県、鳥取県、山口県、徳島県 at 19 candidates in the regenerated report.
+- Public deployment passed: source commit `1b87dc1cf9ffb60312a09a3c9a7ed450734c25fd` was pushed to the authorized Sites repository with the confirmed Fukushima release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_095b57fada0081919393741bbdbeea4d` (deployment `appgdep_6a7715b1d9dc8191acc6b2ee11ba47b4`) deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E3%82%B6%E3%83%BB%E3%83%92%E3%83%AD%E3%82%B5%E3%83%AF%E3%83%BB%E3%82%B7%E3%83%86%E3%82%A3%E4%BC%9A%E9%A4%A8&release=1b87dc1` and `https://venue.art-monosashi.com/?q=%E3%82%B6%E3%83%BB%E3%83%92%E3%83%AD%E3%82%B5%E3%83%AF%E3%83%BB%E3%82%B7%E3%83%86%E3%82%A3%E4%BC%9A%E9%A4%A8&release=1b87dc1` returned HTTP 200 and contained the newly added ザ・ヒロサワ・シティ会館 marker. Tracked `web/dist` was restored after the deployment build.
+- Next wave: 群馬県, tied with 埼玉県、千葉県、石川県、山梨県、静岡県、奈良県、鳥取県、山口県、徳島県 at 19 candidates in the regenerated report.
 
 - Wave 122 — Fukushima: added とうほう・みんなの文化センター（福島県文化センター）、福島県農業総合センター、コミュタン福島（福島県環境創造センター交流棟）、コラッセふくしま、吾妻学習センター、福島空港公園 21世紀建設館 and 44 named searchable spaces. 福島県 is now 25 candidates, 16 municipalities, and 158 spaces; national totals are 1,010 candidates, 5,666 spaces, and 2,870 price observations. Remaining candidate and space deficits are 165 and 0.
 - Official source status: official foundation, prefectural, municipal, and facility pages from 福島県文化振興財団、福島県農業総合センター、福島県環境創造センター、福島県産業振興センター、福島市、福島空港公園. The 21世紀建設館 facility overview is older (2019), but the current 2025 prefectural fee guide still lists the rentable room; its capacity and availability remain `要確認`. Only source-explicit areas, capacities, room names, equipment, and conditions were structured. Stage/proscenium/building measurements were not converted into ceiling height.
