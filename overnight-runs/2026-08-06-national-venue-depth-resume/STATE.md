@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 93 — Tokyo official-source expansion is locally validated; publish the validated source, then select the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 93 — Tokyo official-source expansion completed and deployed; select the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -198,7 +198,8 @@
 - Official sources: 練馬区立練馬文化センター公式、北区、葛飾区と現行利用料金PDF、杉並公会堂公式を使用。Only source-explicit room names, capacities, floor-area values, and explicitly labelled ceiling heights were structured. 練馬文化センターギャラリー2.8mと杉並公会堂小ホール6mのみを検索可能な天井高として記録し、舞台・プロセニアムの寸法や高さは天井値に転用していない。All unreported conditions remain `要確認`.
 - Wave 93 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing `historical-events.csv:173` warning. Tracked `web/dist` output was restored after the validation build.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Next action: commit Wave 93, push the explicitly authorized source to the existing Sites repository, deploy it, and verify both public URLs. Then select 富山県, 福井県, 愛知県, 滋賀県, 京都府, 兵庫県, 島根県, 香川県, 福岡県, or 長崎県 (all 16 candidates) as the next bounded lowest-depth wave.
+- Wave 93 deployment passed: source commit `b2d0801551c086e8bacc8310b1ec2d739b4b086e` was pushed to the authorized Sites repository; Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_c4db27f70aec81919c57fae97c1e48b3` deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E7%B7%B4%E9%A6%AC%E6%96%87%E5%8C%96%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=b2d0801` and `https://venue.art-monosashi.com/?q=%E7%B7%B4%E9%A6%AC%E6%96%87%E5%8C%96%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=b2d0801` returned HTTP 200. Tracked `web/dist` output was restored.
+- Next lowest-depth wave after publication: 富山県, 福井県, 愛知県, 滋賀県, 京都府, 兵庫県, 島根県, 香川県, 福岡県, or 長崎県 (all 16 candidates).
 
 - Wave 92 source data: added four official-source-backed Tochigi facilities — 那須町文化センター（那須公民館）（那須町）、日光市中央公民館（日光市）、日東工業エニスホール（野木町文化会館）（野木町）、上三川町ORIGAMIプラザ（上三川町） — and 40 independently searchable spaces. 栃木県 is now 20 candidates, 18 municipalities, and 104 spaces; national totals are 848 candidates and 4,124 spaces. Remaining candidate and space deficits are 327 and 34.
 - Official sources: 那須町、日光市、野木町・公式運営者、上三川町の現行施設案内・予約案内を使用。Only source-explicit room names, capacities, and floor-area values were structured. No ceiling height or price observation was inferred; all stage dimensions/heights remain explanatory notes, not ceiling values. 今市文化会館は公式に予約停止中のため候補へ追加せず、現行利用可能な日光市中央公民館を採用した。All unreported conditions remain `要確認`.

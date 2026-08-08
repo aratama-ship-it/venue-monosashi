@@ -570,7 +570,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Official source status: 練馬区立練馬文化センター公式、北区、葛飾区と現行利用料金PDF、杉並公会堂公式を使用。Only source-explicit room names, capacities, floor-area values, and explicitly labelled ceiling heights were recorded. The 2.8m Nerima gallery and 6m Suginami small hall ceilings are explicit official values; no stage, proscenium, or building dimension was converted into ceiling data. All unreported conditions remain `要確認`.
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment pending: commit and push the validated Wave 93 source, deploy it through Sites, and verify both public URLs before choosing the next 16-candidate prefectural wave.
+- Deployment passed: source commit `b2d0801551c086e8bacc8310b1ec2d739b4b086e` was pushed to the authorized Sites repository; Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_c4db27f70aec81919c57fae97c1e48b3` deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E7%B7%B4%E9%A6%AC%E6%96%87%E5%8C%96%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=b2d0801` and `https://venue.art-monosashi.com/?q=%E7%B7%B4%E9%A6%AC%E6%96%87%E5%8C%96%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=b2d0801` returned HTTP 200. Tracked `web/dist` output was restored.
 
 # Wave 92 — Tochigi official-source expansion
 
