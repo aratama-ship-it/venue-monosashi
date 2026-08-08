@@ -26,7 +26,7 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 滋賀県,近畿,25,16,108,51,38,1,0,0,0,reference_depth
 京都府,近畿,25,16,144,90,60,2,0,0,0,reference_depth
 大阪府,近畿,25,12,182,77,49,18,0,3,0,expanding
-兵庫県,近畿,20,14,111,47,27,21,5,1,0,expanding
+兵庫県,近畿,25,19,157,71,45,21,0,0,0,reference_depth
 奈良県,近畿,25,19,208,111,82,6,0,0,0,reference_depth
 和歌山県,近畿,25,20,99,35,37,0,0,0,0,reference_depth
 鳥取県,中国,25,18,160,79,71,2,0,0,0,reference_depth
