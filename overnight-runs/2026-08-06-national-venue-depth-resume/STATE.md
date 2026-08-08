@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 131 — Tottori official-source expansion validated; source commit and public deployment pending.
+- Current wave: Wave 131 — Tottori official-source expansion and public deployment verified; 山口県 is next.
 
 ## Baseline
 
@@ -22,7 +22,7 @@
 - Price observations: none added. Available fee information varies by room, time band, configuration, eligibility, admission, use purpose, equipment, or commercial condition, so no ambiguous amount was generalized into the day-price filter.
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending the validated source commit, Sites source push, public release, and two-URL verification. The next eligible lowest-depth prefecture after this wave is 山口県, tied with 徳島県、大分県、宮崎県 at 19 candidates.
+- Deployment: source commit `95717d7f990b989be19d9f8455ea3afb56c8e340` was pushed to the user-authorized Sites source repository with the confirmed Nara release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_e55c204479608191aaecff02362c8657` (deployment `appgdep_6a7731509ac881918784cb804b21957d`) deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E9%B3%A5%E5%8F%96%E5%B8%82%E6%96%87%E5%8C%96%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=95717d7` and `https://venue.art-monosashi.com/?q=%E9%B3%A5%E5%8F%96%E5%B8%82%E6%96%87%E5%8C%96%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=95717d7` returned HTTP 200 and contained the new 鳥取市文化センター marker. Tracked `web/dist` was restored after the deployment build. The next eligible lowest-depth prefecture is 山口県, tied with 徳島県、大分県、宮崎県 at 19 candidates.
 
 ## Wave 130 Local Checkpoint
 
