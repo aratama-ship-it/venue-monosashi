@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 95 Fukui is deployed and publicly reachable; the next bounded wave will be selected from the regenerated lowest-depth report.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 96 Aichi is validated locally and awaits public deployment; the next bounded wave will be selected from the regenerated lowest-depth report.
 
 ## Changes
 
@@ -174,6 +174,10 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - None while the run remains active.
 
 ## Latest Wave
+
+- Wave 96 source data: added four official-source-backed Aichi facilities — 豊明市文化会館、名古屋文理大学文化フォーラム（稲沢市民会館）、東海市芸術劇場、瀬戸市文化センター — and 36 searchable spaces, increasing the national total to 864 facilities and 4,309 spaces. Sources are the current official facility pages and official public-facility material of 豊明市、稲沢市、東海市、瀬戸市.
+- Structured only explicit room names, capacities, and floor areas. No ceiling value was inferred: the published hall-stage heights at 稲沢市民会館 remain notes only. Price observations were not added because the cited facility charge tables depend on time slot, date, admission fee, or user condition; all unreported conditions remain `要確認`.
+- Wave 96 local validation passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-record warning. Public deployment remains to be completed.
 
 - Wave 95 source data: added four official-source-backed Fukui facilities — 美浜町生涯学習センターなびあす、おおい町里山文化交流センター ぶらっと、あみーシャン大飯、大野市和泉地域交流センター — and 18 searchable spaces, increasing the national total to 860 facilities and 4,273 spaces. Sources are the current official facility pages of 美浜町、おおい町、大野市.
 - Structured only source-explicit room names and the 489 fixed seats of なびあすホール. Purpose-dependent capacity ranges, "6人ぐらい" use guidance, chair counts, court counts, and hourly prices were not converted into search values. No ceiling value was inferred; all unreported conditions remain `要確認`.
