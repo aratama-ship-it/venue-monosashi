@@ -2,9 +2,16 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 139 Tokyo has been validated and publicly deployed. The next lowest-depth group starts at 20 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 140 Toyama has been validated and publicly deployed. The next lowest-depth group starts at 20 candidates.
 
 ## Latest Wave
+
+- Wave 140 — Toyama: added 富山県民会館、富山国際会議場、富山市民プラザ、富山市民芸術創造センター、富山県教育文化会館 and 86 named searchable spaces. 富山県 is now 25 candidates, 15 municipalities, and 224 spaces; national totals are 1,113 candidates, 6,965 spaces, and 2,879 price observations. Remaining candidate and space deficits are 62 and 0; 32 of 47 prefectures meet the reference depth.
+- Official source status: current official operator, municipal, and prefectural material only. The additions retain source-explicit halls, exhibition and gallery spaces, rehearsal/practice rooms, 34 individually named practice rooms, conference/meeting rooms, dressing rooms, studios, atrium/event spaces, tea and Japanese-dance rooms, a creative workshop, and an atelier. 富山国際会議場多目的会議室の公式天井高さ3.5〜4.1mは下限3.5mを検索値に収録し、富山県民会館練習室の2.5mは最低有効高未確認の参照値に留めた。舞台・プロセニアム・建物寸法は天井高に転用していない。その他の未公表条件は要確認。
+- Price observations: none added. Current fee materials depend on time block, use, residence, discounts, equipment, HVAC, booking, and configuration, so no ambiguous amount was generalized into the daily-rate filter.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing historical-events.csv:173 row; tracked web/dist was restored after validation and deployment.
+- Changed files: data/candidate-venues.csv, data/venue-details.csv, generated data/prefecture-expansion-status.csv, generated web/app/generated-data.ts, and this run ledger.
+- Public deployment passed: source commit 0369fabe5e16b3c23b85b932759e298e32418ab2 was pushed to the authorized Sites repository with a force-with-lease guard. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_c241241605e88191a8ba5c73bdfe26b3 (deployment appgdep_6a77559870bc819183d320b857d5332f) succeeded. Both public URLs served the newly added 富山国際会議場 marker. Next wave: 福井県、愛知県、滋賀県、京都府、兵庫県、島根県、香川県、福岡県 at 20 candidates.
 
 - Wave 139 — Tokyo: added 文京シビックホール、なかのZERO、武蔵野市民文化会館、ルネこだいら（小平市民文化会館）、J:COMホール八王子（八王子市民会館） and 66 named searchable spaces. 東京都 is now 25 candidates, 16 municipalities, and 189 spaces; national totals are 1,108 candidates, 6,879 spaces, and 2,879 price observations. Remaining candidate and space deficits are 67 and 0; 31 of 47 prefectures meet the reference depth.
 - Official source status: current official city, municipal, and designated-operator material only. Source-explicit halls, exhibition/galleries, rehearsal/practice rooms, named dressing rooms, conference rooms, learning rooms, Japanese rooms, a tea room, and support rooms were structured. J:COMホール八王子リハーサル室の公式「天井高さ 約3.2m」は最小有効高が未確認の概算表記のため非フィルタ参照に留め、舞台・反射板・すのこ寸法は一切天井高に転用していない。その他の未公表条件は要確認。

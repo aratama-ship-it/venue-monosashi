@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-09 Asia/Tokyo
-- Current wave: Wave 139 — Tokyo official-source expansion and public deployment verified; 富山県・福井県・愛知県・滋賀県・京都府・兵庫県・島根県・香川県・福岡県 are next at the lowest candidate depth.
+- Current wave: Wave 140 — Toyama official-source expansion and public deployment verified; 福井県・愛知県・滋賀県・京都府・兵庫県・島根県・香川県・福岡県 are next at the lowest candidate depth.
 
 ## Baseline
 
@@ -14,6 +14,15 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 140 Local Checkpoint
+
+- Toyama: added five candidates — 富山県民会館、富山国際会議場、富山市民プラザ、富山市民芸術創造センター、富山県教育文化会館 — and 86 named independently searchable spaces. 富山県 is now 25 candidates, 15 municipalities, and 224 spaces. National totals are 1,113 candidates, 6,965 spaces, and 2,879 price observations; remaining candidate and space deficits are 62 and 0, and 32 of 47 prefectures meet the full reference depth.
+- Official source status: current official operator, municipal, and prefectural material only. Source-explicit halls, exhibition and gallery spaces, rehearsal/practice rooms, 34 individually named practice rooms, named large/medium practice rooms, meeting and conference rooms, dressing rooms, studios, atrium/event spaces, a tea room, Japanese-dance room, creative workshop, and atelier were structured. 富山国際会議場多目的会議室の公式「天井高さ3.5〜4.1m」は公表レンジの下限3.5mを最小検索値として収録した。富山県民会館練習室のW×D×H表記2.5mは最小有効高未確認の非フィルタ参照に留め、全ての舞台・プロセニアム・建物寸法は天井高に転用していない。未公表の床荷重、搬入、催事回線、料金適用、空き状況は要確認。
+- Price observations: none added. 現行の料金は時間帯、用途、居住地、減免、設備、空調、予約時期その他の条件で変動するため、確認済み日額として誤って正規化しなかった。
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation and after the deployment build.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, and generated `web/app/generated-data.ts`.
+- Deployment: source commit `0369fabe5e16b3c23b85b932759e298e32418ab2` was pushed to the user-authorized Sites source repository with the prior `b9df568f5ab2d308c4639e7f0d0aa98a081e1a14` remote head as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_c241241605e88191a8ba5c73bdfe26b3` and deployment `appgdep_6a77559870bc819183d320b857d5332f` succeeded. Both https://venue-monosashi.juggler-arata.chatgpt.site and https://venue.art-monosashi.com served the newly added 富山国際会議場 marker after deployment. The next eligible lowest-depth prefectures are 福井県、愛知県、滋賀県、京都府、兵庫県、島根県、香川県、福岡県 at 20 candidates.
 
 ## Wave 139 Local Checkpoint
 
