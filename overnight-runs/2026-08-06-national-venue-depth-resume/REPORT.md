@@ -434,6 +434,14 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
 - Public deployment passed: source commit `e7c2160ec7b53ac68c1ecae2b69683e5abe75e9e` was pushed to the authorized Sites repository; production version 126 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?q=%E4%BA%94%E5%9F%8E%E9%A4%A8&release=e7c2160` returned the newly added 五城館 after deployment. Tracked `web/dist` output was restored.
 
+## Wave 82 — Gunma official-source expansion
+
+- Added four candidates: 洋泉興業大泉町文化むら（大泉町）、コスメ・ニスト千代田町プラザ（千代田町）、板倉町中央公民館（板倉町）、吉岡町文化センター（吉岡町）。
+- Added 28 independently searchable spaces. 群馬県 is now 19 candidates, 17 municipalities, and 103 spaces; national totals are 808 candidates and 3,832 spaces. Remaining candidate and space deficits are 367 and 34.
+- Official source status: 大泉町、千代田町、板倉町、吉岡町の公式施設案内・公式使用料表・公共施設計画を使用。Only source-explicit capacities and floor areas were structured. No ceiling height or price observation was inferred. Stage or building dimensions were not converted into ceiling data, and all unreported conditions remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Public deployment is pending.
+
 ## Wave 77 — Tokushima official-source expansion
 
 - Added four candidates: 北島町立図書館・創世ホール（北島町）、海陽町海南文化館（阿波海南文化村）（海陽町）、三好市池田総合体育館（三好市）、東みよし町中央公民館（老人福祉センター）（東みよし町）。
