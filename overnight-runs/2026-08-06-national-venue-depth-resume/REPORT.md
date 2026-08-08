@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 114 Hiroshima is locally validated and ready for its authorized public deployment; the next bounded wave will be selected from the four prefectures tied at 18 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 114 Hiroshima is validated and publicly deployed; the next bounded wave will be selected from the four prefectures tied at 18 candidates.
 
 ## Latest Wave
 
@@ -12,7 +12,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Price observations: none added. The published prices are hourly, period-based, or vary with municipality/営利 conditions, so they are not generalized into a misleading day-price filter.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment: pending source commit and authorized Sites release. After it is live, verify both public URLs with a new Hiroshima marker before starting the next source wave.
+- Public deployment passed: source commit `141bf37c4f85b4e5f7c81bff143d8bb534c4cc16` was pushed to the authorized Sites source repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_db2f4f196624819190ce745e809a637c` (deployment `appgdep_6a76fc1d74e48191b51cbebe5ad75b83`) deployed successfully. Both public URLs returned the `?release=141bf37` page and contained the newly added `ジーベックホール` marker. Tracked `web/dist` was restored after the deployment build.
 - Next wave: one of 高知県、佐賀県、熊本県、鹿児島県, tied at the lowest candidate depth (18 candidates) in the regenerated report.
 
 - Wave 113 — Wakayama: added 日高川交流センター、上富田文化会館、串本町文化センター、那智勝浦町体育文化会館、天満公民館、高野町民体育館、みなべ町生涯学習センター and 41 named searchable spaces. 和歌山県 is now 25 candidates, 20 municipalities, and 99 spaces; national totals are 951 candidates, 5,223 spaces, and 2,870 price observations. Remaining candidate and space deficits are 224 and 0.

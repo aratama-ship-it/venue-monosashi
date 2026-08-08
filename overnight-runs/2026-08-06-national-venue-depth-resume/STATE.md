@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 114 — Hiroshima official-source expansion validated; source commit and public deployment pending.
+- Current wave: Wave 114 — Hiroshima official-source expansion completed and deployed; select one of 高知県・佐賀県・熊本県・鹿児島県 from the next bounded lowest-depth wave.
 
 ## Baseline
 
@@ -23,7 +23,7 @@
 - Price observations: none added. Available fees are hourly, period-based, or municipality/営利条件による変動を含むため、現行の一般化可能な日額フィルターには正規化しなかった。
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending. Commit the named source files, push the exact source commit to the user-authorized Sites source repository, deploy the generated site, and verify both public URLs before recording the deployment checkpoint.
+- Deployment: source commit `141bf37c4f85b4e5f7c81bff143d8bb534c4cc16` was pushed to the user-authorized Sites source repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_db2f4f196624819190ce745e809a637c` (deployment `appgdep_6a76fc1d74e48191b51cbebe5ad75b83`) deployed successfully. Both public URLs returned the `?release=141bf37` page and contained the newly added `ジーベックホール` marker. Tracked `web/dist` was restored after the deployment build.
 - Next action after deployment: select one of 高知県、佐賀県、熊本県、鹿児島県, tied at the current lowest candidate depth (18 candidates), for the next bounded official-source wave.
 
 ## Wave 113 Checkpoint
