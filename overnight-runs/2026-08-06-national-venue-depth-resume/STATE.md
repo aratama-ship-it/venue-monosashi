@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 83 — Saitama official-source expansion locally validated; public deployment is next.
+- Current wave: Wave 83 — Saitama official-source expansion completed and deployed; select the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -197,8 +197,9 @@
 - Wave 83 source data: added four official-source-backed Saitama facilities — 新座市民会館（新座市）、戸田市文化会館（戸田市）、坂戸市文化会館「ふれあ」（坂戸市）、本庄市児玉文化会館（セルディ）（本庄市） — and 44 independently searchable spaces. 埼玉県 is now 19 candidates, 17 municipalities, and 123 spaces; national totals are 812 candidates and 3,876 spaces. Remaining candidate and space deficits are 363 and 34.
 - Official sources: 新座市、戸田市、坂戸市、本庄市の公式施設案内・公開資料を使用。Only source-explicit capacities and floor areas were structured. No ceiling height or price observation was inferred; stage dimensions and all unreported conditions remain `要確認`.
 - Wave 83 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing `historical-events.csv:173` warning. Tracked `web/dist` output was restored.
-- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Public deployment is pending.
-- Next lowest-depth wave after deployment: 千葉県.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Wave 83 deployment passed: source commit `fb8d2c26db10a233df7c833d888a7686c00cfcd8` was pushed to the authorized Sites repository; production version 128 deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E5%9D%82%E6%88%B8%E5%B8%82%E6%96%87%E5%8C%96%E4%BC%9A%E9%A4%A8&release=fb8d2c2` and `https://venue.art-monosashi.com/?q=%E5%9D%82%E6%88%B8%E5%B8%82%E6%96%87%E5%8C%96%E4%BC%9A%E9%A4%A8&release=fb8d2c2` returned the newly added 坂戸市文化会館. Tracked `web/dist` output was restored.
+- Next lowest-depth wave: 千葉県.
 
 - Wave 82 source data: added four official-source-backed Gunma facilities — 洋泉興業大泉町文化むら（大泉町）、コスメ・ニスト千代田町プラザ（千代田町）、板倉町中央公民館（板倉町）、吉岡町文化センター（吉岡町） — and 28 independently searchable spaces. 群馬県 is now 19 candidates, 17 municipalities, and 103 spaces; national totals are 808 candidates and 3,832 spaces. Remaining candidate and space deficits are 367 and 34.
 - Official sources: 大泉町、千代田町、板倉町、吉岡町の公式施設案内・公式使用料表・公共施設計画を使用。Only source-explicit capacities and floor areas were structured. No ceiling height or price observation was inferred; all unreported conditions remain `要確認`.
