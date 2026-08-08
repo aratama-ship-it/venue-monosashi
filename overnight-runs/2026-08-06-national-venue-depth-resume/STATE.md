@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-09 Asia/Tokyo
-- Current wave: Wave 151 — Nagasaki official-source expansion and public deployment are verified. 沖縄県 is next at the lowest candidate depth.
+- Current wave: Wave 152 — Okinawa official-source expansion and public deployment are verified. 北海道・神奈川県 are next at the lowest candidate depth.
 
 ## Baseline
 
@@ -14,6 +14,16 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 152 Local Checkpoint
+
+- Okinawa: added four candidates — 那覇文化芸術劇場なはーと、豊見城市立中央公民館、ちゃたんニライセンター（カナイホール・ギャラリー北谷）、北中城村あやかりの杜 — and 36 named independently searchable spaces. 沖縄県 is now 25 candidates, 19 municipalities, and 150 spaces. National totals are 1,169 candidates, 7,624 spaces, and 2,881 price observations; remaining candidate and space deficits are 6 and 0, and 44 of 47 prefectures meet the full reference depth.
+- Official source status: current city, town, and village material only: https://www.city.naha.okinawa.jp/kankou-bunka/bunkasinkou/1007403/1003541.html 、https://www.city.tomigusuku.lg.jp/soshiki/8/1033/gyomuannai/8/1/319.html 、https://www.city.tomigusuku.lg.jp/material/files/group/30/6_syougaigakusyuR7.pdf 、https://www.chatan.jp/kosodate/plaza/kanaihole_gallery/riyou_annai/riyouannai.html 、https://www.ayakari.jp/message.html 、https://www.ayakari.jp/business2.html 。公式で個別名・面積・定員又は現在の利用区分として明示された劇場、スタジオ、練習・研修・会議・和室、調理・保育・交流・展示・屋外区画、楽屋・控室だけを構造化し、推測した区画は追加していない。
+- Availability and ceiling safety: 新たなフィルタ可能天井高は追加していない。豊見城市立中央公民館の大ホール舞台高さ8m、中ホール舞台寸法、なはーとの舞台間口は最低天井高に転用していない。あやかりの杜多目的ホールは通常約120名と現在50名要問合せが併記されるため検索定員に転用していない。豊見城市の大・中ホールは別行事の同時開催が原則不可で、北谷町のカナイホールは町主催行事が優先される。未公表の最低天井高、床荷重、搬入、吊り可否、料金適用、催事回線、空き状況は要確認。
+- Price observations: none added. 新規4施設の料金は時間帯、平日休日、入場料、営利非営利、市内外、設備・冷房、占用又は利用条件で変動するため、今回の候補深度拡張では曖昧な日額に正規化していない。
+- Local verification: npm --prefix web run data:generate、npm run audit、npm run depth-report:write、git diff --check、npm run validate passed. The only audit warning is the pre-existing historical-events.csv:173 row. Tracked web/dist was rebuilt for the archive and restored after final public verification.
+- Changed source files: data/candidate-venues.csv、data/venue-details.csv、generated data/prefecture-expansion-status.csv、and generated web/app/generated-data.ts; this checkpoint updates STATE.md and REPORT.md.
+- Deployment and public verification: source commit a4d63ca2c2f496adfd740a863b7114e8972686d6 was pushed to the user-authorized Sites source repository with 287efe69ba24256020473d87cf9aebbedccc30f7 as its force-with-lease guard. Fresh archive verification included the referenced SSR venue-search asset. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_d9244a87a7548191b7b9a0a95c4a852c and deployment appgdep_6a7781449b9c8191937e4ffa16df4710 succeeded. Both https://venue-monosashi.juggler-arata.chatgpt.site and https://venue.art-monosashi.com returned HTTP 200 and contained the 那覇文化芸術劇場なはーと search marker. Next eligible waves: 北海道 and 神奈川県 at 22 candidates.
 
 ## Wave 151 Local Checkpoint
 

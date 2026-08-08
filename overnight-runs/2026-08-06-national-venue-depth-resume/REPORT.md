@@ -2,9 +2,16 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 151 Nagasaki is validated and publicly deployed. The next lowest-depth prefecture is Okinawa at 21 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 152 Okinawa is validated and publicly deployed. The next lowest-depth prefectures are Hokkaido and Kanagawa at 22 candidates.
 
 ## Latest Wave
+
+- Wave 152 — Okinawa: added 那覇文化芸術劇場なはーと、豊見城市立中央公民館、ちゃたんニライセンター（カナイホール・ギャラリー北谷）、北中城村あやかりの杜 and 36 named searchable spaces. 沖縄県 is now 25 candidates, 19 municipalities, and 150 spaces; national totals are 1,169 candidates, 7,624 spaces, and 2,881 price observations. Remaining candidate and space deficits are 6 and 0; 44 of 47 prefectures meet the reference depth.
+- Official source status: current official municipality and facility materials only. The additions retain source-explicit theatres, studios, practice rooms, halls, meeting and training rooms, Japanese/cooking/support rooms, exchange and outdoor spaces, gallery, dressing/green rooms, and learning spaces. No inferred spaces were added.
+- Availability and ceiling safety: no new filterable ceiling value was added. The Toyomigusuku hall's 8m stage height, other stage dimensions, and the Naha theatre stage openings remain outside the ceiling filter. あやかりの杜's multi-purpose hall has both a normal approximate capacity and a current inquiry-only limit, so it is not given a search capacity. Availability restrictions, unknown ceilings, loading, floor loading, prices, and equipment remain 要確認.
+- Price observations: none added. Current fees vary by time band, weekday/holiday, commercial or noncommercial use, admission, residency, equipment, HVAC, and exclusive-use condition, so no ambiguous amount was normalized into the daily-budget filter.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing historical-events.csv:173 row.
+- Public deployment passed: source commit a4d63ca2c2f496adfd740a863b7114e8972686d6 was pushed to the authorized Sites repository with a force-with-lease guard from 287efe69ba24256020473d87cf9aebbedccc30f7. Fresh archive inspection confirmed the referenced SSR search asset. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_d9244a87a7548191b7b9a0a95c4a852c (deployment appgdep_6a7781449b9c8191937e4ffa16df4710) succeeded. Both public URLs returned HTTP 200 and contained the 那覇文化芸術劇場なはーと search marker; tracked web/dist was restored. Next waves: 北海道 and 神奈川県 at 22 candidates.
 
 - Wave 151 — Nagasaki: added 佐々町文化会館、長与町民文化ホール、対馬市公会堂（対馬市交流センター2階）、対馬市美津島文化会館 and 27 named searchable spaces. 長崎県 is now 25 candidates, 18 municipalities, and 140 spaces; national totals are 1,165 candidates, 7,588 spaces, and 2,881 price observations. Remaining candidate and space deficits are 10 and 0; 43 of 47 prefectures meet the reference depth.
 - Official source status: current municipal facility, application, and ordinance materials only. The additions retain source-explicit hall, stage, foyer, exhibition, gallery, conference, rehearsal, dressing, Japanese, lounge, kitchen/practice, and training spaces. No inferred spaces were added.
