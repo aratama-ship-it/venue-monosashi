@@ -2,9 +2,17 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 121 Yamagata is publicly deployed and verified; the next bounded wave is 福島県, at 19 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 122 Fukushima is locally validated and ready for its user-authorized public deployment; the next bounded wave after that is 茨城県, at 19 candidates.
 
 ## Latest Wave
+
+- Wave 122 — Fukushima: added とうほう・みんなの文化センター（福島県文化センター）、福島県農業総合センター、コミュタン福島（福島県環境創造センター交流棟）、コラッセふくしま、吾妻学習センター、福島空港公園 21世紀建設館 and 44 named searchable spaces. 福島県 is now 25 candidates, 16 municipalities, and 158 spaces; national totals are 1,010 candidates, 5,666 spaces, and 2,870 price observations. Remaining candidate and space deficits are 165 and 0.
+- Official source status: official foundation, prefectural, municipal, and facility pages from 福島県文化振興財団、福島県農業総合センター、福島県環境創造センター、福島県産業振興センター、福島市、福島空港公園. The 21世紀建設館 facility overview is older (2019), but the current 2025 prefectural fee guide still lists the rentable room; its capacity and availability remain `要確認`. Only source-explicit areas, capacities, room names, equipment, and conditions were structured. Stage/proscenium/building measurements were not converted into ceiling height.
+- Price observations: none added. Fees vary by hour, half/full day, equipment, waiver, admission, layout, or purpose, so they are not generalized into a misleading day-price filter.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Public deployment: pending user-authorized source push, Sites build/deploy, and marker checks on both public URLs.
+- Next wave after deployment: 茨城県, tied with 群馬県、埼玉県、千葉県、石川県、山梨県、静岡県、奈良県、鳥取県、山口県 at the lowest candidate depth (19 candidates) in the regenerated report.
 
 - Wave 121 — Yamagata: added 山形市中央公民館（アズ七日町）、山形県産業創造支援センター、飯豊町町民総合センター「あ〜す」、大江町町民ふれあい会館、大蔵村中央公民館、遊佐町生涯学習センター and 61 named searchable spaces. 山形県 is now 25 candidates, 21 municipalities, and 145 spaces; national totals are 1,004 candidates, 5,622 spaces, and 2,870 price observations. Remaining candidate and space deficits are 171 and 0.
 - Official source status: current municipal, municipal-facility, and designated-operator pages from 山形市、飯豊町、大江町、大蔵村、遊佐町 and the 山形県産業創造支援センター operator. Only source-explicit areas, capacities, floor load, and facility conditions were structured. Stage dimensions and stage heights in the source material were not converted into minimum ceiling height. Unreported ceilings, loading, stream conditions, and availability stay `要確認`.

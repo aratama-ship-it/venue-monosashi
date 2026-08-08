@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 121 — Yamagata official-source expansion deployed and publicly verified; Wave 122 Fukushima selection is next.
+- Current wave: Wave 122 — Fukushima official-source expansion locally validated; authorized public deployment is next.
 
 ## Baseline
 
@@ -14,6 +14,16 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 122 Checkpoint
+
+- Fukushima: added six candidates — とうほう・みんなの文化センター（福島県文化センター）（福島市）、福島県農業総合センター（郡山市）、コミュタン福島（福島県環境創造センター交流棟）（三春町）、コラッセふくしま（福島市）、吾妻学習センター（福島市）、福島空港公園 21世紀建設館（須賀川市） — and 44 named, independently searchable spaces. 福島県 is now 25 candidates, 16 municipalities, and 158 spaces. National totals are 1,010 candidates, 5,666 spaces, and 2,870 price observations; remaining candidate and space deficits are 165 and 0.
+- Official source status: currently published official foundation, prefectural, municipal, and facility pages from 福島県文化振興財団、福島県農業総合センター、福島県環境創造センター、福島県産業振興センター、福島市、福島空港公園. The 21世紀建設館 facility overview is 2019-published; its 2025 prefectural fee guide confirms the rental room remains listed, while current capacity and availability stay `要確認`. Only source-explicit room names, areas, capacities, facility equipment, and use conditions were structured. No stage, proscenium, building, or exhibition dimension was converted into a ceiling value.
+- Price observations: none added. Published charges vary by hourly/half-day/full-day usage, layout, equipment, waivers, admission, or purpose; they are not normalized into the general day-price filter.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending the user-authorized Sites source push, build, deployment, and verification at both public URLs.
+- Next action after deployment: select 茨城県, tied with 群馬県、埼玉県、千葉県、石川県、山梨県、静岡県、奈良県、鳥取県、山口県 at 19 candidates, for the next bounded official-source wave.
 
 ## Wave 121 Checkpoint
 
