@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 135 — Miyazaki official-source expansion locally validated; public deployment is next.
+- Current wave: Wave 135 — Miyazaki official-source expansion and public deployment verified; 青森県 is next.
 
 ## Baseline
 
@@ -21,7 +21,8 @@
 - Official source status: current designated-operator, public foundation, and Miyazaki City material only. The additions retain source-explicit halls, movable-seating halls, foyers, dressing rooms, rehearsal/practice rooms, meeting/training rooms, Japanese rooms, exhibition rooms, library-adjacent rooms, and public common spaces. The only new filterable ceiling values are 延岡総合文化センター展示室1の3.5m and 展示室2の5.0m, each published as that room's height. Stage, portal, sunoko, pit, and building dimensions were not converted into ceiling-height search values. Other unreported ceiling, floor-load, loading, streaming, fee applicability, and availability conditions remain `要確認`.
 - Price observations: none added. The current official fee schemes vary by time band, weekday/holiday, admission, commercial purpose, configuration, air-conditioning, and preparation conditions, so no ambiguous amount was generalized into the daily-budget filter.
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
-- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Next action: commit, public deployment, and both-URL verification; then 青森県、宮城県、栃木県、東京都、富山県、福井県、愛知県、滋賀県、京都府、兵庫県 tied at 20 candidates are eligible for the next lowest-depth wave.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: source commit `30fe171a497da6b1c32dab74239865b8f22d0b57` was pushed to the user-authorized Sites source repository with the confirmed Oita release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_10ac3ad176488191920e1fb3a595c3b0` (deployment `appgdep_6a773e3e437881919a64cce418dbe856`) deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E5%AE%AE%E5%B4%8E%E5%B8%82%E6%B0%91%E6%96%87%E5%8C%96%E3%83%9B%E3%83%BC%E3%83%AB&release=30fe171` and `https://venue.art-monosashi.com/?q=%E5%AE%AE%E5%B4%8E%E5%B8%82%E6%B0%91%E6%96%87%E5%8C%96%E3%83%9B%E3%83%BC%E3%83%AB&release=30fe171` returned HTTP 200 and contained the new 宮崎市民文化ホール marker. Tracked `web/dist` was restored after the deployment build. The next eligible lowest-depth prefecture is 青森県, tied with 宮城県、栃木県、東京都、富山県、福井県、愛知県、滋賀県、京都府、兵庫県 at 20 candidates.
 
 ## Wave 134 Local Checkpoint
 
