@@ -440,7 +440,8 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added 28 independently searchable spaces. 群馬県 is now 19 candidates, 17 municipalities, and 103 spaces; national totals are 808 candidates and 3,832 spaces. Remaining candidate and space deficits are 367 and 34.
 - Official source status: 大泉町、千代田町、板倉町、吉岡町の公式施設案内・公式使用料表・公共施設計画を使用。Only source-explicit capacities and floor areas were structured. No ceiling height or price observation was inferred. Stage or building dimensions were not converted into ceiling data, and all unreported conditions remain `要確認`.
 - Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
-- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Public deployment is pending.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Public deployment passed: source commit `a2ade5e5fd3a6f922317eadc09d74dfcaac570d1` was pushed to the authorized Sites repository; production version 127 deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E6%9D%BF%E5%80%89%E7%94%BA%E4%B8%AD%E5%A4%AE%E5%85%AC%E6%B0%91%E9%A4%A8&release=a2ade5e` and `https://venue.art-monosashi.com/?q=%E6%9D%BF%E5%80%89%E7%94%BA%E4%B8%AD%E5%A4%AE%E5%85%AC%E6%B0%91%E9%A4%A8&release=a2ade5e` returned the newly added 板倉町中央公民館 after deployment. Tracked `web/dist` output was restored.
 
 ## Wave 77 — Tokushima official-source expansion
 

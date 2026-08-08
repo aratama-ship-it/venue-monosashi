@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 82 — Gunma official-source expansion locally validated; deploy the named source commit and verify the public site.
+- Current wave: Wave 82 — Gunma official-source expansion completed and deployed; select the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -197,7 +197,9 @@
 - Wave 82 source data: added four official-source-backed Gunma facilities — 洋泉興業大泉町文化むら（大泉町）、コスメ・ニスト千代田町プラザ（千代田町）、板倉町中央公民館（板倉町）、吉岡町文化センター（吉岡町） — and 28 independently searchable spaces. 群馬県 is now 19 candidates, 17 municipalities, and 103 spaces; national totals are 808 candidates and 3,832 spaces. Remaining candidate and space deficits are 367 and 34.
 - Official sources: 大泉町、千代田町、板倉町、吉岡町の公式施設案内・公式使用料表・公共施設計画を使用。Only source-explicit capacities and floor areas were structured. No ceiling height or price observation was inferred; all unreported conditions remain `要確認`.
 - Wave 82 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing `historical-events.csv:173` warning. Tracked `web/dist` output was restored.
-- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Deployment is pending. The next lowest-depth wave after public verification is 埼玉県.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Wave 82 deployment passed: source commit `a2ade5e5fd3a6f922317eadc09d74dfcaac570d1` was pushed to the authorized Sites repository; production version 127 deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E6%9D%BF%E5%80%89%E7%94%BA%E4%B8%AD%E5%A4%AE%E5%85%AC%E6%B0%91%E9%A4%A8&release=a2ade5e` and `https://venue.art-monosashi.com/?q=%E6%9D%BF%E5%80%89%E7%94%BA%E4%B8%AD%E5%A4%AE%E5%85%AC%E6%B0%91%E9%A4%A8&release=a2ade5e` returned the newly added 板倉町中央公民館 after deployment. Tracked `web/dist` output was restored.
+- Next lowest-depth wave: 埼玉県.
 
 - Wave 81 source data: added four official-source-backed Akita facilities — 五城館（五城目町）、美郷町公民館（美郷町）、大潟村公民館（大潟村）、潟上市市民センター「かたりあん」（潟上市） — and 31 independently searchable spaces. 秋田県 is now 19 candidates, 18 municipalities, and 86 spaces; national totals are 804 candidates and 3,804 spaces. Remaining candidate and space deficits are 371 and 34.
 - Official sources: 五城目町、美郷町、大潟村の公式公共施設予約システム・生涯学習施設案内、潟上市の市民センター案内・令和7年施行の公民館条例。Only source-explicit floor areas and one explicitly stated movable-seat count were structured. No ceiling height or price observation was inferred; room/stage dimensions and approximate capacities remain notes only, and all unreported conditions remain `要確認`.
