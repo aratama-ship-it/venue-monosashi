@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 123 — Ibaraki official-source expansion deployed and publicly verified; next is a bounded official-source wave for Gunma.
+- Current wave: Wave 124 — Gunma official-source expansion locally validated; guarded source push and public deployment are next.
 
 ## Baseline
 
@@ -14,6 +14,16 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 124 Local Checkpoint
+
+- Gunma: added six candidates — 高崎芸術劇場（高崎市）、昌賢学園まえばしホール（前橋市民文化会館）（前橋市）、群馬音楽センター（高崎市）、甘楽町文化会館（甘楽町）、長野原町住民総合センター（長野原町）、バイテック文化ホール（中之条町文化会館）（中之条町） — and 43 named, independently searchable spaces. 群馬県 is now 25 candidates, 20 municipalities, and 146 spaces. National totals are 1,022 candidates, 5,791 spaces, and 2,870 price observations; remaining candidate and space deficits are 153 and 0.
+- Official source status: current official foundation, municipal, town, and prefectural pages from 公益財団法人高崎財団、前橋市まちづくり公社、中之条町、甘楽町、長野原町、群馬県文化振興課. Only source-explicit room names, capacities, areas, and use conditions were structured. Source-published stage/proscenium/building dimensions and the studio-theatre measurement to a beam were not converted into searchable ceiling data. Unpublished ceilings, floor loads, streaming, and current availability remain `要確認`.
+- Price observations: none added. Fee schedules differ by time band, residency, commercial purpose, equipment, and layout, so this candidate-depth wave does not normalize them into the general day-price filter.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending the source commit. The user has explicitly authorized the validated source push and public deployment after each wave; the next step is the guarded Sites source push, deploy, and both-public-URL verification.
+- Next action after deployment: select 埼玉県, tied with 千葉県、石川県、山梨県、静岡県、奈良県、鳥取県、山口県、徳島県、大分県 at 19 candidates, for the next bounded official-source wave.
 
 ## Wave 123 Local Checkpoint
 
