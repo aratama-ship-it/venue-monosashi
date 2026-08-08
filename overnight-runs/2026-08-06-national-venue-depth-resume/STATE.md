@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 84 — Chiba official-source expansion completed and deployed; select the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 85 — Ishikawa official-source expansion locally validated; public deployment is next.
 
 ## Baseline
 
@@ -193,6 +193,12 @@
 - Wave verification passed: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` all passed with only the pre-existing historical-event warning.
 
 ## Next Action
+
+- Wave 85 source data: added four official-source-backed Ishikawa facilities — カルチャーセンター飛翔（中能登町）、宝達志水総合体育館（宝達志水町）、川北町総合体育館（川北町）、輪島市総合体育館（輪島市） — and 21 independently searchable spaces. 石川県 is now 19 candidates, 17 municipalities, and 83 spaces; national totals are 820 candidates and 3,926 spaces. Remaining candidate and space deficits are 355 and 34.
+- Official sources: 中能登町、宝達志水町、川北町、輪島市の公式施設案内を使用。Only source-explicit capacities and floor areas were structured. No ceiling height or price observation was inferred; arena dimensions were not calculated into area, and all unreported conditions remain `要確認`.
+- Wave 85 local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed with only the pre-existing `historical-events.csv:173` warning. Tracked `web/dist` output was restored.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Public deployment is pending.
+- Next lowest-depth wave after deployment: 奈良県.
 
 - Wave 84 source data: added four official-source-backed Chiba facilities — 野田市生涯学習センター（欅のホール）（野田市）、木更津市中央地域交流センター（木更津市）、館山市コミュニティセンター（中央公民館）（館山市）、鴨川市文化体育館（鴨川市） — and 29 independently searchable spaces. 千葉県 is now 19 candidates, 18 municipalities, and 97 spaces; national totals are 816 candidates and 3,905 spaces. Remaining candidate and space deficits are 359 and 34.
 - Official sources: 野田市、木更津市、館山市、鴨川市の公式施設案内・公式管理資料を使用。Only source-explicit capacities and floor areas were structured. No ceiling height or price observation was inferred; building, stage, or grouped-room figures were not converted into unsupported per-room measurements, and all unreported conditions remain `要確認`.

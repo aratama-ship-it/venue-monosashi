@@ -416,6 +416,14 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
 - Deployment passed: source commit `e457144a8a0473885e8536edbb4c90416f4afe6d` was pushed to the authorized Sites repository; production version 129 deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E6%9C%A8%E6%9B%B4%E6%B4%A5%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%9C%B0%E5%9F%9F%E4%BA%A4%E6%B5%81%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=e457144` and `https://venue.art-monosashi.com/?q=%E6%9C%A8%E6%9B%B4%E6%B4%A5%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%9C%B0%E5%9F%9F%E4%BA%A4%E6%B5%81%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&release=e457144` returned the newly added 木更津市中央地域交流センター. Tracked `web/dist` output was restored.
 - Next intended wave: 石川県.
+
+## Wave 85 — Ishikawa official-source expansion
+
+- Added four candidates: カルチャーセンター飛翔（中能登町）、宝達志水総合体育館（宝達志水町）、川北町総合体育館（川北町）、輪島市総合体育館（輪島市）。
+- Added 21 independently searchable spaces. 石川県 is now 19 candidates, 17 municipalities, and 83 spaces; national totals are 820 candidates and 3,926 spaces. Remaining candidate and space deficits are 355 and 34.
+- Official source status: 中能登町、宝達志水町、川北町、輪島市の公式施設案内を使用。Only source-explicit capacity and floor-area values were recorded; no ceiling height or price observation was inferred. Arena dimensions were not calculated into area, and all unreported conditions remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Public deployment is pending; next intended wave is 奈良県.
 - Deployment passed: source commit `e5540d2f86034382738d31c354fda6518fe8442c` was pushed to the authorized Sites repository; production version 123 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=e5540d2` returned the established site marker after deployment. Tracked `web/dist` output was restored.
 - Deployment passed: source commit `73c0e3bfd1baad7791a9d8079c224875ae573743` was pushed to the authorized Sites repository; production version 122 deployed successfully. Both the Sites URL and `https://venue.art-monosashi.com/?release=73c0e3b` returned the established site marker after deployment. Tracked `web/dist` output was restored.
 
