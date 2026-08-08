@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 102 — Fukuoka official-source expansion completed and deployed; select Nagasaki from the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 103 — Nagasaki official-source expansion locally validated; source push and public deployment are pending for this bounded wave.
 
 ## Baseline
 
@@ -24,6 +24,16 @@
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
 - Deployment: source commit `845c09a98219a82b655dd4f7831e164769d17243` was pushed to the user-authorized Sites repository. Sites version 147 deployed successfully. Both public URLs returned HTTP 200 for `?release=845c09a`, and live search returned the new 小郡市文化会館 marker on both. Tracked `web/dist` was restored.
 - Next action: select and research 長崎県, tied at the lowest candidate depth (16 candidates), as the next bounded official-source wave.
+
+## Wave 103 Checkpoint
+
+- Nagasaki: added five candidates — 壱岐の島ホール（壱岐市）、波佐見町総合文化会館（波佐見町）、深江ふるさと伝承館（南島原市）、東彼杵町総合会館文化ホール（東彼杵町）、とぎつカナリーホール（時津町） — and 60 named, independently searchable spaces. 長崎県 is now 21 candidates, 15 municipalities, and 113 spaces. National totals are 893 candidates, 4,594 spaces, and 2,842 price observations; remaining candidate and space deficits are 282 and 8.
+- Official source status: 壱岐市と壱岐の島ホール公式運営者、波佐見町、南島原市、東彼杵町、時津町ととぎつカナリーホール公式運営者。The structured data retains only source-explicit room names, capacities, and floor areas. No ceiling was inferred from stage dimensions, sound-reflector dimensions, or building dimensions.
+- Price observations: none added. The available fee pages either present time-band/admission conditions without a safely reusable current base class, are due to change on 2026-10-01, or need a current-date/eligibility recheck; these remain notes or `要確認` rather than being normalized as a searchable price.
+- Local verification: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing historical-events row.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Tracked `web/dist` output is pending restoration after the deployment build.
+- Deployment: pending user-authorized source push and public verification.
+- Next action: commit and deploy Wave 103, then select 沖縄県 from the next bounded lowest-depth prefectural wave.
 
 ## Completed Waves
 

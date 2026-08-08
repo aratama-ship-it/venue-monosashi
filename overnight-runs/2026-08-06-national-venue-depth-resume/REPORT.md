@@ -2,9 +2,16 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 102 Fukuoka is locally validated and awaiting the user-authorized source push and public deployment.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 103 Nagasaki is locally validated and awaiting the user-authorized source push and public deployment.
 
 ## Latest Wave
+
+- Wave 103 — Nagasaki: added 壱岐の島ホール、波佐見町総合文化会館（ウェイブホール）、深江ふるさと伝承館、東彼杵町総合会館文化ホール（グリーンハートホール）、とぎつカナリーホール and 60 named searchable spaces. 長崎県 is now 21 candidates, 15 municipalities, and 113 spaces; national totals are 893 candidates, 4,594 spaces, and 2,842 price observations. Remaining candidate and space deficits are 282 and 8.
+- Official source status: live official pages or official operating sites from 壱岐市、波佐見町、南島原市、東彼杵町、時津町 and the respective facilities. Only source-explicit room names, capacities, floor areas, and current reservation conditions were structured. Stage, sound-reflector, and building dimensions were retained only as notes and never converted into ceiling values.
+- Price observations: none added. The observed fee pages have purpose, admission, effective-date, or eligibility conditions that need a current-date recheck before any price can be safely used for filtering; they remain explicit notes rather than approximate prices.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Public deployment is pending; tracked `web/dist` will be restored after the deployment build.
+- Next wave: 沖縄県, now the lowest candidate-depth prefecture (16 candidates) in the regenerated report.
 
 - Wave 102 — Fukuoka: added リーパスプラザこが、大野城まどかぴあ、春日市ふれあい文化センター、小郡市文化会館 and 78 named searchable spaces. 福岡県 is now 20 candidates, 15 municipalities, and 146 spaces; national totals are 888 candidates, 4,534 spaces, and 2,842 price observations. Remaining candidate and space deficits are 287 and 8.
 - Official source status: live official pages from 古賀市、大野城市、春日市、小郡市 and the 春日市ふれあい文化センター designated operator. The collection keeps source-explicit room names, capacities, areas, usage/availability, and current fee conditions. It does not convert any stage height, proscenium, or building dimension into a ceiling value; approximate seating remains a note.

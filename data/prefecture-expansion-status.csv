@@ -40,7 +40,7 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 高知県,四国,18,11,102,36,54,1,7,4,0,expanding
 福岡県,九州,20,15,146,104,91,7,5,0,0,expanding
 佐賀県,九州,18,16,76,24,21,2,7,0,0,expanding
-長崎県,九州,16,10,53,23,13,2,9,5,0,expanding
+長崎県,九州,21,15,113,31,23,2,4,0,0,expanding
 熊本県,九州,18,15,96,48,47,2,7,0,0,expanding
 大分県,九州,19,17,120,35,37,5,6,0,0,expanding
 宮崎県,九州,19,18,90,23,19,2,6,0,0,expanding
