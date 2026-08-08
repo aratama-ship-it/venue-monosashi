@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 103 — Nagasaki official-source expansion completed and deployed; select Okinawa from the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 104 — Okinawa official-source expansion is locally validated; prepare the user-authorized source push and public deployment.
 
 ## Baseline
 
@@ -34,6 +34,16 @@
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Tracked `web/dist` output was restored.
 - Deployment: source commit `9d6cab453458777c9dd38d47589c9e59feba2001` was pushed to the user-authorized Sites repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_53544f7771f08191abe7f625fba03b7c` deployed successfully. Both public URLs returned HTTP 200 for `?release=9d6cab4`, and live search returned the new とぎつカナリーホール marker on both.
 - Next action: select and research 沖縄県, now the lowest candidate-depth prefecture (16 candidates), as the next bounded official-source wave.
+
+## Wave 104 Checkpoint
+
+- Okinawa: added five candidates — アイム・ユニバースてだこホール（浦添市てだこホール）（浦添市）、西原町町民交流センター（さわふじ未来ホール）（西原町）、吉の浦会館（中城村）、もとぶ文化交流センター（本部町）、南風原文化センター（南風原町） — and 58 named, independently searchable spaces. 沖縄県 is now 21 candidates, 16 municipalities, and 114 spaces. National totals are 898 candidates, 4,652 spaces, and 2,842 price observations; remaining candidate and space deficits are 277 and 8.
+- Official source status: 浦添市、西原町、中城村、本部町、南風原町の現行公式施設案内・指定管理者仕様書。Only source-explicit room names, areas, and exact capacities were structured. Ranged or approximate capacity claims remain notes; stage, proscenium, and drawing values were not treated as ceiling heights.
+- Price observations: none added. The currently published fees are hourly or vary by municipality/residency, time band, air-conditioning, or other eligibility conditions, so they were not represented as a falsely general daily price.
+- Local verification: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning remains the pre-existing `historical-events.csv:173` row.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Tracked `web/dist` output will be restored after the deployment build.
+- Deployment: pending the user-authorized source push and public deployment of the validated source commit.
+- Next action: deploy Wave 104, then select 新潟県 as the lowest candidate-depth prefecture (17 candidates) for the next bounded official-source wave.
 
 ## Completed Waves
 

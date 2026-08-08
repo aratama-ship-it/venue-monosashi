@@ -2,9 +2,17 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 103 Nagasaki is deployed; the next bounded wave is Okinawa.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 104 Okinawa is locally validated and ready for the user-authorized source push and public deployment.
 
 ## Latest Wave
+
+- Wave 104 — Okinawa: added アイム・ユニバースてだこホール（浦添市てだこホール）、西原町町民交流センター（さわふじ未来ホール）、吉の浦会館、もとぶ文化交流センター、南風原文化センター and 58 named searchable spaces. 沖縄県 is now 21 candidates, 16 municipalities, and 114 spaces; national totals are 898 candidates, 4,652 spaces, and 2,842 price observations. Remaining candidate and space deficits are 277 and 8.
+- Official source status: live official pages and a current designated-manager specification from 浦添市、西原町、中城村、本部町、南風原町. Only source-explicit room names, areas, and exact capacities were structured; range/approximate capacity remains a note. Stage, proscenium, and drawing dimensions were never converted into ceiling values.
+- Price observations: none added. The observed public fees are hourly or vary by municipality/residency, time band, cooling, or other conditions; none was normalized as a falsely general day price.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Tracked `web/dist` will be restored after the deployment build.
+- Public deployment: pending the user-authorized source push and Sites deployment of the validated source commit.
+- Next wave: 新潟県, now the lowest candidate-depth prefecture (17 candidates) in the regenerated report.
 
 - Wave 103 — Nagasaki: added 壱岐の島ホール、波佐見町総合文化会館（ウェイブホール）、深江ふるさと伝承館、東彼杵町総合会館文化ホール（グリーンハートホール）、とぎつカナリーホール and 60 named searchable spaces. 長崎県 is now 21 candidates, 15 municipalities, and 113 spaces; national totals are 893 candidates, 4,594 spaces, and 2,842 price observations. Remaining candidate and space deficits are 282 and 8.
 - Official source status: live official pages or official operating sites from 壱岐市、波佐見町、南島原市、東彼杵町、時津町 and the respective facilities. Only source-explicit room names, capacities, floor areas, and current reservation conditions were structured. Stage, sound-reflector, and building dimensions were retained only as notes and never converted into ceiling values.
