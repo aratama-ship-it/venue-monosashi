@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 118 Kumamoto is locally validated and ready for its authorized source push and public deployment; the next bounded wave after release is 岩手県, at 19 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 118 Kumamoto is publicly deployed and verified; the next bounded wave is 岩手県, at 19 candidates.
 
 ## Latest Wave
 
@@ -12,7 +12,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Price observations: none added. Published fees are time-band, admission-fee, commercial-use, equipment, residency, or room-condition dependent, so they are not generalized into a misleading day-price filter.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment: pending authorized source push, Sites deployment, and marker verification at both public URLs.
+- Public deployment passed: source commit `85cdcec83b34e8eb8c30364867c62b817d3bc26b` was pushed to the authorized Sites repository with the confirmed Saga release as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_c43b685bd29481919ac2e768d8f46803` (deployment `appgdep_6a77072116c88191a31080f198c0f339`) deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E7%86%8A%E6%9C%AC%E7%9C%8C%E7%AB%8B%E5%8A%87%E5%A0%B4&release=85cdcec` and `https://venue.art-monosashi.com/?q=%E7%86%8A%E6%9C%AC%E7%9C%8C%E7%AB%8B%E5%8A%87%E5%A0%B4&release=85cdcec` returned the newly added 熊本県立劇場. Tracked `web/dist` was restored after the deployment build.
 - Next wave: 岩手県, tied with 秋田県、山形県、福島県、茨城県、群馬県、埼玉県、千葉県、石川県、山梨県 at the lowest candidate depth (19 candidates) in the regenerated report.
 
 - Wave 117 — Saga: added 白石町総合センター、福富ゆうあい館、上峰町民センター、太良町中央公民館、佐賀市産業振興会館、唐津市民交流プラザ、唐津市厳木コミュニティセンター and 51 named searchable spaces. 佐賀県 is now 25 candidates, 19 municipalities, and 127 spaces; national totals are 979 candidates, 5,402 spaces, and 2,870 price observations. Remaining candidate and space deficits are 196 and 0.
