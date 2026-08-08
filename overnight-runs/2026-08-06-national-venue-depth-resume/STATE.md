@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 104 — Okinawa official-source expansion completed and deployed; select Niigata from the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 105 — Niigata official-source expansion validated locally; source commit and public deployment pending.
 
 ## Baseline
 
@@ -44,6 +44,15 @@
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Tracked `web/dist` output was restored after the deployment build.
 - Deployment: source commit `30dd162528f5170a173aae0252c5a55b5f9ef0e5` was pushed to the user-authorized Sites repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_84e3ddd938508191b9528ecadab97f52` (deployment `appgdep_6a76dd59dc1c8191acfa56ba99f81c67`) deployed successfully. Both public URLs returned HTTP 200 for `?release=30dd162`, and live search returned the new 南風原文化センター marker on both.
 - Next action: select and research 新潟県 as the lowest candidate-depth prefecture (17 candidates) for the next bounded official-source wave.
+
+## Wave 105 Checkpoint
+
+- Niigata: added eight candidates — 柏崎市文化会館アルフォーレ（柏崎市）、南魚沼市民会館（南魚沼市）、魚沼市響きの森文化会館（魚沼市）、村上市民ふれあいセンター（村上市）、妙高市文化ホール（妙高市）、新潟県民会館・新潟市江南区文化会館・新潟市秋葉区文化会館（新潟市） — and 94 named, independently searchable spaces. 新潟県 is now 25 candidates, 19 municipalities, and 158 spaces. National totals are 906 candidates, 4,746 spaces, and 2,842 price observations; remaining candidate and space deficits are 269 and 8.
+- Official source status: current city, prefectural, or official operating pages from 柏崎市、南魚沼市、魚沼市、村上市、妙高市、新潟県民会館、新潟市. Only source-explicit room names, capacities, areas, and current facility information were structured. Stage, proscenium, and hall-drawing dimensions were not converted into ceiling values.
+- Price observations: none added. Published fees vary by use purpose, municipality, commercial/admission conditions, time band, air-conditioning, or other eligibility conditions and were not normalized as falsely general daily prices.
+- Local verification: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output will be restored before source commit and again after the deployment build.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending. The next action is to commit the named source files, push the validated source to the authorized Sites repository, deploy, and verify both public URLs.
 
 ## Completed Waves
 

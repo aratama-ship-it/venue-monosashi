@@ -2,9 +2,17 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 104 Okinawa is deployed; the next bounded wave is Niigata.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 105 Niigata is locally validated and awaiting its authorized source push and public deployment.
 
 ## Latest Wave
+
+- Wave 105 — Niigata: added 柏崎市文化会館アルフォーレ、南魚沼市民会館、魚沼市響きの森文化会館、村上市民ふれあいセンター、妙高市文化ホール、新潟県民会館、新潟市江南区文化会館、新潟市秋葉区文化会館 and 94 named searchable spaces. 新潟県 is now 25 candidates, 19 municipalities, and 158 spaces; national totals are 906 candidates, 4,746 spaces, and 2,842 price observations. Remaining candidate and space deficits are 269 and 8.
+- Official source status: current facility pages from 柏崎市、南魚沼市、魚沼市、村上市、妙高市、新潟県民会館、新潟市 and the corresponding official operators. Only source-explicit room names, seat counts, and floor areas were structured. Stage, proscenium, building, and drawing dimensions were never converted into ceiling values.
+- Price observations: none added. Fees published with purpose, commercial/admission, municipality, time-band, cooling, or other eligibility conditions remain unnormalized rather than becoming misleading day-price filters.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Tracked `web/dist` output is to be restored before source commit and after the deployment build.
+- Public deployment: pending authorized source push, Sites deployment, and verification of both public URLs.
+- Next wave: 大阪府、岡山県、愛媛県 are tied at the lowest candidate depth (17 candidates) in the regenerated report.
 
 - Wave 104 — Okinawa: added アイム・ユニバースてだこホール（浦添市てだこホール）、西原町町民交流センター（さわふじ未来ホール）、吉の浦会館、もとぶ文化交流センター、南風原文化センター and 58 named searchable spaces. 沖縄県 is now 21 candidates, 16 municipalities, and 114 spaces; national totals are 898 candidates, 4,652 spaces, and 2,842 price observations. Remaining candidate and space deficits are 277 and 8.
 - Official source status: live official pages and a current designated-manager specification from 浦添市、西原町、中城村、本部町、南風原町. Only source-explicit room names, areas, and exact capacities were structured; range/approximate capacity remains a note. Stage, proscenium, and drawing dimensions were never converted into ceiling values.
