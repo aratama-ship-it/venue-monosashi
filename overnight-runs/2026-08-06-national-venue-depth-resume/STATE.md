@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-09 Asia/Tokyo
-- Current wave: Wave 138 — Tochigi official-source expansion and public deployment verified; 東京都・富山県・福井県・愛知県・滋賀県・京都府・兵庫県・島根県・香川県・福岡県 are next at the lowest candidate depth.
+- Current wave: Wave 139 — Tokyo official-source expansion and public deployment verified; 富山県・福井県・愛知県・滋賀県・京都府・兵庫県・島根県・香川県・福岡県 are next at the lowest candidate depth.
 
 ## Baseline
 
@@ -14,6 +14,15 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 139 Local Checkpoint
+
+- Tokyo: added five candidates — 文京シビックホール、なかのZERO、武蔵野市民文化会館、ルネこだいら（小平市民文化会館）、J:COMホール八王子（八王子市民会館） — and 66 named independently searchable spaces. 東京都 is now 25 candidates, 16 municipalities, and 189 spaces. National totals are 1,108 candidates, 6,879 spaces, and 2,879 price observations; remaining candidate and space deficits are 67 and 0, and 31 of 47 prefectures meet the full reference depth.
+- Official source status: current municipal and designated-operator material only, including 文京区、中野区文化施設指定管理者、武蔵野文化生涯学習事業団、小平市文化振興財団、八王子市・八王子市民会館共同事業体. Source-explicit halls, exhibition and gallery spaces, rehearsal/practice rooms, named dressing rooms, conference rooms, learning rooms, Japanese rooms, a tea room, and support rooms were structured. J:COMホール八王子リハーサル室の「天井高さ 約3.2m」は公式の概算表記で最小有効高が未確認のため highest_point 参照に留め、天井フィルタには使わない。ホールの舞台・反射板・すのこ寸法は天井高へ転用していない。その他の未公表天井、床荷重、搬入、催事回線、料金適用、空き状況は要確認。
+- Price observations: none added. 各施設の現行料金は時間帯、営利非営利、入場料、設備、予約時期、構成その他の条件で変動するため、確認済み日額として誤って正規化しなかった。
+- Local verification: npm --prefix web run data:generate, npm run audit, npm run depth-report:write, git diff --check, and npm run validate passed. The only audit warning is the pre-existing historical-events.csv:173 row. Tracked web/dist was restored after validation and after the deployment build.
+- Changed source files: data/candidate-venues.csv, data/venue-details.csv, generated data/prefecture-expansion-status.csv, generated web/app/generated-data.ts, and this run ledger.
+- Deployment: source commit b9df568f5ab2d308c4639e7f0d0aa98a081e1a14 was pushed to the user-authorized Sites source repository with a force-with-lease guard. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_bf803a693ea0819199ad9e70f885c10a and deployment appgdep_6a7751836ad08191b4278afa8eccb737 succeeded. Both https://venue-monosashi.juggler-arata.chatgpt.site and https://venue.art-monosashi.com served the newly added なかのZERO marker after deployment. The next eligible lowest-depth prefectures are 富山県、福井県、愛知県、滋賀県、京都府、兵庫県、島根県、香川県、福岡県 at 20 candidates.
 
 ## Wave 138 Local Checkpoint
 

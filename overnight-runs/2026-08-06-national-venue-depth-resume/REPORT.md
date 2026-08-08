@@ -2,9 +2,16 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 138 Tochigi has been validated and publicly deployed. The next lowest-depth group starts at 20 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 139 Tokyo has been validated and publicly deployed. The next lowest-depth group starts at 20 candidates.
 
 ## Latest Wave
+
+- Wave 139 — Tokyo: added 文京シビックホール、なかのZERO、武蔵野市民文化会館、ルネこだいら（小平市民文化会館）、J:COMホール八王子（八王子市民会館） and 66 named searchable spaces. 東京都 is now 25 candidates, 16 municipalities, and 189 spaces; national totals are 1,108 candidates, 6,879 spaces, and 2,879 price observations. Remaining candidate and space deficits are 67 and 0; 31 of 47 prefectures meet the reference depth.
+- Official source status: current official city, municipal, and designated-operator material only. Source-explicit halls, exhibition/galleries, rehearsal/practice rooms, named dressing rooms, conference rooms, learning rooms, Japanese rooms, a tea room, and support rooms were structured. J:COMホール八王子リハーサル室の公式「天井高さ 約3.2m」は最小有効高が未確認の概算表記のため非フィルタ参照に留め、舞台・反射板・すのこ寸法は一切天井高に転用していない。その他の未公表条件は要確認。
+- Price observations: none added. Current fee materials depend on time block, commercial/nonprofit class, admission, equipment, booking window, and configuration, so no ambiguous amount was generalized into the daily-rate filter.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing historical-events.csv:173 row; tracked web/dist was restored after validation and deployment.
+- Changed files: data/candidate-venues.csv, data/venue-details.csv, generated data/prefecture-expansion-status.csv, generated web/app/generated-data.ts, and this run ledger.
+- Public deployment passed: source commit b9df568f5ab2d308c4639e7f0d0aa98a081e1a14 was pushed to the authorized Sites repository with a force-with-lease guard. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_bf803a693ea0819199ad9e70f885c10a (deployment appgdep_6a7751836ad08191b4278afa8eccb737) succeeded. Both public URLs served the newly added なかのZERO marker. Next wave: 富山県、福井県、愛知県、滋賀県、京都府、兵庫県、島根県、香川県、福岡県 at 20 candidates.
 
 - Wave 138 — Tochigi: added 宇都宮市文化会館、栃木県総合文化センター、那須野が原ハーモニーホール、ピアートホール、栃木市大平文化会館 and 51 named searchable spaces. 栃木県 is now 25 candidates, 18 municipalities, and 155 spaces; national totals are 1,103 candidates, 6,813 spaces, and 2,879 price observations. Remaining candidate and space deficits are 72 and 0; 30 of 47 prefectures meet the reference depth.
 - Official source status: current public operator, prefectural, municipal, and city material only. Source-explicit halls, temporary or movable halls, galleries, exhibition rooms, rehearsal/practice rooms, named dressing rooms, conference rooms, training rooms, Japanese rooms, and support spaces were structured. Only direct current room-height values at 宇都宮市文化会館 and the directly published 8.6m ceiling at 栃木県総合文化センター第1ギャラリー enter the ceiling filter. Stage and proscenium dimensions were not converted into ceiling-height data; all other unreported operating conditions remain `要確認`.
