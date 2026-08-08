@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 108 Ehime is locally validated and ready for public deployment; the next source wave will select one of the prefectures tied at 18 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 108 Ehime is deployed and publicly verified; the next bounded wave will select 北海道, tied at 18 candidates.
 
 ## Latest Wave
 
@@ -11,8 +11,8 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Price observations: 15 current full-day weekday base fees were added: 11 for 松前総合文化センター and 4 for 久万高原町産業文化会館. Weekend, cooling, commercial-use, admission, out-of-town, equipment, and extension rules remain explicit exclusions/notes.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment: pending for this validated wave.
-- Next wave: 北海道、神奈川県、長野県、岐阜県、和歌山県、広島県、高知県、佐賀県、熊本県、鹿児島県 are tied at the lowest candidate depth (18 candidates).
+- Public deployment passed: source commit `51e23635b5a7f3eff0e59c1a561741e589e2354a` was pushed to the authorized Sites source repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_31bbf3aa2f84819192065876047b8d67` (deployment `appgdep_6a76ea649678819184153e141761caf7`) deployed successfully. Both public URLs returned HTTP 200 for `?release=51e2363`, and each public page contained the newly added `松前総合文化センター` marker. Tracked `web/dist` was restored after the deployment build.
+- Next wave: 北海道 is tied at the lowest candidate depth (18 candidates) in the regenerated report.
 
 - Wave 105 — Niigata: added 柏崎市文化会館アルフォーレ、南魚沼市民会館、魚沼市響きの森文化会館、村上市民ふれあいセンター、妙高市文化ホール、新潟県民会館、新潟市江南区文化会館、新潟市秋葉区文化会館 and 94 named searchable spaces. 新潟県 is now 25 candidates, 19 municipalities, and 158 spaces; national totals are 906 candidates, 4,746 spaces, and 2,842 price observations. Remaining candidate and space deficits are 269 and 8.
 - Official source status: current facility pages from 柏崎市、南魚沼市、魚沼市、村上市、妙高市、新潟県民会館、新潟市 and the corresponding official operators. Only source-explicit room names, seat counts, and floor areas were structured. Stage, proscenium, building, and drawing dimensions were never converted into ceiling values.

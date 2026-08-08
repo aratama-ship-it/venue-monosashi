@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 108 — Ehime official-source expansion validated; public deployment is the next action before selecting 北海道 and the other prefectures tied at 18 candidates.
+- Current wave: Wave 108 — Ehime official-source expansion completed and deployed; select 北海道 from the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -82,8 +82,8 @@
 - Price observations: added 15 current, full-day weekday base fees — 11 for 松前総合文化センター and 4 for 久万高原町産業文化会館. The source-defined weekend, cooling, commercial-use, admission, out-of-town, equipment, and extension conditions remain explicit exclusions/notes rather than being silently normalized.
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending for this validated source wave.
-- Next action: deploy this wave, then select 北海道, 神奈川県, 長野県, 岐阜県, 和歌山県, 広島県, 高知県, 佐賀県, 熊本県, or 鹿児島県, all tied at 18 candidates.
+- Deployment: source commit `51e23635b5a7f3eff0e59c1a561741e589e2354a` was pushed to the authorized Sites source repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_31bbf3aa2f84819192065876047b8d67` (deployment `appgdep_6a76ea649678819184153e141761caf7`) deployed successfully. Both public URLs returned HTTP 200 for `?release=51e2363`, and each public page contained the new `松前総合文化センター` marker. Tracked `web/dist` was restored after the deployment build.
+- Next action: select 北海道, tied at the lowest candidate depth (18 candidates), for the next bounded official-source wave.
 
 ## Completed Waves
 
