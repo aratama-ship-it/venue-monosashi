@@ -2,9 +2,17 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 112 Gifu is validated and publicly deployed; the next bounded wave is selected from the six prefectures tied at 18 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 113 Wakayama is locally validated and awaiting its user-authorized source commit and public deployment; the next bounded wave is selected from the five prefectures tied at 18 candidates.
 
 ## Latest Wave
+
+- Wave 113 — Wakayama: added 日高川交流センター、上富田文化会館、串本町文化センター、那智勝浦町体育文化会館、天満公民館、高野町民体育館、みなべ町生涯学習センター and 41 named searchable spaces. 和歌山県 is now 25 candidates, 20 municipalities, and 99 spaces; national totals are 951 candidates, 5,223 spaces, and 2,870 price observations. Remaining candidate and space deficits are 224 and 0.
+- Official source status: current municipal facility and event pages from 日高川町、上富田町、串本町、那智勝浦町、高野町、みなべ町. Only source-explicit room names, seat counts, fixed seating, and floor areas were structured. Stage, sound-reflector, entrance, eave, and building dimensions were not converted into ceiling values; unreported ceilings stay `要確認`.
+- Price observations: none added. Available fees are hourly, period-based, or purpose-dependent, so they remain unnormalized rather than becoming a misleading general day-price.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Public deployment: pending the exact validated source commit. The deployment check will query both URLs for the new `日高川交流センター` marker.
+- Next wave: one of 広島県、高知県、佐賀県、熊本県、鹿児島県, tied at the lowest candidate depth (18 candidates) in the regenerated report.
 
 - Wave 112 — Gifu: added 恵那文化センター、瑞浪市総合文化センター、下呂市民会館、美濃市文化会館、文化の里 花咲きホール、飛騨市文化交流センター、海津市文化センター（海津公民館＋海津農村環境改善センター） and 60 named searchable spaces. 岐阜県 is now 25 candidates, 19 municipalities, and 186 spaces; national totals are 944 candidates, 5,182 spaces, and 2,870 price observations. Remaining candidate and space deficits are 231 and 0.
 - Official source status: current municipal, operator, and ordinance pages from 恵那市、瑞浪市、下呂市、美濃市、山県市、飛騨市、海津市. Only source-explicit room names, seat counts, and floor areas were structured. Stage, proscenium, opening, and building dimensions were not converted into ceiling values; unreported ceilings stay `要確認`.

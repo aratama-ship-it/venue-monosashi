@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 112 — Gifu official-source expansion completed and deployed; select one of 和歌山県・広島県・高知県・佐賀県・熊本県・鹿児島県 from the next bounded lowest-depth wave.
+- Current wave: Wave 113 — Wakayama official-source expansion is locally validated and awaiting its user-authorized source commit and public deployment. The next bounded lowest-depth wave is one of 広島県・高知県・佐賀県・熊本県・鹿児島県.
 
 ## Baseline
 
@@ -14,6 +14,16 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 113 Checkpoint
+
+- Wakayama: added seven candidates — 日高川交流センター（日高川町）、上富田文化会館（上富田町）、串本町文化センター（串本町）、那智勝浦町体育文化会館・天満公民館（那智勝浦町）、高野町民体育館（高野町）、みなべ町生涯学習センター（みなべ町） — and 41 named, independently searchable spaces. 和歌山県 is now 25 candidates, 20 municipalities, and 99 spaces. National totals are 951 candidates, 5,223 spaces, and 2,870 price observations; remaining candidate and space deficits are 224 and 0.
+- Official source status: municipal facility and current-event pages from 日高川町、上富田町、串本町、那智勝浦町、高野町、みなべ町. Only source-explicit room names, room areas, seating, fixed seating, and current-use facts were structured. Stage, sound-reflector, entry, eave, and building dimensions were not converted into ceiling values; every unpublished ceiling remains `要確認`.
+- Price observations: none added. Available fees are hourly, period-based, or purpose-dependent and were not normalized into a current generally applicable day-price filter.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending. After committing the validated source files, push the exact commit to the user-authorized Sites source repository, save and deploy the built version, then verify both public URLs using a new Wakayama facility marker. Tracked `web/dist` must be restored after the deployment build.
+- Next action after deployment: select one of 広島県、高知県、佐賀県、熊本県、鹿児島県, tied at the current lowest candidate depth (18 candidates), for the next bounded official-source wave.
 
 ## Wave 112 Checkpoint
 
