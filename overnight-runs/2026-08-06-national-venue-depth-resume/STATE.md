@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 109 — Hokkaido official-source expansion completed and deployed; select 神奈川県 from the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 110 — Kanagawa official-source expansion validated; commit and deploy the validated source next.
 
 ## Baseline
 
@@ -14,6 +14,16 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 110 Checkpoint
+
+- Kanagawa: added four candidates — 茅ヶ崎市民文化会館（茅ヶ崎市）、ハーモニーホール座間（座間市）、逗子文化プラザホール（逗子市）、伊勢原市民文化会館（伊勢原市） — and 60 named, independently searchable spaces. 神奈川県 is now 22 candidates, 15 municipalities, and 178 spaces. National totals are 930 candidates, 5,059 spaces, and 2,870 price observations; remaining candidate and space deficits are 245 and 0.
+- Official source status: current municipal or official operator facility pages from 茅ヶ崎市・茅ヶ崎市文化振興財団、座間市、逗子市・逗子文化プラザホール、伊勢原市. Only source-explicit room names, areas, and capacities were structured. The 逗子文化プラザホールの舞台高、伊勢原市民文化会館の舞台高、その他の舞台・建物寸法は最低天井高に使わず、未公表の天井高は要確認として残した。
+- Price observations: added eight current, tax-included full-day base fees for ハーモニーホール座間の大・小ホール、リハーサル室、ギャラリー、大会議室. Commercial use, equipment, admission, and other conditional amounts remain source notes rather than a generalized price.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending the named source commit and the user-authorized Sites push/deployment.
+- Next action after deployment: select 長野県, tied at the current lowest candidate depth (18 candidates), for the next bounded official-source wave.
 
 ## Wave 102 Checkpoint
 

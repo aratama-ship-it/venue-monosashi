@@ -2,17 +2,17 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 109 Hokkaido is locally validated; its public deployment and two-URL verification are next.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 110 Kanagawa is locally validated; its public deployment and two-URL verification are next.
 
 ## Latest Wave
 
-- Wave 109 — Hokkaido: added 稚内総合文化センター、網走市民会館、江別市民会館、滝川市民交流プラザ and 50 named searchable spaces. 北海道 is now 22 candidates, 16 municipalities, and 125 spaces; national totals are 926 candidates, 4,999 spaces, and 2,862 price observations. Remaining candidate and space deficits are 249 and 0.
-- Official source status: current public-use and operator pages from 稚内市、網走市、江別市・江別市民会館指定管理者、滝川市. Only source-explicit room names, capacities, and floor areas were structured. Stage opening and stage-height information was not converted into a searchable ceiling value. The ambiguous 江別市仕様書 value「24,15」remains blank and `要確認` rather than being inferred.
-- Price observations: five current full-day basic fees were added for 稚内総合文化センターの大ホール・小ホール・リハーサル室. Weekend, commercial/admission, cooling, and equipment conditions remain explicit exclusions/notes.
+- Wave 110 — Kanagawa: added 茅ヶ崎市民文化会館、ハーモニーホール座間、逗子文化プラザホール、伊勢原市民文化会館 and 60 named searchable spaces. 神奈川県 is now 22 candidates, 15 municipalities, and 178 spaces; national totals are 930 candidates, 5,059 spaces, and 2,870 price observations. Remaining candidate and space deficits are 245 and 0.
+- Official source status: current official municipal or operator pages from 茅ヶ崎市・茅ヶ崎市文化振興財団、座間市、逗子市・逗子文化プラザホール、伊勢原市. Only source-explicit room names, seat counts, and floor areas were structured. Stage, proscenium, building, and drawing dimensions were not converted into ceiling values; unreported ceilings stay `要確認`.
+- Price observations: eight current tax-included full-day base fees were added for ハーモニーホール座間. Commercial-use, admission, equipment, and other conditional amounts stay source notes rather than a general day-price.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment passed: source commit `aead0d9d6fe31a23931ef1c7a71fce5adac166df` was pushed to the authorized Sites source repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_2ffc58d47ce8819194b5716905f12d85` (deployment `appgdep_6a76ecff2b8c8191bb548b0ef9520019`) deployed successfully. Both public URLs returned the `?release=aead0d9` page and contained the newly added `稚内総合文化センター` marker. Tracked `web/dist` was restored after the deployment build.
-- Next wave: 神奈川県, tied at the lowest candidate depth (18 candidates) in the regenerated report.
+- Public deployment: pending the named source commit and authorized Sites push/deployment.
+- Next wave: 長野県, tied at the lowest candidate depth (18 candidates) in the regenerated report.
 
 - Wave 105 — Niigata: added 柏崎市文化会館アルフォーレ、南魚沼市民会館、魚沼市響きの森文化会館、村上市民ふれあいセンター、妙高市文化ホール、新潟県民会館、新潟市江南区文化会館、新潟市秋葉区文化会館 and 94 named searchable spaces. 新潟県 is now 25 candidates, 19 municipalities, and 158 spaces; national totals are 906 candidates, 4,746 spaces, and 2,842 price observations. Remaining candidate and space deficits are 269 and 8.
 - Official source status: current facility pages from 柏崎市、南魚沼市、魚沼市、村上市、妙高市、新潟県民会館、新潟市 and the corresponding official operators. Only source-explicit room names, seat counts, and floor areas were structured. Stage, proscenium, building, and drawing dimensions were never converted into ceiling values.
