@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 131 — Tottori official-source expansion and public deployment verified; 山口県 is next.
+- Current wave: Wave 132 — Yamaguchi official-source expansion validated; source commit and public deployment pending.
 
 ## Baseline
 
@@ -14,6 +14,15 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 132 Local Checkpoint
+
+- Yamaguchi: added six candidates — 山口市民会館、下関市生涯学習プラザ（ドリームシップ）、周南市文化会館、ルネッサながと（山口県民芸術文化ホールながと）、山口情報芸術センター［YCAM］、ヒストリア宇部 — and 96 named, independently searchable spaces. 山口県 is now 25 candidates, 18 municipalities, and 188 spaces. National totals are 1,070 candidates, 6,422 spaces, and 2,870 price observations; remaining candidate and space deficits are 105 and 0.
+- Official source status: current official city and designated-operator pages from 山口市民会館、下関市生涯学習プラザ、周南市文化会館、ルネッサながと、YCAM、宇部市. All source-explicit halls, flat-floor halls, rehearsal/practice rooms, learning/meeting rooms, exhibition rooms, dressing/green rooms, galleries, support zones, library-adjacent zones, and named public-facility spaces were structured. 下関市生涯学習プラザ・風のホール alone explicitly reports a floor-to-ceiling height of about 8m, which is recorded as the published minimum-clearance value. Published stage, opening, sunoko, proscenium, and building figures were not used as ceiling-height evidence; unknown ceilings, floor loads, loading, streaming, price applicability, availability, and ordinary lending scope remain `要確認`.
+- Price observations: none added. The published tables vary by time band, booking conditions, eligibility, admission, equipment, room configuration, commercial use, or venue-specific rules, so no ambiguous amount was generalized into the day-price filter.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending the validated source commit, Sites source push, public release, and two-URL verification. The next eligible lowest-depth prefecture after this wave is 徳島県, tied with 大分県、宮崎県 at 19 candidates.
 
 ## Wave 131 Local Checkpoint
 
