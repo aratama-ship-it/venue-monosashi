@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 135 — Miyazaki official-source expansion and public deployment verified; 青森県 is next.
+- Current wave: Wave 136 — Aomori official-source expansion passed local validation; source commit and public deployment are next.
 
 ## Baseline
 
@@ -14,6 +14,15 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 136 Local Checkpoint
+
+- Aomori: added five candidates — リンクステーションホール青森、弘前市民会館、リンクモア平安閣市民ホール（青森市民ホール）、SG GROUP ホールはちのへ（八戸市公会堂・公民館）、五所川原市ふるさと交流圏民センター（オルテンシア） — and 75 named independently searchable spaces. 青森県 is now 25 candidates, 18 municipalities, and 186 spaces. National totals are 1,093 candidates, 6,644 spaces, and 2,875 price observations; remaining candidate and space deficits are 82 and 0.
+- Official source status: current Aomori City, Hirosaki City, Hachinohe City, and Goshogawara City material only. The additions retain source-explicit halls, movable-seating halls, rehearsal rooms, individually named dressing rooms, meeting rooms, Japanese rooms, tea rooms, exhibition rooms, lobby/foyer areas, childcare rooms, kitchen and lecture rooms, and facility-support spaces. No new ceiling height was entered: published stage and proscenium dimensions remain non-filterable, while unreported ceilings, floor loads, loading, streaming, fee applicability, and availability remain `要確認`.
+- Price observations: none added. The official price schemes vary by time band, weekday/holiday, admission, commercial purpose, room configuration, and other conditions, so no ambiguous amount was generalized into the daily-budget filter.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending the user-authorized Sites source push and public deployment after the named source commit. The next eligible lowest-depth prefecture after deployment is 宮城県, tied with 栃木県、東京都、富山県、福井県、愛知県、滋賀県、京都府、兵庫県、島根県 at 20 candidates.
 
 ## Wave 135 Local Checkpoint
 

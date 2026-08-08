@@ -2,9 +2,16 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 135 Miyazaki has passed local validation and is proceeding to public deployment. The next lowest-depth group starts at 20 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 136 Aomori has passed local validation and is proceeding to public deployment. The next lowest-depth group starts at 20 candidates.
 
 ## Latest Wave
+
+- Wave 136 — Aomori: added リンクステーションホール青森、弘前市民会館、リンクモア平安閣市民ホール（青森市民ホール）、SG GROUP ホールはちのへ（八戸市公会堂・公民館）、五所川原市ふるさと交流圏民センター（オルテンシア） and 75 named searchable spaces. 青森県 is now 25 candidates, 18 municipalities, and 186 spaces; national totals are 1,093 candidates, 6,644 spaces, and 2,875 price observations. Remaining candidate and space deficits are 82 and 0.
+- Official source status: current municipal material from 青森市、弘前市、八戸市、五所川原市 only. Source-explicit halls, practice rooms, dressing rooms, meeting rooms, Japanese rooms, tea rooms, exhibition rooms, foyer/lobby areas, and support spaces were structured. No published ceiling-height figure was added: stage and proscenium dimensions were not converted into ceiling values, and all unreported operating conditions remain `要確認`.
+- Price observations: none added. Published charges vary by time band, weekday/holiday, admission, commercial purpose, configuration, and other terms, so no ambiguous fee was generalized into the daily-rate filter.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Public deployment is pending the user-authorized Sites source push for the named source commit. Next wave after deployment: 宮城県, tied with 栃木県、東京都、富山県、福井県、愛知県、滋賀県、京都府、兵庫県、島根県 at 20 candidates.
 
 - Wave 135 — Miyazaki: added 宮崎市民文化ホール、メディキット県民文化センター（宮崎県立芸術劇場）、延岡総合文化センター、宮崎市民プラザ、宮崎市清武文化会館、宮崎市佐土原総合文化センター and 72 named searchable spaces. 宮崎県 is now 25 candidates, 18 municipalities, and 162 spaces; national totals are 1,088 candidates, 6,569 spaces, and 2,875 price observations. Remaining candidate and space deficits are 87 and 0.
 - Official source status: current designated-operator, public foundation, and Miyazaki City material only. Exact seats, room areas, direct room heights, and explicitly named spaces were retained only where published. The only new ceiling values are 延岡総合文化センター展示室1の3.5m and 展示室2の5.0m; stage, portal, sunoko, pit, and building dimensions were not converted into the ceiling filter. Other unreported operating conditions remain `要確認`.
