@@ -425,6 +425,14 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Validation passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The only warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
 - Public deployment passed: source commit `8c1705236812127e82de1a652420952fdd0b7cf6` was pushed to the authorized Sites repository; production version 125 deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site` and `https://venue.art-monosashi.com/?release=8c17052` returned the established site marker after deployment. Tracked `web/dist` output was restored.
 
+## Wave 81 — Akita official-source expansion
+
+- Added four candidates: 五城館（五城目町）、美郷町公民館（美郷町）、大潟村公民館（大潟村）、潟上市市民センター「かたりあん」（潟上市）。
+- Added 31 independently searchable spaces. 秋田県 is now 19 candidates, 18 municipalities, and 86 spaces; national totals are 804 candidates and 3,804 spaces. Remaining candidate and space deficits are 371 and 34.
+- Official source status: 五城目町、美郷町、大潟村の公式公共施設予約システム・生涯学習施設案内、潟上市の市民センター案内・令和7年施行の公民館条例を使用。Only source-explicit floor areas and one explicitly stated movable-seat count were recorded. No ceiling height or price observation was inferred; room/stage dimensions and approximate capacities remain notes rather than filter values. Current availability and unreported conditions remain `要確認`.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Public deployment is pending the named source commit and authorized Sites release.
+
 ## Wave 77 — Tokushima official-source expansion
 
 - Added four candidates: 北島町立図書館・創世ホール（北島町）、海陽町海南文化館（阿波海南文化村）（海陽町）、三好市池田総合体育館（三好市）、東みよし町中央公民館（老人福祉センター）（東みよし町）。
