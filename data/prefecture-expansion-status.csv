@@ -37,7 +37,7 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 徳島県,四国,19,16,83,30,19,1,6,0,0,expanding
 香川県,四国,20,16,89,15,26,0,5,0,0,expanding
 愛媛県,四国,21,16,130,51,54,0,4,0,0,expanding
-高知県,四国,18,11,102,36,54,1,7,4,0,expanding
+高知県,四国,25,18,142,63,71,1,0,0,0,reference_depth
 福岡県,九州,20,15,146,104,91,7,5,0,0,expanding
 佐賀県,九州,18,16,76,24,21,2,7,0,0,expanding
 長崎県,九州,21,15,113,31,23,2,4,0,0,expanding
