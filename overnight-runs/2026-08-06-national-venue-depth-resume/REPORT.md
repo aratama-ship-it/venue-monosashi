@@ -2,9 +2,18 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 113 Wakayama is validated and publicly deployed; the next bounded wave is selected from the five prefectures tied at 18 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 114 Hiroshima is locally validated and ready for its authorized public deployment; the next bounded wave will be selected from the four prefectures tied at 18 candidates.
 
 ## Latest Wave
+
+- Wave 114 — Hiroshima: added 竹原市民館、ジーベックホール（府中市文化センター）、安芸高田市民文化センター クリスタルアージョ、大崎上島文化センター、芸北文化ホール（芸北地域づくりセンター・芸北農村環境改善センター）、さんわ総合センター（やまなみ文化ホール・高蓋ふれあい交流施設）、川・森・文化・交流センター（やまびこホール） and 47 named searchable spaces. 広島県 is now 25 candidates, 18 municipalities, and 105 spaces; national totals are 958 candidates, 5,270 spaces, and 2,870 price observations. Remaining candidate and space deficits are 217 and 0.
+- Official source status: municipal facility, current-use, current-event, and official application pages from 竹原市、府中市、安芸高田市、大崎上島町、北広島町、神石高原町、安芸太田町. Only source-explicit room names, seat counts, fixed seating, and floor areas were structured. Stage, opening, building, and facility-overview dimensions were not converted into ceiling values; unreported ceilings stay `要確認`.
+- Availability caveats retained: 竹原市民館ホール is recorded as suspended since 2025-06-01 after a source-explicit rain-leak/corroded-ceiling incident, while its meeting rooms remain normally usable. A 2025 official Akiota record of rain leakage and ceiling peeling is also retained as a usage-confirmation caveat, not silently discarded.
+- Price observations: none added. The published prices are hourly, period-based, or vary with municipality/営利 conditions, so they are not generalized into a misleading day-price filter.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Public deployment: pending source commit and authorized Sites release. After it is live, verify both public URLs with a new Hiroshima marker before starting the next source wave.
+- Next wave: one of 高知県、佐賀県、熊本県、鹿児島県, tied at the lowest candidate depth (18 candidates) in the regenerated report.
 
 - Wave 113 — Wakayama: added 日高川交流センター、上富田文化会館、串本町文化センター、那智勝浦町体育文化会館、天満公民館、高野町民体育館、みなべ町生涯学習センター and 41 named searchable spaces. 和歌山県 is now 25 candidates, 20 municipalities, and 99 spaces; national totals are 951 candidates, 5,223 spaces, and 2,870 price observations. Remaining candidate and space deficits are 224 and 0.
 - Official source status: current municipal facility and event pages from 日高川町、上富田町、串本町、那智勝浦町、高野町、みなべ町. Only source-explicit room names, seat counts, fixed seating, and floor areas were structured. Stage, sound-reflector, entrance, eave, and building dimensions were not converted into ceiling values; unreported ceilings stay `要確認`.
