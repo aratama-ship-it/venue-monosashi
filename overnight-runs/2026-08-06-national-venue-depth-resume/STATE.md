@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-09 Asia/Tokyo
-- Current wave: Wave 150 — Ehime official-source expansion and public deployment are verified. 長崎県・沖縄県 are next at the lowest candidate depth.
+- Current wave: Wave 151 — Nagasaki official-source expansion and public deployment are verified. 沖縄県 is next at the lowest candidate depth.
 
 ## Baseline
 
@@ -14,6 +14,16 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 151 Local Checkpoint
+
+- Nagasaki: added four candidates — 佐々町文化会館、長与町民文化ホール、対馬市公会堂（対馬市交流センター2階）、対馬市美津島文化会館 — and 27 named independently searchable spaces. 長崎県 is now 25 candidates, 18 municipalities, and 140 spaces. National totals are 1,165 candidates, 7,588 spaces, and 2,881 price observations; remaining candidate and space deficits are 10 and 0, and 43 of 47 prefectures meet the full reference depth.
+- Official source status: current town and city facility, application, and ordinance material only: https://www.sazacho-nagasaki.jp/kiji003197/ 、https://webtown.nagayo.jp/dynamic/info/pub/detail.aspx?c_id=29&id=11 、https://webtown.nagayo.jp/kiji003111/index.html 、https://webtown.nagayo.jp/kiji003113/index.html 、https://webtown.nagayo.jp/kiji003114/index.html 、https://webtown.nagayo.jp/kiji003115/index.html 、https://webtown.nagayo.jp/kiji003116/index.html 、https://www.city.tsushima.nagasaki.jp/gyousei/kurashi/download/sisetsu/1354.html 、https://www.city.tsushima.nagasaki.jp/section/reiki_int/reiki_honbun/r013RG00000232.html 、https://www.city.tsushima.nagasaki.jp/section/reiki_int/reiki_honbun/r013RG00000234.html 。公式に個別名・容量・面積または使用区分として明示されたホール、展示・ギャラリー、会議・研修・和室、リハーサル、楽屋、舞台だけを構造化し、推測した区画は追加していない。
+- Availability and ceiling safety: 新たなフィルタ可能天井高は追加していない。長与町民文化ホールの舞台高さ8mは舞台仕様であり、最低天井高に転用していない。対馬市公会堂のリハーサル室・楽屋はホール利用に関連する場合に限るため `needs_check` とし、長与町民文化ホールのホワイエ単独利用も空き状況・申込条件により `needs_check` とした。未公表の最低天井高、床荷重、搬入、吊り可否、催事回線、空き状況は要確認。
+- Price observations: none added. 佐々町文化会館、長与町民文化ホール、対馬市公会堂、対馬市美津島文化会館の料金は時間帯、平日休日、入場料、営利目的、冷暖房、設備、利用条件などで変動するため、今回の候補深度拡張では曖昧な日額に正規化していない。
+- Local verification: npm --prefix web run data:generate、npm run audit、npm run depth-report:write、git diff --check、npm run validate passed. The only audit warning is the pre-existing historical-events.csv:173 row. Tracked web/dist was rebuilt for the archive and restored after final public verification.
+- Changed source files: data/candidate-venues.csv、data/venue-details.csv、generated data/prefecture-expansion-status.csv、and generated web/app/generated-data.ts; this checkpoint updates STATE.md and REPORT.md.
+- Deployment and public verification: source commit 287efe69ba24256020473d87cf9aebbedccc30f7 was pushed to the user-authorized Sites source repository with 78eb83cb6323e95842594ab7bcfa64888f062d3d as its force-with-lease guard. Fresh build archive verification included the referenced SSR venue-search asset. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_cd00ffd1096881919b0c5ef4d7b1dc37 and deployment appgdep_6a777ec94910819188923a5609da3e69 succeeded. Both https://venue-monosashi.juggler-arata.chatgpt.site and https://venue.art-monosashi.com returned HTTP 200 and contained the 佐々町文化会館 search marker. Next eligible waves: 沖縄県 at 21 candidates, then 北海道・神奈川県 at 22 candidates.
 
 ## Wave 150 Local Checkpoint
 

@@ -2,9 +2,16 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 150 Ehime is validated and publicly deployed. The next lowest-depth prefectures are Nagasaki and Okinawa at 21 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 151 Nagasaki is validated and publicly deployed. The next lowest-depth prefecture is Okinawa at 21 candidates.
 
 ## Latest Wave
+
+- Wave 151 — Nagasaki: added 佐々町文化会館、長与町民文化ホール、対馬市公会堂（対馬市交流センター2階）、対馬市美津島文化会館 and 27 named searchable spaces. 長崎県 is now 25 candidates, 18 municipalities, and 140 spaces; national totals are 1,165 candidates, 7,588 spaces, and 2,881 price observations. Remaining candidate and space deficits are 10 and 0; 43 of 47 prefectures meet the reference depth.
+- Official source status: current municipal facility, application, and ordinance materials only. The additions retain source-explicit hall, stage, foyer, exhibition, gallery, conference, rehearsal, dressing, Japanese, lounge, kitchen/practice, and training spaces. No inferred spaces were added.
+- Availability and ceiling safety: no new filterable ceiling value was added. The 8m value published for the 長与町民文化ホール stage remains a stage specification, not a ceiling height. 長与町民文化ホール's foyer is conditional on hall vacancy within one month; 対馬市公会堂's rehearsal room and dressing rooms are limited to uses related to its hall. Those independent-use conditions remain needs_check. No stage, proscenium, or building dimension was converted into ceiling data.
+- Price observations: none added. Current fees vary by time band, weekday/holiday, admission, commercial use, HVAC, equipment, and other usage conditions, so no ambiguous amount was normalized into the daily-budget filter.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing historical-events.csv:173 row.
+- Public deployment passed: source commit 287efe69ba24256020473d87cf9aebbedccc30f7 was pushed to the authorized Sites repository with a force-with-lease guard from 78eb83cb6323e95842594ab7bcfa64888f062d3d. Fresh archive inspection confirmed the referenced SSR search asset. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_cd00ffd1096881919b0c5ef4d7b1dc37 (deployment appgdep_6a777ec94910819188923a5609da3e69) succeeded. Both public URLs returned HTTP 200 and contained the 佐々町文化会館 search marker; tracked web/dist was restored. Next wave: 沖縄県 at 21 candidates.
 
 - Wave 150 — Ehime: added 愛媛国際貿易センター（アイテムえひめ）、愛媛県生涯学習センター、愛媛県視聴覚福祉センター、愛媛県男女共同参画センター and 45 named searchable spaces. 愛媛県 is now 25 candidates, 16 municipalities, and 175 spaces; national totals are 1,161 candidates, 7,561 spaces, and 2,881 price observations. Remaining candidate and space deficits are 14 and 0; 42 of 47 prefectures meet the reference depth.
 - Official source status: current prefectural, operator, and public-facility materials only. The additions retain source-explicit exhibition, outdoor-event, conference, multi-purpose, hall, rehearsal/practice, dressing, training, Japanese, audio-visual, kitchen, work, and meeting spaces. No inferred spaces were added.
