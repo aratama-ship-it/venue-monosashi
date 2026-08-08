@@ -2,9 +2,18 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 117 Saga is publicly deployed and verified; the next bounded wave is 熊本県, at 18 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 118 Kumamoto is locally validated and ready for its authorized source push and public deployment; the next bounded wave after release is 岩手県, at 19 candidates.
 
 ## Latest Wave
+
+- Wave 118 — Kumamoto: added 熊本県立劇場、市民会館シアーズホーム夢ホール（熊本市民会館）、菊陽町総合体育館、ecowin宇土アリーナ（宇土市民体育館）、甲佐町生涯学習センター「輝」、久木野総合センター、交流館石倉（えびす広場） and 60 named searchable spaces. 熊本県 is now 25 candidates, 20 municipalities, and 156 spaces; national totals are 986 candidates, 5,462 spaces, and 2,870 price observations. Remaining candidate and space deficits are 189 and 0.
+- Official source status: current official operator, municipality, municipal-booking, town-ordinance, and government pages from 熊本県立劇場、熊本市、菊陽町、宇土市、甲佐町、南阿蘇村、多良木町. Only source-explicit room names, seat counts, floor areas, and current-use facts were structured. The three source-published 熊本県立劇場 room-height values are stored as raw `highest_point` observations only; they are not minimum-clearance filter values. Stage, proscenium, and building dimensions were not converted into ceiling values; unreported ceilings stay `要確認`.
+- Availability caveat retained: 熊本県立劇場のリハーサル室・練習室・和室は、公式の天井改修案内により2026年10月1日から2028年2月末まで予約受付停止予定として候補注記に残した。
+- Price observations: none added. Published fees are time-band, admission-fee, commercial-use, equipment, residency, or room-condition dependent, so they are not generalized into a misleading day-price filter.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Public deployment: pending authorized source push, Sites deployment, and marker verification at both public URLs.
+- Next wave: 岩手県, tied with 秋田県、山形県、福島県、茨城県、群馬県、埼玉県、千葉県、石川県、山梨県 at the lowest candidate depth (19 candidates) in the regenerated report.
 
 - Wave 117 — Saga: added 白石町総合センター、福富ゆうあい館、上峰町民センター、太良町中央公民館、佐賀市産業振興会館、唐津市民交流プラザ、唐津市厳木コミュニティセンター and 51 named searchable spaces. 佐賀県 is now 25 candidates, 19 municipalities, and 127 spaces; national totals are 979 candidates, 5,402 spaces, and 2,870 price observations. Remaining candidate and space deficits are 196 and 0.
 - Official source status: current municipal facility, rental, use-condition, and ordinance pages from 白石町、上峰町、太良町、佐賀市、唐津市. Only source-explicit room names, areas, capacities, current-use facts, and current service conditions were structured. Stage, opening, building, and project dimensions were not converted into ceiling values; unreported ceilings stay `要確認`.

@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 117 — Saga official-source expansion deployed and publicly verified; Wave 118 Kumamoto selection is next.
+- Current wave: Wave 118 — Kumamoto official-source expansion is locally validated; public source push and deployment are pending.
 
 ## Baseline
 
@@ -14,6 +14,17 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 118 Checkpoint
+
+- Kumamoto: added seven candidates — 熊本県立劇場（熊本市）、市民会館シアーズホーム夢ホール（熊本市民会館）（熊本市）、菊陽町総合体育館（菊陽町）、ecowin宇土アリーナ（宇土市民体育館）（宇土市）、甲佐町生涯学習センター「輝」（甲佐町）、久木野総合センター（南阿蘇村）、交流館石倉（えびす広場）（多良木町） — and 60 named, independently searchable spaces. 熊本県 is now 25 candidates, 20 municipalities, and 156 spaces. National totals are 986 candidates, 5,462 spaces, and 2,870 price observations; remaining candidate and space deficits are 189 and 0.
+- Official source status: current official operator, municipality, municipal-booking, town-ordinance, and government pages from 熊本県立劇場、熊本市、菊陽町、宇土市、甲佐町、南阿蘇村、多良木町. Only source-explicit room names, areas, capacities, service facts, and status notices were structured. 熊本県立劇場の会議室・リハーサル室の公開「高さ」3値は raw `highest_point` として保持し、最低有効高フィルターには用いない。舞台・プロセニアム・建物寸法は天井値へ転用せず、未公表の天井高は `要確認` のままとした。
+- Availability caveat retained: 熊本県立劇場のリハーサル室・練習室・和室は、公式の天井改修案内により2026年10月1日から2028年2月末まで予約受付停止予定として候補注記に残した。
+- Price observations: none added. 公開料金は時間帯・入場料・営利利用・設備・居住地・利用形態による条件差を含むため、一般の日額予算フィルターに誤って正規化していない。
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending source commit, authorized Sites repository push, production deployment, and both-public-URL marker verification.
+- Next action after deployment: select 岩手県, tied with 秋田県、山形県、福島県、茨城県、群馬県、埼玉県、千葉県、石川県、山梨県 at 19 candidates, for the next bounded official-source wave.
 
 ## Wave 117 Checkpoint
 
