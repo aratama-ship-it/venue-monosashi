@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 103 — Nagasaki official-source expansion locally validated; source push and public deployment are pending for this bounded wave.
+- Current wave: Wave 103 — Nagasaki official-source expansion completed and deployed; select Okinawa from the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -31,9 +31,9 @@
 - Official source status: 壱岐市と壱岐の島ホール公式運営者、波佐見町、南島原市、東彼杵町、時津町ととぎつカナリーホール公式運営者。The structured data retains only source-explicit room names, capacities, and floor areas. No ceiling was inferred from stage dimensions, sound-reflector dimensions, or building dimensions.
 - Price observations: none added. The available fee pages either present time-band/admission conditions without a safely reusable current base class, are due to change on 2026-10-01, or need a current-date/eligibility recheck; these remain notes or `要確認` rather than being normalized as a searchable price.
 - Local verification: app-data generation, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing historical-events row.
-- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Tracked `web/dist` output is pending restoration after the deployment build.
-- Deployment: pending user-authorized source push and public verification.
-- Next action: commit and deploy Wave 103, then select 沖縄県 from the next bounded lowest-depth prefectural wave.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Tracked `web/dist` output was restored.
+- Deployment: source commit `9d6cab453458777c9dd38d47589c9e59feba2001` was pushed to the user-authorized Sites repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_53544f7771f08191abe7f625fba03b7c` deployed successfully. Both public URLs returned HTTP 200 for `?release=9d6cab4`, and live search returned the new とぎつカナリーホール marker on both.
+- Next action: select and research 沖縄県, now the lowest candidate-depth prefecture (16 candidates), as the next bounded official-source wave.
 
 ## Completed Waves
 

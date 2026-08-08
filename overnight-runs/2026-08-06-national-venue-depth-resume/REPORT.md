@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 103 Nagasaki is locally validated and awaiting the user-authorized source push and public deployment.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 103 Nagasaki is deployed; the next bounded wave is Okinawa.
 
 ## Latest Wave
 
@@ -10,7 +10,8 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Official source status: live official pages or official operating sites from 壱岐市、波佐見町、南島原市、東彼杵町、時津町 and the respective facilities. Only source-explicit room names, capacities, floor areas, and current reservation conditions were structured. Stage, sound-reflector, and building dimensions were retained only as notes and never converted into ceiling values.
 - Price observations: none added. The observed fee pages have purpose, admission, effective-date, or eligibility conditions that need a current-date recheck before any price can be safely used for filtering; they remain explicit notes rather than approximate prices.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row.
-- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Public deployment is pending; tracked `web/dist` will be restored after the deployment build.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Tracked `web/dist` was restored.
+- Public deployment passed: source commit `9d6cab453458777c9dd38d47589c9e59feba2001` was pushed to the authorized Sites source repository. The saved Sites version deployed successfully, both public URLs returned HTTP 200 for `?release=9d6cab4`, and each returned the query marker `とぎつカナリーホール`.
 - Next wave: 沖縄県, now the lowest candidate-depth prefecture (16 candidates) in the regenerated report.
 
 - Wave 102 — Fukuoka: added リーパスプラザこが、大野城まどかぴあ、春日市ふれあい文化センター、小郡市文化会館 and 78 named searchable spaces. 福岡県 is now 20 candidates, 15 municipalities, and 146 spaces; national totals are 888 candidates, 4,534 spaces, and 2,842 price observations. Remaining candidate and space deficits are 287 and 8.
