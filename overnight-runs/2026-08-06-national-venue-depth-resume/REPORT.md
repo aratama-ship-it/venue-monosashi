@@ -2,7 +2,7 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 113 Wakayama is locally validated and awaiting its user-authorized source commit and public deployment; the next bounded wave is selected from the five prefectures tied at 18 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 113 Wakayama is validated and publicly deployed; the next bounded wave is selected from the five prefectures tied at 18 candidates.
 
 ## Latest Wave
 
@@ -11,7 +11,7 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Price observations: none added. Available fees are hourly, period-based, or purpose-dependent, so they remain unnormalized rather than becoming a misleading general day-price.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
 - Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment: pending the exact validated source commit. The deployment check will query both URLs for the new `日高川交流センター` marker.
+- Public deployment passed: source commit `1b923a4756071b04eadd06912a47fab8663ea72b` was pushed to the authorized Sites source repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_6adbf0c8e0a48191bacc2f85ebb40359` (deployment `appgdep_6a76f91bbcc8819189f2260ff8f3f1d7`) deployed successfully. Both public URLs returned the `?release=1b923a4` page and contained the newly added `日高川交流センター` marker. Tracked `web/dist` was restored after the deployment build.
 - Next wave: one of 広島県、高知県、佐賀県、熊本県、鹿児島県, tied at the lowest candidate depth (18 candidates) in the regenerated report.
 
 - Wave 112 — Gifu: added 恵那文化センター、瑞浪市総合文化センター、下呂市民会館、美濃市文化会館、文化の里 花咲きホール、飛騨市文化交流センター、海津市文化センター（海津公民館＋海津農村環境改善センター） and 60 named searchable spaces. 岐阜県 is now 25 candidates, 19 municipalities, and 186 spaces; national totals are 944 candidates, 5,182 spaces, and 2,870 price observations. Remaining candidate and space deficits are 231 and 0.

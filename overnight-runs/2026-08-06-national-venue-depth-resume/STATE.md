@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 113 — Wakayama official-source expansion is locally validated and awaiting its user-authorized source commit and public deployment. The next bounded lowest-depth wave is one of 広島県・高知県・佐賀県・熊本県・鹿児島県.
+- Current wave: Wave 113 — Wakayama official-source expansion completed and deployed; select one of 広島県・高知県・佐賀県・熊本県・鹿児島県 from the next bounded lowest-depth wave.
 
 ## Baseline
 
@@ -22,7 +22,7 @@
 - Price observations: none added. Available fees are hourly, period-based, or purpose-dependent and were not normalized into a current generally applicable day-price filter.
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending. After committing the validated source files, push the exact commit to the user-authorized Sites source repository, save and deploy the built version, then verify both public URLs using a new Wakayama facility marker. Tracked `web/dist` must be restored after the deployment build.
+- Deployment: source commit `1b923a4756071b04eadd06912a47fab8663ea72b` was pushed to the user-authorized Sites source repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_6adbf0c8e0a48191bacc2f85ebb40359` (deployment `appgdep_6a76f91bbcc8819189f2260ff8f3f1d7`) deployed successfully. Both public URLs returned the `?release=1b923a4` page and contained the newly added `日高川交流センター` marker. Tracked `web/dist` was restored after the deployment build.
 - Next action after deployment: select one of 広島県、高知県、佐賀県、熊本県、鹿児島県, tied at the current lowest candidate depth (18 candidates), for the next bounded official-source wave.
 
 ## Wave 112 Checkpoint
