@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-09 Asia/Tokyo
-- Current wave: Wave 140 — Toyama official-source expansion and public deployment verified; 福井県・愛知県・滋賀県・京都府・兵庫県・島根県・香川県・福岡県 are next at the lowest candidate depth.
+- Current wave: Wave 141 — Fukui official-source expansion and public deployment verified; 愛知県・滋賀県・京都府・兵庫県・島根県・香川県・福岡県 are next at the lowest candidate depth.
 
 ## Baseline
 
@@ -14,6 +14,15 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 141 Local Checkpoint
+
+- Fukui: added five candidates — 福井県立音楽堂（ハーモニーホールふくい）、福井市にぎわい交流施設（ハピテラス・ハピリンホール）、福井県産業会館、福井県産業情報センター、福井県生活学習館（ユー・アイふくい） — and 63 named independently searchable spaces. 福井県 is now 25 candidates, 16 municipalities, and 173 spaces. National totals are 1,118 candidates, 7,028 spaces, and 2,881 price observations; remaining candidate and space deficits are 57 and 0, and 33 of 47 prefectures meet the full reference depth.
+- Official source status: current official prefectural, municipal, and designated-operator material only. Source-explicit halls, a roofed event square, outdoor plaza, exhibition halls, meeting and seminar rooms, business rooms, practice and rehearsal rooms, a recording studio, a video-edit room, learning rooms, Japanese rooms, a tea room, creative/cooking/woodworking rooms, dressing rooms, a fitness room, and galleries were structured. No new ceiling value was added: stage, glass-screen, and other non-ceiling dimensions remain outside the filter; unpublished ceiling, floor-load, loading, streaming, fee applicability, and availability conditions are retained as 要確認.
+- Price observations: added two current precisely sourced base all-day rates for 福井県生活学習館多目的ホール — weekday 85,370円 and weekend/holiday 93,880円. The statutory terms separately add for admission charge, commercial use, HVAC, and preparation/rehearsal, so both observations retain those exclusions and remain the base `all` fee class rather than being misclassified as nonprofit or commercial rates.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation and after the deployment build.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, and generated `web/app/generated-data.ts`.
+- Deployment: source commit `9657e57d308106e3bccd772888e7c5fb02fa0a7a` was pushed to the user-authorized Sites source repository with the prior `0369fabe5e16b3c23b85b932759e298e32418ab2` remote head as a force-with-lease guard. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_06fceae80510819186773c1b9bce0ae1` and deployment `appgdep_6a7758c2cfec8191abae28e6af325a10` succeeded. Both https://venue-monosashi.juggler-arata.chatgpt.site and https://venue.art-monosashi.com served the newly added 福井県立音楽堂 marker after deployment. The next eligible lowest-depth prefectures are 愛知県、滋賀県、京都府、兵庫県、島根県、香川県、福岡県 at 20 candidates.
 
 ## Wave 140 Local Checkpoint
 
