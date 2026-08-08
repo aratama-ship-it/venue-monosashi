@@ -369,11 +369,12 @@ body {
 
 .hero-copy {
   margin: 0;
-  max-width: 900px;
+  max-width: none;
   color: #3e3e3a;
   font-size: clamp(0.9rem, 1.15vw, 1.03rem);
   font-weight: 600;
   line-height: 1.95;
+  text-wrap: pretty;
 }
 
 .reference-block {

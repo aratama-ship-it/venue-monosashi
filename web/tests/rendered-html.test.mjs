@@ -36,6 +36,10 @@ test("server-renders the venue search shell", async () => {
     new URL("../app/venue-search.tsx", import.meta.url),
     "utf8",
   );
+  const editorialCss = await readFile(
+    new URL("../app/editorial-concept.css", import.meta.url),
+    "utf8",
+  );
   const candidateCount = candidateCsv.trim().split(/\r?\n/).length - 1;
   const response = await render();
   assert.equal(response.status, 200);
@@ -105,6 +109,7 @@ test("server-renders the venue search shell", async () => {
   assert.match(generatedData, /"amount": 288320/);
   assert.match(generatedData, /"websiteUrl": "https:\/\/prismhall\.jp\/"/);
   assert.match(venueSearchSource, /ウェブサイト ↗/);
+  assert.match(editorialCss, /\.hero-copy\s*\{[\s\S]*?max-width:\s*none;/);
   assert.match(html, /区画ごとの情報を見る/);
   assert.equal([...html.matchAll(/区画ごとの情報を見る/g)].length, 40);
   assert.equal([...html.matchAll(/観測した料金・運用を確認/g)].length, 40);
