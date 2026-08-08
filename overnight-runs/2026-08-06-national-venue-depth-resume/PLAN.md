@@ -46,4 +46,4 @@ Continue the national venue database toward the established reference depth: eve
 ## Verification
 
 - Every wave: `npm run audit`, `npm run depth-report:write`, `git diff --check`, source-data generation, and a public deployment check.
-- Completion: `npm run validate`, restore non-source build output if changed, `python3 /Users/arata/.codex/skills/overnight-project-runner/scripts/validate_run.py <run-dir> --final`.
+- Completion: `npm run validate`, restore non-source build output if changed, `python3 /Users/arata/.codex/skills/overnight-project-runner/scripts/validate_run.py overnight-runs/2026-08-06-national-venue-depth-resume --final`.
