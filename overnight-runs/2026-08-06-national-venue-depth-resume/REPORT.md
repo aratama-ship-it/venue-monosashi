@@ -2,9 +2,17 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 147 Kagawa has been validated and publicly deployed. The next lowest-depth prefecture is Fukuoka at 20 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 148 Fukuoka has been validated and publicly deployed. The next lowest-depth prefectures are Okayama, Ehime, Nagasaki, and Okinawa at 21 candidates.
 
 ## Latest Wave
+
+- Wave 148 — Fukuoka: added 福岡市民ホール、アクロス福岡、SAWARAPIA（福岡県立ももち文化センター）、福岡市科学館、黒崎ひびしんホール and 104 named searchable spaces. 福岡県 is now 25 candidates, 15 municipalities, and 250 spaces; national totals are 1,153 candidates, 7,478 spaces, and 2,881 price observations. Remaining candidate and space deficits are 22 and 0; 40 of 47 prefectures meet the reference depth.
+- Official source status: current official designated-operator, city, foundation, and municipal material only. The additions retain source-explicit halls, a science hall and planetarium, exhibition halls and gallery, conference and seminar rooms, rehearsal and practice rooms, individually named support/green rooms, outdoor event space, and instrument storage. No inferred spaces were added.
+- Availability and ceiling safety: the only newly filterable ceiling values are the officially labelled single-room heights at アクロス福岡 — event hall inner height 5.6m, international conference hall 6.0m, round hall 3.4m, cultural gallery 2.4m, and main conference room 5.2m. No stage, proscenium, stage-ceiling, building, or floor dimension was converted into a searchable ceiling value. 福岡市科学館 is rentable only for periods/times when it is not used by the museum, so availability remains explicit `要確認`.
+- Price observations: none added. Published fees vary by time unit, weekday/holiday, admission, commercial/nonprofit use, room, equipment, rehearsal/performance, and other terms, so no ambiguous amount was normalized into the daily-budget filter.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing historical-events.csv:173 row; tracked web/dist was restored after validation and deployment.
+- Changed source files: data/candidate-venues.csv, data/venue-details.csv, generated data/prefecture-expansion-status.csv, generated web/app/generated-data.ts, and this run ledger.
+- Public deployment passed: source commit 5ed7d25de1356dff7be57220ed4636d2ae4e5123 was pushed to the authorized Sites repository with a force-with-lease guard from f7df5be2cd1685a34f26167c980e33dbe8f71ce5. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_76be74a097708191b6c2ad5d2296b2e1 (deployment appgdep_6a777551f3e88191a81610084b41c953) succeeded. Both public URLs returned HTTP 200. Next wave: 岡山県、愛媛県、長崎県、沖縄県 at 21 candidates.
 
 - Wave 147 — Kagawa: added サンポートホール高松、高松市生涯学習センター（まなびCAN）、香川県社会福祉総合センター、直島ホール（直島町民会館）、香川県立ミュージアム and 67 named searchable spaces. 香川県 is now 25 candidates, 17 municipalities, and 156 spaces; national totals are 1,148 candidates, 7,374 spaces, and 2,881 price observations. Remaining candidate and space deficits are 27 and 0; 39 of 47 prefectures meet the reference depth.
 - Official source status: current official prefectural, municipal, designated-operator, and public-facility material only. The additions retain source-explicit halls, conference rooms, training and workshop rooms, Japanese rooms, rehearsal and practice rooms, green rooms, a gymnasium, exhibition rooms, a gallery, and a museum auditorium. No inferred spaces were added.

@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-09 Asia/Tokyo
-- Current wave: Wave 147 — Kagawa official-source expansion and public deployment verified; 福岡県 is next at the lowest candidate depth.
+- Current wave: Wave 148 — Fukuoka official-source expansion and public deployment verified; 岡山県・愛媛県・長崎県・沖縄県 are next at the lowest candidate depth.
 
 ## Baseline
 
@@ -14,6 +14,16 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 148 Local Checkpoint
+
+- Fukuoka: added five candidates — 福岡市民ホール、アクロス福岡、SAWARAPIA（福岡県立ももち文化センター）、福岡市科学館、黒崎ひびしんホール — and 104 named independently searchable spaces. 福岡県 is now 25 candidates, 15 municipalities, and 250 spaces. National totals are 1,153 candidates, 7,478 spaces, and 2,881 price observations; remaining candidate and space deficits are 22 and 0, and 40 of 47 prefectures meet the full reference depth.
+- Official source status: current official designated-operator, city, foundation, and municipal material only: https://www.fukuoka-civic-hall.jp/facility/ 、https://www.fukuoka-civic-hall.jp/facility/hall1/ 、https://www.fukuoka-civic-hall.jp/facility/hall2/ 、https://www.fukuoka-civic-hall.jp/facility/hall3/ 、https://www.fukuoka-civic-hall.jp/facility/rehearsal/ 、https://www.acros.or.jp/s_facilities/ 、https://www.acros.or.jp/s_facilities/symphony.html 、https://www.acros.or.jp/s_facilities/event.html 、https://www.acros.or.jp/s_facilities/international.html 、https://www.acros.or.jp/s_facilities/cultural.html 、https://www.acros.or.jp/s_facilities/seminar.html 、https://www.acros.or.jp/s_facilities/conference.html 、https://www.acros.or.jp/s_facilities/practice.html 、https://momochi-bunka.com/facility/ 、https://www.fukuokacity-kagakukan.jp/use/lending_facility.html 、https://www.city.kitakyushu.lg.jp/contents/02100115.html 。公式に現在掲載されるホール、展示・会議・研修・練習室、付帯控室・楽屋、屋外イベントスペース、楽器庫だけを区画単位で構造化し、推測した区画は追加していない。
+- Availability and ceiling safety: アクロス福岡で公式が単一の室内天井高として明示するイベントホール内法5.6m、国際会議場6.0m、円形ホール3.4m、交流ギャラリー2.4m、大会議室5.2mだけを `published_clear` として検索可能にした。福岡市民ホール、SAWARAPIA、福岡シンフォニーホールの舞台・プロセニアム・舞台天井の数値は室内最低天井高に転用していない。福岡市科学館の3区画は科学館として使用しない期間・時間帯に限るため、利用日・空き状況を要確認としている。
+- Price observations: none added. 福岡市民ホール、アクロス福岡、SAWARAPIA、福岡市科学館、黒崎ひびしんホールの料金は時間帯、曜日、入場料、営利非営利、用途、設備、準備・本番等で変動するため、今回の候補深度拡張では曖昧な日額に正規化していない。
+- Local verification: npm --prefix web run data:generate、npm run audit、npm run depth-report:write、git diff --check、npm run validate passed. The only audit warning is the pre-existing historical-events.csv:173 row. Tracked web/dist was restored after validation and after the deployment build.
+- Changed source files: data/candidate-venues.csv、data/venue-details.csv、generated data/prefecture-expansion-status.csv、and generated web/app/generated-data.ts; this local checkpoint updates STATE.md and REPORT.md.
+- Deployment: source commit 5ed7d25de1356dff7be57220ed4636d2ae4e5123 was pushed to the user-authorized Sites source repository with the prior f7df5be2cd1685a34f26167c980e33dbe8f71ce5 remote head as a force-with-lease guard. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_76be74a097708191b6c2ad5d2296b2e1 and deployment appgdep_6a777551f3e88191a81610084b41c953 succeeded. Both https://venue-monosashi.juggler-arata.chatgpt.site and https://venue.art-monosashi.com returned HTTP 200. The next eligible lowest-depth prefectures are 岡山県、愛媛県、長崎県、沖縄県 at 21 candidates.
 
 ## Wave 147 Local Checkpoint
 
