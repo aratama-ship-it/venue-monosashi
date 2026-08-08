@@ -2,17 +2,17 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 107 Okayama is deployed and publicly verified; the next bounded wave will select 愛媛県.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 108 Ehime is locally validated and ready for public deployment; the next source wave will select one of the prefectures tied at 18 candidates.
 
 ## Latest Wave
 
-- Wave 107 — Okayama: added 早島町町民総合会館 ゆるびの舎、里庄総合文化ホール「フロイデ」、やかげ文化センター、備前市市民センター and 19 named searchable spaces. 岡山県 is now 21 candidates, 17 municipalities, and 112 spaces; national totals are 918 candidates, 4,904 spaces, and 2,842 price observations. Remaining candidate and space deficits are 257 and 0.
-- Official source status: current public-use, cultural-facility, and municipal facility pages from 早島町、里庄町、矢掛町、備前市. Only source-explicit facility and room names, and the published capacity values for the three halls, were structured. The 備前市ホールのスノコ・プロセニアム高さ was retained only as a caveat and never converted into a ceiling value.
-- Price observations: none added. The available 早島町 fees have purpose, weekday/holiday, admission, and air-conditioning conditions; they were kept out of the day-price filter until a condition-safe normalization is possible.
+- Wave 108 — Ehime: added 砥部町文化会館、松前総合文化センター、久万高原町産業文化会館、愛南町御荘文化センター and 45 named searchable spaces. 愛媛県 is now 21 candidates, 16 municipalities, and 130 spaces; national totals are 922 candidates, 4,949 spaces, and 2,857 price observations. Remaining candidate and space deficits are 253 and 0.
+- Official source status: current public-use and cultural-facility pages from 砥部町、松前総合文化センター公式運営者、久万高原町、愛南町. The structured facts are source-explicit names, areas, capacities, fixed-seat statements, and current use conditions only. The 289㎡ stage observation at 久万高原町 is recorded as a stage area, never as ceiling data; other unreported ceilings remain `要確認`.
+- Price observations: 15 current full-day weekday base fees were added: 11 for 松前総合文化センター and 4 for 久万高原町産業文化会館. Weekend, cooling, commercial-use, admission, out-of-town, equipment, and extension rules remain explicit exclusions/notes.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row; tracked `web/dist` was restored after validation.
-- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Public deployment passed: source commit `eb13272fce7686800d81b5974b5ce9f5b05feb2e` was pushed to the authorized Sites source repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_3922792ee1a48191aa619584e895417c` deployed successfully. Both public URLs returned HTTP 200 for `?release=eb13272`, and their public search assets contained the newly added `やかげ文化センター` marker. Tracked `web/dist` was restored after the deployment build.
-- Next wave: 愛媛県 is the lowest candidate-depth prefecture (17 candidates) in the regenerated report.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Public deployment: pending for this validated wave.
+- Next wave: 北海道、神奈川県、長野県、岐阜県、和歌山県、広島県、高知県、佐賀県、熊本県、鹿児島県 are tied at the lowest candidate depth (18 candidates).
 
 - Wave 105 — Niigata: added 柏崎市文化会館アルフォーレ、南魚沼市民会館、魚沼市響きの森文化会館、村上市民ふれあいセンター、妙高市文化ホール、新潟県民会館、新潟市江南区文化会館、新潟市秋葉区文化会館 and 94 named searchable spaces. 新潟県 is now 25 candidates, 19 municipalities, and 158 spaces; national totals are 906 candidates, 4,746 spaces, and 2,842 price observations. Remaining candidate and space deficits are 269 and 8.
 - Official source status: current facility pages from 柏崎市、南魚沼市、魚沼市、村上市、妙高市、新潟県民会館、新潟市 and the corresponding official operators. Only source-explicit room names, seat counts, and floor areas were structured. Stage, proscenium, building, and drawing dimensions were never converted into ceiling values.

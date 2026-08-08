@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 107 — Okayama official-source expansion completed and deployed; select 愛媛県 from the next bounded lowest-depth prefectural wave.
+- Current wave: Wave 108 — Ehime official-source expansion validated; public deployment is the next action before selecting 北海道 and the other prefectures tied at 18 candidates.
 
 ## Baseline
 
@@ -74,6 +74,16 @@
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
 - Deployment: source commit `eb13272fce7686800d81b5974b5ce9f5b05feb2e` was pushed to the authorized Sites repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_3922792ee1a48191aa619584e895417c` (deployment `appgdep_6a76e78d87dc81919095f2bca5aaed65`) deployed successfully. Both public URLs returned HTTP 200 for `?release=eb13272`, and the public search asset contained the new `やかげ文化センター` marker on both. Tracked `web/dist` was restored after the deployment build.
 - Next action: select 愛媛県 as the lowest candidate-depth prefecture (17 candidates) for the next bounded official-source wave.
+
+## Wave 108 Checkpoint
+
+- Ehime: added four candidates — 砥部町文化会館（砥部町）、松前総合文化センター（松前町）、久万高原町産業文化会館（久万高原町）、愛南町御荘文化センター（愛南町） — and 45 named, independently searchable spaces. 愛媛県 is now 21 candidates, 16 municipalities, and 130 spaces. National totals are 922 candidates, 4,949 spaces, and 2,857 price observations; remaining candidate and space deficits are 253 and 0.
+- Official source status: current public-use/cultural-facility pages from 砥部町、松前総合文化センター公式運営者、久万高原町、愛南町. Only source-explicit room names, floor areas, capacity values, fixed-seat statements, and current use conditions were structured. The 久万高原町の舞台289㎡ is a distinct stage-area observation only; it was not converted into a ceiling measurement. All new unreported ceiling heights remain `要確認`.
+- Price observations: added 15 current, full-day weekday base fees — 11 for 松前総合文化センター and 4 for 久万高原町産業文化会館. The source-defined weekend, cooling, commercial-use, admission, out-of-town, equipment, and extension conditions remain explicit exclusions/notes rather than being silently normalized.
+- Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
+- Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
+- Deployment: pending for this validated source wave.
+- Next action: deploy this wave, then select 北海道, 神奈川県, 長野県, 岐阜県, 和歌山県, 広島県, 高知県, 佐賀県, 熊本県, or 鹿児島県, all tied at 18 candidates.
 
 ## Completed Waves
 
