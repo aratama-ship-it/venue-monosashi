@@ -2,14 +2,14 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 101 Kagawa is locally validated and awaits its authorized public deployment; the next bounded wave will be selected from the regenerated lowest-depth report.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 101 Kagawa is deployed and publicly verified; the next bounded wave will be selected from the regenerated lowest-depth report.
 
 ## Latest Wave
 
 - Wave 101 — Kagawa: added 三木町文化交流プラザ、土庄町中央公民館、綾川町総合運動公園、サン・オリーブ and 28 independently searchable spaces. 香川県 is now 20 candidates, 16 municipalities, and 89 spaces; national totals are 884 candidates, 4,456 spaces, and 2,836 price observations. Remaining candidate and space deficits are 291 and 8.
 - Official source status: current facility pages, ordinances, and fee tables published by 三木町、土庄町、綾川町、小豆島町. Only source-explicit room names, capacity, and floor-area values were structured. No ceiling was inferred; the 綾川町 arena's reported 4,693㎡ total floor area remains a note, not a searchable space area. Current fees were added only for the directly stated 土庄町 central-hall and サン・オリーブ base conditions, retaining purpose, resident, electricity, and equipment exclusions.
 - Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` output was restored.
-- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Public deployment and both-URL verification are pending.
+- Changed files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger. Public deployment passed: source commit `3020727de7170413ce8231787ea21b7d47893bfe` was pushed and its Sites version deployed successfully. Both public URLs returned HTTP 200 for `?release=3020727`, and live search returned the newly added 土庄町中央公民館 on both. Tracked `web/dist` output was restored.
 - Next wave: 福岡県, the current lowest candidate-depth prefecture.
 
 ## Changes
