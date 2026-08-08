@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-08 Asia/Tokyo
-- Current wave: Wave 110 — Kanagawa official-source expansion validated; commit and deploy the validated source next.
+- Current wave: Wave 110 — Kanagawa official-source expansion completed and deployed; select 長野県 from the next bounded lowest-depth prefectural wave.
 
 ## Baseline
 
@@ -22,7 +22,7 @@
 - Price observations: added eight current, tax-included full-day base fees for ハーモニーホール座間の大・小ホール、リハーサル室、ギャラリー、大会議室. Commercial use, equipment, admission, and other conditional amounts remain source notes rather than a generalized price.
 - Local verification: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate` passed. The only audit warning is the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after validation.
 - Changed source files: `data/candidate-venues.csv`, `data/venue-details.csv`, `data/price-observations.csv`, generated `data/prefecture-expansion-status.csv`, generated `web/app/generated-data.ts`, and this run ledger.
-- Deployment: pending the named source commit and the user-authorized Sites push/deployment.
+- Deployment: source commit `880013088e5a28ec71bd5f6051a17670eb0af6db` was pushed to the user-authorized Sites source repository. Sites version `appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_afc784fad1dc81918b2953dd5476bae3` (deployment `appgdep_6a76efb5aec0819189056b07b854688b`) deployed successfully. Both public URLs returned the `?release=8800130` page and contained the newly added `ハーモニーホール座間` marker. Tracked `web/dist` was restored after the deployment build.
 - Next action after deployment: select 長野県, tied at the current lowest candidate depth (18 candidates), for the next bounded official-source wave.
 
 ## Wave 102 Checkpoint
