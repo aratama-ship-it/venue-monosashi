@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-09 Asia/Tokyo
-- Current wave: Wave 141 — Fukui official-source expansion and public deployment verified; 愛知県・滋賀県・京都府・兵庫県・島根県・香川県・福岡県 are next at the lowest candidate depth.
+- Current wave: Wave 142 — Aichi official-source expansion and public deployment verified; 滋賀県・京都府・兵庫県・島根県・香川県・福岡県 are next at the lowest candidate depth.
 
 ## Baseline
 
@@ -14,6 +14,16 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 142 Local Checkpoint
+
+- Aichi: added five candidates — 愛知県芸術劇場、愛知県産業労働センター（ウインクあいち）、名古屋コンベンションホール、岡谷鋼機名古屋公会堂（名古屋市公会堂）、青少年文化センター（アートピア） — and 125 named independently searchable spaces. 愛知県 is now 25 candidates, 16 municipalities, and 275 spaces. National totals are 1,123 candidates, 7,153 spaces, and 2,881 price observations; remaining candidate and space deficits are 52 and 0, and 34 of 47 prefectures meet the full reference depth.
+- Official source status: current official prefectural, municipal, designated-operator, and facility material only: 愛知県芸術劇場、ウインクあいち、名古屋コンベンションホール、岡谷鋼機名古屋公会堂、名古屋市文化振興事業団の現行公開情報を確認した。大・小ホール、コンサートホール、リハーサル・練習・音楽練習室、スタジオ、展示場、49の会議室、研修・編集・ビデオ室、7thプラザ、集会室、和室、特別室、控室、楽屋を、公式で名前を確認できる区画ごとに構造化した。
+- Ceiling safety: ウインクあいち小ホールの有効天井高4.2m、展示場の3.5m、会議室49室の2.7m、および愛知県芸術劇場小ホールのライトブリッジまで5.4mだけを直接の最小有効高として検索に使える形で登録した。愛知県芸術劇場コンサートホール全体高さ19.3mと岡谷鋼機名古屋公会堂4階ホール高さ約5.5mは最低有効高未確認の参照値に留めた。名古屋コンベンションホールは公式が一部下がり天井を明示するため、掲載天井高を nominal_review とし検索値に使っていない。舞台・プロセニアム・すのこ・建物寸法は天井高に転用していない。未公表の床荷重、搬入、料金適用、空き状況は要確認。
+- Price observations: none added. 各施設の現行料金は時間帯、曜日、営利非営利、入場料、設備、空調、構成、予約時期その他の条件で変動するため、確認済み日額として誤って正規化しなかった。
+- Local verification: npm --prefix web run data:generate, npm run audit, npm run depth-report:write, git diff --check, and npm run validate passed. The only audit warning is the pre-existing historical-events.csv:173 row. Tracked web/dist was restored after validation and after the deployment build.
+- Changed source files: data/candidate-venues.csv, data/venue-details.csv, generated data/prefecture-expansion-status.csv, and generated web/app/generated-data.ts; this local checkpoint updates STATE.md and REPORT.md.
+- Deployment: source commit 3492d512aebc7b0ffc30eb8255a5f2926b6a9112 was pushed to the user-authorized Sites source repository with the prior 9657e57d308106e3bccd772888e7c5fb02fa0a7a remote head as a force-with-lease guard. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_c0a0c731efb08191824d54c057c2d2cd and deployment appgdep_6a775e1bffa881918703c9ca3e75617b succeeded. Both https://venue-monosashi.juggler-arata.chatgpt.site and https://venue.art-monosashi.com returned HTTP 200 and served the new 愛知県芸術劇場 marker in the current venue-search asset. The next eligible lowest-depth prefectures are 滋賀県、京都府、兵庫県、島根県、香川県、福岡県 at 20 candidates.
 
 ## Wave 141 Local Checkpoint
 
