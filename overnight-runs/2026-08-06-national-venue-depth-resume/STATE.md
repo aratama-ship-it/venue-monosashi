@@ -4,7 +4,7 @@
 
 - Status: ACTIVE
 - Last updated: 2026-08-09 Asia/Tokyo
-- Current wave: Wave 149 — Okayama official-source expansion and public deployment are verified. 愛媛県・長崎県・沖縄県 are next at the lowest candidate depth.
+- Current wave: Wave 150 — Ehime official-source expansion and public deployment are verified. 長崎県・沖縄県 are next at the lowest candidate depth.
 
 ## Baseline
 
@@ -14,6 +14,16 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 150 Local Checkpoint
+
+- Ehime: added four candidates — 愛媛国際貿易センター（アイテムえひめ）、愛媛県生涯学習センター、愛媛県視聴覚福祉センター、愛媛県男女共同参画センター — and 45 named independently searchable spaces. 愛媛県 is now 25 candidates, 16 municipalities, and 175 spaces. National totals are 1,161 candidates, 7,561 spaces, and 2,881 price observations; remaining candidate and space deficits are 14 and 0, and 42 of 47 prefectures meet the full reference depth.
+- Official source status: current prefectural, operator, and public-facility material only: https://www.pref.ehime.jp/page/7569.html 、https://itemehime.com/eventer/ 、https://itemehime.com/k00/k01/ 、https://itemehime.com/k00/k02/ 、https://itemehime.com/k00/k03/ 、https://itemehime.com/k00/k04/ 、https://itemehime.com/k00/k05/ 、https://www.i-manabi.jp/about/kenmin.php 、https://www.i-manabi.jp/center/guidance.php 、https://sityoukaku.pref.ehime.jp/center/rental.html 、https://www.ehime-joseizaidan.com/site/ehime-danzyo-center/sisetukasikanriyou.html 。公式で個別名・面積・定員または貸館区画として明示された展示場、会議・練習・研修・付属室、ホール、和室、視聴覚・作業室だけを構造化し、推測した区画は追加していない。
+- Availability and ceiling safety: アイテムえひめ大展示場の公式「天井高12〜16m」は下限12mを直接の `range_minimum` として検索に使い、小展示場5.6mと多目的ルーム2.68mは最低有効高未確認の `nominal_review` 参照値に留めた。愛媛県生涯学習センターと県視聴覚福祉センターの舞台・付属室等に天井高を推測していない。県視聴覚福祉センターのB区分4室は原則として視聴覚障がい者または福祉増進目的に利用を限定するため `needs_check` とし、県男女共同参画センターの営利目的の物品宣伝・販売・会社説明会等の不可も明示した。未公表の最低天井高、搬入、催事回線、料金適用、空き状況は要確認。
+- Price observations: none added. 新規4施設の料金は時間帯、利用目的、入場料、営利非営利、設備、室構成等で変動するため、今回の候補深度拡張では曖昧な日額に正規化していない。
+- Local verification: npm --prefix web run data:generate、npm run audit、npm run depth-report:write、git diff --check、npm run validate passed. The only audit warning is the pre-existing historical-events.csv:173 row. Tracked web/dist was rebuilt for the archive and restored after final public verification.
+- Changed source files: data/candidate-venues.csv、data/venue-details.csv、generated data/prefecture-expansion-status.csv、and generated web/app/generated-data.ts; this checkpoint updates STATE.md and REPORT.md.
+- Deployment and public verification: source commit 78eb83cb6323e95842594ab7bcfa64888f062d3d was pushed to the user-authorized Sites source repository with 11244feebd98dcb01405c5ab87c9c92ec41eabd8 as its force-with-lease guard. Fresh build archive verification included the referenced SSR venue-search asset. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_b265c41cf27c819189371df54bcfb9d6 and deployment appgdep_6a777cd4987c8191a81a907cd2488650 succeeded. Both https://venue-monosashi.juggler-arata.chatgpt.site and https://venue.art-monosashi.com returned HTTP 200 and contained the アイテムえひめ search marker. Next eligible waves: 長崎県・沖縄県 at 21 candidates, then 北海道・神奈川県 at 22 candidates.
 
 ## Wave 149 Local Checkpoint
 
