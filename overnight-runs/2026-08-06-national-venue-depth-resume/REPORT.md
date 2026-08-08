@@ -2,9 +2,16 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 154 Kanagawa is validated and publicly deployed. Osaka is the only remaining prefecture below the reference depth, with a municipality-depth gap.
+Complete. This run expanded the national database from 476 facilities and 1,483 searchable spaces to 1,178 candidate facilities and 7,724 searchable spaces. Every prefecture now meets the reference depth of at least 25 candidates, 15 municipalities, and 51 independently searchable spaces, and the final validated source is publicly deployed.
 
 ## Latest Wave
+
+- Wave 155 — Osaka: added 八尾市文化会館プリズムホール、箕面市立メイプルホール、貝塚市民文化会館（コスモスシアター） and 19 named searchable spaces. 大阪府 is now 28 candidates, 15 municipalities, and 201 spaces; national totals are 1,178 candidates, 7,724 spaces, and 2,881 price observations. `reference_depth=47/47`; candidate and space deficits are both zero.
+- Official source status: current official city and designated-operator material only: 八尾市・プリズムホール、箕面市・メイプルホール、貝塚市・コスモスシアター。Source-explicit halls, reception, rehearsal and practice rooms, meeting and training rooms, exhibition, Japanese, and gallery spaces were retained; no inferred spaces were added.
+- Availability and ceiling safety: no new filterable ceiling value was added. Proscenium, stage, elevating-stage, and room-dimension values remain separate from the ceiling filter. Unpublished ceilings, floor loads, loading, streaming, fee applicability, commercial/noncommercial conditions, and availability remain `要確認`.
+- Price observations: none added. Current fees vary by time band, admission, commercial/noncommercial status, municipality, equipment, and use condition, so no ambiguous amount was normalized into the daily-budget filter.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing historical-events.csv:173 row.
+- Public deployment passed: source commit e7114953fe5a6467d6143f97352cdb257c397101 was pushed to the authorized Sites repository with 7f9074c9d638082ce831fe0d96338e76dca33d1d as the force-with-lease guard. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_4a0e78717a988191ad640cb55f722ebb (deployment appgdep_6a778892af3881918a41f6774ade1c61) succeeded. Both public URLs returned HTTP 200, and both deployed venue-search client assets contained the 貝塚市民文化会館（コスモスシアター） marker; tracked web/dist was restored. This is the final source wave.
 
 - Wave 154 — Kanagawa: added 愛川町文化会館、南足柄市文化会館（金太郎みらいホール）、綾瀬市オーエンス文化会館 and 38 named searchable spaces. 神奈川県 is now 25 candidates, 18 municipalities, and 216 spaces; national totals are 1,175 candidates, 7,705 spaces, and 2,881 price observations. Candidate and space deficits are zero; 46 of 47 prefectures meet the reference depth, and 大阪府 alone remains 3 municipalities short.
 - Official source status: current official town, municipality, and designated-operator material only. Source-explicit halls, exhibition, rehearsal, practice, meeting, multipurpose, Japanese, dressing, organizer, reception, and outdoor-stage spaces were retained. 金太郎みらいホールの応接室・多目的室等と綾瀬の楽屋はホール利用に付随する条件があるため `needs_check` に保ち、推測した区画は追加していない。

@@ -2,9 +2,9 @@
 
 ## Status
 
-- Status: ACTIVE
+- Status: COMPLETE
 - Last updated: 2026-08-09 Asia/Tokyo
-- Current wave: Wave 154 — Kanagawa official-source expansion and public deployment are verified. 大阪府 is the only remaining prefecture below the municipality-depth target.
+- Current wave: Wave 155 — Osaka official-source expansion and public deployment are verified. All 47 prefectures meet the reference depth.
 
 ## Baseline
 
@@ -14,6 +14,16 @@
 - Canonical hashes: `candidate-venues.csv` `760b87b534243da9328893aa08c3bbe74b0646b9d9bcfb00bc77bb62e221437d`; `venue-details.csv` `76f6620c616288d61bdebbec85ee4c1103e792803ae1b94996a71ab237b5a316`; `price-observations.csv` `2395041ad34e06fd466c10c971ba2da2867854e91e98091debd83182778db99c`; `venue-operations.csv` `e80ed96e8c3c4533a6c782933369207b968abb8207f3274c3afc57af149d1c25`.
 - Pre-existing untracked paths preserved: three prior small-theater run directories and `web-projects/`.
 - Existing audit condition: one warning at `historical-events.csv:173` for a held/planned row with no `venue_names`; no audit errors.
+
+## Wave 155 Final Checkpoint
+
+- Osaka: added three candidates — 八尾市文化会館プリズムホール、箕面市立メイプルホール、貝塚市民文化会館（コスモスシアター）— and 19 named independently searchable spaces. 大阪府 is now 28 candidates, 15 municipalities, and 201 spaces. National totals are 1,178 candidates, 7,724 spaces, and 2,881 price observations. `reference_depth=47/47` and both candidate and space gaps are zero.
+- Official source status: current municipal and designated-operator material only: https://www.city.yao.osaka.jp/bunka_sports_event/bunka_geijutsu_reikishi/1011329/1011171/1013048.html 、https://prismhall.jp/shisetsu 、https://www.city.minoh.lg.jp/halltanto/maple_hall.html 、https://minoh-bunka.com/maple/mdetail/ 、https://www.city.kaizuka.lg.jp/kanko/taiken/kosmossiater.html 、https://cosmostheater.or.jp/facilities/ 。公式に個別名・面積・定員又は現行の貸館区画として明示されたホール、リハーサル・練習・会議・研修・展示・和室・回廊ギャラリーだけを構造化した。
+- Availability and ceiling safety: new filterable ceiling values were not added. 八尾、箕面、貝塚のプロセニアム高、舞台高、昇降舞台及び室内寸法は最低天井高や観測面積に転用していない。未公表の最低天井高、床荷重、搬入、催事回線、料金適用、営利・入場料条件、空き状況は要確認。
+- Price observations: none added. 新規3施設の料金は時間帯、入場料、営利・非営利、市内外、設備又は利用条件で変動するため、曖昧な日額に正規化していない。
+- Local verification: npm --prefix web run data:generate、npm run audit、npm run depth-report:write、git diff --check、npm run validate passed. The only audit warning is the pre-existing historical-events.csv:173 row. Tracked web/dist was rebuilt for the archive and restored after final public verification.
+- Changed source files: data/candidate-venues.csv、data/venue-details.csv、generated data/prefecture-expansion-status.csv、and generated web/app/generated-data.ts; this checkpoint updates STATE.md and REPORT.md.
+- Deployment and public verification: source commit e7114953fe5a6467d6143f97352cdb257c397101 was pushed to the user-authorized Sites source repository with 7f9074c9d638082ce831fe0d96338e76dca33d1d as its force-with-lease guard. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_4a0e78717a988191ad640cb55f722ebb and deployment appgdep_6a778892af3881918a41f6774ade1c61 succeeded. Both https://venue-monosashi.juggler-arata.chatgpt.site and https://venue.art-monosashi.com returned HTTP 200; each deployed venue-search client asset contained the 貝塚市民文化会館（コスモスシアター） marker. No further source wave is eligible because the definition of done is met.
 
 ## Wave 154 Local Checkpoint
 
