@@ -2,9 +2,17 @@
 
 ## Outcome
 
-In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 142 Aichi has been validated and publicly deployed. The next lowest-depth group starts at 20 candidates.
+In progress. This run resumes the national expansion from 476 facilities and 1,483 searchable spaces. Wave 143 Shiga has been validated and publicly deployed. The next lowest-depth group starts at 20 candidates.
 
 ## Latest Wave
+
+- Wave 143 — Shiga: added 滋賀県立芸術劇場びわ湖ホール、滋賀県立文化産業交流会館、野洲文化小劇場、八日市文化芸術会館、竜王町公民館 and 34 named searchable spaces. 滋賀県 is now 25 candidates, 16 municipalities, and 108 spaces; national totals are 1,128 candidates, 7,187 spaces, and 2,881 price observations. Remaining candidate and space deficits are 47 and 0; 35 of 47 prefectures meet the reference depth.
+- Official source status: current official facility, municipal, prefectural, and designated-operator material only. The entries retain source-explicit halls, rehearsal and practice rooms, training rooms, an event hall, small theater, conference rooms, an exhibition room, Japanese room, kitchen, workshop, music room, public activity floors, and outdoor children’s space. No inferred spaces were added.
+- Availability and ceiling safety: びわ湖ホール remains needs_check because its current official footer shows 休館中. 野洲文化小劇場 remains needs_check because the official current page limits its stated availability through the end of March 2028. 八日市文化芸術会館展示室の明示的な天井高さ4.5m alone is filterable. The two source-published 7m room-height figures remain non-filterable nominal_review references; no stage, proscenium, loading, or building dimensions were converted into ceiling filters.
+- Price observations: none added. Current fees vary by time unit, resident classification, purpose, commercial/nonprofit use, admission, equipment, HVAC, booking window, and other terms, so no ambiguous amount was normalized into the daily-budget filter.
+- Local verification passed: app-data generation, audit, depth report, whitespace check, lint, build, and rendered-page tests. The sole audit warning remains the pre-existing historical-events.csv:173 row; tracked web/dist was restored after validation and deployment.
+- Changed source files: data/candidate-venues.csv, data/venue-details.csv, generated data/prefecture-expansion-status.csv, generated web/app/generated-data.ts, and this run ledger.
+- Public deployment passed: source commit 797017586700230a8879f371ce85b5f8f1ddb3d9 was pushed to the authorized Sites repository with a force-with-lease guard from 3492d512aebc7b0ffc30eb8255a5f2926b6a9112. Sites version appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_4171e0dba0108191b0ae321d7bd9cd67 (deployment appgdep_6a7761e402108191bebdb442fcb7093b) succeeded. Both public URLs returned HTTP 200 and served the new 滋賀県立文化産業交流会館 marker. Next wave: 京都府、兵庫県、島根県、香川県、福岡県 at 20 candidates.
 
 - Wave 142 — Aichi: added 愛知県芸術劇場、愛知県産業労働センター（ウインクあいち）、名古屋コンベンションホール、岡谷鋼機名古屋公会堂（名古屋市公会堂）、青少年文化センター（アートピア） and 125 named searchable spaces. 愛知県 is now 25 candidates, 16 municipalities, and 275 spaces; national totals are 1,123 candidates, 7,153 spaces, and 2,881 price observations. Remaining candidate and space deficits are 52 and 0; 34 of 47 prefectures meet the reference depth.
 - Official source status: current official prefectural, municipal, designated-operator, and facility materials only. Five official facility sets were used to retain source-explicit halls, concert and rehearsal rooms, practice and music rooms, studios, exhibition floors, 49 individually named conference rooms, meeting rooms, Japanese rooms, green rooms, dressing rooms, training rooms, a video room, and 7thプラザ. No inferred spaces were added.
