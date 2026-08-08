@@ -433,7 +433,9 @@ In progress. This run resumes the national expansion from 476 facilities and 1,4
 - Added 12 independently searchable spaces: 高原町の体育館・分館、都農町民体育館の体育室、国富町総合文化会館の展示・和室・会議・ギャラリー区画、高千穂町中央体育館の競技場・卓球場・会議室・サブコート。
 - Official sources: 高原町、都農町、国富町、高千穂町の現行公式施設案内・規則。公式に列挙された施設名・室名・使用区分だけを構造化し、24畳表記を面積・定員へ換算せず、競技場の全館・半面や舞台も重複する独立区画にしなかった。天井高・料金は推定していない。
 - Result: 宮崎県は19 candidates、18 municipalities、90 spaces。全国は836 candidates、4,036 spaces、remaining candidate gap 339、space gap 34。
-- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Public deployment is pending; tracked `web/dist` is to be restored before the source commit.
+- Local verification passed: `npm --prefix web run data:generate`, `npm run audit`, `npm run depth-report:write`, `git diff --check`, and `npm run validate`; the sole audit warning remains the pre-existing `historical-events.csv:173` row. Tracked `web/dist` was restored after the deployment build.
+- Public deployment passed: source commit `5975e912f72fe984022fd817fe88e29332655c7d` was pushed to the authorized Sites repository; production version 134 deployed successfully. Both `https://venue-monosashi.juggler-arata.chatgpt.site/?q=%E9%AB%98%E5%8D%83%E7%A9%82%E7%94%BA%E4%B8%AD%E5%A4%AE%E4%BD%93%E8%82%B2%E9%A4%A8&release=5975e91` and `https://venue.art-monosashi.com/?q=%E9%AB%98%E5%8D%83%E7%A9%82%E7%94%BA%E4%B8%AD%E5%A4%AE%E4%BD%93%E8%82%B2%E9%A4%A8&release=5975e91` returned the newly added 高千穂町中央体育館. Tracked `web/dist` output was restored.
+- Next intended wave: 青森県 (lowest candidate depth group).
 
 ## Wave 83 — Saitama official-source expansion
 
