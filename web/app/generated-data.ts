@@ -4,8 +4,8 @@ export const venueData = {
   "stats": {
     "historical": 225,
     "venues": 1178,
-    "details": 7733,
-    "prices": 3171,
+    "details": 7734,
+    "prices": 3176,
     "operations": 222,
     "budgetScenarios": 83,
     "candidateCoverage": {
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 11800,
-      "venueObservationCount": 11209,
+      "observationCount": 11806,
+      "venueObservationCount": 11215,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -65917,8 +65917,8 @@ export const venueData = {
       "websiteUrl": null,
       "officialLinks": [],
       "observedAt": "2026-08-10",
-      "detailCount": 1,
-      "priceCount": 7,
+      "detailCount": 2,
+      "priceCount": 9,
       "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -65933,7 +65933,7 @@ export const venueData = {
       "hasFixedStage": false,
       "practiceUse": "yes",
       "streamingReady": "unknown",
-      "minDailyFacilityPrice": 44000,
+      "minDailyFacilityPrice": 29330,
       "priceObservations": [
         {
           "id": "PRICE-433",
@@ -66046,6 +66046,38 @@ export const venueData = {
           "exclusions": "時間外1時間・附属設備",
           "note": "指定管理者公式の占用利用料金PDF（令和8年4月1日現在）の全日9時〜22時欄。PDFをPNG化して画像照合。松江市公式は開館時間9時〜22時（入館受付21時30分まで）と掲載",
           "sourceUrl": "https://www.so-tai.jp/charge/index__002.pdf"
+        },
+        {
+          "id": "PRICE-3177",
+          "spaceId": "matsue-sub",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekday",
+          "timeBand": "09:00-22:00",
+          "amount": 29330,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "サブアリーナ・全日区分・アマチュアスポーツ・入場料を徴収しない・一般",
+          "validFrom": "2026-04-01",
+          "exclusions": "時間外1時間・附属設備",
+          "note": "指定管理者公式の占用利用料金PDF（令和8年4月1日現在）の全日9時〜22時欄。PDFをPNG化して画像照合",
+          "sourceUrl": "https://www.so-tai.jp/charge/index__002.pdf"
+        },
+        {
+          "id": "PRICE-3178",
+          "spaceId": "matsue-sub",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekend_holiday",
+          "timeBand": "09:00-22:00",
+          "amount": 35190,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "サブアリーナ・全日区分・アマチュアスポーツ・入場料を徴収しない・一般",
+          "validFrom": "2026-04-01",
+          "exclusions": "時間外1時間・附属設備",
+          "note": "指定管理者公式の占用利用料金PDF（令和8年4月1日現在）の全日9時〜22時欄。PDFをPNG化して画像照合",
+          "sourceUrl": "https://www.so-tai.jp/charge/index__002.pdf"
         }
       ],
       "budgetScenarios": [],
@@ -66079,6 +66111,23 @@ export const venueData = {
           "sourceUrl": "https://www.matsue-sposhin.jp/business/gymnasium/",
           "observedAt": "2026-08-05",
           "note": "松江市・指定管理者公式ページで2,747㎡、固定1,845席・移動1,136席・車椅子22席を確認。2,981席は固定席と移動席の合計で車椅子席を含めない。公式料金案内に2分の1・3分の1利用を掲載"
+        },
+        {
+          "id": "matsue-sub",
+          "name": "サブアリーナ",
+          "type": "arena",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "unknown",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.so-tai.jp/charge/index__002.pdf",
+          "observedAt": "2026-08-10",
+          "note": "指定管理者公式の占用利用料金表にメインアリーナと並んで掲載。面積・天井高・客席は未確認"
         }
       ],
       "bestSpace": {
@@ -116752,9 +116801,9 @@ export const venueData = {
       "sourceUrl": "https://www.town.shirahama.wakayama.jp/soshiki/kanko/koen/shisetsu/1454378782621.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-06",
+      "observedAt": "2026-08-10",
       "detailCount": 1,
-      "priceCount": 0,
+      "priceCount": 3,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -116769,8 +116818,57 @@ export const venueData = {
       "hasFixedStage": false,
       "practiceUse": "conditional",
       "streamingReady": "unknown",
-      "minDailyFacilityPrice": null,
-      "priceObservations": [],
+      "minDailyFacilityPrice": 66430,
+      "priceObservations": [
+        {
+          "id": "PRICE-3174",
+          "spaceId": "shirahama-main-hall",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 66430,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "1階ホール・1日区分・アマチュアスポーツ使用・入場料無料・全面使用",
+          "validFrom": "2019-10-01",
+          "exclusions": "冷暖房・準備/現状回復は1/2",
+          "note": "白浜町公式の施設ご利用案内PDF（令和元年10月1日現在）の「1日 9:00-22:00」欄。画像PDFのためPNG化して画像照合。平日・土日祝の区別なし。冷房6,030円/時・暖房5,460円/時は別途",
+          "sourceUrl": "https://www.town.shirahama.wakayama.jp/material/files/group/28/ryoukinhyou.PDF"
+        },
+        {
+          "id": "PRICE-3175",
+          "spaceId": "shirahama-main-hall",
+          "category": "facility",
+          "useCase": "amateur_sports_admission",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 90010,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "1階ホール・1日区分・アマチュアスポーツ使用・入場料有料・全面使用",
+          "validFrom": "2019-10-01",
+          "exclusions": "冷暖房・準備/現状回復は1/2",
+          "note": "白浜町公式の施設ご利用案内PDF（令和元年10月1日現在）の「1日 9:00-22:00」欄。画像PDFのためPNG化して画像照合。平日・土日祝の区別なし。冷房6,030円/時・暖房5,460円/時は別途",
+          "sourceUrl": "https://www.town.shirahama.wakayama.jp/material/files/group/28/ryoukinhyou.PDF"
+        },
+        {
+          "id": "PRICE-3176",
+          "spaceId": "shirahama-main-hall",
+          "category": "facility",
+          "useCase": "non_sports",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 114150,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "1階ホール・1日区分・会議その他、入場料無料の諸行事",
+          "validFrom": "2019-10-01",
+          "exclusions": "冷暖房・準備/現状回復は1/2",
+          "note": "白浜町公式の施設ご利用案内PDF（令和元年10月1日現在）の「1日 9:00-22:00」欄。画像PDFのためPNG化して画像照合。平日・土日祝の区別なし。冷房6,030円/時・暖房5,460円/時は別途",
+          "sourceUrl": "https://www.town.shirahama.wakayama.jp/material/files/group/28/ryoukinhyou.PDF"
+        }
+      ],
       "budgetScenarios": [],
       "operation": null,
       "spaces": [
