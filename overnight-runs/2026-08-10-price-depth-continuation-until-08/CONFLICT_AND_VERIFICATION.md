@@ -21,6 +21,7 @@ Its contents direct a separate overnight writer to continue the same price datab
 ## Verifier Boundaries
 
 - Allowed writes: this run directory only.
-- Allowed checks: read-only Git commands and hashes; `npm run audit`; `npm run web:lint`; `npm run web:test`; `npm run validate`; read-only `npm run price-coverage`; targeted CSV/ID/arithmetic checks; `git diff --check`.
+- Allowed checks: read-only Git commands and hashes; `npm run audit`; `npm run web:lint`; direct `node --test web/tests/rendered-html.test.mjs` against the currently built artifact; read-only `npm run price-coverage`; targeted CSV/ID/arithmetic checks; `git diff --check`.
+- Prohibited verifier commands include `npm run web:test`, `npm run validate`, `npm run build`, and data-generation commands because they regenerate tracked artifacts.
 - Not allowed: data generation, canonical corrections, formatting, staging, commit, push, deploy, or edits to either the other run's ledger or the protected research memo.
 - If checks fail while the other writer is mid-wave, record the timestamp and exact failure; do not repair. Recheck on the next scheduled verifier run.

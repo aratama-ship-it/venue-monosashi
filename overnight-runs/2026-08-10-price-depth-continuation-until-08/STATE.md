@@ -3,7 +3,7 @@
 ## Status
 
 - Status: ACTIVE
-- Last updated: 2026-08-10 00:45 JST
+- Last updated: 2026-08-10 01:04 JST
 - Current wave: V1 hourly independent validation snapshots
 
 ## Baseline
@@ -20,6 +20,7 @@
 - Canonical writes: none.
 - Concurrent writer detected after P1; canonical write role stopped and verifier-only mode activated. See `CONFLICT_AND_VERIFICATION.md`.
 - Initial verifier snapshot completed and passed after correcting a build-generating test command; see `VERIFIER_SNAPSHOT_2026-08-10_0043.md`.
+- 01:01 verifier snapshot passed after observing three separate-writer commits through `f53e016`; audit errors=0, lint PASS, built-artifact tests 3/3, diff check PASS. See `VERIFIER_SNAPSHOT_2026-08-10_0101.md`.
 
 ## Current Wave
 
@@ -27,7 +28,7 @@
 
 ## Next Action
 
-- Heartbeat ID 8 is active. At 01:00 JST, take the next safe read-only snapshot using the corrected command list.
+- Heartbeat ID 8 is active. At 02:00 JST, validate `eb6a31b` (which arrived after the 01:01 checks) and any later separate-writer commits against the 01:01 evidence.
 
 ## Blockers
 
