@@ -7,7 +7,7 @@ export const venueData = {
     "details": 7729,
     "prices": 2986,
     "operations": 222,
-    "budgetScenarios": 35,
+    "budgetScenarios": 47,
     "candidateCoverage": {
       "area": 606,
       "capacity": 911,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-09",
-      "observationCount": 11563,
-      "venueObservationCount": 10972,
+      "observationCount": 11575,
+      "venueObservationCount": 10984,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -11419,7 +11419,7 @@ export const venueData = {
       "sourceUrl": "https://suncherry.hatsukaichi-sports.net/about/",
       "websiteUrl": "https://suncherry.hatsukaichi-sports.net/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-09",
       "detailCount": 2,
       "priceCount": 8,
       "operationCount": 1,
@@ -11575,7 +11575,29 @@ export const venueData = {
           "sourceUrl": "https://suncherry.hatsukaichi-sports.net/usagefee/"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-047",
+          "spaceId": "suncherry-main",
+          "label": "メインアリーナ全面・大人専用利用・08:30-21:30",
+          "useCase": "all",
+          "dayType": "all",
+          "timeSpan": "08:30-21:30",
+          "amount": 66820,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-823"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "附属設備・小人/65歳以上料金",
+          "note": "施設は日額を公表していない。公式ページの開館時間8:30〜21:30（13時間）×5,140円/時から算出した目安。実際の予約時間で変動する",
+          "sourceUrl": "https://suncherry.hatsukaichi-sports.net/usagefee/"
+        }
+      ],
       "operation": {
         "station": "JR宮内串戸駅",
         "walkMinutes": 10,
@@ -24997,7 +25019,7 @@ export const venueData = {
       "sourceUrl": "https://www.kspa.or.jp/sougou_taiku_charge/",
       "websiteUrl": "https://www.kspa.or.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-09",
       "detailCount": 5,
       "priceCount": 40,
       "operationCount": 1,
@@ -25657,7 +25679,29 @@ export const venueData = {
           "sourceUrl": "https://www.kspa.or.jp/sougou_taiku_charge/"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-046",
+          "spaceId": "kumamoto-large",
+          "label": "大体育室・専用・アマチュアスポーツ・09:00-21:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 32640,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-1337"
+          ],
+          "componentQuantities": [
+            12
+          ],
+          "validFrom": null,
+          "exclusions": "入場料徴収時の別料金・照明・冷暖房・大型映像等",
+          "note": "施設は日額を公表していない。公式料金ページの利用時間9:00〜21:00（12時間）×2,720円/時から算出した目安。実際の予約時間で変動する",
+          "sourceUrl": "https://www.kspa.or.jp/sougou_taiku_charge/"
+        }
+      ],
       "operation": {
         "station": null,
         "walkMinutes": null,
@@ -37877,7 +37921,7 @@ export const venueData = {
       "sourceUrl": "https://obihiro-arena.jp/",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-09",
       "detailCount": 1,
       "priceCount": 5,
       "operationCount": 1,
@@ -37977,7 +38021,29 @@ export const venueData = {
           "sourceUrl": "https://obihiro-arena.jp/fee"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-043",
+          "spaceId": "yotsuba-main",
+          "label": "メインアリーナ全面・大人・アマチュアスポーツ・入場料なし・非営利・09:00-22:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 46800,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-539"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "附属設備・特殊電気設備・開館時間外等の別料金",
+          "note": "施設は日額を公表していない。公式サイトの営業時間9:00〜22:00（13時間）×3,600円/時から算出した目安。実際の予約時間で変動する",
+          "sourceUrl": "https://obihiro-arena.jp/fee"
+        }
+      ],
       "operation": {
         "station": "西2条1丁目バス停",
         "walkMinutes": 3,
@@ -38029,7 +38095,7 @@ export const venueData = {
       "sourceUrl": "https://www.city.akita.lg.jp/shisetsu/sports-koen/1009703/1006397.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-09",
       "detailCount": 2,
       "priceCount": 5,
       "operationCount": 1,
@@ -38129,7 +38195,29 @@ export const venueData = {
           "sourceUrl": "https://www.city.akita.lg.jp/_res/projects/default_project/_page_/001/002/453/ryokin.pdf"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-042",
+          "spaceId": "cna-main",
+          "label": "メインアリーナ全面・市民が体育に使用・入場料なし・一般・09:00-21:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 28200,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-544"
+          ],
+          "componentQuantities": [
+            12
+          ],
+          "validFrom": null,
+          "exclusions": "大会講習会・市外参加・附属設備等は別区分",
+          "note": "施設は日額を公表していない。公式ページの利用時間9時〜21時（12時間）×2,350円/時から算出した目安。実際の予約時間で変動する",
+          "sourceUrl": "https://www.city.akita.lg.jp/_res/projects/default_project/_page_/001/002/453/ryokin.pdf"
+        }
+      ],
       "operation": {
         "station": "市立体育館前バス停",
         "walkMinutes": 1,
@@ -39651,7 +39739,7 @@ export const venueData = {
       "sourceUrl": "https://www.toyama-pref-ihc.or.jp/zaidan/SportsCenter/",
       "websiteUrl": "https://www.toyama-pref-ihc.or.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-09",
       "detailCount": 1,
       "priceCount": 6,
       "operationCount": 1,
@@ -39767,7 +39855,50 @@ export const venueData = {
           "sourceUrl": "https://www.sportsnet.pref.toyama.jp/member/sougou/fee.html"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-044",
+          "spaceId": "toyama-pref-large",
+          "label": "大アリーナ全面・アマチュアスポーツ大会・入場無料または練習・平日・09:00-21:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekday",
+          "timeSpan": "09:00-21:00",
+          "amount": 30840,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-555"
+          ],
+          "componentQuantities": [
+            12
+          ],
+          "validFrom": null,
+          "exclusions": "附属設備・宿泊併用等の別料金",
+          "note": "施設は日額を公表していない。公式ページの利用時間 平日9:00〜21:00（12時間）×2,570円/時から算出した目安。実際の予約時間で変動する",
+          "sourceUrl": "https://www.sportsnet.pref.toyama.jp/member/sougou/fee.html"
+        },
+        {
+          "id": "SCENARIO-045",
+          "spaceId": "toyama-pref-large",
+          "label": "大アリーナ全面・アマチュアスポーツ大会・入場無料または練習・土日祝・09:00-17:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekend_holiday",
+          "timeSpan": "09:00-17:00",
+          "amount": 20560,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-555"
+          ],
+          "componentQuantities": [
+            8
+          ],
+          "validFrom": null,
+          "exclusions": "附属設備・宿泊併用等の別料金",
+          "note": "施設は日額を公表していない。公式ページの利用時間 土日祝9:00〜17:00（8時間）×2,570円/時から算出した目安。実際の予約時間で変動する",
+          "sourceUrl": "https://www.sportsnet.pref.toyama.jp/member/sougou/fee.html"
+        }
+      ],
       "operation": {
         "station": "総合体育センターバス停",
         "walkMinutes": 0,
@@ -58113,7 +58244,7 @@ export const venueData = {
       "sourceUrl": "https://www.kanazawa-sports.jp/use/search/433/",
       "websiteUrl": "https://www.kanazawa-sports.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-09",
       "detailCount": 1,
       "priceCount": 2,
       "operationCount": 1,
@@ -58165,7 +58296,29 @@ export const venueData = {
           "sourceUrl": "https://www.city.kanazawa.ishikawa.jp/reiki/reiki_honbun/a400RG00000372.html"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-038",
+          "spaceId": "kanazawa-first",
+          "label": "第1競技場全面・団体利用・スポーツ・入場料なし・09:00-22:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 35750,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-407"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "照明・冷暖房・入場料徴収・スポーツ以外・市外利用等の割増",
+          "note": "施設は日額を公表していない。公式ページの開館時間 午前9時〜午後10時（13時間）×2,750円/時から算出した目安。実際の予約時間で変動する",
+          "sourceUrl": "https://www.city.kanazawa.ishikawa.jp/reiki/reiki_honbun/a400RG00000372.html"
+        }
+      ],
       "operation": {
         "station": "JR金沢駅",
         "walkMinutes": null,
@@ -58217,7 +58370,7 @@ export const venueData = {
       "sourceUrl": "https://www.city.fukui.lg.jp/kyoiku/sports/sisetu/sitaiikukann.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-09",
       "detailCount": 1,
       "priceCount": 2,
       "operationCount": 1,
@@ -58269,7 +58422,29 @@ export const venueData = {
           "sourceUrl": "https://www.city.fukui.lg.jp/kyoiku/sports/sisetu/price_d/fil/chokuei_ryokin.pdf"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-041",
+          "spaceId": "fukui-main",
+          "label": "主競技場全面・スポーツまたは体力づくり・入場料なし・09:00-22:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 22880,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-409"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "付属設備・冷暖房・入場料徴収・集会等・市外利用等の別料金",
+          "note": "施設は日額を公表していない。公式ページの開館時間 午前9時〜午後10時（13時間）×1,760円/時から算出した目安。実際の予約時間で変動する",
+          "sourceUrl": "https://www.city.fukui.lg.jp/kyoiku/sports/sisetu/price_d/fil/chokuei_ryokin.pdf"
+        }
+      ],
       "operation": {
         "station": "えちぜん鉄道・福井鉄道田原町駅",
         "walkMinutes": 3,
@@ -58321,7 +58496,7 @@ export const venueData = {
       "sourceUrl": "https://www.city.chikuma.lg.jp/soshiki/sportsshinko/sports/789.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-09",
       "detailCount": 1,
       "priceCount": 2,
       "operationCount": 1,
@@ -58373,7 +58548,29 @@ export const venueData = {
           "sourceUrl": "https://www.city.chikuma.lg.jp/section/reiki_int/reiki_honbun/r021RG00000206.html"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-036",
+          "spaceId": "chikuma-kotobuki-arena",
+          "label": "アリーナ全面・専用・非営利・アマチュアスポーツ・入場料なし・09:00-21:30",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-21:30",
+          "amount": 18750,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-411"
+          ],
+          "componentQuantities": [
+            12.5
+          ],
+          "validFrom": null,
+          "exclusions": "照明・入場料徴収・スポーツ以外・営利・市外利用等の割増",
+          "note": "施設は日額を公表していない。公式ページの開館時間9時〜21時30分（12.5時間）×1,500円/時から算出した目安。実際の予約時間で変動する",
+          "sourceUrl": "https://www.city.chikuma.lg.jp/section/reiki_int/reiki_honbun/r021RG00000206.html"
+        }
+      ],
       "operation": {
         "station": "しなの鉄道屋代駅",
         "walkMinutes": 20,
@@ -64623,7 +64820,7 @@ export const venueData = {
       "sourceUrl": "https://www.fuse-sportspark.com/facility-information/prefectural-gymnasium/",
       "websiteUrl": "https://www.fuse-sportspark.com/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-09",
       "detailCount": 1,
       "priceCount": 2,
       "operationCount": 1,
@@ -64675,7 +64872,29 @@ export const venueData = {
           "sourceUrl": "https://www.fuse-sportspark.com/wp-content/uploads/2024/04/%E9%B3%A5%E5%8F%96%E7%9C%8B%E7%AB%8B%E5%B8%83%E5%8B%A2%E7%B7%8F%E5%90%88%E9%81%8B%E5%8B%95%E5%85%AC%E5%9C%92%E6%96%99%E9%87%91%E8%A1%A8R6.4.1%EF%BD%9E.pdf"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-037",
+          "spaceId": "tottori-main",
+          "label": "メインアリーナ全面・一般・アマチュアスポーツ・入場料徴収なし・09:00-22:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 38350,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-431"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "照明・空調・器具・入場料徴収・商業利用等の別料金",
+          "note": "施設は日額を公表していない。公式ページの供用時間9:00〜22:00（13時間）×2,950円/時から算出した目安。実際の予約時間で変動する",
+          "sourceUrl": "https://www.fuse-sportspark.com/wp-content/uploads/2024/04/%E9%B3%A5%E5%8F%96%E7%9C%8B%E7%AB%8B%E5%B8%83%E5%8B%A2%E7%B7%8F%E5%90%88%E9%81%8B%E5%8B%95%E5%85%AC%E5%9C%92%E6%96%99%E9%87%91%E8%A1%A8R6.4.1%EF%BD%9E.pdf"
+        }
+      ],
       "operation": {
         "station": "JR鳥取駅",
         "walkMinutes": null,
@@ -64815,7 +65034,7 @@ export const venueData = {
       "sourceUrl": "https://www.city.soja.okayama.jp/soshiki/17/2692.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-09",
       "detailCount": 1,
       "priceCount": 2,
       "operationCount": 1,
@@ -64867,7 +65086,29 @@ export const venueData = {
           "sourceUrl": "https://www.city.soja.okayama.jp/soshiki/17/21659.html"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-040",
+          "spaceId": "soja-main",
+          "label": "メインアリーナ全面・一般・スポーツ利用・25％照度・09:00-21:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 82800,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-434"
+          ],
+          "componentQuantities": [
+            12
+          ],
+          "validFrom": null,
+          "exclusions": "空調・照明加算・備品・入場料徴収・スポーツ以外等の別料金",
+          "note": "施設は日額を公表していない。公式ページの開館時間 午前9時〜午後9時（12時間）×6,900円/時から算出した目安。実際の予約時間で変動する",
+          "sourceUrl": "https://soja-facilities.fagiano-okayama.com/facilities/sports-center/"
+        }
+      ],
       "operation": {
         "station": "JR総社駅",
         "walkMinutes": 20,
@@ -64919,7 +65160,7 @@ export const venueData = {
       "sourceUrl": "https://sports-kure.com/shisetsu/s-510",
       "websiteUrl": "https://sports-kure.com/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-09",
       "detailCount": 1,
       "priceCount": 2,
       "operationCount": 1,
@@ -64971,7 +65212,29 @@ export const venueData = {
           "sourceUrl": "https://sports-kure.com/shisetsu/s-510/s-511"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-039",
+          "spaceId": "kure-ihi-main",
+          "label": "競技場全面・一般・アマチュアスポーツ・入場料徴収なし・09:00-21:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 34560,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-436"
+          ],
+          "componentQuantities": [
+            12
+          ],
+          "validFrom": null,
+          "exclusions": "空調・特別照明・器具・時間外・入場料徴収・スポーツ以外等の別料金",
+          "note": "施設は日額を公表していない。公式ページの開館時間9:00〜21:00（12時間）×2,880円/時から算出した目安。実際の予約時間で変動する",
+          "sourceUrl": "https://sports-kure.com/shisetsu/s-510/s-511"
+        }
+      ],
       "operation": {
         "station": "JR呉駅",
         "walkMinutes": 15,
