@@ -54,6 +54,13 @@ const priceObservations = loadCsv("data/price-observations.csv");
 const venueOperations = loadCsv("data/venue-operations.csv");
 const historicalVenueAliases = loadCsv("data/historical-venue-aliases.csv");
 const budgetScenarios = loadCsv("data/budget-scenarios.csv");
+const SLOT_COMPONENT_UNITS = new Set([
+  "per_slot",
+  "per_time_band",
+  "per_3_hours",
+  "per_4_hours",
+  "per_half_day",
+]);
 const venueWebsites = loadCsv("data/venue-websites.csv");
 const errors = [];
 const warnings = [];
@@ -632,7 +639,10 @@ budgetScenarios.forEach((row, index) => {
   if (!Number.isFinite(amount) || amount < 0) {
     errors.push(`budget-scenarios.csv:${line} invalid total_amount_jpy=${row.total_amount_jpy}`);
   }
-  if (row.derivation_method !== "sum_verified_components") {
+  if (
+    row.derivation_method !== "sum_verified_components" &&
+    row.derivation_method !== "hourly_rate_times_published_hours"
+  ) {
     errors.push(`budget-scenarios.csv:${line} invalid derivation_method=${row.derivation_method}`);
   }
   if (row.verification_status !== "derived_from_verified_components") {
@@ -648,14 +658,52 @@ budgetScenarios.forEach((row, index) => {
     errors.push(`budget-scenarios.csv:${line} missing component price ids`);
   }
   const components = componentIds.map((priceId) => priceById.get(priceId));
+  const validComponentQuantities =
+    row.derivation_method === "sum_verified_components"
+      ? componentQuantities.every(
+          (quantity) => Number.isInteger(quantity) && quantity >= 1,
+        )
+      : row.derivation_method === "hourly_rate_times_published_hours"
+        ? componentQuantities.every(
+            (quantity) => Number.isFinite(quantity) && quantity > 0,
+          )
+        : false;
   if (
     componentQuantities.length !== componentIds.length ||
-    componentQuantities.some(
-      (quantity) => !Number.isInteger(quantity) || quantity < 1,
-    )
+    !validComponentQuantities
   ) {
     errors.push(`budget-scenarios.csv:${line} invalid component_quantities`);
   }
+  if (row.derivation_method === "hourly_rate_times_published_hours") {
+    const timeSpanMatch = row.time_span.match(/^(\d{2}):(\d{2})-(\d{2}):(\d{2})$/);
+    if (!timeSpanMatch) {
+      errors.push(`budget-scenarios.csv:${line} invalid time_span=${row.time_span}`);
+    } else {
+      const [, startHour, startMinute, endHour, endMinute] = timeSpanMatch;
+      const timeSpanHours =
+        (Number(endHour) * 60 +
+          Number(endMinute) -
+          (Number(startHour) * 60 + Number(startMinute))) /
+        60;
+      const quantitySum = componentQuantities.reduce(
+        (sum, quantity) => sum + quantity,
+        0,
+      );
+      if (quantitySum !== timeSpanHours) {
+        errors.push(
+          `budget-scenarios.csv:${line} quantity sum ${quantitySum} != time_span hours ${timeSpanHours}`,
+        );
+      }
+    }
+  }
+  // 区分合算の構成要素は「施設が区切った予約単位」であればよい。台帳では同じ意味の単位が
+  // per_slot / per_time_band / per_3_hours / per_4_hours / per_half_day に分かれて入っている。
+  const expectedComponentUnits =
+    row.derivation_method === "sum_verified_components"
+      ? SLOT_COMPONENT_UNITS
+      : row.derivation_method === "hourly_rate_times_published_hours"
+        ? new Set(["per_hour"])
+        : new Set();
   componentIds.forEach((priceId, componentIndex) => {
     const component = components[componentIndex];
     if (!component) {
@@ -666,7 +714,7 @@ budgetScenarios.forEach((row, index) => {
       component.candidate_id !== row.candidate_id ||
       component.space_id !== row.space_id ||
       component.charge_category !== "facility" ||
-      component.unit !== "per_slot" ||
+      !expectedComponentUnits.has(component.unit) ||
       component.verification_status !== "verified"
     ) {
       errors.push(`budget-scenarios.csv:${line} incompatible component_price_id=${priceId}`);
@@ -682,7 +730,7 @@ budgetScenarios.forEach((row, index) => {
         Number(component.amount_jpy) * componentQuantities[componentIndex],
       0,
     );
-    if (componentTotal !== amount) {
+    if (!(Math.abs(componentTotal - amount) < 0.5)) {
       errors.push(
         `budget-scenarios.csv:${line} component sum ${componentTotal} != ${amount}`,
       );

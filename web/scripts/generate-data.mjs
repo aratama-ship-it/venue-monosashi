@@ -383,6 +383,7 @@ const venues = candidates.map((candidate) => {
       timeSpan: scenario.time_span,
       amount: nullableNumber(scenario.total_amount_jpy),
       taxStatus: scenario.tax_status,
+      derivationMethod: scenario.derivation_method,
       componentPriceIds: scenario.component_price_ids.split("|"),
       componentQuantities: scenario.component_quantities.split("|").map(Number),
       validFrom: scenario.valid_from || null,

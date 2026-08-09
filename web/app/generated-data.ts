@@ -7,7 +7,7 @@ export const venueData = {
     "details": 7729,
     "prices": 2986,
     "operations": 222,
-    "budgetScenarios": 30,
+    "budgetScenarios": 35,
     "candidateCoverage": {
       "area": 606,
       "capacity": 911,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-09",
-      "observationCount": 11558,
-      "venueObservationCount": 10967,
+      "observationCount": 11563,
+      "venueObservationCount": 10972,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -745,6 +745,7 @@ export const venueData = {
           "timeSpan": "09:00-22:00",
           "amount": 654000,
           "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-202",
             "PRICE-203",
@@ -769,6 +770,7 @@ export const venueData = {
           "timeSpan": "09:00-22:00",
           "amount": 784900,
           "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-205",
             "PRICE-206",
@@ -1091,6 +1093,7 @@ export const venueData = {
           "timeSpan": "09:00-22:00",
           "amount": 2094000,
           "taxStatus": "included",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-238",
             "PRICE-239",
@@ -1115,6 +1118,7 @@ export const venueData = {
           "timeSpan": "09:00-22:00",
           "amount": 2303400,
           "taxStatus": "included",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-241",
             "PRICE-242",
@@ -1139,6 +1143,7 @@ export const venueData = {
           "timeSpan": "09:00-22:00",
           "amount": 767280,
           "taxStatus": "included",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-244",
             "PRICE-245",
@@ -9214,6 +9219,7 @@ export const venueData = {
           "timeSpan": "09:00-22:00",
           "amount": 30800,
           "taxStatus": "included",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-228",
             "PRICE-229",
@@ -10361,6 +10367,7 @@ export const venueData = {
           "timeSpan": "09:00-21:00",
           "amount": 30680,
           "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-133",
             "PRICE-134"
@@ -10383,6 +10390,7 @@ export const venueData = {
           "timeSpan": "09:00-21:00",
           "amount": 18000,
           "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-135"
           ],
@@ -10586,6 +10594,7 @@ export const venueData = {
           "timeSpan": "09:00-22:00",
           "amount": 17400,
           "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-137",
             "PRICE-138",
@@ -10610,6 +10619,7 @@ export const venueData = {
           "timeSpan": "09:00-22:00",
           "amount": 21250,
           "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-140",
             "PRICE-141",
@@ -10802,6 +10812,7 @@ export const venueData = {
           "timeSpan": "08:30-22:00",
           "amount": 96790,
           "taxStatus": "included",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-145",
             "PRICE-146",
@@ -12756,6 +12767,7 @@ export const venueData = {
           "timeSpan": "09:00-22:00",
           "amount": 17630,
           "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-304",
             "PRICE-305",
@@ -12780,6 +12792,7 @@ export const venueData = {
           "timeSpan": "09:00-22:00",
           "amount": 26480,
           "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-307",
             "PRICE-308",
@@ -28101,7 +28114,7 @@ export const venueData = {
       "sourceUrl": "https://aomori-sportspark.jp/new_athletic_park/mainarena/",
       "websiteUrl": "https://aomori-sportspark.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-09",
       "detailCount": 1,
       "priceCount": 5,
       "operationCount": 1,
@@ -28201,7 +28214,29 @@ export const venueData = {
           "sourceUrl": "https://aomori-sportspark.jp/info/charge/"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-035",
+          "spaceId": "maeda-main",
+          "label": "メインアリーナ全面・スポーツ非営利・営業時間9〜21時",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 62520,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-376"
+          ],
+          "componentQuantities": [
+            12
+          ],
+          "validFrom": null,
+          "exclusions": "営利・非スポーツ用途は主催者向け料金表",
+          "note": "施設は日額を公表していない。公式ページの営業時間9:00〜21:00（12時間）×税込5,210円/時から算出した目安。実際の予約時間で変動する",
+          "sourceUrl": "https://aomori-sportspark.jp/new_athletic_park/mainarena/"
+        }
+      ],
       "operation": {
         "station": "新総合運動公園前バス停",
         "walkMinutes": 0,
@@ -31035,6 +31070,7 @@ export const venueData = {
           "timeSpan": "09:00-21:00",
           "amount": 25920,
           "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-2946",
             "PRICE-2947",
@@ -31059,6 +31095,7 @@ export const venueData = {
           "timeSpan": "09:00-21:00",
           "amount": 77760,
           "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-2949",
             "PRICE-2950",
@@ -31083,6 +31120,7 @@ export const venueData = {
           "timeSpan": "09:00-22:00",
           "amount": 54190,
           "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-2952",
             "PRICE-2953",
@@ -31107,6 +31145,7 @@ export const venueData = {
           "timeSpan": "09:00-22:00",
           "amount": 65020,
           "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-2955",
             "PRICE-2956",
@@ -44274,7 +44313,7 @@ export const venueData = {
       "sourceUrl": "https://www.spf-sendai.jp/sisetsu/gym/shi-gym/",
       "websiteUrl": "https://www.spf-sendai.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-09",
       "detailCount": 12,
       "priceCount": 79,
       "operationCount": 1,
@@ -45558,7 +45597,108 @@ export const venueData = {
           "sourceUrl": "https://www.spf-sendai.jp/wp-content/uploads/shi-gym_price201910.pdf"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-031",
+          "spaceId": "kamei-first",
+          "label": "第1競技場・入場料なし・非営利・3区分",
+          "useCase": "amateur_sports_no_admission_noncommercial",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 40000,
+          "taxStatus": "included",
+          "derivationMethod": "sum_verified_components",
+          "componentPriceIds": [
+            "PRICE-2129",
+            "PRICE-2130",
+            "PRICE-2131"
+          ],
+          "componentQuantities": [
+            1,
+            1,
+            1
+          ],
+          "validFrom": null,
+          "exclusions": "附帯設備・土日祝2割増・休館中の利用",
+          "note": "施設が公表する一括日額ではなく、公式の3区分（9:00-12:00 / 13:00-16:30 / 17:30-21:00）を合算した参考額。12〜13時・16:30〜17:30は区分外",
+          "sourceUrl": "https://www.spf-sendai.jp/wp-content/uploads/shi-gym_price201910.pdf"
+        },
+        {
+          "id": "SCENARIO-032",
+          "spaceId": "kamei-first",
+          "label": "第1競技場・入場料あり・非営利・3区分",
+          "useCase": "amateur_sports_admission_noncommercial",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 120700,
+          "taxStatus": "included",
+          "derivationMethod": "sum_verified_components",
+          "componentPriceIds": [
+            "PRICE-2135",
+            "PRICE-2136",
+            "PRICE-2137"
+          ],
+          "componentQuantities": [
+            1,
+            1,
+            1
+          ],
+          "validFrom": null,
+          "exclusions": "附帯設備・土日祝2割増・休館中の利用",
+          "note": "施設が公表する一括日額ではなく、公式の3区分（9:00-12:00 / 13:00-16:30 / 17:30-21:00）を合算した参考額。12〜13時・16:30〜17:30は区分外",
+          "sourceUrl": "https://www.spf-sendai.jp/wp-content/uploads/shi-gym_price201910.pdf"
+        },
+        {
+          "id": "SCENARIO-033",
+          "spaceId": "kamei-second",
+          "label": "第2競技場・入場料なし・非営利・3区分",
+          "useCase": "amateur_sports_no_admission_noncommercial",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 14200,
+          "taxStatus": "included",
+          "derivationMethod": "sum_verified_components",
+          "componentPriceIds": [
+            "PRICE-2141",
+            "PRICE-2142",
+            "PRICE-2143"
+          ],
+          "componentQuantities": [
+            1,
+            1,
+            1
+          ],
+          "validFrom": null,
+          "exclusions": "附帯設備・土日祝2割増・休館中の利用",
+          "note": "施設が公表する一括日額ではなく、公式の3区分（9:00-12:00 / 13:00-16:30 / 17:30-21:00）を合算した参考額。12〜13時・16:30〜17:30は区分外",
+          "sourceUrl": "https://www.spf-sendai.jp/wp-content/uploads/shi-gym_price201910.pdf"
+        },
+        {
+          "id": "SCENARIO-034",
+          "spaceId": "kamei-second",
+          "label": "第2競技場・入場料あり・非営利・3区分",
+          "useCase": "amateur_sports_admission_noncommercial",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 43400,
+          "taxStatus": "included",
+          "derivationMethod": "sum_verified_components",
+          "componentPriceIds": [
+            "PRICE-2147",
+            "PRICE-2148",
+            "PRICE-2149"
+          ],
+          "componentQuantities": [
+            1,
+            1,
+            1
+          ],
+          "validFrom": null,
+          "exclusions": "附帯設備・土日祝2割増・休館中の利用",
+          "note": "施設が公表する一括日額ではなく、公式の3区分（9:00-12:00 / 13:00-16:30 / 17:30-21:00）を合算した参考額。12〜13時・16:30〜17:30は区分外",
+          "sourceUrl": "https://www.spf-sendai.jp/wp-content/uploads/shi-gym_price201910.pdf"
+        }
+      ],
       "operation": {
         "station": "仙台市地下鉄富沢駅",
         "walkMinutes": 10,
@@ -66656,6 +66796,7 @@ export const venueData = {
           "timeSpan": "09:00-21:00",
           "amount": 28170,
           "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-2958",
             "PRICE-2959",
@@ -66680,6 +66821,7 @@ export const venueData = {
           "timeSpan": "09:00-21:00",
           "amount": 14100,
           "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-2961",
             "PRICE-2962",
@@ -66704,6 +66846,7 @@ export const venueData = {
           "timeSpan": "09:00-21:00",
           "amount": 243840,
           "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-2964",
             "PRICE-2965",
@@ -66728,6 +66871,7 @@ export const venueData = {
           "timeSpan": "09:00-21:00",
           "amount": 112770,
           "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-2967",
             "PRICE-2968",
@@ -66752,6 +66896,7 @@ export const venueData = {
           "timeSpan": "09:00-21:00",
           "amount": 135330,
           "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-2970",
             "PRICE-2971",
@@ -68030,6 +68175,7 @@ export const venueData = {
           "timeSpan": "09:00-22:00",
           "amount": 288320,
           "taxStatus": "included",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-2809",
             "PRICE-2810",
@@ -68054,6 +68200,7 @@ export const venueData = {
           "timeSpan": "09:00-22:00",
           "amount": 360420,
           "taxStatus": "included",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-2812",
             "PRICE-2813",
@@ -68078,6 +68225,7 @@ export const venueData = {
           "timeSpan": "09:00-22:00",
           "amount": 192210,
           "taxStatus": "included",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-2815",
             "PRICE-2816",
@@ -68102,6 +68250,7 @@ export const venueData = {
           "timeSpan": "09:00-22:00",
           "amount": 240270,
           "taxStatus": "included",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-2818",
             "PRICE-2819",
@@ -106084,6 +106233,7 @@ export const venueData = {
           "timeSpan": "09:00-22:00",
           "amount": 5510,
           "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-2973",
             "PRICE-2974",
@@ -106108,6 +106258,7 @@ export const venueData = {
           "timeSpan": "09:00-22:00",
           "amount": 6710,
           "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-2976",
             "PRICE-2977",
@@ -106132,6 +106283,7 @@ export const venueData = {
           "timeSpan": "09:00-22:00",
           "amount": 45440,
           "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-2979",
             "PRICE-2980",
@@ -106156,6 +106308,7 @@ export const venueData = {
           "timeSpan": "09:00-22:00",
           "amount": 54470,
           "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
           "componentPriceIds": [
             "PRICE-2982",
             "PRICE-2983",

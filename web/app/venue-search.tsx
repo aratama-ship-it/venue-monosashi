@@ -191,6 +191,11 @@ const chargeLabels: Record<string, string> = {
   ventilation: "換気・排気",
 };
 
+const derivationLabels: Record<string, string> = {
+  sum_verified_components: "区分合計の参考額",
+  hourly_rate_times_published_hours: "時間単価×利用可能時間の目安",
+};
+
 const taxLabels: Record<string, string> = {
   included: "税込",
   excluded: "税別",
@@ -360,7 +365,10 @@ function spacePriceSummary(
           priceDayType,
         ),
     )
-    .map((scenario) => ({ amount: scenario.amount, kind: "区分合計の参考額" }));
+    .map((scenario) => ({
+      amount: scenario.amount,
+      kind: derivationLabels[scenario.derivationMethod] ?? "参考日額",
+    }));
   const daily = [...officialDaily, ...derivedDaily].sort(
     (a, b) => a.amount - b.amount,
   )[0];
@@ -804,12 +812,16 @@ export function VenueSearch() {
           .map((scenario) => ({
             amount: scenario.amount,
             kind: "derived_scenario" as const,
+            derivationMethod: scenario.derivationMethod,
           }))
           .filter(
             (
               price,
-            ): price is { amount: number; kind: "derived_scenario" } =>
-              price.amount !== null,
+            ): price is {
+              amount: number;
+              kind: "derived_scenario";
+              derivationMethod: string;
+            } => price.amount !== null,
           );
         const compatiblePrices = [
           ...compatibleDailyPrices,
@@ -833,6 +845,10 @@ export function VenueSearch() {
             searchPrice <= maxDailyPrice,
           searchPrice,
           searchPriceKind: compatiblePrices[0]?.kind ?? null,
+          searchPriceDerivation:
+            compatiblePrices[0]?.kind === "derived_scenario"
+              ? compatiblePrices[0].derivationMethod
+              : null,
         };
       })
       .filter(
@@ -1717,7 +1733,11 @@ export function VenueSearch() {
                         >
                           {priceLabel(venue.searchPrice)}
                           {venue.searchPriceKind === "derived_scenario" && (
-                            <small>区分合計の参考額</small>
+                            <small>
+                              {derivationLabels[
+                                venue.searchPriceDerivation ?? ""
+                              ] ?? "参考日額"}
+                            </small>
                           )}
                         </span>
                       </div>
@@ -1942,7 +1962,9 @@ export function VenueSearch() {
                                 {venue.budgetScenarios.map((scenario) => (
                                   <tr key={scenario.id}>
                                     <td>
-                                      区分合計の参考額
+                                      {derivationLabels[
+                                        scenario.derivationMethod
+                                      ] ?? "参考日額"}
                                       <small>
                                         {scenario.validFrom
                                           ? `${scenario.validFrom}〜`
