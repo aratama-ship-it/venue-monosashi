@@ -898,13 +898,19 @@ body {
 }
 
 .results {
+  position: sticky;
+  top: 8px;
+  align-self: start;
+  max-height: calc(100vh - 16px);
   padding-top: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
 }
 
 .results-head {
   position: sticky;
   z-index: 5;
-  top: 80px;
+  top: 0;
   margin: 0 0 8px;
   padding: 22px 24px 18px;
   border: 0;
@@ -1598,6 +1604,12 @@ body {
   .filters {
     position: static;
     max-height: none;
+  }
+
+  .results {
+    position: static;
+    max-height: none;
+    overflow-y: visible;
   }
 
   .results-head {
