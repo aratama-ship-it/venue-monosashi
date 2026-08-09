@@ -17,12 +17,12 @@ prefecture,region,stage_venues,stage_priced,stage_gap,stage_reachable,sports_ven
 鹿児島県,九州,21,2,3,yes,8,2,3,yes
 宮城県,東北,21,3,2,yes,9,2,3,yes
 岡山県,中国,22,3,2,yes,5,2,3,yes
-高知県,四国,18,3,2,yes,7,2,3,yes
 千葉県,関東,21,2,3,yes,7,3,2,yes
 富山県,北陸,22,3,2,yes,8,2,3,yes
 山梨県,甲信越,20,3,2,yes,9,2,3,yes
 宮崎県,九州,20,4,1,yes,9,1,4,yes
 島根県,中国,17,4,1,yes,5,2,3,yes
+高知県,四国,18,4,1,yes,7,2,3,yes
 秋田県,東北,18,5,0,met,6,1,4,yes
 神奈川県,関東,19,5,0,met,7,1,4,yes
 石川県,北陸,21,4,1,yes,8,2,3,yes

@@ -5,7 +5,7 @@ export const venueData = {
     "historical": 225,
     "venues": 1178,
     "details": 7734,
-    "prices": 3208,
+    "prices": 3210,
     "operations": 222,
     "budgetScenarios": 87,
     "candidateCoverage": {
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 11842,
-      "venueObservationCount": 11251,
+      "observationCount": 11844,
+      "venueObservationCount": 11253,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -79882,9 +79882,9 @@ export const venueData = {
       "sourceUrl": "https://www.susakibunka.com/facility",
       "websiteUrl": "https://www.susakibunka.com/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 4,
-      "priceCount": 0,
+      "priceCount": 2,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -79899,8 +79899,41 @@ export const venueData = {
       "hasFixedStage": true,
       "practiceUse": "conditional",
       "streamingReady": "unknown",
-      "minDailyFacilityPrice": null,
-      "priceObservations": [],
+      "minDailyFacilityPrice": 68000,
+      "priceObservations": [
+        {
+          "id": "PRICE-3211",
+          "spaceId": "susaki-large",
+          "category": "facility",
+          "useCase": "no_admission",
+          "dayType": "weekday",
+          "timeBand": "09:00-22:00",
+          "amount": 68000,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "多目的大ホール・全日区分・基本使用料",
+          "validFrom": null,
+          "exclusions": "空調使用料65,000円・営利/入場料加算・市外30%加算・付属設備",
+          "note": "公式料金ページ内の使用料一覧（画像）の全日9:00〜22:00欄。画像を取得して目視照合。空調使用料は別建て（平日・休日とも65,000円）。営利・入場料加算は基本使用料への割合加算、市外はさらに30%加算",
+          "sourceUrl": "https://www.susakibunka.com/price"
+        },
+        {
+          "id": "PRICE-3212",
+          "spaceId": "susaki-large",
+          "category": "facility",
+          "useCase": "no_admission",
+          "dayType": "weekend_holiday",
+          "timeBand": "09:00-22:00",
+          "amount": 81000,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "多目的大ホール・全日区分・基本使用料（休日）",
+          "validFrom": null,
+          "exclusions": "空調使用料65,000円・営利/入場料加算・市外30%加算・付属設備",
+          "note": "公式料金ページ内の使用料一覧（画像）の全日9:00〜22:00欄。画像を取得して目視照合。空調使用料は別建て（平日・休日とも65,000円）。営利・入場料加算は基本使用料への割合加算、市外はさらに30%加算",
+          "sourceUrl": "https://www.susakibunka.com/price"
+        }
+      ],
       "budgetScenarios": [],
       "operation": null,
       "spaces": [
