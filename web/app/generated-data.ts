@@ -7,7 +7,7 @@ export const venueData = {
     "details": 7734,
     "prices": 3208,
     "operations": 222,
-    "budgetScenarios": 85,
+    "budgetScenarios": 87,
     "candidateCoverage": {
       "area": 606,
       "capacity": 911,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 11840,
-      "venueObservationCount": 11249,
+      "observationCount": 11842,
+      "venueObservationCount": 11251,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -3732,7 +3732,7 @@ export const venueData = {
       "sourceUrl": "https://aomori-sportspark.jp/new_athletic_park/mainarena/",
       "websiteUrl": "https://aomori-sportspark.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 2,
       "priceCount": 7,
       "operationCount": 1,
@@ -3864,7 +3864,29 @@ export const venueData = {
           "sourceUrl": "https://aomori-sportspark.jp/info/charge/"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-086",
+          "spaceId": "maeda-main",
+          "label": "メインアリーナ全面・スポーツ非営利・09:00-21:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 62520,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-794"
+          ],
+          "componentQuantities": [
+            12
+          ],
+          "validFrom": null,
+          "exclusions": "営利・非スポーツ用途は主催者向け料金表",
+          "note": "施設は日額を公表していない。公式ページの営業時間9:00〜21:00（12時間）×税込5,210円/時から算出した目安。実際の予約時間で変動する。※CAND-139と同一施設の重複候補（統合は承認待ち）",
+          "sourceUrl": "https://aomori-sportspark.jp/new_athletic_park/mainarena/"
+        }
+      ],
       "operation": {
         "station": "新総合運動公園前バス停",
         "walkMinutes": null,
@@ -42968,7 +42990,7 @@ export const venueData = {
       "sourceUrl": "https://aomori-arena.jp/facility/",
       "websiteUrl": "https://aomori-arena.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 1,
       "priceCount": 5,
       "operationCount": 1,
@@ -43068,7 +43090,29 @@ export const venueData = {
           "sourceUrl": "https://aomori-arena.jp/price/"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-087",
+          "spaceId": "aomori-city-main",
+          "label": "メインアリーナ全面・アマチュアスポーツ・入場料なし・09:00-22:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 26000,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-525"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "附帯設備（放送・映像各1,000円/時）",
+          "note": "施設は日額を公表していない。公式料金ページの利用時間9:00〜22:00（13時間）×2,000円/時から算出した目安。実際の予約時間で変動する",
+          "sourceUrl": "https://aomori-arena.jp/price/"
+        }
+      ],
       "operation": {
         "station": "JR青森駅",
         "walkMinutes": null,
