@@ -5,9 +5,9 @@ export const venueData = {
     "historical": 225,
     "venues": 1178,
     "details": 7734,
-    "prices": 3176,
+    "prices": 3178,
     "operations": 222,
-    "budgetScenarios": 83,
+    "budgetScenarios": 85,
     "candidateCoverage": {
       "area": 606,
       "capacity": 911,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 11806,
-      "venueObservationCount": 11215,
+      "observationCount": 11810,
+      "venueObservationCount": 11219,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -146755,9 +146755,9 @@ export const venueData = {
       "sourceUrl": "https://www.town.yoshinogari.lg.jp/lifeinfo/soshiki/shakai_kyoiku/1/3/2/2010.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-08",
+      "observedAt": "2026-08-10",
       "detailCount": 5,
-      "priceCount": 0,
+      "priceCount": 2,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -146773,8 +146773,84 @@ export const venueData = {
       "practiceUse": "yes",
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3179",
+          "spaceId": "yoshinogari-arena",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "per_hour",
+          "amount": 2200,
+          "taxStatus": "included",
+          "unit": "per_hour",
+          "basis": "アリーナ全面・町内一般",
+          "validFrom": null,
+          "exclusions": "冷暖房（町内4,300円/時・町外8,600円/時）",
+          "note": "指定管理者公式の利用料金ページ。税込。照明料込み",
+          "sourceUrl": "https://www.yoshinogari-gym.jp/?page_id=21"
+        },
+        {
+          "id": "PRICE-3180",
+          "spaceId": "yoshinogari-arena",
+          "category": "facility",
+          "useCase": "amateur_sports_nonlocal",
+          "dayType": "all",
+          "timeBand": "per_hour",
+          "amount": 4400,
+          "taxStatus": "included",
+          "unit": "per_hour",
+          "basis": "アリーナ全面・町外一般",
+          "validFrom": null,
+          "exclusions": "冷暖房（町内4,300円/時・町外8,600円/時）",
+          "note": "指定管理者公式の利用料金ページ。税込。照明料込み",
+          "sourceUrl": "https://www.yoshinogari-gym.jp/?page_id=21"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-084",
+          "spaceId": "yoshinogari-arena",
+          "label": "アリーナ全面・町内一般・09:00-22:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 28600,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3179"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "冷暖房（町内4,300円/時・町外8,600円/時）",
+          "note": "施設は日額を公表していない。指定管理者公式が「9:00〜22:00までの13時間」と明記する開館時間×2,200円/時から算出した目安。利用は21:30まで、22:00までに退館。実際の予約時間で変動する",
+          "sourceUrl": "https://www.yoshinogari-gym.jp/?page_id=6"
+        },
+        {
+          "id": "SCENARIO-085",
+          "spaceId": "yoshinogari-arena",
+          "label": "アリーナ全面・町外一般・09:00-22:00",
+          "useCase": "amateur_sports_nonlocal",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 57200,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3180"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "冷暖房（町内4,300円/時・町外8,600円/時）",
+          "note": "施設は日額を公表していない。指定管理者公式が「9:00〜22:00までの13時間」と明記する開館時間×4,400円/時から算出した目安。利用は21:30まで、22:00までに退館。実際の予約時間で変動する",
+          "sourceUrl": "https://www.yoshinogari-gym.jp/?page_id=6"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
