@@ -5,9 +5,9 @@ export const venueData = {
     "historical": 225,
     "venues": 1178,
     "details": 7729,
-    "prices": 2986,
+    "prices": 2987,
     "operations": 222,
-    "budgetScenarios": 50,
+    "budgetScenarios": 55,
     "candidateCoverage": {
       "area": 606,
       "capacity": 911,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-09",
-      "observationCount": 11578,
-      "venueObservationCount": 10987,
+      "observationCount": 11584,
+      "venueObservationCount": 10993,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -7039,7 +7039,7 @@ export const venueData = {
       "sourceUrl": "https://shiga-arena.jp/gallery",
       "websiteUrl": "https://shiga-arena.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-09",
       "detailCount": 2,
       "priceCount": 12,
       "operationCount": 1,
@@ -7251,7 +7251,58 @@ export const venueData = {
           "sourceUrl": "https://shiga-arena.jp/guide"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-053",
+          "spaceId": "shiga-main",
+          "label": "メインアリーナ全面・県内・アマチュアスポーツ・入場料等なし・08:30-21:30",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "08:30-21:30",
+          "amount": 91880,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-801",
+            "PRICE-802",
+            "PRICE-803"
+          ],
+          "componentQuantities": [
+            4,
+            4,
+            4
+          ],
+          "validFrom": null,
+          "exclusions": "空調・照明・県外1.5倍・分割利用",
+          "note": "施設は日額を公表していない。公式の利用区間【午前】8:30-12:30【午後】13:00-17:00【夜間】17:30-21:30（各4時間・計12時間）で算出した目安。5,060円/時×4＋7,810円/時×4＋10,100円/時×4。12:30-13:00と17:00-17:30は区間外。実際の予約時間で変動する",
+          "sourceUrl": "https://shiga-arena.jp/guide"
+        },
+        {
+          "id": "SCENARIO-054",
+          "spaceId": "shiga-sub",
+          "label": "サブアリーナ全面・県内・アマチュアスポーツ・入場料等なし・08:30-21:30",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "08:30-21:30",
+          "amount": 42600,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-810",
+            "PRICE-811",
+            "PRICE-812"
+          ],
+          "componentQuantities": [
+            4,
+            4,
+            4
+          ],
+          "validFrom": null,
+          "exclusions": "空調・照明・県外1.5倍・分割利用",
+          "note": "施設は日額を公表していない。公式の利用区間【午前】8:30-12:30【午後】13:00-17:00【夜間】17:30-21:30（各4時間・計12時間）で算出した目安。2,340円/時×4＋3,620円/時×4＋4,690円/時×4。12:30-13:00と17:00-17:30は区間外。実際の予約時間で変動する",
+          "sourceUrl": "https://shiga-arena.jp/guide"
+        }
+      ],
       "operation": {
         "station": "JR瀬田駅",
         "walkMinutes": null,
@@ -16903,7 +16954,7 @@ export const venueData = {
       "sourceUrl": "https://h-jigyoudan.or.jp/sports-center/center-guide/",
       "websiteUrl": "https://h-jigyoudan.or.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-09",
       "detailCount": 2,
       "priceCount": 18,
       "operationCount": 1,
@@ -17211,7 +17262,54 @@ export const venueData = {
           "sourceUrl": "https://h-jigyoudan.or.jp/center/r06_04-center-price/"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-051",
+          "spaceId": "hiroshima-main",
+          "label": "大アリーナ全面・一般・アマチュアスポーツ・入場料無料・09:00-21:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekday",
+          "timeSpan": "09:00-21:00",
+          "amount": 81040,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-881",
+            "PRICE-882"
+          ],
+          "componentQuantities": [
+            8,
+            4
+          ],
+          "validFrom": null,
+          "exclusions": "附属設備・特定日4/5料金・準備撤去",
+          "note": "施設は日額を公表していない。公式料金表の時間帯区分（9〜17時×8時間＋17〜21時×4時間）で算出した目安。6,500円/時×8＋7,260円/時×4。実際の予約時間で変動する",
+          "sourceUrl": "https://h-jigyoudan.or.jp/center/r06_04-center-price/"
+        },
+        {
+          "id": "SCENARIO-052",
+          "spaceId": "hiroshima-sub",
+          "label": "小アリーナ全面・一般・アマチュアスポーツ・入場料無料・09:00-21:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekday",
+          "timeSpan": "09:00-21:00",
+          "amount": 54000,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-893",
+            "PRICE-894"
+          ],
+          "componentQuantities": [
+            8,
+            4
+          ],
+          "validFrom": null,
+          "exclusions": "附属設備・特定日4/5料金・準備撤去",
+          "note": "施設は日額を公表していない。公式料金表の時間帯区分（9〜17時×8時間＋17〜21時×4時間）で算出した目安。4,390円/時×8＋4,720円/時×4。実際の予約時間で変動する",
+          "sourceUrl": "https://h-jigyoudan.or.jp/center/r06_04-center-price/"
+        }
+      ],
       "operation": {
         "station": "県庁前駅",
         "walkMinutes": null,
@@ -39571,9 +39669,9 @@ export const venueData = {
       "sourceUrl": "https://www.miyazaki-spokyo.jp/nobeoka-arena/index.php",
       "websiteUrl": "https://www.miyazaki-spokyo.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-09",
       "detailCount": 1,
-      "priceCount": 6,
+      "priceCount": 7,
       "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -39685,9 +39783,49 @@ export const venueData = {
           "exclusions": "基本使用料・観客席空調等の別料金",
           "note": "指定管理者公式料金PDFを画像照合し6,900円/時間を確認。観客席は8,100円/時間",
           "sourceUrl": "https://www.miyazaki-spokyo.jp/nobeoka-arena/pdf/price202604.pdf"
+        },
+        {
+          "id": "PRICE-2989",
+          "spaceId": "nobeoka-main",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "17:00-22:00",
+          "amount": 3600,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "メインアリーナ全面・その他の団体・アマチュアスポーツ・入場料なし・17〜22時",
+          "validFrom": null,
+          "exclusions": "照明・空調・器具等の別料金",
+          "note": "指定管理者公式料金PDFをPNG化して画像照合。9〜17時は1,800円/時（PRICE-549）、17〜22時は3,600円/時",
+          "sourceUrl": "https://www.miyazaki-spokyo.jp/nobeoka-arena/pdf/price202604.pdf"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-055",
+          "spaceId": "nobeoka-main",
+          "label": "メインアリーナ全面・その他の団体・アマチュアスポーツ・入場料なし・09:00-22:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 32400,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-549",
+            "PRICE-2989"
+          ],
+          "componentQuantities": [
+            8,
+            5
+          ],
+          "validFrom": null,
+          "exclusions": "照明・空調・器具等の別料金",
+          "note": "施設は日額を公表していない。公式料金表の区分（9〜17時×8時間×1,800円/時＋17〜22時×5時間×3,600円/時）と同表の注記「開館時間は9:00から22:00まで」から算出した目安。実際の予約時間で変動する",
+          "sourceUrl": "https://www.miyazaki-spokyo.jp/nobeoka-arena/pdf/price202604.pdf"
+        }
+      ],
       "operation": {
         "station": "JR延岡駅",
         "walkMinutes": null,

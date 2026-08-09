@@ -689,9 +689,12 @@ budgetScenarios.forEach((row, index) => {
         (sum, quantity) => sum + quantity,
         0,
       );
-      if (quantitySum !== timeSpanHours) {
+      // time_span より多くの時間を積むことは許さない（想定利用時間を勝手に伸ばせないようにする）。
+      // 逆に少ないのは正当: 午前8:30-12:30／午後13:00-17:00 のように区分の間に空き時間があると、
+      // 課金対象の合計時間は施設の営業時間より短くなる。
+      if (quantitySum > timeSpanHours) {
         errors.push(
-          `budget-scenarios.csv:${line} quantity sum ${quantitySum} != time_span hours ${timeSpanHours}`,
+          `budget-scenarios.csv:${line} quantity sum ${quantitySum} exceeds time_span hours ${timeSpanHours}`,
         );
       }
     }
