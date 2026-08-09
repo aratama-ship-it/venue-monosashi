@@ -92,6 +92,7 @@ function isDailyFacilityPrice(price) {
 const candidates = loadCsv("data/candidate-venues.csv");
 const details = loadCsv("data/venue-details.csv");
 const prices = loadCsv("data/price-observations.csv");
+const budgetScenarios = loadCsv("data/budget-scenarios.csv");
 
 const detailsByCandidate = new Map();
 for (const detail of details) {
@@ -99,12 +100,27 @@ for (const detail of details) {
   detailsByCandidate.get(detail.candidate_id).push(detail);
 }
 
-const verifiedDailyByCandidate = new Set();
+// 検索画面の予算フィルタ（venue-search.tsx）は公式日額と区分合計の参考額の両方を拾うので、
+// この表も同じ two-source 判定にそろえる。
+const officialDailyByCandidate = new Set();
 for (const price of prices) {
   if (isDailyFacilityPrice(price) && price.verification_status === "verified") {
-    verifiedDailyByCandidate.add(price.candidate_id);
+    officialDailyByCandidate.add(price.candidate_id);
   }
 }
+const derivedDailyByCandidate = new Set();
+for (const scenario of budgetScenarios) {
+  if (
+    scenario.verification_status === "derived_from_verified_components" &&
+    Number.isFinite(Number(scenario.total_amount_jpy))
+  ) {
+    derivedDailyByCandidate.add(scenario.candidate_id);
+  }
+}
+const verifiedDailyByCandidate = new Set([
+  ...officialDailyByCandidate,
+  ...derivedDailyByCandidate,
+]);
 
 const byPrefecture = new Map();
 for (const candidate of candidates) {
@@ -184,7 +200,11 @@ if (listPrefecture) {
   ]) {
     console.log(`\n## ${label} (${priced.size}/${all.length})`);
     for (const candidate of all) {
-      const mark = priced.has(candidate.candidate_id) ? "PRICED  " : "no-price";
+      const mark = !priced.has(candidate.candidate_id)
+        ? "no-price"
+        : officialDailyByCandidate.has(candidate.candidate_id)
+          ? "公式日額  "
+          : "参考合計  ";
       console.log(`${mark} ${candidate.candidate_id} ${candidate.facility_name}`);
     }
   }
@@ -196,7 +216,12 @@ const sportsMet = rows.filter((row) => row.sports_gap === 0).length;
 const bothMet = rows.filter((row) => row.stage_gap === 0 && row.sports_gap === 0).length;
 
 console.log("Venue Monosashi price coverage by prefecture x venue role");
-console.log(`target=${TARGET_PER_ROLE} venues per role with a verified per-day facility price`);
+console.log(`target=${TARGET_PER_ROLE} venues per role with a searchable day rate`);
+console.log(
+  `day_rate_sources: official_per_day=${officialDailyByCandidate.size} venues, derived_scenario_only=${
+    [...derivedDailyByCandidate].filter((id) => !officialDailyByCandidate.has(id)).length
+  } venues`,
+);
 console.log(`stage_met=${stageMet}/47 sports_met=${sportsMet}/47 both_met=${bothMet}/47`);
 console.log(`stage_gap_total=${rows.reduce((sum, row) => sum + row.stage_gap, 0)}`);
 console.log(`sports_gap_total=${rows.reduce((sum, row) => sum + row.sports_gap, 0)}`);
