@@ -7,7 +7,7 @@ export const venueData = {
     "details": 7729,
     "prices": 2987,
     "operations": 222,
-    "budgetScenarios": 55,
+    "budgetScenarios": 60,
     "candidateCoverage": {
       "area": 606,
       "capacity": 911,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-09",
-      "observationCount": 11584,
-      "venueObservationCount": 10993,
+      "observationCount": 11589,
+      "venueObservationCount": 10998,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -13406,7 +13406,7 @@ export const venueData = {
       "sourceUrl": "https://www.city.morioka.iwate.jp/shisetsu/sports/gim/1006882.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-09",
       "detailCount": 1,
       "priceCount": 16,
       "operationCount": 1,
@@ -13682,7 +13682,58 @@ export const venueData = {
           "sourceUrl": "https://morioka-sport.or.jp/wp/wp-content/uploads/2026/04/HP%E7%94%A8%E5%88%A9%E7%94%A8%E6%96%99%E9%87%91%EF%BC%88%E3%83%95%E3%83%AD%E3%82%A2%EF%BC%89R8.0401%EF%BD%9E.pdf"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-056",
+          "spaceId": "takaya-main",
+          "label": "アリーナ全面・市民料金・アマチュアスポーツ・その他の日・09:00-21:00",
+          "useCase": "amateur_sports",
+          "dayType": "weekday",
+          "timeSpan": "09:00-21:00",
+          "amount": 49400,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-858",
+            "PRICE-859",
+            "PRICE-860"
+          ],
+          "componentQuantities": [
+            4,
+            4,
+            4
+          ],
+          "validFrom": null,
+          "exclusions": "附属設備・冷暖房・入場料等徴収1.5倍・準備撤去0.5倍",
+          "note": "施設は日額を公表していない。公式の使用区分（午前9-13時・午後13-17時・夜間17-21時）で算出した目安（3,800円/時×4＋4,100円/時×4＋4,450円/時×4）。実際の予約時間で変動する",
+          "sourceUrl": "https://morioka-sport.or.jp/wp/wp-content/uploads/2026/04/HP%E7%94%A8%E5%88%A9%E7%94%A8%E6%96%99%E9%87%91%EF%BC%88%E3%83%95%E3%83%AD%E3%82%A2%EF%BC%89R8.0401%EF%BD%9E.pdf"
+        },
+        {
+          "id": "SCENARIO-057",
+          "spaceId": "takaya-main",
+          "label": "アリーナ全面・市民料金・アマチュアスポーツ・土曜休日・09:00-21:00",
+          "useCase": "amateur_sports",
+          "dayType": "holiday",
+          "timeSpan": "09:00-21:00",
+          "amount": 64400,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-861",
+            "PRICE-862",
+            "PRICE-863"
+          ],
+          "componentQuantities": [
+            4,
+            4,
+            4
+          ],
+          "validFrom": null,
+          "exclusions": "附属設備・冷暖房・入場料等徴収1.5倍・準備撤去0.5倍",
+          "note": "施設は日額を公表していない。公式の使用区分（午前9-13時・午後13-17時・夜間17-21時）で算出した目安（5,050円/時×4＋5,350円/時×4＋5,700円/時×4）。実際の予約時間で変動する",
+          "sourceUrl": "https://morioka-sport.or.jp/wp/wp-content/uploads/2026/04/HP%E7%94%A8%E5%88%A9%E7%94%A8%E6%96%99%E9%87%91%EF%BC%88%E3%83%95%E3%83%AD%E3%82%A2%EF%BC%89R8.0401%EF%BD%9E.pdf"
+        }
+      ],
       "operation": {
         "station": null,
         "walkMinutes": null,
@@ -13734,7 +13785,7 @@ export const venueData = {
       "sourceUrl": "https://www.pref.fukui.lg.jp/doc/undoukouen/taiikukan.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-09",
       "detailCount": 6,
       "priceCount": 50,
       "operationCount": 1,
@@ -14554,7 +14605,29 @@ export const venueData = {
           "sourceUrl": "https://www.pref.fukui.lg.jp/doc/undoukouen/taiikukan_d/fil/FukuiPrefGym_ryoukinhyo.pdf"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-059",
+          "spaceId": "seiren-main",
+          "label": "メインアリーナ全面・アマチュアスポーツ・入場料なし・一般・08:30-18:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "08:30-18:00",
+          "amount": 34865,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-1109"
+          ],
+          "componentQuantities": [
+            9.5
+          ],
+          "validFrom": null,
+          "exclusions": "照明・冷暖房・休日加算・県外加算",
+          "note": "施設は日額を公表していない。公式の通常時間帯8:30-18:00で算出した目安。18:00-20:30の区分は「大会等が終了しない場合」の例外適用のため含めない（3,670円/時×9.5）。実際の予約時間で変動する",
+          "sourceUrl": "https://www.pref.fukui.lg.jp/doc/undoukouen/taiikukan_d/fil/FukuiPrefGym_ryoukinhyo.pdf"
+        }
+      ],
       "operation": {
         "station": null,
         "walkMinutes": null,
@@ -42533,7 +42606,7 @@ export const venueData = {
       "sourceUrl": "https://hanamaki-sports.com/facilities/facility01/",
       "websiteUrl": "https://hanamaki-sports.com/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-09",
       "detailCount": 6,
       "priceCount": 121,
       "operationCount": 1,
@@ -44489,7 +44562,33 @@ export const venueData = {
           "sourceUrl": "https://www.city.hanamaki.iwate.jp/bunkasports/sports/1019891/shisetsu/1001959.html"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-058",
+          "spaceId": "hanamaki-first",
+          "label": "第1アリーナ全面・一般・平日・08:30-21:00",
+          "useCase": "general",
+          "dayType": "weekday",
+          "timeSpan": "08:30-21:00",
+          "amount": 37800,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-1935",
+            "PRICE-1936",
+            "PRICE-1937"
+          ],
+          "componentQuantities": [
+            3.5,
+            5,
+            4
+          ],
+          "validFrom": null,
+          "exclusions": "照明・暖冷房・附属設備・入場料等徴収時加算",
+          "note": "施設は日額を公表していない。公式の使用区分（朝8:30-12時・昼12-17時・夜17-21時）で算出した目安（2,400円/時×3.5＋3,000円/時×5＋3,600円/時×4）。実際の予約時間で変動する",
+          "sourceUrl": "https://www.city.hanamaki.iwate.jp/bunkasports/sports/1019891/shisetsu/1001959.html"
+        }
+      ],
       "operation": {
         "station": "JR花巻駅",
         "walkMinutes": null,
@@ -64712,7 +64811,7 @@ export const venueData = {
       "sourceUrl": "https://himeji-machishin.jp/sports/shisetsu/chuotai/",
       "websiteUrl": "https://himeji-machishin.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-09",
       "detailCount": 1,
       "priceCount": 2,
       "operationCount": 1,
@@ -64764,7 +64863,29 @@ export const venueData = {
           "sourceUrl": "https://himeji-machishin.jp/sports/shisetsu/chuotai/ryokin/"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-060",
+          "spaceId": "himeji-first",
+          "label": "第一競技場全面・市内利用・アマチュアスポーツ・入場料徴収なし・平日日中・09:00-17:00",
+          "useCase": "amateur_sports",
+          "dayType": "weekday",
+          "timeSpan": "09:00-17:00",
+          "amount": 33600,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-425"
+          ],
+          "componentQuantities": [
+            8
+          ],
+          "validFrom": null,
+          "exclusions": "空調・付属設備・土日祝2割増・市外5割増・入場料徴収・スポーツ以外等の別料金",
+          "note": "施設は日額を公表していない。収録済みの区分が平日日中9:00-17:00のみのため、その範囲での目安。夜間区分の単価は未収録（4,200円/時×8）。実際の予約時間で変動する",
+          "sourceUrl": "https://himeji-machishin.jp/sports/shisetsu/chuotai/ryokin/"
+        }
+      ],
       "operation": {
         "station": "山陽電車手柄駅",
         "walkMinutes": null,
