@@ -21,6 +21,10 @@
 - Observed coverage moved from stage gap 120 to 109 while the sports gap remained 132. Akita and Miyazaki each moved from stage 0 to 1; Yamagata 2 to 3; Ishikawa 2 to 4; Tottori was unchanged.
 - The separate writer's first wave-6 commit also included this verifier ledger in Git. This verifier did not stage, commit, or push it.
 - After the 01:01 checks, HEAD advanced to `eb6a31b` with Oita, Fukushima, and Yamanashi rows. That batch is explicitly outside the 01:01 PASS result and will be covered by the 02:00 snapshot.
+- At 02:01, 18 additional separate-writer commits through `54544ce` were checked successfully. Price rows reached 3,160, budget scenarios 81, stage gap 85, and sports gap 121; stage targets were met in 11/47 prefectures and sports targets in 7/47.
+- Akita and Tottori reached the stage target of 5. Miyazaki reached 4, Ishikawa 4, and Yamagata 3.
+- Batch 19 widened allowed slot-component units to include official 5/8/9-hour blocks. Audit passes, but this rule-surface change is retained as a morning review item rather than silently treated as routine data intake.
+- After the 02:01 checks, `bac0402` added the Mie Sun Arena estimate. It is outside the 02:01 PASS result and will be checked at 03:00.
 
 ## Pre-existing State Preserved
 
@@ -37,4 +41,4 @@
 
 ## Morning Decisions
 
-- None at run start.
+- Decide how official fixed-duration rates such as `per_12_hours` should participate in day-price search: reclassify data to `per_day`, support those units in the filter/UI while preserving unit meaning, or keep current behavior. The separate writer also notes one historical `per_12_hours` row that may contain a derived reference amount rather than a direct observation.
