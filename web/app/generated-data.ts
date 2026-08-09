@@ -7,7 +7,7 @@ export const venueData = {
     "details": 7733,
     "prices": 3135,
     "operations": 222,
-    "budgetScenarios": 76,
+    "budgetScenarios": 77,
     "candidateCoverage": {
       "area": 606,
       "capacity": 911,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 11757,
-      "venueObservationCount": 11166,
+      "observationCount": 11758,
+      "venueObservationCount": 11167,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -22169,7 +22169,7 @@ export const venueData = {
       "sourceUrl": "https://www.mspf.jp/grande21/index.php?action=sisetu_shoukai_arena",
       "websiteUrl": "https://www.mspf.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 2,
       "priceCount": 5,
       "operationCount": 1,
@@ -22269,7 +22269,29 @@ export const venueData = {
           "sourceUrl": "https://www.mspf.jp/grande21/pdfa/arena_ryokinhyo_20250401.pdf"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-077",
+          "spaceId": "grande-main",
+          "label": "メインアリーナ・一般・アマチュアスポーツ・入場料なし・09:00-21:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 92400,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-475"
+          ],
+          "componentQuantities": [
+            12
+          ],
+          "validFrom": "2025-04-01",
+          "exclusions": "冷暖房（冷房23,700円/時・暖房17,800円/時）・観客席利用の1.3倍・準備撤去は1/2",
+          "note": "施設は日額を公表していない。公式施設ページの開館時間9:00〜21:00（12時間）×7,700円/時から算出した目安。祝日は17:00までのため短くなる。冷暖房・観客席利用は別途。実際の予約時間で変動する",
+          "sourceUrl": "https://www.mspf.jp/grande21/index.php?action=sisetu_shoukai_arena"
+        }
+      ],
       "operation": {
         "station": "利府駅",
         "walkMinutes": 10,
