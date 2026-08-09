@@ -5,9 +5,9 @@ export const venueData = {
     "historical": 225,
     "venues": 1178,
     "details": 7734,
-    "prices": 3251,
+    "prices": 3254,
     "operations": 222,
-    "budgetScenarios": 95,
+    "budgetScenarios": 97,
     "candidateCoverage": {
       "area": 606,
       "capacity": 911,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 11893,
-      "venueObservationCount": 11302,
+      "observationCount": 11898,
+      "venueObservationCount": 11307,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -22529,9 +22529,9 @@ export const venueData = {
       "sourceUrl": "https://www.azumapark.or.jp/guide-map/sports-facility/%E3%81%82%E3%81%9A%E3%81%BE%E7%B7%8F%E5%90%88%E4%BD%93%E8%82%B2%E9%A4%A8/%E3%83%A1%E3%82%A4%E3%83%B3%E3%82%A2%E3%83%AA%E3%83%BC%E3%83%8A/",
       "websiteUrl": "https://www.azumapark.or.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-04",
+      "observedAt": "2026-08-10",
       "detailCount": 2,
-      "priceCount": 1,
+      "priceCount": 3,
       "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -22563,9 +22563,65 @@ export const venueData = {
           "exclusions": "照明、冷暖房、附属設備、設営、警備、清掃",
           "note": "指定管理者公式料金案内で平日22,000円/時、土日祝等33,000円/時を確認。税込/税別の明示はこの波で未確認",
           "sourceUrl": "https://www.azumapark.or.jp/user-guide/information-for-use/"
+        },
+        {
+          "id": "PRICE-3254",
+          "spaceId": "azuma-main",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "per_hour",
+          "amount": 4400,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "メインアリーナ全面・一般・アマチュアスポーツ・入場料なし・昼間",
+          "validFrom": null,
+          "exclusions": "照明・冷暖房・附属設備",
+          "note": "指定管理者公式の利用案内ページ。全灯照明3,300円/時・冷暖房12,630円/時は別途",
+          "sourceUrl": "https://www.azumapark.or.jp/user-guide/information-for-use/"
+        },
+        {
+          "id": "PRICE-3255",
+          "spaceId": "azuma-main",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "per_hour",
+          "amount": 5500,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "メインアリーナ全面・一般・アマチュアスポーツ・入場料なし・夜間",
+          "validFrom": null,
+          "exclusions": "照明・冷暖房・附属設備",
+          "note": "指定管理者公式の利用案内ページ。全灯照明3,300円/時・冷暖房12,630円/時は別途",
+          "sourceUrl": "https://www.azumapark.or.jp/user-guide/information-for-use/"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-096",
+          "spaceId": "azuma-main",
+          "label": "メインアリーナ全面・一般・アマチュアスポーツ・入場料なし・09:00-21:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 57200,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3254",
+            "PRICE-3255"
+          ],
+          "componentQuantities": [
+            8,
+            4
+          ],
+          "validFrom": null,
+          "exclusions": "照明・冷暖房・附属設備",
+          "note": "施設は日額を公表していない。公式の利用可能時間9:00〜21:00を、昼間9-17時×4,400円/時と夜間17-21時×5,500円/時で積んだ目安",
+          "sourceUrl": "https://www.azumapark.or.jp/user-guide/information-for-use/"
+        }
+      ],
       "operation": {
         "station": "福島駅",
         "walkMinutes": 30,
@@ -48104,9 +48160,9 @@ export const venueData = {
       "sourceUrl": "https://www.pref.gunma.jp/page/22142.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 1,
-      "priceCount": 5,
+      "priceCount": 6,
       "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -48202,9 +48258,47 @@ export const venueData = {
           "exclusions": "基本使用料・他面照明・設備等の別料金",
           "note": "公式2025年4月1日改正料金PDFの電気使用料表を画像で目視確認",
           "sourceUrl": "https://gunma-sports.or.jp/sportscenter/arena/fees/pdf/gunma-sportscenter-list_of_charges02.pdf"
+        },
+        {
+          "id": "PRICE-3256",
+          "spaceId": "gunma-main",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "per_hour",
+          "amount": 5360,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "メインフロア全面・アマチュアスポーツ・入場料なし",
+          "validFrom": "2025-04-01",
+          "exclusions": "電気使用料・大型映像・音響・放送・附属設備",
+          "note": "指定管理者公式の料金表PDF（2025年4月1日改正）。曜日別料金なし",
+          "sourceUrl": "https://gunma-sports.or.jp/sportscenter/arena/fees/pdf/gunma-sportscenter-list_of_charges02.pdf"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-097",
+          "spaceId": "gunma-main",
+          "label": "メインフロア全面・アマチュアスポーツ・入場料なし・09:00-21:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 64320,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3256"
+          ],
+          "componentQuantities": [
+            12
+          ],
+          "validFrom": "2025-04-01",
+          "exclusions": "電気使用料・大型映像・音響・放送・附属設備",
+          "note": "施設は日額を公表していない。群馬県公式施設ページの開館時間9時〜21時（12時間）×5,360円/時から算出した目安",
+          "sourceUrl": "https://www.pref.gunma.jp/page/22142.html"
+        }
+      ],
       "operation": {
         "station": "総合スポーツセンターバス停",
         "walkMinutes": 0,
