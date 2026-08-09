@@ -5,9 +5,9 @@ export const venueData = {
     "historical": 225,
     "venues": 1178,
     "details": 7733,
-    "prices": 3066,
+    "prices": 3076,
     "operations": 222,
-    "budgetScenarios": 62,
+    "budgetScenarios": 68,
     "candidateCoverage": {
       "area": 606,
       "capacity": 911,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 11674,
-      "venueObservationCount": 11083,
+      "observationCount": 11690,
+      "venueObservationCount": 11099,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -57577,9 +57577,9 @@ export const venueData = {
       "sourceUrl": "https://region-joetsu.jp/facility/indoor-stadium/",
       "websiteUrl": "https://region-joetsu.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 1,
-      "priceCount": 2,
+      "priceCount": 6,
       "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -57627,9 +57627,124 @@ export const venueData = {
           "exclusions": "付属設備・市外2倍・超過料金・休館期間",
           "note": "施設公式HTML料金表で平日24,750円/午前を確認。2026年9月1日から2027年3月31日まで長期休館予定",
           "sourceUrl": "https://region-joetsu.jp/facility/indoor-stadium/"
+        },
+        {
+          "id": "PRICE-3069",
+          "spaceId": "joetsu-indoor",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "13:00-17:00",
+          "amount": 16500,
+          "taxStatus": "not_stated",
+          "unit": "per_3_hours",
+          "basis": "インドアスタジアム全面・スポーツ利用・午後",
+          "validFrom": null,
+          "exclusions": "附属設備",
+          "note": "公式施設ページの区分別料金。開館時間は午前9時〜午後9時",
+          "sourceUrl": "https://region-joetsu.jp/facility/indoor-stadium/"
+        },
+        {
+          "id": "PRICE-3070",
+          "spaceId": "joetsu-indoor",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "18:00-21:00",
+          "amount": 19800,
+          "taxStatus": "not_stated",
+          "unit": "per_3_hours",
+          "basis": "インドアスタジアム全面・スポーツ利用・夜間",
+          "validFrom": null,
+          "exclusions": "附属設備",
+          "note": "公式施設ページの区分別料金。開館時間は午前9時〜午後9時",
+          "sourceUrl": "https://region-joetsu.jp/facility/indoor-stadium/"
+        },
+        {
+          "id": "PRICE-3071",
+          "spaceId": "joetsu-indoor",
+          "category": "facility",
+          "useCase": "assembly",
+          "dayType": "weekday",
+          "timeBand": "13:00-17:00",
+          "amount": 33000,
+          "taxStatus": "not_stated",
+          "unit": "per_3_hours",
+          "basis": "インドアスタジアム全面・集会等利用・平日午後",
+          "validFrom": null,
+          "exclusions": "附属設備",
+          "note": "公式施設ページの区分別料金。開館時間は午前9時〜午後9時",
+          "sourceUrl": "https://region-joetsu.jp/facility/indoor-stadium/"
+        },
+        {
+          "id": "PRICE-3072",
+          "spaceId": "joetsu-indoor",
+          "category": "facility",
+          "useCase": "assembly",
+          "dayType": "weekday",
+          "timeBand": "18:00-21:00",
+          "amount": 39600,
+          "taxStatus": "not_stated",
+          "unit": "per_3_hours",
+          "basis": "インドアスタジアム全面・集会等利用・平日夜間",
+          "validFrom": null,
+          "exclusions": "附属設備",
+          "note": "公式施設ページの区分別料金。開館時間は午前9時〜午後9時",
+          "sourceUrl": "https://region-joetsu.jp/facility/indoor-stadium/"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-063",
+          "spaceId": "joetsu-indoor",
+          "label": "インドアスタジアム全面・スポーツ利用・3区分",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 48620,
+          "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
+          "componentPriceIds": [
+            "PRICE-404",
+            "PRICE-3069",
+            "PRICE-3070"
+          ],
+          "componentQuantities": [
+            1,
+            1,
+            1
+          ],
+          "validFrom": null,
+          "exclusions": "附属設備",
+          "note": "施設が公表する一括日額ではなく、公式の3区分（9-12時・13-17時・18-21時）を合算した参考額。12〜13時・17〜18時は区分外",
+          "sourceUrl": "https://region-joetsu.jp/facility/indoor-stadium/"
+        },
+        {
+          "id": "SCENARIO-064",
+          "spaceId": "joetsu-indoor",
+          "label": "インドアスタジアム全面・集会等利用・平日・3区分",
+          "useCase": "assembly",
+          "dayType": "weekday",
+          "timeSpan": "09:00-21:00",
+          "amount": 97350,
+          "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
+          "componentPriceIds": [
+            "PRICE-405",
+            "PRICE-3071",
+            "PRICE-3072"
+          ],
+          "componentQuantities": [
+            1,
+            1,
+            1
+          ],
+          "validFrom": null,
+          "exclusions": "附属設備",
+          "note": "施設が公表する一括日額ではなく、公式の3区分（9-12時・13-17時・18-21時）を合算した参考額。12〜13時・17〜18時は区分外",
+          "sourceUrl": "https://region-joetsu.jp/facility/indoor-stadium/"
+        }
+      ],
       "operation": {
         "station": "えちごトキめき鉄道直江津駅",
         "walkMinutes": null,
@@ -69636,9 +69751,9 @@ export const venueData = {
       "sourceUrl": "https://mie-sports-stadium.jp/gym",
       "websiteUrl": "https://mie-sports-stadium.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 2,
-      "priceCount": 0,
+      "priceCount": 2,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -69654,8 +69769,84 @@ export const venueData = {
       "practiceUse": "yes",
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3073",
+          "spaceId": "mie-ise-main-gym",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "per_hour",
+          "amount": 2510,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "体育館本館・アマチュアスポーツ・基本使用料",
+          "validFrom": null,
+          "exclusions": "照明料・会議室・用器具",
+          "note": "公式ページのアマチュアスポーツ利用の1時間当たり基本使用料。照明料は別途",
+          "sourceUrl": "https://mie-sports-stadium.jp/gym"
+        },
+        {
+          "id": "PRICE-3074",
+          "spaceId": "mie-ise-annex-gym",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "per_hour",
+          "amount": 1250,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "体育館別館・アマチュアスポーツ・基本使用料",
+          "validFrom": null,
+          "exclusions": "照明料・会議室・用器具",
+          "note": "公式ページのアマチュアスポーツ利用の1時間当たり基本使用料。照明料は別途",
+          "sourceUrl": "https://mie-sports-stadium.jp/gym"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-065",
+          "spaceId": "mie-ise-main-gym",
+          "label": "体育館本館・09:00-22:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 32630,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3073"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "照明料・会議室・用器具",
+          "note": "施設は日額を公表していない。公式の利用時間9:00〜22:00（13時間）×2,510円/時から算出した目安。照明料は別途。実際の予約時間で変動する",
+          "sourceUrl": "https://mie-sports-stadium.jp/gym"
+        },
+        {
+          "id": "SCENARIO-066",
+          "spaceId": "mie-ise-annex-gym",
+          "label": "体育館別館・09:00-22:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 16250,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3074"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "照明料・会議室・用器具",
+          "note": "施設は日額を公表していない。公式の利用時間9:00〜22:00（13時間）×1,250円/時から算出した目安。照明料は別途。実際の予約時間で変動する",
+          "sourceUrl": "https://mie-sports-stadium.jp/gym"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
@@ -70024,9 +70215,9 @@ export const venueData = {
       "sourceUrl": "https://www.city.matsusaka.mie.jp/site/sports/43.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 1,
-      "priceCount": 0,
+      "priceCount": 3,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -70042,8 +70233,83 @@ export const venueData = {
       "practiceUse": "yes",
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3075",
+          "spaceId": "matsusaka-sangin-arena",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "09:00-12:00",
+          "amount": 8720,
+          "taxStatus": "not_stated",
+          "unit": "per_slot",
+          "basis": "競技場・専用貸切・スポーツ利用・午前の部",
+          "validFrom": null,
+          "exclusions": "附属設備",
+          "note": "公式ページの区分別料金。開館時間は午前9時〜午後9時",
+          "sourceUrl": "https://www.city.matsusaka.mie.jp/site/sports/43.html"
+        },
+        {
+          "id": "PRICE-3076",
+          "spaceId": "matsusaka-sangin-arena",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "13:00-17:00",
+          "amount": 11550,
+          "taxStatus": "not_stated",
+          "unit": "per_slot",
+          "basis": "競技場・専用貸切・スポーツ利用・午後の部",
+          "validFrom": null,
+          "exclusions": "附属設備",
+          "note": "公式ページの区分別料金。開館時間は午前9時〜午後9時",
+          "sourceUrl": "https://www.city.matsusaka.mie.jp/site/sports/43.html"
+        },
+        {
+          "id": "PRICE-3077",
+          "spaceId": "matsusaka-sangin-arena",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "18:00-21:00",
+          "amount": 12200,
+          "taxStatus": "not_stated",
+          "unit": "per_slot",
+          "basis": "競技場・専用貸切・スポーツ利用・夜間の部",
+          "validFrom": null,
+          "exclusions": "附属設備",
+          "note": "公式ページの区分別料金。開館時間は午前9時〜午後9時",
+          "sourceUrl": "https://www.city.matsusaka.mie.jp/site/sports/43.html"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-067",
+          "spaceId": "matsusaka-sangin-arena",
+          "label": "競技場・専用貸切・スポーツ利用・3区分",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 32470,
+          "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
+          "componentPriceIds": [
+            "PRICE-3075",
+            "PRICE-3076",
+            "PRICE-3077"
+          ],
+          "componentQuantities": [
+            1,
+            1,
+            1
+          ],
+          "validFrom": null,
+          "exclusions": "附属設備",
+          "note": "施設が公表する一括日額ではなく、公式の3区分を合算した参考額。12〜13時・17〜18時は区分外",
+          "sourceUrl": "https://www.city.matsusaka.mie.jp/site/sports/43.html"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
@@ -71764,9 +72030,9 @@ export const venueData = {
       "sourceUrl": "https://www.city.karatsu.lg.jp/page/2865.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 2,
-      "priceCount": 0,
+      "priceCount": 1,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -71782,8 +72048,47 @@ export const venueData = {
       "practiceUse": "yes",
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3078",
+          "spaceId": "karatsu-gym-arena",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "per_hour",
+          "amount": 1590,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "競技場専用利用・一般全面",
+          "validFrom": null,
+          "exclusions": "附属設備",
+          "note": "公式ページの1時間当たり使用料。開館時間は8時30分〜22時00分",
+          "sourceUrl": "https://www.city.karatsu.lg.jp/page/2865.html"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-068",
+          "spaceId": "karatsu-gym-arena",
+          "label": "競技場専用利用・一般全面・08:30-22:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "08:30-22:00",
+          "amount": 21465,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3078"
+          ],
+          "componentQuantities": [
+            13.5
+          ],
+          "validFrom": null,
+          "exclusions": "附属設備",
+          "note": "施設は日額を公表していない。公式の開館時間8時30分〜22時00分（13.5時間）×1,590円/時から算出した目安。実際の予約時間で変動する",
+          "sourceUrl": "https://www.city.karatsu.lg.jp/page/2865.html"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
