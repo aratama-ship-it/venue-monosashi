@@ -1,7 +1,7 @@
 prefecture,region,stage_venues,stage_priced,stage_gap,stage_reachable,sports_venues,sports_priced,sports_gap,sports_reachable
-青森県,東北,18,0,5,yes,10,0,5,yes
 秋田県,東北,18,0,5,yes,6,0,5,yes
 宮崎県,九州,20,0,5,yes,9,0,5,yes
+青森県,東北,18,1,4,yes,10,0,5,yes
 山形県,東北,21,1,4,yes,7,0,5,yes
 石川県,北陸,21,1,4,yes,8,0,5,yes
 滋賀県,近畿,22,0,5,yes,7,1,4,yes
