@@ -5,9 +5,9 @@ export const venueData = {
     "historical": 225,
     "venues": 1178,
     "details": 7733,
-    "prices": 3133,
+    "prices": 3135,
     "operations": 222,
-    "budgetScenarios": 74,
+    "budgetScenarios": 76,
     "candidateCoverage": {
       "area": 606,
       "capacity": 911,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 11753,
-      "venueObservationCount": 11162,
+      "observationCount": 11757,
+      "venueObservationCount": 11166,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -9057,9 +9057,9 @@ export const venueData = {
       "sourceUrl": "https://www.asty-tokushima.jp/organizer/facility/hall/",
       "websiteUrl": "https://www.asty-tokushima.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-06",
+      "observedAt": "2026-08-10",
       "detailCount": 1,
-      "priceCount": 4,
+      "priceCount": 6,
       "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -9139,9 +9139,88 @@ export const venueData = {
           "exclusions": "施設基本料・冷房・付帯設備・設営人件費・警備・清掃",
           "note": "準備・撤去・リハーサル時も課金",
           "sourceUrl": "https://www.asty-tokushima.jp/organizer/reserve/usage-fee/"
+        },
+        {
+          "id": "PRICE-3136",
+          "spaceId": "asty-multipurpose",
+          "category": "facility",
+          "useCase": "大会・会議・アマチュアスポーツ・サークル活動等",
+          "dayType": "weekday",
+          "timeBand": "13:00-17:00",
+          "amount": 82220,
+          "taxStatus": "included",
+          "unit": "per_slot",
+          "basis": "入場料を徴収しない催事・午後区分",
+          "validFrom": "2019-10-01",
+          "exclusions": "冷暖房・付帯設備・電気水道ガス・設営人件費・警備・清掃",
+          "note": "公式使用料ページ。大会・会議・アマチュアスポーツ等の区分は夜間(17:00-21:00)が「－」で設定がないため、この用途の通し利用は午前+午後の9:00-17:00が上限",
+          "sourceUrl": "https://www.asty-tokushima.jp/organizer/reserve/usage-fee/"
+        },
+        {
+          "id": "PRICE-3137",
+          "spaceId": "asty-multipurpose",
+          "category": "facility",
+          "useCase": "大会・会議・アマチュアスポーツ・サークル活動等",
+          "dayType": "weekend_holiday",
+          "timeBand": "13:00-17:00",
+          "amount": 98770,
+          "taxStatus": "included",
+          "unit": "per_slot",
+          "basis": "入場料を徴収しない催事・午後区分",
+          "validFrom": "2019-10-01",
+          "exclusions": "冷暖房・付帯設備・電気水道ガス・設営人件費・警備・清掃",
+          "note": "公式使用料ページ。大会・会議・アマチュアスポーツ等の区分は夜間(17:00-21:00)が「－」で設定がないため、この用途の通し利用は午前+午後の9:00-17:00が上限",
+          "sourceUrl": "https://www.asty-tokushima.jp/organizer/reserve/usage-fee/"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-075",
+          "spaceId": "asty-multipurpose",
+          "label": "多目的ホール・大会/アマチュアスポーツ等・午前+午後",
+          "useCase": "大会・会議・アマチュアスポーツ・サークル活動等",
+          "dayType": "weekday",
+          "timeSpan": "09:00-17:00",
+          "amount": 164440,
+          "taxStatus": "included",
+          "derivationMethod": "sum_verified_components",
+          "componentPriceIds": [
+            "PRICE-004",
+            "PRICE-3136"
+          ],
+          "componentQuantities": [
+            1,
+            1
+          ],
+          "validFrom": "2019-10-01",
+          "exclusions": "冷暖房・付帯設備・電気水道ガス・設営人件費・警備・清掃",
+          "note": "施設が公表する一括日額ではなく、公式の午前・午後2区分を合算した参考額。この用途は夜間区分が設定されていないため9:00-17:00が通し利用の上限",
+          "sourceUrl": "https://www.asty-tokushima.jp/organizer/reserve/usage-fee/"
+        },
+        {
+          "id": "SCENARIO-076",
+          "spaceId": "asty-multipurpose",
+          "label": "多目的ホール・大会/アマチュアスポーツ等・午前+午後",
+          "useCase": "大会・会議・アマチュアスポーツ・サークル活動等",
+          "dayType": "weekend_holiday",
+          "timeSpan": "09:00-17:00",
+          "amount": 197540,
+          "taxStatus": "included",
+          "derivationMethod": "sum_verified_components",
+          "componentPriceIds": [
+            "PRICE-005",
+            "PRICE-3137"
+          ],
+          "componentQuantities": [
+            1,
+            1
+          ],
+          "validFrom": "2019-10-01",
+          "exclusions": "冷暖房・付帯設備・電気水道ガス・設営人件費・警備・清掃",
+          "note": "施設が公表する一括日額ではなく、公式の午前・午後2区分を合算した参考額。この用途は夜間区分が設定されていないため9:00-17:00が通し利用の上限",
+          "sourceUrl": "https://www.asty-tokushima.jp/organizer/reserve/usage-fee/"
+        }
+      ],
       "operation": {
         "station": "JR徳島駅",
         "walkMinutes": null,
