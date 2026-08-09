@@ -1,4 +1,4 @@
-import { a as require_react, i as useRouter, o as __toESM, r as usePathname, t as require_jsx_runtime } from "../index.js";
+import { a as useRouter, i as usePathname, o as require_react, s as __toESM, t as require_jsx_runtime } from "../index.js";
 //#region node_modules/vinext/dist/utils/navigation-signal.js
 function getErrorDigest(error) {
 	if (!error || typeof error !== "object" || !("digest" in error)) return null;

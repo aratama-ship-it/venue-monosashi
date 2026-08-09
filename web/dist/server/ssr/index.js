@@ -1789,6 +1789,9 @@ function withScriptNonce(element, nonce) {
 	if (!nonce) return element;
 	return import_react.createElement(ScriptNonceProvider, { nonce }, element);
 }
+function useScriptNonce() {
+	return import_react.useContext(ScriptNonceContext);
+}
 //#endregion
 //#region node_modules/vinext/dist/server/html.js
 /**
@@ -11628,19 +11631,19 @@ function createFromReadableStream(stream, options = {}) {
 //#region \0virtual:vite-rsc/client-references
 var client_references_default = {
 	"15c18cfaeeff": async () => {
-		const m = await import("./assets/layout-segment-context-CjnwAi_K.js");
+		const m = await import("./assets/layout-segment-context-CVUaRAbM.js");
 		return { get "LayoutSegmentProvider"() {
 			return m["LayoutSegmentProvider"];
 		} };
 	},
 	"54e7cc413194": async () => {
-		const m = await import("./assets/venue-search-CBqR32nr.js");
+		const m = await import("./assets/venue-search-CGpuzmRp.js");
 		return { get "VenueSearch"() {
 			return m["VenueSearch"];
 		} };
 	},
 	"593f344dc510": async () => {
-		const m = await import("./assets/error-boundary-BIJDUsm4.js");
+		const m = await import("./assets/error-boundary-KBaXc17F.js");
 		return {
 			get "ErrorBoundary"() {
 				return m["ErrorBoundary"];
@@ -11658,6 +11661,12 @@ var client_references_default = {
 				return m["UnauthorizedBoundary"];
 			}
 		};
+	},
+	"60f387d9e0f4": async () => {
+		const m = await import("./assets/script-BzZIXxek.js");
+		return { get "default"() {
+			return m["default"];
+		} };
 	},
 	"8c0f216c4604": async () => {
 		const m = await Promise.resolve().then(() => slot_exports);
@@ -11836,4 +11845,4 @@ var app_ssr_entry_default = { async fetch(request) {
 	return new Response(String(result), { status: 200 });
 } };
 //#endregion
-export { require_react as a, app_ssr_entry_default as default, handleSsr, useRouter as i, getLayoutSegmentContext as n, __toESM as o, usePathname as r, require_jsx_runtime as t };
+export { useRouter as a, app_ssr_entry_default as default, handleSsr, usePathname as i, useScriptNonce as n, require_react as o, getLayoutSegmentContext as r, __toESM as s, require_jsx_runtime as t };
