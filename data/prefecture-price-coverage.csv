@@ -32,10 +32,10 @@ prefecture,region,stage_venues,stage_priced,stage_gap,stage_reachable,sports_ven
 石川県,北陸,21,4,1,yes,8,2,3,yes
 京都府,近畿,19,3,2,yes,6,3,2,yes
 兵庫県,近畿,22,4,1,yes,5,2,3,yes
-鳥取県,中国,21,4,1,yes,10,2,3,yes
 佐賀県,九州,20,3,2,yes,12,3,2,yes
 埼玉県,関東,23,5,0,met,5,2,3,yes
 長野県,甲信越,23,3,2,yes,7,4,1,yes
+鳥取県,中国,21,5,0,met,10,2,3,yes
 広島県,中国,18,2,3,yes,10,5,0,met
 福岡県,九州,22,5,0,met,6,3,2,yes
 長崎県,九州,23,4,1,yes,9,4,1,yes
