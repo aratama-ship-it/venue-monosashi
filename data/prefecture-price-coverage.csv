@@ -40,7 +40,7 @@ prefecture,region,stage_venues,stage_priced,stage_gap,stage_reachable,sports_ven
 福岡県,九州,22,5,0,met,6,3,2,yes
 長崎県,九州,23,4,1,yes,9,4,1,yes
 岩手県,東北,20,5,0,met,10,3,2,yes
-三重県,東海,21,3,2,yes,13,5,0,met
+三重県,東海,21,4,1,yes,13,6,0,met
 北海道,北海道,21,5,0,met,9,8,0,met
 愛媛県,四国,22,6,0,met,10,5,0,met
 東京都,関東,20,6,0,met,9,6,0,met
