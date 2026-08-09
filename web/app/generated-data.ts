@@ -5,7 +5,7 @@ export const venueData = {
     "historical": 225,
     "venues": 1178,
     "details": 7733,
-    "prices": 3125,
+    "prices": 3126,
     "operations": 222,
     "budgetScenarios": 71,
     "candidateCoverage": {
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 11742,
-      "venueObservationCount": 11151,
+      "observationCount": 11743,
+      "venueObservationCount": 11152,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -65088,9 +65088,9 @@ export const venueData = {
       "sourceUrl": "https://www.hos-arena.com/facilities/",
       "websiteUrl": "https://www.hos-arena.com/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 1,
-      "priceCount": 2,
+      "priceCount": 3,
       "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -65105,7 +65105,7 @@ export const venueData = {
       "hasFixedStage": true,
       "practiceUse": "yes",
       "streamingReady": "unknown",
-      "minDailyFacilityPrice": null,
+      "minDailyFacilityPrice": 65000,
       "priceObservations": [
         {
           "id": "PRICE-423",
@@ -65138,6 +65138,22 @@ export const venueData = {
           "exclusions": "観覧席空調・基本使用料・付属設備等の別料金",
           "note": "指定管理者公式HTML料金表で大アリーナ競技面全面の冷房9,000円/時間を確認",
           "sourceUrl": "https://www.hos-arena.com/gymnasium/fee.html"
+        },
+        {
+          "id": "PRICE-3128",
+          "spaceId": "higashiosaka-main",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "weekday",
+          "timeBand": "09:00-21:00",
+          "amount": 65000,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "大アリーナ全面・全日区分・市内利用・入場料徴収なし",
+          "validFrom": null,
+          "exclusions": "土日祝2割増・市外5割増・空調・付属設備",
+          "note": "指定管理者公式ページの専用利用料金表の全日9:00〜21:00欄。市内利用・アマチュアスポーツ・入場料徴収なしの額。土日祝日は2割増、市内利用以外は5割増、空調・付属設備は別途加算（いずれも列外条件）",
+          "sourceUrl": "https://www.hos-arena.com/gymnasium/use.html"
         }
       ],
       "budgetScenarios": [],
