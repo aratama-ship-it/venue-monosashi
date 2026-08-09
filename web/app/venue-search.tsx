@@ -1078,7 +1078,10 @@ export function VenueSearch() {
               目
             </span>
             <span>
-              <strong>会場ものさし</strong>
+              <strong>
+                会場ものさし
+                <span className="brand-beta">β</span>
+              </strong>
               <small>EVENT VENUE INDEX</small>
             </span>
           </a>
@@ -1139,6 +1142,22 @@ export function VenueSearch() {
             </div>
           </div>
         </header>
+
+        <aside className="beta-notice" aria-label="ベータ版について">
+          <span className="beta-notice-label">BETA</span>
+          <p>
+            <strong>「会場ものさし」は現在ベータ版です。</strong>
+            ご要望・ご意見、掲載情報の訂正などがありましたら、
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSc1pPGdqvVjMyocYNT7q-4JcVkn-c7c__ef1cveCDZ1Jf6hAQ/viewform"
+              target="_blank"
+              rel="noreferrer"
+            >
+              フォーム
+            </a>
+            よりご連絡いただけると幸いです。
+          </p>
+        </aside>
 
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-visual">
