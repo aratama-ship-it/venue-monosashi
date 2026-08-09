@@ -5,9 +5,9 @@ export const venueData = {
     "historical": 225,
     "venues": 1178,
     "details": 7734,
-    "prices": 3236,
+    "prices": 3242,
     "operations": 222,
-    "budgetScenarios": 89,
+    "budgetScenarios": 91,
     "candidateCoverage": {
       "area": 606,
       "capacity": 911,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 11872,
-      "venueObservationCount": 11281,
+      "observationCount": 11880,
+      "venueObservationCount": 11289,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -75741,9 +75741,9 @@ export const venueData = {
       "sourceUrl": "https://www.city.tatebayashi.gunma.jp/sp003/020/030/20210107175456.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 3,
-      "priceCount": 0,
+      "priceCount": 6,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -75759,8 +75759,156 @@ export const venueData = {
       "practiceUse": "yes",
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3239",
+          "spaceId": "tatebayashi-large",
+          "category": "facility",
+          "useCase": "no_admission",
+          "dayType": "weekday",
+          "timeBand": "09:00-12:00",
+          "amount": 16940,
+          "taxStatus": "included",
+          "unit": "per_slot",
+          "basis": "カルピスホール・市内・入場料無料・午前",
+          "validFrom": "2026-04-01",
+          "exclusions": "冷暖房4,400円/時・市外料金・入場料区分",
+          "note": "館林市公式の料金ページ（令和8年4月1日改定）の区分別料金。税込。市内利用・入場料無料の額。冷暖房は1時間4,400円",
+          "sourceUrl": "https://www.city.tatebayashi.gunma.jp/sp003/020/040/20210107173127.html"
+        },
+        {
+          "id": "PRICE-3240",
+          "spaceId": "tatebayashi-large",
+          "category": "facility",
+          "useCase": "no_admission",
+          "dayType": "weekday",
+          "timeBand": "13:00-17:00",
+          "amount": 25410,
+          "taxStatus": "included",
+          "unit": "per_slot",
+          "basis": "カルピスホール・市内・入場料無料・午後",
+          "validFrom": "2026-04-01",
+          "exclusions": "冷暖房4,400円/時・市外料金・入場料区分",
+          "note": "館林市公式の料金ページ（令和8年4月1日改定）の区分別料金。税込。市内利用・入場料無料の額。冷暖房は1時間4,400円",
+          "sourceUrl": "https://www.city.tatebayashi.gunma.jp/sp003/020/040/20210107173127.html"
+        },
+        {
+          "id": "PRICE-3241",
+          "spaceId": "tatebayashi-large",
+          "category": "facility",
+          "useCase": "no_admission",
+          "dayType": "weekday",
+          "timeBand": "18:00-22:00",
+          "amount": 33880,
+          "taxStatus": "included",
+          "unit": "per_slot",
+          "basis": "カルピスホール・市内・入場料無料・夜間",
+          "validFrom": "2026-04-01",
+          "exclusions": "冷暖房4,400円/時・市外料金・入場料区分",
+          "note": "館林市公式の料金ページ（令和8年4月1日改定）の区分別料金。税込。市内利用・入場料無料の額。冷暖房は1時間4,400円",
+          "sourceUrl": "https://www.city.tatebayashi.gunma.jp/sp003/020/040/20210107173127.html"
+        },
+        {
+          "id": "PRICE-3242",
+          "spaceId": "tatebayashi-large",
+          "category": "facility",
+          "useCase": "no_admission",
+          "dayType": "weekend_holiday",
+          "timeBand": "09:00-12:00",
+          "amount": 21780,
+          "taxStatus": "included",
+          "unit": "per_slot",
+          "basis": "カルピスホール・市内・入場料無料・午前",
+          "validFrom": "2026-04-01",
+          "exclusions": "冷暖房4,400円/時・市外料金・入場料区分",
+          "note": "館林市公式の料金ページ（令和8年4月1日改定）の区分別料金。税込。市内利用・入場料無料の額。冷暖房は1時間4,400円",
+          "sourceUrl": "https://www.city.tatebayashi.gunma.jp/sp003/020/040/20210107173127.html"
+        },
+        {
+          "id": "PRICE-3243",
+          "spaceId": "tatebayashi-large",
+          "category": "facility",
+          "useCase": "no_admission",
+          "dayType": "weekend_holiday",
+          "timeBand": "13:00-17:00",
+          "amount": 33880,
+          "taxStatus": "included",
+          "unit": "per_slot",
+          "basis": "カルピスホール・市内・入場料無料・午後",
+          "validFrom": "2026-04-01",
+          "exclusions": "冷暖房4,400円/時・市外料金・入場料区分",
+          "note": "館林市公式の料金ページ（令和8年4月1日改定）の区分別料金。税込。市内利用・入場料無料の額。冷暖房は1時間4,400円",
+          "sourceUrl": "https://www.city.tatebayashi.gunma.jp/sp003/020/040/20210107173127.html"
+        },
+        {
+          "id": "PRICE-3244",
+          "spaceId": "tatebayashi-large",
+          "category": "facility",
+          "useCase": "no_admission",
+          "dayType": "weekend_holiday",
+          "timeBand": "18:00-22:00",
+          "amount": 43560,
+          "taxStatus": "included",
+          "unit": "per_slot",
+          "basis": "カルピスホール・市内・入場料無料・夜間",
+          "validFrom": "2026-04-01",
+          "exclusions": "冷暖房4,400円/時・市外料金・入場料区分",
+          "note": "館林市公式の料金ページ（令和8年4月1日改定）の区分別料金。税込。市内利用・入場料無料の額。冷暖房は1時間4,400円",
+          "sourceUrl": "https://www.city.tatebayashi.gunma.jp/sp003/020/040/20210107173127.html"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-090",
+          "spaceId": "tatebayashi-large",
+          "label": "カルピスホール・市内・入場料無料・3区分",
+          "useCase": "no_admission",
+          "dayType": "weekday",
+          "timeSpan": "09:00-22:00",
+          "amount": 76230,
+          "taxStatus": "included",
+          "derivationMethod": "sum_verified_components",
+          "componentPriceIds": [
+            "PRICE-3239",
+            "PRICE-3240",
+            "PRICE-3241"
+          ],
+          "componentQuantities": [
+            1,
+            1,
+            1
+          ],
+          "validFrom": "2026-04-01",
+          "exclusions": "冷暖房4,400円/時・市外料金・入場料区分",
+          "note": "施設が公表する一括日額ではなく、公式の3区分を合算した参考額。12〜13時・17〜18時は区分外",
+          "sourceUrl": "https://www.city.tatebayashi.gunma.jp/sp003/020/040/20210107173127.html"
+        },
+        {
+          "id": "SCENARIO-091",
+          "spaceId": "tatebayashi-large",
+          "label": "カルピスホール・市内・入場料無料・3区分",
+          "useCase": "no_admission",
+          "dayType": "weekend_holiday",
+          "timeSpan": "09:00-22:00",
+          "amount": 99220,
+          "taxStatus": "included",
+          "derivationMethod": "sum_verified_components",
+          "componentPriceIds": [
+            "PRICE-3242",
+            "PRICE-3243",
+            "PRICE-3244"
+          ],
+          "componentQuantities": [
+            1,
+            1,
+            1
+          ],
+          "validFrom": "2026-04-01",
+          "exclusions": "冷暖房4,400円/時・市外料金・入場料区分",
+          "note": "施設が公表する一括日額ではなく、公式の3区分を合算した参考額。12〜13時・17〜18時は区分外",
+          "sourceUrl": "https://www.city.tatebayashi.gunma.jp/sp003/020/040/20210107173127.html"
+        }
+      ],
       "operation": null,
       "spaces": [
         {

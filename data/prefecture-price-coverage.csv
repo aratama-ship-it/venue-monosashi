@@ -1,5 +1,4 @@
 prefecture,region,stage_venues,stage_priced,stage_gap,stage_reachable,sports_venues,sports_priced,sports_gap,sports_reachable
-群馬県,関東,23,2,3,yes,10,1,4,yes
 栃木県,関東,19,3,2,yes,5,1,4,yes
 新潟県,甲信越,24,3,2,yes,6,1,4,yes
 静岡県,東海,21,2,3,yes,6,2,3,yes
@@ -7,6 +6,7 @@ prefecture,region,stage_venues,stage_priced,stage_gap,stage_reachable,sports_ven
 山形県,東北,21,3,2,yes,7,1,4,yes
 福島県,東北,18,3,2,yes,7,1,4,yes
 茨城県,関東,22,2,3,yes,7,2,3,yes
+群馬県,関東,23,3,2,yes,10,1,4,yes
 徳島県,四国,20,2,3,yes,8,2,3,yes
 香川県,四国,20,2,3,yes,10,2,3,yes
 鹿児島県,九州,21,2,3,yes,8,2,3,yes
