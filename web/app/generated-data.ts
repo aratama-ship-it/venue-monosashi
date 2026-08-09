@@ -5,9 +5,9 @@ export const venueData = {
     "historical": 225,
     "venues": 1178,
     "details": 7733,
-    "prices": 3126,
+    "prices": 3133,
     "operations": 222,
-    "budgetScenarios": 71,
+    "budgetScenarios": 74,
     "candidateCoverage": {
       "area": 606,
       "capacity": 911,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 11743,
-      "venueObservationCount": 11152,
+      "observationCount": 11753,
+      "venueObservationCount": 11162,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -182914,9 +182914,9 @@ export const venueData = {
       "sourceUrl": "https://www.town.nachikatsuura.wakayama.jp/info/76",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-08",
+      "observedAt": "2026-08-10",
       "detailCount": 5,
-      "priceCount": 0,
+      "priceCount": 1,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -182932,8 +182932,47 @@ export const venueData = {
       "practiceUse": "yes",
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3129",
+          "spaceId": "nachikatsuura-arena",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "per_hour",
+          "amount": 2000,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "アリーナ・非営利目的",
+          "validFrom": null,
+          "exclusions": "冷暖房料（アリーナ1時間11,000円）",
+          "note": "公式ページの使用料表（全角表記）。開館時間は8時〜22時",
+          "sourceUrl": "https://www.town.nachikatsuura.wakayama.jp/info/76"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-072",
+          "spaceId": "nachikatsuura-arena",
+          "label": "アリーナ・非営利目的・08:00-22:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "08:00-22:00",
+          "amount": 28000,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3129"
+          ],
+          "componentQuantities": [
+            14
+          ],
+          "validFrom": null,
+          "exclusions": "冷暖房料（アリーナ1時間11,000円）",
+          "note": "施設は日額を公表していない。公式の開館時間8時〜22時（14時間）×2,000円/時から算出した目安。冷暖房は別途。実際の予約時間で変動する",
+          "sourceUrl": "https://www.town.nachikatsuura.wakayama.jp/info/76"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
@@ -194359,9 +194398,9 @@ export const venueData = {
       "sourceUrl": "https://www.fureai-plaza.jp/facility/",
       "websiteUrl": "https://www.fureai-plaza.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-08",
+      "observedAt": "2026-08-10",
       "detailCount": 17,
-      "priceCount": 0,
+      "priceCount": 6,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -194377,8 +194416,156 @@ export const venueData = {
       "practiceUse": "yes",
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3130",
+          "spaceId": "fureai-multipurpose-hall",
+          "category": "facility",
+          "useCase": "no_admission",
+          "dayType": "weekday",
+          "timeBand": "09:00-12:00",
+          "amount": 3770,
+          "taxStatus": "not_stated",
+          "unit": "per_slot",
+          "basis": "多目的ホール・入場料を徴収しない場合・午前",
+          "validFrom": null,
+          "exclusions": "冷暖房・ピアノ",
+          "note": "公式利用料金ページの区分別料金。冷暖房は1時間780円別途",
+          "sourceUrl": "https://www.fureai-plaza.jp/facility/ryoukin/"
+        },
+        {
+          "id": "PRICE-3131",
+          "spaceId": "fureai-multipurpose-hall",
+          "category": "facility",
+          "useCase": "no_admission",
+          "dayType": "weekday",
+          "timeBand": "13:00-17:00",
+          "amount": 6280,
+          "taxStatus": "not_stated",
+          "unit": "per_slot",
+          "basis": "多目的ホール・入場料を徴収しない場合・午後",
+          "validFrom": null,
+          "exclusions": "冷暖房・ピアノ",
+          "note": "公式利用料金ページの区分別料金。冷暖房は1時間780円別途",
+          "sourceUrl": "https://www.fureai-plaza.jp/facility/ryoukin/"
+        },
+        {
+          "id": "PRICE-3132",
+          "spaceId": "fureai-multipurpose-hall",
+          "category": "facility",
+          "useCase": "no_admission",
+          "dayType": "weekday",
+          "timeBand": "18:00-22:00",
+          "amount": 8060,
+          "taxStatus": "not_stated",
+          "unit": "per_slot",
+          "basis": "多目的ホール・入場料を徴収しない場合・夜間",
+          "validFrom": null,
+          "exclusions": "冷暖房・ピアノ",
+          "note": "公式利用料金ページの区分別料金。冷暖房は1時間780円別途",
+          "sourceUrl": "https://www.fureai-plaza.jp/facility/ryoukin/"
+        },
+        {
+          "id": "PRICE-3133",
+          "spaceId": "fureai-multipurpose-hall",
+          "category": "facility",
+          "useCase": "no_admission",
+          "dayType": "weekend_holiday",
+          "timeBand": "09:00-12:00",
+          "amount": 4920,
+          "taxStatus": "not_stated",
+          "unit": "per_slot",
+          "basis": "多目的ホール・入場料を徴収しない場合・午前",
+          "validFrom": null,
+          "exclusions": "冷暖房・ピアノ",
+          "note": "公式利用料金ページの区分別料金。冷暖房は1時間780円別途",
+          "sourceUrl": "https://www.fureai-plaza.jp/facility/ryoukin/"
+        },
+        {
+          "id": "PRICE-3134",
+          "spaceId": "fureai-multipurpose-hall",
+          "category": "facility",
+          "useCase": "no_admission",
+          "dayType": "weekend_holiday",
+          "timeBand": "13:00-17:00",
+          "amount": 8170,
+          "taxStatus": "not_stated",
+          "unit": "per_slot",
+          "basis": "多目的ホール・入場料を徴収しない場合・午後",
+          "validFrom": null,
+          "exclusions": "冷暖房・ピアノ",
+          "note": "公式利用料金ページの区分別料金。冷暖房は1時間780円別途",
+          "sourceUrl": "https://www.fureai-plaza.jp/facility/ryoukin/"
+        },
+        {
+          "id": "PRICE-3135",
+          "spaceId": "fureai-multipurpose-hall",
+          "category": "facility",
+          "useCase": "no_admission",
+          "dayType": "weekend_holiday",
+          "timeBand": "18:00-22:00",
+          "amount": 10470,
+          "taxStatus": "not_stated",
+          "unit": "per_slot",
+          "basis": "多目的ホール・入場料を徴収しない場合・夜間",
+          "validFrom": null,
+          "exclusions": "冷暖房・ピアノ",
+          "note": "公式利用料金ページの区分別料金。冷暖房は1時間780円別途",
+          "sourceUrl": "https://www.fureai-plaza.jp/facility/ryoukin/"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-073",
+          "spaceId": "fureai-multipurpose-hall",
+          "label": "多目的ホール・入場料を徴収しない場合・3区分",
+          "useCase": "no_admission",
+          "dayType": "weekday",
+          "timeSpan": "09:00-22:00",
+          "amount": 18110,
+          "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
+          "componentPriceIds": [
+            "PRICE-3130",
+            "PRICE-3131",
+            "PRICE-3132"
+          ],
+          "componentQuantities": [
+            1,
+            1,
+            1
+          ],
+          "validFrom": null,
+          "exclusions": "冷暖房・ピアノ",
+          "note": "施設が公表する一括日額ではなく、公式の3区分を合算した参考額。12〜13時・17〜18時は区分外",
+          "sourceUrl": "https://www.fureai-plaza.jp/facility/ryoukin/"
+        },
+        {
+          "id": "SCENARIO-074",
+          "spaceId": "fureai-multipurpose-hall",
+          "label": "多目的ホール・入場料を徴収しない場合・3区分",
+          "useCase": "no_admission",
+          "dayType": "weekend_holiday",
+          "timeSpan": "09:00-22:00",
+          "amount": 23560,
+          "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
+          "componentPriceIds": [
+            "PRICE-3133",
+            "PRICE-3134",
+            "PRICE-3135"
+          ],
+          "componentQuantities": [
+            1,
+            1,
+            1
+          ],
+          "validFrom": null,
+          "exclusions": "冷暖房・ピアノ",
+          "note": "施設が公表する一括日額ではなく、公式の3区分を合算した参考額。12〜13時・17〜18時は区分外",
+          "sourceUrl": "https://www.fureai-plaza.jp/facility/ryoukin/"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
