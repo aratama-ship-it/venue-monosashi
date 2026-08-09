@@ -7,7 +7,7 @@ export const venueData = {
     "details": 7729,
     "prices": 2986,
     "operations": 222,
-    "budgetScenarios": 47,
+    "budgetScenarios": 50,
     "candidateCoverage": {
       "area": 606,
       "capacity": 911,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-09",
-      "observationCount": 11575,
-      "venueObservationCount": 10984,
+      "observationCount": 11578,
+      "venueObservationCount": 10987,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -41863,7 +41863,7 @@ export const venueData = {
       "sourceUrl": "https://www.ishikawa-spc.jp/facilities/main-arina.html",
       "websiteUrl": "https://www.ishikawa-spc.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-09",
       "detailCount": 1,
       "priceCount": 6,
       "operationCount": 1,
@@ -41979,7 +41979,29 @@ export const venueData = {
           "sourceUrl": "https://www.ishikawa-spc.jp/useguide/index.html"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-050",
+          "spaceId": "ishikawa-main",
+          "label": "メインアリーナ全面・入場無料・09:00-22:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 54470,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-389"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "照明、冷暖房、器具、入場有料時の別料金",
+          "note": "施設は日額を公表していない。公式PDF「個人使用に関する規定」の利用時間9:00〜22:00（13時間）×4,190円/時から算出した目安。時間表記は施設全体の利用時間で、専用利用ページ側には時間の明示がない。実際の予約時間で変動する",
+          "sourceUrl": "https://www.ishikawa-spc.jp/first/pdf/kitei_kojin.pdf"
+        }
+      ],
       "operation": {
         "station": "総合スポーツセンター前バス停",
         "walkMinutes": null,
@@ -42031,7 +42053,7 @@ export const venueData = {
       "sourceUrl": "https://yonago-santai.jp/about/facility/mainarena/",
       "websiteUrl": "https://yonago-santai.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-09",
       "detailCount": 1,
       "priceCount": 6,
       "operationCount": 1,
@@ -42147,7 +42169,29 @@ export const venueData = {
           "sourceUrl": "https://yonago-santai.jp/about/facility/mainarena/"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-048",
+          "spaceId": "yonago-main",
+          "label": "大体育館全面・非営利・入場料なし・09:00-22:00",
+          "useCase": "no_admission_nonprofit",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 10530,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-390"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "冷暖房、器具、営利・入場料ありの別料金",
+          "note": "施設は日額を公表していない。公式の利用時間案内（体育館9:00〜22:00、13時間）×810円/時から算出した目安。実際の予約時間で変動する",
+          "sourceUrl": "https://yonago-santai.jp/about/usage_time/"
+        }
+      ],
       "operation": {
         "station": "産業体育館バス停",
         "walkMinutes": 0,
@@ -46372,7 +46416,7 @@ export const venueData = {
       "sourceUrl": "https://taibun.com/facility/arena",
       "websiteUrl": "https://taibun.com/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-09",
       "detailCount": 1,
       "priceCount": 1,
       "operationCount": 1,
@@ -46408,7 +46452,29 @@ export const venueData = {
           "sourceUrl": "https://taibun.com/facility/arena"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-049",
+          "spaceId": "kaminoyama-main",
+          "label": "アリーナ全面・基本使用料・09:00-21:30",
+          "useCase": "all",
+          "dayType": "all",
+          "timeSpan": "09:00-21:30",
+          "amount": 30250,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-391"
+          ],
+          "componentQuantities": [
+            12.5
+          ],
+          "validFrom": null,
+          "exclusions": "附属設備・目的別割増・冷暖房・床養生",
+          "note": "施設は日額を公表していない。公式の利用案内「使用時間 午前9時〜午後9時30分」（12.5時間）×2,420円/時から算出した目安。実際の予約時間で変動する",
+          "sourceUrl": "https://taibun.com/userguide"
+        }
+      ],
       "operation": {
         "station": "かみのやま温泉駅",
         "walkMinutes": 15,
