@@ -5,9 +5,9 @@ export const venueData = {
     "historical": 225,
     "venues": 1178,
     "details": 7734,
-    "prices": 3242,
+    "prices": 3251,
     "operations": 222,
-    "budgetScenarios": 91,
+    "budgetScenarios": 95,
     "candidateCoverage": {
       "area": 606,
       "capacity": 911,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 11880,
-      "venueObservationCount": 11289,
+      "observationCount": 11893,
+      "venueObservationCount": 11302,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -26719,9 +26719,9 @@ export const venueData = {
       "sourceUrl": "https://www.city.nagaoka.niigata.jp/shisei/cate05/ao-re/floor_arena.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-04",
+      "observedAt": "2026-08-10",
       "detailCount": 1,
-      "priceCount": 1,
+      "priceCount": 2,
       "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -26753,9 +26753,47 @@ export const venueData = {
           "exclusions": "空調、附属設備、入場料区分、時間外",
           "note": "長岡市の公式利用案内PDF（2025年8月公開）で営利36,000円/時間を確認。税込/税別の明示はこの波で未確認",
           "sourceUrl": "https://ao-re.jp/wp-content/uploads/2025/08/656440dda7f7bac176e145f0320d8e23.pdf"
+        },
+        {
+          "id": "PRICE-3248",
+          "spaceId": "aore-arena",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "per_hour",
+          "amount": 8000,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "アリーナフロア全面・一般",
+          "validFrom": "2020-04-01",
+          "exclusions": "冷暖房5,000円/時・附属設備",
+          "note": "運営者公式の施設利用案内PDF（令和2年4月改定）",
+          "sourceUrl": "https://ao-re.jp/wp-content/uploads/2025/08/656440dda7f7bac176e145f0320d8e23.pdf"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-093",
+          "spaceId": "aore-arena",
+          "label": "アリーナフロア全面・一般・08:00-22:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "08:00-22:00",
+          "amount": 112000,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3248"
+          ],
+          "componentQuantities": [
+            14
+          ],
+          "validFrom": "2020-04-01",
+          "exclusions": "冷暖房5,000円/時・附属設備",
+          "note": "施設は日額を公表していない。長岡市条例施行規則が定めるアリーナ利用時間8:00〜22:00（14時間）×8,000円/時から算出した目安",
+          "sourceUrl": "https://www.city.nagaoka.niigata.jp/shisei/cate03/jyourei/reiki/reiki_honbun/e403RG00001616.html"
+        }
+      ],
       "operation": {
         "station": "長岡駅",
         "walkMinutes": 3,
@@ -42133,9 +42171,9 @@ export const venueData = {
       "sourceUrl": "https://www.yamagatasi-taikyou.jp/shisetsu-1sposen-1taiikukan.html",
       "websiteUrl": "https://www.yamagatasi-taikyou.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 1,
-      "priceCount": 7,
+      "priceCount": 11,
       "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -42263,9 +42301,101 @@ export const venueData = {
           "exclusions": "施設基本料・観客席暖房・冷房・照明・附属設備等の別料金",
           "note": "指定管理者公式HTMLで7,000円/時間を直接確認",
           "sourceUrl": "https://www.yamagatasi-taikyou.jp/shisetsu-1sposen-riyouryoukin.html"
+        },
+        {
+          "id": "PRICE-3250",
+          "spaceId": "yamagata-first",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "09:00-12:00",
+          "amount": 6300,
+          "taxStatus": "not_stated",
+          "unit": "per_3_hours",
+          "basis": "第一体育館競技場全面・アマチュアスポーツ・入場料なし",
+          "validFrom": null,
+          "exclusions": "照明1,200〜2,800円/時・暖房・観覧席冷房",
+          "note": "指定管理者公式の利用料金ページ。各3時間区分が同額。照明・暖房は別料金",
+          "sourceUrl": "https://www.yamagatasi-taikyou.jp/shisetsu-1sposen-riyouryoukin.html"
+        },
+        {
+          "id": "PRICE-3251",
+          "spaceId": "yamagata-first",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "12:00-15:00",
+          "amount": 6300,
+          "taxStatus": "not_stated",
+          "unit": "per_3_hours",
+          "basis": "第一体育館競技場全面・アマチュアスポーツ・入場料なし",
+          "validFrom": null,
+          "exclusions": "照明1,200〜2,800円/時・暖房・観覧席冷房",
+          "note": "指定管理者公式の利用料金ページ。各3時間区分が同額。照明・暖房は別料金",
+          "sourceUrl": "https://www.yamagatasi-taikyou.jp/shisetsu-1sposen-riyouryoukin.html"
+        },
+        {
+          "id": "PRICE-3252",
+          "spaceId": "yamagata-first",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "15:00-18:00",
+          "amount": 6300,
+          "taxStatus": "not_stated",
+          "unit": "per_3_hours",
+          "basis": "第一体育館競技場全面・アマチュアスポーツ・入場料なし",
+          "validFrom": null,
+          "exclusions": "照明1,200〜2,800円/時・暖房・観覧席冷房",
+          "note": "指定管理者公式の利用料金ページ。各3時間区分が同額。照明・暖房は別料金",
+          "sourceUrl": "https://www.yamagatasi-taikyou.jp/shisetsu-1sposen-riyouryoukin.html"
+        },
+        {
+          "id": "PRICE-3253",
+          "spaceId": "yamagata-first",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "18:00-21:00",
+          "amount": 6300,
+          "taxStatus": "not_stated",
+          "unit": "per_3_hours",
+          "basis": "第一体育館競技場全面・アマチュアスポーツ・入場料なし",
+          "validFrom": null,
+          "exclusions": "照明1,200〜2,800円/時・暖房・観覧席冷房",
+          "note": "指定管理者公式の利用料金ページ。各3時間区分が同額。照明・暖房は別料金",
+          "sourceUrl": "https://www.yamagatasi-taikyou.jp/shisetsu-1sposen-riyouryoukin.html"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-095",
+          "spaceId": "yamagata-first",
+          "label": "第一体育館競技場全面・アマチュアスポーツ・入場料なし・4区分",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 25200,
+          "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
+          "componentPriceIds": [
+            "PRICE-3250",
+            "PRICE-3251",
+            "PRICE-3252",
+            "PRICE-3253"
+          ],
+          "componentQuantities": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "validFrom": null,
+          "exclusions": "照明1,200〜2,800円/時・暖房・観覧席冷房",
+          "note": "施設が公表する一括日額ではなく、公式の3時間×4区分を合算した参考額。公式の利用時間は9:00〜21:00",
+          "sourceUrl": "https://www.yamagatasi-taikyou.jp/shisetsu-1sposen-riyouryoukin.html"
+        }
+      ],
       "operation": {
         "station": "JR羽前千歳駅",
         "walkMinutes": 15,
@@ -42469,9 +42599,9 @@ export const venueData = {
       "sourceUrl": "https://www.pref.tochigi.lg.jp/c09/pfi/index.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 1,
-      "priceCount": 7,
+      "priceCount": 10,
       "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -42599,9 +42729,83 @@ export const venueData = {
           "exclusions": "施設基本料・照明・空調・その他設備備品等の別料金",
           "note": "指定管理者公式サイト掲載の税込料金PDFを画像照合し500円/時間を確認。資料面に2021.2.1表記あり",
           "sourceUrl": "https://www.gsz-eastarea.com/assets/pdf/price_list.pdf"
+        },
+        {
+          "id": "PRICE-3245",
+          "spaceId": "nikkan-main",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "09:00-13:00",
+          "amount": 22000,
+          "taxStatus": "included",
+          "unit": "per_slot",
+          "basis": "メインアリーナ全面・アマチュアスポーツ・入場料なし・午前",
+          "validFrom": null,
+          "exclusions": "照明・空調・設備備品",
+          "note": "指定管理者公式の料金表PDF。税込。照明・空調・設備備品は別料金（メイン全面空調12,000円/時）",
+          "sourceUrl": "https://www.gsz-eastarea.com/assets/pdf/price_list.pdf"
+        },
+        {
+          "id": "PRICE-3246",
+          "spaceId": "nikkan-main",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "13:00-17:00",
+          "amount": 33000,
+          "taxStatus": "included",
+          "unit": "per_slot",
+          "basis": "メインアリーナ全面・アマチュアスポーツ・入場料なし・午後",
+          "validFrom": null,
+          "exclusions": "照明・空調・設備備品",
+          "note": "指定管理者公式の料金表PDF。税込。照明・空調・設備備品は別料金（メイン全面空調12,000円/時）",
+          "sourceUrl": "https://www.gsz-eastarea.com/assets/pdf/price_list.pdf"
+        },
+        {
+          "id": "PRICE-3247",
+          "spaceId": "nikkan-main",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "17:00-21:00",
+          "amount": 44000,
+          "taxStatus": "included",
+          "unit": "per_slot",
+          "basis": "メインアリーナ全面・アマチュアスポーツ・入場料なし・夜間",
+          "validFrom": null,
+          "exclusions": "照明・空調・設備備品",
+          "note": "指定管理者公式の料金表PDF。税込。照明・空調・設備備品は別料金（メイン全面空調12,000円/時）",
+          "sourceUrl": "https://www.gsz-eastarea.com/assets/pdf/price_list.pdf"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-092",
+          "spaceId": "nikkan-main",
+          "label": "メインアリーナ全面・アマチュアスポーツ・入場料なし・3区分",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 99000,
+          "taxStatus": "included",
+          "derivationMethod": "sum_verified_components",
+          "componentPriceIds": [
+            "PRICE-3245",
+            "PRICE-3246",
+            "PRICE-3247"
+          ],
+          "componentQuantities": [
+            1,
+            1,
+            1
+          ],
+          "validFrom": null,
+          "exclusions": "照明・空調・設備備品",
+          "note": "施設が公表する一括日額ではなく、公式の3区分を合算した参考額。公式の供用時間は9:00〜21:00",
+          "sourceUrl": "https://www.gsz-eastarea.com/assets/pdf/price_list.pdf"
+        }
+      ],
       "operation": {
         "station": "東武西川田駅",
         "walkMinutes": 15,
@@ -140215,9 +140419,9 @@ export const venueData = {
       "sourceUrl": "https://www.city.sanjo.niigata.jp/kosodate_kyoiku/kosodate_site/mokuteki/odekake_spot/1/16638.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-07",
+      "observedAt": "2026-08-10",
       "detailCount": 7,
-      "priceCount": 0,
+      "priceCount": 1,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -140233,8 +140437,47 @@ export const venueData = {
       "practiceUse": "conditional",
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3249",
+          "spaceId": "sanjo-arena",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "per_hour",
+          "amount": 4000,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "アリーナ全面",
+          "validFrom": null,
+          "exclusions": "営利・営業目的は3倍・附属設備",
+          "note": "三条市公式の施設・料金ページ。1時間未満は1時間として計算",
+          "sourceUrl": "https://www.city.sanjo.niigata.jp/soshiki/fukushihokembu/kenkozukurika/sports/facilities/12054.html"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-094",
+          "spaceId": "sanjo-arena",
+          "label": "アリーナ全面・09:00-22:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 52000,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3249"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "営利・営業目的は3倍・附属設備",
+          "note": "施設は日額を公表していない。公式ページ記載の利用時間「午前9時〜午後10時」（13時間）×4,000円/時から算出した目安",
+          "sourceUrl": "https://www.city.sanjo.niigata.jp/soshiki/fukushihokembu/kenkozukurika/sports/facilities/12054.html"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
