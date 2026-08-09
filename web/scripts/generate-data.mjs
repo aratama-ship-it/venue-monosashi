@@ -83,6 +83,44 @@ function websiteUrl(sourceUrl, explicitUrl) {
   }
 }
 
+function officialLinks(candidate, venueDetails, candidateWebsites = []) {
+  if (!candidate.facility_name.includes("＋")) return [];
+
+  const mainUrl = nullableUrl(candidate.official_url);
+  const seen = new Set(mainUrl ? [mainUrl] : []);
+  const links = [];
+  const parts = candidate.facility_name
+    .split("＋")
+    .map((part) => part.replace(/^.*（/, "").replace(/）.*$/, "").trim())
+    .filter(Boolean);
+
+  for (const part of parts) {
+    const match = venueDetails.find(
+      (detail) =>
+        detail.space_name.startsWith(part) &&
+        nullableUrl(detail.source_url) &&
+        !seen.has(detail.source_url),
+    );
+    if (match) {
+      seen.add(match.source_url);
+      links.push({ label: part, url: match.source_url });
+      continue;
+    }
+    const websiteMatch = candidateWebsites.find(
+      (website) =>
+        (website.note || "").includes(part) &&
+        nullableUrl(website.website_url) &&
+        !seen.has(website.website_url),
+    );
+    if (websiteMatch) {
+      seen.add(websiteMatch.website_url);
+      links.push({ label: part, url: websiteMatch.website_url });
+    }
+  }
+
+  return links;
+}
+
 const [
   candidates,
   details,
@@ -105,9 +143,12 @@ const [
   load("venue-websites.csv"),
 ]);
 
-const websiteByCandidateId = new Map(
-  venueWebsites.map((website) => [website.candidate_id, website]),
-);
+const websitesByCandidateId = new Map();
+for (const website of venueWebsites) {
+  const list = websitesByCandidateId.get(website.candidate_id) ?? [];
+  list.push(website);
+  websitesByCandidateId.set(website.candidate_id, list);
+}
 
 const smallTheaterVerificationCounts = Object.fromEntries(
   [
@@ -264,6 +305,18 @@ const venues = candidates.map((candidate) => {
       (nullableNumber(b.area_m2) ?? 0) - (nullableNumber(a.area_m2) ?? 0),
   )[0];
 
+  const candidateWebsites =
+    websitesByCandidateId.get(candidate.candidate_id) ?? [];
+  const setOfficialLinks = officialLinks(
+    candidate,
+    venueDetails,
+    candidateWebsites,
+  );
+  const primaryWebsiteUrl = websiteUrl(
+    candidate.official_url,
+    candidateWebsites[0]?.website_url,
+  );
+
   return {
     id: candidate.candidate_id,
     region: candidate.region,
@@ -275,10 +328,10 @@ const venues = candidates.map((candidate) => {
     strengths: candidate.verified_public_facts,
     cautions: candidate.inference_or_risk,
     sourceUrl: candidate.official_url,
-    websiteUrl: websiteUrl(
-      candidate.official_url,
-      websiteByCandidateId.get(candidate.candidate_id)?.website_url,
-    ),
+    websiteUrl: setOfficialLinks.some((link) => link.url === primaryWebsiteUrl)
+      ? null
+      : primaryWebsiteUrl,
+    officialLinks: setOfficialLinks,
     observedAt: venueObservationDates.at(-1) ?? null,
     detailCount: venueDetails.length,
     priceCount: venuePrices.length,

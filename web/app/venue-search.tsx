@@ -1107,10 +1107,22 @@ export function VenueSearch() {
           </nav>
         </div>
 
-        <a className="rail-action" href="#search">
-          候補を測りはじめる
-          <span aria-hidden="true">↘</span>
-        </a>
+        <details className="rail-sister">
+          <summary className="rail-action">
+            姉妹サイトを見る
+            <span aria-hidden="true">↗</span>
+          </summary>
+          <div className="rail-sister-menu" aria-label="姉妹サイト">
+            <a href="https://koubo.art-monosashi.com" target="_blank" rel="noreferrer">
+              公募ものさし
+              <small>koubo.art-monosashi.com</small>
+            </a>
+            <a href="https://joseikin.art-monosashi.com" target="_blank" rel="noreferrer">
+              助成ものさし
+              <small>joseikin.art-monosashi.com</small>
+            </a>
+          </div>
+        </details>
       </header>
 
       <div className="site-canvas">
@@ -1743,6 +1755,17 @@ export function VenueSearch() {
                         >
                           公式情報を確認 ↗
                         </a>
+                        {venue.officialLinks.map((link) => (
+                          <a
+                            key={link.url}
+                            className="source-link"
+                            href={link.url}
+                            rel="noreferrer"
+                            target="_blank"
+                          >
+                            公式情報（{link.label}）↗
+                          </a>
+                        ))}
                         {venue.websiteUrl && (
                           <a
                             className="source-link"
