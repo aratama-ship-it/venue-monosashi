@@ -57,11 +57,16 @@ const budgetScenarios = loadCsv("data/budget-scenarios.csv");
 // 検索画面 web/app/venue-search.tsx の PriceDayType と必ず一致させること。
 // ここに無い値を入れると、平日／土日祝で絞ったとき予算検索から静かに消える。
 const DAY_TYPES = new Set(["all", "weekday", "weekend_holiday"]);
+// 「施設が区切った予約単位」であればよい。台帳では同じ意味の単位が複数の名前で入っている。
+// per_8_hours 等の長い区分も、施設が1コマとして売っている以上ここに含める。
 const SLOT_COMPONENT_UNITS = new Set([
   "per_slot",
   "per_time_band",
   "per_3_hours",
   "per_4_hours",
+  "per_5_hours",
+  "per_8_hours",
+  "per_9_hours",
   "per_half_day",
 ]);
 const venueWebsites = loadCsv("data/venue-websites.csv");

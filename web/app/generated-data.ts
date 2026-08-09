@@ -5,9 +5,9 @@ export const venueData = {
     "historical": 225,
     "venues": 1178,
     "details": 7733,
-    "prices": 3158,
+    "prices": 3160,
     "operations": 222,
-    "budgetScenarios": 80,
+    "budgetScenarios": 81,
     "candidateCoverage": {
       "area": 606,
       "capacity": 911,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 11784,
-      "venueObservationCount": 11193,
+      "observationCount": 11787,
+      "venueObservationCount": 11196,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -68594,7 +68594,7 @@ export const venueData = {
       "sourceUrl": "https://www.ounoyama.jp/each-facility-guidance/budokan/arena/",
       "websiteUrl": "https://www.ounoyama.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 1,
       "priceCount": 4,
       "operationCount": 1,
@@ -68678,7 +68678,29 @@ export const venueData = {
           "sourceUrl": "https://www.ounoyama.jp/each-facility-guidance/budokan/arena/"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-081",
+          "spaceId": "okinawa-budokan-arena",
+          "label": "アリーナ全面・アマチュアスポーツ・入場料なし・09:00-17:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-17:00",
+          "amount": 55460,
+          "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
+          "componentPriceIds": [
+            "PRICE-466"
+          ],
+          "componentQuantities": [
+            1
+          ],
+          "validFrom": null,
+          "exclusions": "冷房18,330円/時・時間外1時間・附属設備",
+          "note": "公式の9時〜17時（8時間）区分をそのまま日額として扱った参考額。開館は9時〜21時だが、17時以降は時間外1時間単位の扱いで通し区分の公表額がないため、この範囲に留めている",
+          "sourceUrl": "https://www.ounoyama.jp/each-facility-guidance/budokan/arena/"
+        }
+      ],
       "operation": {
         "station": "壺川駅",
         "walkMinutes": 3,
@@ -78894,9 +78916,9 @@ export const venueData = {
       "sourceUrl": "https://scpf.jp/top/rental/",
       "websiteUrl": "https://scpf.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 5,
-      "priceCount": 0,
+      "priceCount": 2,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -78911,8 +78933,41 @@ export const venueData = {
       "hasFixedStage": true,
       "practiceUse": "yes",
       "streamingReady": "unknown",
-      "minDailyFacilityPrice": null,
-      "priceObservations": [],
+      "minDailyFacilityPrice": 158830,
+      "priceObservations": [
+        {
+          "id": "PRICE-3161",
+          "spaceId": "shimonoseki-large",
+          "category": "facility",
+          "useCase": "no_admission",
+          "dayType": "weekday",
+          "timeBand": "09:00-22:00",
+          "amount": 158830,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "大ホール・全日区分・基本料金",
+          "validFrom": null,
+          "exclusions": "入場料区分の加算・営利120%加算・超過30%・附属設備",
+          "note": "公式使用料金ページの全日9時〜22時欄。入場料区分は基本料金への加算方式（1,000円未満50%〜2,000円以上100%）、営利目的は120%加算のため、基本料金のみを収録",
+          "sourceUrl": "https://scpf.jp/top/rental/charge/"
+        },
+        {
+          "id": "PRICE-3162",
+          "spaceId": "shimonoseki-large",
+          "category": "facility",
+          "useCase": "no_admission",
+          "dayType": "weekend_holiday",
+          "timeBand": "09:00-22:00",
+          "amount": 198540,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "大ホール・全日区分・基本料金",
+          "validFrom": null,
+          "exclusions": "入場料区分の加算・営利120%加算・超過30%・附属設備",
+          "note": "公式使用料金ページの全日9時〜22時欄。入場料区分は基本料金への加算方式（1,000円未満50%〜2,000円以上100%）、営利目的は120%加算のため、基本料金のみを収録",
+          "sourceUrl": "https://scpf.jp/top/rental/charge/"
+        }
+      ],
       "budgetScenarios": [],
       "operation": null,
       "spaces": [
