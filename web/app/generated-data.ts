@@ -7,7 +7,7 @@ export const venueData = {
     "details": 7734,
     "prices": 3221,
     "operations": 222,
-    "budgetScenarios": 87,
+    "budgetScenarios": 89,
     "candidateCoverage": {
       "area": 606,
       "capacity": 911,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 11855,
-      "venueObservationCount": 11264,
+      "observationCount": 11857,
+      "venueObservationCount": 11266,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -29110,7 +29110,7 @@ export const venueData = {
       "sourceUrl": "https://www.kspa.or.jp/park_charge/",
       "websiteUrl": "https://www.kspa.or.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 2,
       "priceCount": 4,
       "operationCount": 1,
@@ -29194,7 +29194,50 @@ export const venueData = {
           "sourceUrl": "https://www.kspa.or.jp/park_charge/"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-088",
+          "spaceId": "parkdome-ground",
+          "label": "グラウンド全面・一般・アマチュアスポーツ・09:00-21:30",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-21:30",
+          "amount": 146375,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-680"
+          ],
+          "componentQuantities": [
+            12.5
+          ],
+          "validFrom": null,
+          "exclusions": "附属設備",
+          "note": "施設は日額を公表していない。公式料金ページの利用時間9:00〜21:30（12.5時間）×11,710円/時から算出した目安。受付は20:30まで。実際の予約時間で変動する",
+          "sourceUrl": "https://www.kspa.or.jp/park_charge/"
+        },
+        {
+          "id": "SCENARIO-089",
+          "spaceId": "parkdome-ground",
+          "label": "グラウンド全面・アマチュアスポーツ以外・09:00-21:30",
+          "useCase": "other_no_admission",
+          "dayType": "all",
+          "timeSpan": "09:00-21:30",
+          "amount": 439125,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-681"
+          ],
+          "componentQuantities": [
+            12.5
+          ],
+          "validFrom": null,
+          "exclusions": "附属設備",
+          "note": "施設は日額を公表していない。公式料金ページの利用時間9:00〜21:30（12.5時間）×35,130円/時から算出した目安。受付は20:30まで。実際の予約時間で変動する",
+          "sourceUrl": "https://www.kspa.or.jp/park_charge/"
+        }
+      ],
       "operation": {
         "station": "JR光の森駅",
         "walkMinutes": null,
