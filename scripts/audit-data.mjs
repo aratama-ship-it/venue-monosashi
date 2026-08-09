@@ -54,6 +54,9 @@ const priceObservations = loadCsv("data/price-observations.csv");
 const venueOperations = loadCsv("data/venue-operations.csv");
 const historicalVenueAliases = loadCsv("data/historical-venue-aliases.csv");
 const budgetScenarios = loadCsv("data/budget-scenarios.csv");
+// 検索画面 web/app/venue-search.tsx の PriceDayType と必ず一致させること。
+// ここに無い値を入れると、平日／土日祝で絞ったとき予算検索から静かに消える。
+const DAY_TYPES = new Set(["all", "weekday", "weekend_holiday"]);
 const SLOT_COMPONENT_UNITS = new Set([
   "per_slot",
   "per_time_band",
@@ -547,6 +550,9 @@ priceObservations.forEach((row, index) => {
   if (!taxStatuses.has(row.tax_status)) {
     errors.push(`price-observations.csv:${line} invalid tax_status=${row.tax_status}`);
   }
+  if (!DAY_TYPES.has(row.day_type)) {
+    errors.push(`price-observations.csv:${line} invalid day_type=${row.day_type}`);
+  }
   if (!priceVerificationStatuses.has(row.verification_status)) {
     errors.push(
       `price-observations.csv:${line} invalid verification_status=${row.verification_status}`,
@@ -644,6 +650,9 @@ budgetScenarios.forEach((row, index) => {
     row.derivation_method !== "hourly_rate_times_published_hours"
   ) {
     errors.push(`budget-scenarios.csv:${line} invalid derivation_method=${row.derivation_method}`);
+  }
+  if (!DAY_TYPES.has(row.day_type)) {
+    errors.push(`budget-scenarios.csv:${line} invalid day_type=${row.day_type}`);
   }
   if (row.verification_status !== "derived_from_verified_components") {
     errors.push(

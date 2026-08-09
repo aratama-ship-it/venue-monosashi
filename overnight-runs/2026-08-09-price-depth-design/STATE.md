@@ -243,6 +243,34 @@ CAND-127 アオーレ長岡、CAND-228 宮崎市総合体育館、CAND-227 大�
 宮崎市は第三者サイト（観光ナビ・LiveWalker）に9:00〜22:00とあるが**一次情報ではないので採らない**。
 指定管理者ページにも記載がなかった。条例（施設設置管理条例）を当たるのが次の手。
 
+## day_type 不整合の解消 2026-08-09 完了
+
+Wave4で起票した不具合を解消した。**公開中の検索が実際に会場を取りこぼしていた**問題。
+
+- 検索画面の `PriceDayType` は `all / weekday / weekend_holiday` の3値のみを照合するのに、
+  台帳には他の値が入っており、**平日／土日祝で絞ると該当会場が予算検索から静かに消えていた**
+- 結果: **土日祝フィルタで日額が出る施設 144→161（+17）**、平日フィルタ 179→182（+3）。
+  東京有明アリーナ、横浜BUNTAI、京王アリーナTOKYO、島津アリーナ京都、東京体育館、
+  ロームシアター京都などの主要会場が土日祝で消えていた
+
+### 何が入っていたか、どう直したか
+
+| 旧値 | 件数 | 実態 | 対応 |
+|---|---|---|---|
+| `holiday` | 118 | basisは全て土日祝／土日休日／土曜休日 | `weekend_holiday` に統一 |
+| `non_weekday` | 3 | 土日祝・平日以外 | `weekend_holiday` |
+| `weekday_mon_wed` / `weekday_thu_fri` | 2 | どちらも平日（曜日で単価が違う） | `weekday`（曜日はbasisに残存） |
+| `no_admission` / `admission` | 6 | **列違い**。入場料区分が日区分の列に入っていた | `all`（区分はbasisにあり） |
+| `normal_period` / `cooling_heating_period` | 8 | **列違い**。季節（通常期／冷暖房期） | `all`＋basisに「・通常期」「・冷暖房期」を追記 |
+
+budget-scenarios 側も同様に修正（`current_all`/`future_all` は適用期間で、valid_from列が持つ情報だった）。
+
+### 再発防止
+
+`scripts/audit-data.mjs` に `DAY_TYPES` を追加し、price-observations と budget-scenarios の
+両方で許容値を検査する。**この集合は `venue-search.tsx` の `PriceDayType` と必ず一致させること**。
+`saturday` を混ぜて `invalid day_type=saturday` が出ることを確認済み。
+
 ## 次のwave候補
 
 **着手前に `npm run price-coverage` を実行して最新の不足を確認すること。** 以下はWave4時点の並び。
