@@ -5,7 +5,7 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 宮城県,東北,25,16,224,128,146,6,0,0,0,reference_depth
 秋田県,東北,25,23,139,26,26,0,0,0,0,reference_depth
 山形県,東北,25,21,145,63,71,3,0,0,0,reference_depth
-福島県,東北,25,16,158,80,44,6,0,0,0,reference_depth
+福島県,東北,28,16,167,83,53,6,0,0,0,reference_depth
 茨城県,関東,25,20,188,112,113,2,0,0,0,reference_depth
 栃木県,関東,28,18,164,105,91,19,0,0,0,reference_depth
 群馬県,関東,28,20,154,71,53,3,0,0,0,reference_depth

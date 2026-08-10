@@ -7756,3 +7756,12 @@ DETAIL-7755,CAND-1186,fukaya-sub,サブアリーナ,arena,,,,unknown,unknown,,,,
 DETAIL-7756,CAND-1186,fukaya-dojo,武道場,dojo,,,,unknown,unknown,,,,two_way,none,yes,unknown,https://fukaya-connect.com/bigturtle/wp-content/uploads/Arena_Fee_Table.pdf,2026-08-10,verified,
 DETAIL-7757,CAND-1187,kuki-main,メインアリーナ,arena,,,,unknown,unknown,,,,three_way,none,yes,unknown,https://www.city.kuki.lg.jp/shisei/shisetsu/sports/1006631.html,2026-08-10,verified,全面/1・3面/1・4面/1・12面で分割貸出
 DETAIL-7758,CAND-1187,kuki-dojo,武道場,dojo,,,,unknown,unknown,,,,two_way,none,yes,unknown,https://www.city.kuki.lg.jp/shisei/shisetsu/sports/1006631.html,2026-08-10,verified,
+DETAIL-7759,CAND-1188,aizu-main,メインアリーナ,arena,2016,,,unknown,unknown,,1048,,three_way,none,yes,unknown,https://aizu-sportspark.jp/facilities/a_taiiku/,2026-08-10,verified,"バスケットコート3面。観客席は固定1,048席・移動1,008席。全面/半面/3分の1で貸出"
+DETAIL-7760,CAND-1188,aizu-sub,サブアリーナ,arena,750,,,unknown,unknown,,,,unknown,none,yes,unknown,https://aizu-sportspark.jp/facilities/a_taiiku/,2026-08-10,verified,
+DETAIL-7761,CAND-1188,aizu-kendo,剣道場,dojo,304.5,,,unknown,unknown,,,,unknown,none,yes,unknown,https://aizu-sportspark.jp/facilities/a_taiiku/,2026-08-10,verified,1面
+DETAIL-7762,CAND-1189,katou-arena,アリーナ,arena,1306.8,,,unknown,unknown,,496,,two_way,permanent,yes,unknown,https://aizu-sportspark.jp/facilities/k_taiiku/,2026-08-10,verified,39.60m×33.00m。ステージ19.80m×6.00m＝118.80㎡
+DETAIL-7763,CAND-1189,katou-fitness,フィットネスルーム,fitness_room,243.67,,,unknown,unknown,,,,unknown,none,yes,unknown,https://aizu-sportspark.jp/facilities/k_taiiku/,2026-08-10,verified,11.80m×20.65m
+DETAIL-7764,CAND-1190,iwaki-large,大体育館,arena,2090.8,,,unknown,unknown,,2182,,three_way,none,yes,unknown,https://iwakicity-park.or.jp/kamiarakawa/kamiarakawa_taiikukan/,2026-08-10,verified,"固定観客席2,182席。3分の2面・3分の1面の一部専用使用は相当額"
+DETAIL-7765,CAND-1190,iwaki-small,小体育館,arena,859.3,,,unknown,unknown,,,,two_way,none,yes,unknown,https://iwakicity-park.or.jp/kamiarakawa/kamiarakawa_taiikukan/,2026-08-10,verified,一部専用使用は2分の1相当額
+DETAIL-7766,CAND-1190,iwaki-judo,柔道場,dojo,358,,,unknown,unknown,,,,unknown,none,yes,unknown,https://iwakicity-park.or.jp/kamiarakawa/kamiarakawa_taiikukan/,2026-08-10,verified,
+DETAIL-7767,CAND-1190,iwaki-kendo,剣道場,dojo,358,,,unknown,unknown,,,,unknown,none,yes,unknown,https://iwakicity-park.or.jp/kamiarakawa/kamiarakawa_taiikukan/,2026-08-10,verified,
