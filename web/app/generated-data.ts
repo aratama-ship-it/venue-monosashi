@@ -5,9 +5,9 @@ export const venueData = {
     "historical": 225,
     "venues": 1237,
     "details": 7828,
-    "prices": 3555,
+    "prices": 3549,
     "operations": 221,
-    "budgetScenarios": 192,
+    "budgetScenarios": 197,
     "candidateCoverage": {
       "area": 626,
       "capacity": 939,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 12387,
-      "venueObservationCount": 11796,
+      "observationCount": 12386,
+      "venueObservationCount": 11795,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -15973,7 +15973,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 550000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・本番・スポーツ・入場料なし・平日・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -15989,7 +15989,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 660000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・本番・スポーツ・入場料なし・土日祝・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -16005,7 +16005,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 275000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・準備・スポーツ・入場料なし・平日・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -16021,7 +16021,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 550000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・準備・スポーツ・入場料なし・土日祝・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -16037,7 +16037,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 880000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・本番・スポーツ・入場料最高額7000円未満・平日・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -16053,7 +16053,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 1100000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・本番・スポーツ・入場料最高額7000円未満・土日祝・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -16069,7 +16069,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 275000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・準備・スポーツ・入場料最高額7000円未満・平日・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -16085,7 +16085,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 550000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・準備・スポーツ・入場料最高額7000円未満・土日祝・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -16101,7 +16101,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 1320000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・本番・スポーツ・入場料最高額7000円以上・平日・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -16117,7 +16117,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 1650000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・本番・スポーツ・入場料最高額7000円以上・土日祝・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -16133,7 +16133,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 275000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・準備・スポーツ・入場料最高額7000円以上・平日・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -16149,7 +16149,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 550000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・準備・スポーツ・入場料最高額7000円以上・土日祝・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -16165,7 +16165,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 3520000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・本番・興行スポーツ・平日・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -16181,7 +16181,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 4400000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・本番・興行スポーツ・土日祝・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -16197,7 +16197,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 1650000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・準備・興行スポーツ・平日・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -16213,7 +16213,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 3300000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・準備・興行スポーツ・土日祝・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -16229,7 +16229,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 4400000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・本番・式典/集会/展示会等・平日・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -16245,7 +16245,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 5500000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・本番・式典/集会/展示会等・土日祝・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -16261,7 +16261,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 2750000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・準備・式典/集会/展示会等・平日・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -16277,7 +16277,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 3300000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・準備・式典/集会/展示会等・土日祝・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -16293,7 +16293,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 5500000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・本番・コンサート/ショー・平日・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -16309,7 +16309,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 7150000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・本番・コンサート/ショー・土日祝・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -16325,7 +16325,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 2750000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・準備・コンサート/ショー・平日・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -16341,7 +16341,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 3300000,
           "taxStatus": "included",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・準備・コンサート/ショー・土日祝・8〜23時内の連続12時間",
           "validFrom": null,
           "exclusions": "附属設備・延長・警備・清掃・人件費",
@@ -17147,7 +17147,7 @@ export const venueData = {
       "hasFixedStage": false,
       "practiceUse": "yes",
       "streamingReady": "conditional",
-      "minDailyFacilityPrice": null,
+      "minDailyFacilityPrice": 4000000,
       "priceObservations": [
         {
           "id": "PRICE-874",
@@ -17158,7 +17158,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 4000000,
           "taxStatus": "excluded",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・本番・平日・任意の連続12時間",
           "validFrom": "2026-04-01",
           "exclusions": "設備・備品・延長・清掃・警備・通信・消費税",
@@ -17174,7 +17174,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 7000000,
           "taxStatus": "excluded",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・本番・土日祝・任意の連続12時間",
           "validFrom": "2026-04-01",
           "exclusions": "設備・備品・延長・清掃・警備・通信・消費税",
@@ -17190,7 +17190,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 2500000,
           "taxStatus": "excluded",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・設営/撤去/休演・平日・任意の連続12時間",
           "validFrom": "2026-04-01",
           "exclusions": "設備・備品・延長・清掃・警備・通信・消費税",
@@ -17206,7 +17206,7 @@ export const venueData = {
           "timeBand": "12_hours",
           "amount": 4000000,
           "taxStatus": "excluded",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "メインアリーナ・設営/撤去/休演・土日祝・任意の連続12時間",
           "validFrom": "2026-04-01",
           "exclusions": "設備・備品・延長・清掃・警備・通信・消費税",
@@ -17543,7 +17543,7 @@ export const venueData = {
       "officialLinks": [],
       "observedAt": "2026-08-09",
       "detailCount": 2,
-      "priceCount": 18,
+      "priceCount": 12,
       "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -17593,22 +17593,6 @@ export const venueData = {
           "sourceUrl": "https://h-jigyoudan.or.jp/center/r06_04-center-price/"
         },
         {
-          "id": "PRICE-883",
-          "spaceId": "hiroshima-main",
-          "category": "facility",
-          "useCase": "amateur_sports_no_admission",
-          "dayType": "weekday",
-          "timeBand": "09:00-21:00",
-          "amount": 81040,
-          "taxStatus": "included",
-          "unit": "per_12_hours",
-          "basis": "大アリーナ全面・一般・アマチュアスポーツ・入場料無料・9〜21時参考額",
-          "validFrom": "2024-04-01",
-          "exclusions": "附属設備・特定日4/5料金・準備撤去",
-          "note": "運営者公式の現行掲載2024年4月1日施行料金表を画像照合。消費税込",
-          "sourceUrl": "https://h-jigyoudan.or.jp/center/r06_04-center-price/"
-        },
-        {
           "id": "PRICE-884",
           "spaceId": "hiroshima-main",
           "category": "facility",
@@ -17635,22 +17619,6 @@ export const venueData = {
           "taxStatus": "included",
           "unit": "per_hour",
           "basis": "大アリーナ全面・一般・アマチュアスポーツ・入場料有料・17〜21時1時間",
-          "validFrom": "2024-04-01",
-          "exclusions": "附属設備・土日休日1.2倍・準備撤去0.5倍",
-          "note": "運営者公式の現行掲載2024年4月1日施行料金表を画像照合。消費税込",
-          "sourceUrl": "https://h-jigyoudan.or.jp/center/r06_04-center-price/"
-        },
-        {
-          "id": "PRICE-886",
-          "spaceId": "hiroshima-main",
-          "category": "facility",
-          "useCase": "amateur_sports_admission",
-          "dayType": "weekday",
-          "timeBand": "09:00-21:00",
-          "amount": 678720,
-          "taxStatus": "included",
-          "unit": "per_12_hours",
-          "basis": "大アリーナ全面・一般・アマチュアスポーツ・入場料有料・9〜21時参考額",
           "validFrom": "2024-04-01",
           "exclusions": "附属設備・土日休日1.2倍・準備撤去0.5倍",
           "note": "運営者公式の現行掲載2024年4月1日施行料金表を画像照合。消費税込",
@@ -17689,22 +17657,6 @@ export const venueData = {
           "sourceUrl": "https://h-jigyoudan.or.jp/center/r06_04-center-price/"
         },
         {
-          "id": "PRICE-889",
-          "spaceId": "hiroshima-main",
-          "category": "facility",
-          "useCase": "event_admission",
-          "dayType": "weekday",
-          "timeBand": "09:00-21:00",
-          "amount": 2128400,
-          "taxStatus": "included",
-          "unit": "per_12_hours",
-          "basis": "大アリーナ全面・一般・アマチュアスポーツ以外・入場料有料・9〜21時参考額",
-          "validFrom": "2024-04-01",
-          "exclusions": "附属設備・土日休日1.2倍・準備撤去0.5倍",
-          "note": "音楽、芸能、プロスポーツ等の大会/興行、展示会、見本市、式典、集会等。公式現行掲載表を画像照合。税込",
-          "sourceUrl": "https://h-jigyoudan.or.jp/center/r06_04-center-price/"
-        },
-        {
           "id": "PRICE-890",
           "spaceId": "hiroshima-main",
           "category": "facility",
@@ -17731,22 +17683,6 @@ export const venueData = {
           "taxStatus": "included",
           "unit": "per_hour",
           "basis": "大アリーナ全面・一般・アマチュアスポーツ以外・入場料無料・その他利用・17〜21時1時間",
-          "validFrom": "2024-04-01",
-          "exclusions": "附属設備・土日休日1.2倍・準備撤去0.5倍",
-          "note": "運営者公式の現行掲載2024年4月1日施行料金表を画像照合。消費税込",
-          "sourceUrl": "https://h-jigyoudan.or.jp/center/r06_04-center-price/"
-        },
-        {
-          "id": "PRICE-892",
-          "spaceId": "hiroshima-main",
-          "category": "facility",
-          "useCase": "other_no_admission",
-          "dayType": "weekday",
-          "timeBand": "09:00-21:00",
-          "amount": 702000,
-          "taxStatus": "included",
-          "unit": "per_12_hours",
-          "basis": "大アリーナ全面・一般・アマチュアスポーツ以外・入場料無料・その他利用・9〜21時参考額",
           "validFrom": "2024-04-01",
           "exclusions": "附属設備・土日休日1.2倍・準備撤去0.5倍",
           "note": "運営者公式の現行掲載2024年4月1日施行料金表を画像照合。消費税込",
@@ -17785,22 +17721,6 @@ export const venueData = {
           "sourceUrl": "https://h-jigyoudan.or.jp/center/r06_04-center-price/"
         },
         {
-          "id": "PRICE-895",
-          "spaceId": "hiroshima-sub",
-          "category": "facility",
-          "useCase": "amateur_sports_no_admission",
-          "dayType": "weekday",
-          "timeBand": "09:00-21:00",
-          "amount": 54000,
-          "taxStatus": "included",
-          "unit": "per_12_hours",
-          "basis": "小アリーナ全面・一般・アマチュアスポーツ・入場料無料・9〜21時参考額",
-          "validFrom": "2024-04-01",
-          "exclusions": "附属設備・特定日4/5料金・準備撤去",
-          "note": "運営者公式の現行掲載2024年4月1日施行料金表を画像照合。消費税込",
-          "sourceUrl": "https://h-jigyoudan.or.jp/center/r06_04-center-price/"
-        },
-        {
           "id": "PRICE-896",
           "spaceId": "hiroshima-sub",
           "category": "facility",
@@ -17827,22 +17747,6 @@ export const venueData = {
           "taxStatus": "included",
           "unit": "per_hour",
           "basis": "小アリーナ全面・一般・アマチュアスポーツ以外・入場料無料・その他利用・17〜21時1時間",
-          "validFrom": "2024-04-01",
-          "exclusions": "附属設備・土日休日1.2倍・準備撤去0.5倍",
-          "note": "運営者公式の現行掲載2024年4月1日施行料金表を画像照合。消費税込",
-          "sourceUrl": "https://h-jigyoudan.or.jp/center/r06_04-center-price/"
-        },
-        {
-          "id": "PRICE-898",
-          "spaceId": "hiroshima-sub",
-          "category": "facility",
-          "useCase": "other_no_admission",
-          "dayType": "weekday",
-          "timeBand": "09:00-21:00",
-          "amount": 227200,
-          "taxStatus": "included",
-          "unit": "per_12_hours",
-          "basis": "小アリーナ全面・一般・アマチュアスポーツ以外・入場料無料・その他利用・9〜21時参考額",
           "validFrom": "2024-04-01",
           "exclusions": "附属設備・土日休日1.2倍・準備撤去0.5倍",
           "note": "運営者公式の現行掲載2024年4月1日施行料金表を画像照合。消費税込",
@@ -17894,6 +17798,144 @@ export const venueData = {
           "validFrom": null,
           "exclusions": "附属設備・特定日4/5料金・準備撤去",
           "note": "施設は日額を公表していない。公式料金表の時間帯区分（9〜17時×8時間＋17〜21時×4時間）で算出した目安。4,390円/時×8＋4,720円/時×4。実際の予約時間で変動する",
+          "sourceUrl": "https://h-jigyoudan.or.jp/center/r06_04-center-price/"
+        },
+        {
+          "id": "SCENARIO-195",
+          "spaceId": "hiroshima-main",
+          "label": "大アリーナ全面・一般・アマチュアスポーツ・入場料無料・9〜21時",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekday",
+          "timeSpan": "09:00-21:00",
+          "amount": 81040,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-881",
+            "PRICE-882"
+          ],
+          "componentQuantities": [
+            8,
+            4
+          ],
+          "validFrom": "2024-04-01",
+          "exclusions": "附属設備・特定日4/5料金・準備撤去",
+          "note": "施設が公表する一括日額ではなく、本台帳が公式の時間料金を9〜17時×8時間と17〜21時×4時間で合算した参考額。2024年4月1日施行表・消費税込。2026-08-10に price-observations.csv の PRICE-883（unit=per_12_hours）から移設",
+          "sourceUrl": "https://h-jigyoudan.or.jp/center/r06_04-center-price/"
+        },
+        {
+          "id": "SCENARIO-196",
+          "spaceId": "hiroshima-main",
+          "label": "大アリーナ全面・一般・アマチュアスポーツ・入場料有料・9〜21時",
+          "useCase": "amateur_sports_admission",
+          "dayType": "weekday",
+          "timeSpan": "09:00-21:00",
+          "amount": 678720,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-884",
+            "PRICE-885"
+          ],
+          "componentQuantities": [
+            8,
+            4
+          ],
+          "validFrom": "2024-04-01",
+          "exclusions": "附属設備・土日休日1.2倍・準備撤去0.5倍",
+          "note": "施設が公表する一括日額ではなく、本台帳が公式の時間料金を9〜17時×8時間と17〜21時×4時間で合算した参考額。2024年4月1日施行表・消費税込。2026-08-10に price-observations.csv の PRICE-886（unit=per_12_hours）から移設",
+          "sourceUrl": "https://h-jigyoudan.or.jp/center/r06_04-center-price/"
+        },
+        {
+          "id": "SCENARIO-197",
+          "spaceId": "hiroshima-main",
+          "label": "大アリーナ全面・一般・アマチュアスポーツ以外・入場料有料・9〜21時",
+          "useCase": "event_admission",
+          "dayType": "weekday",
+          "timeSpan": "09:00-21:00",
+          "amount": 2128400,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-887",
+            "PRICE-888"
+          ],
+          "componentQuantities": [
+            8,
+            4
+          ],
+          "validFrom": "2024-04-01",
+          "exclusions": "附属設備・土日休日1.2倍・準備撤去0.5倍",
+          "note": "施設が公表する一括日額ではなく、本台帳が公式の時間料金を9〜17時×8時間と17〜21時×4時間で合算した参考額。2024年4月1日施行表・消費税込。2026-08-10に price-observations.csv の PRICE-889（unit=per_12_hours）から移設",
+          "sourceUrl": "https://h-jigyoudan.or.jp/center/r06_04-center-price/"
+        },
+        {
+          "id": "SCENARIO-198",
+          "spaceId": "hiroshima-main",
+          "label": "大アリーナ全面・一般・アマチュアスポーツ以外・入場料無料・その他利用・9〜21時",
+          "useCase": "other_no_admission",
+          "dayType": "weekday",
+          "timeSpan": "09:00-21:00",
+          "amount": 702000,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-890",
+            "PRICE-891"
+          ],
+          "componentQuantities": [
+            8,
+            4
+          ],
+          "validFrom": "2024-04-01",
+          "exclusions": "附属設備・土日休日1.2倍・準備撤去0.5倍",
+          "note": "施設が公表する一括日額ではなく、本台帳が公式の時間料金を9〜17時×8時間と17〜21時×4時間で合算した参考額。2024年4月1日施行表・消費税込。2026-08-10に price-observations.csv の PRICE-892（unit=per_12_hours）から移設",
+          "sourceUrl": "https://h-jigyoudan.or.jp/center/r06_04-center-price/"
+        },
+        {
+          "id": "SCENARIO-199",
+          "spaceId": "hiroshima-sub",
+          "label": "小アリーナ全面・一般・アマチュアスポーツ・入場料無料・9〜21時",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekday",
+          "timeSpan": "09:00-21:00",
+          "amount": 54000,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-893",
+            "PRICE-894"
+          ],
+          "componentQuantities": [
+            8,
+            4
+          ],
+          "validFrom": "2024-04-01",
+          "exclusions": "附属設備・特定日4/5料金・準備撤去",
+          "note": "施設が公表する一括日額ではなく、本台帳が公式の時間料金を9〜17時×8時間と17〜21時×4時間で合算した参考額。2024年4月1日施行表・消費税込。2026-08-10に price-observations.csv の PRICE-895（unit=per_12_hours）から移設",
+          "sourceUrl": "https://h-jigyoudan.or.jp/center/r06_04-center-price/"
+        },
+        {
+          "id": "SCENARIO-200",
+          "spaceId": "hiroshima-sub",
+          "label": "小アリーナ全面・一般・アマチュアスポーツ以外・入場料無料・その他利用・9〜21時",
+          "useCase": "other_no_admission",
+          "dayType": "weekday",
+          "timeSpan": "09:00-21:00",
+          "amount": 227200,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-896",
+            "PRICE-897"
+          ],
+          "componentQuantities": [
+            8,
+            4
+          ],
+          "validFrom": "2024-04-01",
+          "exclusions": "附属設備・土日休日1.2倍・準備撤去0.5倍",
+          "note": "施設が公表する一括日額ではなく、本台帳が公式の時間料金を9〜17時×8時間と17〜21時×4時間で合算した参考額。2024年4月1日施行表・消費税込。2026-08-10に price-observations.csv の PRICE-898（unit=per_12_hours）から移設",
           "sourceUrl": "https://h-jigyoudan.or.jp/center/r06_04-center-price/"
         }
       ],
@@ -17982,7 +18024,7 @@ export const venueData = {
       "hasFixedStage": false,
       "practiceUse": "yes",
       "streamingReady": "conditional",
-      "minDailyFacilityPrice": null,
+      "minDailyFacilityPrice": 1672000,
       "priceObservations": [
         {
           "id": "PRICE-348",
@@ -17993,7 +18035,7 @@ export const venueData = {
           "timeBand": "07:00-24:00",
           "amount": 1672000,
           "taxStatus": "included",
-          "unit": "per_15_hours",
+          "unit": "per_day",
           "basis": "商業利用・アリーナ又はアイスリンク・本番日・平日・連続15時間まで",
           "validFrom": null,
           "exclusions": "施設管理費、警備費、原状復帰清掃費、水道光熱費、付帯設備、物販手数料",
@@ -18152,7 +18194,7 @@ export const venueData = {
           "timeBand": "08:00-23:00",
           "amount": 4000000,
           "taxStatus": "excluded",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "アリーナ本番日利用料・平日・基本利用時間内の連続する12時間",
           "validFrom": null,
           "exclusions": "諸室、電気・空調等の設備、備品、延長人件費、清掃、誘導、ゴミ処理",
@@ -18383,7 +18425,7 @@ export const venueData = {
       "hasFixedStage": false,
       "practiceUse": null,
       "streamingReady": "conditional",
-      "minDailyFacilityPrice": null,
+      "minDailyFacilityPrice": 4000000,
       "priceObservations": [
         {
           "id": "PRICE-353",
@@ -18394,7 +18436,7 @@ export const venueData = {
           "timeBand": "08:00-23:00",
           "amount": 4000000,
           "taxStatus": "excluded",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "本番・平日・基本利用時間内の連続した12時間",
           "validFrom": "2026-04-01",
           "exclusions": "諸室、電気空調等設備、貸出備品、時間外利用",
@@ -24239,7 +24281,7 @@ export const venueData = {
       "hasFixedStage": false,
       "practiceUse": "conditional",
       "streamingReady": "unknown",
-      "minDailyFacilityPrice": null,
+      "minDailyFacilityPrice": 9000000,
       "priceObservations": [
         {
           "id": "PRICE-360",
@@ -24250,7 +24292,7 @@ export const venueData = {
           "timeBand": "07:00-23:00",
           "amount": 9000000,
           "taxStatus": "not_stated",
-          "unit": "per_12_hours",
+          "unit": "per_day",
           "basis": "第一体育館・興行又は入場料徴収あり・本番日・平日・7時から23時内の任意12時間",
           "validFrom": "2026-04-01",
           "exclusions": "空調、付属設備、時間外利用、設営・撤去",
@@ -47349,7 +47391,7 @@ export const venueData = {
           "basis": "メインアリーナ全面・平日・アマチュアスポーツ・入場料なし",
           "validFrom": null,
           "exclusions": "利用目的による加算・附属設備等の別料金",
-          "note": "指定管理者公式HTML料金表で12:30〜15:30の7",
+          "note": "指定管理者公式HTML料金表で12:30〜15:30の7,880円/3時間を直接確認",
           "sourceUrl": "https://shisetsu.mizuno.jp/m-7619/guide"
         },
         {
@@ -47365,7 +47407,7 @@ export const venueData = {
           "basis": "メインアリーナ全面・平日・アマチュアスポーツ・入場料なし",
           "validFrom": null,
           "exclusions": "利用目的による加算・附属設備等の別料金",
-          "note": "指定管理者公式HTML料金表で15:30〜18:30の8",
+          "note": "指定管理者公式HTML料金表で15:30〜18:30の8,680円/3時間を直接確認",
           "sourceUrl": "https://shisetsu.mizuno.jp/m-7619/guide"
         },
         {
@@ -47381,7 +47423,7 @@ export const venueData = {
           "basis": "メインアリーナ全面・平日・アマチュアスポーツ・入場料なし",
           "validFrom": null,
           "exclusions": "利用目的による加算・附属設備等の別料金",
-          "note": "指定管理者公式HTML料金表で18:30〜21:30の9",
+          "note": "指定管理者公式HTML料金表で18:30〜21:30の9,520円/3時間を直接確認",
           "sourceUrl": "https://shisetsu.mizuno.jp/m-7619/guide"
         },
         {
@@ -47397,7 +47439,7 @@ export const venueData = {
           "basis": "メインアリーナ全面・平日・アマチュアスポーツ・入場料あり",
           "validFrom": null,
           "exclusions": "利用目的による加算・附属設備等の別料金",
-          "note": "指定管理者公式HTML料金表の括弧内料金15",
+          "note": "指定管理者公式HTML料金表の括弧内料金15,760円/3時間を直接確認",
           "sourceUrl": "https://shisetsu.mizuno.jp/m-7619/guide"
         },
         {
@@ -47413,7 +47455,7 @@ export const venueData = {
           "basis": "メインアリーナ全面・平日・アマチュアスポーツ・入場料あり",
           "validFrom": null,
           "exclusions": "利用目的による加算・附属設備等の別料金",
-          "note": "指定管理者公式HTML料金表の括弧内料金17",
+          "note": "指定管理者公式HTML料金表の括弧内料金17,360円/3時間を直接確認",
           "sourceUrl": "https://shisetsu.mizuno.jp/m-7619/guide"
         },
         {
@@ -47429,7 +47471,7 @@ export const venueData = {
           "basis": "メインアリーナ全面・平日・アマチュアスポーツ・入場料あり",
           "validFrom": null,
           "exclusions": "利用目的による加算・附属設備等の別料金",
-          "note": "指定管理者公式HTML料金表の括弧内料金19",
+          "note": "指定管理者公式HTML料金表の括弧内料金19,040円/3時間を直接確認",
           "sourceUrl": "https://shisetsu.mizuno.jp/m-7619/guide"
         },
         {
@@ -47445,7 +47487,7 @@ export const venueData = {
           "basis": "メインアリーナ全面・土日祝・アマチュアスポーツ・入場料なし",
           "validFrom": null,
           "exclusions": "利用目的による加算・附属設備等の別料金",
-          "note": "指定管理者公式HTML料金表で12:30〜15:30の9",
+          "note": "指定管理者公式HTML料金表で12:30〜15:30の9,480円/3時間を直接確認",
           "sourceUrl": "https://shisetsu.mizuno.jp/m-7619/guide"
         },
         {
@@ -47461,7 +47503,7 @@ export const venueData = {
           "basis": "メインアリーナ全面・土日祝・アマチュアスポーツ・入場料なし",
           "validFrom": null,
           "exclusions": "利用目的による加算・附属設備等の別料金",
-          "note": "指定管理者公式HTML料金表で15:30〜18:30の10",
+          "note": "指定管理者公式HTML料金表で15:30〜18:30の10,440円/3時間を直接確認",
           "sourceUrl": "https://shisetsu.mizuno.jp/m-7619/guide"
         },
         {
@@ -47477,7 +47519,7 @@ export const venueData = {
           "basis": "メインアリーナ全面・土日祝・アマチュアスポーツ・入場料なし",
           "validFrom": null,
           "exclusions": "利用目的による加算・附属設備等の別料金",
-          "note": "指定管理者公式HTML料金表で18:30〜21:30の11",
+          "note": "指定管理者公式HTML料金表で18:30〜21:30の11,440円/3時間を直接確認",
           "sourceUrl": "https://shisetsu.mizuno.jp/m-7619/guide"
         },
         {
@@ -47493,7 +47535,7 @@ export const venueData = {
           "basis": "メインアリーナ全面・土日祝・アマチュアスポーツ・入場料あり",
           "validFrom": null,
           "exclusions": "利用目的による加算・附属設備等の別料金",
-          "note": "指定管理者公式HTML料金表の括弧内料金18",
+          "note": "指定管理者公式HTML料金表の括弧内料金18,960円/3時間を直接確認",
           "sourceUrl": "https://shisetsu.mizuno.jp/m-7619/guide"
         },
         {
@@ -47509,7 +47551,7 @@ export const venueData = {
           "basis": "メインアリーナ全面・土日祝・アマチュアスポーツ・入場料あり",
           "validFrom": null,
           "exclusions": "利用目的による加算・附属設備等の別料金",
-          "note": "指定管理者公式HTML料金表の括弧内料金20",
+          "note": "指定管理者公式HTML料金表の括弧内料金20,880円/3時間を直接確認",
           "sourceUrl": "https://shisetsu.mizuno.jp/m-7619/guide"
         },
         {
@@ -47525,7 +47567,7 @@ export const venueData = {
           "basis": "メインアリーナ全面・土日祝・アマチュアスポーツ・入場料あり",
           "validFrom": null,
           "exclusions": "利用目的による加算・附属設備等の別料金",
-          "note": "指定管理者公式HTML料金表の括弧内料金22",
+          "note": "指定管理者公式HTML料金表の括弧内料金22,880円/3時間を直接確認",
           "sourceUrl": "https://shisetsu.mizuno.jp/m-7619/guide"
         }
       ],
@@ -69826,7 +69868,7 @@ export const venueData = {
       "hasFixedStage": false,
       "practiceUse": "yes",
       "streamingReady": "unknown",
-      "minDailyFacilityPrice": null,
+      "minDailyFacilityPrice": 55460,
       "priceObservations": [
         {
           "id": "PRICE-465",
@@ -69853,11 +69895,11 @@ export const venueData = {
           "timeBand": "09:00-17:00",
           "amount": 55460,
           "taxStatus": "not_stated",
-          "unit": "per_8_hours",
+          "unit": "per_day",
           "basis": "アリーナ全面・一般学生・アマチュアスポーツ等・入場料を徴収しない",
           "validFrom": null,
-          "exclusions": "冷房・照明・音響・器具・入場料徴収等の別料金",
-          "note": "指定管理者公式HTML料金表で55,460円/8時間を確認",
+          "exclusions": "冷房・照明・音響・器具・入場料徴収・時間外（17時以降1時間単位）等の別料金",
+          "note": "指定管理者公式HTML料金表で55,460円/9時〜17時を確認。料金区分は9-13時／13-17時／9-17時と時間外のみで、9-17時が公表されている最も広い通し区分。備考に「時間外とは、9時前と17時後に施設を利用する場合をいう」と明記され、17時以降は1時間単位の時間外料金（一般・学生7,600円/時）になる。開場時間は9-21時だが通しの全日区分は公表されていないため9-17時を日額として扱う（2026-08-10確認）",
           "sourceUrl": "https://www.ounoyama.jp/each-facility-guidance/budokan/arena/"
         },
         {
@@ -69869,11 +69911,11 @@ export const venueData = {
           "timeBand": "09:00-17:00",
           "amount": 75440,
           "taxStatus": "not_stated",
-          "unit": "per_8_hours",
+          "unit": "per_day",
           "basis": "アリーナ全面・その他の催物・非営利・入場料を徴収しない",
           "validFrom": null,
-          "exclusions": "冷房・照明・音響・器具・入場料徴収・営利利用等の別料金",
-          "note": "指定管理者公式HTML料金表で75,440円/8時間を確認",
+          "exclusions": "冷房・照明・音響・器具・入場料徴収・営利利用・時間外（17時以降1時間単位）等の別料金",
+          "note": "指定管理者公式HTML料金表で75,440円/9時〜17時を確認。料金区分は9-13時／13-17時／9-17時と時間外のみで、9-17時が公表されている最も広い通し区分。備考に「時間外とは、9時前と17時後に施設を利用する場合をいう」と明記され、17時以降は1時間単位の時間外料金（一般・学生7,600円/時）になる。開場時間は9-21時だが通しの全日区分は公表されていないため9-17時を日額として扱う（2026-08-10確認）",
           "sourceUrl": "https://www.ounoyama.jp/each-facility-guidance/budokan/arena/"
         },
         {
@@ -69893,29 +69935,7 @@ export const venueData = {
           "sourceUrl": "https://www.ounoyama.jp/each-facility-guidance/budokan/arena/"
         }
       ],
-      "budgetScenarios": [
-        {
-          "id": "SCENARIO-081",
-          "spaceId": "okinawa-budokan-arena",
-          "label": "アリーナ全面・アマチュアスポーツ・入場料なし・09:00-17:00",
-          "useCase": "amateur_sports",
-          "dayType": "all",
-          "timeSpan": "09:00-17:00",
-          "amount": 55460,
-          "taxStatus": "not_stated",
-          "derivationMethod": "sum_verified_components",
-          "componentPriceIds": [
-            "PRICE-466"
-          ],
-          "componentQuantities": [
-            1
-          ],
-          "validFrom": null,
-          "exclusions": "冷房18,330円/時・時間外1時間・附属設備",
-          "note": "公式の9時〜17時（8時間）区分をそのまま日額として扱った参考額。開館は9時〜21時だが、17時以降は時間外1時間単位の扱いで通し区分の公表額がないため、この範囲に留めている",
-          "sourceUrl": "https://www.ounoyama.jp/each-facility-guidance/budokan/arena/"
-        }
-      ],
+      "budgetScenarios": [],
       "operation": {
         "station": "壺川駅",
         "walkMinutes": 3,
@@ -170563,7 +170583,7 @@ export const venueData = {
       "hasFixedStage": false,
       "practiceUse": "conditional",
       "streamingReady": "unknown",
-      "minDailyFacilityPrice": null,
+      "minDailyFacilityPrice": 4570,
       "priceObservations": [
         {
           "id": "PRICE-2826",
@@ -170574,7 +170594,7 @@ export const venueData = {
           "timeBand": "09:00-17:00",
           "amount": 6070,
           "taxStatus": "not_stated",
-          "unit": "per_8_hours",
+          "unit": "per_day",
           "basis": "第1研修室・9時〜17時",
           "validFrom": "2026-04-01",
           "exclusions": "冷暖房料3割・設備機器・時間外料金",
@@ -170590,7 +170610,7 @@ export const venueData = {
           "timeBand": "09:00-17:00",
           "amount": 5630,
           "taxStatus": "not_stated",
-          "unit": "per_8_hours",
+          "unit": "per_day",
           "basis": "第2研修室・9時〜17時",
           "validFrom": "2026-04-01",
           "exclusions": "冷暖房料3割・設備機器・時間外料金",
@@ -170606,7 +170626,7 @@ export const venueData = {
           "timeBand": "09:00-17:00",
           "amount": 17700,
           "taxStatus": "not_stated",
-          "unit": "per_8_hours",
+          "unit": "per_day",
           "basis": "大会議室・9時〜17時",
           "validFrom": "2026-04-01",
           "exclusions": "冷暖房料3割・設備機器・時間外料金",
@@ -170622,7 +170642,7 @@ export const venueData = {
           "timeBand": "09:00-17:00",
           "amount": 4570,
           "taxStatus": "not_stated",
-          "unit": "per_8_hours",
+          "unit": "per_day",
           "basis": "実験実習室・9時〜17時",
           "validFrom": "2026-04-01",
           "exclusions": "冷暖房料3割・設備機器・時間外料金",
@@ -170638,7 +170658,7 @@ export const venueData = {
           "timeBand": "09:00-17:00",
           "amount": 6860,
           "taxStatus": "not_stated",
-          "unit": "per_8_hours",
+          "unit": "per_day",
           "basis": "林業技術研修館・9時〜17時",
           "validFrom": "2026-04-01",
           "exclusions": "冷暖房料3割・設備機器・時間外料金",
