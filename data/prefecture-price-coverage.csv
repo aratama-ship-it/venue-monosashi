@@ -15,7 +15,6 @@ prefecture,region,stage_venues,stage_priced,stage_gap,stage_reachable,sports_ven
 沖縄県,沖縄,23,5,0,met,3,2,3,needs_new_candidates
 青森県,東北,18,6,0,met,5,2,3,yes
 岩手県,東北,20,5,0,met,6,2,3,yes
-秋田県,東北,18,5,0,met,3,2,3,needs_new_candidates
 神奈川県,関東,19,5,0,met,6,2,3,yes
 長野県,甲信越,23,3,2,yes,5,4,1,yes
 鳥取県,中国,21,5,0,met,5,2,3,yes
@@ -41,6 +40,7 @@ prefecture,region,stage_venues,stage_priced,stage_gap,stage_reachable,sports_ven
 新潟県,甲信越,24,5,0,met,7,6,0,met
 愛媛県,四国,22,6,0,met,5,5,0,met
 福岡県,九州,22,5,0,met,6,5,0,met
+秋田県,東北,18,5,0,met,6,5,0,met
 山形県,東北,22,5,0,met,6,5,0,met
 東京都,関東,20,6,0,met,9,6,0,met
 愛知県,東海,22,5,0,met,7,5,0,met

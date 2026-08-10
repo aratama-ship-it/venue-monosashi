@@ -3,11 +3,11 @@
 export const venueData = {
   "stats": {
     "historical": 225,
-    "venues": 1219,
-    "details": 7808,
-    "prices": 3490,
+    "venues": 1222,
+    "details": 7811,
+    "prices": 3497,
     "operations": 221,
-    "budgetScenarios": 168,
+    "budgetScenarios": 171,
     "candidateCoverage": {
       "area": 624,
       "capacity": 936,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 12278,
-      "venueObservationCount": 11687,
+      "observationCount": 12291,
+      "venueObservationCount": 11700,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -246778,6 +246778,372 @@ export const venueData = {
       ],
       "bestSpace": {
         "id": "tsuruoka-arena",
+        "name": "アリーナ",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1221",
+      "region": "東北",
+      "prefecture": "秋田県",
+      "city": "横手市",
+      "name": "IRISOアリーナ横手（横手市立体育館）",
+      "category": "arena_and_meetings",
+      "fitLevel": "B",
+      "strengths": "指定管理者公式の料金ページは第1アリーナ貸切り利用の4区分（9:30-12:00／13:00-15:30／16:00-18:30／19:00-21:30、各2.5時間）が同額であることを掲載。2026年7月開館の新施設",
+      "cautions": "第1アリーナの面積・席数は今回参照した料金ページでは確認できず未記録。市内外区分は不明。1日の予約上限の明文はないが、1日は最大4区分",
+      "sourceUrl": "https://yokote-sports.jp/facility",
+      "websiteUrl": "https://yokote-sports.jp/",
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 1,
+      "priceCount": 4,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": null,
+      "maxArea": null,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 0,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [
+        {
+          "id": "PRICE-3514",
+          "spaceId": "yokote-arena1",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "09:30-12:00",
+          "amount": 12000,
+          "taxStatus": "not_stated",
+          "unit": "per_time_band",
+          "basis": "第1アリーナ貸切り利用全面・営利を目的とせず及び入場料金等を徴収しない場合・09:30-12:00（2.5時間）",
+          "validFrom": null,
+          "exclusions": "照明別（特殊点灯全面2,000円/時・通常全面1,500円/時。競技基準未満は基本料に含む）・冷暖房別3,000円/時",
+          "note": "指定管理者公式の料金ページ掲載の現行利用料。第1アリーナ貸切り利用は9:30-12:00／13:00-15:30／16:00-18:30／19:00-21:30の4区分（各2.5時間）がいずれも同額",
+          "sourceUrl": "https://yokote-sports.jp/fee"
+        },
+        {
+          "id": "PRICE-3515",
+          "spaceId": "yokote-arena1",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "13:00-15:30",
+          "amount": 12000,
+          "taxStatus": "not_stated",
+          "unit": "per_time_band",
+          "basis": "第1アリーナ貸切り利用全面・営利を目的とせず及び入場料金等を徴収しない場合・13:00-15:30（2.5時間）",
+          "validFrom": null,
+          "exclusions": "照明別（特殊点灯全面2,000円/時・通常全面1,500円/時。競技基準未満は基本料に含む）・冷暖房別3,000円/時",
+          "note": "指定管理者公式の料金ページ掲載の現行利用料。第1アリーナ貸切り利用は9:30-12:00／13:00-15:30／16:00-18:30／19:00-21:30の4区分（各2.5時間）がいずれも同額",
+          "sourceUrl": "https://yokote-sports.jp/fee"
+        },
+        {
+          "id": "PRICE-3516",
+          "spaceId": "yokote-arena1",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "16:00-18:30",
+          "amount": 12000,
+          "taxStatus": "not_stated",
+          "unit": "per_time_band",
+          "basis": "第1アリーナ貸切り利用全面・営利を目的とせず及び入場料金等を徴収しない場合・16:00-18:30（2.5時間）",
+          "validFrom": null,
+          "exclusions": "照明別（特殊点灯全面2,000円/時・通常全面1,500円/時。競技基準未満は基本料に含む）・冷暖房別3,000円/時",
+          "note": "指定管理者公式の料金ページ掲載の現行利用料。第1アリーナ貸切り利用は9:30-12:00／13:00-15:30／16:00-18:30／19:00-21:30の4区分（各2.5時間）がいずれも同額",
+          "sourceUrl": "https://yokote-sports.jp/fee"
+        },
+        {
+          "id": "PRICE-3517",
+          "spaceId": "yokote-arena1",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "19:00-21:30",
+          "amount": 12000,
+          "taxStatus": "not_stated",
+          "unit": "per_time_band",
+          "basis": "第1アリーナ貸切り利用全面・営利を目的とせず及び入場料金等を徴収しない場合・19:00-21:30（2.5時間）",
+          "validFrom": null,
+          "exclusions": "照明別（特殊点灯全面2,000円/時・通常全面1,500円/時。競技基準未満は基本料に含む）・冷暖房別3,000円/時",
+          "note": "指定管理者公式の料金ページ掲載の現行利用料。第1アリーナ貸切り利用は9:30-12:00／13:00-15:30／16:00-18:30／19:00-21:30の4区分（各2.5時間）がいずれも同額",
+          "sourceUrl": "https://yokote-sports.jp/fee"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-171",
+          "spaceId": "yokote-arena1",
+          "label": "第1アリーナ全面・非営利入場料なし・4区分合計・09:30-21:30",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "09:30-21:30",
+          "amount": 48000,
+          "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
+          "componentPriceIds": [
+            "PRICE-3514",
+            "PRICE-3515",
+            "PRICE-3516",
+            "PRICE-3517"
+          ],
+          "componentQuantities": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "validFrom": null,
+          "exclusions": "照明別（特殊点灯全面2,000円/時・通常全面1,500円/時。競技基準未満は基本料に含む）・冷暖房別3,000円/時",
+          "note": "指定管理者公式の料金ページ掲載の現行利用料。第1アリーナ貸切り利用は9:30-12:00／13:00-15:30／16:00-18:30／19:00-21:30の4区分（各2.5時間）がいずれも同額。4区分を合計した1日分",
+          "sourceUrl": "https://yokote-sports.jp/fee"
+        }
+      ],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "yokote-arena1",
+          "name": "第1アリーナ",
+          "type": "arena",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://yokote-sports.jp/fee",
+          "observedAt": "2026-08-10",
+          "note": "全面/2・3面/1・3面で貸出"
+        }
+      ],
+      "bestSpace": {
+        "id": "yokote-arena1",
+        "name": "第1アリーナ",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1222",
+      "region": "東北",
+      "prefecture": "秋田県",
+      "city": "鹿角市",
+      "name": "鹿角市記念スポーツセンター",
+      "category": "arena_and_meetings",
+      "fitLevel": "B",
+      "strengths": "指定管理者（鹿角市スポーツ協会）公式ページは開館時間9:00〜21:00と、大体育館の団体料金（1時間あたり）を9時〜17時と17時〜21時に分けて掲載",
+      "cautions": "大体育場の面積・席数は今回参照したページでは確認できず未記録。市内外区分は不明。大体育場の2分の1以下の利用は半額",
+      "sourceUrl": "https://www.ink.or.jp/~kazuno-sports/spocen.html",
+      "websiteUrl": "https://www.ink.or.jp/",
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 1,
+      "priceCount": 2,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": null,
+      "maxArea": null,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 0,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [
+        {
+          "id": "PRICE-3518",
+          "spaceId": "kazuno-large",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "09:00-17:00",
+          "amount": 650,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "大体育館・アマチュアスポーツ及び営利を目的としないその他の催物・入場料等を徴収しない場合・一般・9時から17時まで・1時間あたり",
+          "validFrom": null,
+          "exclusions": "暖房利用料別（2,300円/時）。大体育場の2分の1以下の利用は半額",
+          "note": "指定管理者（鹿角市スポーツ協会）公式ページ掲載の団体料金。「利用料金は1時間当たりの額」と明記。開館時間9:00〜21:00で、9時〜17時と17時〜21時で単価が異なる",
+          "sourceUrl": "https://www.ink.or.jp/~kazuno-sports/spocen.html"
+        },
+        {
+          "id": "PRICE-3519",
+          "spaceId": "kazuno-large",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "17:00-21:00",
+          "amount": 1030,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "大体育館・アマチュアスポーツ及び営利を目的としないその他の催物・入場料等を徴収しない場合・一般・17時から21時まで・1時間あたり",
+          "validFrom": null,
+          "exclusions": "暖房利用料別（2,300円/時）。大体育場の2分の1以下の利用は半額",
+          "note": "指定管理者（鹿角市スポーツ協会）公式ページ掲載の団体料金。「利用料金は1時間当たりの額」と明記。開館時間9:00〜21:00で、9時〜17時と17時〜21時で単価が異なる",
+          "sourceUrl": "https://www.ink.or.jp/~kazuno-sports/spocen.html"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-172",
+          "spaceId": "kazuno-large",
+          "label": "大体育場・アマチュアスポーツ入場料なし・一般・09:00-21:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 9320,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3518",
+            "PRICE-3519"
+          ],
+          "componentQuantities": [
+            8,
+            4
+          ],
+          "validFrom": null,
+          "exclusions": "暖房利用料別（2,300円/時）。大体育場の2分の1以下の利用は半額",
+          "note": "指定管理者（鹿角市スポーツ協会）公式ページ掲載の団体料金。「利用料金は1時間当たりの額」と明記。開館時間9:00〜21:00で、9時〜17時と17時〜21時で単価が異なる。9-17時の8時間と17-21時の4時間を積み上げた目安",
+          "sourceUrl": "https://www.ink.or.jp/~kazuno-sports/spocen.html"
+        }
+      ],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "kazuno-large",
+          "name": "大体育場",
+          "type": "arena",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.ink.or.jp/~kazuno-sports/spocen.html",
+          "observedAt": "2026-08-10",
+          "note": "2分の1以下の利用は半額"
+        }
+      ],
+      "bestSpace": {
+        "id": "kazuno-large",
+        "name": "大体育場",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1223",
+      "region": "東北",
+      "prefecture": "秋田県",
+      "city": "湯沢市",
+      "name": "湯沢市総合体育館",
+      "category": "arena_and_meetings",
+      "fitLevel": "B",
+      "strengths": "湯沢市公式の施設案内ページに使用時間午前9時から午後9時まで、利用料金1時間につき1,030円（照明加算額1時間1,030円）と明記。市公式の総合体育館使用料PDF（令和元年10月改定）にもアリーナ貸切使用全面の同額を掲載",
+      "cautions": "アリーナの面積・席数は今回参照したページでは確認できず未記録。指定管理者ページは高額側の表を「入場料等を徴収する場合」と表示する一方、市PDFは「アマチュアスポーツ以外又は営利活動」と分類しており、両者の適用関係は要確認",
+      "sourceUrl": "https://www.city-yuzawa.jp/soshiki/85/481.html",
+      "websiteUrl": "https://www.city-yuzawa.jp/",
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 1,
+      "priceCount": 1,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": null,
+      "maxArea": null,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 0,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [
+        {
+          "id": "PRICE-3520",
+          "spaceId": "yuzawa-arena",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "09:00-21:00",
+          "amount": 1030,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "アリーナ貸切使用全面・アマチュアスポーツ又は非営利活動に使用する場合・1時間につき",
+          "validFrom": null,
+          "exclusions": "照明加算額1時間につき1,030円 別。半面・4分の1面は利用料金も半額・4分の1",
+          "note": "湯沢市公式の施設案内ページ掲載の現行利用料金。使用時間は午前9時から午後9時まで（12時間）。市公式の総合体育館使用料PDF（令和元年10月改定）にも同額を掲載しており、条例上限のみの表示ではない",
+          "sourceUrl": "https://www.city-yuzawa.jp/soshiki/85/481.html"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-173",
+          "spaceId": "yuzawa-arena",
+          "label": "アリーナ貸切全面・アマチュアスポーツ又は非営利・09:00-21:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 12360,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3520"
+          ],
+          "componentQuantities": [
+            12
+          ],
+          "validFrom": null,
+          "exclusions": "照明加算額1時間につき1,030円 別。半面・4分の1面は利用料金も半額・4分の1",
+          "note": "湯沢市公式の施設案内ページ掲載の現行利用料金。使用時間は午前9時から午後9時まで（12時間）。市公式の総合体育館使用料PDF（令和元年10月改定）にも同額を掲載しており、条例上限のみの表示ではない。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.city-yuzawa.jp/soshiki/85/481.html"
+        }
+      ],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "yuzawa-arena",
+          "name": "アリーナ",
+          "type": "arena",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city-yuzawa.jp/soshiki/85/481.html",
+          "observedAt": "2026-08-10",
+          "note": "全面/半面/4分の1面で貸出"
+        }
+      ],
+      "bestSpace": {
+        "id": "yuzawa-arena",
         "name": "アリーナ",
         "type": "arena"
       }
