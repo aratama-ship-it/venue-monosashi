@@ -217498,7 +217498,7 @@ export const venueData = {
           "practiceUse": "conditional",
           "sourceUrl": "https://www.city.aomori.aomori.jp/shisetsu/1005639/1005642.html",
           "observedAt": "2026-08-08",
-          "note": "収容2"
+          "note": "収容2,031名（移動席160名・1階1,095席・2階936席）。プロセニアム高10.5mと舞台寸法は最低天井高・区画面積に転用しない"
         },
         {
           "id": "linkstation-rehearsal",
@@ -217863,7 +217863,7 @@ export const venueData = {
           "practiceUse": "conditional",
           "sourceUrl": "https://www.city.hirosaki.aomori.jp/gaiyou/shisetsu/shiminkaikan.html",
           "observedAt": "2026-08-08",
-          "note": "客席総数1"
+          "note": "客席総数1,343席。最低天井高・床荷重・搬入条件は要確認"
         },
         {
           "id": "hirosaki-civic-dressing",
@@ -218754,7 +218754,7 @@ export const venueData = {
           "practiceUse": "conditional",
           "sourceUrl": "https://www.city.goshogawara.lg.jp/kyouiku/bunka/ortensia-main.html",
           "observedAt": "2026-08-08",
-          "note": "固定1"
+          "note": "固定1,109席（身障者席4席を含む）・母子席8席。舞台の間口・奥行は最低天井高・区画面積に転用しない"
         },
         {
           "id": "ortensia-rehearsal",
@@ -220630,7 +220630,7 @@ export const venueData = {
           "practiceUse": "conditional",
           "sourceUrl": "https://www.sendaiycc.jp/facility/%E3%82%B3%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%88%E3%83%9B%E3%83%BC%E3%83%AB",
           "observedAt": "2026-08-09",
-          "note": "1"
+          "note": "1,918㎡・802席。公式掲載のステージ高さ15.5mは舞台寸法であり天井高として扱わない。楽屋4室と搬入用エレベーター資料を掲載。最低天井高は要確認"
         },
         {
           "id": "sendai-ycc-concert-organizer-office",
@@ -220732,7 +220732,7 @@ export const venueData = {
           "practiceUse": "conditional",
           "sourceUrl": "https://www.sendaiycc.jp/facility/%E3%82%B7%E3%82%A2%E3%82%BF%E3%83%BC%E3%83%9B%E3%83%BC%E3%83%AB",
           "observedAt": "2026-08-09",
-          "note": "1"
+          "note": "1,914㎡・584席。公式掲載のステージ高さ8.5mは舞台寸法であり天井高として扱わない。楽屋6室・大迫りを掲載。最低天井高は要確認"
         },
         {
           "id": "sendai-ycc-theater-organizer-office",
@@ -240291,7 +240291,7 @@ export const venueData = {
           "practiceUse": "conditional",
           "sourceUrl": "https://kintaromirai-hall.com/facility/",
           "observedAt": "2026-08-09",
-          "note": "指定管理者公式は1"
+          "note": "指定管理者公式は1,110席・車椅子席2席含むと掲載。可動プロセニアム高さ7mは最低天井高に転用しない"
         },
         {
           "id": "kintaro-small-hall",
@@ -240554,7 +240554,7 @@ export const venueData = {
           "practiceUse": "conditional",
           "sourceUrl": "https://www.ayase-bunka.com/about/hall/",
           "observedAt": "2026-08-09",
-          "note": "指定管理者公式は収容1"
+          "note": "指定管理者公式は収容1,350人、1階934席・2階404席・車いす使用者用スペース12台分を掲載。舞台高さ9mは最低天井高に転用しない"
         },
         {
           "id": "ayase-small-hall",
@@ -240766,7 +240766,7 @@ export const venueData = {
           "practiceUse": "conditional",
           "sourceUrl": "https://prismhall.jp/shisetsu/mainhall/",
           "observedAt": "2026-08-09",
-          "note": "指定管理者公式は1"
+          "note": "指定管理者公式は1,317席・固定椅子席1,310席・車いす席7席を掲載。プロセニアム高は最低天井高として扱わない"
         },
         {
           "id": "prism-small-hall",

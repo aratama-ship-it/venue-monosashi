@@ -4,7 +4,12 @@ import { fileURLToPath } from "node:url";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
-function parseCsv(text) {
+// 列数の不一致はここに溜めて、errors が用意できた時点で流し込む。
+// note の中に引用符なしのカンマを書くと列が1つ増えるが、パーサはヘッダー数を超えた
+// 値を黙って捨てるため、これを見ないと気づけない（2026-08-10にCAND-187の12行で発生）。
+const columnCountIssues = [];
+
+function parseCsv(text, dataset) {
   const rows = [];
   let row = [];
   let field = "";
@@ -36,13 +41,25 @@ function parseCsv(text) {
   }
 
   const [headers, ...values] = rows;
+  values.forEach((valuesRow, index) => {
+    if (valuesRow.length !== headers.length) {
+      columnCountIssues.push(
+        `${dataset}:${index + 2} column count ${valuesRow.length} != header ${headers.length}` +
+          (valuesRow.length > headers.length
+            ? `（note等に引用符なしのカンマが入っていないか確認する。余った値: ${JSON.stringify(
+                valuesRow.slice(headers.length),
+              )}）`
+            : ""),
+      );
+    }
+  });
   return values.map((valuesRow) =>
     Object.fromEntries(headers.map((header, index) => [header, valuesRow[index] ?? ""])),
   );
 }
 
 function loadCsv(relativePath) {
-  return parseCsv(fs.readFileSync(path.join(projectRoot, relativePath), "utf8"));
+  return parseCsv(fs.readFileSync(path.join(projectRoot, relativePath), "utf8"), relativePath.replace(/^data\//, ""));
 }
 
 const historical = loadCsv("data/historical-events.csv");
@@ -72,6 +89,9 @@ const SLOT_COMPONENT_UNITS = new Set([
 const venueWebsites = loadCsv("data/venue-websites.csv");
 const errors = [];
 const warnings = [];
+
+// 読み込み時に見つけた列数の不一致を最初に積む。
+errors.push(...columnCountIssues);
 
 function requireFields(rows, fields, dataset) {
   rows.forEach((row, index) => {
