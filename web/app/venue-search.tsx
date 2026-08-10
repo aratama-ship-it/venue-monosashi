@@ -143,9 +143,12 @@ function rolesForVenue(venue: VenueRoleSource): VenueRole[] {
     roles.push("stage");
   }
   if (
-    hasCategory("sports", "arena", "competition") ||
+    hasCategory("sports", "arena", "competition", "gymnasium") ||
     hasSpace(
       "arena",
+      "gymnasium",
+      "sports_arena",
+      "sports_hall",
       "dojo",
       "ice_rink",
       "pool",

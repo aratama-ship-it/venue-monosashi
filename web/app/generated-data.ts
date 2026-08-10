@@ -5,9 +5,9 @@ export const venueData = {
     "historical": 225,
     "venues": 1177,
     "details": 7734,
-    "prices": 3345,
+    "prices": 3349,
     "operations": 221,
-    "budgetScenarios": 107,
+    "budgetScenarios": 110,
     "candidateCoverage": {
       "area": 605,
       "capacity": 910,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 11998,
-      "venueObservationCount": 11407,
+      "observationCount": 12005,
+      "venueObservationCount": 11414,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -149618,9 +149618,9 @@ export const venueData = {
       "sourceUrl": "https://www.town.kiyama.lg.jp/kiji003431/index.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-08",
+      "observedAt": "2026-08-10",
       "detailCount": 7,
-      "priceCount": 0,
+      "priceCount": 4,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -149636,8 +149636,137 @@ export const venueData = {
       "practiceUse": "yes",
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3353",
+          "spaceId": "kiyama-arena",
+          "category": "facility",
+          "useCase": "general_city_full",
+          "dayType": "all",
+          "timeBand": "09:00-21:30",
+          "amount": 2500,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "アリーナ全面・町内居住者・1時間当たり",
+          "validFrom": null,
+          "exclusions": "冷暖房別（アリーナ全面 町内10,290円/時・町外20,580円/時、武道場全面 町内3,340円/時）・附属設備別",
+          "note": "基山町公式の施設案内ページ掲載の使用料表。施設は日額を公表していない。同ページの「利用時間 午前9時から午後9時30分まで」（12.5時間）を換算に使用",
+          "sourceUrl": "https://www.town.kiyama.lg.jp/kiji003431/index.html"
+        },
+        {
+          "id": "PRICE-3354",
+          "spaceId": "kiyama-arena",
+          "category": "facility",
+          "useCase": "general_outside_full",
+          "dayType": "all",
+          "timeBand": "09:00-21:30",
+          "amount": 5000,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "アリーナ全面・町外居住者・1時間当たり",
+          "validFrom": null,
+          "exclusions": "冷暖房別（アリーナ全面 町内10,290円/時・町外20,580円/時、武道場全面 町内3,340円/時）・附属設備別",
+          "note": "基山町公式の施設案内ページ掲載の使用料表。施設は日額を公表していない。同ページの「利用時間 午前9時から午後9時30分まで」（12.5時間）を換算に使用",
+          "sourceUrl": "https://www.town.kiyama.lg.jp/kiji003431/index.html"
+        },
+        {
+          "id": "PRICE-3355",
+          "spaceId": "kiyama-dojo",
+          "category": "facility",
+          "useCase": "general_city_full",
+          "dayType": "all",
+          "timeBand": "09:00-21:30",
+          "amount": 1650,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "武道場全面・町内居住者・1時間当たり",
+          "validFrom": null,
+          "exclusions": "冷暖房別（アリーナ全面 町内10,290円/時・町外20,580円/時、武道場全面 町内3,340円/時）・附属設備別",
+          "note": "基山町公式の施設案内ページ掲載の使用料表。施設は日額を公表していない。同ページの「利用時間 午前9時から午後9時30分まで」（12.5時間）を換算に使用",
+          "sourceUrl": "https://www.town.kiyama.lg.jp/kiji003431/index.html"
+        },
+        {
+          "id": "PRICE-3356",
+          "spaceId": "kiyama-dojo",
+          "category": "facility",
+          "useCase": "general_outside_full",
+          "dayType": "all",
+          "timeBand": "09:00-21:30",
+          "amount": 3300,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "武道場全面・町外居住者・1時間当たり",
+          "validFrom": null,
+          "exclusions": "冷暖房別（アリーナ全面 町内10,290円/時・町外20,580円/時、武道場全面 町内3,340円/時）・附属設備別",
+          "note": "基山町公式の施設案内ページ掲載の使用料表。施設は日額を公表していない。同ページの「利用時間 午前9時から午後9時30分まで」（12.5時間）を換算に使用",
+          "sourceUrl": "https://www.town.kiyama.lg.jp/kiji003431/index.html"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-109",
+          "spaceId": "kiyama-arena",
+          "label": "アリーナ全面・町内・1時間単価×利用可能時間・09:00-21:30",
+          "useCase": "general_city_full",
+          "dayType": "all",
+          "timeSpan": "09:00-21:30",
+          "amount": 31250,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3353"
+          ],
+          "componentQuantities": [
+            12.5
+          ],
+          "validFrom": null,
+          "exclusions": "冷暖房別（アリーナ全面 町内10,290円/時・町外20,580円/時、武道場全面 町内3,340円/時）・附属設備別",
+          "note": "基山町公式の施設案内ページ掲載の使用料表。施設は日額を公表していない。同ページの「利用時間 午前9時から午後9時30分まで」（12.5時間）を換算に使用。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.town.kiyama.lg.jp/kiji003431/index.html"
+        },
+        {
+          "id": "SCENARIO-110",
+          "spaceId": "kiyama-arena",
+          "label": "アリーナ全面・町外・1時間単価×利用可能時間・09:00-21:30",
+          "useCase": "general_outside_full",
+          "dayType": "all",
+          "timeSpan": "09:00-21:30",
+          "amount": 62500,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3354"
+          ],
+          "componentQuantities": [
+            12.5
+          ],
+          "validFrom": null,
+          "exclusions": "冷暖房別（アリーナ全面 町内10,290円/時・町外20,580円/時、武道場全面 町内3,340円/時）・附属設備別",
+          "note": "基山町公式の施設案内ページ掲載の使用料表。施設は日額を公表していない。同ページの「利用時間 午前9時から午後9時30分まで」（12.5時間）を換算に使用。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.town.kiyama.lg.jp/kiji003431/index.html"
+        },
+        {
+          "id": "SCENARIO-111",
+          "spaceId": "kiyama-dojo",
+          "label": "武道場全面・町内・1時間単価×利用可能時間・09:00-21:30",
+          "useCase": "general_city_full",
+          "dayType": "all",
+          "timeSpan": "09:00-21:30",
+          "amount": 20625,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3355"
+          ],
+          "componentQuantities": [
+            12.5
+          ],
+          "validFrom": null,
+          "exclusions": "冷暖房別（アリーナ全面 町内10,290円/時・町外20,580円/時、武道場全面 町内3,340円/時）・附属設備別",
+          "note": "基山町公式の施設案内ページ掲載の使用料表。施設は日額を公表していない。同ページの「利用時間 午前9時から午後9時30分まで」（12.5時間）を換算に使用。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.town.kiyama.lg.jp/kiji003431/index.html"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
