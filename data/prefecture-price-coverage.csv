@@ -3,10 +3,8 @@ prefecture,region,stage_venues,stage_priced,stage_gap,stage_reachable,sports_ven
 茨城県,関東,22,2,3,yes,4,2,3,needs_new_candidates
 徳島県,四国,20,2,3,yes,3,2,3,needs_new_candidates
 奈良県,近畿,24,3,2,yes,2,2,3,needs_new_candidates
-岡山県,中国,22,3,2,yes,3,2,3,needs_new_candidates
 富山県,北陸,22,3,2,yes,4,2,3,needs_new_candidates
 山梨県,甲信越,20,3,2,yes,5,2,3,yes
-岐阜県,東海,24,3,2,yes,2,2,3,needs_new_candidates
 香川県,四国,20,3,2,yes,6,2,3,yes
 静岡県,東海,21,4,1,yes,5,2,3,yes
 島根県,中国,17,4,1,yes,4,2,3,needs_new_candidates
@@ -27,6 +25,7 @@ prefecture,region,stage_venues,stage_priced,stage_gap,stage_reachable,sports_ven
 長野県,甲信越,23,3,2,yes,5,4,1,yes
 鳥取県,中国,21,5,0,met,5,2,3,yes
 栃木県,関東,19,3,2,yes,5,5,0,met
+岡山県,中国,22,3,2,yes,6,5,0,met
 長崎県,九州,23,4,1,yes,5,4,1,yes
 千葉県,関東,21,4,1,yes,5,4,1,yes
 京都府,近畿,19,3,2,yes,6,5,0,met
@@ -36,6 +35,7 @@ prefecture,region,stage_venues,stage_priced,stage_gap,stage_reachable,sports_ven
 大分県,九州,20,5,0,met,6,4,1,yes
 福島県,東北,19,4,1,yes,6,5,0,met
 群馬県,関東,23,4,1,yes,5,5,0,met
+岐阜県,東海,25,4,1,yes,5,5,0,met
 佐賀県,九州,20,4,1,yes,10,5,0,met
 北海道,北海道,21,5,0,met,8,7,0,met
 埼玉県,関東,23,5,0,met,5,5,0,met

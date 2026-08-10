@@ -7780,3 +7780,12 @@ DETAIL-7779,CAND-1197,dazaifu-arena,アリーナ,arena,,,,unknown,unknown,,,,fou
 DETAIL-7780,CAND-1198,niihama-arena,競技場,arena,,,,unknown,unknown,,808,,two_way,none,yes,unknown,https://niihama.or.jp/05/about,2026-08-10,verified,観覧席（固定席）808席。全面/半面で貸出
 DETAIL-7781,CAND-1199,uwajima-large,大競技場,arena,,,,unknown,unknown,,,,three_way,none,yes,unknown,https://www.city.uwajima.ehime.jp/soshiki/33/bun-supo16.html,2026-08-10,verified,床面3分の1・2分の1・3分の2の部分利用あり
 DETAIL-7782,CAND-1199,uwajima-dojo,柔道場・剣道場,dojo,,,,unknown,unknown,,,,unknown,none,yes,unknown,https://www.city.uwajima.ehime.jp/soshiki/33/bun-supo16.html,2026-08-10,verified,
+DETAIL-7783,CAND-1200,mizushima-main,メインアリーナ,arena,,,,unknown,unknown,,1987,,three_way,none,yes,unknown,https://www.k-sports.or.jp/facilities/35002/,2026-08-10,verified,"観覧席2階3階合計1,987席・車椅子観覧席20席。全面/2・3面/1・3面で貸出"
+DETAIL-7784,CAND-1201,kasaoka-main,メインアリーナ,arena,,,,unknown,unknown,,,,three_way,none,yes,unknown,https://www.city.kasaoka.okayama.jp/uploaded/attachment/57884.pdf,2026-08-10,verified,全面/2分の1/3分の1/12分の1で貸出
+DETAIL-7785,CAND-1202,ibara-main,アリーナ,arena,1722,,,unknown,unknown,,618,,three_way,none,yes,unknown,https://www.city.ibara.okayama.jp/soshiki/38/1590.html,2026-08-10,verified,固定観客席618席
+DETAIL-7786,CAND-1202,ibara-dojo,格技場,dojo,385,,,unknown,unknown,,,,unknown,none,yes,unknown,https://www.city.ibara.okayama.jp/soshiki/38/1590.html,2026-08-10,verified,
+DETAIL-7787,CAND-1203,kakamigahara-main,メインアリーナ,arena,,,,unknown,unknown,,288,,four_way,none,yes,unknown,https://www.city.kakamigahara.lg.jp/shisei/shisetsu/1005665/1005679.html,2026-08-10,verified,2階に観覧席（固定288席）・ランニングコース1周200m。全面/4分の1面/12分の1面で貸出
+DETAIL-7788,CAND-1203,kakamigahara-sub,サブアリーナ,arena,,,,unknown,unknown,,,,two_way,none,yes,unknown,https://www.city.kakamigahara.lg.jp/shisei/shisetsu/1005665/1005679.html,2026-08-10,verified,全面/半面で貸出
+DETAIL-7789,CAND-1204,tajimi-court1,第1競技場,arena,1895,,,unknown,unknown,,700,,four_way,none,yes,unknown,https://information.konamisportsclub.jp/trust/tajimi/generalgymnasium/,2026-08-10,verified,48m×38m。バスケットボール2面・バレーボール3面・バドミントン10面・ハンドボール1面。観覧席約700席
+DETAIL-7790,CAND-1204,tajimi-court2,第2競技場,arena,629,,,unknown,unknown,,,,two_way,none,yes,unknown,https://information.konamisportsclub.jp/trust/tajimi/generalgymnasium/,2026-08-10,verified,32m×19m
+DETAIL-7791,CAND-1205,gero-arena,温アリーナ,arena,1824,,,unknown,unknown,,,,three_way,none,yes,unknown,https://www.gero-k.jp/sisetu_charge.php,2026-08-10,verified,半面912㎡・1/3面608㎡
