@@ -7768,3 +7768,12 @@ DETAIL-7767,CAND-1190,iwaki-kendo,剣道場,dojo,358,,,unknown,unknown,,,,unknow
 DETAIL-7768,CAND-1191,niigata-higashi-main,メインアリーナ,arena,1826.82,,,unknown,unknown,,2048,,two_way,none,yes,unknown,https://niigata-kaikou.jp/facility/413/outline,2026-08-10,verified,"縦横は未公表。観覧席3,120席の内訳は固定2,048・移動1,056・車椅子16"
 DETAIL-7769,CAND-1192,kameda-main,大体育室（メインアリーナ）,arena,1448,,,unknown,unknown,,708,,two_way,none,yes,unknown,https://niigata-kaikou.jp/facility/429/outline,2026-08-10,verified,料金表では「大体育室」、施設概要では「メインアリーナ」と表記
 DETAIL-7770,CAND-1193,toyano-main,大体育室,arena,1373,13.9,,nominal_review,unknown,,821,,two_way,none,yes,unknown,https://niigata-kaikou.jp/facility/420/outline,2026-08-10,verified,縦38.8m×横35.4m×天井高13.9m。1階可動席678席・2階固定席821席・車椅子12席・立見220席
+DETAIL-7771,CAND-1194,kameoka-large,大体育館,arena,1836,,,unknown,unknown,,1120,,three_way,none,yes,unknown,https://www.city.kameoka.kyoto.jp/soshiki/33/3778.html,2026-08-10,verified,"床面積1,836㎡・観覧席1,120席。3分の1の部分使用あり"
+DETAIL-7772,CAND-1194,kameoka-small,小体育館,arena,810,,,unknown,unknown,,,,two_way,none,yes,unknown,https://www.city.kameoka.kyoto.jp/soshiki/33/3778.html,2026-08-10,verified,床面積810㎡。2分の1の部分使用あり
+DETAIL-7773,CAND-1195,maizuru-arena,競技場（アリーナ）,arena,,,,unknown,unknown,,1024,,four_way,none,yes,unknown,https://www.city.maizuru.kyoto.jp/kyouiku/0000005731.html,2026-08-10,verified,"39.2m×45.6m・観覧席1,024席。2分の1・4分の1の部分利用あり"
+DETAIL-7774,CAND-1195,maizuru-kendo,剣道場,dojo,769,,,unknown,unknown,,250,,two_way,none,yes,unknown,https://www.city.maizuru.kyoto.jp/kyouiku/0000005731.html,2026-08-10,verified,観覧席250席
+DETAIL-7775,CAND-1195,maizuru-judo,柔道場,dojo,769,,,unknown,unknown,,244,,two_way,none,yes,unknown,https://www.city.maizuru.kyoto.jp/kyouiku/0000005731.html,2026-08-10,verified,柔道2面・観覧席244席
+DETAIL-7776,CAND-1196,omuta-arena,アリーナ,arena,1712.72,,,unknown,unknown,,,,two_way,none,yes,unknown,https://sports.omuta.fukuoka.jp/omuta-arena/,2026-08-10,verified,"観客席は車椅子席12を含み仮設席最大1,500名"
+DETAIL-7777,CAND-1196,omuta-multi,多目的ホール,arena,1283.97,,,unknown,unknown,,,,unknown,none,yes,unknown,https://sports.omuta.fukuoka.jp/omuta-arena/,2026-08-10,verified,
+DETAIL-7778,CAND-1196,omuta-judo,柔道場,dojo,,,,unknown,unknown,,,,unknown,none,yes,unknown,https://sports.omuta.fukuoka.jp/ryoukin/,2026-08-10,verified,
+DETAIL-7779,CAND-1197,dazaifu-arena,アリーナ,arena,,,,unknown,unknown,,,,four_way,none,yes,unknown,https://ssk-dazaifu-gym.com/use/,2026-08-10,verified,全面/半面/1・3面/1・4面/1・8面で分割貸出
