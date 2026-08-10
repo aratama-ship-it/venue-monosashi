@@ -7,7 +7,7 @@ export const venueData = {
     "details": 7735,
     "prices": 3297,
     "operations": 222,
-    "budgetScenarios": 103,
+    "budgetScenarios": 105,
     "candidateCoverage": {
       "area": 606,
       "capacity": 911,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 11948,
-      "venueObservationCount": 11357,
+      "observationCount": 11950,
+      "venueObservationCount": 11359,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -56005,7 +56005,7 @@ export const venueData = {
       "sourceUrl": "https://www.city.hiratsuka.kanagawa.jp/koen/page-c_00811.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 13,
       "priceCount": 142,
       "operationCount": 1,
@@ -58297,7 +58297,50 @@ export const venueData = {
           "sourceUrl": "https://www.city.hiratsuka.kanagawa.jp/common/200041061.pdf"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-100",
+          "spaceId": "hiratsuka-main",
+          "label": "第1体育室全面・一般・市内団体・09:00-21:00",
+          "useCase": "general_city_full",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 32400,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-2223"
+          ],
+          "componentQuantities": [
+            12
+          ],
+          "validFrom": null,
+          "exclusions": "附属設備",
+          "note": "施設は日額を公表していない。平塚市公式ページの「利用時間は、9時から21時までです」（12時間）×2,700円/時から算出した目安。実際の予約時間で変動する",
+          "sourceUrl": "https://www.city.hiratsuka.kanagawa.jp/koen/page-c_00811.html"
+        },
+        {
+          "id": "SCENARIO-101",
+          "spaceId": "hiratsuka-main",
+          "label": "第1体育室全面・一般・市外団体・09:00-21:00",
+          "useCase": "general_outside_full",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 64800,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-2224"
+          ],
+          "componentQuantities": [
+            12
+          ],
+          "validFrom": null,
+          "exclusions": "附属設備",
+          "note": "施設は日額を公表していない。平塚市公式ページの「利用時間は、9時から21時までです」（12時間）×5,400円/時から算出した目安。実際の予約時間で変動する",
+          "sourceUrl": "https://www.city.hiratsuka.kanagawa.jp/koen/page-c_00811.html"
+        }
+      ],
       "operation": {
         "station": "JR東海道線平塚駅",
         "walkMinutes": 25,
