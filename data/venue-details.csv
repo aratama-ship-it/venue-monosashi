@@ -7824,3 +7824,6 @@ DETAIL-7823,CAND-1232,uspal-arena,アリーナ,arena,,,,unknown,unknown,,,,none,
 DETAIL-7824,CAND-1233,nankoku-main,メインアリーナ,arena,,,,unknown,unknown,,,,three_way,none,yes,unknown,https://www.city.nankoku.lg.jp/reiki/reiki_honbun/i900RG00000785.html,2026-08-10,verified,半面・3分の1面の部分使用あり
 DETAIL-7825,CAND-1234,sukumo-arena,アリーナ,arena,1710,,,unknown,unknown,,1000,,three_way,none,yes,unknown,https://www.city.sukumo.kochi.jp/docs-14/p010801.html,2026-08-10,verified,"47.5m×36m。2階観覧席固定1,000席（身障者用4席含む）。全面/1・2面/1・3面で貸出"
 DETAIL-7826,CAND-1235,tosashimizu-arena,アリーナ,arena,,,,unknown,unknown,,,,four_way,none,yes,unknown,https://www.city.tosashimizu.kochi.jp/reiki/H416901010053/H416901010053_j.html,2026-08-10,verified,全面/半面/1・4面で貸出
+DETAIL-7827,CAND-1236,urasoe-arena,アリーナ,arena,,,,unknown,unknown,,,,two_way,none,yes,unknown,https://www.city.urasoe.lg.jp/doc/2026041400010/file_contents/file_20265111151132_1.pdf,2026-08-10,verified,利用面積が2分の1以下の場合は半額
+DETAIL-7828,CAND-1237,nago21-arena,アリーナ,arena,,,,unknown,unknown,,,,three_way,none,yes,unknown,https://www.nago21-osi.jp/gym-21.php,2026-08-10,verified,1コート/2コート/3コート（全面）で貸出
+DETAIL-7829,CAND-1238,okinawa-kenso-main,メインアリーナ,arena,,,,unknown,unknown,,,,two_way,none,yes,unknown,https://okinawa-kenso.com/?page_id=205,2026-08-10,verified,利用面積が2分の1以下の場合は基準額の2分の1
