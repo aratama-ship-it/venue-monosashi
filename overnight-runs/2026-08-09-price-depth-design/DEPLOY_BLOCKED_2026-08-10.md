@@ -167,3 +167,54 @@ git push sites HEAD:main      # e03d52a → 3e5a4f3
 curl -s https://venue.art-monosashi.com/ | grep -o 'venue-search-[A-Za-z0-9_-]*\.js'
 # venue-search-BznAbPnU.js なら反映済み
 ```
+
+---
+
+# 解決（2026-08-10）: Version 212 で公開完了
+
+両方の原因が解消し、本日分（体育館候補45件の追加ほか）が公開された。
+
+```
+version_number: 212
+version_id:     appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_8dd007dbf5c881919330f5abc4c0976d
+file_count:     49      ← 211のときは null だった
+commit:         0f3a5fae70eb5230717a4e00eb5555ff8068b987
+deployment_id:  appgdep_6a796943eb8c8191b410d0fa8cfcb07c
+結果:            succeeded（failure_message: null）
+```
+
+Claude側でのcurl検証（両URLとも HTTP 200、`venue-search-BznAbPnU.js`、7,323,904 bytes）:
+
+| 確認文字列 | art-monosashi.com | chatgpt.site |
+|---|---|---|
+| マルワ・アリーナとちぎ | 1 | 1 |
+| つるしんアリーナ小真木原 | 1 | 1 |
+| ANA ARENA 浦添 | 1 | 1 |
+| hourly_rate_times_published_hours | 1 | 1 |
+
+## 効いた対処（次に同じ症状が出たら）
+
+### 1. バージョン保存が file_count: null になるとき → 新しいコミットを作る
+
+**保存はコミットSHA単位でレコードを再利用する。** 壊れたレコードができると、保存し直しても
+同じ番号（211）が返り続けて直らない。**別のコミットを積めば新しい番号（212）が振られ、正常に保存される。**
+中身のあるコミットでなくてよい（今回はこのドキュメントへの追記2件が新コミットになった）。
+
+保存APIは壊れていても `Action completed.`（isError: false）を返すので、**必ず file_count を見ること。**
+null ならその先へ進んでも `We couldn't fetch the saved Site source.` で失敗する。
+
+### 2. sites への push が Device not configured になるとき
+
+Sites の短期書き込み資格情報の失効。**正式な再発行機能で解決できる**（今回Codex側で実施）。
+認証情報をコマンドライン引数やURL、git設定に保存する回避策は取らないこと。
+
+## 反映確認の決まり文句
+
+```bash
+curl -s https://venue.art-monosashi.com/ | grep -o 'venue-search-[A-Za-z0-9_-]*\.js'
+```
+
+アセットハッシュが変われば新版。**CSSハッシュや会場名では判定できない**
+（CSSは変わらないことがあり、会場名は候補台帳に以前から存在するため）。
+念のため、そのアセットを取得して今回追加した施設名を grep すると確実。
+なお公開直後はサブドメイン側だけ旧ハッシュを返すことがある（今回は約12秒後に一致）。
