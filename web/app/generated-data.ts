@@ -5,9 +5,9 @@ export const venueData = {
     "historical": 225,
     "venues": 1177,
     "details": 7734,
-    "prices": 3360,
+    "prices": 3364,
     "operations": 221,
-    "budgetScenarios": 114,
+    "budgetScenarios": 117,
     "candidateCoverage": {
       "area": 605,
       "capacity": 910,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 12020,
-      "venueObservationCount": 11429,
+      "observationCount": 12027,
+      "venueObservationCount": 11436,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -69180,9 +69180,9 @@ export const venueData = {
       "sourceUrl": "https://www.oita-oosukouen.com/sougoutaiikukan/facilities_details/",
       "websiteUrl": "https://www.oita-oosukouen.com/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 1,
-      "priceCount": 2,
+      "priceCount": 4,
       "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -69230,9 +69230,84 @@ export const venueData = {
           "exclusions": "器具・土日祝3割増・入場料徴収等の別料金",
           "note": "指定管理者公式2026年料金PDFを目視確認。照明・冷暖房込みでその他使用27,780円/時間",
           "sourceUrl": "https://www.oita-oosukouen.com/wp/wp-content/uploads/2026/01/%E4%BD%93%E8%82%B2%E9%A4%A8%E6%96%99%E9%87%91%E8%A1%A8%E3%80%902026%E5%B9%B44%E6%9C%881%E6%97%A5%E6%94%B9%E5%AE%9A%E3%80%91-1.pdf"
+        },
+        {
+          "id": "PRICE-3368",
+          "spaceId": "oita-ozu-main",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "08:30-21:00",
+          "amount": 2500,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "メインアリーナ全面・アマチュアスポーツに使用する場合・1時間",
+          "validFrom": null,
+          "exclusions": "冷房15,700円/時・暖房11,000円/時・照明料（時間と灯数に応じた額）別",
+          "note": "指定管理者（大分市大洲総合運動公園）公式ページのメインアリーナ料金表。施設は日額を公表していない。同ページの「利用時間 8:30～21:00」（12.5時間）を換算に使用（21:00施錠のため20:45から閉館業務）",
+          "sourceUrl": "https://www.oita-oosukouen.com/sougoutaiikukan/facilities_details/"
+        },
+        {
+          "id": "PRICE-3369",
+          "spaceId": "oita-ozu-main",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "08:30-21:00",
+          "amount": 9950,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "メインアリーナ全面使用のみ・その他に使用する場合・1時間",
+          "validFrom": null,
+          "exclusions": "冷房15,700円/時・暖房11,000円/時・照明料（時間と灯数に応じた額）別",
+          "note": "指定管理者（大分市大洲総合運動公園）公式ページのメインアリーナ料金表。施設は日額を公表していない。同ページの「利用時間 8:30～21:00」（12.5時間）を換算に使用（21:00施錠のため20:45から閉館業務）",
+          "sourceUrl": "https://www.oita-oosukouen.com/sougoutaiikukan/facilities_details/"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-116",
+          "spaceId": "oita-ozu-main",
+          "label": "メインアリーナ全面・アマチュアスポーツ・08:30-21:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "08:30-21:00",
+          "amount": 31250,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3368"
+          ],
+          "componentQuantities": [
+            12.5
+          ],
+          "validFrom": null,
+          "exclusions": "冷房15,700円/時・暖房11,000円/時・照明料（時間と灯数に応じた額）別",
+          "note": "指定管理者（大分市大洲総合運動公園）公式ページのメインアリーナ料金表。施設は日額を公表していない。同ページの「利用時間 8:30～21:00」（12.5時間）を換算に使用（21:00施錠のため20:45から閉館業務）。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.oita-oosukouen.com/sougoutaiikukan/facilities_details/"
+        },
+        {
+          "id": "SCENARIO-117",
+          "spaceId": "oita-ozu-main",
+          "label": "メインアリーナ全面・その他の使用・08:30-21:00",
+          "useCase": "all",
+          "dayType": "all",
+          "timeSpan": "08:30-21:00",
+          "amount": 124375,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3369"
+          ],
+          "componentQuantities": [
+            12.5
+          ],
+          "validFrom": null,
+          "exclusions": "冷房15,700円/時・暖房11,000円/時・照明料（時間と灯数に応じた額）別",
+          "note": "指定管理者（大分市大洲総合運動公園）公式ページのメインアリーナ料金表。施設は日額を公表していない。同ページの「利用時間 8:30～21:00」（12.5時間）を換算に使用（21:00施錠のため20:45から閉館業務）。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.oita-oosukouen.com/sougoutaiikukan/facilities_details/"
+        }
+      ],
       "operation": {
         "station": "大洲運動公園",
         "walkMinutes": null,
@@ -131636,9 +131711,9 @@ export const venueData = {
       "sourceUrl": "https://www.city.kitsuki.lg.jp/soshiki/7/bunka/sports/sports_shisetsu/985.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-07",
+      "observedAt": "2026-08-10",
       "detailCount": 6,
-      "priceCount": 0,
+      "priceCount": 2,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -131654,8 +131729,63 @@ export const venueData = {
       "practiceUse": "yes",
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3370",
+          "spaceId": "kitsuki-arena",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 1620,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "アリーナ全面・1時間あたり",
+          "validFrom": null,
+          "exclusions": "照明設備1,560円/時（全面全点灯）・冷暖房設備11,000円/時 別",
+          "note": "杵築市公式の施設ページ（2026年4月1日更新）。施設は日額を公表していない。同ページの「利用時間 9時から22時まで」（13時間）を換算に使用。アリーナは1,728㎡（48m×36m）・観覧席928席",
+          "sourceUrl": "https://www.city.kitsuki.lg.jp/soshiki/7/bunka/sports/sports_shisetsu/985.html"
+        },
+        {
+          "id": "PRICE-3371",
+          "spaceId": "kitsuki-arena",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 810,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "アリーナ半面・1時間あたり",
+          "validFrom": null,
+          "exclusions": "照明設備1,560円/時（全面全点灯）・冷暖房設備11,000円/時 別",
+          "note": "杵築市公式の施設ページ（2026年4月1日更新）。施設は日額を公表していない。同ページの「利用時間 9時から22時まで」（13時間）を換算に使用。アリーナは1,728㎡（48m×36m）・観覧席928席",
+          "sourceUrl": "https://www.city.kitsuki.lg.jp/soshiki/7/bunka/sports/sports_shisetsu/985.html"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-118",
+          "spaceId": "kitsuki-arena",
+          "label": "アリーナ全面・09:00-22:00",
+          "useCase": "all",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 21060,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3370"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "照明設備1,560円/時（全面全点灯）・冷暖房設備11,000円/時 別",
+          "note": "杵築市公式の施設ページ（2026年4月1日更新）。施設は日額を公表していない。同ページの「利用時間 9時から22時まで」（13時間）を換算に使用。アリーナは1,728㎡（48m×36m）・観覧席928席。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.city.kitsuki.lg.jp/soshiki/7/bunka/sports/sports_shisetsu/985.html"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
