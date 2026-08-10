@@ -7777,3 +7777,6 @@ DETAIL-7776,CAND-1196,omuta-arena,アリーナ,arena,1712.72,,,unknown,unknown,,
 DETAIL-7777,CAND-1196,omuta-multi,多目的ホール,arena,1283.97,,,unknown,unknown,,,,unknown,none,yes,unknown,https://sports.omuta.fukuoka.jp/omuta-arena/,2026-08-10,verified,
 DETAIL-7778,CAND-1196,omuta-judo,柔道場,dojo,,,,unknown,unknown,,,,unknown,none,yes,unknown,https://sports.omuta.fukuoka.jp/ryoukin/,2026-08-10,verified,
 DETAIL-7779,CAND-1197,dazaifu-arena,アリーナ,arena,,,,unknown,unknown,,,,four_way,none,yes,unknown,https://ssk-dazaifu-gym.com/use/,2026-08-10,verified,全面/半面/1・3面/1・4面/1・8面で分割貸出
+DETAIL-7780,CAND-1198,niihama-arena,競技場,arena,,,,unknown,unknown,,808,,two_way,none,yes,unknown,https://niihama.or.jp/05/about,2026-08-10,verified,観覧席（固定席）808席。全面/半面で貸出
+DETAIL-7781,CAND-1199,uwajima-large,大競技場,arena,,,,unknown,unknown,,,,three_way,none,yes,unknown,https://www.city.uwajima.ehime.jp/soshiki/33/bun-supo16.html,2026-08-10,verified,床面3分の1・2分の1・3分の2の部分利用あり
+DETAIL-7782,CAND-1199,uwajima-dojo,柔道場・剣道場,dojo,,,,unknown,unknown,,,,unknown,none,yes,unknown,https://www.city.uwajima.ehime.jp/soshiki/33/bun-supo16.html,2026-08-10,verified,
