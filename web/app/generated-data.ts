@@ -58299,7 +58299,7 @@ export const venueData = {
       ],
       "budgetScenarios": [
         {
-          "id": "SCENARIO-100",
+          "id": "SCENARIO-104",
           "spaceId": "hiratsuka-main",
           "label": "第1体育室全面・一般・市内団体・09:00-21:00",
           "useCase": "general_city_full",
@@ -58320,7 +58320,7 @@ export const venueData = {
           "sourceUrl": "https://www.city.hiratsuka.kanagawa.jp/koen/page-c_00811.html"
         },
         {
-          "id": "SCENARIO-101",
+          "id": "SCENARIO-105",
           "spaceId": "hiratsuka-main",
           "label": "第1体育室全面・一般・市外団体・09:00-21:00",
           "useCase": "general_outside_full",
