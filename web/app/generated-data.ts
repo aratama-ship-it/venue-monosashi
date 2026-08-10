@@ -3,14 +3,14 @@
 export const venueData = {
   "stats": {
     "historical": 225,
-    "venues": 1207,
-    "details": 7795,
-    "prices": 3461,
+    "venues": 1210,
+    "details": 7799,
+    "prices": 3471,
     "operations": 221,
-    "budgetScenarios": 156,
+    "budgetScenarios": 162,
     "candidateCoverage": {
       "area": 623,
-      "capacity": 930,
+      "capacity": 933,
       "ceiling": 112
     },
     "spaceCoverage": {
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 12224,
-      "venueObservationCount": 11633,
+      "observationCount": 12244,
+      "venueObservationCount": 11653,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -245308,6 +245308,495 @@ export const venueData = {
       ],
       "bestSpace": {
         "id": "toyama-seibu-large",
+        "name": "大アリーナ",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1209",
+      "region": "近畿",
+      "prefecture": "滋賀県",
+      "city": "野洲市",
+      "name": "野洲市総合体育館",
+      "category": "arena_and_meetings",
+      "fitLevel": "B",
+      "strengths": "野洲市使用料条例 別表第14 に大アリーナ全面の午前・午後・夜間・全日（午前9時〜午後9時）の使用料を掲載。指定管理者ページは観客席2,186席（固定席1,216席・移動席970席）、開館時間9:00〜21:00を掲載",
+      "cautions": "天井高・面積・床荷重・搬入寸法は要確認。湖南地域外は2倍。アマチュア入場料ありは15倍、アマチュア以外の入場料ありは20倍、アマチュア以外の入場料なしは2倍。飲食を要する場合は1.2倍",
+      "sourceUrl": "https://yasu-bs.jp/gymnasium/",
+      "websiteUrl": "https://yasu-bs.jp/",
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 1,
+      "priceCount": 2,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": 1216,
+      "maxArea": null,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 0,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": 18000,
+      "priceObservations": [
+        {
+          "id": "PRICE-3485",
+          "spaceId": "yasu-large",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekday",
+          "timeBand": "09:00-21:00",
+          "amount": 18000,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "大アリーナ全面・貸切り利用・全日午前9時〜午後9時・平日",
+          "validFrom": null,
+          "exclusions": "照明別（大アリーナは使用する1基ごとに50円を限度として1時間当たりの額を算定）。湖南地域外は2倍。アマチュア入場料ありは15倍。飲食を要する場合は1.2倍",
+          "note": "野洲市使用料条例 別表第14 の現行本文。全日は午前9時〜午後9時の欄。平日の区分合計19,800円より全日18,000円が割安。湖南地域利用者・アマチュアスポーツ・入場料なしの額",
+          "sourceUrl": "https://www.city.yasu.lg.jp/section/reiki_int/reiki_honbun/r042RG00000194.html"
+        },
+        {
+          "id": "PRICE-3486",
+          "spaceId": "yasu-large",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekend_holiday",
+          "timeBand": "09:00-21:00",
+          "amount": 22500,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "大アリーナ全面・貸切り利用・全日午前9時〜午後9時・土曜日曜祝日",
+          "validFrom": null,
+          "exclusions": "照明別（大アリーナは使用する1基ごとに50円を限度として1時間当たりの額を算定）。湖南地域外は2倍。アマチュア入場料ありは15倍。飲食を要する場合は1.2倍",
+          "note": "野洲市使用料条例 別表第14 の現行本文。全日は午前9時〜午後9時の欄。平日の区分合計19,800円より全日18,000円が割安。湖南地域利用者・アマチュアスポーツ・入場料なしの額",
+          "sourceUrl": "https://www.city.yasu.lg.jp/section/reiki_int/reiki_honbun/r042RG00000194.html"
+        }
+      ],
+      "budgetScenarios": [],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "yasu-large",
+          "name": "大アリーナ",
+          "type": "arena",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": 1216,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://yasu-bs.jp/gymnasium/",
+          "observedAt": "2026-08-10",
+          "note": "観客席2,186席（固定席1,216席・移動席970席）。全面/2分の1/3分の1/4分の1で貸出"
+        }
+      ],
+      "bestSpace": {
+        "id": "yasu-large",
+        "name": "大アリーナ",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1210",
+      "region": "近畿",
+      "prefecture": "滋賀県",
+      "city": "守山市",
+      "name": "守山市民体育館",
+      "category": "arena_and_meetings",
+      "fitLevel": "B",
+      "strengths": "指定管理者（守山市文化体育振興事業団）公式ページは延床面積4,201㎡、2階固定観客席約1,000席（車椅子席含む）と現行の大アリーナ利用料（1時間につきと明記）を掲載。2026年4月改定",
+      "cautions": "大アリーナの面積は今回参照したページでは確認できず未記録。天井高・床荷重・搬入寸法は要確認。市外は倍額。追加照明は別途実費",
+      "sourceUrl": "https://www.moriyama-s-p.com/sisetu/roomA/",
+      "websiteUrl": "https://www.moriyama-s-p.com/",
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 1,
+      "priceCount": 4,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": 1000,
+      "maxArea": null,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 0,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [
+        {
+          "id": "PRICE-3487",
+          "spaceId": "moriyama-large",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekday",
+          "timeBand": "09:00-17:00",
+          "amount": 1900,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "大アリーナ全面・市内・入場料等を徴収しない場合・平日・午前9時〜午後5時・1時間につき",
+          "validFrom": null,
+          "exclusions": "冷暖房別（大アリーナ全面 冷房8,900円/時・暖房13,700円/時）。市外は倍額。追加照明は別途実費。規定時間外は1時間につき1,000円加算",
+          "note": "指定管理者（守山市文化体育振興事業団）公式ページ掲載の2026年4月改定料金。「1時間につき」と明記。9:00-17:00と17:00-22:00で単価が異なる。基本照明代を含む",
+          "sourceUrl": "https://www.moriyama-s-p.com/sisetu/roomA/"
+        },
+        {
+          "id": "PRICE-3488",
+          "spaceId": "moriyama-large",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekday",
+          "timeBand": "17:00-22:00",
+          "amount": 3300,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "大アリーナ全面・市内・入場料等を徴収しない場合・平日・午後5時〜午後10時・1時間につき",
+          "validFrom": null,
+          "exclusions": "冷暖房別（大アリーナ全面 冷房8,900円/時・暖房13,700円/時）。市外は倍額。追加照明は別途実費。規定時間外は1時間につき1,000円加算",
+          "note": "指定管理者（守山市文化体育振興事業団）公式ページ掲載の2026年4月改定料金。「1時間につき」と明記。9:00-17:00と17:00-22:00で単価が異なる。基本照明代を含む",
+          "sourceUrl": "https://www.moriyama-s-p.com/sisetu/roomA/"
+        },
+        {
+          "id": "PRICE-3489",
+          "spaceId": "moriyama-large",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekend_holiday",
+          "timeBand": "09:00-17:00",
+          "amount": 2800,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "大アリーナ全面・市内・入場料等を徴収しない場合・土日祝日・午前9時〜午後5時・1時間につき",
+          "validFrom": null,
+          "exclusions": "冷暖房別（大アリーナ全面 冷房8,900円/時・暖房13,700円/時）。市外は倍額。追加照明は別途実費。規定時間外は1時間につき1,000円加算",
+          "note": "指定管理者（守山市文化体育振興事業団）公式ページ掲載の2026年4月改定料金。「1時間につき」と明記。9:00-17:00と17:00-22:00で単価が異なる。基本照明代を含む",
+          "sourceUrl": "https://www.moriyama-s-p.com/sisetu/roomA/"
+        },
+        {
+          "id": "PRICE-3490",
+          "spaceId": "moriyama-large",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekend_holiday",
+          "timeBand": "17:00-22:00",
+          "amount": 4900,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "大アリーナ全面・市内・入場料等を徴収しない場合・土日祝日・午後5時〜午後10時・1時間につき",
+          "validFrom": null,
+          "exclusions": "冷暖房別（大アリーナ全面 冷房8,900円/時・暖房13,700円/時）。市外は倍額。追加照明は別途実費。規定時間外は1時間につき1,000円加算",
+          "note": "指定管理者（守山市文化体育振興事業団）公式ページ掲載の2026年4月改定料金。「1時間につき」と明記。9:00-17:00と17:00-22:00で単価が異なる。基本照明代を含む",
+          "sourceUrl": "https://www.moriyama-s-p.com/sisetu/roomA/"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-159",
+          "spaceId": "moriyama-large",
+          "label": "大アリーナ全面・市内・入場料なし・平日・09:00-22:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekday",
+          "timeSpan": "09:00-22:00",
+          "amount": 31700,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3487",
+            "PRICE-3488"
+          ],
+          "componentQuantities": [
+            8,
+            5
+          ],
+          "validFrom": null,
+          "exclusions": "冷暖房別（大アリーナ全面 冷房8,900円/時・暖房13,700円/時）。市外は倍額。追加照明は別途実費。規定時間外は1時間につき1,000円加算",
+          "note": "指定管理者（守山市文化体育振興事業団）公式ページ掲載の2026年4月改定料金。「1時間につき」と明記。9:00-17:00と17:00-22:00で単価が異なる。基本照明代を含む。9-17時の8時間と17-22時の5時間を積み上げた目安",
+          "sourceUrl": "https://www.moriyama-s-p.com/sisetu/roomA/"
+        },
+        {
+          "id": "SCENARIO-160",
+          "spaceId": "moriyama-large",
+          "label": "大アリーナ全面・市内・入場料なし・土日祝日・09:00-22:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekend_holiday",
+          "timeSpan": "09:00-22:00",
+          "amount": 46900,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3489",
+            "PRICE-3490"
+          ],
+          "componentQuantities": [
+            8,
+            5
+          ],
+          "validFrom": null,
+          "exclusions": "冷暖房別（大アリーナ全面 冷房8,900円/時・暖房13,700円/時）。市外は倍額。追加照明は別途実費。規定時間外は1時間につき1,000円加算",
+          "note": "指定管理者（守山市文化体育振興事業団）公式ページ掲載の2026年4月改定料金。「1時間につき」と明記。9:00-17:00と17:00-22:00で単価が異なる。基本照明代を含む。9-17時の8時間と17-22時の5時間を積み上げた目安",
+          "sourceUrl": "https://www.moriyama-s-p.com/sisetu/roomA/"
+        }
+      ],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "moriyama-large",
+          "name": "大アリーナ",
+          "type": "arena",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": 1000,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.moriyama-s-p.com/sisetu/roomA/",
+          "observedAt": "2026-08-10",
+          "note": "2階固定観客席約1,000席（車椅子席含む）。全面/半面で貸出"
+        }
+      ],
+      "bestSpace": {
+        "id": "moriyama-large",
+        "name": "大アリーナ",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1211",
+      "region": "近畿",
+      "prefecture": "滋賀県",
+      "city": "東近江市",
+      "name": "東近江市総合運動公園布引体育館",
+      "category": "arena_and_meetings",
+      "fitLevel": "B",
+      "strengths": "指定管理者公式ページは大アリーナの2階固定観覧席438席・1階移動観覧席500席・2階ランニングロード約180mと現行の1時間料金、営業時間午前9時〜午後10時を掲載。2026年4月1日改定",
+      "cautions": "大アリーナの面積は今回参照したページでは確認できず未記録。掲載額は1面（バスケットボールコート1面分）で、全面（2面）は2倍。冷房期間6月1日〜9月30日は単価が上がる",
+      "sourceUrl": "https://shisetsu.mizuno.jp/m-7306/guide",
+      "websiteUrl": "https://shisetsu.mizuno.jp/",
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 2,
+      "priceCount": 4,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": 438,
+      "maxArea": null,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 0,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [
+        {
+          "id": "PRICE-3491",
+          "spaceId": "higashiomi-large",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "weekday",
+          "timeBand": "09:00-22:00",
+          "amount": 3000,
+          "taxStatus": "included",
+          "unit": "per_hour",
+          "basis": "大アリーナ全面（2面）・市内・10月1日〜5月31日・1時間（1面1500円の2倍）",
+          "validFrom": null,
+          "exclusions": "空調料金別（大アリーナ4,000円、減免適用なし）。市外は約2倍。照明料は不明",
+          "note": "指定管理者公式ページ掲載の2026年4月1日改定料金。掲載額は1面（バスケットボールコート1面分）で全面（2面）は2倍。営業時間は午前9時〜午後10時（13時間）。冷房期間6月1日〜9月30日は単価が上がる",
+          "sourceUrl": "https://shisetsu.mizuno.jp/m-7306/guide"
+        },
+        {
+          "id": "PRICE-3492",
+          "spaceId": "higashiomi-large",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "weekday",
+          "timeBand": "09:00-22:00",
+          "amount": 7000,
+          "taxStatus": "included",
+          "unit": "per_hour",
+          "basis": "大アリーナ全面（2面）・市内・6月1日〜9月30日（夏季冷房期間）・1時間（1面3500円の2倍）",
+          "validFrom": null,
+          "exclusions": "空調料金別（大アリーナ4,000円、減免適用なし）。市外は約2倍。照明料は不明",
+          "note": "指定管理者公式ページ掲載の2026年4月1日改定料金。掲載額は1面（バスケットボールコート1面分）で全面（2面）は2倍。営業時間は午前9時〜午後10時（13時間）。冷房期間6月1日〜9月30日は単価が上がる",
+          "sourceUrl": "https://shisetsu.mizuno.jp/m-7306/guide"
+        },
+        {
+          "id": "PRICE-3493",
+          "spaceId": "higashiomi-large",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "weekend_holiday",
+          "timeBand": "09:00-22:00",
+          "amount": 4000,
+          "taxStatus": "included",
+          "unit": "per_hour",
+          "basis": "大アリーナ全面（2面）・市内・10月1日〜5月31日・1時間（1面2000円の2倍）",
+          "validFrom": null,
+          "exclusions": "空調料金別（大アリーナ4,000円、減免適用なし）。市外は約2倍。照明料は不明",
+          "note": "指定管理者公式ページ掲載の2026年4月1日改定料金。掲載額は1面（バスケットボールコート1面分）で全面（2面）は2倍。営業時間は午前9時〜午後10時（13時間）。冷房期間6月1日〜9月30日は単価が上がる",
+          "sourceUrl": "https://shisetsu.mizuno.jp/m-7306/guide"
+        },
+        {
+          "id": "PRICE-3494",
+          "spaceId": "higashiomi-large",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "weekend_holiday",
+          "timeBand": "09:00-22:00",
+          "amount": 8000,
+          "taxStatus": "included",
+          "unit": "per_hour",
+          "basis": "大アリーナ全面（2面）・市内・6月1日〜9月30日（夏季冷房期間）・1時間（1面4000円の2倍）",
+          "validFrom": null,
+          "exclusions": "空調料金別（大アリーナ4,000円、減免適用なし）。市外は約2倍。照明料は不明",
+          "note": "指定管理者公式ページ掲載の2026年4月1日改定料金。掲載額は1面（バスケットボールコート1面分）で全面（2面）は2倍。営業時間は午前9時〜午後10時（13時間）。冷房期間6月1日〜9月30日は単価が上がる",
+          "sourceUrl": "https://shisetsu.mizuno.jp/m-7306/guide"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-161",
+          "spaceId": "higashiomi-large",
+          "label": "大アリーナ全面・市内・10月1日〜5月31日・平日・冬春秋・09:00-22:00",
+          "useCase": "amateur_sports",
+          "dayType": "weekday",
+          "timeSpan": "09:00-22:00",
+          "amount": 39000,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3491"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "空調料金別（大アリーナ4,000円、減免適用なし）。市外は約2倍。照明料は不明",
+          "note": "指定管理者公式ページ掲載の2026年4月1日改定料金。掲載額は1面（バスケットボールコート1面分）で全面（2面）は2倍。営業時間は午前9時〜午後10時（13時間）。冷房期間6月1日〜9月30日は単価が上がる。実際の予約時間で変動する目安",
+          "sourceUrl": "https://shisetsu.mizuno.jp/m-7306/guide"
+        },
+        {
+          "id": "SCENARIO-162",
+          "spaceId": "higashiomi-large",
+          "label": "大アリーナ全面・市内・6月1日〜9月30日（夏季冷房期間）・平日・夏季・09:00-22:00",
+          "useCase": "amateur_sports",
+          "dayType": "weekday",
+          "timeSpan": "09:00-22:00",
+          "amount": 91000,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3492"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "空調料金別（大アリーナ4,000円、減免適用なし）。市外は約2倍。照明料は不明",
+          "note": "指定管理者公式ページ掲載の2026年4月1日改定料金。掲載額は1面（バスケットボールコート1面分）で全面（2面）は2倍。営業時間は午前9時〜午後10時（13時間）。冷房期間6月1日〜9月30日は単価が上がる。実際の予約時間で変動する目安",
+          "sourceUrl": "https://shisetsu.mizuno.jp/m-7306/guide"
+        },
+        {
+          "id": "SCENARIO-163",
+          "spaceId": "higashiomi-large",
+          "label": "大アリーナ全面・市内・10月1日〜5月31日・休日・冬春秋・09:00-22:00",
+          "useCase": "amateur_sports",
+          "dayType": "weekend_holiday",
+          "timeSpan": "09:00-22:00",
+          "amount": 52000,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3493"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "空調料金別（大アリーナ4,000円、減免適用なし）。市外は約2倍。照明料は不明",
+          "note": "指定管理者公式ページ掲載の2026年4月1日改定料金。掲載額は1面（バスケットボールコート1面分）で全面（2面）は2倍。営業時間は午前9時〜午後10時（13時間）。冷房期間6月1日〜9月30日は単価が上がる。実際の予約時間で変動する目安",
+          "sourceUrl": "https://shisetsu.mizuno.jp/m-7306/guide"
+        },
+        {
+          "id": "SCENARIO-164",
+          "spaceId": "higashiomi-large",
+          "label": "大アリーナ全面・市内・6月1日〜9月30日（夏季冷房期間）・休日・夏季・09:00-22:00",
+          "useCase": "amateur_sports",
+          "dayType": "weekend_holiday",
+          "timeSpan": "09:00-22:00",
+          "amount": 104000,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3494"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "空調料金別（大アリーナ4,000円、減免適用なし）。市外は約2倍。照明料は不明",
+          "note": "指定管理者公式ページ掲載の2026年4月1日改定料金。掲載額は1面（バスケットボールコート1面分）で全面（2面）は2倍。営業時間は午前9時〜午後10時（13時間）。冷房期間6月1日〜9月30日は単価が上がる。実際の予約時間で変動する目安",
+          "sourceUrl": "https://shisetsu.mizuno.jp/m-7306/guide"
+        }
+      ],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "higashiomi-large",
+          "name": "大アリーナ",
+          "type": "arena",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": 438,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://shisetsu.mizuno.jp/m-7306/guide",
+          "observedAt": "2026-08-10",
+          "note": "2階固定観覧席438席・1階移動観覧席500席。1面＝バスケットボールコート1面分で全面は2面"
+        },
+        {
+          "id": "higashiomi-small",
+          "name": "小アリーナ",
+          "type": "arena",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://shisetsu.mizuno.jp/m-7306/guide",
+          "observedAt": "2026-08-10",
+          "note": null
+        }
+      ],
+      "bestSpace": {
+        "id": "higashiomi-large",
         "name": "大アリーナ",
         "type": "arena"
       }

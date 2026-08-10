@@ -7794,3 +7794,7 @@ DETAIL-7793,CAND-1207,kurobe-main,メインアリーナ,arena,2280,,,unknown,unk
 DETAIL-7794,CAND-1207,kurobe-sub,サブアリーナ,arena,,,,unknown,unknown,,,,two_way,none,yes,unknown,https://www.kurobe-sports.jp/kurobe/facilities/guide/center.html,2026-08-10,verified,
 DETAIL-7795,CAND-1208,toyama-seibu-large,大アリーナ,arena,2000,,,unknown,unknown,,2604,,three_way,none,yes,unknown,https://www.sportsnet.pref.toyama.jp/facilities/gymnasium/000691.html,2026-08-10,verified,"50m×40m・観客席2,604席"
 DETAIL-7796,CAND-1208,toyama-seibu-mid,中アリーナ,arena,,,,unknown,unknown,,,,two_way,none,yes,unknown,https://www.sportsnet.pref.toyama.jp/member/seibu/fee.html,2026-08-10,verified,
+DETAIL-7797,CAND-1209,yasu-large,大アリーナ,arena,,,,unknown,unknown,,1216,,four_way,none,yes,unknown,https://yasu-bs.jp/gymnasium/,2026-08-10,verified,"観客席2,186席（固定席1,216席・移動席970席）。全面/2分の1/3分の1/4分の1で貸出"
+DETAIL-7798,CAND-1210,moriyama-large,大アリーナ,arena,,,,unknown,unknown,,1000,,two_way,none,yes,unknown,https://www.moriyama-s-p.com/sisetu/roomA/,2026-08-10,verified,"2階固定観客席約1,000席（車椅子席含む）。全面/半面で貸出"
+DETAIL-7799,CAND-1211,higashiomi-large,大アリーナ,arena,,,,unknown,unknown,,438,,two_way,none,yes,unknown,https://shisetsu.mizuno.jp/m-7306/guide,2026-08-10,verified,2階固定観覧席438席・1階移動観覧席500席。1面＝バスケットボールコート1面分で全面は2面
+DETAIL-7800,CAND-1211,higashiomi-small,小アリーナ,arena,,,,unknown,unknown,,,,unknown,none,yes,unknown,https://shisetsu.mizuno.jp/m-7306/guide,2026-08-10,verified,
