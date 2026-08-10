@@ -5,9 +5,9 @@ export const venueData = {
     "historical": 225,
     "venues": 1177,
     "details": 7734,
-    "prices": 3364,
+    "prices": 3369,
     "operations": 221,
-    "budgetScenarios": 117,
+    "budgetScenarios": 119,
     "candidateCoverage": {
       "area": 605,
       "capacity": 910,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 12027,
-      "venueObservationCount": 11436,
+      "observationCount": 12034,
+      "venueObservationCount": 11443,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -214368,9 +214368,9 @@ export const venueData = {
       "sourceUrl": "https://www.compalhall.jp/sisetu/",
       "websiteUrl": "https://www.compalhall.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-08",
+      "observedAt": "2026-08-10",
       "detailCount": 9,
-      "priceCount": 0,
+      "priceCount": 5,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -214385,9 +214385,133 @@ export const venueData = {
       "hasFixedStage": true,
       "practiceUse": "yes",
       "streamingReady": "unknown",
-      "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "minDailyFacilityPrice": 13740,
+      "priceObservations": [
+        {
+          "id": "PRICE-3372",
+          "spaceId": "compal-cultural-hall",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 91260,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "文化ホール（ホワイエ及び楽屋つき）・全日9時〜22時",
+          "validFrom": null,
+          "exclusions": "設備器具利用料金別・駐車場別。文化ホールのリハーサル/準備は5割",
+          "note": "コンパルホール公式の利用料金表PDF（2026年4月1日）。料金表は空調使用料を含んだ金額。全日は9時〜22時。午前+午後+夜間=全日で一致（文化ホール20,280+30,410+40,560=91,250、表示91,260は10円未満の端数処理）。開館時間9時〜22時（受付9時〜17時）",
+          "sourceUrl": "https://www.compalhall.jp/wp-content/uploads/2026/04/b772d37d86c0875041b80d93854b7643.pdf"
+        },
+        {
+          "id": "PRICE-3373",
+          "spaceId": "compal-multipurpose",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 79950,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "多目的ホール・全日9時〜22時",
+          "validFrom": null,
+          "exclusions": "設備器具利用料金別・駐車場別。文化ホールのリハーサル/準備は5割",
+          "note": "コンパルホール公式の利用料金表PDF（2026年4月1日）。料金表は空調使用料を含んだ金額。全日は9時〜22時。午前+午後+夜間=全日で一致（文化ホール20,280+30,410+40,560=91,250、表示91,260は10円未満の端数処理）。開館時間9時〜22時（受付9時〜17時）",
+          "sourceUrl": "https://www.compalhall.jp/wp-content/uploads/2026/04/b772d37d86c0875041b80d93854b7643.pdf"
+        },
+        {
+          "id": "PRICE-3374",
+          "spaceId": "compal-cultural-foyer",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 13740,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "ホワイエ・全日9時〜22時",
+          "validFrom": null,
+          "exclusions": "設備器具利用料金別・駐車場別。文化ホールのリハーサル/準備は5割",
+          "note": "コンパルホール公式の利用料金表PDF（2026年4月1日）。料金表は空調使用料を含んだ金額。全日は9時〜22時。午前+午後+夜間=全日で一致（文化ホール20,280+30,410+40,560=91,250、表示91,260は10円未満の端数処理）。開館時間9時〜22時（受付9時〜17時）",
+          "sourceUrl": "https://www.compalhall.jp/wp-content/uploads/2026/04/b772d37d86c0875041b80d93854b7643.pdf"
+        },
+        {
+          "id": "PRICE-3375",
+          "spaceId": "compal-gymnasium",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 7000,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "体育室・専用使用・フロアの全部・一般・1時間（空調照明込み）",
+          "validFrom": null,
+          "exclusions": "高校生等は一般の半額。個人使用は別料金",
+          "note": "コンパルホール公式の利用料金表PDF（2026年4月1日）。5階スポーツ施設の金額は空調使用料・照明使用料を含む。施設は体育室の日額を公表していないため、開館時間9時〜22時（13時間）で換算",
+          "sourceUrl": "https://www.compalhall.jp/wp-content/uploads/2026/04/b772d37d86c0875041b80d93854b7643.pdf"
+        },
+        {
+          "id": "PRICE-3376",
+          "spaceId": "compal-gymnasium",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 19270,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "体育室・専用使用・スポーツ以外（全面）・一般・1時間（空調照明込み）",
+          "validFrom": null,
+          "exclusions": "高校生等は一般の半額。個人使用は別料金",
+          "note": "コンパルホール公式の利用料金表PDF（2026年4月1日）。5階スポーツ施設の金額は空調使用料・照明使用料を含む。施設は体育室の日額を公表していないため、開館時間9時〜22時（13時間）で換算",
+          "sourceUrl": "https://www.compalhall.jp/wp-content/uploads/2026/04/b772d37d86c0875041b80d93854b7643.pdf"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-119",
+          "spaceId": "compal-gymnasium",
+          "label": "体育室・専用使用・フロア全部・一般・09:00-22:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 91000,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3375"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "高校生等は一般の半額。個人使用は別料金",
+          "note": "コンパルホール公式の利用料金表PDF（2026年4月1日）。5階スポーツ施設の金額は空調使用料・照明使用料を含む。施設は体育室の日額を公表していないため、開館時間9時〜22時（13時間）で換算。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.compalhall.jp/wp-content/uploads/2026/04/b772d37d86c0875041b80d93854b7643.pdf"
+        },
+        {
+          "id": "SCENARIO-120",
+          "spaceId": "compal-gymnasium",
+          "label": "体育室・専用使用・スポーツ以外（全面）・一般・09:00-22:00",
+          "useCase": "all",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 250510,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3376"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "高校生等は一般の半額。個人使用は別料金",
+          "note": "コンパルホール公式の利用料金表PDF（2026年4月1日）。5階スポーツ施設の金額は空調使用料・照明使用料を含む。施設は体育室の日額を公表していないため、開館時間9時〜22時（13時間）で換算。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.compalhall.jp/wp-content/uploads/2026/04/b772d37d86c0875041b80d93854b7643.pdf"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
