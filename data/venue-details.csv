@@ -7750,3 +7750,9 @@ DETAIL-7749,CAND-1183,isesaki-main,大体育室,arena,1063,,,unknown,unknown,,,,
 DETAIL-7750,CAND-1183,isesaki-small,小体育室,arena,,,,unknown,unknown,,,,unknown,none,yes,unknown,https://www.city.isesaki.lg.jp/material/files/group/34/kezoujikouenundousiseturiyouryoukinhyou.pdf,2026-08-10,verified,柔道場・剣道場と同額
 DETAIL-7751,CAND-1184,kiryu-main,メインアリーナ,arena,,,,unknown,unknown,,1000,,none,none,yes,unknown,https://www.kiryu-sports.jp/gallery/sport_facility12/,2026-08-10,verified,"観客席1,000席（うち車椅子席12席）。バレーボール3面・バスケットボール2面・バドミントン10面。全面料金のみ掲載"
 DETAIL-7752,CAND-1184,kiryu-sub,サブアリーナ,arena,,,,unknown,unknown,,,,unknown,none,yes,unknown,https://www.kiryu-sports.jp/gallery/sport_facility12/,2026-08-10,verified,バレーボール1面・バスケットボール1面・バドミントン4面
+DETAIL-7753,CAND-1185,tokorozawa-main,メインアリーナ,arena,,,,unknown,unknown,,,,four_way,none,yes,unknown,https://www.city.tokorozawa.saitama.jp/shisetu/sportskoen/sports/simintaiikukan/siseturiyoryo.html,2026-08-10,verified,全面はバドミントン16面。2分の1・3分の1・4分の1・16分の1で分割貸出
+DETAIL-7754,CAND-1186,fukaya-main,メインアリーナ,arena,,,,unknown,unknown,,1508,,three_way,none,yes,unknown,https://fukaya-connect.com/bigturtle/facility/main-arena/,2026-08-10,verified,"観客席3,030席（1階移動席1,512・2階固定席1,508・車椅子席10）"
+DETAIL-7755,CAND-1186,fukaya-sub,サブアリーナ,arena,,,,unknown,unknown,,,,unknown,none,yes,unknown,https://fukaya-connect.com/bigturtle/wp-content/uploads/Arena_Fee_Table.pdf,2026-08-10,verified,
+DETAIL-7756,CAND-1186,fukaya-dojo,武道場,dojo,,,,unknown,unknown,,,,two_way,none,yes,unknown,https://fukaya-connect.com/bigturtle/wp-content/uploads/Arena_Fee_Table.pdf,2026-08-10,verified,
+DETAIL-7757,CAND-1187,kuki-main,メインアリーナ,arena,,,,unknown,unknown,,,,three_way,none,yes,unknown,https://www.city.kuki.lg.jp/shisei/shisetsu/sports/1006631.html,2026-08-10,verified,全面/1・3面/1・4面/1・12面で分割貸出
+DETAIL-7758,CAND-1187,kuki-dojo,武道場,dojo,,,,unknown,unknown,,,,two_way,none,yes,unknown,https://www.city.kuki.lg.jp/shisei/shisetsu/sports/1006631.html,2026-08-10,verified,
