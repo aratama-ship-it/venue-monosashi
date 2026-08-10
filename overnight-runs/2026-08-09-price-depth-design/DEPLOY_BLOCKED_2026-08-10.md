@@ -62,3 +62,64 @@ curl -s "https://venue.art-monosashi.com${ASSET}" | grep -c "hourly_rate_times_p
 - Wave 2（岩手・舞台型5施設）、Wave 3（長崎・両型4施設）、Wave 4（青森）、Wave 5（時間換算13施設）
 - 参考日額の3系統化（公式日額／区分合計／時間単価×利用可能時間）とUIの出し分け
 - day_type 不整合の解消（**土日祝フィルタで日額が出る施設 144→161**）
+
+---
+
+# 追記（2026-08-10 午後）: Version 209は反映済み。今度は別の理由で止まった
+
+## 前段の問題は解決していた
+
+上に書いた「Version 209 の保存まで完了、本番反映だけが未実行」は、その後どこかで反映された。
+本日確認した時点で両URLとも `venue-search-F0zefSKm.js` を配信しており、この中に
+`hourly_rate_times_published_hours` が含まれる（＝Version 209相当の内容が公開済み）。
+
+## 今回の状況
+
+本日の収録（体育館候補45件の追加ほか）を反映しようとして、**バージョン保存の段階で止まった。**
+
+```
+デプロイ対象コミット: e03d52aab4429c5f585a8a3d48400d751eb65970
+sites/main:          push成功（58d4411..e03d52a、fast-forward）
+version_number:      211
+version_id:          appgprj_6a6aca3c3c58819194cb69eaf321290b~appgver_d2b74f9b6f108191b609b7364914f6c0
+file_count:          null   ← 209のときは 49 だった
+archive_storage:     null
+保存API応答:          Action completed.（isError: false、エラー文なし）
+```
+
+**保存APIは成功を返すのに、アーカイブ情報が保持されていない。** その状態で
+`deploy_site_version` を呼ぶと次で失敗する。
+
+```
+deployment_id: appgdep_6a794d26686c8191990a245af1ae6706
+エラー:        We couldn't fetch the saved Site source. Retry publishing the Site.
+```
+
+保存からやり直しても `archive_storage: null` は変わらなかった（2回試行して打ち切り）。
+Codex側でローカルに作ったアーカイブには65エントリあったので、**送信側ではなく保存先の問題**に見える。
+
+## 現在の公開状態
+
+両URLとも HTTP 200 で **Version 209相当を配信中**。本日追加した45施設は未反映。
+
+- https://venue.art-monosashi.com/ → `venue-search-F0zefSKm.js`
+- https://venue-monosashi.juggler-arata.chatgpt.site/ → 同上
+
+## 反映済みかどうかの判定（今回版）
+
+```bash
+curl -s https://venue.art-monosashi.com/ | grep -o 'venue-search-[A-Za-z0-9_-]*\.js'
+# venue-search-BznAbPnU.js なら本日分が反映済み
+# venue-search-F0zefSKm.js なら未反映
+```
+
+念のための内容確認（新版にしか無い文字列）:
+
+```bash
+curl -s https://venue.art-monosashi.com/assets/venue-search-BznAbPnU.js | grep -c 'マルワ'
+```
+
+## 次にやること
+
+データ側は commit e03d52a まで origin と sites の両方にpush済みなので、**再ビルドもre-pushも不要。**
+保存先の問題が解消したら、バージョン保存（file_count が null でないことを確認）→ deploy だけでよい。
