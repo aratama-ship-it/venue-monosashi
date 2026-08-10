@@ -7742,3 +7742,11 @@ DETAIL-7741,CAND-1181,tochigi-maruwa-main,メイン競技場,arena,,,,unknown,un
 DETAIL-7742,CAND-1181,tochigi-maruwa-sub,サブ競技場,arena,,,,unknown,unknown,,,,two_way,none,yes,unknown,https://tochigi-park.com/gymnasium/,2026-08-10,verified,全面/半面で貸出
 DETAIL-7743,CAND-1181,tochigi-maruwa-judo,柔道場,dojo,,,,unknown,unknown,,,,unknown,none,yes,unknown,https://tochigi-park.com/gymnasium/,2026-08-10,verified,
 DETAIL-7744,CAND-1181,tochigi-maruwa-kendo,剣道場,dojo,,,,unknown,unknown,,,,unknown,none,yes,unknown,https://tochigi-park.com/gymnasium/,2026-08-10,verified,
+DETAIL-7745,CAND-1182,maebashi-main,主競技場,arena,2013.9,,,unknown,unknown,,2205,,two_way,none,yes,unknown,https://shimintaiiku.maebashi-cc.or.jp/gaiyo,2026-08-10,verified,"2・3F固定椅子席2,205名。1Fフロア1,280名・立見1,008名"
+DETAIL-7746,CAND-1182,maebashi-sub,副競技場,arena,1051.2,,,unknown,unknown,,,,two_way,none,yes,unknown,https://shimintaiiku.maebashi-cc.or.jp/gaiyo,2026-08-10,verified,
+DETAIL-7747,CAND-1182,maebashi-judo,柔道場,dojo,625.9,,,unknown,unknown,,,,unknown,none,yes,unknown,https://shimintaiiku.maebashi-cc.or.jp/gaiyo,2026-08-10,verified,
+DETAIL-7748,CAND-1182,maebashi-kendo,剣道場,dojo,637.4,,,unknown,unknown,,,,unknown,none,yes,unknown,https://shimintaiiku.maebashi-cc.or.jp/gaiyo,2026-08-10,verified,
+DETAIL-7749,CAND-1183,isesaki-main,大体育室,arena,1063,,,unknown,unknown,,,,three_way,none,yes,unknown,https://www.city.isesaki.lg.jp/material/files/group/34/kezoujikouenundousiseturiyouryoukinhyou.pdf,2026-08-10,verified,3分の2または3分の1の部分利用は入場料を徴収しないスポーツ行事のみ
+DETAIL-7750,CAND-1183,isesaki-small,小体育室,arena,,,,unknown,unknown,,,,unknown,none,yes,unknown,https://www.city.isesaki.lg.jp/material/files/group/34/kezoujikouenundousiseturiyouryoukinhyou.pdf,2026-08-10,verified,柔道場・剣道場と同額
+DETAIL-7751,CAND-1184,kiryu-main,メインアリーナ,arena,,,,unknown,unknown,,1000,,none,none,yes,unknown,https://www.kiryu-sports.jp/gallery/sport_facility12/,2026-08-10,verified,"観客席1,000席（うち車椅子席12席）。バレーボール3面・バスケットボール2面・バドミントン10面。全面料金のみ掲載"
+DETAIL-7752,CAND-1184,kiryu-sub,サブアリーナ,arena,,,,unknown,unknown,,,,unknown,none,yes,unknown,https://www.kiryu-sports.jp/gallery/sport_facility12/,2026-08-10,verified,バレーボール1面・バスケットボール1面・バドミントン4面

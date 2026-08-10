@@ -15,7 +15,6 @@ prefecture,region,stage_venues,stage_priced,stage_gap,stage_reachable,sports_ven
 高知県,四国,18,4,1,yes,3,2,3,needs_new_candidates
 熊本県,九州,20,4,1,yes,7,2,3,yes
 山形県,東北,21,4,1,yes,3,2,3,needs_new_candidates
-群馬県,関東,23,4,1,yes,2,2,3,needs_new_candidates
 石川県,北陸,21,4,1,yes,6,2,3,yes
 滋賀県,近畿,22,4,1,yes,3,2,3,needs_new_candidates
 京都府,近畿,19,3,2,yes,4,3,2,needs_new_candidates
@@ -40,6 +39,7 @@ prefecture,region,stage_venues,stage_priced,stage_gap,stage_reachable,sports_ven
 宮崎県,九州,20,6,0,met,5,3,2,yes
 宮城県,東北,21,9,0,met,8,4,1,yes
 大分県,九州,20,5,0,met,6,4,1,yes
+群馬県,関東,23,4,1,yes,5,5,0,met
 佐賀県,九州,20,4,1,yes,10,5,0,met
 北海道,北海道,21,5,0,met,8,7,0,met
 東京都,関東,20,6,0,met,9,6,0,met
