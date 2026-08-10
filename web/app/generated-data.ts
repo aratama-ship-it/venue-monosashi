@@ -3,14 +3,14 @@
 export const venueData = {
   "stats": {
     "historical": 225,
-    "venues": 1204,
-    "details": 7790,
-    "prices": 3455,
+    "venues": 1207,
+    "details": 7795,
+    "prices": 3461,
     "operations": 221,
-    "budgetScenarios": 153,
+    "budgetScenarios": 156,
     "candidateCoverage": {
-      "area": 621,
-      "capacity": 929,
+      "area": 623,
+      "capacity": 930,
       "ceiling": 112
     },
     "spaceCoverage": {
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 12210,
-      "venueObservationCount": 11619,
+      "observationCount": 12224,
+      "venueObservationCount": 11633,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -244934,6 +244934,381 @@ export const venueData = {
       "bestSpace": {
         "id": "gero-arena",
         "name": "温アリーナ",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1206",
+      "region": "中部",
+      "prefecture": "富山県",
+      "city": "高岡市",
+      "name": "高岡市民体育館（東洋通信スポーツセンター）",
+      "category": "arena_and_meetings",
+      "fitLevel": "B",
+      "strengths": "高岡市公式の現行料金表PDF（令和元年10月1日以降）は全面の午前9時〜正午・正午〜午後5時・午後5時〜午後9時・午前9時〜午後9時（全日）の額を掲載。利用時間は午前9時から午後9時まで",
+      "cautions": "アリーナの面積・席数は今回参照したPDFでは確認できず未記録。面分割料金の記載なし。冷暖房料の記載なし。築60年以上で市の配置計画では代替体育館整備を検討中",
+      "sourceUrl": "https://www.city.takaoka.toyama.jp/soshiki/kyoikuiinkai_shogaigakushu_sportska/2/1/2/6/3235.html",
+      "websiteUrl": null,
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 1,
+      "priceCount": 3,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": null,
+      "maxArea": null,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 0,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": 22270,
+      "priceObservations": [
+        {
+          "id": "PRICE-3479",
+          "spaceId": "takaoka-arena",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "09:00-21:00",
+          "amount": 22270,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "アリーナ全面・全日午前9時〜午後9時・営利を目的としない・スポーツ・入場無料",
+          "validFrom": null,
+          "exclusions": "照明別（2回路まで2,470円/時・追加1回路820円）。冷暖房料の記載なし。時間外は1時間4,020円（入場無料の場合）",
+          "note": "高岡市公式の現行料金表PDF（令和元年10月1日以降）。全日は午前9時から午後9時までの欄。区分合計（5,770+8,250+10,720=24,740円）より全日22,270円が割安",
+          "sourceUrl": "https://www.city.takaoka.toyama.jp/material/files/group/61/01-toyosportcenter.pdf"
+        },
+        {
+          "id": "PRICE-3480",
+          "spaceId": "takaoka-arena",
+          "category": "facility",
+          "useCase": "amateur_sports_admission",
+          "dayType": "all",
+          "timeBand": "09:00-21:00",
+          "amount": 36300,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "アリーナ全面・全日午前9時〜午後9時・営利を目的としない・スポーツ・入場有料",
+          "validFrom": null,
+          "exclusions": "照明別（2回路まで2,470円/時・追加1回路820円）。冷暖房料の記載なし。時間外は1時間4,020円（入場無料の場合）",
+          "note": "高岡市公式の現行料金表PDF（令和元年10月1日以降）。全日は午前9時から午後9時までの欄。区分合計（5,770+8,250+10,720=24,740円）より全日22,270円が割安",
+          "sourceUrl": "https://www.city.takaoka.toyama.jp/material/files/group/61/01-toyosportcenter.pdf"
+        },
+        {
+          "id": "PRICE-3481",
+          "spaceId": "takaoka-arena",
+          "category": "facility",
+          "useCase": "commercial",
+          "dayType": "all",
+          "timeBand": "09:00-21:00",
+          "amount": 330000,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "アリーナ全面・全日午前9時〜午後9時・営利を目的とする場合",
+          "validFrom": null,
+          "exclusions": "照明別（2回路まで2,470円/時・追加1回路820円）。冷暖房料の記載なし。時間外は1時間4,020円（入場無料の場合）",
+          "note": "高岡市公式の現行料金表PDF（令和元年10月1日以降）。全日は午前9時から午後9時までの欄。区分合計（5,770+8,250+10,720=24,740円）より全日22,270円が割安",
+          "sourceUrl": "https://www.city.takaoka.toyama.jp/material/files/group/61/01-toyosportcenter.pdf"
+        }
+      ],
+      "budgetScenarios": [],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "takaoka-arena",
+          "name": "アリーナ",
+          "type": "arena",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.takaoka.toyama.jp/material/files/group/61/01-toyosportcenter.pdf",
+          "observedAt": "2026-08-10",
+          "note": "全面のみの料金掲載で面分割料金の記載なし"
+        }
+      ],
+      "bestSpace": {
+        "id": "takaoka-arena",
+        "name": "アリーナ",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1207",
+      "region": "中部",
+      "prefecture": "富山県",
+      "city": "黒部市",
+      "name": "黒部市総合体育センター",
+      "category": "arena_and_meetings",
+      "fitLevel": "B",
+      "strengths": "指定管理者系公式サイトはメインアリーナ約2,280㎡と現行の1時間単価を掲載。利用時間はメインアリーナが9:00〜21:30（日曜休日は9:00〜17:00）。8時間以上利用する場合の利用料金は100分の90",
+      "cautions": "天井高・席数・床荷重・搬入寸法は要確認。専用利用は原則5人以上の団体に限る。大会当日以外の準備撤去日は100分の70",
+      "sourceUrl": "https://www.kurobe-sports.jp/kurobe/facilities/guide/center.html",
+      "websiteUrl": "https://www.kurobe-sports.jp/",
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 2,
+      "priceCount": 2,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": null,
+      "maxArea": 2280,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 0,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [
+        {
+          "id": "PRICE-3482",
+          "spaceId": "kurobe-main",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "09:00-21:30",
+          "amount": 2300,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "メインアリーナ・アマチュアスポーツ・大会・無料・利用時間内における1時間当たり",
+          "validFrom": null,
+          "exclusions": "照明別（1,500ルクス1,030円/時・1,000ルクス830円/時）・冷暖房別（5,230円/時）。専用利用は原則5人以上の団体に限る。大会当日以外の準備撤去日は100分の70",
+          "note": "指定管理者系公式サイト掲載の現行利用料金。施設は日額を公表していない。メインアリーナの利用時間は9:00〜21:30（12.5時間）。「8時間以上利用する場合の利用料金は100分の90」の規定を反映し、12.5時間×90%＝11.25時間相当で換算した",
+          "sourceUrl": "https://www.kurobe-sports.jp/kurobe/facilities/guide/center.html"
+        },
+        {
+          "id": "PRICE-3483",
+          "spaceId": "kurobe-main",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "09:00-21:30",
+          "amount": 1150,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "メインアリーナ・アマチュアスポーツ・練習・全面・利用時間内における1時間当たり",
+          "validFrom": null,
+          "exclusions": "照明別（1,500ルクス1,030円/時・1,000ルクス830円/時）・冷暖房別（5,230円/時）。専用利用は原則5人以上の団体に限る。大会当日以外の準備撤去日は100分の70",
+          "note": "指定管理者系公式サイト掲載の現行利用料金。施設は日額を公表していない。メインアリーナの利用時間は9:00〜21:30（12.5時間）。「8時間以上利用する場合の利用料金は100分の90」の規定を反映し、12.5時間×90%＝11.25時間相当で換算した",
+          "sourceUrl": "https://www.kurobe-sports.jp/kurobe/facilities/guide/center.html"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-155",
+          "spaceId": "kurobe-main",
+          "label": "メインアリーナ・アマチュアスポーツ・大会・無料・09:00-21:30（8時間以上90%適用）",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "09:00-21:30",
+          "amount": 25875,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3482"
+          ],
+          "componentQuantities": [
+            11.25
+          ],
+          "validFrom": null,
+          "exclusions": "照明別（1,500ルクス1,030円/時・1,000ルクス830円/時）・冷暖房別（5,230円/時）。専用利用は原則5人以上の団体に限る。大会当日以外の準備撤去日は100分の70",
+          "note": "指定管理者系公式サイト掲載の現行利用料金。施設は日額を公表していない。メインアリーナの利用時間は9:00〜21:30（12.5時間）。「8時間以上利用する場合の利用料金は100分の90」の規定を反映し、12.5時間×90%＝11.25時間相当で換算した",
+          "sourceUrl": "https://www.kurobe-sports.jp/kurobe/facilities/guide/center.html"
+        }
+      ],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "kurobe-main",
+          "name": "メインアリーナ",
+          "type": "arena",
+          "area": 2280,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.kurobe-sports.jp/kurobe/facilities/guide/center.html",
+          "observedAt": "2026-08-10",
+          "note": "約2,280㎡。全面/2・3面/1・3面/1・6面で貸出"
+        },
+        {
+          "id": "kurobe-sub",
+          "name": "サブアリーナ",
+          "type": "arena",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.kurobe-sports.jp/kurobe/facilities/guide/center.html",
+          "observedAt": "2026-08-10",
+          "note": null
+        }
+      ],
+      "bestSpace": {
+        "id": "kurobe-main",
+        "name": "メインアリーナ",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1208",
+      "region": "中部",
+      "prefecture": "富山県",
+      "city": "砺波市",
+      "name": "富山県西部体育センター",
+      "category": "arena_and_meetings",
+      "fitLevel": "B",
+      "strengths": "富山県スポーツ情報サイトは大アリーナ2,000㎡（50m×40m）・観客席2,604席と2026年7月1日適用の新料金を掲載。利用時間は平日土曜9:00〜21:00、日曜祝日9:00〜17:00",
+      "cautions": "天井高・床荷重・搬入寸法は要確認。通常照明500ルクスは施設料金内。市内外区分なし",
+      "sourceUrl": "https://www.sportsnet.pref.toyama.jp/facilities/gymnasium/000691.html",
+      "websiteUrl": null,
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 2,
+      "priceCount": 1,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": 2604,
+      "maxArea": 2000,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 0,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [
+        {
+          "id": "PRICE-3484",
+          "spaceId": "toyama-seibu-large",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "09:00-21:00",
+          "amount": 2540,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "大アリーナ・アマチュアスポーツ・大会練習・無料全面・1時間",
+          "validFrom": null,
+          "exclusions": "追加照明別（2,000ルクス2,250円/時ほか。通常照明500ルクスは施設料金内）・冷暖房別（4,190円/時）",
+          "note": "富山県スポーツ情報サイト掲載の2026年7月1日適用の新料金。施設は日額を公表していない。大アリーナの利用時間は平日土曜9:00〜21:00、日曜祝日9:00〜17:00",
+          "sourceUrl": "https://www.sportsnet.pref.toyama.jp/member/seibu/fee.html"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-157",
+          "spaceId": "toyama-seibu-large",
+          "label": "大アリーナ・アマチュアスポーツ無料全面・平日土曜09:00-21:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekday",
+          "timeSpan": "09:00-21:00",
+          "amount": 30480,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3484"
+          ],
+          "componentQuantities": [
+            12
+          ],
+          "validFrom": null,
+          "exclusions": "追加照明別（2,000ルクス2,250円/時ほか。通常照明500ルクスは施設料金内）・冷暖房別（4,190円/時）",
+          "note": "富山県スポーツ情報サイト掲載の2026年7月1日適用の新料金。施設は日額を公表していない。大アリーナの利用時間は平日土曜9:00〜21:00、日曜祝日9:00〜17:00。土曜は平日側の利用時間が適用される",
+          "sourceUrl": "https://www.sportsnet.pref.toyama.jp/member/seibu/fee.html"
+        },
+        {
+          "id": "SCENARIO-158",
+          "spaceId": "toyama-seibu-large",
+          "label": "大アリーナ・アマチュアスポーツ無料全面・日曜祝日09:00-17:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekend_holiday",
+          "timeSpan": "09:00-17:00",
+          "amount": 20320,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3484"
+          ],
+          "componentQuantities": [
+            8
+          ],
+          "validFrom": null,
+          "exclusions": "追加照明別（2,000ルクス2,250円/時ほか。通常照明500ルクスは施設料金内）・冷暖房別（4,190円/時）",
+          "note": "富山県スポーツ情報サイト掲載の2026年7月1日適用の新料金。施設は日額を公表していない。大アリーナの利用時間は平日土曜9:00〜21:00、日曜祝日9:00〜17:00。土曜は平日側の利用時間が適用される",
+          "sourceUrl": "https://www.sportsnet.pref.toyama.jp/member/seibu/fee.html"
+        }
+      ],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "toyama-seibu-large",
+          "name": "大アリーナ",
+          "type": "arena",
+          "area": 2000,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": 2604,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.sportsnet.pref.toyama.jp/facilities/gymnasium/000691.html",
+          "observedAt": "2026-08-10",
+          "note": "50m×40m・観客席2,604席"
+        },
+        {
+          "id": "toyama-seibu-mid",
+          "name": "中アリーナ",
+          "type": "arena",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.sportsnet.pref.toyama.jp/member/seibu/fee.html",
+          "observedAt": "2026-08-10",
+          "note": null
+        }
+      ],
+      "bestSpace": {
+        "id": "toyama-seibu-large",
+        "name": "大アリーナ",
         "type": "arena"
       }
     }

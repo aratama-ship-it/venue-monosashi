@@ -7789,3 +7789,8 @@ DETAIL-7788,CAND-1203,kakamigahara-sub,サブアリーナ,arena,,,,unknown,unkno
 DETAIL-7789,CAND-1204,tajimi-court1,第1競技場,arena,1895,,,unknown,unknown,,700,,four_way,none,yes,unknown,https://information.konamisportsclub.jp/trust/tajimi/generalgymnasium/,2026-08-10,verified,48m×38m。バスケットボール2面・バレーボール3面・バドミントン10面・ハンドボール1面。観覧席約700席
 DETAIL-7790,CAND-1204,tajimi-court2,第2競技場,arena,629,,,unknown,unknown,,,,two_way,none,yes,unknown,https://information.konamisportsclub.jp/trust/tajimi/generalgymnasium/,2026-08-10,verified,32m×19m
 DETAIL-7791,CAND-1205,gero-arena,温アリーナ,arena,1824,,,unknown,unknown,,,,three_way,none,yes,unknown,https://www.gero-k.jp/sisetu_charge.php,2026-08-10,verified,半面912㎡・1/3面608㎡
+DETAIL-7792,CAND-1206,takaoka-arena,アリーナ,arena,,,,unknown,unknown,,,,none,none,yes,unknown,https://www.city.takaoka.toyama.jp/material/files/group/61/01-toyosportcenter.pdf,2026-08-10,verified,全面のみの料金掲載で面分割料金の記載なし
+DETAIL-7793,CAND-1207,kurobe-main,メインアリーナ,arena,2280,,,unknown,unknown,,,,three_way,none,yes,unknown,https://www.kurobe-sports.jp/kurobe/facilities/guide/center.html,2026-08-10,verified,"約2,280㎡。全面/2・3面/1・3面/1・6面で貸出"
+DETAIL-7794,CAND-1207,kurobe-sub,サブアリーナ,arena,,,,unknown,unknown,,,,two_way,none,yes,unknown,https://www.kurobe-sports.jp/kurobe/facilities/guide/center.html,2026-08-10,verified,
+DETAIL-7795,CAND-1208,toyama-seibu-large,大アリーナ,arena,2000,,,unknown,unknown,,2604,,three_way,none,yes,unknown,https://www.sportsnet.pref.toyama.jp/facilities/gymnasium/000691.html,2026-08-10,verified,"50m×40m・観客席2,604席"
+DETAIL-7796,CAND-1208,toyama-seibu-mid,中アリーナ,arena,,,,unknown,unknown,,,,two_way,none,yes,unknown,https://www.sportsnet.pref.toyama.jp/member/seibu/fee.html,2026-08-10,verified,
