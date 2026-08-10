@@ -132,3 +132,38 @@ curl -s https://venue.art-monosashi.com/assets/venue-search-BznAbPnU.js | grep -
 
 → **仮説: 保存はコミットSHA単位でレコードを再利用する。** 新しいコミットを作れば別番号になるはず。
 この追記自体が新しいコミットになるので、それで保存し直す。
+
+## 追記3: 今度は sites への push 認証が切れた
+
+新コミット 3e5a4f3 を作って保存し直そうとしたところ、**push 段階で認証が通らなくなった。**
+
+```
+fatal: could not read Username for 'https://git.chatgpt-team.site': Device not configured
+```
+
+- セッション序盤の push（58d4411..e03d52a）は成功していたので、一時的な認証トークンが期限切れになったとみられる
+- Claude Code 側の git にも認証情報はない（credential.helper は osxkeychain だが該当エントリなし）
+- Codex を新しいプロセスで起動し直しても同じ。`git ls-remote sites main` すら通らない
+- 認証情報をコマンドライン引数で渡す回避策は取っていない（Codex側の安全審査でも拒否された）
+
+### 現状のまとめ
+
+| 項目 | 状態 |
+|---|---|
+| データ（origin） | **3e5a4f3 まで push 済み。安全** |
+| sites/main | e03d52a（本日のデータは入っているが未デプロイ） |
+| Version 211 | file_count: null の壊れた状態で固定 |
+| Version 210 | file_count: 49（正常。ただし旧コミット） |
+| 公開中 | Version 209相当（`venue-search-F0zefSKm.js`） |
+
+### 再開の手順
+
+認証が回復したら、以下だけでよい（**再ビルド不要**。web/dist は 3e5a4f3 に含まれている）。
+
+```bash
+git push sites HEAD:main      # e03d52a → 3e5a4f3
+# バージョン保存（file_count が null でないことを確認。211が返るなら新コミットを作る）
+# deploy_site_version
+curl -s https://venue.art-monosashi.com/ | grep -o 'venue-search-[A-Za-z0-9_-]*\.js'
+# venue-search-BznAbPnU.js なら反映済み
+```
