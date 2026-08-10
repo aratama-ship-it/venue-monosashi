@@ -151,7 +151,10 @@ function rolesForVenue(venue: VenueRoleSource): VenueRole[] {
       "pool",
       "sports_court",
       "sports_program",
-      "training_room",
+      // training_room は「研修室」と「トレーニング室」の両方に使われていたため、
+      // スポーツ実体のある方だけ fitness_room に分離した（2026-08-10）。
+      // 研修室しか持たない文化会館がスポーツ会場として出てしまっていた。
+      "fitness_room",
     )
   ) {
     roles.push("sports");

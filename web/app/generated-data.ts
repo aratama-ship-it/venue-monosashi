@@ -28010,7 +28010,7 @@ export const venueData = {
         {
           "id": "ractab-training",
           "name": "トレーニングルーム",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": 400,
           "ceiling": null,
           "ceilingReference": null,
@@ -45540,7 +45540,7 @@ export const venueData = {
         {
           "id": "hanamaki-training",
           "name": "トレーニングルーム",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": null,
           "ceiling": null,
           "ceilingReference": null,
@@ -47045,7 +47045,7 @@ export const venueData = {
         {
           "id": "kamei-training",
           "name": "トレーニング室",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": 204.08,
           "ceiling": null,
           "ceilingReference": null,
@@ -47079,7 +47079,7 @@ export const venueData = {
         {
           "id": "kamei-fitness-test",
           "name": "体力測定室",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": 180.18,
           "ceiling": null,
           "ceilingReference": null,
@@ -52465,7 +52465,7 @@ export const venueData = {
         {
           "id": "chiba-port-fitness-test",
           "name": "体力測定室",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": 134.4,
           "ceiling": null,
           "ceilingReference": null,
@@ -52533,7 +52533,7 @@ export const venueData = {
         {
           "id": "chiba-port-training-1",
           "name": "トレーニング室（1）",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": 259.2,
           "ceiling": null,
           "ceilingReference": null,
@@ -58353,7 +58353,7 @@ export const venueData = {
         {
           "id": "hiratsuka-training",
           "name": "トレーニングルーム",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": null,
           "ceiling": null,
           "ceilingReference": null,
@@ -59825,7 +59825,7 @@ export const venueData = {
         {
           "id": "takaoka-takehira-training",
           "name": "トレーニング室",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": null,
           "ceiling": null,
           "ceilingReference": null,
@@ -61644,7 +61644,7 @@ export const venueData = {
         {
           "id": "ogaki-training",
           "name": "トレーニング室",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": 215.75,
           "ceiling": null,
           "ceilingReference": null,
@@ -65709,7 +65709,7 @@ export const venueData = {
         {
           "id": "yokkaichi-training",
           "name": "トレーニングルーム",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": null,
           "ceiling": null,
           "ceilingReference": null,
@@ -65726,7 +65726,7 @@ export const venueData = {
         {
           "id": "yokkaichi-training-machine",
           "name": "マシンエリア",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": 155,
           "ceiling": null,
           "ceilingReference": null,
@@ -65743,7 +65743,7 @@ export const venueData = {
         {
           "id": "yokkaichi-training-weights",
           "name": "フリーウエイトエリア",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": 96,
           "ceiling": null,
           "ceilingReference": null,
@@ -98597,7 +98597,7 @@ export const venueData = {
         {
           "id": "otsuki-training",
           "name": "トレーニング室",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": 63.9,
           "ceiling": null,
           "ceilingReference": null,
@@ -131746,7 +131746,7 @@ export const venueData = {
         {
           "id": "kitsuki-training",
           "name": "トレーニング室",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": 140,
           "ceiling": null,
           "ceilingReference": null,
@@ -149258,7 +149258,7 @@ export const venueData = {
         {
           "id": "yoshinogari-training",
           "name": "トレーニングルーム",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": 121.36,
           "ceiling": null,
           "ceilingReference": null,
@@ -149402,7 +149402,7 @@ export const venueData = {
         {
           "id": "kiyama-training",
           "name": "トレーニング室",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": 150.3,
           "ceiling": null,
           "ceilingReference": null,
@@ -151293,7 +151293,7 @@ export const venueData = {
         {
           "id": "makinohara-training",
           "name": "トレーニングルーム",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": 195,
           "ceiling": null,
           "ceilingReference": null,
@@ -151878,7 +151878,7 @@ export const venueData = {
         {
           "id": "kofu-training",
           "name": "トレーニング室",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": null,
           "ceiling": null,
           "ceilingReference": null,
@@ -152581,7 +152581,7 @@ export const venueData = {
         {
           "id": "miyoshi-training",
           "name": "トレーニング室",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": null,
           "ceiling": null,
           "ceilingReference": null,
@@ -153437,7 +153437,7 @@ export const venueData = {
         {
           "id": "iwate-training",
           "name": "トレーニングルーム",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": null,
           "ceiling": null,
           "ceilingReference": null,
@@ -158189,7 +158189,7 @@ export const venueData = {
         {
           "id": "kawakita-training",
           "name": "トレーニングルーム",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": null,
           "ceiling": null,
           "ceilingReference": null,
@@ -186422,7 +186422,7 @@ export const venueData = {
         {
           "id": "nachikatsuura-gym",
           "name": "トレーニングルーム",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": null,
           "ceiling": null,
           "ceilingReference": null,
@@ -188678,7 +188678,7 @@ export const venueData = {
         {
           "id": "ibusuki-training",
           "name": "トレーニング室",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": null,
           "ceiling": null,
           "ceilingReference": null,
@@ -191653,7 +191653,7 @@ export const venueData = {
         {
           "id": "kikuyo-training-room",
           "name": "トレーニング室",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": 299,
           "ceiling": null,
           "ceilingReference": null,
@@ -192907,7 +192907,7 @@ export const venueData = {
         {
           "id": "karumai-training",
           "name": "トレーニングルーム",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": null,
           "ceiling": null,
           "ceilingReference": null,
@@ -192924,7 +192924,7 @@ export const venueData = {
         {
           "id": "karumai-fitness",
           "name": "フィットネスルーム",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": null,
           "ceiling": null,
           "ceilingReference": null,
@@ -193373,7 +193373,7 @@ export const venueData = {
         {
           "id": "kosaka-training",
           "name": "トレーニングルーム",
-          "type": "training_room",
+          "type": "fitness_room",
           "area": null,
           "ceiling": null,
           "ceilingReference": null,

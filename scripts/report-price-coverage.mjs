@@ -72,7 +72,7 @@ function rolesForVenue(facilityPattern, spaceTypes, stageTypes) {
   }
   if (
     hasCategory("sports", "arena", "competition") ||
-    hasSpace("arena", "dojo", "ice_rink", "pool", "sports_court", "sports_program", "training_room")
+    hasSpace("arena", "dojo", "ice_rink", "pool", "sports_court", "sports_program", "fitness_room")
   ) {
     roles.add("sports");
   }
