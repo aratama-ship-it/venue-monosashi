@@ -21,6 +21,7 @@
     "rebuild-db": "sh scripts/rebuild-sqlite.sh",
     "web:lint": "npm --prefix web run lint",
     "web:test": "npm --prefix web test",
-    "validate": "npm run audit && npm run web:lint && npm run web:test"
+    "validate": "npm run audit && npm run web:lint && npm run web:test",
+    "next-ids": "node scripts/next-ids.mjs"
   }
 }
