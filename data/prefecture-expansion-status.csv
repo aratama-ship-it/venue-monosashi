@@ -30,7 +30,7 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 奈良県,近畿,28,19,211,112,82,6,0,0,0,reference_depth
 和歌山県,近畿,25,20,99,35,37,0,0,0,0,reference_depth
 鳥取県,中国,25,18,160,79,71,2,0,0,0,reference_depth
-島根県,中国,25,15,134,69,50,3,0,0,0,reference_depth
+島根県,中国,28,15,137,69,50,3,0,0,0,reference_depth
 岡山県,中国,28,17,154,48,66,3,0,0,0,reference_depth
 広島県,中国,25,18,105,56,41,5,0,0,0,reference_depth
 山口県,中国,25,18,188,104,97,2,0,0,0,reference_depth

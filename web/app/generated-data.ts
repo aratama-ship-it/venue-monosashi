@@ -3,11 +3,11 @@
 export const venueData = {
   "stats": {
     "historical": 225,
-    "venues": 1228,
-    "details": 7819,
-    "prices": 3516,
+    "venues": 1231,
+    "details": 7822,
+    "prices": 3519,
     "operations": 221,
-    "budgetScenarios": 179,
+    "budgetScenarios": 182,
     "candidateCoverage": {
       "area": 625,
       "capacity": 938,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 12326,
-      "venueObservationCount": 11735,
+      "observationCount": 12335,
+      "venueObservationCount": 11744,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -248039,6 +248039,300 @@ export const venueData = {
       "bestSpace": {
         "id": "toride-gym1",
         "name": "第1体育室",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1230",
+      "region": "中国",
+      "prefecture": "島根県",
+      "city": "大田市",
+      "name": "大田総合体育館",
+      "category": "arena_and_meetings",
+      "fitLevel": "B",
+      "strengths": "大田市公式の施設利用料金表PDFは大田総合体育館の利用時間9時〜22時と、競技場（全面）の1時間利用料（一般2,800円・大田市内高校生以下1,400円、税込）を掲載",
+      "cautions": "競技場の面積・席数は今回参照したPDFでは確認できず未記録。半面料金・市内外区分・入場料区分・営利区分は料金表に記載がなく不明",
+      "sourceUrl": "https://sougoutaiikukan.jp/gym.html",
+      "websiteUrl": "https://sougoutaiikukan.jp/",
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 1,
+      "priceCount": 1,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": null,
+      "maxArea": null,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 0,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [
+        {
+          "id": "PRICE-3540",
+          "spaceId": "oda-court",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 2800,
+          "taxStatus": "included",
+          "unit": "per_hour",
+          "basis": "競技場（全面）・一般・利用料（1時間）",
+          "validFrom": null,
+          "exclusions": "利用目的（営利目的、アマチュアスポーツ以外等）や入場料徴収により加算される場合がある。利用時間を超える場合は2割相当額を加算。照明・冷暖房の別建て記載なし",
+          "note": "大田市公式（指定管理者）の施設利用料金表PDF（令和6年度以降）。「利用料（1時間）」と明記。大田総合体育館の利用時間は9時〜22時（13時間）。税込",
+          "sourceUrl": "https://www.sougoutaiikukan.jp/pdf/r6nenndoikouoodasiminnkouennryoukinnhyou.pdf"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-182",
+          "spaceId": "oda-court",
+          "label": "競技場全面・一般・09:00-22:00",
+          "useCase": "all",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 36400,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3540"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "利用目的（営利目的、アマチュアスポーツ以外等）や入場料徴収により加算される場合がある。利用時間を超える場合は2割相当額を加算。照明・冷暖房の別建て記載なし",
+          "note": "大田市公式（指定管理者）の施設利用料金表PDF（令和6年度以降）。「利用料（1時間）」と明記。大田総合体育館の利用時間は9時〜22時（13時間）。税込。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.sougoutaiikukan.jp/pdf/r6nenndoikouoodasiminnkouennryoukinnhyou.pdf"
+        }
+      ],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "oda-court",
+          "name": "競技場",
+          "type": "arena",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.sougoutaiikukan.jp/pdf/r6nenndoikouoodasiminnkouennryoukinnhyou.pdf",
+          "observedAt": "2026-08-10",
+          "note": "全面の料金のみ掲載"
+        }
+      ],
+      "bestSpace": {
+        "id": "oda-court",
+        "name": "競技場",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1231",
+      "region": "中国",
+      "prefecture": "島根県",
+      "city": "安来市",
+      "name": "安来市民体育館",
+      "category": "arena_and_meetings",
+      "fitLevel": "B",
+      "strengths": "公式の市民体育館料金表（令和8年4月1日改定）は競技場の占用使用の金額（1時間あたり、9：00〜22：00）を全面/2・3/半/1・3面と一般・高校生・中学生以下で掲載。全面アマチュア入場料なし一般は2,140円",
+      "cautions": "メイン競技場の面積・席数は今回参照したページでは確認できず未記録。市内外区分は不明。2026〜2027年度に床・空調・LED改修計画があるが休館日程は不明",
+      "sourceUrl": "https://yasugi-reserve.0ch.biz/sakurassc/gymnasium-riyouannai.htm",
+      "websiteUrl": "https://yasugi-reserve.0ch.biz/",
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 1,
+      "priceCount": 1,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": null,
+      "maxArea": null,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 0,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [
+        {
+          "id": "PRICE-3541",
+          "spaceId": "yasugi-court",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 2140,
+          "taxStatus": "included",
+          "unit": "per_hour",
+          "basis": "競技場・アマチュアスポーツに使用する場合・入場料を徴しない場合・一般・全面・1時間あたり",
+          "validFrom": null,
+          "exclusions": "照明使用料別（競技場 照明灯1セット60円/時）・冷暖房使用料別。9時以前・22時以降は1時間増すごとに1時間当たりの額の1割を加算。大会等の開催日以外の準備・原状回復は2分の1",
+          "note": "安来市民体育館の公式料金表（令和8年4月1日改定）。「占用使用の金額（1時間あたり）」「9：00〜22：00」と明記。13時間で換算",
+          "sourceUrl": "https://yasugi-reserve.0ch.biz/sakurassc/gymnasium-riyouannai.htm"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-183",
+          "spaceId": "yasugi-court",
+          "label": "競技場全面・アマチュア入場料なし・一般・09:00-22:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 27820,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3541"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "照明使用料別（競技場 照明灯1セット60円/時）・冷暖房使用料別。9時以前・22時以降は1時間増すごとに1時間当たりの額の1割を加算。大会等の開催日以外の準備・原状回復は2分の1",
+          "note": "安来市民体育館の公式料金表（令和8年4月1日改定）。「占用使用の金額（1時間あたり）」「9：00〜22：00」と明記。13時間で換算。実際の予約時間で変動する目安",
+          "sourceUrl": "https://yasugi-reserve.0ch.biz/sakurassc/gymnasium-riyouannai.htm"
+        }
+      ],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "yasugi-court",
+          "name": "競技場",
+          "type": "arena",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://yasugi-reserve.0ch.biz/sakurassc/gymnasium-riyouannai.htm",
+          "observedAt": "2026-08-10",
+          "note": "全面/2・3面/半面/1・3面で貸出"
+        }
+      ],
+      "bestSpace": {
+        "id": "yasugi-court",
+        "name": "競技場",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1232",
+      "region": "中国",
+      "prefecture": "島根県",
+      "city": "雲南市",
+      "name": "雲南市三刀屋文化体育館 アスパル",
+      "category": "arena_and_stage_complex",
+      "fitLevel": "B",
+      "strengths": "指定管理者公式ページは利用料金（令和7年4月1日より）としてアリーナ棟の1時間あたり税込額を冷暖房なし・ありの2列で掲載。アリーナ（体育館利用）は冷暖房なし2,270円",
+      "cautions": "アリーナの面積・席数は今回参照した料金ページでは確認できず未記録。部分面・市内外区分なし。アリーナ冷暖房は料金表に「30%加算」と「冷暖房あり2,950円」の双方があり、さらに重油代別途で単価不明",
+      "sourceUrl": "https://www.uspal-unnan.com/aboutus",
+      "websiteUrl": "https://www.uspal-unnan.com/",
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 1,
+      "priceCount": 1,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": null,
+      "maxArea": null,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 0,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [
+        {
+          "id": "PRICE-3542",
+          "spaceId": "uspal-arena",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 2270,
+          "taxStatus": "included",
+          "unit": "per_hour",
+          "basis": "アリーナ（体育館利用）・冷暖房なし・1時間あたり（税込）",
+          "validFrom": null,
+          "exclusions": "冷暖房ありは2,950円/時で別途重油代。固定席利用は別料金（冷暖房なし8,960円/時）。入場料徴収または営利目的は2倍、準備・後片付けは50%",
+          "note": "三刀屋文化体育館アスパル公式の利用料金（令和7年4月1日より、雲南市統一の基準による改定後）。「利用料金 1時間あたり（税込）」と明記。利用可能時間は9：00〜22：00（13時間）。アリーナ（体育館利用）の冷暖房なしの額",
+          "sourceUrl": "https://www.uspal-unnan.com/use/charge"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-184",
+          "spaceId": "uspal-arena",
+          "label": "アリーナ（体育館利用）・冷暖房なし・09:00-22:00",
+          "useCase": "all",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 29510,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3542"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "冷暖房ありは2,950円/時で別途重油代。固定席利用は別料金（冷暖房なし8,960円/時）。入場料徴収または営利目的は2倍、準備・後片付けは50%",
+          "note": "三刀屋文化体育館アスパル公式の利用料金（令和7年4月1日より、雲南市統一の基準による改定後）。「利用料金 1時間あたり（税込）」と明記。利用可能時間は9：00〜22：00（13時間）。アリーナ（体育館利用）の冷暖房なしの額。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.uspal-unnan.com/use/charge"
+        }
+      ],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "uspal-arena",
+          "name": "アリーナ",
+          "type": "arena",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "permanent",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.uspal-unnan.com/use/charge",
+          "observedAt": "2026-08-10",
+          "note": "体育館利用と固定席利用で料金が分かれる。ステージ併設"
+        }
+      ],
+      "bestSpace": {
+        "id": "uspal-arena",
+        "name": "アリーナ",
         "type": "arena"
       }
     }
