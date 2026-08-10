@@ -34,7 +34,7 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 岡山県,中国,28,17,154,48,66,3,0,0,0,reference_depth
 広島県,中国,25,18,105,56,41,5,0,0,0,reference_depth
 山口県,中国,25,18,188,104,97,2,0,0,0,reference_depth
-徳島県,四国,25,18,123,52,40,1,0,0,0,reference_depth
+徳島県,四国,28,18,126,54,41,1,0,0,0,reference_depth
 香川県,四国,25,17,157,57,73,0,0,0,0,reference_depth
 愛媛県,四国,27,16,178,71,77,1,0,0,0,reference_depth
 高知県,四国,25,18,142,63,71,1,0,0,0,reference_depth
