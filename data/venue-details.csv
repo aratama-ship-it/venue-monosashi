@@ -7821,3 +7821,6 @@ DETAIL-7820,CAND-1229,toride-gym1,第1体育室,arena,,,,unknown,unknown,,,,thre
 DETAIL-7821,CAND-1230,oda-court,競技場,arena,,,,unknown,unknown,,,,unknown,none,yes,unknown,https://www.sougoutaiikukan.jp/pdf/r6nenndoikouoodasiminnkouennryoukinnhyou.pdf,2026-08-10,verified,全面の料金のみ掲載
 DETAIL-7822,CAND-1231,yasugi-court,競技場,arena,,,,unknown,unknown,,,,three_way,none,yes,unknown,https://yasugi-reserve.0ch.biz/sakurassc/gymnasium-riyouannai.htm,2026-08-10,verified,全面/2・3面/半面/1・3面で貸出
 DETAIL-7823,CAND-1232,uspal-arena,アリーナ,arena,,,,unknown,unknown,,,,none,permanent,yes,unknown,https://www.uspal-unnan.com/use/charge,2026-08-10,verified,体育館利用と固定席利用で料金が分かれる。ステージ併設
+DETAIL-7824,CAND-1233,nankoku-main,メインアリーナ,arena,,,,unknown,unknown,,,,three_way,none,yes,unknown,https://www.city.nankoku.lg.jp/reiki/reiki_honbun/i900RG00000785.html,2026-08-10,verified,半面・3分の1面の部分使用あり
+DETAIL-7825,CAND-1234,sukumo-arena,アリーナ,arena,1710,,,unknown,unknown,,1000,,three_way,none,yes,unknown,https://www.city.sukumo.kochi.jp/docs-14/p010801.html,2026-08-10,verified,"47.5m×36m。2階観覧席固定1,000席（身障者用4席含む）。全面/1・2面/1・3面で貸出"
+DETAIL-7826,CAND-1235,tosashimizu-arena,アリーナ,arena,,,,unknown,unknown,,,,four_way,none,yes,unknown,https://www.city.tosashimizu.kochi.jp/reiki/H416901010053/H416901010053_j.html,2026-08-10,verified,全面/半面/1・4面で貸出

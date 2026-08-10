@@ -3,14 +3,14 @@
 export const venueData = {
   "stats": {
     "historical": 225,
-    "venues": 1231,
-    "details": 7822,
-    "prices": 3519,
+    "venues": 1234,
+    "details": 7825,
+    "prices": 3525,
     "operations": 221,
-    "budgetScenarios": 182,
+    "budgetScenarios": 186,
     "candidateCoverage": {
-      "area": 625,
-      "capacity": 938,
+      "area": 626,
+      "capacity": 939,
       "ceiling": 112
     },
     "spaceCoverage": {
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 12335,
-      "venueObservationCount": 11744,
+      "observationCount": 12348,
+      "venueObservationCount": 11757,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -248332,6 +248332,373 @@ export const venueData = {
       ],
       "bestSpace": {
         "id": "uspal-arena",
+        "name": "アリーナ",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1233",
+      "region": "四国",
+      "prefecture": "高知県",
+      "city": "南国市",
+      "name": "南国市立スポーツセンター",
+      "category": "arena_and_meetings",
+      "fitLevel": "B",
+      "strengths": "南国市立スポーツ施設条例 別表第1 にメインアリーナの1時間当たり使用料（アマチュアスポーツ2,100円ほか）を掲載。指定管理者ページの営業時間は8:30〜22:00",
+      "cautions": "メインアリーナの面積・席数は今回参照したページでは確認できず未記録。半面・3分の1面は2分の1・3分の1。市外は2倍",
+      "sourceUrl": "https://mahoroba-nankoku.com/pages/84/",
+      "websiteUrl": "https://mahoroba-nankoku.com/",
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 1,
+      "priceCount": 1,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": null,
+      "maxArea": null,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 0,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [
+        {
+          "id": "PRICE-3543",
+          "spaceId": "nankoku-main",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "08:30-22:00",
+          "amount": 2100,
+          "taxStatus": "included",
+          "unit": "per_hour",
+          "basis": "メインアリーナ・アマチュアスポーツで使用の場合・1時間当たり",
+          "validFrom": null,
+          "exclusions": "照明使用料別（全面1時間3,100円）・冷暖房使用料別（1時間9,000円）・備品使用料別。市外は2倍",
+          "note": "南国市立スポーツ施設条例 別表第1 の現行使用料（1時間当たり）。指定管理者ページの営業時間8:30〜22:00（13.5時間）で換算。税込",
+          "sourceUrl": "https://www.city.nankoku.lg.jp/reiki/reiki_honbun/i900RG00000785.html"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-185",
+          "spaceId": "nankoku-main",
+          "label": "メインアリーナ・アマチュアスポーツ・08:30-22:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "08:30-22:00",
+          "amount": 28350,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3543"
+          ],
+          "componentQuantities": [
+            13.5
+          ],
+          "validFrom": null,
+          "exclusions": "照明使用料別（全面1時間3,100円）・冷暖房使用料別（1時間9,000円）・備品使用料別。市外は2倍",
+          "note": "南国市立スポーツ施設条例 別表第1 の現行使用料（1時間当たり）。指定管理者ページの営業時間8:30〜22:00（13.5時間）で換算。税込。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.city.nankoku.lg.jp/reiki/reiki_honbun/i900RG00000785.html"
+        }
+      ],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "nankoku-main",
+          "name": "メインアリーナ",
+          "type": "arena",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.nankoku.lg.jp/reiki/reiki_honbun/i900RG00000785.html",
+          "observedAt": "2026-08-10",
+          "note": "半面・3分の1面の部分使用あり"
+        }
+      ],
+      "bestSpace": {
+        "id": "nankoku-main",
+        "name": "メインアリーナ",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1234",
+      "region": "四国",
+      "prefecture": "高知県",
+      "city": "宿毛市",
+      "name": "宿毛市総合運動公園 市民体育館",
+      "category": "arena_and_meetings",
+      "fitLevel": "B",
+      "strengths": "宿毛市公式ページはアリーナ1,710㎡（47.5m×36m）・2階観覧席固定1,000席（身障者用4席含む）・利用時間午前9時〜午後10時と、アリーナ（1時間）の使用料を職業団／高校生以下／その他の市内外別で掲載",
+      "cautions": "入場料区分の記載なし。冷暖房料・税込税別は不明。事前予約がなく利用者がいない場合は午後9時に閉館することがある",
+      "sourceUrl": "https://www.city.sukumo.kochi.jp/docs-14/p010801.html",
+      "websiteUrl": null,
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 1,
+      "priceCount": 2,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": 1000,
+      "maxArea": 1710,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 0,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [
+        {
+          "id": "PRICE-3544",
+          "spaceId": "sukumo-arena",
+          "category": "facility",
+          "useCase": "general_city_full",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 950,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "アリーナ全面・その他・市内・1時間",
+          "validFrom": null,
+          "exclusions": "電灯使用料別（全面1,260円/時）。冷暖房料の記載なし。特殊な電気器具を使用する場合は電気料金を別途徴収",
+          "note": "宿毛市公式ページ掲載の現行使用料。「アリーナ（1時間）」と明記。利用時間は午前9時〜午後10時（13時間）",
+          "sourceUrl": "https://www.city.sukumo.kochi.jp/docs-14/p0108060302.html"
+        },
+        {
+          "id": "PRICE-3545",
+          "spaceId": "sukumo-arena",
+          "category": "facility",
+          "useCase": "general_outside_full",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 1480,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "アリーナ全面・その他・市外・1時間",
+          "validFrom": null,
+          "exclusions": "電灯使用料別（全面1,260円/時）。冷暖房料の記載なし。特殊な電気器具を使用する場合は電気料金を別途徴収",
+          "note": "宿毛市公式ページ掲載の現行使用料。「アリーナ（1時間）」と明記。利用時間は午前9時〜午後10時（13時間）",
+          "sourceUrl": "https://www.city.sukumo.kochi.jp/docs-14/p0108060302.html"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-186",
+          "spaceId": "sukumo-arena",
+          "label": "アリーナ全面・その他・市内・09:00-22:00",
+          "useCase": "general_city_full",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 12350,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3544"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "電灯使用料別（全面1,260円/時）。冷暖房料の記載なし。特殊な電気器具を使用する場合は電気料金を別途徴収",
+          "note": "宿毛市公式ページ掲載の現行使用料。「アリーナ（1時間）」と明記。利用時間は午前9時〜午後10時（13時間）。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.city.sukumo.kochi.jp/docs-14/p0108060302.html"
+        },
+        {
+          "id": "SCENARIO-187",
+          "spaceId": "sukumo-arena",
+          "label": "アリーナ全面・その他・市外・09:00-22:00",
+          "useCase": "general_outside_full",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 19240,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3545"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "電灯使用料別（全面1,260円/時）。冷暖房料の記載なし。特殊な電気器具を使用する場合は電気料金を別途徴収",
+          "note": "宿毛市公式ページ掲載の現行使用料。「アリーナ（1時間）」と明記。利用時間は午前9時〜午後10時（13時間）。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.city.sukumo.kochi.jp/docs-14/p0108060302.html"
+        }
+      ],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "sukumo-arena",
+          "name": "アリーナ",
+          "type": "arena",
+          "area": 1710,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": 1000,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.sukumo.kochi.jp/docs-14/p010801.html",
+          "observedAt": "2026-08-10",
+          "note": "47.5m×36m。2階観覧席固定1,000席（身障者用4席含む）。全面/1・2面/1・3面で貸出"
+        }
+      ],
+      "bestSpace": {
+        "id": "sukumo-arena",
+        "name": "アリーナ",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1235",
+      "region": "四国",
+      "prefecture": "高知県",
+      "city": "土佐清水市",
+      "name": "土佐清水市立市民体育館",
+      "category": "arena_and_meetings",
+      "fitLevel": "B",
+      "strengths": "土佐清水市の市民体育館条例 別表1 にアリーナ全面の午前9時〜正午5,040円・午後1時〜5時6,720円・午後6時〜9時6,300円と、1時間単位の場合2,100円を掲載",
+      "cautions": "アリーナの面積・席数は今回参照した条例では確認できず未記録。体育スポーツ及び保健の振興以外の使用は、入場料なしで市内2倍・市外3倍、入場料ありで市内3倍・市外5倍",
+      "sourceUrl": "https://www.city.tosashimizu.kochi.jp/reiki/H416901010053/H416901010053_j.html",
+      "websiteUrl": null,
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 1,
+      "priceCount": 3,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": null,
+      "maxArea": null,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 0,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [
+        {
+          "id": "PRICE-3546",
+          "spaceId": "tosashimizu-arena",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "09:00-12:00",
+          "amount": 5040,
+          "taxStatus": "not_stated",
+          "unit": "per_time_band",
+          "basis": "アリーナ全面・午前9時から正午",
+          "validFrom": null,
+          "exclusions": "アリーナ照明施設別（1時間1,680円）。冷暖房料の記載なし。体育スポーツ保健振興以外は入場料なしで市内2倍・市外3倍、入場料ありで市内3倍・市外5倍",
+          "note": "土佐清水市 市民体育館条例 別表1 の現行使用料。3区分（午前9時〜正午／午後1時〜5時／午後6時〜9時）の合計18,060円が1日分にあたる",
+          "sourceUrl": "https://www.city.tosashimizu.kochi.jp/reiki/H416901010053/H416901010053_j.html"
+        },
+        {
+          "id": "PRICE-3547",
+          "spaceId": "tosashimizu-arena",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "13:00-17:00",
+          "amount": 6720,
+          "taxStatus": "not_stated",
+          "unit": "per_time_band",
+          "basis": "アリーナ全面・午後1時から午後5時",
+          "validFrom": null,
+          "exclusions": "アリーナ照明施設別（1時間1,680円）。冷暖房料の記載なし。体育スポーツ保健振興以外は入場料なしで市内2倍・市外3倍、入場料ありで市内3倍・市外5倍",
+          "note": "土佐清水市 市民体育館条例 別表1 の現行使用料。3区分（午前9時〜正午／午後1時〜5時／午後6時〜9時）の合計18,060円が1日分にあたる",
+          "sourceUrl": "https://www.city.tosashimizu.kochi.jp/reiki/H416901010053/H416901010053_j.html"
+        },
+        {
+          "id": "PRICE-3548",
+          "spaceId": "tosashimizu-arena",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "18:00-21:00",
+          "amount": 6300,
+          "taxStatus": "not_stated",
+          "unit": "per_time_band",
+          "basis": "アリーナ全面・午後6時から午後9時",
+          "validFrom": null,
+          "exclusions": "アリーナ照明施設別（1時間1,680円）。冷暖房料の記載なし。体育スポーツ保健振興以外は入場料なしで市内2倍・市外3倍、入場料ありで市内3倍・市外5倍",
+          "note": "土佐清水市 市民体育館条例 別表1 の現行使用料。3区分（午前9時〜正午／午後1時〜5時／午後6時〜9時）の合計18,060円が1日分にあたる",
+          "sourceUrl": "https://www.city.tosashimizu.kochi.jp/reiki/H416901010053/H416901010053_j.html"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-188",
+          "spaceId": "tosashimizu-arena",
+          "label": "アリーナ全面・3区分合計・09:00-21:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 18060,
+          "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
+          "componentPriceIds": [
+            "PRICE-3546",
+            "PRICE-3547",
+            "PRICE-3548"
+          ],
+          "componentQuantities": [
+            1,
+            1,
+            1
+          ],
+          "validFrom": null,
+          "exclusions": "アリーナ照明施設別（1時間1,680円）。冷暖房料の記載なし。体育スポーツ保健振興以外は入場料なしで市内2倍・市外3倍、入場料ありで市内3倍・市外5倍",
+          "note": "土佐清水市 市民体育館条例 別表1 の現行使用料。3区分（午前9時〜正午／午後1時〜5時／午後6時〜9時）の合計18,060円が1日分にあたる。3区分を合計した1日分",
+          "sourceUrl": "https://www.city.tosashimizu.kochi.jp/reiki/H416901010053/H416901010053_j.html"
+        }
+      ],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "tosashimizu-arena",
+          "name": "アリーナ",
+          "type": "arena",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.tosashimizu.kochi.jp/reiki/H416901010053/H416901010053_j.html",
+          "observedAt": "2026-08-10",
+          "note": "全面/半面/1・4面で貸出"
+        }
+      ],
+      "bestSpace": {
+        "id": "tosashimizu-arena",
         "name": "アリーナ",
         "type": "arena"
       }
