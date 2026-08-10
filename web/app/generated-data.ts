@@ -5,9 +5,9 @@ export const venueData = {
     "historical": 225,
     "venues": 1237,
     "details": 7828,
-    "prices": 3549,
+    "prices": 3555,
     "operations": 221,
-    "budgetScenarios": 197,
+    "budgetScenarios": 200,
     "candidateCoverage": {
       "area": 626,
       "capacity": 939,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 12386,
-      "venueObservationCount": 11795,
+      "observationCount": 12395,
+      "venueObservationCount": 11804,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -92332,9 +92332,9 @@ export const venueData = {
       "sourceUrl": "https://www.city.kagoshima-izumi.lg.jp/site_data/izumi07/forms/39-1_01.pdf",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 3,
-      "priceCount": 0,
+      "priceCount": 3,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -92350,8 +92350,83 @@ export const venueData = {
       "practiceUse": "yes",
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3579",
+          "spaceId": "izumi-sports-main",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "08:30-12:00",
+          "amount": 1500,
+          "taxStatus": "excluded",
+          "unit": "per_time_band",
+          "basis": "専用使用・入場料を徴収しない場合・アマチュアスポーツ・上記以外の者・8時30分〜12時",
+          "validFrom": null,
+          "exclusions": "照明施設利用料金別（専用使用は1時間以内660円、1時間を超えるごとに660円加算）。冷暖房別（1階全面3,900円ほか）",
+          "note": "指定管理者（有限会社出水スポーツ）公式ページ掲載の現行料金表。区分は8時30分〜12時／12時〜17時／17時〜22時で、同ページの利用時間「午前8時30分から午後10時まで」を過不足なくカバーする。3区分の合計7,000円が1日分にあたる。別途消費税が加算される",
+          "sourceUrl": "https://izumi-spe.izumisports.com/%E5%87%BA%E6%B0%B4%E5%B8%82%E7%B7%8F%E5%90%88%E4%BD%93%E8%82%B2%E9%A4%A8/"
+        },
+        {
+          "id": "PRICE-3580",
+          "spaceId": "izumi-sports-main",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "12:00-17:00",
+          "amount": 2500,
+          "taxStatus": "excluded",
+          "unit": "per_time_band",
+          "basis": "専用使用・入場料を徴収しない場合・アマチュアスポーツ・上記以外の者・12時〜17時",
+          "validFrom": null,
+          "exclusions": "照明施設利用料金別（専用使用は1時間以内660円、1時間を超えるごとに660円加算）。冷暖房別（1階全面3,900円ほか）",
+          "note": "指定管理者（有限会社出水スポーツ）公式ページ掲載の現行料金表。区分は8時30分〜12時／12時〜17時／17時〜22時で、同ページの利用時間「午前8時30分から午後10時まで」を過不足なくカバーする。3区分の合計7,000円が1日分にあたる。別途消費税が加算される",
+          "sourceUrl": "https://izumi-spe.izumisports.com/%E5%87%BA%E6%B0%B4%E5%B8%82%E7%B7%8F%E5%90%88%E4%BD%93%E8%82%B2%E9%A4%A8/"
+        },
+        {
+          "id": "PRICE-3581",
+          "spaceId": "izumi-sports-main",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "17:00-22:00",
+          "amount": 3000,
+          "taxStatus": "excluded",
+          "unit": "per_time_band",
+          "basis": "専用使用・入場料を徴収しない場合・アマチュアスポーツ・上記以外の者・17時〜22時",
+          "validFrom": null,
+          "exclusions": "照明施設利用料金別（専用使用は1時間以内660円、1時間を超えるごとに660円加算）。冷暖房別（1階全面3,900円ほか）",
+          "note": "指定管理者（有限会社出水スポーツ）公式ページ掲載の現行料金表。区分は8時30分〜12時／12時〜17時／17時〜22時で、同ページの利用時間「午前8時30分から午後10時まで」を過不足なくカバーする。3区分の合計7,000円が1日分にあたる。別途消費税が加算される",
+          "sourceUrl": "https://izumi-spe.izumisports.com/%E5%87%BA%E6%B0%B4%E5%B8%82%E7%B7%8F%E5%90%88%E4%BD%93%E8%82%B2%E9%A4%A8/"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-201",
+          "spaceId": "izumi-sports-main",
+          "label": "総合体育館競技場・専用使用・入場料なしアマチュアスポーツ・3区分合計・08:30-22:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "08:30-22:00",
+          "amount": 7000,
+          "taxStatus": "excluded",
+          "derivationMethod": "sum_verified_components",
+          "componentPriceIds": [
+            "PRICE-3579",
+            "PRICE-3580",
+            "PRICE-3581"
+          ],
+          "componentQuantities": [
+            1,
+            1,
+            1
+          ],
+          "validFrom": null,
+          "exclusions": "照明施設利用料金別（専用使用は1時間以内660円、1時間を超えるごとに660円加算）。冷暖房別（1階全面3,900円ほか）",
+          "note": "指定管理者（有限会社出水スポーツ）公式ページ掲載の現行料金表。区分は8時30分〜12時／12時〜17時／17時〜22時で、同ページの利用時間「午前8時30分から午後10時まで」を過不足なくカバーする。3区分の合計7,000円が1日分にあたる。別途消費税が加算される。3区分を合計した1日分",
+          "sourceUrl": "https://izumi-spe.izumisports.com/%E5%87%BA%E6%B0%B4%E5%B8%82%E7%B7%8F%E5%90%88%E4%BD%93%E8%82%B2%E9%A4%A8/"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
@@ -189942,9 +190017,9 @@ export const venueData = {
       "sourceUrl": "https://www.city.ibusuki.lg.jp/main/fp/kyoiku/sports/shisetsu/page007020.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-08",
+      "observedAt": "2026-08-10",
       "detailCount": 5,
-      "priceCount": 0,
+      "priceCount": 3,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -189960,8 +190035,100 @@ export const venueData = {
       "practiceUse": "yes",
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3582",
+          "spaceId": "ibusuki-arena",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "08:30-22:00",
+          "amount": 1480,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "指宿総合体育館・専用使用（1時間）・入場料無料・スポーツ利用時・高校生以上・指宿市内",
+          "validFrom": null,
+          "exclusions": "照明料金別（アリーナ全面14セット1,720円/時）・空調料金別（アリーナ全面3,120円/時、全館使用6,600円/時）。照明料及び空調料金は30分毎に計算",
+          "note": "指宿市公式の体育施設（指宿地域）料金表PDF（令和8年4月1日〜）の「専用使用（1時間）」欄。指宿市体育施設条例 第4条の使用時間は「指宿総合体育館 午前8時30分から午後10時まで」（13.5時間）。PDFが多段組でテキスト抽出が崩れるため画像で目視確認した",
+          "sourceUrl": "https://www.city.ibusuki.lg.jp/main/uploads/sport/docs/%E4%BD%93%E8%82%B2%E6%96%BD%E8%A8%AD%EF%BC%88%E6%8C%87%E5%AE%BF%E5%9C%B0%E5%9F%9F%EF%BC%89%E3%81%AE%E4%BD%BF%E7%94%A8%E6%96%99.pdf"
+        },
+        {
+          "id": "PRICE-3583",
+          "spaceId": "ibusuki-arena",
+          "category": "facility",
+          "useCase": "general_outside_full",
+          "dayType": "all",
+          "timeBand": "08:30-22:00",
+          "amount": 2220,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "指宿総合体育館・専用使用（1時間）・入場料無料・スポーツ利用時・高校生以上・指宿市外",
+          "validFrom": null,
+          "exclusions": "照明料金別（アリーナ全面14セット1,720円/時）・空調料金別（アリーナ全面3,120円/時、全館使用6,600円/時）。照明料及び空調料金は30分毎に計算",
+          "note": "指宿市公式の体育施設（指宿地域）料金表PDF（令和8年4月1日〜）の「専用使用（1時間）」欄。指宿市体育施設条例 第4条の使用時間は「指宿総合体育館 午前8時30分から午後10時まで」（13.5時間）。PDFが多段組でテキスト抽出が崩れるため画像で目視確認した",
+          "sourceUrl": "https://www.city.ibusuki.lg.jp/main/uploads/sport/docs/%E4%BD%93%E8%82%B2%E6%96%BD%E8%A8%AD%EF%BC%88%E6%8C%87%E5%AE%BF%E5%9C%B0%E5%9F%9F%EF%BC%89%E3%81%AE%E4%BD%BF%E7%94%A8%E6%96%99.pdf"
+        },
+        {
+          "id": "PRICE-3584",
+          "spaceId": "ibusuki-arena",
+          "category": "facility",
+          "useCase": "amateur_sports_admission",
+          "dayType": "all",
+          "timeBand": "08:30-22:00",
+          "amount": 2770,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "指宿総合体育館・専用使用（1時間）・入場料有料・スポーツ利用時・指宿市内",
+          "validFrom": null,
+          "exclusions": "照明料金別（アリーナ全面14セット1,720円/時）・空調料金別（アリーナ全面3,120円/時、全館使用6,600円/時）。照明料及び空調料金は30分毎に計算",
+          "note": "指宿市公式の体育施設（指宿地域）料金表PDF（令和8年4月1日〜）の「専用使用（1時間）」欄。指宿市体育施設条例 第4条の使用時間は「指宿総合体育館 午前8時30分から午後10時まで」（13.5時間）。PDFが多段組でテキスト抽出が崩れるため画像で目視確認した",
+          "sourceUrl": "https://www.city.ibusuki.lg.jp/main/uploads/sport/docs/%E4%BD%93%E8%82%B2%E6%96%BD%E8%A8%AD%EF%BC%88%E6%8C%87%E5%AE%BF%E5%9C%B0%E5%9F%9F%EF%BC%89%E3%81%AE%E4%BD%BF%E7%94%A8%E6%96%99.pdf"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-202",
+          "spaceId": "ibusuki-arena",
+          "label": "アリーナ専用使用・入場料無料・スポーツ利用時・高校生以上・指宿市内・08:30-22:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "08:30-22:00",
+          "amount": 19980,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3582"
+          ],
+          "componentQuantities": [
+            13.5
+          ],
+          "validFrom": null,
+          "exclusions": "照明料金別（アリーナ全面14セット1,720円/時）・空調料金別（アリーナ全面3,120円/時、全館使用6,600円/時）。照明料及び空調料金は30分毎に計算",
+          "note": "指宿市公式の体育施設（指宿地域）料金表PDF（令和8年4月1日〜）の「専用使用（1時間）」欄。指宿市体育施設条例 第4条の使用時間は「指宿総合体育館 午前8時30分から午後10時まで」（13.5時間）。PDFが多段組でテキスト抽出が崩れるため画像で目視確認した。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.city.ibusuki.lg.jp/reiki_int/reiki_honbun/q711RG00000578.html"
+        },
+        {
+          "id": "SCENARIO-203",
+          "spaceId": "ibusuki-arena",
+          "label": "アリーナ専用使用・入場料無料・スポーツ利用時・高校生以上・指宿市外・08:30-22:00",
+          "useCase": "general_outside_full",
+          "dayType": "all",
+          "timeSpan": "08:30-22:00",
+          "amount": 29970,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3583"
+          ],
+          "componentQuantities": [
+            13.5
+          ],
+          "validFrom": null,
+          "exclusions": "照明料金別（アリーナ全面14セット1,720円/時）・空調料金別（アリーナ全面3,120円/時、全館使用6,600円/時）。照明料及び空調料金は30分毎に計算",
+          "note": "指宿市公式の体育施設（指宿地域）料金表PDF（令和8年4月1日〜）の「専用使用（1時間）」欄。指宿市体育施設条例 第4条の使用時間は「指宿総合体育館 午前8時30分から午後10時まで」（13.5時間）。PDFが多段組でテキスト抽出が崩れるため画像で目視確認した。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.city.ibusuki.lg.jp/reiki_int/reiki_honbun/q711RG00000578.html"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
