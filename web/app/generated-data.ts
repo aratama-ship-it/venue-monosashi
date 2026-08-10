@@ -3,25 +3,25 @@
 export const venueData = {
   "stats": {
     "historical": 225,
-    "venues": 1189,
-    "details": 7766,
-    "prices": 3419,
+    "venues": 1192,
+    "details": 7769,
+    "prices": 3422,
     "operations": 221,
-    "budgetScenarios": 142,
+    "budgetScenarios": 148,
     "candidateCoverage": {
-      "area": 612,
-      "capacity": 919,
+      "area": 615,
+      "capacity": 922,
       "ceiling": 112
     },
     "spaceCoverage": {
       "ceiling": 303,
-      "ceilingReference": 380
+      "ceilingReference": 381
     },
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 12139,
-      "venueObservationCount": 11548,
+      "observationCount": 12151,
+      "venueObservationCount": 11560,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -243059,6 +243059,363 @@ export const venueData = {
       "bestSpace": {
         "id": "iwaki-large",
         "name": "大体育館",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1191",
+      "region": "中部",
+      "prefecture": "新潟県",
+      "city": "新潟市東区",
+      "name": "東総合スポーツセンター",
+      "category": "arena_and_meetings",
+      "fitLevel": "B",
+      "strengths": "指定管理者（新潟市開発公社）公式ページはメインアリーナ1,826.82㎡、観覧席3,120席（固定席2,048・移動席1,056・車椅子16）、サブアリーナ816.09㎡と現行の1時間料金を掲載。開館は月〜土9時〜21時、日曜祝日と8月13日は9時〜17時",
+      "cautions": "天井高・床荷重・搬入寸法は要確認。特定天井改修工事は完了し2026年3月1日から通常利用再開",
+      "sourceUrl": "https://niigata-kaikou.jp/facility/413/outline",
+      "websiteUrl": "https://niigata-kaikou.jp/",
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 1,
+      "priceCount": 1,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": 2048,
+      "maxArea": 1826.82,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 0,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [
+        {
+          "id": "PRICE-3441",
+          "spaceId": "niigata-higashi-main",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "09:00-21:00",
+          "amount": 4720,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "メインアリーナ全面利用・一般・1時間",
+          "validFrom": null,
+          "exclusions": "冷房30,250円/時・暖房12,100円/時・照明全灯1,210円/時・放送設備730円/時 別。入場料徴収、スポーツ以外、営利利用は別料金だが金額不明",
+          "note": "指定管理者（新潟市開発公社）公式の現行料金。掲載の基本額は専用利用のスポーツ等・非営利・入場料なし。施設は日額を公表していない。開館時間は月〜土09:00-21:00、日曜祝日09:00-17:00",
+          "sourceUrl": "https://niigata-kaikou.jp/facility/413/price"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-144",
+          "spaceId": "niigata-higashi-main",
+          "label": "メインアリーナ全面・一般・スポーツ非営利入場料なし・月〜土09:00-21:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekday",
+          "timeSpan": "09:00-21:00",
+          "amount": 56640,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3441"
+          ],
+          "componentQuantities": [
+            12
+          ],
+          "validFrom": null,
+          "exclusions": "冷房30,250円/時・暖房12,100円/時・照明全灯1,210円/時・放送設備730円/時 別。入場料徴収、スポーツ以外、営利利用は別料金だが金額不明",
+          "note": "指定管理者（新潟市開発公社）公式の現行料金。掲載の基本額は専用利用のスポーツ等・非営利・入場料なし。施設は日額を公表していない。開館時間は月〜土09:00-21:00、日曜祝日09:00-17:00。土曜日も月〜土の開館時間が適用される。実際の予約時間で変動する目安",
+          "sourceUrl": "https://niigata-kaikou.jp/facility/413/price"
+        },
+        {
+          "id": "SCENARIO-145",
+          "spaceId": "niigata-higashi-main",
+          "label": "メインアリーナ全面・一般・スポーツ非営利入場料なし・日曜・祝日09:00-17:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekend_holiday",
+          "timeSpan": "09:00-17:00",
+          "amount": 37760,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3441"
+          ],
+          "componentQuantities": [
+            8
+          ],
+          "validFrom": null,
+          "exclusions": "冷房30,250円/時・暖房12,100円/時・照明全灯1,210円/時・放送設備730円/時 別。入場料徴収、スポーツ以外、営利利用は別料金だが金額不明",
+          "note": "指定管理者（新潟市開発公社）公式の現行料金。掲載の基本額は専用利用のスポーツ等・非営利・入場料なし。施設は日額を公表していない。開館時間は月〜土09:00-21:00、日曜祝日09:00-17:00。土曜日は月〜土の開館時間が適用されるため別途。実際の予約時間で変動する目安",
+          "sourceUrl": "https://niigata-kaikou.jp/facility/413/price"
+        }
+      ],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "niigata-higashi-main",
+          "name": "メインアリーナ",
+          "type": "arena",
+          "area": 1826.82,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": 2048,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://niigata-kaikou.jp/facility/413/outline",
+          "observedAt": "2026-08-10",
+          "note": "縦横は未公表。観覧席3,120席の内訳は固定2,048・移動1,056・車椅子16"
+        }
+      ],
+      "bestSpace": {
+        "id": "niigata-higashi-main",
+        "name": "メインアリーナ",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1192",
+      "region": "中部",
+      "prefecture": "新潟県",
+      "city": "新潟市江南区",
+      "name": "亀田総合体育館（アスパーク亀田）",
+      "category": "arena_and_meetings",
+      "fitLevel": "B",
+      "strengths": "指定管理者（新潟市開発公社）公式ページはメインアリーナ1,448㎡、2階観覧席（固定席）708席、屋内プール2,055㎡、トレーニングルーム295㎡と現行の1時間料金を掲載。開館は月〜土9時〜21時30分、日曜祝日と8月13日は9時〜18時",
+      "cautions": "天井高・床荷重・搬入寸法は要確認。冷房設備なし",
+      "sourceUrl": "https://niigata-kaikou.jp/facility/429/outline",
+      "websiteUrl": "https://niigata-kaikou.jp/",
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 1,
+      "priceCount": 1,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": 708,
+      "maxArea": 1448,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 0,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [
+        {
+          "id": "PRICE-3442",
+          "spaceId": "kameda-main",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "09:00-21:30",
+          "amount": 4240,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "大体育室（メインアリーナ）全面利用・一般・1時間",
+          "validFrom": null,
+          "exclusions": "暖房1,210円/時・照明設備1,210円/時・放送設備3,630円/回 別。冷房設備なし。入場料徴収、スポーツ以外、営利利用は別料金だが金額不明",
+          "note": "指定管理者（新潟市開発公社）公式の現行料金。掲載の基本額は専用利用のスポーツ等・非営利・入場料なし。施設は日額を公表していない。開館時間は月〜土09:00-21:30、日曜祝日09:00-18:00",
+          "sourceUrl": "https://niigata-kaikou.jp/facility/429/price"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-146",
+          "spaceId": "kameda-main",
+          "label": "大体育室（メインアリーナ）全面・一般・スポーツ非営利入場料なし・月〜土09:00-21:30",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekday",
+          "timeSpan": "09:00-21:30",
+          "amount": 53000,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3442"
+          ],
+          "componentQuantities": [
+            12.5
+          ],
+          "validFrom": null,
+          "exclusions": "暖房1,210円/時・照明設備1,210円/時・放送設備3,630円/回 別。冷房設備なし。入場料徴収、スポーツ以外、営利利用は別料金だが金額不明",
+          "note": "指定管理者（新潟市開発公社）公式の現行料金。掲載の基本額は専用利用のスポーツ等・非営利・入場料なし。施設は日額を公表していない。開館時間は月〜土09:00-21:30、日曜祝日09:00-18:00。土曜日も月〜土の開館時間が適用される。実際の予約時間で変動する目安",
+          "sourceUrl": "https://niigata-kaikou.jp/facility/429/price"
+        },
+        {
+          "id": "SCENARIO-147",
+          "spaceId": "kameda-main",
+          "label": "大体育室（メインアリーナ）全面・一般・スポーツ非営利入場料なし・日曜・祝日09:00-18:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekend_holiday",
+          "timeSpan": "09:00-18:00",
+          "amount": 38160,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3442"
+          ],
+          "componentQuantities": [
+            9
+          ],
+          "validFrom": null,
+          "exclusions": "暖房1,210円/時・照明設備1,210円/時・放送設備3,630円/回 別。冷房設備なし。入場料徴収、スポーツ以外、営利利用は別料金だが金額不明",
+          "note": "指定管理者（新潟市開発公社）公式の現行料金。掲載の基本額は専用利用のスポーツ等・非営利・入場料なし。施設は日額を公表していない。開館時間は月〜土09:00-21:30、日曜祝日09:00-18:00。土曜日は月〜土の開館時間が適用されるため別途。実際の予約時間で変動する目安",
+          "sourceUrl": "https://niigata-kaikou.jp/facility/429/price"
+        }
+      ],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "kameda-main",
+          "name": "大体育室（メインアリーナ）",
+          "type": "arena",
+          "area": 1448,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": 708,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://niigata-kaikou.jp/facility/429/outline",
+          "observedAt": "2026-08-10",
+          "note": "料金表では「大体育室」、施設概要では「メインアリーナ」と表記"
+        }
+      ],
+      "bestSpace": {
+        "id": "kameda-main",
+        "name": "大体育室（メインアリーナ）",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1193",
+      "region": "中部",
+      "prefecture": "新潟県",
+      "city": "新潟市中央区",
+      "name": "鳥屋野総合体育館",
+      "category": "arena_and_meetings",
+      "fitLevel": "B",
+      "strengths": "指定管理者（新潟市開発公社）公式ページは大体育室1,373㎡（縦38.8m×横35.4m×天井高13.9m）、2階観覧席固定821席・1階可動席678席・車椅子12席・立見220席、中体育室602.26㎡と現行の1時間料金を掲載。開館は月〜土9時〜21時、日曜祝日は9時〜17時",
+      "cautions": "床荷重・搬入寸法は要確認",
+      "sourceUrl": "https://niigata-kaikou.jp/facility/420/outline",
+      "websiteUrl": "https://niigata-kaikou.jp/",
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 1,
+      "priceCount": 1,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": 821,
+      "maxArea": 1373,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 1,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [
+        {
+          "id": "PRICE-3443",
+          "spaceId": "toyano-main",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "09:00-21:00",
+          "amount": 4240,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "大体育室全面利用・一般・1時間",
+          "validFrom": null,
+          "exclusions": "暖房アリーナ4,240円/時・観覧席2,420円/時・照明全灯1,210円/時 別。入場料徴収、スポーツ以外、営利利用は別料金だが金額不明",
+          "note": "指定管理者（新潟市開発公社）公式の現行料金。掲載の基本額は専用利用のスポーツ等・非営利・入場料なし。施設は日額を公表していない。開館時間は月〜土09:00-21:00、日曜祝日09:00-17:00",
+          "sourceUrl": "https://niigata-kaikou.jp/facility/420/price"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-148",
+          "spaceId": "toyano-main",
+          "label": "大体育室全面・一般・スポーツ非営利入場料なし・月〜土09:00-21:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekday",
+          "timeSpan": "09:00-21:00",
+          "amount": 50880,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3443"
+          ],
+          "componentQuantities": [
+            12
+          ],
+          "validFrom": null,
+          "exclusions": "暖房アリーナ4,240円/時・観覧席2,420円/時・照明全灯1,210円/時 別。入場料徴収、スポーツ以外、営利利用は別料金だが金額不明",
+          "note": "指定管理者（新潟市開発公社）公式の現行料金。掲載の基本額は専用利用のスポーツ等・非営利・入場料なし。施設は日額を公表していない。開館時間は月〜土09:00-21:00、日曜祝日09:00-17:00。土曜日も月〜土の開館時間が適用される。実際の予約時間で変動する目安",
+          "sourceUrl": "https://niigata-kaikou.jp/facility/420/price"
+        },
+        {
+          "id": "SCENARIO-149",
+          "spaceId": "toyano-main",
+          "label": "大体育室全面・一般・スポーツ非営利入場料なし・日曜・祝日09:00-17:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekend_holiday",
+          "timeSpan": "09:00-17:00",
+          "amount": 33920,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3443"
+          ],
+          "componentQuantities": [
+            8
+          ],
+          "validFrom": null,
+          "exclusions": "暖房アリーナ4,240円/時・観覧席2,420円/時・照明全灯1,210円/時 別。入場料徴収、スポーツ以外、営利利用は別料金だが金額不明",
+          "note": "指定管理者（新潟市開発公社）公式の現行料金。掲載の基本額は専用利用のスポーツ等・非営利・入場料なし。施設は日額を公表していない。開館時間は月〜土09:00-21:00、日曜祝日09:00-17:00。土曜日は月〜土の開館時間が適用されるため別途。実際の予約時間で変動する目安",
+          "sourceUrl": "https://niigata-kaikou.jp/facility/420/price"
+        }
+      ],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "toyano-main",
+          "name": "大体育室",
+          "type": "arena",
+          "area": 1373,
+          "ceiling": null,
+          "ceilingReference": 13.9,
+          "ceilingType": "nominal_review",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": 821,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://niigata-kaikou.jp/facility/420/outline",
+          "observedAt": "2026-08-10",
+          "note": "縦38.8m×横35.4m×天井高13.9m。1階可動席678席・2階固定席821席・車椅子12席・立見220席"
+        }
+      ],
+      "bestSpace": {
+        "id": "toyano-main",
+        "name": "大体育室",
         "type": "arena"
       }
     }

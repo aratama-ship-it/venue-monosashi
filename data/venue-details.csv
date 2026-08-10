@@ -7765,3 +7765,6 @@ DETAIL-7764,CAND-1190,iwaki-large,大体育館,arena,2090.8,,,unknown,unknown,,2
 DETAIL-7765,CAND-1190,iwaki-small,小体育館,arena,859.3,,,unknown,unknown,,,,two_way,none,yes,unknown,https://iwakicity-park.or.jp/kamiarakawa/kamiarakawa_taiikukan/,2026-08-10,verified,一部専用使用は2分の1相当額
 DETAIL-7766,CAND-1190,iwaki-judo,柔道場,dojo,358,,,unknown,unknown,,,,unknown,none,yes,unknown,https://iwakicity-park.or.jp/kamiarakawa/kamiarakawa_taiikukan/,2026-08-10,verified,
 DETAIL-7767,CAND-1190,iwaki-kendo,剣道場,dojo,358,,,unknown,unknown,,,,unknown,none,yes,unknown,https://iwakicity-park.or.jp/kamiarakawa/kamiarakawa_taiikukan/,2026-08-10,verified,
+DETAIL-7768,CAND-1191,niigata-higashi-main,メインアリーナ,arena,1826.82,,,unknown,unknown,,2048,,two_way,none,yes,unknown,https://niigata-kaikou.jp/facility/413/outline,2026-08-10,verified,"縦横は未公表。観覧席3,120席の内訳は固定2,048・移動1,056・車椅子16"
+DETAIL-7769,CAND-1192,kameda-main,大体育室（メインアリーナ）,arena,1448,,,unknown,unknown,,708,,two_way,none,yes,unknown,https://niigata-kaikou.jp/facility/429/outline,2026-08-10,verified,料金表では「大体育室」、施設概要では「メインアリーナ」と表記
+DETAIL-7770,CAND-1193,toyano-main,大体育室,arena,1373,13.9,,nominal_review,unknown,,821,,two_way,none,yes,unknown,https://niigata-kaikou.jp/facility/420/outline,2026-08-10,verified,縦38.8m×横35.4m×天井高13.9m。1階可動席678席・2階固定席821席・車椅子12席・立見220席
