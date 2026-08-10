@@ -3,14 +3,14 @@
 export const venueData = {
   "stats": {
     "historical": 225,
-    "venues": 1178,
-    "details": 7735,
-    "prices": 3307,
-    "operations": 222,
-    "budgetScenarios": 105,
+    "venues": 1177,
+    "details": 7734,
+    "prices": 3302,
+    "operations": 221,
+    "budgetScenarios": 104,
     "candidateCoverage": {
-      "area": 606,
-      "capacity": 911,
+      "area": 605,
+      "capacity": 910,
       "ceiling": 112
     },
     "spaceCoverage": {
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 11960,
-      "venueObservationCount": 11369,
+      "observationCount": 11952,
+      "venueObservationCount": 11361,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -3725,10 +3725,10 @@ export const venueData = {
       "prefecture": "青森県",
       "city": "青森市",
       "name": "マエダアリーナ（新青森県総合運動公園）",
-      "category": "arena_and_meetings",
-      "fitLevel": "B",
+      "category": "arena_and_entertainment",
+      "fitLevel": "A",
       "strengths": "運営者の公式案内はメイン競技フロア3,910㎡・固定3,368席・天井14.5〜23.1m、スポーツ・展示会・コンサート利用と現行料金を掲載",
-      "cautions": "旧名称は青い森アリーナ。オカでんアリーナは青森市合浦の別施設であり本候補には含めない。2026年7月13日〜11月6日は国スポ障スポのためメインアリーナ一般利用不可。固定舞台、催事専有回線は要確認",
+      "cautions": "旧名称は青い森アリーナ。オカでんアリーナは青森市合浦の別施設であり本候補には含めない。2026年7月13日〜11月6日は国スポ障スポのためメインアリーナ一般利用不可。固定舞台、催事専有回線は要確認。重複候補だったCAND-139（同一のマエダアリーナ）を2026-08-10に統合。天井高は14.5〜23.1mの範囲であるため単一比較値にしない。最大収容人数、床荷重、搬入寸法は要確認",
       "sourceUrl": "https://aomori-sportspark.jp/new_athletic_park/mainarena/",
       "websiteUrl": "https://aomori-sportspark.jp/",
       "officialLinks": [],
@@ -3883,13 +3883,13 @@ export const venueData = {
           ],
           "validFrom": null,
           "exclusions": "営利・非スポーツ用途は主催者向け料金表",
-          "note": "施設は日額を公表していない。公式ページの営業時間9:00〜21:00（12時間）×税込5,210円/時から算出した目安。実際の予約時間で変動する。※CAND-139と同一施設の重複候補（統合は承認待ち）",
+          "note": "施設は日額を公表していない。公式ページの営業時間9:00〜21:00（12時間）×税込5,210円/時から算出した目安。実際の予約時間で変動する",
           "sourceUrl": "https://aomori-sportspark.jp/new_athletic_park/mainarena/"
         }
       ],
       "operation": {
         "station": "新総合運動公園前バス停",
-        "walkMinutes": null,
+        "walkMinutes": 0,
         "stationAccess": "青森駅東口2番のりばから市バスで約45分、正面ロータリー着。新青森駅から青森駅乗換えで約50分",
         "airportAccess": "青森空港から車で約45分",
         "parkingSpaces": null,
@@ -28943,180 +28943,6 @@ export const venueData = {
       "bestSpace": {
         "id": "sapporo46-main",
         "name": "アリーナ",
-        "type": "arena"
-      }
-    },
-    {
-      "id": "CAND-139",
-      "region": "東北",
-      "prefecture": "青森県",
-      "city": "青森市",
-      "name": "マエダアリーナ（新青森県総合運動公園 総合体育館）",
-      "category": "arena_and_entertainment",
-      "fitLevel": "A",
-      "strengths": "青森県・指定管理者の公式案内はメイン競技フロア3,910㎡・天井14.5〜23.1m・固定3,368席・冷暖房、展示会・コンサート等の文化イベント対応、現行の貸切料金と利用資料を掲載",
-      "cautions": "天井高は範囲であるため単一比較値にせず記録。最大収容人数、床荷重、搬入寸法、投擲、催事専有回線、空き状況は要確認",
-      "sourceUrl": "https://aomori-sportspark.jp/new_athletic_park/mainarena/",
-      "websiteUrl": "https://aomori-sportspark.jp/",
-      "officialLinks": [],
-      "observedAt": "2026-08-09",
-      "detailCount": 1,
-      "priceCount": 5,
-      "operationCount": 1,
-      "historicalCompletedCount": 0,
-      "historicalPlannedCount": 0,
-      "historicalSeries": [],
-      "historicalEventIds": [],
-      "maxCapacity": 3368,
-      "maxArea": 3910,
-      "maxCeiling": null,
-      "ceilingReferenceCount": 0,
-      "filterableCeilingCount": 0,
-      "maxFloorLoad": null,
-      "hasFixedStage": false,
-      "practiceUse": "conditional",
-      "streamingReady": "unknown",
-      "minDailyFacilityPrice": null,
-      "priceObservations": [
-        {
-          "id": "PRICE-376",
-          "spaceId": "maeda-main",
-          "category": "facility",
-          "useCase": "amateur_sports",
-          "dayType": "all",
-          "timeBand": "per_hour",
-          "amount": 5210,
-          "taxStatus": "included",
-          "unit": "per_hour",
-          "basis": "メインアリーナ全面・貸切・スポーツ・非営利",
-          "validFrom": null,
-          "exclusions": "営利・非スポーツ用途は主催者向け料金表",
-          "note": "指定管理者公式ページで税込5,210円/時間を直接確認。利用前支払と主催者資料を別公式ページで案内",
-          "sourceUrl": "https://aomori-sportspark.jp/new_athletic_park/mainarena/"
-        },
-        {
-          "id": "PRICE-496",
-          "spaceId": "maeda-main",
-          "category": "lighting",
-          "useCase": "all",
-          "dayType": "all",
-          "timeBand": "per_hour",
-          "amount": 1270,
-          "taxStatus": "included",
-          "unit": "per_hour",
-          "basis": "メインアリーナ全面照明",
-          "validFrom": null,
-          "exclusions": "基本使用料・冷暖房・大型映像装置等の別料金",
-          "note": "指定管理者公式HTML料金表で税込1,270円/時間を確認",
-          "sourceUrl": "https://aomori-sportspark.jp/info/charge/"
-        },
-        {
-          "id": "PRICE-497",
-          "spaceId": "maeda-main",
-          "category": "hvac",
-          "useCase": "all",
-          "dayType": "all",
-          "timeBand": "per_hour",
-          "amount": 3200,
-          "taxStatus": "included",
-          "unit": "per_hour",
-          "basis": "メインアリーナ暖房・競技会等・スタンド利用",
-          "validFrom": null,
-          "exclusions": "基本使用料・照明・器具等の別料金",
-          "note": "指定管理者公式HTML料金表で税込3,200円/時間を確認",
-          "sourceUrl": "https://aomori-sportspark.jp/info/charge/"
-        },
-        {
-          "id": "PRICE-498",
-          "spaceId": "maeda-main",
-          "category": "hvac",
-          "useCase": "all",
-          "dayType": "all",
-          "timeBand": "per_hour",
-          "amount": 3500,
-          "taxStatus": "included",
-          "unit": "per_hour",
-          "basis": "メインアリーナ冷房・競技会等・スタンド利用",
-          "validFrom": null,
-          "exclusions": "基本使用料・照明・器具等の別料金",
-          "note": "指定管理者公式HTML料金表で税込3,500円/時間を確認",
-          "sourceUrl": "https://aomori-sportspark.jp/info/charge/"
-        },
-        {
-          "id": "PRICE-499",
-          "spaceId": "maeda-main",
-          "category": "video",
-          "useCase": "all",
-          "dayType": "all",
-          "timeBand": "per_hour",
-          "amount": 2540,
-          "taxStatus": "included",
-          "unit": "per_hour",
-          "basis": "大型映像装置",
-          "validFrom": null,
-          "exclusions": "基本使用料・照明・冷暖房・その他設備等の別料金",
-          "note": "指定管理者公式HTML料金表で税込2,540円/時間を確認",
-          "sourceUrl": "https://aomori-sportspark.jp/info/charge/"
-        }
-      ],
-      "budgetScenarios": [
-        {
-          "id": "SCENARIO-035",
-          "spaceId": "maeda-main",
-          "label": "メインアリーナ全面・スポーツ非営利・営業時間9〜21時",
-          "useCase": "amateur_sports",
-          "dayType": "all",
-          "timeSpan": "09:00-21:00",
-          "amount": 62520,
-          "taxStatus": "included",
-          "derivationMethod": "hourly_rate_times_published_hours",
-          "componentPriceIds": [
-            "PRICE-376"
-          ],
-          "componentQuantities": [
-            12
-          ],
-          "validFrom": null,
-          "exclusions": "営利・非スポーツ用途は主催者向け料金表",
-          "note": "施設は日額を公表していない。公式ページの営業時間9:00〜21:00（12時間）×税込5,210円/時から算出した目安。実際の予約時間で変動する",
-          "sourceUrl": "https://aomori-sportspark.jp/new_athletic_park/mainarena/"
-        }
-      ],
-      "operation": {
-        "station": "新総合運動公園前バス停",
-        "walkMinutes": 0,
-        "stationAccess": "新青森駅から青森駅経由の電車・バスで約40〜50分、青森駅から市バスで約45分。新総合運動公園前下車で正面ロータリー到着",
-        "airportAccess": "青森空港から車で約45分",
-        "parkingSpaces": 1015,
-        "largeVehicleAccess": "yes",
-        "loadingAccess": "unknown",
-        "bookingOpenMonths": null,
-        "setupPolicy": "次年度大会・イベントの貸切調整案内は例年11月頃。年度途中貸切は空き状況に応じ電話または窓口で予約し、予約後1週間以内に申請書を提出。利用1か月前を目安に施設職員と打合せ",
-        "networkPolicy": "unknown",
-        "note": "マエダアリーナ最寄りは第1普通671台、第2普通314台・身障者30台、大型11台。園内駐車場は無料だが催事・競技会の占用は有料。2026年国スポ・障スポ期間に施設利用制限あり。搬入、飲食、物販、催事専有回線、連続利用は要確認"
-      },
-      "spaces": [
-        {
-          "id": "maeda-main",
-          "name": "メインアリーナ",
-          "type": "arena",
-          "area": 3910,
-          "ceiling": null,
-          "ceilingReference": null,
-          "ceilingType": "unknown",
-          "overheadUseStatus": "unknown",
-          "capacityTheater": 3368,
-          "capacityFixed": 3368,
-          "stageType": "",
-          "practiceUse": "conditional",
-          "sourceUrl": "https://aomori-sportspark.jp/new_athletic_park/mainarena/",
-          "observedAt": "2026-08-04",
-          "note": "指定管理者公式ページで64m×46m（3,910㎡）、天井14.5〜23.1m、固定3,368席を確認。天井高は範囲のため空欄とし注記に保持。最大収容人数、床荷重、投擲、搬入寸法は未観測"
-        }
-      ],
-      "bestSpace": {
-        "id": "maeda-main",
-        "name": "メインアリーナ",
         "type": "arena"
       }
     },

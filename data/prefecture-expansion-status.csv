@@ -1,9 +1,9 @@
 prefecture,region,candidate_count,municipality_count,space_count,capacity_known_count,area_known_count,ceiling_known_count,candidate_gap,municipality_gap,space_gap,status
 北海道,北海道,25,19,168,46,71,2,0,0,0,reference_depth
-青森県,東北,25,18,186,89,101,2,0,0,0,reference_depth
-岩手県,東北,25,23,162,41,36,0,0,0,0,reference_depth
+青森県,東北,24,18,185,88,100,2,1,0,0,expanding
+岩手県,東北,25,23,167,41,36,0,0,0,0,reference_depth
 宮城県,東北,25,16,224,128,146,6,0,0,0,reference_depth
-秋田県,東北,25,23,135,26,26,0,0,0,0,reference_depth
+秋田県,東北,25,23,139,26,26,0,0,0,0,reference_depth
 山形県,東北,25,21,145,63,71,3,0,0,0,reference_depth
 福島県,東北,25,16,158,80,44,6,0,0,0,reference_depth
 茨城県,関東,25,20,188,112,113,2,0,0,0,reference_depth
@@ -30,12 +30,12 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 奈良県,近畿,25,19,208,111,82,6,0,0,0,reference_depth
 和歌山県,近畿,25,20,99,35,37,0,0,0,0,reference_depth
 鳥取県,中国,25,18,160,79,71,2,0,0,0,reference_depth
-島根県,中国,25,15,133,69,50,3,0,0,0,reference_depth
+島根県,中国,25,15,134,69,50,3,0,0,0,reference_depth
 岡山県,中国,25,17,150,46,64,3,0,0,0,reference_depth
 広島県,中国,25,18,105,56,41,5,0,0,0,reference_depth
 山口県,中国,25,18,188,104,97,2,0,0,0,reference_depth
 徳島県,四国,25,18,123,52,40,1,0,0,0,reference_depth
-香川県,四国,25,17,156,57,73,0,0,0,0,reference_depth
+香川県,四国,25,17,157,57,73,0,0,0,0,reference_depth
 愛媛県,四国,25,16,175,70,77,1,0,0,0,reference_depth
 高知県,四国,25,18,142,63,71,1,0,0,0,reference_depth
 福岡県,九州,25,15,250,122,133,12,0,0,0,reference_depth

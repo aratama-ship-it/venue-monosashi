@@ -28,6 +28,7 @@ prefecture,region,stage_venues,stage_priced,stage_gap,stage_reachable,sports_ven
 埼玉県,関東,23,5,0,met,5,2,3,yes
 熊本県,九州,20,4,1,yes,9,3,2,yes
 沖縄県,沖縄,23,5,0,met,8,2,3,yes
+青森県,東北,18,6,0,met,9,2,3,yes
 秋田県,東北,18,5,0,met,6,2,3,yes
 千葉県,関東,21,4,1,yes,7,3,2,yes
 神奈川県,関東,19,5,0,met,7,2,3,yes
@@ -36,7 +37,6 @@ prefecture,region,stage_venues,stage_priced,stage_gap,stage_reachable,sports_ven
 新潟県,甲信越,24,5,0,met,6,3,2,yes
 福岡県,九州,22,5,0,met,6,3,2,yes
 長崎県,九州,23,4,1,yes,9,4,1,yes
-青森県,東北,18,6,0,met,10,3,2,yes
 岩手県,東北,20,5,0,met,10,3,2,yes
 広島県,中国,18,3,2,yes,10,5,0,met
 佐賀県,九州,20,4,1,yes,12,4,1,yes
