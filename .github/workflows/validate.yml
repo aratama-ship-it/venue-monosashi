@@ -31,6 +31,15 @@ jobs:
       - run: npm ci
         working-directory: web
 
+      # macOSで生成した package-lock.json では、Linux用のネイティブバイナリが
+      # optional依存として記録されていても npm ci が拾わないことがある。
+      # 拾えていれば再インストールは一瞬で終わるので、無条件に入れておく。
+      # これがないと vinext build が
+      # 「Cannot find module '../lightningcss.linux-x64-gnu.node'」で落ちる。
+      - name: Install Linux native binaries that npm ci may skip
+        run: npm install --no-save --no-package-lock lightningcss-linux-x64-gnu @rolldown/binding-linux-x64-gnu
+        working-directory: web
+
       - run: npm run audit
 
       - run: npm run lint
