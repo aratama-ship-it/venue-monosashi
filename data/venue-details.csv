@@ -7810,3 +7810,8 @@ DETAIL-7809,CAND-1220,tsuruoka-arena,アリーナ,arena,,,,unknown,unknown,,,,un
 DETAIL-7810,CAND-1221,yokote-arena1,第1アリーナ,arena,,,,unknown,unknown,,,,three_way,none,yes,unknown,https://yokote-sports.jp/fee,2026-08-10,verified,全面/2・3面/1・3面で貸出
 DETAIL-7811,CAND-1222,kazuno-large,大体育場,arena,,,,unknown,unknown,,,,two_way,none,yes,unknown,https://www.ink.or.jp/~kazuno-sports/spocen.html,2026-08-10,verified,2分の1以下の利用は半額
 DETAIL-7812,CAND-1223,yuzawa-arena,アリーナ,arena,,,,unknown,unknown,,,,four_way,none,yes,unknown,https://www.city-yuzawa.jp/soshiki/85/481.html,2026-08-10,verified,全面/半面/4分の1面で貸出
+DETAIL-7813,CAND-1224,echizen-main,メインアリーナ,arena,,,,unknown,unknown,,,,three_way,none,yes,unknown,https://www.takefucenterpark-arena.jp/facilities/pdf/price.pdf,2026-08-10,verified,2分の1・3分の1の部分使用あり（10円未満切捨）
+DETAIL-7814,CAND-1224,echizen-sub,サブアリーナ,arena,,,,unknown,unknown,,,,two_way,none,yes,unknown,https://www.takefucenterpark-arena.jp/facilities/pdf/price.pdf,2026-08-10,verified,
+DETAIL-7815,CAND-1225,katsuyama-arena,アリーナ,arena,,,,unknown,unknown,,1000,,three_way,none,yes,unknown,https://www.city.katsuyama.fukui.jp/site/geoarena/13173.html,2026-08-10,verified,"観客席1,000席。全面/半面/3分の1面/バドミントンコート1面で貸出"
+DETAIL-7816,CAND-1226,tsuruga-court1,第1競技場,arena,1976,,,unknown,unknown,,1682,,two_way,none,yes,unknown,https://www.city.tsuruga.lg.jp/page/1499.html,2026-08-10,verified,"バスケットボールコート2面分。固定観覧席1,682席・移動観覧席882席・走路"
+DETAIL-7817,CAND-1226,tsuruga-court2,第2競技場,arena,608,,,unknown,unknown,,,,unknown,none,yes,unknown,https://www.city.tsuruga.lg.jp/page/1499.html,2026-08-10,verified,バスケットボールコート1面分

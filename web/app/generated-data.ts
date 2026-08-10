@@ -3,14 +3,14 @@
 export const venueData = {
   "stats": {
     "historical": 225,
-    "venues": 1222,
-    "details": 7811,
-    "prices": 3497,
+    "venues": 1225,
+    "details": 7816,
+    "prices": 3506,
     "operations": 221,
-    "budgetScenarios": 171,
+    "budgetScenarios": 176,
     "candidateCoverage": {
-      "area": 624,
-      "capacity": 936,
+      "area": 625,
+      "capacity": 938,
       "ceiling": 112
     },
     "spaceCoverage": {
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 12291,
-      "venueObservationCount": 11700,
+      "observationCount": 12310,
+      "venueObservationCount": 11719,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -247145,6 +247145,480 @@ export const venueData = {
       "bestSpace": {
         "id": "yuzawa-arena",
         "name": "アリーナ",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1224",
+      "region": "中部",
+      "prefecture": "福井県",
+      "city": "越前市",
+      "name": "越前市アイシンスポーツアリーナ",
+      "category": "arena_and_meetings",
+      "fitLevel": "B",
+      "strengths": "指定管理者公式の料金PDFはメインアリーナ専用使用の1時間額を平日9-17時／平日17-22時／土日休9-22時の3列で掲載。金額には器具及び照明使用に係る費用を含む",
+      "cautions": "メインアリーナの面積・席数は今回参照したPDFでは確認できず未記録。越前市住民以外（学生を除く）は5割増。アマチュアで入場料ありは5倍、スポーツ以外は10倍（入場料ありは15倍）、営利目的は20倍",
+      "sourceUrl": "https://www.takefucenterpark-arena.jp/facilities/arena.html",
+      "websiteUrl": "https://www.takefucenterpark-arena.jp/",
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 2,
+      "priceCount": 3,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": null,
+      "maxArea": null,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 0,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [
+        {
+          "id": "PRICE-3521",
+          "spaceId": "echizen-main",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekday",
+          "timeBand": "09:00-17:00",
+          "amount": 1500,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "メインアリーナ専用使用・平日 午前9時から午後5時まで・1時間につき",
+          "validFrom": null,
+          "exclusions": "冷暖房の別建て記載なし。越前市住民以外（学生を除く）は5割増。アマチュアで入場料ありは5倍、スポーツ以外は10倍（入場料ありは15倍）、営利目的は20倍",
+          "note": "指定管理者公式の料金PDF掲載の現行使用料。メインアリーナ専用使用は「1時間につき」。金額には器具及び照明使用に係る費用を含む。利用可能時間は9:00〜22:00",
+          "sourceUrl": "https://www.takefucenterpark-arena.jp/facilities/pdf/price.pdf"
+        },
+        {
+          "id": "PRICE-3522",
+          "spaceId": "echizen-main",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekday",
+          "timeBand": "17:00-22:00",
+          "amount": 2000,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "メインアリーナ専用使用・平日 午後5時から午後10時まで・1時間につき",
+          "validFrom": null,
+          "exclusions": "冷暖房の別建て記載なし。越前市住民以外（学生を除く）は5割増。アマチュアで入場料ありは5倍、スポーツ以外は10倍（入場料ありは15倍）、営利目的は20倍",
+          "note": "指定管理者公式の料金PDF掲載の現行使用料。メインアリーナ専用使用は「1時間につき」。金額には器具及び照明使用に係る費用を含む。利用可能時間は9:00〜22:00",
+          "sourceUrl": "https://www.takefucenterpark-arena.jp/facilities/pdf/price.pdf"
+        },
+        {
+          "id": "PRICE-3523",
+          "spaceId": "echizen-main",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekend_holiday",
+          "timeBand": "09:00-22:00",
+          "amount": 2000,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "メインアリーナ専用使用・土曜日日曜日休日 午前9時から午後10時まで・1時間につき",
+          "validFrom": null,
+          "exclusions": "冷暖房の別建て記載なし。越前市住民以外（学生を除く）は5割増。アマチュアで入場料ありは5倍、スポーツ以外は10倍（入場料ありは15倍）、営利目的は20倍",
+          "note": "指定管理者公式の料金PDF掲載の現行使用料。メインアリーナ専用使用は「1時間につき」。金額には器具及び照明使用に係る費用を含む。利用可能時間は9:00〜22:00",
+          "sourceUrl": "https://www.takefucenterpark-arena.jp/facilities/pdf/price.pdf"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-174",
+          "spaceId": "echizen-main",
+          "label": "メインアリーナ専用使用・平日・09:00-22:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekday",
+          "timeSpan": "09:00-22:00",
+          "amount": 22000,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3521",
+            "PRICE-3522"
+          ],
+          "componentQuantities": [
+            8,
+            5
+          ],
+          "validFrom": null,
+          "exclusions": "冷暖房の別建て記載なし。越前市住民以外（学生を除く）は5割増。アマチュアで入場料ありは5倍、スポーツ以外は10倍（入場料ありは15倍）、営利目的は20倍",
+          "note": "指定管理者公式の料金PDF掲載の現行使用料。メインアリーナ専用使用は「1時間につき」。金額には器具及び照明使用に係る費用を含む。利用可能時間は9:00〜22:00。9-17時の8時間と17-22時の5時間を積み上げた目安",
+          "sourceUrl": "https://www.takefucenterpark-arena.jp/facilities/pdf/price.pdf"
+        },
+        {
+          "id": "SCENARIO-175",
+          "spaceId": "echizen-main",
+          "label": "メインアリーナ専用使用・土日休日・09:00-22:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekend_holiday",
+          "timeSpan": "09:00-22:00",
+          "amount": 26000,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3523"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "冷暖房の別建て記載なし。越前市住民以外（学生を除く）は5割増。アマチュアで入場料ありは5倍、スポーツ以外は10倍（入場料ありは15倍）、営利目的は20倍",
+          "note": "指定管理者公式の料金PDF掲載の現行使用料。メインアリーナ専用使用は「1時間につき」。金額には器具及び照明使用に係る費用を含む。利用可能時間は9:00〜22:00",
+          "sourceUrl": "https://www.takefucenterpark-arena.jp/facilities/pdf/price.pdf"
+        }
+      ],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "echizen-main",
+          "name": "メインアリーナ",
+          "type": "arena",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.takefucenterpark-arena.jp/facilities/pdf/price.pdf",
+          "observedAt": "2026-08-10",
+          "note": "2分の1・3分の1の部分使用あり（10円未満切捨）"
+        },
+        {
+          "id": "echizen-sub",
+          "name": "サブアリーナ",
+          "type": "arena",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.takefucenterpark-arena.jp/facilities/pdf/price.pdf",
+          "observedAt": "2026-08-10",
+          "note": null
+        }
+      ],
+      "bestSpace": {
+        "id": "echizen-main",
+        "name": "メインアリーナ",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1225",
+      "region": "中部",
+      "prefecture": "福井県",
+      "city": "勝山市",
+      "name": "勝山市体育館ジオアリーナ",
+      "category": "arena_and_meetings",
+      "fitLevel": "B",
+      "strengths": "勝山市公式ページは観客席1,000席と、アリーナの平日9時〜19時／平日19時〜21時30分／土日祝9時〜21時30分の料金を掲載。「使用料は1時間あたりの料金となります」と明記",
+      "cautions": "アリーナの面積は今回参照したページでは確認できず未記録。市外の方は使用料金が異なるとあるが金額・倍率は不明。シャワーは1〜3月使用不可",
+      "sourceUrl": "https://www.city.katsuyama.fukui.jp/site/geoarena/13173.html",
+      "websiteUrl": null,
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 1,
+      "priceCount": 3,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": 1000,
+      "maxArea": null,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 0,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [
+        {
+          "id": "PRICE-3524",
+          "spaceId": "katsuyama-arena",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "weekday",
+          "timeBand": "09:00-19:00",
+          "amount": 1800,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "アリーナ全面・平日 9時〜19時・1時間あたり",
+          "validFrom": null,
+          "exclusions": "空調別（1階アリーナ1,730円/時・2階観覧席1,730円/時）。市外の方は使用料金が異なるが金額は不明",
+          "note": "勝山市公式ページ掲載の現行使用料。「使用料は1時間あたりの料金となります」と明記。平日は9時〜19時と19時〜21時30分で単価が異なり、土日祝は9時〜21時30分が一律",
+          "sourceUrl": "https://www.city.katsuyama.fukui.jp/site/geoarena/13173.html"
+        },
+        {
+          "id": "PRICE-3525",
+          "spaceId": "katsuyama-arena",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "weekday",
+          "timeBand": "19:00-21:30",
+          "amount": 3720,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "アリーナ全面・平日 19時〜21時30分・1時間あたり",
+          "validFrom": null,
+          "exclusions": "空調別（1階アリーナ1,730円/時・2階観覧席1,730円/時）。市外の方は使用料金が異なるが金額は不明",
+          "note": "勝山市公式ページ掲載の現行使用料。「使用料は1時間あたりの料金となります」と明記。平日は9時〜19時と19時〜21時30分で単価が異なり、土日祝は9時〜21時30分が一律",
+          "sourceUrl": "https://www.city.katsuyama.fukui.jp/site/geoarena/13173.html"
+        },
+        {
+          "id": "PRICE-3526",
+          "spaceId": "katsuyama-arena",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "weekend_holiday",
+          "timeBand": "09:00-21:30",
+          "amount": 3720,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "アリーナ全面・土日祝 9時〜21時30分・1時間あたり",
+          "validFrom": null,
+          "exclusions": "空調別（1階アリーナ1,730円/時・2階観覧席1,730円/時）。市外の方は使用料金が異なるが金額は不明",
+          "note": "勝山市公式ページ掲載の現行使用料。「使用料は1時間あたりの料金となります」と明記。平日は9時〜19時と19時〜21時30分で単価が異なり、土日祝は9時〜21時30分が一律",
+          "sourceUrl": "https://www.city.katsuyama.fukui.jp/site/geoarena/13173.html"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-176",
+          "spaceId": "katsuyama-arena",
+          "label": "アリーナ全面・平日・09:00-21:30",
+          "useCase": "all",
+          "dayType": "weekday",
+          "timeSpan": "09:00-21:30",
+          "amount": 27300,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3524",
+            "PRICE-3525"
+          ],
+          "componentQuantities": [
+            10,
+            2.5
+          ],
+          "validFrom": null,
+          "exclusions": "空調別（1階アリーナ1,730円/時・2階観覧席1,730円/時）。市外の方は使用料金が異なるが金額は不明",
+          "note": "勝山市公式ページ掲載の現行使用料。「使用料は1時間あたりの料金となります」と明記。平日は9時〜19時と19時〜21時30分で単価が異なり、土日祝は9時〜21時30分が一律。9-19時の10時間と19-21時30分の2.5時間を積み上げた目安",
+          "sourceUrl": "https://www.city.katsuyama.fukui.jp/site/geoarena/13173.html"
+        },
+        {
+          "id": "SCENARIO-177",
+          "spaceId": "katsuyama-arena",
+          "label": "アリーナ全面・土日祝・09:00-21:30",
+          "useCase": "all",
+          "dayType": "weekend_holiday",
+          "timeSpan": "09:00-21:30",
+          "amount": 46500,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3526"
+          ],
+          "componentQuantities": [
+            12.5
+          ],
+          "validFrom": null,
+          "exclusions": "空調別（1階アリーナ1,730円/時・2階観覧席1,730円/時）。市外の方は使用料金が異なるが金額は不明",
+          "note": "勝山市公式ページ掲載の現行使用料。「使用料は1時間あたりの料金となります」と明記。平日は9時〜19時と19時〜21時30分で単価が異なり、土日祝は9時〜21時30分が一律",
+          "sourceUrl": "https://www.city.katsuyama.fukui.jp/site/geoarena/13173.html"
+        }
+      ],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "katsuyama-arena",
+          "name": "アリーナ",
+          "type": "arena",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": 1000,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.katsuyama.fukui.jp/site/geoarena/13173.html",
+          "observedAt": "2026-08-10",
+          "note": "観客席1,000席。全面/半面/3分の1面/バドミントンコート1面で貸出"
+        }
+      ],
+      "bestSpace": {
+        "id": "katsuyama-arena",
+        "name": "アリーナ",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1226",
+      "region": "中部",
+      "prefecture": "福井県",
+      "city": "敦賀市",
+      "name": "敦賀市総合運動公園体育館",
+      "category": "arena_and_meetings",
+      "fitLevel": "B",
+      "strengths": "敦賀市公式ページは第1競技場1,976㎡（バスケットボールコート2面分）・固定観覧席1,682席・移動観覧席882席、利用時間（平日土曜8時30分〜21時、日曜祝日8時30分〜17時）、利用区分（午前8時30分〜12時／午後13時〜17時／夜間18時〜21時）、専用使用（アマチュアスポーツ）各部4,800円を掲載",
+      "cautions": "天井高・床荷重・搬入寸法は要確認。市外利用は基本使用料50%増（照明・冷暖房費は対象外）。日曜祝日は17時までのため夜間区分なし。夜間は高校生以下のみの利用不可",
+      "sourceUrl": "https://www.city.tsuruga.lg.jp/page/1499.html",
+      "websiteUrl": null,
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 2,
+      "priceCount": 3,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": 1682,
+      "maxArea": 1976,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 0,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [
+        {
+          "id": "PRICE-3527",
+          "spaceId": "tsuruga-court1",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "weekday",
+          "timeBand": "08:30-12:00",
+          "amount": 4800,
+          "taxStatus": "not_stated",
+          "unit": "per_time_band",
+          "basis": "第1競技場・専用使用（アマチュアスポーツの場合）・午前の部08:30-12:00",
+          "validFrom": null,
+          "exclusions": "照明料別（第1競技場 全灯1時間1,800円）・冷暖房費別（1時間6,000円）。市外利用は基本使用料50%増（照明・冷暖房費は対象外）",
+          "note": "敦賀市公式ページ掲載の現行使用料。利用区分は午前8時30分〜12時／午後13時〜17時／夜間18時〜21時で各部4,800円。利用時間は平日土曜8時30分〜21時、日曜祝日は8時30分〜17時で夜間区分なし",
+          "sourceUrl": "https://www.city.tsuruga.lg.jp/page/1499.html"
+        },
+        {
+          "id": "PRICE-3528",
+          "spaceId": "tsuruga-court1",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "weekday",
+          "timeBand": "13:00-17:00",
+          "amount": 4800,
+          "taxStatus": "not_stated",
+          "unit": "per_time_band",
+          "basis": "第1競技場・専用使用（アマチュアスポーツの場合）・午後の部13:00-17:00",
+          "validFrom": null,
+          "exclusions": "照明料別（第1競技場 全灯1時間1,800円）・冷暖房費別（1時間6,000円）。市外利用は基本使用料50%増（照明・冷暖房費は対象外）",
+          "note": "敦賀市公式ページ掲載の現行使用料。利用区分は午前8時30分〜12時／午後13時〜17時／夜間18時〜21時で各部4,800円。利用時間は平日土曜8時30分〜21時、日曜祝日は8時30分〜17時で夜間区分なし",
+          "sourceUrl": "https://www.city.tsuruga.lg.jp/page/1499.html"
+        },
+        {
+          "id": "PRICE-3529",
+          "spaceId": "tsuruga-court1",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "weekday",
+          "timeBand": "18:00-21:00",
+          "amount": 4800,
+          "taxStatus": "not_stated",
+          "unit": "per_time_band",
+          "basis": "第1競技場・専用使用（アマチュアスポーツの場合）・夜間の部18:00-21:00",
+          "validFrom": null,
+          "exclusions": "照明料別（第1競技場 全灯1時間1,800円）・冷暖房費別（1時間6,000円）。市外利用は基本使用料50%増（照明・冷暖房費は対象外）",
+          "note": "敦賀市公式ページ掲載の現行使用料。利用区分は午前8時30分〜12時／午後13時〜17時／夜間18時〜21時で各部4,800円。利用時間は平日土曜8時30分〜21時、日曜祝日は8時30分〜17時で夜間区分なし",
+          "sourceUrl": "https://www.city.tsuruga.lg.jp/page/1499.html"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-178",
+          "spaceId": "tsuruga-court1",
+          "label": "第1競技場・専用使用アマチュアスポーツ・3区分合計・08:30-21:00",
+          "useCase": "amateur_sports",
+          "dayType": "weekday",
+          "timeSpan": "08:30-21:00",
+          "amount": 14400,
+          "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
+          "componentPriceIds": [
+            "PRICE-3527",
+            "PRICE-3528",
+            "PRICE-3529"
+          ],
+          "componentQuantities": [
+            1,
+            1,
+            1
+          ],
+          "validFrom": null,
+          "exclusions": "照明料別（第1競技場 全灯1時間1,800円）・冷暖房費別（1時間6,000円）。市外利用は基本使用料50%増（照明・冷暖房費は対象外）",
+          "note": "敦賀市公式ページ掲載の現行使用料。利用区分は午前8時30分〜12時／午後13時〜17時／夜間18時〜21時で各部4,800円。利用時間は平日土曜8時30分〜21時、日曜祝日は8時30分〜17時で夜間区分なし。3区分を合計した1日分。日曜祝日は夜間区分がないため平日土曜のみ",
+          "sourceUrl": "https://www.city.tsuruga.lg.jp/page/1499.html"
+        }
+      ],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "tsuruga-court1",
+          "name": "第1競技場",
+          "type": "arena",
+          "area": 1976,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": 1682,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.tsuruga.lg.jp/page/1499.html",
+          "observedAt": "2026-08-10",
+          "note": "バスケットボールコート2面分。固定観覧席1,682席・移動観覧席882席・走路"
+        },
+        {
+          "id": "tsuruga-court2",
+          "name": "第2競技場",
+          "type": "arena",
+          "area": 608,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.tsuruga.lg.jp/page/1499.html",
+          "observedAt": "2026-08-10",
+          "note": "バスケットボールコート1面分"
+        }
+      ],
+      "bestSpace": {
+        "id": "tsuruga-court1",
+        "name": "第1競技場",
         "type": "arena"
       }
     }
