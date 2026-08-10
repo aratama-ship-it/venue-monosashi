@@ -6,6 +6,13 @@ on:
   pull_request:
   workflow_dispatch:
 
+# 同じブランチへ連続でpushしたとき、古い実行を打ち切って最後の1回だけ残す。
+# データ収録のwaveでは1日に何十回もpushするため、これがないと落ちるたびに
+# 通知が飛ぶ（2026-08-10に実際に発生した）。
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
