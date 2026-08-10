@@ -123,3 +123,12 @@ curl -s https://venue.art-monosashi.com/assets/venue-search-BznAbPnU.js | grep -
 
 データ側は commit e03d52a まで origin と sites の両方にpush済みなので、**再ビルドもre-pushも不要。**
 保存先の問題が解消したら、バージョン保存（file_count が null でないことを確認）→ deploy だけでよい。
+
+## 追記2: 壊れているのは Version 211 だけ。保存し直しても同じ番号が返る
+
+保存を5回試したが、毎回同じ **Version 211**（file_count: null）が返るだけで新しい番号が振られなかった。
+一方、**Version 210 は file_count: 49 で正常**に保存されている。つまり保存機能そのものは動いており、
+コミット e03d52a に紐づく 211 のレコードだけが壊れた状態で固定されている。
+
+→ **仮説: 保存はコミットSHA単位でレコードを再利用する。** 新しいコミットを作れば別番号になるはず。
+この追記自体が新しいコミットになるので、それで保存し直す。
