@@ -5,9 +5,9 @@ export const venueData = {
     "historical": 225,
     "venues": 1237,
     "details": 7828,
-    "prices": 3547,
+    "prices": 3555,
     "operations": 221,
-    "budgetScenarios": 189,
+    "budgetScenarios": 192,
     "candidateCoverage": {
       "area": 626,
       "capacity": 939,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 12376,
-      "venueObservationCount": 11785,
+      "observationCount": 12387,
+      "venueObservationCount": 11796,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -29226,9 +29226,9 @@ export const venueData = {
       "sourceUrl": "https://budo.oita-sportspark.jp/facility/",
       "websiteUrl": "https://budo.oita-sportspark.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 1,
-      "priceCount": 6,
+      "priceCount": 7,
       "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -29340,9 +29340,47 @@ export const venueData = {
           "exclusions": "基本使用料・観客フロア暖房・照明・器具等の別料金",
           "note": "指定管理者公式HTML料金表で9,000円/時間を確認",
           "sourceUrl": "https://budo.oita-sportspark.jp/price/price-group/"
+        },
+        {
+          "id": "PRICE-3571",
+          "spaceId": "oita-main",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "08:30-21:00",
+          "amount": 3700,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "メイン競技場全面使用・スポーツに使用する場合・一般・1時間",
+          "validFrom": null,
+          "exclusions": "照明別（全部1,350円/時）・冷房別（競技フロア全部8,400円/時）・暖房別（競技フロア全部9,000円/時）。入場料は最高税込入場料または会費に対し通常100倍、観客をフロア収容時150倍を加算",
+          "note": "指定管理者（株式会社大宣）公式の団体利用料金ページ。見出し「クラサスメイン競技場（多目的競技場）」直下の表で、全面使用・スポーツに使用する場合・一般が1時間3,700円。令和8年4月1日改定後の現行適用料金。開館時間は施設トップの「午前8時半から午後21時まで」（12.5時間）",
+          "sourceUrl": "https://budo.oita-sportspark.jp/price/price-group/"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-192",
+          "spaceId": "oita-main",
+          "label": "メイン競技場全面・スポーツ・一般・08:30-21:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "08:30-21:00",
+          "amount": 46250,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3571"
+          ],
+          "componentQuantities": [
+            12.5
+          ],
+          "validFrom": null,
+          "exclusions": "照明別（全部1,350円/時）・冷房別（競技フロア全部8,400円/時）・暖房別（競技フロア全部9,000円/時）。入場料は最高税込入場料または会費に対し通常100倍、観客をフロア収容時150倍を加算",
+          "note": "指定管理者（株式会社大宣）公式の団体利用料金ページ。見出し「クラサスメイン競技場（多目的競技場）」直下の表で、全面使用・スポーツに使用する場合・一般が1時間3,700円。令和8年4月1日改定後の現行適用料金。開館時間は施設トップの「午前8時半から午後21時まで」（12.5時間）。実際の予約時間で変動する目安",
+          "sourceUrl": "https://budo.oita-sportspark.jp/price/price-group/"
+        }
+      ],
       "operation": {
         "station": "大分駅",
         "walkMinutes": null,
@@ -66468,9 +66506,9 @@ export const venueData = {
       "sourceUrl": "https://www.city.wakayama.wakayama.jp/shisetsu/kouen_sp_shisetsu/1006086/1000981.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 1,
-      "priceCount": 2,
+      "priceCount": 6,
       "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -66518,9 +66556,101 @@ export const venueData = {
           "exclusions": "附属設備・延長・入場料徴収・スポーツ以外等の別料金",
           "note": "和歌山市公式HTML料金表で午後7,990円/4時間を確認",
           "sourceUrl": "https://www.city.wakayama.wakayama.jp/shisetsu/kouen_sp_shisetsu/1006086/1000981.html"
+        },
+        {
+          "id": "PRICE-3575",
+          "spaceId": "wakayama-kannan-arena",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "09:00-12:00",
+          "amount": 5390,
+          "taxStatus": "not_stated",
+          "unit": "per_3_hours",
+          "basis": "アリーナ・アマチュアスポーツ・入場無料・午前（午前9時～正午まで）",
+          "validFrom": null,
+          "exclusions": "延長は1時間につき3,080円（使用日当日に限り最大2時間）。照明・冷暖房の別料金は記載なし。体育館の使用期間は引続き7日を越えられない",
+          "note": "和歌山市公式の施設ページ。アリーナ1,584㎡（44m×36m）・観覧席475席。アマチュアスポーツに使用する場合（入場無料）の区分料金。アリーナには全日欄がないため午前・午後・夜間(1)・夜間(2)を合計して9時〜21時の1日分とした（夜間(3)21-23時は含めない）",
+          "sourceUrl": "https://www.city.wakayama.wakayama.jp/shisetsu/kouen_sp_shisetsu/1006086/1000981.html"
+        },
+        {
+          "id": "PRICE-3576",
+          "spaceId": "wakayama-kannan-arena",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "13:00-17:00",
+          "amount": 7990,
+          "taxStatus": "not_stated",
+          "unit": "per_4_hours",
+          "basis": "アリーナ・アマチュアスポーツ・入場無料・午後（午後1時～5時まで）",
+          "validFrom": null,
+          "exclusions": "延長は1時間につき3,080円（使用日当日に限り最大2時間）。照明・冷暖房の別料金は記載なし。体育館の使用期間は引続き7日を越えられない",
+          "note": "和歌山市公式の施設ページ。アリーナ1,584㎡（44m×36m）・観覧席475席。アマチュアスポーツに使用する場合（入場無料）の区分料金。アリーナには全日欄がないため午前・午後・夜間(1)・夜間(2)を合計して9時〜21時の1日分とした（夜間(3)21-23時は含めない）",
+          "sourceUrl": "https://www.city.wakayama.wakayama.jp/shisetsu/kouen_sp_shisetsu/1006086/1000981.html"
+        },
+        {
+          "id": "PRICE-3577",
+          "spaceId": "wakayama-kannan-arena",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "17:30-19:00",
+          "amount": 4640,
+          "taxStatus": "not_stated",
+          "unit": "per_time_band",
+          "basis": "アリーナ・アマチュアスポーツ・入場無料・夜間（1）（午後5時30分～7時まで）",
+          "validFrom": null,
+          "exclusions": "延長は1時間につき3,080円（使用日当日に限り最大2時間）。照明・冷暖房の別料金は記載なし。体育館の使用期間は引続き7日を越えられない",
+          "note": "和歌山市公式の施設ページ。アリーナ1,584㎡（44m×36m）・観覧席475席。アマチュアスポーツに使用する場合（入場無料）の区分料金。アリーナには全日欄がないため午前・午後・夜間(1)・夜間(2)を合計して9時〜21時の1日分とした（夜間(3)21-23時は含めない）",
+          "sourceUrl": "https://www.city.wakayama.wakayama.jp/shisetsu/kouen_sp_shisetsu/1006086/1000981.html"
+        },
+        {
+          "id": "PRICE-3578",
+          "spaceId": "wakayama-kannan-arena",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "19:00-21:00",
+          "amount": 6160,
+          "taxStatus": "not_stated",
+          "unit": "per_time_band",
+          "basis": "アリーナ・アマチュアスポーツ・入場無料・夜間（2）（午後7時～9時まで）",
+          "validFrom": null,
+          "exclusions": "延長は1時間につき3,080円（使用日当日に限り最大2時間）。照明・冷暖房の別料金は記載なし。体育館の使用期間は引続き7日を越えられない",
+          "note": "和歌山市公式の施設ページ。アリーナ1,584㎡（44m×36m）・観覧席475席。アマチュアスポーツに使用する場合（入場無料）の区分料金。アリーナには全日欄がないため午前・午後・夜間(1)・夜間(2)を合計して9時〜21時の1日分とした（夜間(3)21-23時は含めない）",
+          "sourceUrl": "https://www.city.wakayama.wakayama.jp/shisetsu/kouen_sp_shisetsu/1006086/1000981.html"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-194",
+          "spaceId": "wakayama-kannan-arena",
+          "label": "アリーナ・アマチュアスポーツ入場無料・4区分合計・09:00-21:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 24180,
+          "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
+          "componentPriceIds": [
+            "PRICE-3575",
+            "PRICE-3576",
+            "PRICE-3577",
+            "PRICE-3578"
+          ],
+          "componentQuantities": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "validFrom": null,
+          "exclusions": "延長は1時間につき3,080円（使用日当日に限り最大2時間）。照明・冷暖房の別料金は記載なし。体育館の使用期間は引続き7日を越えられない",
+          "note": "和歌山市公式の施設ページ。アリーナ1,584㎡（44m×36m）・観覧席475席。アマチュアスポーツに使用する場合（入場無料）の区分料金。アリーナには全日欄がないため午前・午後・夜間(1)・夜間(2)を合計して9時〜21時の1日分とした（夜間(3)21-23時は含めない）。4区分を合計した1日分",
+          "sourceUrl": "https://www.city.wakayama.wakayama.jp/shisetsu/kouen_sp_shisetsu/1006086/1000981.html"
+        }
+      ],
       "operation": {
         "station": "JR和歌山線田井ノ瀬駅",
         "walkMinutes": 15,
@@ -218796,9 +218926,9 @@ export const venueData = {
       "sourceUrl": "https://www.hm-sendai.jp/sisetu/taihaku/riyo.html",
       "websiteUrl": "https://www.hm-sendai.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-09",
+      "observedAt": "2026-08-10",
       "detailCount": 18,
-      "priceCount": 0,
+      "priceCount": 3,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -218814,8 +218944,83 @@ export const venueData = {
       "practiceUse": "yes",
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3572",
+          "spaceId": "taihaku-gym",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "09:00-12:00",
+          "amount": 2500,
+          "taxStatus": "not_stated",
+          "unit": "per_time_band",
+          "basis": "体育館（402.25㎡）・午前（午前9時～正午）",
+          "validFrom": null,
+          "exclusions": "体育館の冷房設備欄は「－」。照明の別料金記載なし。使用内容により料金が3倍になる場合あり",
+          "note": "料金の掲載名は「太白区中央市民センター 体育館」で、同じ建物（たいはっくる）に併設された市民センター側の施設。市民センター利用案内の原文は「午前（午前9時～正午）・午後（午後1時～午後4時30分）・夜間（午後5時30分～午後9時）」で、**同じ建物の文化センター側（午前9-12時／午後13-17時／夜間18-22時）とは区分が異なる**ため流用してはいけない。使用時間は午前9時～午後9時。3区分の合計8,600円が1日分にあたる",
+          "sourceUrl": "https://www.hm-sendai.jp/siminc/sisetu/taihaku01.html"
+        },
+        {
+          "id": "PRICE-3573",
+          "spaceId": "taihaku-gym",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "13:00-16:30",
+          "amount": 3000,
+          "taxStatus": "not_stated",
+          "unit": "per_time_band",
+          "basis": "体育館（402.25㎡）・午後（午後1時～午後4時30分）",
+          "validFrom": null,
+          "exclusions": "体育館の冷房設備欄は「－」。照明の別料金記載なし。使用内容により料金が3倍になる場合あり",
+          "note": "料金の掲載名は「太白区中央市民センター 体育館」で、同じ建物（たいはっくる）に併設された市民センター側の施設。市民センター利用案内の原文は「午前（午前9時～正午）・午後（午後1時～午後4時30分）・夜間（午後5時30分～午後9時）」で、**同じ建物の文化センター側（午前9-12時／午後13-17時／夜間18-22時）とは区分が異なる**ため流用してはいけない。使用時間は午前9時～午後9時。3区分の合計8,600円が1日分にあたる",
+          "sourceUrl": "https://www.hm-sendai.jp/siminc/sisetu/taihaku01.html"
+        },
+        {
+          "id": "PRICE-3574",
+          "spaceId": "taihaku-gym",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "17:30-21:00",
+          "amount": 3100,
+          "taxStatus": "not_stated",
+          "unit": "per_time_band",
+          "basis": "体育館（402.25㎡）・夜間（午後5時30分～午後9時）",
+          "validFrom": null,
+          "exclusions": "体育館の冷房設備欄は「－」。照明の別料金記載なし。使用内容により料金が3倍になる場合あり",
+          "note": "料金の掲載名は「太白区中央市民センター 体育館」で、同じ建物（たいはっくる）に併設された市民センター側の施設。市民センター利用案内の原文は「午前（午前9時～正午）・午後（午後1時～午後4時30分）・夜間（午後5時30分～午後9時）」で、**同じ建物の文化センター側（午前9-12時／午後13-17時／夜間18-22時）とは区分が異なる**ため流用してはいけない。使用時間は午前9時～午後9時。3区分の合計8,600円が1日分にあたる",
+          "sourceUrl": "https://www.hm-sendai.jp/siminc/sisetu/taihaku01.html"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-193",
+          "spaceId": "taihaku-gym",
+          "label": "体育館・3区分合計・09:00-21:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 8600,
+          "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
+          "componentPriceIds": [
+            "PRICE-3572",
+            "PRICE-3573",
+            "PRICE-3574"
+          ],
+          "componentQuantities": [
+            1,
+            1,
+            1
+          ],
+          "validFrom": null,
+          "exclusions": "体育館の冷房設備欄は「－」。照明の別料金記載なし。使用内容により料金が3倍になる場合あり",
+          "note": "料金の掲載名は「太白区中央市民センター 体育館」で、同じ建物（たいはっくる）に併設された市民センター側の施設。市民センター利用案内の原文は「午前（午前9時～正午）・午後（午後1時～午後4時30分）・夜間（午後5時30分～午後9時）」で、**同じ建物の文化センター側（午前9-12時／午後13-17時／夜間18-22時）とは区分が異なる**ため流用してはいけない。使用時間は午前9時～午後9時。3区分の合計8,600円が1日分にあたる。3区分を合計した1日分",
+          "sourceUrl": "https://www.hm-sendai.jp/siminc/guidance/"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
