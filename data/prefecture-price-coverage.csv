@@ -8,7 +8,6 @@ prefecture,region,stage_venues,stage_priced,stage_gap,stage_reachable,sports_ven
 山口県,中国,20,5,0,met,6,1,4,yes
 高知県,四国,18,4,1,yes,3,2,3,needs_new_candidates
 熊本県,九州,20,4,1,yes,7,2,3,yes
-山形県,東北,21,4,1,yes,3,2,3,needs_new_candidates
 石川県,北陸,21,4,1,yes,6,2,3,yes
 兵庫県,近畿,22,4,1,yes,5,2,3,yes
 和歌山県,近畿,17,3,2,yes,5,3,2,yes
@@ -42,6 +41,7 @@ prefecture,region,stage_venues,stage_priced,stage_gap,stage_reachable,sports_ven
 新潟県,甲信越,24,5,0,met,7,6,0,met
 愛媛県,四国,22,6,0,met,5,5,0,met
 福岡県,九州,22,5,0,met,6,5,0,met
+山形県,東北,22,5,0,met,6,5,0,met
 東京都,関東,20,6,0,met,9,6,0,met
 愛知県,東海,22,5,0,met,7,5,0,met
 三重県,東海,21,5,0,met,12,7,0,met

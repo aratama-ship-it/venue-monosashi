@@ -3,11 +3,11 @@
 export const venueData = {
   "stats": {
     "historical": 225,
-    "venues": 1216,
-    "details": 7805,
-    "prices": 3487,
+    "venues": 1219,
+    "details": 7808,
+    "prices": 3490,
     "operations": 221,
-    "budgetScenarios": 165,
+    "budgetScenarios": 168,
     "candidateCoverage": {
       "area": 624,
       "capacity": 936,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 12269,
-      "venueObservationCount": 11678,
+      "observationCount": 12278,
+      "venueObservationCount": 11687,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -246485,6 +246485,300 @@ export const venueData = {
       "bestSpace": {
         "id": "naruto-main",
         "name": "メインアリーナ",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1218",
+      "region": "東北",
+      "prefecture": "山形県",
+      "city": "米沢市",
+      "name": "米沢市営体育館",
+      "category": "arena_and_meetings",
+      "fitLevel": "B",
+      "strengths": "指定管理者公式ページは主競技場の全面・半面の1時間使用料を掲載し「各区分の使用単位は1時間につき」と明記。専用利用は9時〜18時の任意の時間帯で、大会・催物等では夜間一般開放時間帯（18時〜22時）も利用可能",
+      "cautions": "アリーナの面積・席数は今回参照した2ページでは確認できず未記録。午後10時以後の使用は各区分の2倍。市内外区分は不明",
+      "sourceUrl": "https://www.yonegym.jp/guidance/group/",
+      "websiteUrl": "https://www.yonegym.jp/",
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 1,
+      "priceCount": 1,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": null,
+      "maxArea": null,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 0,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [
+        {
+          "id": "PRICE-3511",
+          "spaceId": "yonezawa-main",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "09:00-18:00",
+          "amount": 1520,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "主競技場全面（ステージを含む）・アマチュアスポーツ・入場料金を徴収しない時・一般・1時間につき",
+          "validFrom": null,
+          "exclusions": "照明別（蛍光灯 全面330円/時、特殊水銀灯 全面1灯560円/時）・暖房別（アマチュア6,740円/時、原則11〜3月）。午後10時以後は各区分の2倍",
+          "note": "米沢市営体育館の指定管理者公式ページ掲載の現行使用料。「各区分の使用単位は1時間につき」と明記。専用利用は9時〜18時（9時間）で、夜間18時〜22時は大会・催物等に限られるため換算には含めていない",
+          "sourceUrl": "https://www.yonegym.jp/fee/taiiku-g/"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-168",
+          "spaceId": "yonezawa-main",
+          "label": "主競技場全面・アマチュアスポーツ入場料なし・一般・09:00-18:00（専用利用時間帯）",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "09:00-18:00",
+          "amount": 13680,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3511"
+          ],
+          "componentQuantities": [
+            9
+          ],
+          "validFrom": null,
+          "exclusions": "照明別（蛍光灯 全面330円/時、特殊水銀灯 全面1灯560円/時）・暖房別（アマチュア6,740円/時、原則11〜3月）。午後10時以後は各区分の2倍",
+          "note": "米沢市営体育館の指定管理者公式ページ掲載の現行使用料。「各区分の使用単位は1時間につき」と明記。専用利用は9時〜18時（9時間）で、夜間18時〜22時は大会・催物等に限られるため換算には含めていない。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.yonegym.jp/fee/taiiku-g/"
+        }
+      ],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "yonezawa-main",
+          "name": "主競技場",
+          "type": "arena",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "permanent",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.yonegym.jp/fee/taiiku-g/",
+          "observedAt": "2026-08-10",
+          "note": "ステージを含む全面と、北側半分・南側半分の半面で貸出"
+        }
+      ],
+      "bestSpace": {
+        "id": "yonezawa-main",
+        "name": "主競技場",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1219",
+      "region": "東北",
+      "prefecture": "山形県",
+      "city": "天童市",
+      "name": "天童市スポーツセンター総合体育館",
+      "category": "arena_and_meetings",
+      "fitLevel": "B",
+      "strengths": "指定管理者公式ページはアリーナの使用時間9:00〜21:30と、メインアリーナの使用料・照明料・暖房費を掲載。「料金はすべて1時間当たりの金額」",
+      "cautions": "メインアリーナの面積・席数は今回参照したページでは確認できず未記録。市内外区分は不明。1/3・1/2・2/3面は全面額の相当額で10円未満切捨て",
+      "sourceUrl": "https://www.tendocity-sports.or.jp/guidance/",
+      "websiteUrl": "https://www.tendocity-sports.or.jp/",
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 1,
+      "priceCount": 1,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": null,
+      "maxArea": null,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 0,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [
+        {
+          "id": "PRICE-3512",
+          "spaceId": "tendo-main",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "09:00-21:30",
+          "amount": 1630,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "メインアリーナ全面・アマチュアスポーツに使用する場合・入場料を領収しない場合・1時間当たり",
+          "validFrom": null,
+          "exclusions": "照明料別（全面1,910円/時）・暖房費別（全面4,790円/時）",
+          "note": "天童市スポーツセンター指定管理者公式ページ掲載の現行料金。「料金はすべて1時間当たりの金額」。総合体育館アリーナの使用時間は9:00〜21:30（12.5時間）",
+          "sourceUrl": "https://www.tendocity-sports.or.jp/guidance/"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-169",
+          "spaceId": "tendo-main",
+          "label": "メインアリーナ全面・アマチュアスポーツ入場料なし・09:00-21:30",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "09:00-21:30",
+          "amount": 20375,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3512"
+          ],
+          "componentQuantities": [
+            12.5
+          ],
+          "validFrom": null,
+          "exclusions": "照明料別（全面1,910円/時）・暖房費別（全面4,790円/時）",
+          "note": "天童市スポーツセンター指定管理者公式ページ掲載の現行料金。「料金はすべて1時間当たりの金額」。総合体育館アリーナの使用時間は9:00〜21:30（12.5時間）。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.tendocity-sports.or.jp/guidance/"
+        }
+      ],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "tendo-main",
+          "name": "メインアリーナ",
+          "type": "arena",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.tendocity-sports.or.jp/guidance/",
+          "observedAt": "2026-08-10",
+          "note": "1/3・1/2・2/3面の部分利用あり"
+        }
+      ],
+      "bestSpace": {
+        "id": "tendo-main",
+        "name": "メインアリーナ",
+        "type": "arena"
+      }
+    },
+    {
+      "id": "CAND-1220",
+      "region": "東北",
+      "prefecture": "山形県",
+      "city": "鶴岡市",
+      "name": "つるしんアリーナ小真木原（鶴岡市小真木原総合体育館）",
+      "category": "arena_and_meetings",
+      "fitLevel": "B",
+      "strengths": "鶴岡市公式の体育施設使用料改定価格一覧PDFにアリーナ専用使用の1時間額（現行と令和8年10月1日改正の2列）を掲載。施設ページの開館時間は午前8時30分から午後9時30分まで",
+      "cautions": "アリーナの面積・席数は今回参照した2ページでは確認できず未記録。2026年10月1日から改定予定（アマチュア入場料なしその他は2,190円→2,850円）。市内外区分は不明",
+      "sourceUrl": "https://www.city.tsuruoka.lg.jp/bunka/sports/sports-shisetsu/sportskomagitaiikuka.html",
+      "websiteUrl": null,
+      "officialLinks": [],
+      "observedAt": "2026-08-10",
+      "detailCount": 1,
+      "priceCount": 1,
+      "operationCount": 0,
+      "historicalCompletedCount": 0,
+      "historicalPlannedCount": 0,
+      "historicalSeries": [],
+      "historicalEventIds": [],
+      "maxCapacity": null,
+      "maxArea": null,
+      "maxCeiling": null,
+      "ceilingReferenceCount": 0,
+      "filterableCeilingCount": 0,
+      "maxFloorLoad": null,
+      "hasFixedStage": false,
+      "practiceUse": "yes",
+      "streamingReady": "unknown",
+      "minDailyFacilityPrice": null,
+      "priceObservations": [
+        {
+          "id": "PRICE-3513",
+          "spaceId": "tsuruoka-arena",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "08:30-21:30",
+          "amount": 2190,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "アリーナ専用使用・アマチュアスポーツ・入場料金を徴収しない場合・その他・1時間（現行額）",
+          "validFrom": null,
+          "exclusions": "照明設備別（2,400円/時）。冷暖房のメインアリーナ額は確認できず",
+          "note": "鶴岡市公式の体育施設使用料改定価格一覧PDFの「現行」列。単位は1時間。開館時間は午前8時30分から午後9時30分まで（13時間）。2026年10月1日から改定予定（同区分は2,850円）",
+          "sourceUrl": "https://www.city.tsuruoka.lg.jp/bunka/sports/sports-shisetsu/sports01202202091514.files/Tsuruoka_shiyouryou20261001.pdf"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-170",
+          "spaceId": "tsuruoka-arena",
+          "label": "アリーナ専用使用・アマチュアスポーツ入場料なし・その他・08:30-21:30",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "08:30-21:30",
+          "amount": 28470,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3513"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "照明設備別（2,400円/時）。冷暖房のメインアリーナ額は確認できず",
+          "note": "鶴岡市公式の体育施設使用料改定価格一覧PDFの「現行」列。単位は1時間。開館時間は午前8時30分から午後9時30分まで（13時間）。2026年10月1日から改定予定（同区分は2,850円）。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.city.tsuruoka.lg.jp/bunka/sports/sports-shisetsu/sports01202202091514.files/Tsuruoka_shiyouryou20261001.pdf"
+        }
+      ],
+      "operation": null,
+      "spaces": [
+        {
+          "id": "tsuruoka-arena",
+          "name": "アリーナ",
+          "type": "arena",
+          "area": null,
+          "ceiling": null,
+          "ceilingReference": null,
+          "ceilingType": "unknown",
+          "overheadUseStatus": "unknown",
+          "capacityTheater": null,
+          "capacityFixed": null,
+          "stageType": "none",
+          "practiceUse": "yes",
+          "sourceUrl": "https://www.city.tsuruoka.lg.jp/bunka/sports/sports-shisetsu/sportskomagitaiikuka.html",
+          "observedAt": "2026-08-10",
+          "note": null
+        }
+      ],
+      "bestSpace": {
+        "id": "tsuruoka-arena",
+        "name": "アリーナ",
         "type": "arena"
       }
     }
