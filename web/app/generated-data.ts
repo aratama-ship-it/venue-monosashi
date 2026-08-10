@@ -5,9 +5,9 @@ export const venueData = {
     "historical": 225,
     "venues": 1237,
     "details": 7828,
-    "prices": 3540,
+    "prices": 3547,
     "operations": 221,
-    "budgetScenarios": 187,
+    "budgetScenarios": 189,
     "candidateCoverage": {
       "area": 626,
       "capacity": 939,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 12367,
-      "venueObservationCount": 11776,
+      "observationCount": 12376,
+      "venueObservationCount": 11785,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -61729,9 +61729,9 @@ export const venueData = {
       "sourceUrl": "https://city.numazu-sougoutaiikukan.jp/gallery",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 1,
-      "priceCount": 3,
+      "priceCount": 6,
       "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -61746,7 +61746,7 @@ export const venueData = {
       "hasFixedStage": false,
       "practiceUse": "yes",
       "streamingReady": "unknown",
-      "minDailyFacilityPrice": null,
+      "minDailyFacilityPrice": 24900,
       "priceObservations": [
         {
           "id": "PRICE-413",
@@ -61795,6 +61795,54 @@ export const venueData = {
           "exclusions": "基本使用料・空調・分割利用等の別料金",
           "note": "指定管理者公式ページで移動観覧席1,008席・1回3時間15,000円を確認。分割利用可",
           "sourceUrl": "https://city.numazu-sougoutaiikukan.jp/gallery"
+        },
+        {
+          "id": "PRICE-3566",
+          "spaceId": "numazu-sports-arena",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "09:00-21:00",
+          "amount": 24900,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "スポーツアリーナ全面・全日9:00〜21:00・スポーツ・入場料受講料なし・一般",
+          "validFrom": null,
+          "exclusions": "冷暖房別（全面 一般5,400円/時）。専用利用に市内外区分はない（市内市外は個人共用利用のみ）",
+          "note": "指定管理者公式の利用料金表PDF（2024年4月1日改訂）。「全日 9:00〜21:00」の欄。各区分も時間帯総額で、冷暖房のみ1時間あたり",
+          "sourceUrl": "https://shisetsu.mizuno.jp/storage/rel_doc/m-7627/639_15240436_0.pdf"
+        },
+        {
+          "id": "PRICE-3567",
+          "spaceId": "numazu-sports-arena",
+          "category": "facility",
+          "useCase": "amateur_sports_admission",
+          "dayType": "all",
+          "timeBand": "09:00-21:00",
+          "amount": 74700,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "スポーツアリーナ全面・全日9:00〜21:00・スポーツ・入場料あり・一般",
+          "validFrom": null,
+          "exclusions": "冷暖房別（全面 一般5,400円/時）。専用利用に市内外区分はない（市内市外は個人共用利用のみ）",
+          "note": "指定管理者公式の利用料金表PDF（2024年4月1日改訂）。「全日 9:00〜21:00」の欄。各区分も時間帯総額で、冷暖房のみ1時間あたり",
+          "sourceUrl": "https://shisetsu.mizuno.jp/storage/rel_doc/m-7627/639_15240436_0.pdf"
+        },
+        {
+          "id": "PRICE-3568",
+          "spaceId": "numazu-sports-arena",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "09:00-21:00",
+          "amount": 124500,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "スポーツアリーナ全面・全日9:00〜21:00・スポーツ以外・入場料受講料なし・一般",
+          "validFrom": null,
+          "exclusions": "冷暖房別（全面 一般5,400円/時）。専用利用に市内外区分はない（市内市外は個人共用利用のみ）",
+          "note": "指定管理者公式の利用料金表PDF（2024年4月1日改訂）。「全日 9:00〜21:00」の欄。各区分も時間帯総額で、冷暖房のみ1時間あたり",
+          "sourceUrl": "https://shisetsu.mizuno.jp/storage/rel_doc/m-7627/639_15240436_0.pdf"
         }
       ],
       "budgetScenarios": [],
@@ -69076,9 +69124,9 @@ export const venueData = {
       "sourceUrl": "https://kc-sks.jp/soutai/floor.html",
       "websiteUrl": "https://kc-sks.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 1,
-      "priceCount": 2,
+      "priceCount": 4,
       "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -69093,7 +69141,7 @@ export const venueData = {
       "hasFixedStage": false,
       "practiceUse": "yes",
       "streamingReady": "unknown",
-      "minDailyFacilityPrice": null,
+      "minDailyFacilityPrice": 35490,
       "priceObservations": [
         {
           "id": "PRICE-455",
@@ -69125,6 +69173,38 @@ export const venueData = {
           "validFrom": null,
           "exclusions": "基本使用料・照明・器具等の別料金",
           "note": "指定管理者公式HTML料金表で大体育室空調10,000円/時間を確認",
+          "sourceUrl": "https://kc-sks.jp/soutai/price.html"
+        },
+        {
+          "id": "PRICE-3564",
+          "spaceId": "kumamoto-city-main",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 35490,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "大体育室・専用使用・午前9時から午後10時まで・アマチュアスポーツで使用する場合",
+          "validFrom": null,
+          "exclusions": "照明使用料別（大体育室 全部の点灯3,400円/時）・空調別（大体育室のみ10,000円/時）。入場料等を徴収する場合や営利・商業宣伝目的の額は別に定めがあり金額不明",
+          "note": "指定管理者公式の専用使用料金表。全日は「午前9時から午後10時まで」の欄。区分（9-12時／13-17時／18-22時）は12-13時と17-18時をカバーしないため、区分合計30,030円より全日35,490円が高い。これは誤りではない",
+          "sourceUrl": "https://kc-sks.jp/soutai/price.html"
+        },
+        {
+          "id": "PRICE-3565",
+          "spaceId": "kumamoto-city-main",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 141830,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "大体育室・専用使用・午前9時から午後10時まで・その他の場合",
+          "validFrom": null,
+          "exclusions": "照明使用料別（大体育室 全部の点灯3,400円/時）・空調別（大体育室のみ10,000円/時）。入場料等を徴収する場合や営利・商業宣伝目的の額は別に定めがあり金額不明",
+          "note": "指定管理者公式の専用使用料金表。全日は「午前9時から午後10時まで」の欄。区分（9-12時／13-17時／18-22時）は12-13時と17-18時をカバーしないため、区分合計30,030円より全日35,490円が高い。これは誤りではない",
           "sourceUrl": "https://kc-sks.jp/soutai/price.html"
         }
       ],
@@ -151864,9 +151944,9 @@ export const venueData = {
       "sourceUrl": "https://www.city.makinohara.shizuoka.jp/soshiki/34/47293.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-08",
+      "observedAt": "2026-08-10",
       "detailCount": 7,
-      "priceCount": 0,
+      "priceCount": 2,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -151882,8 +151962,84 @@ export const venueData = {
       "practiceUse": "yes",
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3569",
+          "spaceId": "makinohara-main-floor",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "08:30-21:30",
+          "amount": 1980,
+          "taxStatus": "included",
+          "unit": "per_hour",
+          "basis": "メインフロア全面・通常料金（10/1〜6/30）・入場料なし・スポーツ利用・市内・1時間",
+          "validFrom": null,
+          "exclusions": "照明料別（全面1,430円/時）・空調料金別（全面5,650円/時。夏季は料金に含む）。市外は市内料金の50/100加算",
+          "note": "牧之原市公式の利用料金表PDF（GasOneアリーナ牧之原）。「料金(1h)」税込。開館時間は牧之原市多目的体育館条例 第5条「午前8時30分から午後9時30分まで」（13時間）。通常料金は10月1日〜6月30日で、7月1日〜9月30日の夏季料金は空調込みのため単価が上がる（全面市内7,630円/時）",
+          "sourceUrl": "https://www.city.makinohara.shizuoka.jp/uploaded/attachment/43844.pdf"
+        },
+        {
+          "id": "PRICE-3570",
+          "spaceId": "makinohara-main-floor",
+          "category": "facility",
+          "useCase": "general_outside_full",
+          "dayType": "all",
+          "timeBand": "08:30-21:30",
+          "amount": 2970,
+          "taxStatus": "included",
+          "unit": "per_hour",
+          "basis": "メインフロア全面・通常料金（10/1〜6/30）・入場料なし・スポーツ利用・市外・1時間",
+          "validFrom": null,
+          "exclusions": "照明料別（全面1,430円/時）・空調料金別（全面5,650円/時。夏季は料金に含む）。市外は市内料金の50/100加算",
+          "note": "牧之原市公式の利用料金表PDF（GasOneアリーナ牧之原）。「料金(1h)」税込。開館時間は牧之原市多目的体育館条例 第5条「午前8時30分から午後9時30分まで」（13時間）。通常料金は10月1日〜6月30日で、7月1日〜9月30日の夏季料金は空調込みのため単価が上がる（全面市内7,630円/時）",
+          "sourceUrl": "https://www.city.makinohara.shizuoka.jp/uploaded/attachment/43844.pdf"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-190",
+          "spaceId": "makinohara-main-floor",
+          "label": "メインフロア全面・通常料金・入場料なし・スポーツ利用・市内・08:30-21:30",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "08:30-21:30",
+          "amount": 25740,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3569"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "照明料別（全面1,430円/時）・空調料金別（全面5,650円/時。夏季は料金に含む）。市外は市内料金の50/100加算",
+          "note": "牧之原市公式の利用料金表PDF（GasOneアリーナ牧之原）。「料金(1h)」税込。開館時間は牧之原市多目的体育館条例 第5条「午前8時30分から午後9時30分まで」（13時間）。通常料金は10月1日〜6月30日で、7月1日〜9月30日の夏季料金は空調込みのため単価が上がる（全面市内7,630円/時）。開館時間13時間で換算。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.city.makinohara.shizuoka.jp/uploaded/attachment/43844.pdf"
+        },
+        {
+          "id": "SCENARIO-191",
+          "spaceId": "makinohara-main-floor",
+          "label": "メインフロア全面・通常料金・入場料なし・スポーツ利用・市外・08:30-21:30",
+          "useCase": "general_outside_full",
+          "dayType": "all",
+          "timeSpan": "08:30-21:30",
+          "amount": 38610,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3570"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "照明料別（全面1,430円/時）・空調料金別（全面5,650円/時。夏季は料金に含む）。市外は市内料金の50/100加算",
+          "note": "牧之原市公式の利用料金表PDF（GasOneアリーナ牧之原）。「料金(1h)」税込。開館時間は牧之原市多目的体育館条例 第5条「午前8時30分から午後9時30分まで」（13時間）。通常料金は10月1日〜6月30日で、7月1日〜9月30日の夏季料金は空調込みのため単価が上がる（全面市内7,630円/時）。開館時間13時間で換算。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.city.makinohara.shizuoka.jp/uploaded/attachment/43844.pdf"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
