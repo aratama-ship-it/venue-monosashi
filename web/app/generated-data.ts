@@ -5,9 +5,9 @@ export const venueData = {
     "historical": 225,
     "venues": 1177,
     "details": 7734,
-    "prices": 3349,
+    "prices": 3360,
     "operations": 221,
-    "budgetScenarios": 110,
+    "budgetScenarios": 114,
     "candidateCoverage": {
       "area": 605,
       "capacity": 910,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 12005,
-      "venueObservationCount": 11414,
+      "observationCount": 12020,
+      "venueObservationCount": 11429,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -158119,9 +158119,9 @@ export const venueData = {
       "sourceUrl": "https://www.city.kamogawa.lg.jp/site/shisetsu/112.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-08",
+      "observedAt": "2026-08-10",
       "detailCount": 2,
-      "priceCount": 0,
+      "priceCount": 6,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -158137,8 +158137,175 @@ export const venueData = {
       "practiceUse": "conditional",
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3357",
+          "spaceId": "kamogawa-arena",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "08:30-17:00",
+          "amount": 4400,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "体育館(アリーナ)・アマスポーツ/レク・一般・入場料無料・市内・1時間あたり",
+          "validFrom": null,
+          "exclusions": "冷暖房別（アリーナ部分11,000円/時）・放送設備2,200円/式・備品別。アリーナの準備リハーサルは2分の1",
+          "note": "鴨川市公式の文化体育館使用料PDF（令和6年10月1日〜）。1時間あたりの単価が8:30〜17:00と17:00〜21:00で異なる。施設ページの利用時間は午前8時30分から午後9時00分まで",
+          "sourceUrl": "https://www.city.kamogawa.lg.jp/uploaded/attachment/18075.pdf"
+        },
+        {
+          "id": "PRICE-3358",
+          "spaceId": "kamogawa-arena",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "17:00-21:00",
+          "amount": 6600,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "体育館(アリーナ)・アマスポーツ/レク・一般・入場料無料・市内・1時間あたり",
+          "validFrom": null,
+          "exclusions": "冷暖房別（アリーナ部分11,000円/時）・放送設備2,200円/式・備品別。アリーナの準備リハーサルは2分の1",
+          "note": "鴨川市公式の文化体育館使用料PDF（令和6年10月1日〜）。1時間あたりの単価が8:30〜17:00と17:00〜21:00で異なる。施設ページの利用時間は午前8時30分から午後9時00分まで",
+          "sourceUrl": "https://www.city.kamogawa.lg.jp/uploaded/attachment/18075.pdf"
+        },
+        {
+          "id": "PRICE-3359",
+          "spaceId": "kamogawa-arena",
+          "category": "facility",
+          "useCase": "amateur_sports_admission",
+          "dayType": "all",
+          "timeBand": "08:30-17:00",
+          "amount": 11000,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "体育館(アリーナ)・アマスポーツ/レク・入場有料・市内・1時間あたり",
+          "validFrom": null,
+          "exclusions": "冷暖房別（アリーナ部分11,000円/時）・放送設備2,200円/式・備品別。アリーナの準備リハーサルは2分の1",
+          "note": "鴨川市公式の文化体育館使用料PDF（令和6年10月1日〜）。1時間あたりの単価が8:30〜17:00と17:00〜21:00で異なる。施設ページの利用時間は午前8時30分から午後9時00分まで",
+          "sourceUrl": "https://www.city.kamogawa.lg.jp/uploaded/attachment/18075.pdf"
+        },
+        {
+          "id": "PRICE-3360",
+          "spaceId": "kamogawa-arena",
+          "category": "facility",
+          "useCase": "amateur_sports_admission",
+          "dayType": "all",
+          "timeBand": "17:00-21:00",
+          "amount": 16500,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "体育館(アリーナ)・アマスポーツ/レク・入場有料・市内・1時間あたり",
+          "validFrom": null,
+          "exclusions": "冷暖房別（アリーナ部分11,000円/時）・放送設備2,200円/式・備品別。アリーナの準備リハーサルは2分の1",
+          "note": "鴨川市公式の文化体育館使用料PDF（令和6年10月1日〜）。1時間あたりの単価が8:30〜17:00と17:00〜21:00で異なる。施設ページの利用時間は午前8時30分から午後9時00分まで",
+          "sourceUrl": "https://www.city.kamogawa.lg.jp/uploaded/attachment/18075.pdf"
+        },
+        {
+          "id": "PRICE-3361",
+          "spaceId": "kamogawa-arena",
+          "category": "facility",
+          "useCase": "general_outside_full",
+          "dayType": "all",
+          "timeBand": "08:30-17:00",
+          "amount": 8800,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "体育館(アリーナ)・アマスポーツ/レク・一般・入場料無料・市外・1時間あたり",
+          "validFrom": null,
+          "exclusions": "冷暖房別（アリーナ部分11,000円/時）・放送設備2,200円/式・備品別。アリーナの準備リハーサルは2分の1",
+          "note": "鴨川市公式の文化体育館使用料PDF（令和6年10月1日〜）。1時間あたりの単価が8:30〜17:00と17:00〜21:00で異なる。施設ページの利用時間は午前8時30分から午後9時00分まで",
+          "sourceUrl": "https://www.city.kamogawa.lg.jp/uploaded/attachment/18075.pdf"
+        },
+        {
+          "id": "PRICE-3362",
+          "spaceId": "kamogawa-arena",
+          "category": "facility",
+          "useCase": "general_outside_full",
+          "dayType": "all",
+          "timeBand": "17:00-21:00",
+          "amount": 13200,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "体育館(アリーナ)・アマスポーツ/レク・一般・入場料無料・市外・1時間あたり",
+          "validFrom": null,
+          "exclusions": "冷暖房別（アリーナ部分11,000円/時）・放送設備2,200円/式・備品別。アリーナの準備リハーサルは2分の1",
+          "note": "鴨川市公式の文化体育館使用料PDF（令和6年10月1日〜）。1時間あたりの単価が8:30〜17:00と17:00〜21:00で異なる。施設ページの利用時間は午前8時30分から午後9時00分まで",
+          "sourceUrl": "https://www.city.kamogawa.lg.jp/uploaded/attachment/18075.pdf"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-112",
+          "spaceId": "kamogawa-arena",
+          "label": "アリーナ・アマスポーツ一般・入場料無料・市内・08:30-21:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "08:30-21:00",
+          "amount": 63800,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3357",
+            "PRICE-3358"
+          ],
+          "componentQuantities": [
+            8.5,
+            4
+          ],
+          "validFrom": null,
+          "exclusions": "冷暖房別（アリーナ部分11,000円/時）・放送設備2,200円/式・備品別。アリーナの準備リハーサルは2分の1",
+          "note": "鴨川市公式の文化体育館使用料PDF（令和6年10月1日〜）。1時間あたりの単価が8:30〜17:00と17:00〜21:00で異なる。施設ページの利用時間は午前8時30分から午後9時00分まで。8:30〜17:00の8.5時間と17:00〜21:00の4時間を積み上げた日額の目安。実際の予約時間で変動する",
+          "sourceUrl": "https://www.city.kamogawa.lg.jp/uploaded/attachment/18075.pdf"
+        },
+        {
+          "id": "SCENARIO-113",
+          "spaceId": "kamogawa-arena",
+          "label": "アリーナ・アマスポーツ・入場有料・市内・08:30-21:00",
+          "useCase": "amateur_sports_admission",
+          "dayType": "all",
+          "timeSpan": "08:30-21:00",
+          "amount": 159500,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3359",
+            "PRICE-3360"
+          ],
+          "componentQuantities": [
+            8.5,
+            4
+          ],
+          "validFrom": null,
+          "exclusions": "冷暖房別（アリーナ部分11,000円/時）・放送設備2,200円/式・備品別。アリーナの準備リハーサルは2分の1",
+          "note": "鴨川市公式の文化体育館使用料PDF（令和6年10月1日〜）。1時間あたりの単価が8:30〜17:00と17:00〜21:00で異なる。施設ページの利用時間は午前8時30分から午後9時00分まで。8:30〜17:00の8.5時間と17:00〜21:00の4時間を積み上げた日額の目安。実際の予約時間で変動する",
+          "sourceUrl": "https://www.city.kamogawa.lg.jp/uploaded/attachment/18075.pdf"
+        },
+        {
+          "id": "SCENARIO-114",
+          "spaceId": "kamogawa-arena",
+          "label": "アリーナ・アマスポーツ一般・入場料無料・市外・08:30-21:00",
+          "useCase": "general_outside_full",
+          "dayType": "all",
+          "timeSpan": "08:30-21:00",
+          "amount": 127600,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3361",
+            "PRICE-3362"
+          ],
+          "componentQuantities": [
+            8.5,
+            4
+          ],
+          "validFrom": null,
+          "exclusions": "冷暖房別（アリーナ部分11,000円/時）・放送設備2,200円/式・備品別。アリーナの準備リハーサルは2分の1",
+          "note": "鴨川市公式の文化体育館使用料PDF（令和6年10月1日〜）。1時間あたりの単価が8:30〜17:00と17:00〜21:00で異なる。施設ページの利用時間は午前8時30分から午後9時00分まで。8:30〜17:00の8.5時間と17:00〜21:00の4時間を積み上げた日額の目安。実際の予約時間で変動する",
+          "sourceUrl": "https://www.city.kamogawa.lg.jp/uploaded/attachment/18075.pdf"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
@@ -160966,9 +161133,9 @@ export const venueData = {
       "sourceUrl": "https://www.town.tsuno.lg.jp/reiki/reiki_honbun/q632RG00000214.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-08",
+      "observedAt": "2026-08-10",
       "detailCount": 1,
-      "priceCount": 0,
+      "priceCount": 2,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -160983,8 +161150,41 @@ export const venueData = {
       "hasFixedStage": false,
       "practiceUse": "conditional",
       "streamingReady": "unknown",
-      "minDailyFacilityPrice": null,
-      "priceObservations": [],
+      "minDailyFacilityPrice": 1400,
+      "priceObservations": [
+        {
+          "id": "PRICE-3363",
+          "spaceId": "tsuno-gym-room",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "08:00-22:00",
+          "amount": 1400,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "体育室（各バレーコート半面）及びトレーニングコート・1日8:00〜22:00・社会教育団体等",
+          "validFrom": null,
+          "exclusions": "照明料・冷暖房料の金額は条例に記載なし。課税対象の利用は別表額に消費税相当額を加算（10円未満切捨）",
+          "note": "都農町諸使用料条例 別表の現行本文。料金は「体育室（各バレーコート半面）及びトレーニングコート」単位で、体育室全面の貸切額は条例に掲載がない。1日は8:00〜22:00の区分。午前400+午後400+夜間600=1日1,400円で一致。町外者は5倍、入場料を徴収する場合は町内主催で一般団体額の20倍・町外主催で30倍",
+          "sourceUrl": "https://www.town.tsuno.lg.jp/reiki/reiki_honbun/q632RG00000169.html"
+        },
+        {
+          "id": "PRICE-3364",
+          "spaceId": "tsuno-gym-room",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "08:00-22:00",
+          "amount": 2800,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "体育室（各バレーコート半面）及びトレーニングコート・1日8:00〜22:00・一般団体",
+          "validFrom": null,
+          "exclusions": "照明料・冷暖房料の金額は条例に記載なし。課税対象の利用は別表額に消費税相当額を加算（10円未満切捨）",
+          "note": "都農町諸使用料条例 別表の現行本文。料金は「体育室（各バレーコート半面）及びトレーニングコート」単位で、体育室全面の貸切額は条例に掲載がない。1日は8:00〜22:00の区分。午前400+午後400+夜間600=1日1,400円で一致。町外者は5倍、入場料を徴収する場合は町内主催で一般団体額の20倍・町外主催で30倍",
+          "sourceUrl": "https://www.town.tsuno.lg.jp/reiki/reiki_honbun/q632RG00000169.html"
+        }
+      ],
       "budgetScenarios": [],
       "operation": null,
       "spaces": [
@@ -161152,9 +161352,9 @@ export const venueData = {
       "sourceUrl": "https://www.town-takachiho.jp/section/reiki_int/reiki_honbun/q643RG00000498.html",
       "websiteUrl": "https://www.town-takachiho.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-08",
+      "observedAt": "2026-08-10",
       "detailCount": 4,
-      "priceCount": 0,
+      "priceCount": 3,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -161170,8 +161370,81 @@ export const venueData = {
       "practiceUse": "conditional",
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3365",
+          "spaceId": "takachiho-arena",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "09:00-17:00",
+          "amount": 460,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "競技場全面・アマチュアスポーツ等・17時まで・1時間につき",
+          "validFrom": null,
+          "exclusions": "入場料を徴収する場合は2倍。販売・宣伝目的の展示等はその他の使用料の50%加算。照明以外の電気使用は実費。冷暖房料は不明",
+          "note": "高千穂町中央体育館の指定管理者が公表する料金表PDF（令和3年4月1日改定）。条例別表は上限額だが、指定管理者が同額を現行料金として掲載している。開館時間は高千穂町体育館条例 第5条「午前9時から午後10時まで」",
+          "sourceUrl": "https://bunka.sakura.ne.jp/upload/chuou-syoukai/price/upload/ryoukin.pdf"
+        },
+        {
+          "id": "PRICE-3366",
+          "spaceId": "takachiho-arena",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "17:00-22:00",
+          "amount": 480,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "競技場全面・アマチュアスポーツ等・17時から・1時間につき",
+          "validFrom": null,
+          "exclusions": "入場料を徴収する場合は2倍。販売・宣伝目的の展示等はその他の使用料の50%加算。照明以外の電気使用は実費。冷暖房料は不明",
+          "note": "高千穂町中央体育館の指定管理者が公表する料金表PDF（令和3年4月1日改定）。条例別表は上限額だが、指定管理者が同額を現行料金として掲載している。開館時間は高千穂町体育館条例 第5条「午前9時から午後10時まで」",
+          "sourceUrl": "https://bunka.sakura.ne.jp/upload/chuou-syoukai/price/upload/ryoukin.pdf"
+        },
+        {
+          "id": "PRICE-3367",
+          "spaceId": "takachiho-arena",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 950,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "競技場全面・その他の使用・1時間につき",
+          "validFrom": null,
+          "exclusions": "入場料を徴収する場合は2倍。販売・宣伝目的の展示等はその他の使用料の50%加算。照明以外の電気使用は実費。冷暖房料は不明",
+          "note": "高千穂町中央体育館の指定管理者が公表する料金表PDF（令和3年4月1日改定）。条例別表は上限額だが、指定管理者が同額を現行料金として掲載している。開館時間は高千穂町体育館条例 第5条「午前9時から午後10時まで」",
+          "sourceUrl": "https://bunka.sakura.ne.jp/upload/chuou-syoukai/price/upload/ryoukin.pdf"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-115",
+          "spaceId": "takachiho-arena",
+          "label": "競技場全面・アマチュアスポーツ等・09:00-22:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 6080,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3365",
+            "PRICE-3366"
+          ],
+          "componentQuantities": [
+            8,
+            5
+          ],
+          "validFrom": null,
+          "exclusions": "入場料を徴収する場合は2倍。販売・宣伝目的の展示等はその他の使用料の50%加算。照明以外の電気使用は実費。冷暖房料は不明",
+          "note": "高千穂町中央体育館の指定管理者が公表する料金表PDF（令和3年4月1日改定）。条例別表は上限額だが、指定管理者が同額を現行料金として掲載している。開館時間は高千穂町体育館条例 第5条「午前9時から午後10時まで」。9:00〜17:00の8時間×460円と17:00〜22:00の5時間×480円を積み上げた日額の目安。実際の予約時間で変動する",
+          "sourceUrl": "https://bunka.sakura.ne.jp/upload/chuou-syoukai/price/upload/ryoukin.pdf"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
