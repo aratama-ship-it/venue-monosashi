@@ -5,9 +5,9 @@ export const venueData = {
     "historical": 225,
     "venues": 1237,
     "details": 7828,
-    "prices": 3555,
+    "prices": 3561,
     "operations": 221,
-    "budgetScenarios": 200,
+    "budgetScenarios": 203,
     "candidateCoverage": {
       "area": 626,
       "capacity": 939,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 12395,
-      "venueObservationCount": 11804,
+      "observationCount": 12404,
+      "venueObservationCount": 11813,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -193067,9 +193067,9 @@ export const venueData = {
       "sourceUrl": "https://www.town.kikuyo.lg.jp/kiji0033993/index.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-08",
+      "observedAt": "2026-08-10",
       "detailCount": 7,
-      "priceCount": 0,
+      "priceCount": 3,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -193085,8 +193085,121 @@ export const venueData = {
       "practiceUse": "yes",
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3585",
+          "spaceId": "kikuyo-main-arena",
+          "category": "facility",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 2000,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "メインアリーナ全面・スポーツで利用・町内・1時間",
+          "validFrom": null,
+          "exclusions": "冷暖房は料金に含む（メインアリーナ欄に別料金の掲載なし）。音響設備1回1,000円等は別建て。主催者控室は全面利用時のみ1時間100円（町内）",
+          "note": "指定管理者公式ページ掲載の現行料金。原文「区分｜利用単位｜町内料金｜町外料金｜営利料金 / メインアリーナ 全面：スポーツで利用｜1時間｜2,000円｜6,000円｜20,000円」。同ページの「施設利用時間 9：00～22：00（休業日を除く）」（13時間）で換算。メインアリーナは約1,664㎡。町内町外は利用者の構成で決まる（半数以上が町民なら町内、半数超が町外者なら町外）",
+          "sourceUrl": "https://www.kikuyo-suginamiki.com/facility/001"
+        },
+        {
+          "id": "PRICE-3586",
+          "spaceId": "kikuyo-main-arena",
+          "category": "facility",
+          "useCase": "general_outside_full",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 6000,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "メインアリーナ全面・スポーツで利用・町外・1時間",
+          "validFrom": null,
+          "exclusions": "冷暖房は料金に含む（メインアリーナ欄に別料金の掲載なし）。音響設備1回1,000円等は別建て。主催者控室は全面利用時のみ1時間100円（町内）",
+          "note": "指定管理者公式ページ掲載の現行料金。原文「区分｜利用単位｜町内料金｜町外料金｜営利料金 / メインアリーナ 全面：スポーツで利用｜1時間｜2,000円｜6,000円｜20,000円」。同ページの「施設利用時間 9：00～22：00（休業日を除く）」（13時間）で換算。メインアリーナは約1,664㎡。町内町外は利用者の構成で決まる（半数以上が町民なら町内、半数超が町外者なら町外）",
+          "sourceUrl": "https://www.kikuyo-suginamiki.com/facility/001"
+        },
+        {
+          "id": "PRICE-3587",
+          "spaceId": "kikuyo-main-arena",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 4000,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "メインアリーナ全面・スポーツ以外で利用・町内・1時間",
+          "validFrom": null,
+          "exclusions": "冷暖房は料金に含む（メインアリーナ欄に別料金の掲載なし）。音響設備1回1,000円等は別建て。主催者控室は全面利用時のみ1時間100円（町内）",
+          "note": "指定管理者公式ページ掲載の現行料金。原文「区分｜利用単位｜町内料金｜町外料金｜営利料金 / メインアリーナ 全面：スポーツで利用｜1時間｜2,000円｜6,000円｜20,000円」。同ページの「施設利用時間 9：00～22：00（休業日を除く）」（13時間）で換算。メインアリーナは約1,664㎡。町内町外は利用者の構成で決まる（半数以上が町民なら町内、半数超が町外者なら町外）",
+          "sourceUrl": "https://www.kikuyo-suginamiki.com/facility/001"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-204",
+          "spaceId": "kikuyo-main-arena",
+          "label": "メインアリーナ全面・スポーツで利用・町内・09:00-22:00",
+          "useCase": "amateur_sports",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 26000,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3585"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "冷暖房は料金に含む（メインアリーナ欄に別料金の掲載なし）。音響設備1回1,000円等は別建て。主催者控室は全面利用時のみ1時間100円（町内）",
+          "note": "指定管理者公式ページ掲載の現行料金。原文「区分｜利用単位｜町内料金｜町外料金｜営利料金 / メインアリーナ 全面：スポーツで利用｜1時間｜2,000円｜6,000円｜20,000円」。同ページの「施設利用時間 9：00～22：00（休業日を除く）」（13時間）で換算。メインアリーナは約1,664㎡。町内町外は利用者の構成で決まる（半数以上が町民なら町内、半数超が町外者なら町外）。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.kikuyo-suginamiki.com/facility/001"
+        },
+        {
+          "id": "SCENARIO-205",
+          "spaceId": "kikuyo-main-arena",
+          "label": "メインアリーナ全面・スポーツで利用・町外・09:00-22:00",
+          "useCase": "general_outside_full",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 78000,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3586"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "冷暖房は料金に含む（メインアリーナ欄に別料金の掲載なし）。音響設備1回1,000円等は別建て。主催者控室は全面利用時のみ1時間100円（町内）",
+          "note": "指定管理者公式ページ掲載の現行料金。原文「区分｜利用単位｜町内料金｜町外料金｜営利料金 / メインアリーナ 全面：スポーツで利用｜1時間｜2,000円｜6,000円｜20,000円」。同ページの「施設利用時間 9：00～22：00（休業日を除く）」（13時間）で換算。メインアリーナは約1,664㎡。町内町外は利用者の構成で決まる（半数以上が町民なら町内、半数超が町外者なら町外）。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.kikuyo-suginamiki.com/facility/001"
+        },
+        {
+          "id": "SCENARIO-206",
+          "spaceId": "kikuyo-main-arena",
+          "label": "メインアリーナ全面・スポーツ以外で利用・町内・09:00-22:00",
+          "useCase": "all",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 52000,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3587"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "冷暖房は料金に含む（メインアリーナ欄に別料金の掲載なし）。音響設備1回1,000円等は別建て。主催者控室は全面利用時のみ1時間100円（町内）",
+          "note": "指定管理者公式ページ掲載の現行料金。原文「区分｜利用単位｜町内料金｜町外料金｜営利料金 / メインアリーナ 全面：スポーツで利用｜1時間｜2,000円｜6,000円｜20,000円」。同ページの「施設利用時間 9：00～22：00（休業日を除く）」（13時間）で換算。メインアリーナは約1,664㎡。町内町外は利用者の構成で決まる（半数以上が町民なら町内、半数超が町外者なら町外）。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.kikuyo-suginamiki.com/facility/001"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
@@ -193228,9 +193341,9 @@ export const venueData = {
       "sourceUrl": "https://yoyaku.city.uto.lg.jp/content/asp/ShisetuInfo.asp?institutionID=1",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-08",
+      "observedAt": "2026-08-10",
       "detailCount": 4,
-      "priceCount": 0,
+      "priceCount": 3,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -193245,8 +193358,57 @@ export const venueData = {
       "hasFixedStage": false,
       "practiceUse": "yes",
       "streamingReady": "unknown",
-      "minDailyFacilityPrice": null,
-      "priceObservations": [],
+      "minDailyFacilityPrice": 31240,
+      "priceObservations": [
+        {
+          "id": "PRICE-3588",
+          "spaceId": "uto-arena",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "weekday",
+          "timeBand": "08:30-21:30",
+          "amount": 31240,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "体育館専用使用・全日8：30〜21：30・区分A(1)アマチュアスポーツ・入場料を徴収しない場合",
+          "validFrom": null,
+          "exclusions": "照明は区分A(1)では原則徴収なし（市外利用は時間数×電灯数×15円）。冷暖房別（1階2,080円/時、1・2階3,130円/時）。土日祝は全面貸切に限り2割増。営利・商業宣伝目的は10割増",
+          "note": "指定管理者（NPO法人うとスポーツクラブ）公式ページの専用使用料。区分A(1)アマチュアスポーツ・入場料を徴収しない場合の全日は8：30〜21：30で31,240円。**宇土市の予約システム添付PDFはこの欄を31,420円としており食い違う。** 同PDFは区分B(2)その他も41,900円／52,370円（指定管理者は41,950円／52,300円）としており複数箇所で数字がずれているため、転記時の誤りとみて指定管理者側の額を採った。31,420円は同じ表の区分A(2)夜間の額と一致しており、隣接する列からの転記と考えられる。時間帯料金（午前8,370／午後10,470／夜間12,560）は両者で一致する",
+          "sourceUrl": "https://uto-sc.jp/ecowin.php"
+        },
+        {
+          "id": "PRICE-3589",
+          "spaceId": "uto-arena",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "weekday",
+          "timeBand": "08:30-21:30",
+          "amount": 78560,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "体育館専用使用・全日8：30〜21：30・区分A(2)その他・入場料を徴収しない場合",
+          "validFrom": null,
+          "exclusions": "照明は区分A(1)では原則徴収なし（市外利用は時間数×電灯数×15円）。冷暖房別（1階2,080円/時、1・2階3,130円/時）。土日祝は全面貸切に限り2割増。営利・商業宣伝目的は10割増",
+          "note": "指定管理者（NPO法人うとスポーツクラブ）公式ページの専用使用料。区分A(1)アマチュアスポーツ・入場料を徴収しない場合の全日は8：30〜21：30で31,240円。**宇土市の予約システム添付PDFはこの欄を31,420円としており食い違う。** 同PDFは区分B(2)その他も41,900円／52,370円（指定管理者は41,950円／52,300円）としており複数箇所で数字がずれているため、転記時の誤りとみて指定管理者側の額を採った。31,420円は同じ表の区分A(2)夜間の額と一致しており、隣接する列からの転記と考えられる。時間帯料金（午前8,370／午後10,470／夜間12,560）は両者で一致する",
+          "sourceUrl": "https://uto-sc.jp/ecowin.php"
+        },
+        {
+          "id": "PRICE-3590",
+          "spaceId": "uto-arena",
+          "category": "facility",
+          "useCase": "amateur_sports_admission",
+          "dayType": "weekday",
+          "timeBand": "08:30-21:30",
+          "amount": 78560,
+          "taxStatus": "not_stated",
+          "unit": "per_day",
+          "basis": "体育館専用使用・全日8：30〜21：30・区分B(1)アマチュアスポーツ・入場料を徴収する場合",
+          "validFrom": null,
+          "exclusions": "照明は区分A(1)では原則徴収なし（市外利用は時間数×電灯数×15円）。冷暖房別（1階2,080円/時、1・2階3,130円/時）。土日祝は全面貸切に限り2割増。営利・商業宣伝目的は10割増",
+          "note": "指定管理者（NPO法人うとスポーツクラブ）公式ページの専用使用料。区分A(1)アマチュアスポーツ・入場料を徴収しない場合の全日は8：30〜21：30で31,240円。**宇土市の予約システム添付PDFはこの欄を31,420円としており食い違う。** 同PDFは区分B(2)その他も41,900円／52,370円（指定管理者は41,950円／52,300円）としており複数箇所で数字がずれているため、転記時の誤りとみて指定管理者側の額を採った。31,420円は同じ表の区分A(2)夜間の額と一致しており、隣接する列からの転記と考えられる。時間帯料金（午前8,370／午後10,470／夜間12,560）は両者で一致する",
+          "sourceUrl": "https://uto-sc.jp/ecowin.php"
+        }
+      ],
       "budgetScenarios": [],
       "operation": null,
       "spaces": [
