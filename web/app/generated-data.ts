@@ -5,9 +5,9 @@ export const venueData = {
     "historical": 225,
     "venues": 1237,
     "details": 7828,
-    "prices": 3569,
+    "prices": 3578,
     "operations": 221,
-    "budgetScenarios": 205,
+    "budgetScenarios": 210,
     "candidateCoverage": {
       "area": 626,
       "capacity": 939,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-10",
-      "observationCount": 12414,
-      "venueObservationCount": 11823,
+      "observationCount": 12428,
+      "venueObservationCount": 11837,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -67355,9 +67355,9 @@ export const venueData = {
       "sourceUrl": "https://www.shunan-srt.jp/sports_center/facilities/index.php",
       "websiteUrl": "https://www.shunan-srt.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 1,
-      "priceCount": 2,
+      "priceCount": 5,
       "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -67405,9 +67405,100 @@ export const venueData = {
           "exclusions": "基本使用料・放送・器具等の別料金",
           "note": "指定管理者公式2026年料金PDFを目視確認。メインアリーナ空調11,530円/時間",
           "sourceUrl": "https://www.shunan-srt.jp/facilities/pdf/price.pdf?202602="
+        },
+        {
+          "id": "PRICE-3599",
+          "spaceId": "shunan-main",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 3420,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "[専]メインアリーナ・1時間・入場料徴収なし・アマチュアスポーツ及び学生生徒",
+          "validFrom": null,
+          "exclusions": "空調別（メインアリーナ11,530円/時）。メインアリーナの照明料は別額を特定できず。電動式移動観覧席は設備劣化のため当面の間中止",
+          "note": "指定管理者（周南緑地スポレパーク株式会社）公式の料金一覧PDF（2026年4月1日改定）。原文は「区分／時間 1時間」「[専]専用使用 対象施設のすべてを使用」。開館時間は施設ページの「開館時間 9：00～22：00」（13時間）。PDFのテキスト抽出が崩れるため画像で目視確認した",
+          "sourceUrl": "https://www.shunan-srt.jp/facilities/pdf/price.pdf"
+        },
+        {
+          "id": "PRICE-3600",
+          "spaceId": "shunan-main",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 17140,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "[専]メインアリーナ・1時間・入場料徴収なし・その他",
+          "validFrom": null,
+          "exclusions": "空調別（メインアリーナ11,530円/時）。メインアリーナの照明料は別額を特定できず。電動式移動観覧席は設備劣化のため当面の間中止",
+          "note": "指定管理者（周南緑地スポレパーク株式会社）公式の料金一覧PDF（2026年4月1日改定）。原文は「区分／時間 1時間」「[専]専用使用 対象施設のすべてを使用」。開館時間は施設ページの「開館時間 9：00～22：00」（13時間）。PDFのテキスト抽出が崩れるため画像で目視確認した",
+          "sourceUrl": "https://www.shunan-srt.jp/facilities/pdf/price.pdf"
+        },
+        {
+          "id": "PRICE-3601",
+          "spaceId": "shunan-main",
+          "category": "facility",
+          "useCase": "amateur_sports_admission",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 8560,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "[専]メインアリーナ・1時間・入場料徴収あり・アマチュアスポーツ及び学生生徒",
+          "validFrom": null,
+          "exclusions": "空調別（メインアリーナ11,530円/時）。メインアリーナの照明料は別額を特定できず。電動式移動観覧席は設備劣化のため当面の間中止",
+          "note": "指定管理者（周南緑地スポレパーク株式会社）公式の料金一覧PDF（2026年4月1日改定）。原文は「区分／時間 1時間」「[専]専用使用 対象施設のすべてを使用」。開館時間は施設ページの「開館時間 9：00～22：00」（13時間）。PDFのテキスト抽出が崩れるため画像で目視確認した",
+          "sourceUrl": "https://www.shunan-srt.jp/facilities/pdf/price.pdf"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-209",
+          "spaceId": "shunan-main",
+          "label": "メインアリーナ専用使用・入場料徴収なし・アマチュアスポーツ及び学生生徒・09:00-22:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 44460,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3599"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "空調別（メインアリーナ11,530円/時）。メインアリーナの照明料は別額を特定できず。電動式移動観覧席は設備劣化のため当面の間中止",
+          "note": "指定管理者（周南緑地スポレパーク株式会社）公式の料金一覧PDF（2026年4月1日改定）。原文は「区分／時間 1時間」「[専]専用使用 対象施設のすべてを使用」。開館時間は施設ページの「開館時間 9：00～22：00」（13時間）。PDFのテキスト抽出が崩れるため画像で目視確認した。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.shunan-srt.jp/sports_center/"
+        },
+        {
+          "id": "SCENARIO-210",
+          "spaceId": "shunan-main",
+          "label": "メインアリーナ専用使用・入場料徴収なし・その他・09:00-22:00",
+          "useCase": "all",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 222820,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3600"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "空調別（メインアリーナ11,530円/時）。メインアリーナの照明料は別額を特定できず。電動式移動観覧席は設備劣化のため当面の間中止",
+          "note": "指定管理者（周南緑地スポレパーク株式会社）公式の料金一覧PDF（2026年4月1日改定）。原文は「区分／時間 1時間」「[専]専用使用 対象施設のすべてを使用」。開館時間は施設ページの「開館時間 9：00～22：00」（13時間）。PDFのテキスト抽出が崩れるため画像で目視確認した。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.shunan-srt.jp/sports_center/"
+        }
+      ],
       "operation": {
         "station": "JR櫛ケ浜駅",
         "walkMinutes": 20,
@@ -69611,9 +69702,9 @@ export const venueData = {
       "sourceUrl": "https://www.city.miyazaki.miyazaki.jp/health/sports/8698.html?code=071518",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-10",
       "detailCount": 1,
-      "priceCount": 3,
+      "priceCount": 4,
       "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -69677,9 +69768,47 @@ export const venueData = {
           "exclusions": "基本使用料・観覧席冷房・暖房・器具等の別料金",
           "note": "宮崎市公式改定料金PDFを目視確認。アリーナ冷房9,670円/時間",
           "sourceUrl": "https://www.city.miyazaki.miyazaki.jp/fs/8/5/9/3/2/6/_/859326.pdf"
+        },
+        {
+          "id": "PRICE-3607",
+          "spaceId": "miyazaki-city-main",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "09:00-22:00",
+          "amount": 2430,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "体育室・全面・一般・入場料を徴収しない・1時間（令和8年4月1日からの改定後）",
+          "validFrom": null,
+          "exclusions": "照明使用料は改定で0円（現行欄では廃止）。冷房アリーナ9,670円/時・観覧席6,020円/時、暖房アリーナ4,830円/時・観覧席3,020円/時 別",
+          "note": "宮崎市公式のスポーツ施設使用料改定資料（令和7年8月、都市戦略課）の改正後の額。体育室は1,680円/h→2,430円/hに改定され、経過措置は令和8年3月末で終了済み。開館時間は宮崎市公共施設予約案内システム利用者ガイドPDFの「宮崎市総合体育館／大体育室、剣道場、柔道場、弓道場／9時から22時まで」（13時間）。現施設ページの名称はKING SportsPark（総合体育館）",
+          "sourceUrl": "https://www.city.miyazaki.miyazaki.jp/fs/8/5/9/3/2/6/_/859326.pdf"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-213",
+          "spaceId": "miyazaki-city-main",
+          "label": "体育室全面・一般・入場料なし・09:00-22:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 31590,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3607"
+          ],
+          "componentQuantities": [
+            13
+          ],
+          "validFrom": null,
+          "exclusions": "照明使用料は改定で0円（現行欄では廃止）。冷房アリーナ9,670円/時・観覧席6,020円/時、暖房アリーナ4,830円/時・観覧席3,020円/時 別",
+          "note": "宮崎市公式のスポーツ施設使用料改定資料（令和7年8月、都市戦略課）の改正後の額。体育室は1,680円/h→2,430円/hに改定され、経過措置は令和8年3月末で終了済み。開館時間は宮崎市公共施設予約案内システム利用者ガイドPDFの「宮崎市総合体育館／大体育室、剣道場、柔道場、弓道場／9時から22時まで」（13時間）。現施設ページの名称はKING SportsPark（総合体育館）。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.city.miyazaki.miyazaki.jp/fs/8/8/0/8/7/1/_/_____________________.pdf"
+        }
+      ],
       "operation": {
         "station": "JR宮崎駅",
         "walkMinutes": 5,
@@ -160667,9 +160796,9 @@ export const venueData = {
       "sourceUrl": "https://www.town.hirao.lg.jp/soshiki/kyouikuiinkai/shakaikyoiku/1454053546459.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-08",
+      "observedAt": "2026-08-10",
       "detailCount": 3,
-      "priceCount": 0,
+      "priceCount": 3,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -160685,8 +160814,83 @@ export const venueData = {
       "practiceUse": "conditional",
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3602",
+          "spaceId": "hirao-gym",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "08:30-12:00",
+          "amount": 2100,
+          "taxStatus": "not_stated",
+          "unit": "per_time_band",
+          "basis": "競技場（団体使用）・午前（8時30分〜12時）",
+          "validFrom": null,
+          "exclusions": "団体使用の照明の別建て額は不明（個人使用のみ330円/時）。冷暖房設備がある室は基本使用料の5割加算だが競技場が対象か不明。町外は2倍",
+          "note": "平生町公式の教育施設使用料一覧表。競技場（団体使用）の区分は午前（8時30分〜12時）2,100円／午後（12時〜17時）3,300円／夜間（17時〜22時）3,300円で、いずれも1時間単価ではなく時間帯の総額。**ただし施設ページの利用時間は「午前9時〜午後10時」で、料金表の午前区分の開始（8時30分）と30分ずれる。公式情報間の不整合としてそのまま記録する**",
+          "sourceUrl": "https://www.town.hirao.lg.jp/kosodate/kyoiku/1457327652247.html"
+        },
+        {
+          "id": "PRICE-3603",
+          "spaceId": "hirao-gym",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "12:00-17:00",
+          "amount": 3300,
+          "taxStatus": "not_stated",
+          "unit": "per_time_band",
+          "basis": "競技場（団体使用）・午後（12時〜17時）",
+          "validFrom": null,
+          "exclusions": "団体使用の照明の別建て額は不明（個人使用のみ330円/時）。冷暖房設備がある室は基本使用料の5割加算だが競技場が対象か不明。町外は2倍",
+          "note": "平生町公式の教育施設使用料一覧表。競技場（団体使用）の区分は午前（8時30分〜12時）2,100円／午後（12時〜17時）3,300円／夜間（17時〜22時）3,300円で、いずれも1時間単価ではなく時間帯の総額。**ただし施設ページの利用時間は「午前9時〜午後10時」で、料金表の午前区分の開始（8時30分）と30分ずれる。公式情報間の不整合としてそのまま記録する**",
+          "sourceUrl": "https://www.town.hirao.lg.jp/kosodate/kyoiku/1457327652247.html"
+        },
+        {
+          "id": "PRICE-3604",
+          "spaceId": "hirao-gym",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "17:00-22:00",
+          "amount": 3300,
+          "taxStatus": "not_stated",
+          "unit": "per_time_band",
+          "basis": "競技場（団体使用）・夜間（17時〜22時）",
+          "validFrom": null,
+          "exclusions": "団体使用の照明の別建て額は不明（個人使用のみ330円/時）。冷暖房設備がある室は基本使用料の5割加算だが競技場が対象か不明。町外は2倍",
+          "note": "平生町公式の教育施設使用料一覧表。競技場（団体使用）の区分は午前（8時30分〜12時）2,100円／午後（12時〜17時）3,300円／夜間（17時〜22時）3,300円で、いずれも1時間単価ではなく時間帯の総額。**ただし施設ページの利用時間は「午前9時〜午後10時」で、料金表の午前区分の開始（8時30分）と30分ずれる。公式情報間の不整合としてそのまま記録する**",
+          "sourceUrl": "https://www.town.hirao.lg.jp/kosodate/kyoiku/1457327652247.html"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-211",
+          "spaceId": "hirao-gym",
+          "label": "競技場（団体使用）・3区分合計・08:30-22:00",
+          "useCase": "all",
+          "dayType": "all",
+          "timeSpan": "08:30-22:00",
+          "amount": 8700,
+          "taxStatus": "not_stated",
+          "derivationMethod": "sum_verified_components",
+          "componentPriceIds": [
+            "PRICE-3602",
+            "PRICE-3603",
+            "PRICE-3604"
+          ],
+          "componentQuantities": [
+            1,
+            1,
+            1
+          ],
+          "validFrom": null,
+          "exclusions": "団体使用の照明の別建て額は不明（個人使用のみ330円/時）。冷暖房設備がある室は基本使用料の5割加算だが競技場が対象か不明。町外は2倍",
+          "note": "平生町公式の教育施設使用料一覧表。競技場（団体使用）の区分は午前（8時30分〜12時）2,100円／午後（12時〜17時）3,300円／夜間（17時〜22時）3,300円で、いずれも1時間単価ではなく時間帯の総額。**ただし施設ページの利用時間は「午前9時〜午後10時」で、料金表の午前区分の開始（8時30分）と30分ずれる。公式情報間の不整合としてそのまま記録する**。3区分を合計した1日分",
+          "sourceUrl": "https://www.town.hirao.lg.jp/soshiki/kyouikuiinkai/shakaikyoiku/1454053546459.html"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
@@ -160921,9 +161125,9 @@ export const venueData = {
       "sourceUrl": "https://www.town.suo-oshima.lg.jp/soshiki/27/2101.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-08",
+      "observedAt": "2026-08-10",
       "detailCount": 3,
-      "priceCount": 0,
+      "priceCount": 2,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -160939,8 +161143,65 @@ export const venueData = {
       "practiceUse": "conditional",
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3605",
+          "spaceId": "suo-oshima-bg-gym",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "09:00-17:00",
+          "amount": 330,
+          "taxStatus": "included",
+          "unit": "per_hour",
+          "basis": "アリーナ基本使用料・1区画分・9時から17時まで・1時間当たり",
+          "validFrom": null,
+          "exclusions": "アリーナ冷暖房設備使用料1,600円/時 別。町外は使用料総額の2倍。営利・営業・宣伝または入場料徴収は総額の6倍",
+          "note": "周防大島町B&G海洋センター条例 別表（第7条関係）。アリーナ基本使用料は1時間当たりで9時から17時まで330円・17時から22時まで390円。**備考(1)により体育館を2区画に区分した1区画分の額**で、全面（2区画）の額は条例に直接の記載がない。開館規則の体育館は9時から22時まで。消費税込み",
+          "sourceUrl": "https://www1.g-reiki.net/town.suo-oshima/reiki_honbun/r050RG00000241.html"
+        },
+        {
+          "id": "PRICE-3606",
+          "spaceId": "suo-oshima-bg-gym",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "17:00-22:00",
+          "amount": 390,
+          "taxStatus": "included",
+          "unit": "per_hour",
+          "basis": "アリーナ基本使用料・1区画分・17時から22時まで・1時間当たり",
+          "validFrom": null,
+          "exclusions": "アリーナ冷暖房設備使用料1,600円/時 別。町外は使用料総額の2倍。営利・営業・宣伝または入場料徴収は総額の6倍",
+          "note": "周防大島町B&G海洋センター条例 別表（第7条関係）。アリーナ基本使用料は1時間当たりで9時から17時まで330円・17時から22時まで390円。**備考(1)により体育館を2区画に区分した1区画分の額**で、全面（2区画）の額は条例に直接の記載がない。開館規則の体育館は9時から22時まで。消費税込み",
+          "sourceUrl": "https://www1.g-reiki.net/town.suo-oshima/reiki_honbun/r050RG00000241.html"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-212",
+          "spaceId": "suo-oshima-bg-gym",
+          "label": "アリーナ1区画分・09:00-22:00",
+          "useCase": "all",
+          "dayType": "all",
+          "timeSpan": "09:00-22:00",
+          "amount": 4590,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3605",
+            "PRICE-3606"
+          ],
+          "componentQuantities": [
+            8,
+            5
+          ],
+          "validFrom": null,
+          "exclusions": "アリーナ冷暖房設備使用料1,600円/時 別。町外は使用料総額の2倍。営利・営業・宣伝または入場料徴収は総額の6倍",
+          "note": "周防大島町B&G海洋センター条例 別表（第7条関係）。アリーナ基本使用料は1時間当たりで9時から17時まで330円・17時から22時まで390円。**備考(1)により体育館を2区画に区分した1区画分の額**で、全面（2区画）の額は条例に直接の記載がない。開館規則の体育館は9時から22時まで。消費税込み。9-17時の8時間と17-22時の5時間を積み上げた1区画分の目安。全面は2区画分",
+          "sourceUrl": "https://www1.g-reiki.net/town.suo-oshima/reiki_honbun/r050RG00000241.html"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
