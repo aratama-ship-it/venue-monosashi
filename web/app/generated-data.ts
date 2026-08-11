@@ -5,9 +5,9 @@ export const venueData = {
     "historical": 225,
     "venues": 1237,
     "details": 7830,
-    "prices": 3624,
+    "prices": 3633,
     "operations": 221,
-    "budgetScenarios": 220,
+    "budgetScenarios": 225,
     "candidateCoverage": {
       "area": 626,
       "capacity": 939,
@@ -19,9 +19,9 @@ export const venueData = {
     },
     "freshness": {
       "firstObservedAt": "2026-07-30",
-      "latestObservedAt": "2026-08-11",
-      "observationCount": 12486,
-      "venueObservationCount": 11895,
+      "latestObservedAt": "2026-08-12",
+      "observationCount": 12500,
+      "venueObservationCount": 11909,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -13612,9 +13612,9 @@ export const venueData = {
       "sourceUrl": "https://www.city.hachinohe.aomori.jp/soshikikarasagasu/naganeokunaiskatejo/bunka_sports/2/14957.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-05",
+      "observedAt": "2026-08-12",
       "detailCount": 1,
-      "priceCount": 9,
+      "priceCount": 11,
       "operationCount": 1,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -13774,9 +13774,63 @@ export const venueData = {
           "exclusions": "施設基本料・設置撤去・高校生以下0.5倍・入場料徴収時3倍",
           "note": "八戸市公式2026年7月1日現在料金表を画像照合。消費税10%を含む",
           "sourceUrl": "https://www.city.hachinohe.aomori.jp/material/files/group/12/R080701.pdf"
+        },
+        {
+          "id": "PRICE-3659",
+          "spaceId": "ys-arena-main",
+          "category": "facility",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeBand": "09:00-21:00",
+          "amount": 14000,
+          "taxStatus": "included",
+          "unit": "per_hour",
+          "basis": "アリーナ（リンク解氷時）全面貸切・アマチュアスポーツ・入場料なし・1時間あたり",
+          "validFrom": null,
+          "exclusions": "設備・器具は別料金。土日祝にアマチュアスポーツ以外で使う場合は120%。高校生以下の貸切は原則80%",
+          "note": "八戸市公式の料金PDF（2026年7月1日現在）。原文「アリーナ（リンク解氷時） 貸切」「区分 1時間あたり」。利用可能時間は「午前9時～午後9時」（12時間）。消費税10%込み。**アリーナ全面の貸切は公式案内で「3月中旬から6月中旬まで」の季節限定。それ以外はスケートリンク開設期でアリーナ全面は利用できない**（施設概要では「4月上旬〜6月下旬」となっており公式ページ間で日付に差がある）",
+          "sourceUrl": "https://www.city.hachinohe.aomori.jp/material/files/group/12/R080701.pdf"
+        },
+        {
+          "id": "PRICE-3660",
+          "spaceId": "ys-arena-main",
+          "category": "facility",
+          "useCase": "amateur_sports_admission",
+          "dayType": "all",
+          "timeBand": "09:00-21:00",
+          "amount": 42000,
+          "taxStatus": "included",
+          "unit": "per_hour",
+          "basis": "アリーナ（リンク解氷時）全面貸切・アマチュアスポーツ・入場料あり・1時間あたり",
+          "validFrom": null,
+          "exclusions": "設備・器具は別料金。土日祝にアマチュアスポーツ以外で使う場合は120%。高校生以下の貸切は原則80%",
+          "note": "八戸市公式の料金PDF（2026年7月1日現在）。原文「アリーナ（リンク解氷時） 貸切」「区分 1時間あたり」。利用可能時間は「午前9時～午後9時」（12時間）。消費税10%込み。**アリーナ全面の貸切は公式案内で「3月中旬から6月中旬まで」の季節限定。それ以外はスケートリンク開設期でアリーナ全面は利用できない**（施設概要では「4月上旬〜6月下旬」となっており公式ページ間で日付に差がある）",
+          "sourceUrl": "https://www.city.hachinohe.aomori.jp/material/files/group/12/R080701.pdf"
         }
       ],
-      "budgetScenarios": [],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-227",
+          "spaceId": "ys-arena-main",
+          "label": "アリーナ全面貸切・アマチュアスポーツ・入場料なし・09:00-21:00",
+          "useCase": "amateur_sports_no_admission",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 168000,
+          "taxStatus": "included",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3659"
+          ],
+          "componentQuantities": [
+            12
+          ],
+          "validFrom": null,
+          "exclusions": "設備・器具は別料金。土日祝にアマチュアスポーツ以外で使う場合は120%。高校生以下の貸切は原則80%",
+          "note": "八戸市公式の料金PDF（2026年7月1日現在）。原文「アリーナ（リンク解氷時） 貸切」「区分 1時間あたり」。利用可能時間は「午前9時～午後9時」（12時間）。消費税10%込み。**アリーナ全面の貸切は公式案内で「3月中旬から6月中旬まで」の季節限定。それ以外はスケートリンク開設期でアリーナ全面は利用できない**（施設概要では「4月上旬〜6月下旬」となっており公式ページ間で日付に差がある）。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.city.hachinohe.aomori.jp/soshikikarasagasu/naganeokunaiskatejo/bunka_sports/2/14957.html"
+        }
+      ],
       "operation": {
         "station": null,
         "walkMinutes": null,
@@ -124558,9 +124612,9 @@ export const venueData = {
       "sourceUrl": "https://www.city.hachimantai.lg.jp/soshiki/machi/1327.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-07",
+      "observedAt": "2026-08-12",
       "detailCount": 5,
-      "priceCount": 0,
+      "priceCount": 1,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -124576,8 +124630,47 @@ export const venueData = {
       "practiceUse": "conditional",
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3658",
+          "spaceId": "matsuo-sports",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "09:00-21:00",
+          "amount": 220,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "体育室（692㎡）・利用料（1時間）",
+          "validFrom": null,
+          "exclusions": "照明別（17〜21時、110円）。体育室の冷暖房は記載なし。市外利用は50%加算、物品販売その他の商行為は100%加算、12月1日〜3月31日は30%加算",
+          "note": "八幡平市公式の施設・料金ページ。表見出しは「利用料（1時間）」。利用可能時間は同ページの「午前9時から午後9時まで」（12時間）。指定管理者は八幡平市松尾地区地域振興協議会。17〜21時は原則休館扱いだが「利用等がある場合を除く」と明記され予約利用は可能",
+          "sourceUrl": "https://www.city.hachimantai.lg.jp/soshiki/machi/1327.html"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-226",
+          "spaceId": "matsuo-sports",
+          "label": "体育室・09:00-21:00",
+          "useCase": "all",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 2640,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3658"
+          ],
+          "componentQuantities": [
+            12
+          ],
+          "validFrom": null,
+          "exclusions": "照明別（17〜21時、110円）。市外50%加算、商行為100%加算、12月〜3月30%加算",
+          "note": "八幡平市公式ページの利用料（1時間）×利用可能時間9:00〜21:00。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.city.hachimantai.lg.jp/soshiki/machi/1327.html"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
@@ -134774,9 +134867,9 @@ export const venueData = {
       "sourceUrl": "https://www.town.oirase.aomori.jp/site/chouminkouryuusentataiikusisetu/index-2.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-07",
+      "observedAt": "2026-08-12",
       "detailCount": 3,
-      "priceCount": 0,
+      "priceCount": 2,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -134792,8 +134885,63 @@ export const venueData = {
       "practiceUse": "conditional",
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3661",
+          "spaceId": "oirase-arena",
+          "category": "facility",
+          "useCase": "no_admission",
+          "dayType": "all",
+          "timeBand": "09:00-21:00",
+          "amount": 2350,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "アリーナ全面・一般・料金徴収なし・1時間当たり",
+          "validFrom": null,
+          "exclusions": "暖房設備あり。照明・暖房の別建て金額または基本料への包含は不明",
+          "note": "おいらせ町公式のアリーナ料金ページ。原文「［アリーナ全面］1時間当たりの使用料」。「利用時間は、1時間未満であっても、1時間」とされ準備・後始末を含む。利用可能時間は午前9時から午後9時まで（12時間）。日曜は9〜17時、祝日は通常時間",
+          "sourceUrl": "https://www.town.oirase.aomori.jp/site/chouminkouryuusentataiikusisetu/arena.html"
+        },
+        {
+          "id": "PRICE-3662",
+          "spaceId": "oirase-arena",
+          "category": "facility",
+          "useCase": "performance",
+          "dayType": "all",
+          "timeBand": "09:00-21:00",
+          "amount": 4700,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "アリーナ全面・一般・料金徴収あり・1時間当たり",
+          "validFrom": null,
+          "exclusions": "暖房設備あり。照明・暖房の別建て金額または基本料への包含は不明",
+          "note": "おいらせ町公式のアリーナ料金ページ。原文「［アリーナ全面］1時間当たりの使用料」。「利用時間は、1時間未満であっても、1時間」とされ準備・後始末を含む。利用可能時間は午前9時から午後9時まで（12時間）。日曜は9〜17時、祝日は通常時間",
+          "sourceUrl": "https://www.town.oirase.aomori.jp/site/chouminkouryuusentataiikusisetu/arena.html"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-228",
+          "spaceId": "oirase-arena",
+          "label": "アリーナ全面・一般・料金徴収なし・09:00-21:00",
+          "useCase": "no_admission",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 28200,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3661"
+          ],
+          "componentQuantities": [
+            12
+          ],
+          "validFrom": null,
+          "exclusions": "暖房設備あり。照明・暖房の別建て金額または基本料への包含は不明",
+          "note": "おいらせ町公式のアリーナ料金ページ。原文「［アリーナ全面］1時間当たりの使用料」。「利用時間は、1時間未満であっても、1時間」とされ準備・後始末を含む。利用可能時間は午前9時から午後9時まで（12時間）。日曜は9〜17時、祝日は通常時間。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.town.oirase.aomori.jp/site/chouminkouryuusentataiikusisetu/arena.html"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
@@ -155691,9 +155839,9 @@ export const venueData = {
       "sourceUrl": "https://town.iwate.iwate.jp/town/accessmap/sportsculturecenter/",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-08",
+      "observedAt": "2026-08-12",
       "detailCount": 5,
-      "priceCount": 0,
+      "priceCount": 2,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -155709,8 +155857,65 @@ export const venueData = {
       "practiceUse": "yes",
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3654",
+          "spaceId": "iwate-arena",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "09:00-17:00",
+          "amount": 1270,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "アリーナ全面・09:00-17:00・1時間",
+          "validFrom": null,
+          "exclusions": "暖房使用時は1.5倍。アリーナ照明の別料金なし。入場料徴収または町外利用は2倍",
+          "note": "岩手町公式ページ掲載の施設使用料。原文「施設使用料（1時間当たり）」。利用可能時間は同ページの「午前9時00分から午後9時30分まで」（12.5時間）",
+          "sourceUrl": "https://town.iwate.iwate.jp/town/accessmap/sportsculturecenter/"
+        },
+        {
+          "id": "PRICE-3655",
+          "spaceId": "iwate-arena",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "17:00-21:30",
+          "amount": 1520,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "アリーナ全面・17:00-21:30・1時間",
+          "validFrom": null,
+          "exclusions": "暖房使用時は1.5倍。アリーナ照明の別料金なし。入場料徴収または町外利用は2倍",
+          "note": "岩手町公式ページ掲載の施設使用料。原文「施設使用料（1時間当たり）」。利用可能時間は同ページの「午前9時00分から午後9時30分まで」（12.5時間）",
+          "sourceUrl": "https://town.iwate.iwate.jp/town/accessmap/sportsculturecenter/"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-224",
+          "spaceId": "iwate-arena",
+          "label": "アリーナ全面・09:00-21:30",
+          "useCase": "all",
+          "dayType": "all",
+          "timeSpan": "09:00-21:30",
+          "amount": 17000,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3654",
+            "PRICE-3655"
+          ],
+          "componentQuantities": [
+            8,
+            4.5
+          ],
+          "validFrom": null,
+          "exclusions": "暖房使用時は1.5倍。アリーナ照明の別料金なし。入場料徴収または町外利用は2倍",
+          "note": "岩手町公式ページ掲載の施設使用料。原文「施設使用料（1時間当たり）」。利用可能時間は同ページの「午前9時00分から午後9時30分まで」（12.5時間）。実際の予約時間で変動する目安",
+          "sourceUrl": "https://town.iwate.iwate.jp/town/accessmap/sportsculturecenter/"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
@@ -195820,9 +196025,9 @@ export const venueData = {
       "sourceUrl": "https://www.town.karumai.iwate.jp/article/ukamekan/ukamekan_shisetsu/entry-basename.html",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-08",
+      "observedAt": "2026-08-12",
       "detailCount": 16,
-      "priceCount": 0,
+      "priceCount": 2,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -195838,8 +196043,65 @@ export const venueData = {
       "practiceUse": "conditional",
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3656",
+          "spaceId": "karumai-multipurpose",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "09:00-18:00",
+          "amount": 1500,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "多目的ホール・09:00-18:00・1時間",
+          "validFrom": null,
+          "exclusions": "冷暖房は施設使用料の30%。入場料徴収や宣伝・販売等の商業活動は表額の200%。舞台・可動式座席を使わない場合はそれぞれ10%減額",
+          "note": "軽米町公式の施設使用料PDF。原文「多目的ホール 1時間」。貸館部分・フリースペースの利用可能時間は9:00〜21:00。**公式名称は「多目的ホール」で体育館・アリーナ表記ではない**",
+          "sourceUrl": "https://www.town.karumai.iwate.jp/article/.assets/shisestu-shiyouryou.pdf"
+        },
+        {
+          "id": "PRICE-3657",
+          "spaceId": "karumai-multipurpose",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "18:00-21:00",
+          "amount": 2000,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "多目的ホール・18:00-21:00・1時間",
+          "validFrom": null,
+          "exclusions": "冷暖房は施設使用料の30%。入場料徴収や宣伝・販売等の商業活動は表額の200%。舞台・可動式座席を使わない場合はそれぞれ10%減額",
+          "note": "軽米町公式の施設使用料PDF。原文「多目的ホール 1時間」。貸館部分・フリースペースの利用可能時間は9:00〜21:00。**公式名称は「多目的ホール」で体育館・アリーナ表記ではない**",
+          "sourceUrl": "https://www.town.karumai.iwate.jp/article/.assets/shisestu-shiyouryou.pdf"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-225",
+          "spaceId": "karumai-multipurpose",
+          "label": "多目的ホール・09:00-21:00",
+          "useCase": "all",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 19500,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3656",
+            "PRICE-3657"
+          ],
+          "componentQuantities": [
+            9,
+            3
+          ],
+          "validFrom": null,
+          "exclusions": "冷暖房は施設使用料の30%。入場料徴収や宣伝・販売等の商業活動は表額の200%。舞台・可動式座席を使わない場合はそれぞれ10%減額",
+          "note": "軽米町公式の施設使用料PDF。原文「多目的ホール 1時間」。貸館部分・フリースペースの利用可能時間は9:00〜21:00。**公式名称は「多目的ホール」で体育館・アリーナ表記ではない**。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.town.karumai.iwate.jp/article/ukamekan/ukamekan_annai/"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
