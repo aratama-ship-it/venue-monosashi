@@ -5,9 +5,9 @@ export const venueData = {
     "historical": 225,
     "venues": 1239,
     "details": 7832,
-    "prices": 3648,
+    "prices": 3651,
     "operations": 221,
-    "budgetScenarios": 227,
+    "budgetScenarios": 229,
     "candidateCoverage": {
       "area": 626,
       "capacity": 939,
@@ -20,8 +20,8 @@ export const venueData = {
     "freshness": {
       "firstObservedAt": "2026-07-30",
       "latestObservedAt": "2026-08-12",
-      "observationCount": 12519,
-      "venueObservationCount": 11928,
+      "observationCount": 12524,
+      "venueObservationCount": 11933,
       "smallTheaterObservationCount": 587
     },
     "smallTheaterCensus": {
@@ -235674,9 +235674,9 @@ export const venueData = {
       "sourceUrl": "https://kagawa-swc.or.jp/home/pdf/260325.pdf",
       "websiteUrl": "https://kagawa-swc.or.jp/",
       "officialLinks": [],
-      "observedAt": "2026-08-09",
+      "observedAt": "2026-08-12",
       "detailCount": 16,
-      "priceCount": 0,
+      "priceCount": 1,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -235691,8 +235691,25 @@ export const venueData = {
       "hasFixedStage": false,
       "practiceUse": "conditional",
       "streamingReady": "unknown",
-      "minDailyFacilityPrice": null,
-      "priceObservations": [],
+      "minDailyFacilityPrice": 22720,
+      "priceObservations": [
+        {
+          "id": "PRICE-3678",
+          "spaceId": "kagawa-swc-health-play",
+          "category": "facility",
+          "useCase": "all",
+          "dayType": "all",
+          "timeBand": "09:00-21:00",
+          "amount": 22720,
+          "taxStatus": "included",
+          "unit": "per_day",
+          "basis": "健康プレイルーム・全日9:00〜21:00",
+          "validFrom": null,
+          "exclusions": "冷暖房使用料別（全日7,250円）。原文「年間をとおして換気システムが稼働していますので、冷房・暖房をご使用にならない場合も、冷暖房使用料として使用料をご負担いただきます」。超過利用は後の時間帯の予約が入っていない場合に限り1時間のみ可能",
+          "note": "香川県社会福祉総合センター公式の料金表（令和7年4月1日改定）。貸出時間単位は午前9:00〜12:00／午後13:00〜17:00／夜間18:00〜21:00で、全日は9:00〜21:00。通常料金は各時間帯全体の総額で、1時間単価なのは「超過 1h毎」の欄だけ。対象は3階の健康プレイルーム（床面積167㎡）で、**公式名称に「体育館」「アリーナ」は含まれない**。単位は消費税込",
+          "sourceUrl": "https://kagawa-swc.or.jp/home/room/price.htm"
+        }
+      ],
       "budgetScenarios": [],
       "operation": null,
       "spaces": [
@@ -235988,9 +236005,9 @@ export const venueData = {
       "sourceUrl": "https://www.town.naoshima.lg.jp/tetsuduki/item/naoshima_hall_20251125.pdf",
       "websiteUrl": null,
       "officialLinks": [],
-      "observedAt": "2026-08-09",
+      "observedAt": "2026-08-12",
       "detailCount": 7,
-      "priceCount": 0,
+      "priceCount": 2,
       "operationCount": 0,
       "historicalCompletedCount": 0,
       "historicalPlannedCount": 0,
@@ -236006,8 +236023,84 @@ export const venueData = {
       "practiceUse": null,
       "streamingReady": "unknown",
       "minDailyFacilityPrice": null,
-      "priceObservations": [],
-      "budgetScenarios": [],
+      "priceObservations": [
+        {
+          "id": "PRICE-3679",
+          "spaceId": "naoshima-hall-gym",
+          "category": "facility",
+          "useCase": "general_city_full",
+          "dayType": "all",
+          "timeBand": "09:00-21:00",
+          "amount": 1050,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "体育室・全面・町内・1時間あたり",
+          "validFrom": null,
+          "exclusions": "体育室には冷暖房料の別建て記載なし",
+          "note": "直島町公式の直島ホール利用案内・料金PDF。単位の原文は「１時間あたりの使用料（円）」。体育室の全面は町内1,050円・町外2,100円。開館時間の原文は「（６）開館時間 9時から21時まで」（12時間）。現行利用案内に掲載され条例と一致する実際の適用料金",
+          "sourceUrl": "https://www.town.naoshima.lg.jp/tetsuduki/item/naoshima_hall_20251125.pdf"
+        },
+        {
+          "id": "PRICE-3680",
+          "spaceId": "naoshima-hall-gym",
+          "category": "facility",
+          "useCase": "general_outside_full",
+          "dayType": "all",
+          "timeBand": "09:00-21:00",
+          "amount": 2100,
+          "taxStatus": "not_stated",
+          "unit": "per_hour",
+          "basis": "体育室・全面・町外・1時間あたり",
+          "validFrom": null,
+          "exclusions": "体育室には冷暖房料の別建て記載なし",
+          "note": "直島町公式の直島ホール利用案内・料金PDF。単位の原文は「１時間あたりの使用料（円）」。体育室の全面は町内1,050円・町外2,100円。開館時間の原文は「（６）開館時間 9時から21時まで」（12時間）。現行利用案内に掲載され条例と一致する実際の適用料金",
+          "sourceUrl": "https://www.town.naoshima.lg.jp/tetsuduki/item/naoshima_hall_20251125.pdf"
+        }
+      ],
+      "budgetScenarios": [
+        {
+          "id": "SCENARIO-231",
+          "spaceId": "naoshima-hall-gym",
+          "label": "体育室全面・町内・09:00-21:00",
+          "useCase": "general_city_full",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 12600,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3679"
+          ],
+          "componentQuantities": [
+            12
+          ],
+          "validFrom": null,
+          "exclusions": "体育室には冷暖房料の別建て記載なし",
+          "note": "直島町公式の直島ホール利用案内・料金PDF。単位の原文は「１時間あたりの使用料（円）」。体育室の全面は町内1,050円・町外2,100円。開館時間の原文は「（６）開館時間 9時から21時まで」（12時間）。現行利用案内に掲載され条例と一致する実際の適用料金。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.town.naoshima.lg.jp/about/shisetsu/naoshimahall.html"
+        },
+        {
+          "id": "SCENARIO-232",
+          "spaceId": "naoshima-hall-gym",
+          "label": "体育室全面・町外・09:00-21:00",
+          "useCase": "general_outside_full",
+          "dayType": "all",
+          "timeSpan": "09:00-21:00",
+          "amount": 25200,
+          "taxStatus": "not_stated",
+          "derivationMethod": "hourly_rate_times_published_hours",
+          "componentPriceIds": [
+            "PRICE-3680"
+          ],
+          "componentQuantities": [
+            12
+          ],
+          "validFrom": null,
+          "exclusions": "体育室には冷暖房料の別建て記載なし",
+          "note": "直島町公式の直島ホール利用案内・料金PDF。単位の原文は「１時間あたりの使用料（円）」。体育室の全面は町内1,050円・町外2,100円。開館時間の原文は「（６）開館時間 9時から21時まで」（12時間）。現行利用案内に掲載され条例と一致する実際の適用料金。実際の予約時間で変動する目安",
+          "sourceUrl": "https://www.town.naoshima.lg.jp/about/shisetsu/naoshimahall.html"
+        }
+      ],
       "operation": null,
       "spaces": [
         {
