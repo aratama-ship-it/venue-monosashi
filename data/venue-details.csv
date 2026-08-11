@@ -7827,3 +7827,5 @@ DETAIL-7826,CAND-1235,tosashimizu-arena,アリーナ,arena,,,,unknown,unknown,,,
 DETAIL-7827,CAND-1236,urasoe-arena,アリーナ,arena,,,,unknown,unknown,,,,two_way,none,yes,unknown,https://www.city.urasoe.lg.jp/doc/2026041400010/file_contents/file_20265111151132_1.pdf,2026-08-10,verified,利用面積が2分の1以下の場合は半額
 DETAIL-7828,CAND-1237,nago21-arena,アリーナ,arena,,,,unknown,unknown,,,,three_way,none,yes,unknown,https://www.nago21-osi.jp/gym-21.php,2026-08-10,verified,1コート/2コート/3コート（全面）で貸出
 DETAIL-7829,CAND-1238,okinawa-kenso-main,メインアリーナ,arena,,,,unknown,unknown,,,,two_way,none,yes,unknown,https://okinawa-kenso.com/?page_id=205,2026-08-10,verified,利用面積が2分の1以下の場合は基準額の2分の1
+DETAIL-7830,CAND-007,phoenix-elpis,エルピス大ホール,stage_hall,,,,unknown,unknown,,,,none,permanent,no,unknown,https://fukui-phoenixplaza.jp/wp-content/uploads/2024ryoukin.pdf,2026-08-11,verified,公式料金表PDFに「基本利用料金（セット料金）」として全日9時〜22時（13時間）の額を掲載
+DETAIL-7831,CAND-354,banjo-large,大ホール,stage_hall,,,,unknown,unknown,,,,none,permanent,no,unknown,https://www.city.tsuruga.lg.jp/soshiki/94/index.html,2026-08-11,verified,敦賀市公式ページの使用料表に「大ホール（舞台共）」として全日9時から22時の額を掲載
