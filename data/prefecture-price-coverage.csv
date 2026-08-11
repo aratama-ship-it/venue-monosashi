@@ -1,13 +1,12 @@
 prefecture,region,stage_venues,stage_priced,stage_gap,stage_reachable,sports_venues,sports_priced,sports_gap,sports_reachable
-山梨県,甲信越,20,3,2,yes,5,2,3,yes
 香川県,四国,20,3,2,yes,6,2,3,yes
 石川県,北陸,21,4,1,yes,6,2,3,yes
 長野県,甲信越,23,3,2,yes,5,4,1,yes
-兵庫県,近畿,22,5,0,met,5,2,3,yes
 和歌山県,近畿,17,3,2,yes,5,4,1,yes
 鳥取県,中国,21,5,0,met,5,2,3,yes
 長崎県,九州,23,4,1,yes,5,4,1,yes
 富山県,北陸,22,3,2,yes,7,5,0,met
+山梨県,甲信越,20,4,1,yes,6,4,1,yes
 京都府,近畿,19,3,2,yes,6,5,0,met
 広島県,中国,18,3,2,yes,7,5,0,met
 奈良県,近畿,24,4,1,yes,5,5,0,met
@@ -43,6 +42,7 @@ prefecture,region,stage_venues,stage_priced,stage_gap,stage_reachable,sports_ven
 三重県,東海,21,5,0,met,12,7,0,met
 滋賀県,近畿,22,5,0,met,6,5,0,met
 大阪府,近畿,22,9,0,met,9,5,0,met
+兵庫県,近畿,22,5,0,met,6,5,0,met
 徳島県,四国,20,5,0,met,6,5,0,met
 佐賀県,九州,20,5,0,met,10,5,0,met
 鹿児島県,九州,21,5,0,met,5,5,0,met

@@ -16,8 +16,8 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 新潟県,甲信越,28,22,161,53,92,5,0,0,0,reference_depth
 富山県,北陸,28,15,229,53,61,14,0,0,0,reference_depth
 石川県,北陸,25,18,187,117,113,4,0,0,0,reference_depth
-福井県,北陸,28,16,178,42,15,0,0,0,0,reference_depth
-山梨県,甲信越,25,15,154,63,73,2,0,0,0,reference_depth
+福井県,北陸,28,16,180,42,15,0,0,0,0,reference_depth
+山梨県,甲信越,26,15,155,63,73,2,0,0,0,reference_depth
 長野県,甲信越,25,22,156,76,80,8,0,0,0,reference_depth
 岐阜県,東海,28,19,191,100,88,2,0,0,0,reference_depth
 静岡県,東海,25,21,175,100,54,10,0,0,0,reference_depth
@@ -26,7 +26,7 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 滋賀県,近畿,28,16,112,54,38,1,0,0,0,reference_depth
 京都府,近畿,27,16,149,94,64,2,0,0,0,reference_depth
 大阪府,近畿,28,15,201,90,60,18,0,0,0,reference_depth
-兵庫県,近畿,25,19,157,71,45,21,0,0,0,reference_depth
+兵庫県,近畿,26,19,158,71,45,21,0,0,0,reference_depth
 奈良県,近畿,28,19,211,112,82,6,0,0,0,reference_depth
 和歌山県,近畿,25,20,99,35,37,0,0,0,0,reference_depth
 鳥取県,中国,25,18,160,79,71,2,0,0,0,reference_depth

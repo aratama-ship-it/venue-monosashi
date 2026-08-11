@@ -7829,3 +7829,5 @@ DETAIL-7828,CAND-1237,nago21-arena,アリーナ,arena,,,,unknown,unknown,,,,thre
 DETAIL-7829,CAND-1238,okinawa-kenso-main,メインアリーナ,arena,,,,unknown,unknown,,,,two_way,none,yes,unknown,https://okinawa-kenso.com/?page_id=205,2026-08-10,verified,利用面積が2分の1以下の場合は基準額の2分の1
 DETAIL-7830,CAND-007,phoenix-elpis,エルピス大ホール,stage_hall,,,,unknown,unknown,,,,none,permanent,no,unknown,https://fukui-phoenixplaza.jp/wp-content/uploads/2024ryoukin.pdf,2026-08-11,verified,公式料金表PDFに「基本利用料金（セット料金）」として全日9時〜22時（13時間）の額を掲載
 DETAIL-7831,CAND-354,banjo-large,大ホール,stage_hall,,,,unknown,unknown,,,,none,permanent,no,unknown,https://www.city.tsuruga.lg.jp/soshiki/94/index.html,2026-08-11,verified,敦賀市公式ページの使用料表に「大ホール（舞台共）」として全日9時から22時の額を掲載
+DETAIL-7832,CAND-1239,baycom-main,メインアリーナ,arena,,,,unknown,unknown,,,,three_way,none,yes,unknown,https://www.aspf.or.jp/park/mainarena.html,2026-08-12,verified,全面/2分の1/3分の1で貸出
+DETAIL-7833,CAND-1240,otsuki-gym-main,メインアリーナ,arena,,,,unknown,unknown,,,,three_way,none,yes,unknown,https://www.city.otsuki.yamanashi.jp/bunka/sports/files/kyougibetusiyouryou10.pdf,2026-08-12,verified,全面/半面/1・6面で貸出。サブアリーナ（柔剣道場等）は別
