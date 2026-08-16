@@ -1,0 +1,35 @@
+prefecture,city,facility,pattern,space_name,space_type,official_url,facts,risk,capacity,area_m2
+東京都,港区,麻布区民センター,community_stage_hall,区民ホール,community_hall,https://www.city.minato.tokyo.jp/documents/27116/20260326154625.pdf,2026年4月の区施設予約案内に区民ホールを掲載,客席数と舞台仕様と搬入条件は要確認,,
+東京都,港区,高輪区民センター,community_stage_hall,区民ホール,community_hall,https://www.city.minato.tokyo.jp/documents/27116/20260326154625.pdf,2026年4月の区施設予約案内に区民ホールと音楽スタジオを掲載,客席数と舞台仕様と搬入条件は要確認,,
+東京都,港区,芝浦港南区民センター,community_stage_hall,区民ホール,community_hall,https://www.city.minato.tokyo.jp/shiba-koukanri/kumincenter/sibaurakumincenter.html,区民ホール定員235名を掲載,舞台仕様と搬入条件は要確認,235,
+東京都,港区,台場区民センター,community_stage_hall,区民ホール,community_hall,https://www.city.minato.tokyo.jp/documents/27116/20260326154625.pdf,2026年4月の区施設予約案内に区民ホールを掲載,客席数と舞台仕様と搬入条件は要確認,,
+東京都,港区,男女平等参画センター リーブラ,stage_and_meeting_complex,ホール,community_hall,https://www.city.minato.tokyo.jp/documents/27116/20260326154625.pdf,2026年4月の区施設予約案内にホールを掲載,客席数と舞台仕様と搬入条件は要確認,,
+東京都,台東区,台東区生涯学習センター ミレニアムホール,stage_hall,ミレニアムホール,stage_hall,https://www.city.taito.lg.jp/gakushu/shogaigakushu/shogaigakushusisetsu/syougaigakusyuucente/furoaannai/2kai.html,固定300席で舞台12.4m×7.2mを掲載,天井高と搬入条件は要確認,300,329
+東京都,品川区,五反田文化センター,stage_and_practice_complex,音楽ホール,stage_hall,https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-bunka/shisetsu-bunka-bunka/hpg000028612.html,固定248席と車椅子2席で舞台高8.6mを掲載,2026年9月24日から12月8日は貸出休止予定,250,
+東京都,品川区,CITY HALL & GALLERY GOTANDA,conference_and_event_complex,イベントホール,event_hall,https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-bunka/shisetsu-bunka-bunka/20230731164357.html,セミナーと講演会に利用できるイベントホールを掲載,定員と面積と搬入条件は要確認,,
+東京都,世田谷区,北沢区民会館 北沢タウンホール,stage_and_meeting_complex,ホール,stage_hall,https://www.city.setagaya.lg.jp/02205/8535.html,区公式の現行区民会館案内に掲載,客席数と舞台仕様と搬入条件は要確認,,
+東京都,世田谷区,砧区民会館 成城ホール,stage_and_meeting_complex,ホール,stage_hall,https://www.city.setagaya.lg.jp/02219/8533.html,ホール定員397名と面積370㎡を掲載,舞台仕様と搬入条件は要確認,397,370
+東京都,世田谷区,北沢区民会館別館 梅丘パークホール,stage_and_meeting_complex,集会室,meeting_hall,https://www.city.setagaya.lg.jp/shisetsu/kumin/12700.html,区民会館一覧に掲載し資料は集会室120名と197㎡を示す,舞台の有無と搬入条件は要確認,120,197
+東京都,世田谷区,玉川区民会館 玉川せせらぎホール,stage_and_meeting_complex,ホール,stage_hall,https://www.city.setagaya.lg.jp/shisetsu/kumin/12700.html,区公式の現行区民会館一覧に掲載,客席数と舞台仕様と搬入条件は要確認,,
+東京都,世田谷区,玉川区民会館別館 上用賀アートホール,stage_and_meeting_complex,ホール,stage_hall,https://www.city.setagaya.lg.jp/shisetsu/kumin/12700.html,区公式の現行区民会館一覧に掲載,客席数と舞台仕様と搬入条件は要確認,,
+東京都,練馬区,区民・交流ホール Coconeriホール,transformable_community_hall,ホール,flat_floor_hall,https://www.city.nerima.tokyo.jp/shisetsu/community/coconeri/kkh.html,平土間530㎡で最大500名を掲載,天井高と舞台仕様と搬入条件は要確認,500,530
+東京都,練馬区,光が丘区民ホール,community_stage_hall,光が丘区民ホール,community_hall,https://www.city.nerima.tokyo.jp/shisetsu/bunka/kuminhall/hikarigaokakuminnhor.html,区公式が付帯設備料金を掲載,定員と面積と舞台仕様は要確認,,
+東京都,練馬区,関区民ホール,community_stage_hall,関区民ホール,community_hall,https://www.city.nerima.tokyo.jp/shisetsu/shisetsu_yoyaku/sisetuitiran.html,区の現行施設予約システム対象ホールに掲載,定員と面積と舞台仕様は要確認,,
+東京都,北区,赤羽会館,stage_and_meeting_complex,大ホール,stage_hall,https://www.city.kita.tokyo.jp/kikaku/kuse/joho/shiryoshu/h240901/documents/attachment_14.pdf,1階講堂754㎡と4階大ホール410㎡を掲載,公開資料は2023年のため予約可否を再確認,,410
+大阪府,東大阪市,東大阪市文化創造館,stage_and_practice_complex,大ホール,stage_hall,https://www.city.higashiosaka.lg.jp/0000030067.html,大ホール1500席と小ホール300席を掲載,料金と搬入条件は要確認,1500,
+大阪府,大阪市中央区,大阪府立男女共同参画・青少年センター ドーンセンター,stage_and_meeting_complex,ホール,stage_hall,https://www.pref.osaka.lg.jp/shisetsu/o070040/shisetsu_000001.html,府公式がホールとパフォーマンススペースの貸館を掲載,席数と面積は現行料金資料で再確認,,
+大阪府,大阪市中央区,大阪府立労働センター エル・おおさか,stage_and_meeting_complex,大ホール,stage_hall,https://www.pref.osaka.lg.jp/shisetsu/o110090/shisetsu_000058.html,府公式が大ホールと多目的ホールとシアターを掲載,席数と面積と搬入条件は要確認,,
+大阪府,大阪市旭区,大阪市立芸術創造館,stage_and_practice_complex,演劇練習室,practice_studio,https://www.city.osaka.lg.jp/keizaisenryaku/page/0000515668.html,大阪市が芸術表現活動支援施設として案内,区画別の定員と料金と搬入条件は要確認,,
+大阪府,大阪市東淀川区,大阪市立青少年センター KOKO PLAZA,stage_and_practice_complex,ホール 練習発表室,practice_hall,https://www.city.osaka.lg.jp/higashiyodogawa/cmsfiles/contents/0000055/55111/R7_01KOKOPLAZA02.pdf,ホールと音楽練習室とダンス練習室と宿泊を掲載,定員と面積と搬入条件は要確認,,
+大阪府,大阪市中央区,大阪産業創造館,conference_and_event_complex,4階イベントホール,event_hall,https://www.city.osaka.lg.jp/keizaisenryaku/page/0000683909.html,4階イベントホール定員150名を掲載,面積と搬入条件は要確認,150,
+大阪府,富田林市,富田林市市民会館 レインボーホール,stage_and_meeting_complex,ホール,stage_hall,https://www.city.tondabayashi.lg.jp/map/rainbowhall.html,市公式予約対象で市資料はホール400席と多目的ホール700席を示す,座席構成と搬入条件は要確認,400,
+大阪府,高石市,たかいし市民文化会館 アプラホール,stage_and_practice_complex,大ホール,stage_hall,https://www.city.takaishi.lg.jp/kakuka/kyouiku/appla/shiminbunkakaikan.html,市公式が大ホールと小ホール等の貸館を掲載,定員と面積と搬入条件は要確認,,
+大阪府,忠岡町,忠岡町ふれあいホール,community_stage_hall,ふれあいホール,community_hall,https://www.town.tadaoka.osaka.jp/soshiki/kodomo/2/165.html,町公式が利用申込窓口を掲載,定員と面積と舞台仕様は要確認,,
+大阪府,泉大津市,テクスピア大阪,conference_and_event_complex,大ホール,event_hall,https://www.city.izumiotsu.lg.jp/kakuka/koushitsu/senryaku/oshirase/15516.html,市の2026年事業資料が大ホールと小ホールの設備図を公開,定員と面積と搬入条件は要確認,,
+大阪府,東大阪市,児童文化スポーツセンター ドリーム21,stage_and_practice_complex,多目的文化ホール,community_hall,https://www.city.higashiosaka.lg.jp/0000006595.html,市公式が多目的文化ホールの利用受付を案内,定員と面積と利用対象は要確認,,
+大阪府,東大阪市,東大阪市民ふれあいホール,community_stage_hall,市民ふれあいホール,community_hall,https://www.city.higashiosaka.lg.jp/0000035522.html,市の現行公共施設予約対象に掲載,定員と面積と舞台仕様は要確認,,
+大阪府,堺市中区,堺市立中文化会館 ソフィア・堺,stage_and_practice_complex,メインホール,stage_hall,https://www.city.sakai.lg.jp/kanko/bunka/bunka_kanren/geibunhall/koremadekeika/konwakai/kaisaiyotei.files/shiminkaikan01_06.pdf,堺市資料がメインホール798席を掲載,席数は現行施設案内で再確認,798,
+大阪府,堺市南区,国際障害者交流センター ビッグ・アイ,stage_and_meeting_complex,メインホール,stage_hall,https://www.big-i.jp/,運営主体公式が現行施設を案内,席数と料金と搬入条件は要確認,,
+大阪府,堺市南区,大阪府立障がい者交流促進センター ファインプラザ大阪,stage_and_meeting_complex,メインホール,stage_hall,https://www.fineplaza.net/,運営主体公式が現行施設を案内,席数と料金と搬入条件は要確認,,
+大阪府,堺市北区,堺市産業振興センター,conference_and_event_complex,イベントホール,event_hall,https://www.sakai-ipc.jp/,運営主体公式が現行施設を案内,席数と料金と搬入条件は要確認,,
+大阪府,堺市堺区,堺市勤労者総合福祉センター サンスクエア堺,stage_and_meeting_complex,メインホール,stage_hall,https://www.sunsquare-sakai.jp/,運営主体公式が現行施設を案内,席数と料金と搬入条件は要確認,,

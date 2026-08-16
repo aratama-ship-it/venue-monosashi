@@ -25,7 +25,7 @@ prefecture,region,stage_venues,stage_priced,stage_gap,stage_reachable,sports_ven
 山口県,中国,20,7,0,met,6,5,0,met
 愛媛県,四国,22,6,0,met,5,5,0,met
 高知県,四国,18,5,0,met,6,5,0,met
-福岡県,九州,22,5,0,met,6,5,0,met
+福岡県,九州,75,10,0,met,8,5,0,met
 熊本県,九州,20,5,0,met,7,5,0,met
 大分県,九州,20,5,0,met,6,5,0,met
 沖縄県,沖縄,23,5,0,met,6,5,0,met
@@ -36,12 +36,12 @@ prefecture,region,stage_venues,stage_priced,stage_gap,stage_reachable,sports_ven
 茨城県,関東,22,5,0,met,7,5,0,met
 群馬県,関東,23,5,0,met,5,5,0,met
 千葉県,関東,21,5,0,met,5,5,0,met
-東京都,関東,20,7,0,met,9,7,0,met
+東京都,関東,75,8,0,met,9,7,0,met
 岐阜県,東海,25,5,0,met,5,5,0,met
-愛知県,東海,22,5,0,met,7,5,0,met
+愛知県,東海,76,9,0,met,7,5,0,met
 三重県,東海,21,5,0,met,12,7,0,met
 滋賀県,近畿,22,5,0,met,6,5,0,met
-大阪府,近畿,22,9,0,met,9,5,0,met
+大阪府,近畿,74,15,0,met,9,5,0,met
 兵庫県,近畿,22,5,0,met,6,5,0,met
 徳島県,四国,20,5,0,met,6,5,0,met
 佐賀県,九州,20,5,0,met,10,5,0,met

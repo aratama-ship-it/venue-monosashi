@@ -1238,3 +1238,298 @@ CAND-1237,沖縄,沖縄県,名護市,21世紀の森体育館,arena_and_meetings,
 CAND-1238,沖縄,沖縄県,沖縄市,沖縄県総合運動公園 体育館,arena_and_meetings,B,"指定管理者公式の体育館専用利用料金表（令和7年4月1日現在）はメインアリーナの9時〜13時／13時〜17時／9時〜17時／時間1hの基準額を掲載。アマチュア入場料なし一般学生の9時〜17時は13,630円",メインアリーナの面積・席数は今回参照したページでは確認できず未記録。公表されている最長区分が9時〜17時のため、これを日額として扱っている（夜間の通し区分は未掲載）。利用面積が2分の1以下の場合は2分の1,verified,https://www.sports-commission.okinawa/sports-facility/s-20108/
 CAND-1239,近畿,兵庫県,尼崎市,ベイコム総合体育館（尼崎市記念公園総合体育館）,arena_and_meetings,B,指定管理者（尼崎市スポーツ振興事業団）公式ページはメインアリーナの午前9-12時・午後12-17時・夜間17-21時の1時間単価と「1日利用」の額を掲載。使用時間は午前9時から午後9時まで,メインアリーナの面積・席数は今回参照したページでは確認できず未記録。上段が尼崎市内登録団体、下段（括弧内）が市外登録団体,verified,https://www.aspf.or.jp/park/mainarena.html
 CAND-1240,中部,山梨県,大月市,大月市民総合体育館,gymnasium,B,大月市公式ページ（2026年7月10日更新）がリンクする競技別使用料PDFに、メインアリーナ全面の使用時間帯9:00〜17:00と17:00〜22:00の1時間単価を掲載。開館時間は平日8:30〜22:00、日曜祝祭日8:30〜17:00,メインアリーナの面積・席数は今回参照したページでは確認できず未記録。料金表が始まる9:00より前の8:30〜9:00の扱いは不明。大月市民以外は2倍（上野原市民は相互利用協定により大月市民と同額）。ボールを蹴る競技は不可,verified,https://www.city.otsuki.yamanashi.jp/bunka/sports/sougoutaiikukan.html
+CAND-1241,関東,東京都,新宿区,新宿区立新宿文化センター,stage_and_practice_complex,A,東京都の令和7年度調査と施設公式は大ホール1802人・小ホール210人等を貸出施設として掲載,料金・搬入・専有回線と催事ごとの利用制限は追加確認,verified,https://www.regasu-shinjuku.or.jp/bunka-center/
+CAND-1242,関東,東京都,台東区,台東区立浅草公会堂,stage_and_meetings,A,施設公式は本格的な花道を備える客席1070名の大ホールと集会室・展示ホールを掲載,東京都調査の総数1074人は車椅子スペース4人を含む表現とみられるため固定席1070人と分離。料金・搬入・回線は追加確認,verified,https://asakusa-koukaidou.net/
+CAND-1243,関東,東京都,墨田区,曳舟文化センター,stage_and_meetings,A,東京都の令和7年度調査は劇場ホール582人と会議室等を現行貸出施設として掲載,料金・搬入・専有回線は追加確認,verified,https://www.hikifune-bunka.com/
+CAND-1244,関東,東京都,墨田区,すみだトリフォニーホール,multi_hall_cultural_complex,A,東京都の令和7年度調査は大ホール1805人・小ホール252人を掲載。施設公式は2028年3月まで通常利用と案内,2028年4月1日から大規模改修で全館休館し2030年度中の再開予定。再開日と再開後予約条件は未定,verified,https://www.triphony.com/
+CAND-1245,関東,東京都,目黒区,めぐろパーシモンホール,multi_hall_cultural_complex,A,施設公式は大ホール1200人・小ホール200人・練習室等と直接料金を掲載,大ホールは2027年1月12日から2028年1月7日まで臨時休館予定。小ホールも期間を分けて休館予定,verified,https://www.persimmon.or.jp/
+CAND-1246,近畿,大阪府,堺市,堺市立美原文化会館（アルテベル）,stage_and_practice_complex,A,施設公式は車椅子席5席を含む541席のホールとリハーサル室等を掲載,料金・搬入・専有回線は追加確認,verified,https://www.mihara-hall.jp/
+CAND-1247,近畿,大阪府,豊能町,豊能町立ユーベルホール,stage_and_practice_complex,A,豊能町公式は車椅子席3席を含む505席の多目的ホールと約150種類の附属設備を掲載,料金・搬入・専有回線は追加確認,verified,https://www.town.toyono.osaka.jp/jubel-hall/
+CAND-1248,近畿,大阪府,松原市,松原市文化会館,stage_hall,A,指定管理者公式は543席のホールと貸出案内を掲載,料金の用途加算・搬入・専有回線は追加確認,verified,https://mbj-zaidan.jp/bunka/
+CAND-1249,近畿,大阪府,藤井寺市,藤井寺市立市民総合会館（パープルホール）,multi_hall_cultural_complex,A,施設公式は固定1269席の大ホール・170席の小ホール等と直接料金を掲載,一部附帯設備は故障・撤去により利用不可。利用時に最新設備状況を要確認,verified,https://www.city-fujiidera-kosha.or.jp/honkan
+CAND-1250,近畿,大阪府,羽曳野市,羽曳野市立生活文化情報センター（LICはびきの）,multi_hall_cultural_complex,A,施設公式は638人収容で客席収納により平土間化できるサムテックホールMと直接料金を掲載,料金加算・搬入・専有回線は追加確認,verified,https://www.lic-habikino.jp/
+CAND-1251,中部,愛知県,名古屋市,ウィルあいち（愛知県女性総合センター）,stage_and_meetings,A,施設公式は面積1805㎡・最大800人のウィルホールと税込直接料金を掲載,女性団体・女性活躍企業等と一般で料金が異なり月曜日にも別料金。和太鼓は使用不可,verified,https://will-aichi.pref.aichi.jp/
+CAND-1252,中部,愛知県,名古屋市,名古屋市中小企業振興会館（吹上ホール）,exhibition_and_meetings,A,施設公式は展示面積5327㎡・天井高11.5m・床荷重5t/㎡・全日料金を掲載,天井は吊物不可。2026年は改修に伴う館内・駐車場の一部制限あり,verified,https://www.nipc.or.jp/fukiage/
+CAND-1253,中部,愛知県,名古屋市,Niterra日本特殊陶業市民会館,multi_hall_cultural_complex,A,施設公式は固定2291席と車椅子席5席のフォレストホール及び直接料金を掲載,附帯設備・入場料区分・搬入・回線条件は利用前に再確認,verified,https://nagoya-shimin.hall-info.jp/
+CAND-1254,中部,愛知県,名古屋市,中川文化小劇場,stage_and_practice_complex,A,名古屋市文化振興事業団公式は車椅子席4席を含む446席のホールと62㎡の練習室を掲載,公式料金は区分単価と利用区分倍率の組合せがあるため追加精査,verified,https://www.bunka758.or.jp/facility/nakagawa/
+CAND-1255,中部,愛知県,小牧市,小牧市市民会館,stage_and_practice_complex,A,施設公式は定員1334人・舞台間口18.5m・搬入口3m×3.5mの大ホールを掲載,車椅子席3席が定員内外のどちらかは表現上不明。料金・専有回線は追加確認,verified,https://www.komaki-bunka.or.jp/shiminkaikan/
+CAND-1256,九州,福岡県,福岡市,福岡市立博多市民センター,stage_and_meetings,A,施設公式は定員500人の多目的ホールと9時から22時の直接料金を掲載,附属設備料・入場料加算・搬入・専有回線は追加確認,verified,https://hakata-shimin.info/
+CAND-1257,九州,福岡県,福岡市,福岡市立南市民センター,stage_and_practice_complex,A,施設公式は面積876㎡・約800人の文化ホールと塩原音楽・演劇練習場を掲載,文化ホールと練習場は同一運営サイトだが区画を混在させない。附属設備・搬入・回線は追加確認,verified,https://minami-tk.jp/
+CAND-1258,九州,福岡県,福岡市,福岡市立城南市民センター,stage_and_meetings,A,施設公式は定員500人のホールと9時から22時の直接料金を掲載,入場料5000円超は基本料2倍。附属設備・搬入・専有回線は追加確認,verified,https://jonan-c.net/
+CAND-1259,九州,福岡県,福岡市,福岡市立西市民センター,stage_and_meetings,A,福岡市公式は800席を維持して改修し2026年4月1日にホールを再開したと掲載,改修前資料と混同しない。附属設備・搬入・専有回線は追加確認,verified,https://nishi-civic-center.jp/
+CAND-1260,九州,福岡県,福岡市,福岡市立早良市民センター,stage_and_meetings,A,施設公式は面積667㎡・定員500人・舞台間口12mのホールを掲載,舞台高さ6mはプロセニアム寸法であり最低天井高としては扱わない。附属設備・搬入・回線は追加確認,verified,https://www.shimin-s.com/
+CAND-1261,関東,東京都,品川区,品川区立総合区民会館 きゅりあん,multi_hall_cultural_complex,A,東京都の令和7年度調査は大ホール1088人・小ホール286人を現行貸出施設として掲載,料金・搬入・専有回線と可動席の運用は追加確認,verified,https://www.shinagawa-culture.or.jp/curian/
+CAND-1262,関東,東京都,世田谷区,世田谷文化生活情報センター（世田谷パブリックシアター）,stage_and_practice_complex,A,東京都の令和7年度調査は世田谷パブリックシアター612人を掲載,舞台形式による客席変動・料金・搬入・専有回線は追加確認,verified,https://setagaya-pt.jp/
+CAND-1263,関東,東京都,荒川区,荒川区民会館（サンパール荒川）,multi_hall_cultural_complex,A,東京都の令和7年度調査は大ホール975人・小ホール300人を掲載,料金・搬入・専有回線は追加確認,verified,https://www.sunpearl-arakawa.com/
+CAND-1264,関東,東京都,板橋区,板橋区立文化会館,multi_hall_cultural_complex,A,東京都の令和7年度調査は大ホール1263人・小ホール306人を掲載,調査票の可動席欄に固定席数と同値が入るため可動席数としては採用しない。料金・搬入・回線は追加確認,verified,https://www.itabashi-ci.org/culturehall/
+CAND-1265,関東,東京都,江戸川区,江戸川区総合文化センター,multi_hall_cultural_complex,A,東京都の令和7年度調査は大ホール1497人・小ホール502人を掲載,料金・搬入・専有回線は追加確認,verified,https://edogawa-bunkacenter.jp/
+CAND-1266,関東,東京都,立川市,立川市市民会館（たましんRISURUホール）,multi_hall_cultural_complex,A,東京都の令和7年度調査は大ホール1201人・小ホール246人を掲載,料金・搬入・専有回線は追加確認,verified,https://risuru.hall-info.jp/
+CAND-1267,関東,東京都,府中市,府中の森芸術劇場,multi_hall_cultural_complex,A,東京都の令和7年度調査はどりーむホール2027人・ウィーンホール510人・ふるさとホール524人を掲載,複数ホール同時利用・料金・搬入・専有回線は追加確認,verified,https://www.fuchu-cpf.or.jp/theater/
+CAND-1268,関東,東京都,西東京市,西東京市保谷こもれびホール,multi_hall_cultural_complex,A,東京都の令和7年度調査はメインホール662人・小ホール250人を掲載,料金・搬入・専有回線は追加確認,verified,https://www.komorebi-hall.jp/
+CAND-1269,関東,東京都,多摩市,多摩市立複合文化施設 パルテノン多摩,multi_hall_cultural_complex,A,東京都の令和7年度調査は大ホール1154人・小ホール269人を掲載,料金・搬入・専有回線は追加確認,verified,https://www.parthenon.or.jp/
+CAND-1270,関東,東京都,三鷹市,三鷹市芸術文化センター,multi_hall_cultural_complex,A,東京都の令和7年度調査は風のホール625人・星のホール250人を掲載,可動舞台・客席構成ごとの定員と料金・搬入・回線は追加確認,verified,https://mitaka-sportsandculture.or.jp/geibun/
+CAND-1271,近畿,大阪府,堺市,堺市立西文化会館（ウェスティ）,stage_and_practice_complex,A,施設公式は540席のホールと貸室を掲載,改修工事により2026年4月1日から10月30日まで休館中。再開後の設備・料金は利用前に再確認,verified,https://westy-ogbc.jp/
+CAND-1272,近畿,大阪府,堺市,堺市立栂文化会館,multi_hall_cultural_complex,A,施設公式は定員714人のホールと諸室を掲載,車椅子席5席の定員内外表現は追加確認。料金・搬入・回線も追加確認,verified,https://www.sakai-bunshin.com/facility/togabunka/
+CAND-1273,近畿,大阪府,池田市,池田市民文化会館（アゼリアホール）,multi_hall_cultural_complex,A,池田市資料と施設公式導線は固定1066席・車椅子6席の大ホールと245席の小ホールを掲載,料金・搬入・専有回線は追加確認,verified,https://azaleanet.or.jp/
+CAND-1274,近畿,大阪府,能勢町,淨るりシアター,stage_and_practice_complex,A,施設公式は固定502席・車椅子3席のホールと約300人の小ホールを掲載,料金・搬入・専有回線は追加確認,verified,https://www.jyoruri.jp/
+CAND-1275,近畿,大阪府,富田林市,すばるホール,multi_hall_cultural_complex,A,施設公式は806席のホールと直接料金を掲載,車椅子席8席を含む。附属設備・用途加算・搬入・回線は追加確認,verified,https://subaruhall.org/
+CAND-1276,近畿,大阪府,和泉市,和泉シティプラザ,multi_hall_cultural_complex,A,施設公式は664席の弥生の風ホールと直接料金を掲載,附属設備・用途加算・搬入・専有回線は追加確認,verified,https://www.izumicityplaza.or.jp/
+CAND-1277,近畿,大阪府,阪南市,阪南市立文化センター（サラダホール）,multi_hall_cultural_complex,A,施設公式は固定724席・車椅子3席の大ホールと直接料金を掲載,附属設備・用途加算・搬入・専有回線は追加確認,verified,https://www.sarada-hall.com/
+CAND-1278,中部,愛知県,春日井市,春日井市民会館,stage_and_practice_complex,A,春日井市公式は固定1016席と車椅子席6席のホールを掲載,料金・搬入・専有回線は追加確認,verified,https://www.city.kasugai.lg.jp/shisei/shisetsu/bunka/1009993.html
+CAND-1279,中部,愛知県,江南市,Home&nicoホール（江南市民文化会館）,multi_hall_cultural_complex,A,施設公式は大ホール総数1400席と時間区分料金を掲載,固定1276席・移動116席・車椅子8席。全日額を区分合算で推算しない,verified,https://www.kounan-bunka.jp/
+CAND-1280,中部,愛知県,犬山市,犬山市民文化会館,stage_and_practice_complex,A,犬山市公式は1230席の大ホールと練習室・有線LANを掲載,大規模改修中で通常利用申請の再開時期は未確定。2026年11月から料金改定予定のため再開時に再確認,verified,https://www.city.inuyama.aichi.jp/kurashi/manabu/1001566/index.html
+CAND-1281,中部,愛知県,日進市,日進市民会館,multi_hall_cultural_complex,A,現行運営者公式は固定1010席・車椅子スペース5席の大ホールを掲載,営利・宣伝目的等は中央公民館施設の利用対象外。料金・搬入・回線は追加確認,verified,https://www.nissin-assist.co.jp/kaikan/
+CAND-1282,中部,愛知県,長久手市,長久手市文化の家,multi_hall_cultural_complex,A,施設公式は最大717席の森のホールと可動舞台・客席を掲載,特定天井改修による休館は2026年9月1日まで。フルオープン後に座席構成・料金・搬入条件を再確認,verified,https://bunkanoie.jp/
+CAND-1283,中部,愛知県,蒲郡市,蒲郡市民会館,multi_hall_cultural_complex,A,蒲郡市公式は1598席の大ホールと中ホール・会議室等を掲載,車椅子席8席が定員内外どちらかは公式表現上不明。料金・搬入・回線は追加確認,verified,https://www.city.gamagori.lg.jp/site/shiminkaikan/
+CAND-1284,中部,愛知県,新城市,新城文化会館,multi_hall_cultural_complex,A,現行運営者公式は固定1301席・車椅子4席の大ホールを掲載,LED改修のため2026年12月14日から26日まで大・小ホール等を利用停止,verified,https://www.shinshiro-bunka.jp/
+CAND-1285,中部,愛知県,田原市,田原文化会館,multi_hall_cultural_complex,B,田原市公式は383人の文化ホールと可動椅子209席の多目的ホールを掲載,大規模舞台には小さめ。料金・搬入・専有回線は追加確認,verified,https://www.city.tahara.aichi.jp/shisetsu/bunka/1001212/1001213.html
+CAND-1286,中部,愛知県,豊橋市,アイプラザ豊橋,multi_hall_cultural_complex,A,施設公式は固定1469席の講堂と直接料金を掲載,企業活動利用は講堂料金2倍。附属設備・搬入・回線は追加確認,verified,https://www.aiplaza-toyohashi.jp/
+CAND-1287,中部,愛知県,名古屋市,名古屋国際会議場,convention_complex,A,名古屋市公式は3012席のセンチュリーホールとイベントホール・会議室群を掲載,改修工事により2025年2月1日から2027年3月31日まで全施設を臨時休場中。再開後仕様は変更可能性あり,verified,https://nagoya-congress-center.jp/
+CAND-1288,九州,福岡県,福岡市,福岡市立東市民センター（なみきスクエア）,stage_and_practice_complex,A,施設公式はシンフォニー形式最大800席のなみきホールと音楽・演劇練習場を掲載,幕形式は最大710席。構成ごとの料金・搬入・専有回線は追加確認,verified,https://www.namiki-sq.jp/higashishimin/
+CAND-1289,九州,福岡県,福岡市,福岡サンパレス ホテル&ホール,stage_and_practice_complex,A,施設公式は2316席のコンサートホールと大練習室を掲載,終日利用が原則。料金区分・搬入・専有回線は催事条件ごとに追加確認,verified,https://www.f-sunpalace.com/
+CAND-1290,九州,福岡県,北九州市,北九州芸術劇場,multi_hall_cultural_complex,A,施設公式は大ホール1269席・中劇場700席・可動客席の小劇場96から216席を掲載,複数劇場同時利用・料金・搬入・専有回線は追加確認,verified,https://q-geki.jp/
+CAND-1291,九州,福岡県,北九州市,北九州国際会議場,conference_and_event_hall,B,北九州観光コンベンション協会公式は固定シアター形式585人のメインホールとイベントホール・会議室群を掲載,固定舞台公演より会議・映像催事向け。舞台設備・搬入・料金は追加確認,verified,https://hello-kitakyushu.or.jp/kokusai-kaigi/
+CAND-1292,九州,福岡県,北九州市,北九州ソレイユホール,stage_hall,A,北九州市公式は2008席の大ホールを掲載,老朽化調査のため2025年4月1日から休館中で再開時期未定。通常利用可能な施設としては扱わない,verified,https://www.city.kitakyushu.lg.jp/contents/02100115.html
+CAND-1293,九州,福岡県,朝倉市,朝倉市総合市民センター（ピーポート甘木）,multi_hall_cultural_complex,A,朝倉市公式は固定1076席の大ホールと中ホール・学習施設を掲載,料金・搬入・専有回線は追加確認,verified,https://www.city.asakura.lg.jp/site/public-culture/2704.html
+CAND-1294,九州,福岡県,福津市,福津市複合文化センター カメリアステージ,multi_hall_cultural_complex,A,施設公式は一般506席・車椅子2席のカメリアホールと時間単価を掲載,冷暖房・入場料区分・搬入・専有回線は追加確認,verified,https://camellia-st.com/
+CAND-1295,九州,福岡県,篠栗町,篠栗町総合センター クリエイト篠栗,stage_and_meetings,B,篠栗町公式は複合文化施設として大ホール・会議室等の貸出を掲載。町公式資料は大ホール602人を掲載,教育施設のため利用目的制限あり。現行料金・搬入・専有回線は追加確認,verified,https://www.town.sasaguri.fukuoka.jp/chosei/shokai/shisetsu/3/1563.html
+CAND-1296,関東,東京都,北区,北とぴあ,stage_and_practice_complex,A,"公式はさくらホール1300席、つつじホール402席と複数の会議・練習・展示区画を現行の貸出対象として掲載",ホール舞台寸法は最低有効天井高に転用しない。床荷重・搬入・空き状況は要確認,verified,https://www.hokutopia.jp/hall-guide/
+CAND-1297,関東,東京都,大田区,大田区民ホール・アプリコ,stage_and_practice_complex,A,"大田区公式は大ホール1477席、地下展示室、スタジオ、会議室等を掲載",料金は2026年10月から改定予定。附属設備・搬入・空き状況は要確認,verified,https://www.city.ota.tokyo.jp/shisetsu/aprico/aprico_hall1.html
+CAND-1298,関東,東京都,町田市,町田市民ホール,stage_and_practice_complex,A,"現行の指定管理者案内はホール862席と会議室・練習室等を掲載",舞台寸法は最低有効天井高に転用しない。搬入・料金・空き状況は要確認,verified,https://www.m-shimin-hall.jp/about/
+CAND-1299,関東,東京都,調布市,調布市グリーンホール,stage_and_practice_complex,A,"現行の運営者案内は大ホール1301席、各会議室等の貸出を掲載",客席内訳は可動構成を含む。搬入・料金・空き状況は要確認,verified,https://www.chofu-culture-community.org/renter/green-hall
+CAND-1300,関東,東京都,昭島市,FOSTERホール（昭島市民会館）,stage_and_practice_complex,A,"昭島市公式は大ホール1139席と小ホール、練習室、会議室を掲載",空調改修のため2026年12月1日まで休館中。再開日と予約条件は要確認,verified,https://www.city.akishima.lg.jp/bunka/shogaigakushu/1007496/1002968/1007722/1008660.html
+CAND-1301,関東,東京都,武蔵野市,武蔵野公会堂,stage_and_practice_complex,A,"運営者公式はホール350席、会議室、和室、茶室等を掲載",将来改修計画と直近の貸出状況は要確認。搬入・料金は個別確認,verified,https://www.musashino.or.jp/koukaido/1002140/1002141.html
+CAND-1302,関東,東京都,八王子市,八王子市芸術文化会館 いちょうホール,stage_and_practice_complex,A,"運営者公式は大ホール800席、小ホール282席と楽屋・展示・会議区画を掲載",2025年7月の改修後再開施設。搬入・料金・空き状況は要確認,verified,https://www.hachiojibunka.or.jp/icho/facility/main_hall/
+CAND-1303,関東,東京都,東久留米市,東久留米市立生涯学習センター まろにえホール,stage_and_practice_complex,A,"現行公式はホール657㎡・定員500席、固定・電動・可動の客席構成を掲載",舞台高さは最低有効天井高に転用しない。搬入・料金・空き状況は要確認,verified,https://www.higashikurume-lll.jp/guidance/guidance_hall.html
+CAND-1304,関東,東京都,国分寺市,国分寺市立いずみホール,stage_and_practice_complex,A,"国分寺市の施設案内は市立いずみホールを文化施設として掲載",ホールの最新客席数・舞台設備・料金・予約条件は公式申込前に要確認,verified,https://www.city.kokubunji.tokyo.jp/shisetsu/shikanren/hall/index.html
+CAND-1305,関東,東京都,瑞穂町,瑞穂ビューパーク・スカイホール,stage_and_practice_complex,A,"瑞穂町公式はホール1008席（固定1002席・車椅子6席）と舞台寸法を掲載",舞台高さは最低有効天井高に転用しない。搬入・料金・空き状況は要確認,verified,https://www.town.mizuho.tokyo.jp/kyoikuiinkai/about/007/001/p005144.html
+CAND-1306,近畿,大阪府,大阪市,大阪市中央公会堂,stage_and_meeting_complex,A,"公式は大集会室1161席、中集会室最大500席、小集会室最大150席など16貸室を掲載",歴史的建造物のため音・振動の制限がある。搬入・空き状況は要確認,verified,https://osaka-chuokokaido.com/ja/facilities
+CAND-1307,近畿,大阪府,大阪市,大阪市立阿倍野区民センター,community_stage_hall,A,"現行公式は大ホール定員644人と小ホール、会議室を掲載",大・小ホールは舞台・音響・照明の専門技術者が必要。搬入・空き状況は要確認,verified,https://abeno-cc.net/guidance/usage_fee
+CAND-1308,近畿,大阪府,大阪市,大阪市立住吉区民センター,community_stage_hall,A,"大阪市の現行使用書は大ホール747㎡・定員900人、音楽会・演劇・式典・講演会用途を掲載",料金・舞台設備・搬入・空き状況は要確認,verified,https://www.city.osaka.lg.jp/sumiyoshi/cmsfiles/contents/0000656/656380/02_siyousho.pdf
+CAND-1309,近畿,大阪府,大阪市,大阪市立平野区民センター,community_stage_hall,A,"運営者公式は大ホール610㎡・最大1200人の多目的ホールを掲載",平土間利用時の条件・搬入・料金・空き状況は要確認,verified,https://osaka-hirano-kumin.jp/plaza/facility/
+CAND-1310,近畿,大阪府,守口市,守口文化センター（エナジーホール）,stage_and_practice_complex,A,"守口市公式はホール436席・車椅子8席、ギャラリー、リハーサル室、音楽室等を掲載",舞台高さは最低有効天井高に転用しない。搬入・料金・空き状況は要確認,verified,https://www.city.moriguchi.osaka.jp/kurashi_tetsuzuki/kakushushisetsu/2/17389.html
+CAND-1311,近畿,大阪府,大東市,大東市立総合文化センター（サーティホール）,stage_and_practice_complex,A,"大東市公式は大ホール、小ホール、展示室、会議・練習区画を備える文化施設として掲載",客席数・舞台設備・料金・空き状況は公式申込前に要確認,verified,https://www.city.daito.lg.jp/soshiki/46/19535.html
+CAND-1312,近畿,大阪府,柏原市,柏原市民文化会館（リビエールホール）,stage_and_practice_complex,A,"柏原市公式は大ホール1175席、小ホール281席を掲載",令和7年11月から休館中。再開時期・予約条件は要確認,verified,https://www.city.kashiwara.lg.jp/docs/2020070100064/
+CAND-1313,近畿,大阪府,大阪狭山市,大阪狭山市文化会館（SAYAKAホール）,stage_and_practice_complex,A,"現行施設資料は大ホール1208席（固定1200席・車椅子8席）を掲載",舞台設備・搬入・料金・空き状況は要確認,verified,https://www.osakasayama-bunka.jp/src/pdf/dl_hall_seat.pdf
+CAND-1314,近畿,大阪府,吹田市,吹田市文化会館（メイシアター）,stage_and_practice_complex,A,"吹田市公式は大・中・小ホール、展示室、練習・会議区画を備える文化施設として掲載",大ホールの客席数・舞台設備は運営者資料で申込前に要確認。料金は2025年10月改定,verified,https://www.city.suita.osaka.jp/shisei/shisetsu/1019117/1020442.html
+CAND-1315,近畿,大阪府,泉南市,泉南市立文化ホール,stage_and_practice_complex,A,"現行の施設運営者は多目的ホールとして座席表・貸館案内を掲載",客席数・舞台設備・料金・空き状況は公式申込前に要確認,verified,https://sennanbunka.com/
+CAND-1316,東海,愛知県,知立市,パティオ池鯉鮒（知立市文化会館）,stage_and_practice_complex,A,"運営者公式はかきつばたホール最大1004席、花しょうぶホール、ギャラリー、練習・会議区画を掲載",かきつばたホールは可変客席。搬入・空き状況は要確認,verified,https://patio-chiryu.com/facility/kakitsubatahall/
+CAND-1317,東海,愛知県,半田市,瀧上工業雁宿ホール（半田市福祉文化会館）,stage_and_practice_complex,A,"半田市公式は大ホール1300席、楽屋、練習室を掲載",大ホールは2026年8月から10月まで利用休止予定。再開時期と予約条件は要確認,verified,https://www.city.handa.lg.jp/bunka/bunkashisetsu/1002621/1002633/index.html
+CAND-1318,東海,愛知県,知多市,知多市勤労文化会館,stage_and_practice_complex,A,"知多市の現行資料はつつじホール固定1001席・身障者席4、やまももホール移動席400を掲載",舞台設備・料金・搬入・空き状況は要確認,verified,https://www.city.chita.lg.jp/docs/2018073100020/file_contents/bosyugaiyousyo.pdf
+CAND-1319,東海,愛知県,大府市,愛三文化会館,stage_and_practice_complex,A,"大府市資料はもちのきホール固定817席、くちなしホール移動326席を掲載",舞台設備・料金・搬入・空き状況は要確認,verified,https://www.city.obu.aichi.jp/_res/projects/default_project/_page_/001/033/835/pabukome1206.pdf
+CAND-1320,東海,愛知県,尾張旭市,尾張旭市文化会館,stage_and_practice_complex,A,"尾張旭市公式は文化会館ホール、あさひのホール、展示・練習・研修区画を現行施設として掲載",客席数・舞台設備・料金・空き状況は公式申込前に要確認,verified,https://www.city.owariasahi.lg.jp/page/1866.html
+CAND-1321,東海,愛知県,津島市,津島市文化会館,stage_and_practice_complex,A,"津島市の指定管理資料は大ホール1217人、小ホール240人、練習・研修・会議・和室等を掲載",舞台設備・料金・搬入・空き状況は要確認,verified,https://www.city.tsushima.lg.jp/shisei/gyouseikeiei/shiteikanrisyaseido/unneinohyouka/monitarinngukekka_R5.files/R5-01.pdf
+CAND-1322,東海,愛知県,あま市,美和文化会館,stage_and_practice_complex,A,"あま市公式は大ホール、多目的ホール、アートスペースMを予約対象として掲載",客席数・舞台設備・料金・空き状況は公式申込前に要確認,verified,https://www.city.ama.aichi.jp/shisetsu/1004488/1004492.html
+CAND-1323,東海,愛知県,清須市,清洲市民センター,community_stage_hall,A,"清須市公式はホール、集会室、実習室等を備え、現行の時間帯別使用料を掲載",ホールの客席数・舞台設備・搬入・空き状況は要確認,verified,https://www.city.kiyosu.aichi.jp/shisetsu_annai/kaikan_center/kiyosu_shimin_center.html
+CAND-1324,東海,愛知県,豊山町,豊山町社会教育センター,community_stage_hall,A,"豊山町公式はホール336名・255.58㎡とステージ144.87㎡、アリーナを掲載",客席使用時定員。搬入・空き状況は要確認,verified,https://www.town.toyoyama.lg.jp/shisetsu/kyoiku/1001358/1000977.html
+CAND-1325,東海,愛知県,幸田町,幸田町民会館,stage_and_practice_complex,A,"幸田町公式資料はさくらホール固定1004席・車椅子6席・親子席6席、つばきホール等を掲載",舞台設備・料金・搬入・空き状況は公式申込前に要確認,verified,https://www.town.kota.lg.jp/uploaded/life/14507_23789_misc.pdf
+CAND-1326,九州,福岡県,福岡市,博多座,stage_theater,A,"劇場公式は九州最大級の演劇専用劇場として最大客席数約1500席・3層構造を掲載",約1500席は公式の最大表記。貸館条件・搬入・空き状況は要確認,verified,https://www.hakataza.co.jp/theater/
+CAND-1327,九州,福岡県,福岡市,キャナルシティ劇場,stage_theater,A,"劇場公式は客席1132席、プロセニアム間口14.4m、高さ9m、舞台奥行17mを掲載",劇場シート12席は主客席数と分ける。貸館条件・空き状況は要確認,verified,https://www.canalcitygekijo.com/rentalinfo/
+CAND-1328,九州,福岡県,福岡市,福岡国際会議場,conference_and_stage_complex,A,"運営者公式はメインホール座席図と会議・展示区画を現行の貸出対象として掲載",区画別の定員・舞台設備・料金・空き状況は公式申込前に要確認,verified,https://www.marinemesse.or.jp/congress/
+CAND-1329,九州,福岡県,久留米市,久留米シティプラザ,stage_exhibition_and_practice_complex,A,"運営者公式はザ・グランドホール1514席、久留米座399席、Cボックス144席、会議・展示区画を掲載",舞台高さは最低有効天井高に転用しない。搬入・料金・空き状況は要確認,verified,https://kurumecityplaza.jp/pages/rental?tab=guide
+CAND-1330,九州,福岡県,福岡市,Zepp Fukuoka,live_house,A,"運営者公式はスタンディング時1526人、椅子使用時669人の収容構成を掲載",催事レイアウトにより収容人数は変動。貸館条件・搬入・空き状況は要確認,verified,https://www.zepp.co.jp/hall/fukuoka/
+CAND-1331,九州,福岡県,久留米市,石橋文化ホール,stage_and_practice_complex,A,"運営者公式はワンスロープ形式の固定1077席と基本使用料金を掲載",舞台設備・搬入・空き状況は要確認,verified,https://www.ishibashi-bunka.jp/use/hall.php
+CAND-1332,九州,福岡県,筑後市,サザンクス筑後,stage_and_practice_complex,A,"運営者公式は大ホール1311席、小ホール505席、イベントホール等を掲載",大ホールは可動席を平土間利用可能。搬入・料金・空き状況は要確認,verified,https://www.sathankusu-chikugo.or.jp/facility/6112/
+CAND-1333,九州,福岡県,福岡市,福岡市立中央市民センター,community_stage_hall,A,"福岡市の現行資料はホール500席、視聴覚室・会議室等を掲載",利用者登録・料金・搬入・空き状況は要確認,verified,https://www.city.fukuoka.lg.jp/soki/s_teisu/shisei/documents/1.shiminsennta-.pdf
+CAND-1334,九州,福岡県,北九州市,北九州市立響ホール,stage_and_practice_complex,A,"運営者公式はシューボックス型音楽専用ホール720席、リハーサル室・練習室を掲載",2026年度の大規模改修予定を市資料が掲載。日程・予約条件は要確認,verified,https://www.hibiki-hall.jp/about/
+CAND-1335,九州,福岡県,福岡市,電気ビルみらいホール,conference_and_stage_complex,A,"運営者公式はみらいホールとカンファレンスの予約・利用導線を現行掲載",定員・舞台設備・料金・搬入・空き状況は公式申込前に要確認,verified,https://miraihall-conference.revn.jp/
+CAND-1336,関東,東京都,世田谷区,せたがやイーグレットホール（世田谷区民会館）,stage_and_practice_complex,A,"世田谷区公式はホール933名（前舞台902名）、集会室、遮音構造の練習室を現行の利用対象として掲載",名称は2025年4月からの愛称を含む。搬入・料金・空き状況は要確認,verified,https://www.city.setagaya.lg.jp/02408/8529.html
+CAND-1337,関東,東京都,大田区,大田文化の森,stage_and_practice_complex,A,"運営者公式はホール259席、楽屋、会議・創作・和室等の利用案内と現行料金を掲載",2026年4月改定料金。区内外・営利等で料金が変動する,verified,https://www.ota-bunka.or.jp/facilities/bunka/halls/main_hall/main_hall01
+CAND-1338,関東,東京都,江戸川区,タワーホール船堀,stage_exhibition_and_meeting_complex,A,"運営者公式は大ホール750席、小ホール最大300席、展示ホール、会議・和室等を掲載",区民料金と区外・用途条件を申込前に要確認,verified,https://www.towerhall.jp/facility/
+CAND-1339,関東,東京都,日野市,ひの煉瓦ホール（日野市民会館）,stage_and_practice_complex,A,"日野市公式は大ホール1104席、小ホール208席、展示室・会議室・集会室を掲載",利用区分と抽選・予約条件は申込前に要確認,verified,https://www.city.hino.lg.jp/shisetsu/bunka/renga/1000966.html
+CAND-1340,関東,東京都,狛江市,エコルマホール（狛江市民ホール）,stage_and_meeting_complex,A,"狛江市公式は固定728席の劇場型ホールと展示・多目的室を掲載",市内外で受付条件が異なる。搬入・料金は要確認,verified,https://www.city.komae.tokyo.jp/index.cfm/41%2C651%2C324%2C2026%2Chtml
+CAND-1341,関東,東京都,清瀬市,清瀬けやきホール,stage_and_practice_complex,A,"運営者公式は大ホール508席、練習室、現行の利用案内を掲載",ホール内飲食不可。搬入・料金・空き状況は要確認,verified,https://kiyosekeyakihall.jp/facility/facility-hall/
+CAND-1342,関東,東京都,羽村市,プリモホールゆとろぎ（羽村市生涯学習センター）,stage_and_practice_complex,A,"羽村市公式は大ホール854席、小ホール252席、展示・練習・会議区画を掲載",舞台専門スタッフの追加条件・料金は要確認,verified,https://www.city.hamura.tokyo.jp/0000018212.html
+CAND-1343,関東,東京都,立川市,TACHIKAWA STAGE GARDEN（立川ステージガーデン）,live_house,A,"施設公式は最大収容3018名、平土間660㎡、屋外ステージ、複数の楽屋を掲載",収容数は着席・立見の構成で変動する。貸館条件は要確認,verified,https://www.t-sg.jp/about/
+CAND-1344,関東,東京都,国立市,FSXホール（くにたち市民芸術小ホール）,stage_and_practice_complex,A,"運営者公式は可変ホール、スタジオ、音楽練習室、アトリエ、ギャラリーの貸出を掲載",客席は99・132・369・402席等の構成で変動する。大音量楽器は事前確認,verified,https://kuzaidan.or.jp/hall/%E3%83%9B%E3%83%BC%E3%83%AB/
+CAND-1345,関東,東京都,東大和市,東大和市民会館ハミングホール,stage_and_practice_complex,A,"運営者公式は大ホール714席、小ホール300席、練習室・会議室を掲載",市民・一般で料金が異なる。準備から片付けまで利用時間に含む,verified,https://www.humming-hall.jp/facility-guide.php
+CAND-1346,近畿,大阪府,門真市,門真市民文化会館（ルミエールホール）,stage_and_practice_complex,A,"運営者公式は大・小ホール、レセプションホール、リハーサル室、練習室、展示・会議区画の利用案内を掲載",料金・舞台仕様・搬入条件は申込前に要確認,verified,https://npotoybox.jp/lumi/institution/about-lumiere-hall.html
+CAND-1347,近畿,大阪府,四條畷市,四條畷市立市民総合センター（市民ホール）,stage_and_meeting_complex,A,"四條畷市資料は市民ホール713席、展示ホール、音楽室、会議等の施設構成を掲載",料金・舞台設備・予約条件は申込前に要確認,verified,https://www.city.shijonawate.lg.jp/uploaded/attachment/22487.pdf
+CAND-1348,近畿,大阪府,岸和田市,岸和田製鋼マドカホール（岸和田市立文化会館）,stage_and_practice_complex,A,"岸和田市公式は文化会館マドカホールを現行施設として掲載",大・小ホールの客席構成、料金、搬入・空き状況は公式申込前に要確認,verified,https://www.city.kishiwada.lg.jp/page/10-madoka.html
+CAND-1349,近畿,大阪府,堺市,堺市立東文化会館,stage_and_practice_complex,A,"堺市公式はメインホール401席、フラットホール、リハーサル・練習・講座等の区画を掲載",市外利用は加算。人件費等が別途必要な場合がある,verified,https://www.city.sakai.lg.jp/yoyakuanai/bunrui/bunka/hallkaikan/higasibunnkakaikan/index.html
+CAND-1350,近畿,大阪府,大阪市,大阪市立城東区民センター,community_stage_hall,A,"運営者公式はホール773名・956㎡、多目的室、会議室を掲載",観覧席使用の有無で料金が変動。スポーツ・球技は禁止,verified,https://www.osakacommunity.jp/joto-center/floor/
+CAND-1351,近畿,大阪府,大阪市,大阪祭典なにわ区民ホール（浪速区民センター）,community_stage_hall,A,"運営者公式はホール450名・385㎡、和室、会議室を掲載",演劇練習など大声を出す利用は内容により不可。休館・工事予定は要確認,verified,https://www.osakacommunity.jp/naniwa-center/floor/
+CAND-1352,近畿,大阪府,大阪市,まるよし精肉店 都島区民センター,community_stage_hall,A,"運営者公式資料はホール定員500名・406㎡、舞台、音響設備を掲載",椅子利用時の収容はレイアウトで変動。料金・空き状況は要確認,verified,https://www.osakacommunity.jp/miyakojima-center/wp-content/uploads/sites/19/2023/12/%E3%81%BF%E3%82%84%E3%81%93%E3%81%98%E3%81%BE%E3%82%93%EF%BC%94%E5%8F%B7_300%E9%83%A8%E5%85%A5%E7%A8%BF%E7%94%A8.pdf
+CAND-1353,近畿,大阪府,大阪市,淀川区民センター,community_stage_hall,A,"運営者公式はホールと会議・和室等の現行料金・利用案内を掲載",平日・休日と入場料徴収の有無で料金が変動する,verified,https://www.osakacommunity.jp/yodogawa-center/guide/fee/
+CAND-1354,近畿,大阪府,大阪市,生野区民センター,community_stage_hall,A,"運営者公式は立席650人収容のホール、会議室、和室、防音室等の貸室を掲載",着席数はレイアウトで変動。料金・搬入・空き状況は要確認,verified,https://www.osakacommunity.jp/ikuno-center/facility/
+CAND-1355,近畿,大阪府,大阪市,鶴見区民センター,community_stage_hall,A,"運営者公式は大ホール移動観覧席800名・平土間480名、小ホール、スタジオ等を掲載",大・小ホールは舞台・音響・照明の専門技術者が必要な場合がある,verified,https://www.osakacommunity.jp/tsurumi-center/wp-content/uploads/sites/20/2021/07/panhureto-1.pdf
+CAND-1356,東海,愛知県,名古屋市,名古屋市千種文化小劇場,stage_and_practice_complex,A,"運営者公式は251席の円形ホールと練習室を掲載",利用料金は本番・準備、平日・休日で変動する,verified,https://www.bunka758.or.jp/facility/chikusa/
+CAND-1357,東海,愛知県,名古屋市,名古屋市東文化小劇場,stage_and_practice_complex,A,"運営者公式は349席（張出舞台時291席）のホールと練習室を掲載",客席構成は舞台設定で変動する,verified,https://www.bunka758.or.jp/facility/higashi/
+CAND-1358,東海,愛知県,名古屋市,名古屋市西文化小劇場,stage_and_practice_complex,A,"運営者公式は346席のホールと練習室を掲載",図書館との合築施設。搬入・料金・空き状況は要確認,verified,https://www.bunka758.or.jp/facility/nishi/
+CAND-1359,東海,愛知県,名古屋市,名古屋市南文化小劇場,stage_and_practice_complex,A,"運営者公式は394席のホールと練習室を掲載",図書館との複合施設。搬入・料金・空き状況は要確認,verified,https://www.bunka758.or.jp/facility/minami/
+CAND-1360,東海,愛知県,名古屋市,名古屋市守山文化小劇場,stage_and_practice_complex,A,"運営者公式は400席と車椅子席3席のホール、練習室を掲載",駅ビル内施設。搬入・料金・空き状況は要確認,verified,https://www.bunka758.or.jp/facility/moriyama/
+CAND-1361,東海,愛知県,名古屋市,名古屋市名東文化小劇場,stage_and_practice_complex,A,"運営者公式は356席のホールと練習室を掲載",上社ターミナルビル内施設。搬入・料金・空き状況は要確認,verified,https://www.bunka758.or.jp/facility/meito/
+CAND-1362,東海,愛知県,名古屋市,名古屋市港文化小劇場,stage_and_practice_complex,A,"運営者公式は350席のホールと練習室を掲載",周辺駐車場の利用条件・搬入・空き状況は要確認,verified,https://www.bunka758.or.jp/facility/minato/
+CAND-1363,東海,愛知県,名古屋市,名古屋市中村文化小劇場,stage_and_practice_complex,A,"運営者公式は350席のホールと練習室を掲載",図書館との複合施設。搬入・料金・空き状況は要確認,verified,https://www.bunka758.or.jp/facility/nakamura/
+CAND-1364,東海,愛知県,名古屋市,名古屋市北文化小劇場,stage_and_practice_complex,A,"運営者公式は297席（イス237・マス60）と車椅子席2席のホール、練習室を掲載",客席構成は座席種別を含む。搬入・料金・空き状況は要確認,verified,https://www.bunka758.or.jp/facility/kita/
+CAND-1365,東海,愛知県,名古屋市,名古屋市昭和文化小劇場,stage_and_practice_complex,A,"運営者公式は300席と車椅子席10席のホール、大小練習室を掲載",搬入・料金・空き状況は要確認,verified,https://www.bunka758.or.jp/facility/showa/
+CAND-1366,九州,福岡県,那珂川市,ミリカローデン那珂川,stage_and_practice_complex,A,"運営者公式は文化ホール813席、楽屋、リハーサル室、多目的ホール、会議・創作区画を掲載",入場料・練習準備・本番で料金が変動する,verified,https://www.mirika.or.jp/outline/about/
+CAND-1367,九州,福岡県,糸島市,伊都文化会館,stage_and_meeting_complex,A,"運営者公式は大ホール926席と多目的スペースを掲載",舞台・ホワイエ・楽屋を含む料金体系。搬入・空き状況は要確認,verified,https://www.ito-bunka.jp/about-ito/hall
+CAND-1368,九州,福岡県,筑後市,九州芸文館（筑後広域公園芸術文化交流施設）,conference_and_exhibition_complex,A,"施設公式は大交流室と6つの教室工房を備え、講演会・展覧会等の貸出対象として掲載",舞台仕様・客席構成・料金は区画ごとに申込前要確認,verified,https://www.kyushu-geibun.jp/shisetsu/pc/php/detailshisetsu.php?ShisetsuCode=001
+CAND-1369,九州,福岡県,田川市,田川文化センター・田川青少年文化ホール,stage_and_practice_complex,A,"田川市公式は大ホール1199席、小ホール354席、リハーサル・会議・展示区画を掲載",客席数は固定・可動・車椅子席を含む。搬入・料金・空き状況は要確認,verified,https://www.joho.tagawa.fukuoka.jp/kiji00371/
+CAND-1370,九州,福岡県,大川市,大川市文化センター,stage_and_practice_complex,A,"大川市公式は文化センターのホール等使用料、付属施設使用料、利用申込みを現行掲載",客席数・舞台仕様・搬入・空き状況は公式申込前に要確認,verified,https://www.city.okawa.lg.jp/050/080/index.html
+CAND-1371,九州,福岡県,中間市,なかまハーモニーホール,stage_and_practice_complex,A,"中間市公式は大・小ホール、展示室、会議室を備える文化ホールとして掲載",保守点検による臨時休館があり得る。舞台仕様・料金は申込前に要確認,verified,https://www.city.nakama.lg.jp/site/education/1738.html
+CAND-1372,九州,福岡県,みやま市,みやま市総合市民センターMIYAMAX,stage_and_community_complex,A,"みやま市公式資料は多目的ホール、会議室、マルチルーム等の施設構成を掲載",可動客席・舞台設備・料金・予約条件は申込前に要確認,verified,https://www.city.miyama.lg.jp/s002/shisei/090/060/010/060/100/2022.10_02-05.pdf
+CAND-1373,九州,福岡県,八女市,八女市民会館（おりなす八女）,stage_and_practice_complex,A,"運営者公式は大・小ホール、ギャラリー、練習・交流区画の利用案内を掲載",客席数・料金・舞台設備・空き状況は公式申込前に要確認,verified,https://orinasuyame.jp/userguide/
+CAND-1374,九州,福岡県,うきは市,うきは市民ホール（かわせみホール）,stage_hall,A,"うきは市条例は市民ホールかわせみホールを市文化施設として掲載",客席数・舞台設備・料金・空き状況は公式申込前に要確認,verified,https://www1.g-reiki.net/city.ukiha.fukuoka/reiki_honbun/r162RG00000285.html
+CAND-1375,九州,福岡県,岡垣町,岡垣サンリーアイ,stage_sports_and_meeting_complex,A,"運営者公式はハミングホール595席、小ホール、アリーナ、会議・展示区画の貸出を掲載",ホールとアリーナは用途・設備・料金を分けて確認する,verified,https://sanryai.info/new/?page_id=8385
+CAND-1376,関東,東京都,武蔵村山市,武蔵村山市民会館（さくらホール）,stage_and_practice_complex,A,"武蔵村山市公式は市民会館さくらホールを現行施設として案内",大・小ホールの客席数・舞台設備・料金・空き状況は公式申込前に要確認,verified,https://www.city.musashimurayama.lg.jp/shisetus/cityoffice/1001865.html
+CAND-1377,関東,東京都,あきる野市,S&D秋川キララホール（あきる野市民文化ホール）,stage_and_practice_complex,A,"現行運営者公式はS&D秋川キララホールの催事・利用案内を掲載",2022年の市資料に基づく客席数は現行の座席構成・料金・搬入条件と申込前に再確認,verified,https://www.akigawa-kirarahall.jp/
+CAND-1378,関東,東京都,福生市,福生市民会館,stage_and_practice_complex,A,"現行運営者公式は大ホールほかの施設案内を掲載",附属設備・料金・搬入・空き状況は公式申込前に要確認,verified,https://fussa-shiminkaikan.jp/facility-guide-largehall.php
+CAND-1379,関東,東京都,小金井市,小金井 宮地楽器ホール（小金井市民交流センター）,stage_and_practice_complex,A,"現行運営者公式は大ホール等の施設案内を掲載",車椅子席の使用時は座席数が変動する。料金・搬入・空き状況は公式申込前に要確認,verified,https://koganei-civic-center.jp/facilities/mainhall.html
+CAND-1380,関東,東京都,稲城市,稲城市立iプラザ,stage_and_practice_complex,A,"稲城市公式はホール、スタジオ、会議室等を備える複合施設として掲載",座席数・料金・搬入・空き状況は公式申込前に要確認。市の公共施設予約システムでは予約不可,verified,https://www.city.inagi.tokyo.jp/shisetsu/shougaigakushuu/1004899.html
+CAND-1381,近畿,大阪府,大阪市,日タク旭区民センター（大阪市立旭区民センター）,community_stage_hall,A,"運営者公式はホール700人・974平方メートルを掲載",可動席・舞台設備・料金・搬入・空き状況は公式申込前に要確認,verified,https://www.osakacommunity.jp/asahi-center/wp-content/uploads/sites/27/2026/05/c3444b4a7a75d946bb5eb62b273d7686.pdf
+CAND-1382,近畿,大阪府,大阪市,大阪市立港区民センター,community_stage_hall,A,"運営者公式はホール、スタジオ、会議室等の利用区画を掲載",客席数・舞台設備・料金・搬入・空き状況は公式申込前に要確認,verified,https://www.osakacommunity.jp/minato-center/floor/
+CAND-1383,近畿,大阪府,大阪市,NORBDENCE福島区民センター,community_stage_hall,A,"運営者公式はホール600人と会議室等の利用区画を掲載",愛称の契約期間・料金・搬入・空き状況は公式申込前に要確認,verified,https://www.osakacommunity.jp/fukushima-center/floor/
+CAND-1384,近畿,大阪府,大阪市,大阪市立天王寺区民センター,community_stage_hall,A,"運営者公式はホール600人・444平方メートルを掲載",客席構成・舞台設備・料金・搬入・空き状況は公式申込前に要確認,verified,https://www.osakacommunity.jp/tennoji-center/floor/
+CAND-1385,近畿,大阪府,大阪市,此花区民一休ホール,community_stage_hall,A,"運営者公式はホール500人・514平方メートルを掲載",客席構成・舞台設備・料金・搬入・空き状況は公式申込前に要確認,verified,https://www.osakacommunity.jp/konohana-hall/floor/
+CAND-1386,近畿,大阪府,大阪市,西淀川区民会館（エルモ西淀川）,community_stage_hall,A,"運営者公式はホールの観覧席234人・平土間150人の利用形態を掲載",座席構成・料金・搬入・空き状況は公式申込前に要確認,verified,https://www.osakacommunity.jp/nishiyodogawa-kaikan/floor/
+CAND-1387,中部,愛知県,大口町,大口町民会館,stage_and_practice_complex,A,"大口町公式資料は510席のホール、練習室、会議室等を掲載",可動席・料金・搬入・空き状況は公式申込前に要確認,verified,https://www.town.oguchi.lg.jp/secure/4172/chouminsisetu.pdf
+CAND-1388,中部,愛知県,みよし市,カネヨシプレイス（みよし市勤労文化会館）,stage_and_practice_complex,A,"みよし市公式はカネヨシプレイス（旧サンアート）のホール・会議等を現行予約対象として掲載",旧資料由来の座席数は現行の座席構成・料金・搬入条件と申込前に再確認,verified,https://www.city.aichi-miyoshi.lg.jp/soshiki/keieikikaku/joho/digitalsupport/71.html
+CAND-1389,中部,愛知県,名古屋市,瑞穂文化小劇場,stage_and_practice_complex,A,"名古屋市文化振興事業団公式はホールと練習室の利用申込・空き状況確認を案内",客席数・舞台設備・料金・搬入は公式申込前に要確認,verified,https://www.bunka758.or.jp/facility/mizuho/opening_hours/
+CAND-1390,中部,愛知県,名古屋市,熱田文化小劇場,stage_and_practice_complex,A,"名古屋市文化振興事業団公式は352席のホールと68平方メートルの練習室を掲載",休館・工事予定、料金・搬入・空き状況は公式申込前に要確認,verified,https://www.bunka758.or.jp/facility/atsuta/
+CAND-1391,九州,福岡県,苅田町,苅田町立中央公民館,community_stage_hall,A,"苅田町公式は1010人収容の大ホールと会議室等を掲載",舞台設備・料金・搬入・空き状況は公式申込前に要確認,verified,https://www.town.kanda.lg.jp/page/1838.html
+CAND-1392,九州,福岡県,筑前町,めくばーる,stage_and_practice_complex,A,"筑前町公式はめくばーる内のホール利用申請を案内",客席数・舞台設備・料金・搬入・空き状況は公式申込前に要確認,verified,https://www.town.chikuzen.fukuoka.jp/S035/030/20180124194412.html
+CAND-1393,九州,福岡県,嘉麻市,嘉麻市なつき文化ホール,community_stage_hall,A,"嘉麻市公式はなつき文化ホールを市の施設として掲載",市の2026年6月17日付お知らせに多目的ホール供用停止があるため対象・再開条件を申込前に必ず確認,verified,https://www.city.kama.lg.jp/map/map53.html
+CAND-1394,九州,福岡県,桂川町,桂川町住民センター,community_stage_hall,A,"桂川町公式は住民センター内の大ホール・会議室等を案内",客席数・舞台設備・料金・搬入・空き状況は公式申込前に要確認,verified,https://www.town.keisen.fukuoka.jp/shisetsu/zyumin.php
+CAND-1395,九州,福岡県,福岡市,福岡市男女共同参画推進センター・アミカス,stage_and_practice_complex,A,"福岡市公式は304人・376.8平方メートルのホール、軽運動室、音楽室等を掲載",催事の適合性・料金・搬入・空き状況は公式申込前に要確認,verified,https://www.city.fukuoka.lg.jp/shimin/jigyosuishin/life/amikas/riyou.html
+CAND-1396,関東,東京都,新宿区,新宿区立四谷区民ホール,stage_and_practice_complex,A,"運営者公式は四谷・牛込箪笥・角筈の区民ホールを現行の貸出施設として案内",区民・区外で受付期間が異なる。料金・搬入・空き状況は公式申込前に要確認,verified,https://shinjuku.hall-info.jp/yotsuya/
+CAND-1397,関東,東京都,新宿区,新宿区立牛込箪笥区民ホール,stage_and_practice_complex,A,"運営者公式は客席392席と舞台・楽屋を掲載",料金・搬入・空き状況は公式申込前に要確認,verified,https://shinjuku.hall-info.jp/tansu/
+CAND-1398,関東,東京都,新宿区,新宿区立角筈区民ホール,stage_and_practice_complex,A,"運営者公式は四谷・牛込箪笥・角筈の区民ホールを現行の貸出施設として案内",2025年4月のお知らせは2027年3月31日までの休館を掲示。再開予定・料金・空き状況を申込前に確認,verified,https://shinjuku.hall-info.jp/tsunohazu/
+CAND-1399,関東,東京都,江東区,江東区深川江戸資料館,stage_and_practice_complex,A,"江東区文化コミュニティ財団公式は小劇場・レクホールを備える施設として掲載",展示室と貸出小劇場を混同しない。料金・空き状況は公式申込前に要確認,verified,https://www.kcf.or.jp/fukagawa/
+CAND-1400,関東,東京都,江東区,江東区東大島文化センター,stage_and_practice_complex,A,"江東区文化コミュニティ財団公式はAVホール、レクホール、音楽スタジオ等を掲載",区画別の定員・料金・空き状況は公式申込前に要確認,verified,https://www.kcf.or.jp/higashiojima/
+CAND-1401,関東,東京都,江東区,江東区古石場文化センター,stage_and_practice_complex,A,"江東区文化コミュニティ財団公式は大研修室、音楽スタジオ、展示ロビー等を掲載",劇場型ホールではないため用途と設備を申込前に確認,verified,https://www.kcf.or.jp/furuishiba/
+CAND-1402,関東,東京都,江東区,江東区森下文化センター,stage_and_practice_complex,A,"江東区文化コミュニティ財団公式は多目的ホールの事前打合せ対象施設として掲載",定員・料金・空き状況は公式申込前に要確認,verified,https://www.kcf.or.jp/morishita/
+CAND-1403,関東,東京都,江東区,豊洲文化センター,stage_and_practice_complex,A,"江東区文化コミュニティ財団公式は豊洲シビックセンターホールを事前打合せ対象の貸出ホールとして掲載",座席構成・料金・空き状況は公式申込前に要確認,verified,https://www.kcf.or.jp/toyosu/
+CAND-1404,関東,東京都,江東区,江東区亀戸文化センター,stage_and_practice_complex,A,"江東区文化コミュニティ財団公式はカメリアホールを事前打合せ対象の貸出ホールとして掲載",座席構成・料金・空き状況は公式申込前に要確認,verified,https://www.kcf.or.jp/kameido/
+CAND-1405,関東,東京都,千代田区,内幸町ホール,stage_hall,A,"千代田区公式は内幸町ホールを文化施設として掲載",国会通りへ接続する地下通路は2027年3月予定まで閉鎖。料金・搬入・空き状況は公式申込前に要確認,verified,https://www.city.chiyoda.lg.jp/shisetsu/bunka/uchisaiwaicho-hall.html
+CAND-1406,近畿,大阪府,大阪市,クレオ大阪中央（大阪市立男女共同参画センター中央館）,stage_and_practice_complex,A,"現行運営者公式は996人定員のホール、会議・研修・音楽区画等を掲載",臨時休館日・料金・搬入・空き状況は公式申込前に要確認,verified,https://creo-osaka.or.jp/chuou/
+CAND-1407,近畿,大阪府,大阪市,クレオ大阪東（大阪市立男女共同参画センター東部館）,stage_and_practice_complex,A,"現行運営者公式は382席のホールと多目的・会議・研修区画を掲載",臨時休館日・料金・搬入・空き状況は公式申込前に要確認,verified,https://www.creo-osaka.or.jp/east/
+CAND-1408,近畿,大阪府,大阪市,クレオ大阪南（大阪市立男女共同参画センター南部館）,stage_and_practice_complex,A,"現行運営者公式は中央・南・東のホールを一体の予約対象として案内",南部館の座席構成・料金・搬入・空き状況は公式申込前に要確認,verified,https://creo-osaka.or.jp/
+CAND-1409,近畿,大阪府,大阪市,J:COM中央区民センター,community_stage_hall,A,"運営者公式は500人・435.6平方メートルのホールを掲載",持込電子楽器の音響設備接続不可。料金・搬入・空き状況は公式申込前に要確認,verified,https://www.osakacommunity.jp/chuo-center/floor/
+CAND-1410,近畿,大阪府,大阪市,東淀川区民会館,stage_and_meeting_complex,A,"運営者公式は会議室、和室、洋室等を現行の貸出区画として掲載",劇場型ホールの有無・料金・空き状況は公式申込前に要確認,verified,https://www.osakacommunity.jp/higashiyodogawa-kaikan/floor/
+CAND-1411,近畿,大阪府,大阪市,近藤技研工業西淀川区民ホール,community_stage_hall,A,"運営者公式は西淀川区民会館とは別に西淀川区民ホールがあると案内",既存の西淀川区民会館と混同しない。客席数・料金・空き状況は公式申込前に要確認,verified,https://www.osakacommunity.jp/nishiyodogawa-kaikan/facility/
+CAND-1412,近畿,大阪府,大阪市,東住吉会館,community_stage_hall,A,"大阪市コミュニティ協会公式パンフレットは東住吉会館を地域交流拠点として掲載",客席数・舞台設備・料金・空き状況は公式申込前に要確認,verified,https://www.osakacommunity.jp/cms/wp-content/uploads/2025/07/facility_pamphlet_v5.pdf
+CAND-1413,近畿,大阪府,大阪市,大正会館,community_stage_hall,A,"大阪市コミュニティ協会公式パンフレットは大正会館を管理施設として掲載",客席数・舞台設備・料金・空き状況は公式申込前に要確認,verified,https://www.osakacommunity.jp/cms/wp-content/uploads/2025/07/facility_pamphlet_v5.pdf
+CAND-1414,近畿,大阪府,大阪市,住之江区民ホール,community_stage_hall,A,"大阪市コミュニティ協会公式パンフレットは住之江区民ホールを管理施設として掲載",客席数・舞台設備・料金・空き状況は公式申込前に要確認,verified,https://www.osakacommunity.jp/cms/wp-content/uploads/2025/07/facility_pamphlet_v5.pdf
+CAND-1415,中部,愛知県,名古屋市,天白文化小劇場,stage_and_practice_complex,A,"名古屋市文化振興事業団公式は350席のホールと練習室を掲載",料金改定予定・搬入・空き状況は公式申込前に要確認,verified,https://www.bunka758.or.jp/facility/tenpaku/
+CAND-1416,中部,愛知県,名古屋市,緑文化小劇場,stage_and_practice_complex,A,"名古屋市文化振興事業団公式は緑文化小劇場を現行管理施設として掲載",客席数・舞台設備・料金・搬入・空き状況は公式申込前に要確認,verified,https://www.bunka758.or.jp/facility/midori/
+CAND-1417,中部,愛知県,豊田市,豊田市民文化会館,stage_and_practice_complex,A,"豊田市公式は市内最大の劇場ホール、展示室、練習区画等を備える文化拠点として掲載",市外利用者割増・料金・搬入・空き状況は公式申込前に要確認,verified,https://www.city.toyota.aichi.jp/shisei/shisetsu/bunka/1029357/index.html
+CAND-1418,中部,愛知県,豊橋市,豊橋市民文化会館,stage_and_practice_complex,A,"豊橋市公式は市民文化会館を芸術文化施設として掲載",指定管理者再募集の状況、料金・搬入・空き状況は公式申込前に要確認,verified,https://www.city.toyohashi.lg.jp/8346.htm
+CAND-1419,中部,愛知県,豊橋市,豊橋市公会堂,stage_hall,A,"豊橋市公式は市民文化会館と公会堂を文化施設の利用対象として掲載",指定管理者再募集の状況、料金・搬入・空き状況は公式申込前に要確認,verified,https://www.city.toyohashi.lg.jp/8346.htm
+CAND-1420,中部,愛知県,岡崎市,岡崎市シビックセンター,stage_and_meeting_complex,A,"岡崎市公式は会館施設の利用者登録対象としてシビックセンターを掲載",ホール仕様・料金・空き状況は公式申込前に要確認,verified,https://www.city.okazaki.lg.jp/bunka/sports_shisetsu/1004917/1004921.html
+CAND-1421,中部,愛知県,岡崎市,岡崎市竜美丘会館,stage_and_meeting_complex,A,"岡崎市公式は会館施設として竜美丘会館を掲載",市の2026年2月資料は老朽化により2026年12月末で利用停止予定とする。再開・移転・料金を申込前に確認,verified,https://www.city.okazaki.lg.jp/shisei/shisetsu/1009136/1009163/1009170.html
+CAND-1422,中部,愛知県,常滑市,常滑市民文化会館,stage_and_practice_complex,A,"常滑市公式は文化会館を掲載",2026年10月1日からホール等を当面休館し新規予約を停止。通常利用可能とは扱わない,verified,https://www.city.tokoname.aichi.jp/shisetsu/kominkan/1003094.html
+CAND-1423,中部,愛知県,岡崎市,岡崎市せきれいホール,stage_and_meeting_complex,A,"岡崎市公式は会館施設の利用者登録対象としてせきれいホールを掲載",ホール仕様・料金・空き状況は公式申込前に要確認,verified,https://www.city.okazaki.lg.jp/bunka/sports_shisetsu/1004917/1004921.html
+CAND-1424,中部,愛知県,岡崎市,岡崎市甲山閣,stage_and_meeting_complex,A,"岡崎市公式は会館施設の利用者登録対象として甲山閣を掲載",ホール仕様・料金・空き状況は公式申込前に要確認,verified,https://www.city.okazaki.lg.jp/bunka/sports_shisetsu/1004917/1004921.html
+CAND-1425,中部,愛知県,名古屋市,演劇練習館（アクテノン）,stage_and_practice_complex,A,"名古屋市文化振興事業団公式は演劇練習館を現行管理施設として掲載",客席数・舞台設備・料金・搬入・空き状況は公式申込前に要確認,verified,https://www.bunka758.or.jp/facility/actenon/
+CAND-1426,九州,福岡県,北九州市,門司市民会館,stage_and_practice_complex,A,"北九州市公式は800席ホールと展示室を掲載",料金・搬入・空き状況は公式申込前に要確認,verified,https://www.city.kitakyushu.lg.jp/contents/02100115.html
+CAND-1427,九州,福岡県,北九州市,若松市民会館,stage_and_practice_complex,A,"北九州市公式は大ホール800席、小ホール250人、練習室を掲載",料金・搬入・空き状況は公式申込前に要確認,verified,https://www.city.kitakyushu.lg.jp/contents/02100115.html
+CAND-1428,九州,福岡県,北九州市,戸畑市民会館,stage_and_practice_complex,A,"北九州市公式は大ホール800人・中ホール300人と練習区画を掲載",料金・搬入・空き状況は公式申込前に要確認,verified,https://www.city.kitakyushu.lg.jp/files/000733838.pdf
+CAND-1429,九州,福岡県,北九州市,北九州市立大手町練習場,stage_and_practice_complex,A,"北九州市公式は音楽・演劇・舞踊向けの大手町練習場を掲載",練習室ごとの面積・料金・空き状況は公式申込前に要確認,verified,https://www.city.kitakyushu.lg.jp/contents/02100115.html
+CAND-1430,九州,福岡県,北九州市,北九州市立旧百三十銀行ギャラリー,exhibition_and_meeting_complex,A,"北九州市公式は130平方メートルの展示室を備える旧百三十銀行ギャラリーを掲載",舞台催事向け施設とは限らないため展示利用と混同しない。料金・空き状況は公式申込前に要確認,verified,https://www.city.kitakyushu.lg.jp/files/000733838.pdf
+CAND-1431,九州,福岡県,北九州市,北九州市立男女共同参画センター・ムーブ,stage_and_practice_complex,A,"北九州市公式は男女共同参画施設ムーブを芸術文化施設予約対象として掲載",ホールの客席構成・料金・搬入・空き状況は公式申込前に要確認,verified,https://www.city.kitakyushu.lg.jp/page/dch/madoguchi_sisetsu/
+CAND-1432,九州,福岡県,久留米市,城島総合文化センター（城島生涯学習センター）,stage_and_practice_complex,A,"久留米市公式はインガットホール、イベントホール、研修・和室等を備える貸出施設として掲載",大雨時は駐車場閉鎖の場合あり。料金・搬入・空き状況は公式申込前に要確認,verified,https://www.city.kurume.fukuoka.jp/1060manabi/2030shogaigakusyu/3060shisetsu/2009-0607-1539-249.html
+CAND-1433,九州,福岡県,志免町,志免町総合福祉施設シーメイト,stage_and_practice_complex,A,"志免町公式はシーメイトホール全席267席を掲載",可動客席の構成・料金・搬入・空き状況は公式申込前に要確認,verified,https://www.town.shime.lg.jp/site/shimate/kannai-annai.html
+CAND-1434,九州,福岡県,新宮町,そぴあしんぐう,stage_and_practice_complex,A,"新宮町公式は大ホールの舞台スタッフ費用等を案内",座席構成・料金・搬入・空き状況は公式申込前に要確認,verified,https://www.town.shingu.fukuoka.jp/kurashi/shisetsu/6703.html
+CAND-1435,九州,福岡県,宇美町,宇美町立中央公民館,stage_and_practice_complex,A,"宇美町公式は固定414席と車椅子3席の大ホールを掲載",営利目的利用不可。料金・搬入・空き状況は公式申込前に要確認,verified,https://www.town.umi.lg.jp/soshiki/12/tyuuoukouminkan.html
+CAND-1436,関東,東京都,千代田区,千代田区立日比谷図書文化館,stage_and_meeting_complex,A,千代田区公式は有料貸出対象の日比谷コンベンションホールを掲載,料金・搬入・空き状況は公式申込前に要確認,verified,https://www.city.chiyoda.lg.jp/documents/5194/information2025-19_1.pdf
+CAND-1437,関東,東京都,中央区,日本橋公会堂,stage_and_meeting_complex,A,中央区公式は日本橋劇場と集会室を備える日本橋公会堂を掲載,改修に伴う利用制限があるため申込前に公式案内を要確認,verified,https://www.city.chuo.lg.jp/a0017/shisetsu/genre/koukyoushisetsu/koukyoushisetsu00008.html
+CAND-1438,関東,東京都,港区,赤坂区民センター,stage_and_meeting_complex,A,指定管理者公式は400名・477平方メートルの区民ホールを掲載,料金・搬入・空き状況は公式申込前に要確認,verified,https://akasaka-civiccenter.jp/shisetsu/list_1.html
+CAND-1439,関東,東京都,渋谷区,渋谷区文化総合センター大和田,stage_and_practice_complex,A,渋谷区公式はさくらホール等を備える文化総合センター大和田を案内,休館・料金・搬入・空き状況は公式申込前に要確認,verified,https://www.city.shibuya.tokyo.jp/shisetsu/bunka-shisetsu/owada/
+CAND-1440,関東,東京都,渋谷区,渋谷区文化総合センター大和田 伝承ホール,stage_hall,A,運営者公式は伝統芸能から現代演劇までに対応する伝承ホールを掲載,複合施設内の別ホールとしてさくらホールとは空間を分離。料金・搬入・空き状況は公式申込前に要確認,verified,https://shibu-cul.jp/guide
+CAND-1441,近畿,大阪府,大阪市,クレオ大阪西,stage_and_meeting_complex,A,指定管理者公式は大阪市立男女共同参画センター西部館としてホール・貸室を掲載,ホールは併設のこども文化センターと関係するため詳細条件は申込前に要確認,verified,https://www.creo-osaka.or.jp/west/
+CAND-1442,近畿,大阪府,大阪市,ナレッジシアター,stage_hall,A,施設公式は貸出可能なナレッジシアターを案内,料金・搬入・空き状況は公式申込前に要確認,verified,https://www.knowledge-theater.jp/
+CAND-1443,近畿,大阪府,大阪市,梅田芸術劇場,stage_and_practice_complex,A,運営者公式はメインホールとシアター・ドラマシティを管理運営する劇場として掲載,公演・貸館条件は公式照会前に要確認,verified,https://www.umegei.com/guide/seat/
+CAND-1444,近畿,大阪府,大阪市,COOL JAPAN PARK OSAKA,stage_and_practice_complex,A,運営者公式はWW・TT・SSの3ホールを備える劇場施設として掲載,複数ホールのため空間別条件と料金は公式照会前に要確認,verified,https://cjpo.jp/theater/
+CAND-1445,近畿,大阪府,大阪市,コングレスクエア グラングリーン大阪,conference_and_event_complex,A,運営者公式はグランホール等の会議・イベント施設を掲載,料金・搬入・空き状況は公式申込前に要確認,verified,https://osaka.congres-square.jp/grandgreen/
+CAND-1446,中部,愛知県,名古屋市,名古屋能楽堂,stage_and_practice_complex,A,指定管理者公式は630席の能舞台と会議室・稽古室等を掲載,2026年7月から9月は臨時休館予定。料金・搬入・空き状況は公式申込前に要確認,verified,https://www.bunka758.or.jp/facility/nougakudo/
+CAND-1447,中部,愛知県,名古屋市,アマノ芸術創造センター名古屋,stage_and_practice_complex,A,ネーミングライツ事業者公式は640席の劇場・コンサートホールとして掲載,愛称契約期間は2025年1月から2028年3月。料金・搬入・空き状況は公式申込前に要確認,verified,https://www.amano-ltd.co.jp/topics-detail/268/
+CAND-1448,中部,愛知県,豊田市,豊田産業文化センター,stage_and_meeting_complex,A,運営者公式は小ホール・多目的ホール等の利用案内を掲載,区画別の仕様・料金・搬入・空き状況は公式申込前に要確認,verified,https://cul-toyota.or.jp/sanbun/
+CAND-1449,中部,愛知県,一宮市,一宮市尾西市民会館,stage_and_meeting_complex,A,指定管理者公式は固定823席と車椅子4席のホールを掲載,料金・搬入・空き状況は公式申込前に要確認,verified,https://ichinomiya-hall.jp/bisai/facility/hall/index.html
+CAND-1450,中部,愛知県,愛西市,愛西市文化会館,stage_and_meeting_complex,A,指定管理者公式は定員600席のホールと舞台設備を掲載,料金・搬入・空き状況は公式申込前に要確認,verified,https://www.homex.jp/aisai/index.html
+CAND-1451,九州,福岡県,福岡市,福岡市西部地域交流センター（さいとぴあ）,stage_and_sports_complex,A,運営者公式は300名の多目的ホールと体育館等を掲載,営利・物販等には利用制限がある。料金・搬入・空き状況は公式申込前に要確認,verified,https://saitopia.info/gaiyou/
+CAND-1452,九州,福岡県,福岡市,福岡市健康づくりサポートセンター（あいれふ）,stage_hall,A,運営者公式は固定262席を含む定員300人のあいれふホールを掲載,料金・搬入・空き状況は公式申込前に要確認,verified,https://www.kenkou-support.jp/rent/news/news1.html
+CAND-1453,九州,福岡県,添田町,そえだ公民館（オークホール）,stage_and_practice_complex,A,添田町公式は600席・476.71平方メートルのホールを掲載,料金・搬入・空き状況は公式申込前に要確認,verified,https://www.town.soeda.fukuoka.jp/page/1008.html
+CAND-1454,九州,福岡県,太宰府市,プラム・カルコア太宰府（太宰府市中央公民館）,stage_and_practice_complex,A,太宰府市公式は602席の市民ホールと多目的ホール・リハーサル室等を掲載,音響・照明等は内容により舞台スタッフや設備が必要。料金・搬入・空き状況は公式申込前に要確認,verified,https://www.city.dazaifu.lg.jp/soshiki/30/28755.html
+CAND-1455,九州,福岡県,北九州市,北九州パレス（福岡県立北九州勤労青少年文化センター）,stage_and_meeting_complex,A,運営者公式は最大300名収容の小ホールと会議・研修室を掲載,料金・搬入・空き状況は公式申込前に要確認,verified,https://kitakyushu-palace.com/
+CAND-1456,関東,東京都,目黒区,目黒区民センター,stage_and_meeting_complex,A,目黒区公式は固定417席と車椅子スペース4台の区民センターホールを掲載,団体区分・入場料・販売時の加算条件がある。搬入・空き状況は公式申込前に要確認,verified,https://www.city.meguro.tokyo.jp/sangyoukeizai/shisetsu/fukugou/chusho.html
+CAND-1457,関東,東京都,板橋区,板橋区立グリーンホール,stage_and_meeting_complex,A,指定管理者公式は定員300名の1階ホールと250名の2階ホールを掲載,会場設定により定員が減る。搬入・空き状況は公式申込前に要確認,verified,https://www.itabashi-ci.org/greenhall/institution/
+CAND-1458,近畿,大阪府,摂津市,摂津市民文化ホール（くすのきホール）,stage_and_practice_complex,A,運営者公式はホール・練習室の現行利用導線を掲載,市外利用は基本料金の10割増。客席仕様・搬入・空き状況は公式申込前に要確認,verified,https://settsu-bunka-h.com/hall/
+CAND-1459,近畿,大阪府,交野市,星の里いわふね,stage_and_meeting_complex,A,指定管理者公式は交野市立いわふね施設として現行の利用案内を掲載,区画別の客席・料金・搬入・空き状況は公式申込前に要確認,verified,https://www.k-hoshinosato.jp/
+CAND-1460,中部,愛知県,東郷町,東郷町民会館,stage_and_meeting_complex,A,指定管理者公式はホール・会議・音楽・実習等の貸室を掲載,2026年の天井改修に伴う利用休止情報がある。詳細条件は公式申込前に要確認,verified,https://www.togo-tis.co.jp/shisetsu/togo-civichall/
+CAND-1461,中部,愛知県,弥富市,弥富市総合社会教育センター,stage_and_sports_complex,A,弥富市公式はアリーナを備える施設と2026年5月適用の市外・営利利用料金を掲載,区画別の客席・搬入・空き状況は公式申込前に要確認,verified,https://www.city.yatomi.lg.jp/shisetsu/1000993/1000994/1000995.html
+CAND-1462,九州,福岡県,大刀洗町,大刀洗ドリームセンター,stage_exhibition_and_practice_complex,A,大刀洗町公式は648席のドリームホールと展示ホール等を掲載,使用時間には準備・後始末を含む。料金・加算条件は公式申込前に要確認,verified,https://www.town.tachiarai.fukuoka.jp/kiji003790/index.html
+CAND-1463,九州,福岡県,香春町,香春町町民センター,stage_and_meeting_complex,A,香春町公式は町民ホールを備える町民センターとして掲載,客席・料金・搬入・空き状況は公式申込前に要確認,verified,https://www.town.kawara.fukuoka.jp/140/030/
+CAND-1464,関東,東京都,練馬区,大泉学園ゆめりあホール,stage_and_practice_complex,A,運営者公式は固定170席と車椅子6席のホールおよび利用料金を掲載,舞台天井高は客席天井高へ転用しない。搬入・空き状況は公式申込前に要確認,verified,https://www.neribun.or.jp/hall/yumeria.html
+CAND-1465,近畿,大阪府,寝屋川市,寝屋川市立市民会館,stage_and_meeting_complex,A,寝屋川市公式は1203席の大ホールと小ホール・会議室等および料金を掲載,大ホールは毎週月曜日が休館。搬入・空き状況は公式申込前に要確認,verified,https://www.city.neyagawa.osaka.jp/shisei/shimin/shiminkaikan/11398.html
+CAND-1466,中部,愛知県,阿久比町,阿久比町中央公民館（アグピアホール）,stage_and_practice_complex,A,阿久比町公式は多目的ホールと時間単位の使用料を掲載,客席・搬入・空き状況は公式申込前に要確認,verified,https://www.town.agui.lg.jp/0000004823.html
+CAND-1467,九州,福岡県,みやこ町,みやこ町総合文化センター サン・グレートみやこ,stage_and_practice_complex,A,みやこ町公式はホール・楽屋・研修棟を備える施設と時間単位の料金を掲載,町外・入場料加算がある。客席・搬入・空き状況は公式申込前に要確認,verified,https://www.town.miyako.lg.jp/syougaigakusyuu/sisetsu/bunkasisetu/sungreat_miyako.html
+CAND-1468,関東,東京都,港区,麻布区民センター,community_stage_hall,A,"2026年4月の区施設予約案内に区民ホールを掲載","客席数と舞台仕様と搬入条件は要確認",verified,https://www.city.minato.tokyo.jp/documents/27116/20260326154625.pdf
+CAND-1469,関東,東京都,港区,高輪区民センター,community_stage_hall,A,"2026年4月の区施設予約案内に区民ホールと音楽スタジオを掲載","客席数と舞台仕様と搬入条件は要確認",verified,https://www.city.minato.tokyo.jp/documents/27116/20260326154625.pdf
+CAND-1470,関東,東京都,港区,芝浦港南区民センター,community_stage_hall,A,"区民ホール定員235名を掲載","舞台仕様と搬入条件は要確認",verified,https://www.city.minato.tokyo.jp/shiba-koukanri/kumincenter/sibaurakumincenter.html
+CAND-1471,関東,東京都,港区,台場区民センター,community_stage_hall,A,"2026年4月の区施設予約案内に区民ホールを掲載","客席数と舞台仕様と搬入条件は要確認",verified,https://www.city.minato.tokyo.jp/documents/27116/20260326154625.pdf
+CAND-1472,関東,東京都,港区,男女平等参画センター リーブラ,stage_and_meeting_complex,A,"2026年4月の区施設予約案内にホールを掲載","客席数と舞台仕様と搬入条件は要確認",verified,https://www.city.minato.tokyo.jp/documents/27116/20260326154625.pdf
+CAND-1473,関東,東京都,台東区,台東区生涯学習センター ミレニアムホール,stage_hall,A,"固定300席で舞台12.4m×7.2mを掲載","天井高と搬入条件は要確認",verified,https://www.city.taito.lg.jp/gakushu/shogaigakushu/shogaigakushusisetsu/syougaigakusyuucente/furoaannai/2kai.html
+CAND-1474,関東,東京都,品川区,五反田文化センター,stage_and_practice_complex,A,"固定248席と車椅子2席で舞台高8.6mを掲載","2026年9月24日から12月8日は貸出休止予定",verified,https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-bunka/shisetsu-bunka-bunka/hpg000028612.html
+CAND-1475,関東,東京都,品川区,CITY HALL & GALLERY GOTANDA,conference_and_event_complex,A,"セミナーと講演会に利用できるイベントホールを掲載","定員と面積と搬入条件は要確認",verified,https://www.city.shinagawa.tokyo.jp/PC/shisetsu/shisetsu-bunka/shisetsu-bunka-bunka/20230731164357.html
+CAND-1476,関東,東京都,世田谷区,北沢区民会館 北沢タウンホール,stage_and_meeting_complex,A,"区公式の現行区民会館案内に掲載","客席数と舞台仕様と搬入条件は要確認",verified,https://www.city.setagaya.lg.jp/02205/8535.html
+CAND-1477,関東,東京都,世田谷区,砧区民会館 成城ホール,stage_and_meeting_complex,A,"ホール定員397名と面積370㎡を掲載","舞台仕様と搬入条件は要確認",verified,https://www.city.setagaya.lg.jp/02219/8533.html
+CAND-1478,関東,東京都,世田谷区,北沢区民会館別館 梅丘パークホール,stage_and_meeting_complex,A,"区民会館一覧に掲載し資料は集会室120名と197㎡を示す","舞台の有無と搬入条件は要確認",verified,https://www.city.setagaya.lg.jp/shisetsu/kumin/12700.html
+CAND-1479,関東,東京都,世田谷区,玉川区民会館 玉川せせらぎホール,stage_and_meeting_complex,A,"区公式の現行区民会館一覧に掲載","客席数と舞台仕様と搬入条件は要確認",verified,https://www.city.setagaya.lg.jp/shisetsu/kumin/12700.html
+CAND-1480,関東,東京都,世田谷区,玉川区民会館別館 上用賀アートホール,stage_and_meeting_complex,A,"区公式の現行区民会館一覧に掲載","客席数と舞台仕様と搬入条件は要確認",verified,https://www.city.setagaya.lg.jp/shisetsu/kumin/12700.html
+CAND-1481,関東,東京都,練馬区,区民・交流ホール Coconeriホール,transformable_community_hall,A,"平土間530㎡で最大500名を掲載","天井高と舞台仕様と搬入条件は要確認",verified,https://www.city.nerima.tokyo.jp/shisetsu/community/coconeri/kkh.html
+CAND-1482,関東,東京都,練馬区,光が丘区民ホール,community_stage_hall,A,"区公式が付帯設備料金を掲載","定員と面積と舞台仕様は要確認",verified,https://www.city.nerima.tokyo.jp/shisetsu/bunka/kuminhall/hikarigaokakuminnhor.html
+CAND-1483,関東,東京都,練馬区,関区民ホール,community_stage_hall,A,"区の現行施設予約システム対象ホールに掲載","定員と面積と舞台仕様は要確認",verified,https://www.city.nerima.tokyo.jp/shisetsu/shisetsu_yoyaku/sisetuitiran.html
+CAND-1484,関東,東京都,北区,赤羽会館,stage_and_meeting_complex,A,"1階講堂754㎡と4階大ホール410㎡を掲載","公開資料は2023年のため予約可否を再確認",verified,https://www.city.kita.tokyo.jp/kikaku/kuse/joho/shiryoshu/h240901/documents/attachment_14.pdf
+CAND-1485,近畿,大阪府,東大阪市,東大阪市文化創造館,stage_and_practice_complex,A,"大ホール1500席と小ホール300席を掲載","料金と搬入条件は要確認",verified,https://www.city.higashiosaka.lg.jp/0000030067.html
+CAND-1486,近畿,大阪府,大阪市中央区,大阪府立男女共同参画・青少年センター ドーンセンター,stage_and_meeting_complex,A,"府公式がホールとパフォーマンススペースの貸館を掲載","席数と面積は現行料金資料で再確認",verified,https://www.pref.osaka.lg.jp/shisetsu/o070040/shisetsu_000001.html
+CAND-1487,近畿,大阪府,大阪市中央区,大阪府立労働センター エル・おおさか,stage_and_meeting_complex,A,"府公式が大ホールと多目的ホールとシアターを掲載","席数と面積と搬入条件は要確認",verified,https://www.pref.osaka.lg.jp/shisetsu/o110090/shisetsu_000058.html
+CAND-1488,近畿,大阪府,大阪市旭区,大阪市立芸術創造館,stage_and_practice_complex,A,"大阪市が芸術表現活動支援施設として案内","区画別の定員と料金と搬入条件は要確認",verified,https://www.city.osaka.lg.jp/keizaisenryaku/page/0000515668.html
+CAND-1489,近畿,大阪府,大阪市東淀川区,大阪市立青少年センター KOKO PLAZA,stage_and_practice_complex,A,"ホールと音楽練習室とダンス練習室と宿泊を掲載","定員と面積と搬入条件は要確認",verified,https://www.city.osaka.lg.jp/higashiyodogawa/cmsfiles/contents/0000055/55111/R7_01KOKOPLAZA02.pdf
+CAND-1490,近畿,大阪府,大阪市中央区,大阪産業創造館,conference_and_event_complex,A,"4階イベントホール定員150名を掲載","面積と搬入条件は要確認",verified,https://www.city.osaka.lg.jp/keizaisenryaku/page/0000683909.html
+CAND-1491,近畿,大阪府,富田林市,富田林市市民会館 レインボーホール,stage_and_meeting_complex,A,"市公式予約対象で市資料はホール400席と多目的ホール700席を示す","座席構成と搬入条件は要確認",verified,https://www.city.tondabayashi.lg.jp/map/rainbowhall.html
+CAND-1492,近畿,大阪府,高石市,たかいし市民文化会館 アプラホール,stage_and_practice_complex,A,"市公式が大ホールと小ホール等の貸館を掲載","定員と面積と搬入条件は要確認",verified,https://www.city.takaishi.lg.jp/kakuka/kyouiku/appla/shiminbunkakaikan.html
+CAND-1493,近畿,大阪府,忠岡町,忠岡町ふれあいホール,community_stage_hall,A,"町公式が利用申込窓口を掲載","定員と面積と舞台仕様は要確認",verified,https://www.town.tadaoka.osaka.jp/soshiki/kodomo/2/165.html
+CAND-1494,近畿,大阪府,泉大津市,テクスピア大阪,conference_and_event_complex,A,"市の2026年事業資料が大ホールと小ホールの設備図を公開","定員と面積と搬入条件は要確認",verified,https://www.city.izumiotsu.lg.jp/kakuka/koushitsu/senryaku/oshirase/15516.html
+CAND-1495,近畿,大阪府,東大阪市,児童文化スポーツセンター ドリーム21,stage_and_practice_complex,A,"市公式が多目的文化ホールの利用受付を案内","定員と面積と利用対象は要確認",verified,https://www.city.higashiosaka.lg.jp/0000006595.html
+CAND-1496,近畿,大阪府,東大阪市,東大阪市民ふれあいホール,community_stage_hall,A,"市の現行公共施設予約対象に掲載","定員と面積と舞台仕様は要確認",verified,https://www.city.higashiosaka.lg.jp/0000035522.html
+CAND-1497,近畿,大阪府,堺市中区,堺市立中文化会館 ソフィア・堺,stage_and_practice_complex,A,"堺市資料がメインホール798席を掲載","席数は現行施設案内で再確認",verified,https://www.city.sakai.lg.jp/kanko/bunka/bunka_kanren/geibunhall/koremadekeika/konwakai/kaisaiyotei.files/shiminkaikan01_06.pdf
+CAND-1498,近畿,大阪府,堺市南区,国際障害者交流センター ビッグ・アイ,stage_and_meeting_complex,A,"運営主体公式が現行施設を案内","席数と料金と搬入条件は要確認",verified,https://www.big-i.jp/
+CAND-1499,近畿,大阪府,堺市南区,大阪府立障がい者交流促進センター ファインプラザ大阪,stage_and_meeting_complex,A,"運営主体公式が現行施設を案内","席数と料金と搬入条件は要確認",verified,https://www.fineplaza.net/
+CAND-1500,近畿,大阪府,堺市北区,堺市産業振興センター,conference_and_event_complex,A,"運営主体公式が現行施設を案内","席数と料金と搬入条件は要確認",verified,https://www.sakai-ipc.jp/
+CAND-1501,近畿,大阪府,堺市堺区,堺市勤労者総合福祉センター サンスクエア堺,stage_and_meeting_complex,A,"運営主体公式が現行施設を案内","席数と料金と搬入条件は要確認",verified,https://www.sunsquare-sakai.jp/
+CAND-1502,中部,愛知県,北名古屋市,名古屋芸術大学アートスクエア（文化勤労会館）,stage_and_practice_complex,A,"大ホール754席と車椅子3席と親子4席を公式掲載","舞台高は室内天井高に転用しない",verified,https://www.city.kitanagoya.lg.jp/bunka/rekishi/1004049/1004055/1004056/1004060.html
+CAND-1503,中部,愛知県,扶桑町,扶桑文化会館,stage_and_practice_complex,A,"ホールと展示室とリハーサル室を公式掲載","ホール客席数は要確認",verified,https://www.town.fuso.lg.jp/fusobunka/1002447/1002778.html
+CAND-1504,中部,愛知県,蟹江町,蟹江中央公民館分館（蟹江町産業文化会館内）,community_stage_hall,A,"大会議室219.71平方メートルと椅子200人と音響を公式掲載","舞台設備と搬入条件は要確認",verified,https://www.town.kanie.aichi.jp/soshiki/18/chuou-kouminkan-bunkan.html
+CAND-1505,中部,愛知県,飛島村,総合社会教育センター中央公民館ホール,stage_and_practice_complex,A,"1080席と舞台18m×11m×高8mとリハーサル室を公式掲載","舞台高は室内天井高に転用しない",verified,https://www.vill.tobishima.aichi.jp/sonsei/shisetsu/1002768/1002771.html
+CAND-1506,中部,愛知県,大治町,大治町立公民館,community_stage_hall,A,"講堂体育室715平方メートルと収容700人を公式掲載","体育利用以外の舞台設備と搬入は要確認",verified,https://www.town.oharu.aichi.jp/2544.htm
+CAND-1507,中部,愛知県,東栄町,花祭会館,exhibition_and_culture,A,"花祭展示と映像コーナーと会館使用料を公式掲載","展示中心のため大型催事適性は要確認",verified,https://www.town.toei.aichi.jp/3633.htm
+CAND-1508,中部,愛知県,南知多町,南知多町総合体育館,arena_and_meetings,A,"メイン38m×38mと観覧席248席を公式掲載","天井高と搬入と催事利用条件は要確認",verified,https://www.town.minamichita.lg.jp/shisetsu/1001540/1001541.html
+CAND-1509,中部,愛知県,美浜町,美浜町総合公園体育館,arena_and_stage,A,"サブ380平方メートルと移動336席と舞台照明音響を公式掲載","舞台高と搬入と催事回線は要確認",verified,https://www.town.aichi-mihama.lg.jp/kanko-bunka-sports/sports/sportsshisetsu/1517.html
+CAND-1510,中部,愛知県,豊根村,豊根村文化ホール兼体育館,community_stage_hall,A,"収納式可動客席150席を公式掲載","面積と搬入と料金は要確認",verified,https://www.vill.toyone.aichi.jp/soshiki/kyoiku/141.html
+CAND-1511,中部,愛知県,愛西市,あいさい笑鵬公民館（旧佐織公民館）,stage_and_practice_complex,A,"500席ホールと音響照明利用時の事前打合せを公式掲載","改称後の料金と搬入条件は要確認",verified,https://www.city.aisai.lg.jp/0000000762.html
+CAND-1512,中部,愛知県,名古屋市,市民ギャラリー矢田,exhibition_and_meetings,A,"展示室7室を公式掲載","展示用途のため舞台利用には不向き",verified,https://www.city.nagoya.jp/kankou/bunka/1034457/1016004/1016026.html
+CAND-1513,中部,愛知県,名古屋市,市民ギャラリー栄,exhibition_and_meetings,A,"展示室11室を公式掲載","展示用途のため舞台利用には不向き",verified,https://www.city.nagoya.jp/kankou/bunka/1034457/1016004/1016025.html
+CAND-1514,中部,愛知県,名古屋市,名古屋国際センター,convention_and_stage_complex,A,"別棟ホール最大250人と会議室6室と展示室3室を公式掲載","搬入と床荷重と専有回線は要確認",verified,https://www.city.nagoya.jp/kankou/bunka/1034457/1016004/1016034.html
+CAND-1515,中部,愛知県,名古屋市,女性会館（イーブルなごや）,stage_and_meetings,A,"ホールと集会室と研修室の貸室を公式掲載","2027年4月料金改定予定と利用条件は要確認",verified,https://www.city.nagoya.jp/kodomo/shougaigakushu/1015902/1015939.html
+CAND-1516,中部,愛知県,名古屋市,中川生涯学習センター,learning_and_meetings,A,"視聴覚室定員70人と美術室と料理室を公式掲載","体育室仕様と搬入と空き状況は要確認",verified,https://www.suisin.city.nagoya.jp/system/institution/index.cgi?action=inst_view&class=&inst_key=1164771540
+CAND-1517,中部,愛知県,名古屋市,中生涯学習センター,learning_and_meetings,A,"生涯学習センターは集会室と視聴覚室と美術室と体育室を貸出","個別室仕様と利用条件は要確認",verified,https://www.city.nagoya.jp/kodomo/shougaigakushu/1015902/1015903/1034378.html
+CAND-1518,中部,愛知県,名古屋市,西生涯学習センター,learning_and_meetings,A,"生涯学習センターは集会室と視聴覚室と美術室と体育室を貸出","個別室仕様と利用条件は要確認",verified,https://www.city.nagoya.jp/kodomo/shougaigakushu/1015902/1015903/1034378.html
+CAND-1519,九州,福岡県,福岡市,マリンメッセ福岡B館,arena_exhibition_complex,A,"多目的展示室5000平方メートル・天井高15メートル・床荷重5トン毎平方メートル・最大6000人","用途や催事配置により収容人数と料金が変動",verified,https://www.marinemesse.or.jp/messe-b/
+CAND-1520,九州,福岡県,福岡市,福岡市美術館,stage_exhibition_and_practice_complex,A,"288.2平方メートル・180席と車椅子2席・上映会や演劇やコンサートに利用可能","文化芸術等の利用に審査あり",verified,https://www.fukuoka-art-museum.jp/guide/lending/
+CAND-1521,九州,福岡県,福岡市,福岡アジア美術館,stage_exhibition_and_practice_complex,A,"約140平方メートル・最大100席・文化芸術活動の貸出対象","非営利の文化芸術事業に利用限定",verified,https://faam.city.fukuoka.lg.jp/guidance/lending/
+CAND-1522,九州,福岡県,福岡市,大濠公園能楽堂,stage_theater,A,"椅子440席・桟敷120席・車椅子2席","一般利用は1年前から稽古練習は6か月前から受付",verified,https://www.ohori-nougaku.jp/about/
+CAND-1523,九州,福岡県,福岡市,福岡県立美術館,exhibition_and_meeting_complex,A,"87平方メートル・テーブル付椅子50席程度・文化に関わる行事の貸出対象","展示用途や視聴覚室の利用には条件あり",verified,https://fukuoka-kenbi.jp/for-rental/
+CAND-1524,九州,福岡県,北九州市,関門海峡ミュージアム,exhibition_and_meeting_complex,A,"簡易ステージ・音響・スクリーン等の貸出備品あり","詳細定員と面積は申込前に確認",verified,https://mojiko-retoro9.jp/for_corporate/
+CAND-1525,九州,福岡県,北九州市,レインボープラザ,community_stage_complex,A,"中ホール・会議研修室・絵画室・和室・音楽室を備える複合公共施設","詳細定員と面積は申込前に確認",verified,https://www.city.kitakyushu.lg.jp/contents/924_11940.html
+CAND-1526,九州,福岡県,北九州市,旧古河鉱業若松ビル,exhibition_and_meeting_complex,A,"152.27平方メートル・スクール形式60人程度","予約により22時まで利用可・詳細条件要確認",verified,https://www.city.kitakyushu.lg.jp/contents/27000095.html
+CAND-1527,九州,福岡県,北九州市,北九州穴生ドーム,arena_and_meetings,A,"ゲートボール・グラウンドゴルフ・テニス・ソフトバレー等に対応","個人利用優先日と専用利用の条件あり",verified,https://www.city.kitakyushu.lg.jp/contents/924_11805.html
+CAND-1528,九州,福岡県,宮若市,多目的会館マリーホール宮田,stage_and_meeting_complex,A,"市公式の使用料表に付属設備と空調代を掲載","客席数と面積は申込前に確認",verified,https://www.city.miyawaka.lg.jp/kiji003446014/index.html
+CAND-1529,九州,福岡県,水巻町,水巻町中央公民館,stage_and_meeting_complex,A,"電動式可動席500席を備える大ホール","可動席の常設状態と料金は申込前に確認",verified,https://www.town.mizumaki.lg.jp/s045/map/010/20201028133906.html
+CAND-1530,九州,福岡県,遠賀町,遠賀町中央公民館,stage_and_meeting_complex,A,"大ホールを備える文化活動の中核施設","客席数と面積は申込前に確認",verified,https://www.town.onga.lg.jp/map/6134.html
+CAND-1531,九州,福岡県,豊前市,豊前市市民会館,stage_and_meeting_complex,A,"大ホールと中小会議室と和室を利用可能・現行料金表あり","408席は別資料のため正本転記前に一次情報で再確認",verified,https://buzen-geibun.sakura.ne.jp/concept.html
+CAND-1532,九州,福岡県,築上町,築上町文化会館コマーレ,stage_and_meeting_complex,A,"大ホールと大小会議室を備え町の文化祭ステージ利用あり","388席は別資料のため正本転記前に一次情報で再確認",verified,https://www.town.chikujo.fukuoka.jp/li/010/110/020/060/index.html
+CAND-1533,九州,福岡県,吉富町,吉富フォーユー会館,stage_and_meeting_complex,A,"大ホールと研修室と和室と視聴覚室を備えオンライン予約と使用料を掲載","客席数と面積は申込前に確認",verified,https://www.town.yoshitomi.lg.jp/gyosei/r197/w104/
+CAND-1534,九州,福岡県,福智町,福智町地域交流センター,community_stage_complex,A,"地域交流センターの時間単位料金を掲載","具体的な室名と定員と面積は申込前に確認",verified,https://www.town.fukuchi.lg.jp/soshiki/gakushu/3774.html
+CAND-1535,九州,福岡県,宮若市,宮田文化センター,stage_and_meeting_complex,A,"市の現行予約システムで大ホールを予約対象として掲載","客席数と面積と利用条件は申込前に確認",verified,https://www.city.miyawaka.lg.jp/kiji003449274/index.html
