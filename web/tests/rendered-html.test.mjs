@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile, readdir } from "node:fs/promises";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 async function render(pathname = "/") {
@@ -69,8 +69,8 @@ test("server-renders the venue search shell", async () => {
   const layoutSource = await readFile(new URL("../app/layout.tsx", import.meta.url), "utf8");
   assert.match(layoutSource, /NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN/);
   assert.match(layoutSource, /static\.cloudflareinsights\.com\/beacon\.min\.js/);
-  assert.match(html, /会場を、名前でなく/);
-  assert.match(html, /条件で測る/);
+  assert.match(html, /あなたに必要な/);
+  assert.match(html, /イベント会場を測る/);
   assert.match(
     html,
     /イベント会場候補を地域・面積・天井・客席・予算・搬入・アクセスで見比べます。/,
@@ -153,19 +153,10 @@ test("server-renders the venue search shell", async () => {
   assert.doesNotMatch(html, /id="past-venues"/);
   assert.doesNotMatch(html, /過去会場台帳をたどる/);
   assert.match(html, /LaSens等の索引で小劇場を見つけ/);
-  assert.match(html, /現在の594件の確認台帳は、CSVとして公開しています/);
-  assert.match(html, /小劇場台帳から探す/);
-  assert.match(html, /SMALL THEATER RESEARCH LEDGER/);
-  assert.match(html, /class="section-title-index"[^>]*>03</);
-  assert.match(
-    html,
-    /<details class="archive-section archive-disclosure" id="small-theater-ledger"/,
-  );
-  assert.doesNotMatch(
-    html,
-    /<details[^>]*id="small-theater-ledger"[^>]*\sopen(?:=|\s|>)/,
-  );
-  assert.match(html, /台帳を読み込んでいます/);
+  // 小劇場は候補データへ統合したため、独立した台帳セクションは持たない
+  assert.doesNotMatch(html, /小劇場台帳から探す/);
+  assert.doesNotMatch(html, /id="small-theater-ledger"/);
+  assert.match(html, /小劇場だけを見る/);
   assert.match(html, /class="section-title-index"[^>]*>04</);
   assert.match(html, /更新と訂正/);
   assert.match(html, /データの鮮度と公開状態/);
@@ -199,19 +190,4 @@ test("publishes crawler routes and a share image", async () => {
   const image = await readFile(new URL("../public/og.png", import.meta.url));
   assert.ok(image.length > 20_000);
   assert.deepEqual([...image.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
-});
-
-test("ships the small theater ledger as a separate data asset", async () => {
-  const dataUrl = new URL("../public/data/", import.meta.url);
-  const entries = await readdir(dataUrl);
-  const versionedLedgers = entries.filter((name) =>
-    /^small-theater-ledger\.[a-f0-9]{12}\.json$/.test(name),
-  );
-  assert.equal(versionedLedgers.length, 1);
-  const ledgerUrl = new URL(versionedLedgers[0], dataUrl);
-  const ledger = JSON.parse(await readFile(ledgerUrl, "utf8"));
-
-  assert.equal(ledger.length, 594);
-  assert.equal(ledger.some((theater) => theater.verificationStatus === "pending"), false);
-  assert.ok(ledger.some((theater) => theater.officialUrl));
 });

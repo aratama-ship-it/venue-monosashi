@@ -21,3 +21,6 @@
 /web/README 2.md
 /web/app/globals 2.css
 /web/tests/rendered-html.test 2.mjs
+
+# iCloudの同期競合コピー(「app 2.js」等)は追跡しない
+* [0-9].*

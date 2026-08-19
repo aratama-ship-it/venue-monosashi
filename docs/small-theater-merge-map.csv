@@ -1,0 +1,370 @@
+source_id,official_name,prefecture,action,target_candidate_id,match_rule
+LASENS-272,演劇専用小劇場BLOCH,北海道,new,,no_match
+LASENS-2374,演劇空間スペースベン,青森県,new,,no_match
+LASENS-2422,風のスタジオ,岩手県,new,,no_match
+LASENS-2424,Quarter Studio,宮城県,new,,no_match
+LASENS-3930,アートボックス卸町,秋田県,new,,no_match
+LASENS-2474,百景社アトリエ,茨城県,new,,no_match
+LASENS-3525,アトリエほんまる,栃木県,new,,no_match
+LASENS-339,イコス上尾,埼玉県,new,,no_match
+LASENS-591,柏Studio WUU,千葉県,new,,no_match
+LASENS-4313,みんなのMINAKURU,長野県,new,,no_match
+LASENS-3539,可児市文化創造センター ala 小劇場〈虹のホール〉,岐阜県,attach_space,CAND-253,name_room_of
+LASENS-2816,あそviva!劇場,静岡県,new,,no_match
+LASENS-3300,新江州シアター（小劇場）,滋賀県,attach_space,CAND-1125,manual_reviewed
+LASENS-249,アートコンプレックス1928,京都府,new,,no_match
+LASENS-332,HEP HALL,大阪府,new,,no_match
+LASENS-2820,森の劇場 しいの実シアター【松江市八雲林間劇場】,島根県,attach_space,CAND-073,name_room_of
+LASENS-2818,スタジオイマイチ,山口県,new,,no_match
+LASENS-2555,小劇場 THEATER NEST,愛媛県,attach_space,CAND-074,manual_reviewed
+LASENS-3614,アトリエPentA,長崎県,new,,no_match
+LASENS-2438,アトリエ銘苅ベース,沖縄県,tag_only,CAND-068,name_exact
+LASENS-2854,MsmileBOX渋谷,,new,,no_match
+LASENS-2893,cube garden,北海道,new,,no_match
+LASENS-2790,BLACKBOX,青森県,new,,no_match
+LASENS-2794,えずこホール（仙南芸術文化センター）平土間ホール,宮城県,new,,no_match
+LASENS-4069,わらび劇場,秋田県,new,,no_match
+LASENS-2722,GSユアサいわき小劇場,福島県,new,,no_match
+LASENS-596,さいたま市産業文化センター ホール,埼玉県,new,,no_match
+LASENS-625,浦安市文化会館 小ホール,千葉県,attach_space,CAND-620,name_room_of
+LASENS-664,りゅーとぴあ 新潟市民芸術文化会館 スタジオB,新潟県,attach_space,CAND-069,name_room_of
+LASENS-622,新利賀山房,富山県,new,,no_match
+LASENS-2876,NEONHALL,長野県,new,,no_match
+LASENS-2480,うりんこ劇場,愛知県,new,,no_match
+LASENS-347,in→dependent theatre 1st,大阪府,new,,no_match
+LASENS-3322,Art Theater dB Kobe,兵庫県,new,,no_match
+LASENS-3502,スタジオB,山口県,attach_space,CAND-1069,manual_reviewed
+LASENS-2444,アトリエPentA,長崎県,new,,no_match
+LASENS-3446,ひめゆりピースホール,沖縄県,new,,no_match
+LASENS-3923,ジグスタ｜Zig Studio,,new,,no_match
+LASENS-3440,渡辺源四郎商店しんまち本店2階稽古場,青森県,new,,no_match
+LASENS-659,エル・パーク仙台 スタジオホール,宮城県,new,,no_match
+LASENS-3595,あきた芸術村 小劇場,秋田県,new,,no_match
+LASENS-439,加須文化・学習センター パストラルかぞ 小ホール,埼玉県,new,,no_match
+LASENS-584,浦安市民プラザWave101 多目的小ホール,千葉県,new,,no_match
+LASENS-227,両国・エアースタジオ,東京都,new,,no_match
+LASENS-2573,スペース・オルタ,神奈川県,new,,no_match
+LASENS-2419,月潟稽古場,新潟県,new,,no_match
+LASENS-2476,犀の角,長野県,tag_only,CAND-071,name_exact
+LASENS-4092,シアターココ,愛知県,new,,no_match
+LASENS-2482,津あけぼの座,三重県,new,,no_match
+LASENS-2547,朗読専用劇場rLabo.,京都府,new,,no_match
+LASENS-348,in→dependent theatre 2nd,大阪府,new,,no_match
+LASENS-223,アクロス福岡 円形ホール,福岡県,attach_space,CAND-1150,name_room_of
+LASENS-2633,諫早独楽（コマ）劇場,長崎県,new,,no_match
+LASENS-2740,沖縄市民小劇場あしびなー,沖縄県,new,,no_match
+LASENS-2587,アートコミュニティスペースKAIKA,,new,,no_match
+LASENS-262,アトリエ阿呆船,北海道,new,,no_match
+LASENS-3249,八戸ポータルミュージアム はっち シアター2,青森県,new,,no_match
+LASENS-4078,THEATERえびす,宮城県,new,,no_match
+LASENS-583,浦安市民プラザWave101 多目的大ホール,千葉県,new,,no_match
+LASENS-611,APOCシアター,東京都,new,,no_match
+LASENS-501,STスポット,神奈川県,tag_only,CAND-065,name_parent_of
+LASENS-568,富山県民小劇場ORBIS,富山県,tag_only,CAND-070,name_exact
+LASENS-2440,上土劇場,長野県,new,,no_match
+LASENS-592,静岡県舞台芸術公園 野外劇場「有度」,静岡県,new,,no_match
+LASENS-2442,THEATRE E9 KYOTO,京都府,tag_only,CAND-066,name_exact
+LASENS-374,大阪市立青少年センター KOKO PLAZA エクスプレス・ココ200（練習発表室）,大阪府,attach_space,CAND-1489,name_room_of
+LASENS-2466,江原河畔劇場,兵庫県,new,,no_match
+LASENS-228,あじびホール,福岡県,attach_space,CAND-1521,manual_reviewed
+LASENS-3297,国立劇場おきなわ 小劇場,沖縄県,new,,no_match
+LASENS-3931,新世界ZAZA POCKETS,,new,,no_match
+LASENS-658,せんだい演劇工房10-BOX box-1,宮城県,tag_only,CAND-064,name_exact
+LASENS-665,彩の国さいたま芸術劇場 小ホール,埼玉県,attach_space,CAND-1023,name_room_of
+LASENS-4335,Asagiri Mist Theater,東京都,new,,no_match
+LASENS-231,あかいくつ劇場,神奈川県,new,,no_match
+LASENS-621,富山県利賀芸術公園 野外劇場,富山県,new,,no_match
+LASENS-2363,ナンジャーレ,愛知県,tag_only,CAND-072,name_exact
+LASENS-388,ラブリーホール 小ホール,大阪府,new,,no_match
+LASENS-3436,芸術文化観光専門職大学 実習棟小劇場「そぞろ座」,兵庫県,new,,no_match
+LASENS-615,江東区森下文化センター 多目的ホール,,attach_space,CAND-1402,name_room_of
+LASENS-3438,ジョブキタ北八劇場,北海道,new,,no_match
+LASENS-669,仙台銀行ホール イズミティ21 小ホール,宮城県,attach_space,CAND-1097,manual_reviewed
+LASENS-412,成田公民館 市民ホール,千葉県,new,,no_match
+LASENS-2963,新宿 at THEATRE,東京都,new,,no_match
+LASENS-250,川崎市アートセンター アルテリオ小劇場,神奈川県,new,,no_match
+LASENS-559,富山県利賀芸術公園 利賀スタジオ,富山県,new,,no_match
+LASENS-3428,パティオ池鯉鮒（知立市文化会館） 花しょうぶホール,愛知県,attach_space,CAND-1316,name_room_of
+LASENS-2372,神戸三宮シアター・エートー,兵庫県,new,,no_match
+LASENS-645,北九州市ウェルとばた 中ホール,福岡県,new,,no_match
+LASENS-3344,てんぶす那覇 テンブスホール,沖縄県,new,,no_match
+LASENS-3940,ジョブキタ北八劇場,北海道,new,,no_match
+LASENS-673,トークネットホール仙台（仙台市民会館） 小ホール,宮城県,new,,no_match
+LASENS-395,千葉市美浜文化ホール メインホール,千葉県,new,,no_match
+LASENS-550,横浜市泉区民文化センター テアトルフォンテ ホール,神奈川県,new,,no_match
+LASENS-3744,メニコン シアターAoi,愛知県,new,,no_match
+LASENS-495,SPACE LFAN（旧 スペース・イサン）,京都府,new,,no_match
+LASENS-3537,町劇Akashi,兵庫県,new,,no_match
+LASENS-3418,那覇文化芸術劇場なはーと 小劇場,沖縄県,attach_space,CAND-1166,name_room_of
+LASENS-378,ターミナルプラザことにパトス 多目的ホール,北海道,new,,no_match
+LASENS-2759,誰も知らない劇場,宮城県,new,,no_match
+LASENS-396,千葉市美浜文化ホール 音楽ホール,千葉県,new,,no_match
+LASENS-649,Atelier Kanon B1F Atelier,東京都,new,,no_match
+LASENS-3415,円頓寺Les Piliers（レピリエ）,愛知県,new,,no_match
+LASENS-382,京都芸術センター フリースペース,京都府,new,,no_match
+LASENS-4010,豊岡ミリオン座,兵庫県,new,,no_match
+LASENS-279,札幌市生涯学習センター ちえりあホール,北海道,new,,no_match
+LASENS-2792,水の里ホール・Abebisou（登米祝祭劇場） 小ホール,宮城県,new,,no_match
+LASENS-3598,ヨコスカ・ベイサイド・ポケット［小劇場］,神奈川県,new,,no_match
+LASENS-2361,七ツ寺共同スタジオ,愛知県,new,,no_match
+LASENS-380,京都大学 西部講堂,京都府,new,,no_match
+LASENS-3886,SPACE14（スペースイチヨン）,大阪府,new,,no_match
+LASENS-436,福岡市千代音楽・演劇練習場（パピオビールーム） 大練習室,福岡県,new,,no_match
+LASENS-2367,富良野演劇工場,北海道,new,,no_match
+LASENS-458,ラゾーナ川崎プラザソル,神奈川県,new,,no_match
+LASENS-657,港文化小劇場,愛知県,tag_only,CAND-1362,name_parent_of
+LASENS-381,京都府立文化芸術会館,京都府,new,,no_match
+LASENS-647,小劇場＋Bar「ステージプラス」,大阪府,new,,no_match
+LASENS-301,ふくふくホール,福岡県,new,,no_match
+LASENS-449,ポルトホール,北海道,new,,no_match
+LASENS-2545,横浜市磯子区民文化センター 杉田劇場,神奈川県,new,,no_match
+LASENS-668,守山文化小劇場,愛知県,tag_only,CAND-1360,name_parent_of
+LASENS-333,京都市東山青少年活動センター 創造活動室,京都府,new,,no_match
+LASENS-517,Ｔ・Ｂホール,大阪府,new,,no_match
+LASENS-448,福岡市祇園音楽・演劇練習場 ぽんプラザホール,福岡県,attach_space,CAND-067,name_room_of
+LASENS-594,横浜にぎわい座 芸能ホール,神奈川県,new,,no_match
+LASENS-2584,瑞穂文化小劇場,愛知県,tag_only,CAND-1389,name_exact
+LASENS-3836,TEMPO HARBOR THEATER,大阪府,new,,no_match
+LASENS-422,レソラホール（レソラNTT夢天神ホール）,福岡県,new,,no_match
+LASENS-3442,BUoY,東京都,new,,no_match
+LASENS-595,横浜にぎわい座 のげシャーレ（小ホール）,神奈川県,new,,no_match
+LASENS-656,西文化小劇場,愛知県,tag_only,CAND-1358,name_parent_of
+LASENS-556,TH-R HALL,大阪府,new,,no_match
+LASENS-355,甘棠館Show劇場,福岡県,new,,no_match
+LASENS-3310,Rental Space 88,東京都,new,,no_match
+LASENS-616,横浜市開港記念会館,神奈川県,new,,no_match
+LASENS-637,千種文化小劇場,愛知県,tag_only,CAND-1356,name_parent_of
+LASENS-3763,アカルスタジオ Aスタジオ,大阪府,new,,no_match
+LASENS-3024,枝光本町商店街 アイアンシアター,福岡県,new,,no_match
+LASENS-459,レッドベリースタジオ,北海道,new,,no_match
+LASENS-2139,cafe&bar 木星劇場,東京都,new,,no_match
+LASENS-383,急な坂スタジオ ホール,神奈川県,new,,no_match
+LASENS-678,中川文化小劇場,愛知県,tag_only,CAND-1254,name_exact
+LASENS-418,西鉄ホール,福岡県,new,,no_match
+LASENS-4361,旭川銀座小劇場シアターロビン,北海道,new,,no_match
+LASENS-1990,CBGKシブゲキ!!,東京都,new,,no_match
+LASENS-265,厚木市文化会館 小ホール,神奈川県,attach_space,CAND-556,name_room_of
+LASENS-638,中村文化小劇場,愛知県,tag_only,CAND-1363,name_parent_of
+LASENS-589,ウイングフィールド,大阪府,new,,no_match
+LASENS-239,福岡市男女共同参画推進センター・アミカス ホール,福岡県,attach_space,CAND-1395,name_room_of
+LASENS-593,札幌市こどもの劇場やまびこ座 ホール,北海道,new,,no_match
+LASENS-2002,溝ノ口劇場,神奈川県,new,,no_match
+LASENS-663,天白文化小劇場,愛知県,tag_only,CAND-1415,name_exact
+LASENS-470,札幌市教育文化会館 小ホール,北海道,new,,no_match
+LASENS-1619,WAKABACHO WHARF WHARF01,神奈川県,new,,no_match
+LASENS-675,東文化小劇場,愛知県,tag_only,CAND-1357,official_url_exact
+LASENS-2738,J:COM北九州芸術劇場 小劇場,福岡県,attach_space,CAND-1290,name_room_of
+LASENS-3397,札幌市民交流プラザ クリエイティブスタジオ,北海道,new,,no_match
+LASENS-2530,DDD青山クロスシアター,東京都,new,,no_match
+LASENS-232,横浜赤レンガ倉庫1号館 3Fホール,神奈川県,new,,no_match
+LASENS-655,南文化小劇場,愛知県,tag_only,CAND-1359,name_parent_of
+LASENS-699,LOXODONTA BLACK（ロクソドンタブラック）,大阪府,new,,no_match
+LASENS-2878,長期熟成型スペース 湾岸劇場 博多扇貝,福岡県,new,,no_match
+LASENS-2549,市民劇場ヲタル座,北海道,new,,no_match
+LASENS-677,熱田文化小劇場,愛知県,tag_only,CAND-1390,name_exact
+LASENS-281,生活支援型文化施設コンカリーニョ,北海道,new,,no_match
+LASENS-672,北文化小劇場,愛知県,tag_only,CAND-1364,name_parent_of
+LASENS-547,扇谷記念スタジオ シアターZOO,北海道,tag_only,CAND-063,name_exact
+LASENS-2999,相模女子大学グリーンホール 多目的ホール,神奈川県,new,,no_match
+LASENS-667,名東文化小劇場,愛知県,tag_only,CAND-1361,name_parent_of
+LASENS-2987,苫小牧演劇堂,北海道,new,,no_match
+LASENS-3564,CHOJA STUDIO（長者スタジオ）,神奈川県,new,,no_match
+LASENS-674,緑文化小劇場,愛知県,tag_only,CAND-1416,name_exact
+LASENS-3896,平原通り小劇場,北海道,new,,no_match
+LASENS-373,糀ホール,神奈川県,new,,no_match
+LASENS-2711,池袋西口公園野外劇場 グローバルリング シアター,東京都,new,,no_match
+LASENS-222,大阪市立阿倍野区民センター 小ホール,大阪府,attach_space,CAND-1307,name_room_of
+LASENS-341,一心寺シアター倶楽,大阪府,new,,no_match
+LASENS-2895,音太小屋 2階「でん」,大阪府,new,,no_match
+LASENS-384,渋谷La.mama,東京都,new,,no_match
+LASENS-365,近鉄アート館,大阪府,new,,no_match
+LASENS-385,B1F LIVE SPACE HALOT,東京都,new,,no_match
+LASENS-386,LE DECO 3F,東京都,new,,no_match
+LASENS-387,LE DECO 5F,東京都,new,,no_match
+LASENS-2022,LEFKADA新宿,東京都,new,,no_match
+LASENS-554,浄土宗應典院 本堂,大阪府,new,,no_match
+LASENS-623,吹田市文化会館 メイシアター 中ホール,大阪府,attach_space,CAND-1314,name_room_of
+LASENS-390,吹田市文化会館 メイシアター 小ホール,大阪府,attach_space,CAND-1314,name_room_of
+LASENS-3306,nakano f（ナカノエフ）,東京都,new,,no_match
+LASENS-644,世界館,大阪府,new,,no_match
+LASENS-425,OFF・OFFシアター,東京都,new,,no_match
+LASENS-3612,聖天通劇場,大阪府,new,,no_match
+LASENS-3769,扇町ミュージアムキューブ,大阪府,new,,no_match
+LASENS-4046,Paperback Studio,東京都,new,,no_match
+LASENS-305,大阪市立芸術創造館 大練習室,大阪府,attach_space,CAND-1488,name_room_of
+LASENS-443,plan-B,東京都,new,,no_match
+LASENS-462,R’sアートコート（労音大久保会館）,東京都,new,,no_match
+LASENS-455,オルタナティブスペースRAFT,東京都,new,,no_match
+LASENS-553,Route Theater,東京都,new,,no_match
+LASENS-414,大阪日本橋ポルックスシアター,大阪府,new,,no_match
+LASENS-2004,SCOOL,東京都,new,,no_match
+LASENS-476,神楽坂セッションハウス B1Fスタジオ・小劇場,東京都,new,,no_match
+LASENS-293,space EDGE Space A,東京都,new,,no_match
+LASENS-1998,SPACE BLANZ B1F フリースペース,東京都,new,,no_match
+LASENS-504,高円寺Studio K スタジオ2,東京都,new,,no_match
+LASENS-571,中野Studio twl,東京都,new,,no_match
+LASENS-1986,STUDIO ZAP!,東京都,new,,no_match
+LASENS-4012,studio杭,東京都,new,,no_match
+LASENS-514,TACCS1179,東京都,new,,no_match
+LASENS-4367,TB STUDIO,東京都,new,,no_match
+LASENS-521,THEATER BRATS,東京都,new,,no_match
+LASENS-541,シアターシャイン,東京都,new,,no_match
+LASENS-698,WATERRAS COMMON ホール,東京都,new,,no_match
+LASENS-252,アートシアター上野小劇場,東京都,new,,no_match
+LASENS-684,あさくさ劇亭,東京都,new,,no_match
+LASENS-512,アートスペースサンライズホール,東京都,new,,no_match
+LASENS-450,阿佐ヶ谷アートスペースプロット,東京都,new,,no_match
+LASENS-247,高田馬場ラビネスト,東京都,new,,no_match
+LASENS-258,アトリエだるま座,東京都,new,,no_match
+LASENS-702,アトリエファンファーレ高円寺,東京都,new,,no_match
+LASENS-2000,アトリエファンファーレ東新宿,東京都,new,,no_match
+LASENS-1810,アトリエファンファーレ東池袋,東京都,new,,no_match
+LASENS-259,アトリエヘリコプター,東京都,new,,no_match
+LASENS-4099,アトリエ三軒茶屋,東京都,new,,no_match
+LASENS-243,阿佐ヶ谷アルシェ,東京都,new,,no_match
+LASENS-1994,アルネ543,東京都,new,,no_match
+LASENS-242,アレーナホール,東京都,new,,no_match
+LASENS-587,WESTEND STUDIO（ウエストエンドスタジオ）,東京都,new,,no_match
+LASENS-590,ウッディシアター中目黒,東京都,new,,no_match
+LASENS-2359,エリア543,東京都,new,,no_match
+LASENS-1683,オメガ東京,東京都,new,,no_match
+LASENS-1618,I’M A SHOW（アイマショウ）,東京都,new,,no_match
+LASENS-352,江東区亀戸文化センター カメリアホール,東京都,attach_space,CAND-1404,name_room_of
+LASENS-631,中目黒キンケロ・シアター,東京都,new,,no_match
+LASENS-379,FSXホール（くにたち市民芸術小ホール） ホール,東京都,attach_space,CAND-1344,name_room_of
+LASENS-277,J:COMコール田無 多目的ホール,東京都,new,,no_match
+LASENS-1779,Asagiri Mist Theater（旧・コフレリオ新宿シアター）,東京都,new,,no_match
+LASENS-605,ザ・スズナリ,東京都,new,,no_match
+LASENS-465,SAiSTUDIOコモネA,東京都,new,,no_match
+LASENS-3367,すみだパークギャラリーささや,東京都,new,,no_match
+LASENS-603,ザムザ阿佐谷,東京都,new,,no_match
+LASENS-3342,サンガイノリバテイ,東京都,new,,no_match
+LASENS-509,サンモールスタジオ,東京都,new,,no_match
+LASENS-3535,シアター・アルファ東京,東京都,new,,no_match
+LASENS-548,シアター711,東京都,new,,no_match
+LASENS-1928,シアターウィング,東京都,new,,no_match
+LASENS-528,BOX in BOX THEATER,東京都,new,,no_match
+LASENS-530,BIG TREE THEATER,東京都,new,,no_match
+LASENS-532,BASE THEATER,東京都,new,,no_match
+LASENS-543,シアターサンモール,東京都,new,,no_match
+LASENS-545,シアタートラム,東京都,attach_space,CAND-1262,manual_reviewed
+LASENS-2551,シアターミネルヴァ,東京都,new,,no_match
+LASENS-535,新宿シアターモリエール,東京都,new,,no_match
+LASENS-524,シアター代官山,東京都,new,,no_match
+LASENS-525,シアター風姿花伝,東京都,new,,no_match
+LASENS-534,シアターΧ,東京都,new,,no_match
+LASENS-236,中野スタジオあくとれ,東京都,new,,no_match
+LASENS-704,スタジオ空洞,東京都,new,,no_match
+LASENS-3340,ステージカフェ 下北沢亭,東京都,new,,no_match
+LASENS-3617,スペースM&A,東京都,new,,no_match
+LASENS-651,すみだパークシアター倉,東京都,new,,no_match
+LASENS-266,アウラホール,東京都,new,,no_match
+LASENS-635,調布市せんがわ劇場,東京都,new,,no_match
+LASENS-608,テアトルBONBON,東京都,new,,no_match
+LASENS-520,テルプシコール,東京都,new,,no_match
+LASENS-653,TEMPORARY CONTEMPORARY,東京都,new,,no_match
+LASENS-410,なかの芸能小劇場,東京都,new,,no_match
+LASENS-2856,ハーフムーンホール - 下北沢,東京都,new,,no_match
+LASENS-3528,バルスタジオ,東京都,new,,no_match
+LASENS-516,パルテノン多摩 小ホール,東京都,attach_space,CAND-1269,manual_reviewed
+LASENS-454,プーク人形劇場,東京都,new,,no_match
+LASENS-275,築地本願寺ブディストホール,東京都,new,,no_match
+LASENS-3774,ブルースクエア四谷,東京都,new,,no_match
+LASENS-405,ムーブ町屋（ムーブホール）,東京都,new,,no_match
+LASENS-2008,エモーシア神楽坂,東京都,new,,no_match
+LASENS-640,ラフォーレミュージアム原宿,東京都,new,,no_match
+LASENS-357,レパートリーシアターKAZE,東京都,new,,no_match
+LASENS-2355,新中野ワニズホール,東京都,new,,no_match
+LASENS-290,荏原文化センター 大ホール,東京都,new,,no_match
+LASENS-295,駅前劇場,東京都,new,,no_match
+LASENS-463,SUBTERRANEAN,東京都,new,,no_match
+LASENS-432,インディペンデントシアターOji,東京都,new,,no_match
+LASENS-2160,パフォーミングギャラリー＆カフェ 絵空箱,東京都,new,,no_match
+LASENS-359,武蔵野市立吉祥寺シアター,東京都,new,,no_match
+LASENS-575,牛込箪笥区民ホール,東京都,tag_only,CAND-1397,name_parent_of
+LASENS-561,桐朋学園芸術短期大学 小劇場,東京都,new,,no_match
+LASENS-376,東京大学教養学部多目的ホール（駒場小空間）,東京都,new,,no_match
+LASENS-292,恵比寿・エコー劇場,東京都,new,,no_match
+LASENS-317,「劇」小劇場,東京都,new,,no_match
+LASENS-610,劇場HOPE,東京都,new,,no_match
+LASENS-399,劇場MOMO,東京都,new,,no_match
+LASENS-2024,劇場ビット,東京都,new,,no_match
+LASENS-3935,元映画館,東京都,new,,no_match
+LASENS-319,現代座ホール,東京都,new,,no_match
+LASENS-377,深川江戸資料館 小劇場,東京都,attach_space,CAND-1399,manual_reviewed
+LASENS-626,高田馬場ラビネスト,東京都,new,,no_match
+LASENS-679,座・高円寺１,東京都,new,,no_match
+LASENS-680,座・高円寺2,東京都,new,,no_match
+LASENS-498,三鷹市芸術文化センター 星のホール,東京都,attach_space,CAND-1270,name_room_of
+LASENS-618,三鷹市芸術文化センター 風のホール,東京都,attach_space,CAND-1270,name_room_of
+LASENS-569,参宮橋トランスミッション,東京都,new,,no_match
+LASENS-687,大森山王FOREST,東京都,new,,no_match
+LASENS-600,四谷区民ホール,東京都,tag_only,CAND-1396,name_parent_of
+LASENS-344,時事通信ホール,東京都,new,,no_match
+LASENS-3562,ばぐちか,東京都,new,,no_match
+LASENS-646,小金井フラワーホール,東京都,new,,no_match
+LASENS-483,ひつじ座,東京都,new,,no_match
+LASENS-706,小劇場B1,東京都,new,,no_match
+LASENS-485,小劇場楽園,東京都,new,,no_match
+LASENS-346,上智大学1号館講堂（通称：上智小劇場）,東京都,new,,no_match
+LASENS-682,上野ストアハウス,東京都,new,,no_match
+LASENS-2649,新宿眼科画廊 スペース地下,東京都,new,,no_match
+LASENS-700,新宿村LIVE,東京都,new,,no_match
+LASENS-478,新宿区立新宿文化センター 小ホール,東京都,attach_space,CAND-1241,name_room_of
+LASENS-403,森下スタジオ Cスタジオ,東京都,new,,no_match
+LASENS-402,江東区森下文化センター 第1レクホール,東京都,attach_space,CAND-1402,name_room_of
+LASENS-681,KAAT神奈川芸術劇場 大スタジオ,東京都,new,,no_match
+LASENS-4132,水性,東京都,new,,no_match
+LASENS-634,成城ホール（砧区民会館）,東京都,new,,no_match
+LASENS-230,赤羽会館 小ホール,東京都,attach_space,CAND-1484,name_room_of
+LASENS-234,赤坂RED/THEATER,東京都,new,,no_match
+LASENS-475,千本桜ホール,東京都,new,,no_match
+LASENS-2012,浅草花劇場,東京都,new,,no_match
+LASENS-2018,浅草九劇,東京都,new,,no_match
+LASENS-607,全電通ホール,東京都,new,,no_match
+LASENS-497,こくみん共済 coop ホール／スペース・ゼロ,東京都,new,,no_match
+LASENS-555,早稲田クローバースタジオ,東京都,new,,no_match
+LASENS-285,早稲田小劇場どらま館,東京都,new,,no_match
+LASENS-581,演劇練習室（B202）,東京都,new,,no_match
+LASENS-582,演劇練習室（B203）,東京都,new,,no_match
+LASENS-490,草月ホール,東京都,new,,no_match
+LASENS-3430,大岡山劇場,東京都,new,,no_match
+LASENS-310,池袋西口GEKIBA,東京都,new,,no_match
+LASENS-482,新生館スタジオ,東京都,new,,no_match
+LASENS-409,中目黒GTプラザホール,東京都,new,,no_match
+LASENS-446,ザ・ポケット,東京都,new,,no_match
+LASENS-2713,中野シアターかざあな,東京都,new,,no_match
+LASENS-389,町田市民フォーラム,東京都,new,,no_match
+LASENS-280,調布市グリーンホール 小ホール,東京都,attach_space,CAND-1299,name_room_of
+LASENS-4008,鶴めいホール,東京都,new,,no_match
+LASENS-2534,伝承ホール,東京都,tag_only,CAND-1440,name_parent_of
+LASENS-437,東演パラータ,東京都,new,,no_match
+LASENS-565,東京ウィメンズプラザ ホール,東京都,new,,no_match
+LASENS-2311,シアターイースト（小ホール1）,東京都,new,,no_match
+LASENS-2313,シアターウエスト（小ホール2）,東京都,new,,no_match
+LASENS-306,シアターイースト（小ホール1）,東京都,new,,no_match
+LASENS-308,シアターウエスト（小ホール2）,東京都,new,,no_match
+LASENS-572,千代田区立内幸町ホール,東京都,attach_space,CAND-1405,name_room_of
+LASENS-397,南大塚ホール,東京都,new,,no_match
+LASENS-416,日暮里サニーホール,東京都,new,,no_match
+LASENS-413,中央区立日本橋公会堂 ホール（日本橋劇場）,東京都,attach_space,CAND-1437,name_room_of
+LASENS-574,梅ヶ丘BOX,東京都,new,,no_match
+LASENS-327,銀座博品館劇場,東京都,new,,no_match
+LASENS-3760,板橋シアター咲,東京都,new,,no_match
+LASENS-342,板橋区立文化会館 小ホール,東京都,attach_space,CAND-1264,name_room_of
+LASENS-685,表参道GROUND,東京都,new,,no_match
+LASENS-408,武蔵野芸能劇場 小劇場,東京都,new,,no_match
+LASENS-407,武蔵野公会堂,東京都,tag_only,CAND-1301,name_exact
+LASENS-276,文学座アトリエ,東京都,new,,no_match
+LASENS-433,あうるすぽっと（豊島区立舞台芸術交流センター）,東京都,new,,no_match
+LASENS-366,北沢タウンホール,東京都,tag_only,CAND-1476,name_parent_of
+LASENS-335,本多スタジオ（下北沢）,東京都,new,,no_match
+LASENS-268,麻布区民センター 区民ホール,東京都,attach_space,CAND-1468,name_room_of
+LASENS-401,両国門天ホール（旧・門仲天井ホール）,東京都,new,,no_match
+LASENS-420,野方区民ホール,東京都,new,,no_match
+LASENS-240,立川市市民会館 小ホール（たましんRISURUホール）,東京都,new,,no_match
+LASENS-2137,両国門天ホール,東京都,new,,no_match
+LASENS-460,六行会ホール,東京都,new,,no_match
+LASENS-2010,六本木トリコロールシアター,東京都,new,,no_match
+LASENS-351,吉祥寺櫂スタジオ,東京都,new,,no_match
+LASENS-597,萬劇場,東京都,new,,no_match

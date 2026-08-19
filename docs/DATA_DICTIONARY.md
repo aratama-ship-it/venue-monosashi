@@ -30,6 +30,7 @@
 | source_url | 数値・条件を確認した公式URL |
 | observed_at | 情報を取得した日 |
 | verification_status | verified / needs_check |
+| tags | 分類タグ。パイプ区切り。現在は `small_theater` のみ。区画に付けるのは、施設は大箱でも小劇場はその中の一区画であることがあるため |
 | note | 単位換算、制限、追加確認点 |
 
 ## price-observations.csv
@@ -159,3 +160,21 @@
 | timeout / network_error | 応答時間超過または通信失敗。施設ページの不存在を意味しない |
 
 `final_url`はリダイレクト後のURL、`references`はそのURLを参照している行IDである。HTTP到達だけで`verification_status`を`verified`へ昇格させない。
+
+
+## candidate-venues.csv（2026-08-19 追加列）
+
+| 列 | 意味 |
+| --- | --- |
+| tags | 施設単位の分類タグ。パイプ区切り。`small_theater` は施設全体が小劇場である場合だけ付ける。大きな施設の中の小劇場は、施設ではなく `venue-details.csv` の区画側に付ける |
+| source_index | 候補を発見した索引名。`lasens` 等。一次情報は各施設の公式サイトであり、索引の掲載値は転記しない |
+| price_url | 公式料金表のURL。金額は未構造化のため、料金の絞り込みには使わない |
+| access_url | 公式アクセス案内のURL |
+| conditions_url | 公式利用条件のURL |
+| observed_at | 施設単位の公式確認日。区画・料金の観測日が無い候補の鮮度表示に使う |
+
+`evidence_tier` はCSVに持たず、`web/scripts/generate-data.mjs` が導出する。
+`detailed` は金額付き料金観測がある候補、`partial` は区画情報はあるが金額が無い候補、
+`ledger_only` は区画情報も金額も無く施設単位の一次情報だけがある候補。
+検索画面では `detailed` 以外にバッジを出し、面積・料金・天井で絞ったときは
+値が未確認で表に出ていない件数を明示する。

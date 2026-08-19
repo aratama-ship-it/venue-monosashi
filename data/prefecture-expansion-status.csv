@@ -11,7 +11,7 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 群馬県,関東,28,20,154,71,53,3,0,0,0,reference_depth
 埼玉県,関東,28,19,203,134,64,0,0,0,0,reference_depth
 千葉県,関東,25,24,159,105,91,2,0,0,0,reference_depth
-東京都,関東,80,48,244,171,127,10,0,0,0,reference_depth
+東京都,関東,100,48,264,180,132,10,0,0,0,reference_depth
 神奈川県,関東,25,18,216,120,111,13,0,0,0,reference_depth
 新潟県,甲信越,28,22,161,53,92,5,0,0,0,reference_depth
 富山県,北陸,28,15,229,53,61,14,0,0,0,reference_depth
@@ -21,11 +21,11 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 長野県,甲信越,25,22,156,76,80,8,0,0,0,reference_depth
 岐阜県,東海,28,19,191,100,88,2,0,0,0,reference_depth
 静岡県,東海,25,21,175,100,54,10,0,0,0,reference_depth
-愛知県,東海,80,38,330,238,110,61,0,0,0,reference_depth
+愛知県,東海,100,50,350,248,116,61,0,0,0,reference_depth
 三重県,東海,25,15,79,49,48,22,0,0,0,reference_depth
 滋賀県,近畿,28,16,112,54,38,1,0,0,0,reference_depth
 京都府,近畿,27,16,149,94,64,2,0,0,0,reference_depth
-大阪府,近畿,80,30,253,130,76,18,0,0,0,reference_depth
+大阪府,近畿,100,43,273,135,77,18,0,0,0,reference_depth
 兵庫県,近畿,26,19,158,71,45,21,0,0,0,reference_depth
 奈良県,近畿,28,19,211,112,82,6,0,0,0,reference_depth
 和歌山県,近畿,25,20,99,35,37,0,0,0,0,reference_depth
@@ -38,7 +38,7 @@ prefecture,region,candidate_count,municipality_count,space_count,capacity_known_
 香川県,四国,25,17,157,57,73,0,0,0,0,reference_depth
 愛媛県,四国,27,16,178,71,77,1,0,0,0,reference_depth
 高知県,四国,28,19,145,64,72,1,0,0,0,reference_depth
-福岡県,九州,80,37,307,159,144,12,0,0,0,reference_depth
+福岡県,九州,100,47,327,168,149,12,0,0,0,reference_depth
 佐賀県,九州,25,19,127,35,29,2,0,0,0,reference_depth
 長崎県,九州,25,18,140,35,27,2,0,0,0,reference_depth
 熊本県,九州,25,20,156,53,65,2,0,0,0,reference_depth

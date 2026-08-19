@@ -1,5 +1,4 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
-import { createHash } from "node:crypto";
+import { readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -129,7 +128,6 @@ const [
   historical,
   historicalVenueAliases,
   budgetScenarios,
-  smallTheaters,
   venueWebsites,
 ] = await Promise.all([
   load("candidate-venues.csv"),
@@ -139,7 +137,6 @@ const [
   load("historical-events.csv"),
   load("historical-venue-aliases.csv"),
   load("budget-scenarios.csv"),
-  load("small-theater-research.csv"),
   load("venue-websites.csv"),
 ]);
 
@@ -150,55 +147,12 @@ for (const website of venueWebsites) {
   websitesByCandidateId.set(website.candidate_id, list);
 }
 
-const smallTheaterVerificationCounts = Object.fromEntries(
-  [
-    "verified_primary",
-    "primary_partial",
-    "official_not_found",
-    "ambiguous",
-    "blocked",
-  ].map((status) => [
-    status,
-    smallTheaters.filter((theater) => theater.verification_status === status)
-      .length,
-  ]),
-);
-
-const smallTheaterLedger = smallTheaters.map((theater) => ({
-  id: theater.source_id,
-  indexName: theater.source_name,
-  indexUrl: theater.source_url,
-  indexedPrefecture: theater.source_prefecture || null,
-  officialName: theater.official_name || null,
-  officialUrl: nullableUrl(theater.official_url),
-  officialStatus: theater.official_status || null,
-  capacity: nullableNumber(theater.official_capacity),
-  area: nullableNumber(theater.official_area_m2),
-  priceUrl: nullableUrl(theater.official_price_url),
-  accessUrl: nullableUrl(theater.official_access_url),
-  conditionsUrl: nullableUrl(theater.official_conditions_url),
-  observedAt: theater.official_observed_at || null,
-  verificationStatus: theater.verification_status,
-  note: theater.notes || null,
-}));
-const smallTheaterCsv = await readFile(
-  resolve(projectDir, "data", "small-theater-research.csv"),
-);
-const smallTheaterAssetHash = createHash("sha256")
-  .update(smallTheaterCsv)
-  .digest("hex")
-  .slice(0, 12);
-const smallTheaterAssets = {
-  csv: `small-theater-research.${smallTheaterAssetHash}.csv`,
-  ledger: `small-theater-ledger.${smallTheaterAssetHash}.json`,
-};
-
 const observationDates = [
   ...details.map((item) => item.observed_at),
   ...prices.map((item) => item.observed_at),
   ...operations.map((item) => item.observed_at),
   ...budgetScenarios.map((item) => item.observed_at),
-  ...smallTheaters.map((item) => item.official_observed_at),
+  ...candidates.map((item) => item.observed_at ?? ""),
   ...venueWebsites.map((item) => item.observed_at),
 ].filter((value) => /^\d{4}-\d{2}-\d{2}$/.test(value));
 const sortedObservationDates = [...new Set(observationDates)].sort();
@@ -211,9 +165,6 @@ const freshness = {
     prices.filter((item) => item.observed_at).length +
     operations.filter((item) => item.observed_at).length +
     budgetScenarios.filter((item) => item.observed_at).length,
-  smallTheaterObservationCount: smallTheaters.filter(
-    (item) => item.official_observed_at,
-  ).length,
 };
 
 const venues = candidates.map((candidate) => {
@@ -317,6 +268,19 @@ const venues = candidates.map((candidate) => {
     candidateWebsites[0]?.website_url,
   );
 
+  const pricedObservationCount = venuePrices.filter(
+    (price) => nullableNumber(price.amount_jpy) !== null,
+  ).length;
+  // 情報量の区別。料金金額が構造化されているかで分ける。
+  // detailed: 金額付き料金観測あり / partial: 区画情報はあるが金額なし /
+  // ledger_only: 区画情報も金額もなく、施設単位の一次情報だけがある
+  const evidenceTier =
+    pricedObservationCount > 0
+      ? "detailed"
+      : venueDetails.length > 0
+        ? "partial"
+        : "ledger_only";
+
   return {
     id: candidate.candidate_id,
     region: candidate.region,
@@ -328,11 +292,18 @@ const venues = candidates.map((candidate) => {
     strengths: candidate.verified_public_facts,
     cautions: candidate.inference_or_risk,
     sourceUrl: candidate.official_url,
+    tags: (candidate.tags ?? "").split("|").filter(Boolean),
+    sourceIndex: candidate.source_index || null,
+    evidenceTier,
+    priceUrl: nullableUrl(candidate.price_url ?? ""),
+    accessUrl: nullableUrl(candidate.access_url ?? ""),
+    conditionsUrl: nullableUrl(candidate.conditions_url ?? ""),
     websiteUrl: setOfficialLinks.some((link) => link.url === primaryWebsiteUrl)
       ? null
       : primaryWebsiteUrl,
     officialLinks: setOfficialLinks,
-    observedAt: venueObservationDates.at(-1) ?? null,
+    observedAt:
+      venueObservationDates.at(-1) ?? (candidate.observed_at || null),
     detailCount: venueDetails.length,
     priceCount: venuePrices.length,
     operationCount: venueOperations.length,
@@ -415,6 +386,7 @@ const venues = candidates.map((candidate) => {
       id: detail.space_id,
       name: detail.space_name,
       type: detail.space_type,
+      tags: (detail.tags ?? "").split("|").filter(Boolean),
       area: nullableNumber(detail.area_m2),
       ceiling: nullableNumber(detail.clear_height_min_m),
       ceilingReference: nullableNumber(detail.ceiling_height_m),
@@ -497,11 +469,13 @@ export const venueData = ${JSON.stringify(
       candidateCoverage,
       spaceCoverage,
       freshness,
-      smallTheaterCensus: {
-        total: smallTheaters.length,
-        verificationCounts: smallTheaterVerificationCounts,
-        assets: smallTheaterAssets,
-      },
+      // 検索側と同じ判定にする。施設タグだけで数えると、
+      // 大きな施設の中の小劇場区画を持つ候補が抜けて件数が食い違う。
+      smallTheaterTaggedCount: venues.filter(
+        (venue) =>
+          venue.tags.includes("small_theater") ||
+          venue.spaces.some((space) => space.tags.includes("small_theater")),
+      ).length,
     },
     venues,
     historicalEvents,
@@ -512,24 +486,6 @@ export const venueData = ${JSON.stringify(
 `;
 
 await writeFile(resolve(scriptDir, "..", "app", "generated-data.ts"), output);
-await mkdir(resolve(scriptDir, "..", "public", "data"), { recursive: true });
-await writeFile(
-  resolve(scriptDir, "..", "public", "data", "small-theater-research.csv"),
-  smallTheaterCsv,
-);
-await writeFile(
-  resolve(scriptDir, "..", "public", "data", smallTheaterAssets.csv),
-  smallTheaterCsv,
-);
-const smallTheaterLedgerJson = `${JSON.stringify(smallTheaterLedger)}\n`;
-await writeFile(
-  resolve(scriptDir, "..", "public", "data", "small-theater-ledger.json"),
-  smallTheaterLedgerJson,
-);
-await writeFile(
-  resolve(scriptDir, "..", "public", "data", smallTheaterAssets.ledger),
-  smallTheaterLedgerJson,
-);
 console.log(
   `generated app/generated-data.ts: ${venues.length} venues, ${prices.length} prices`,
 );

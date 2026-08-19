@@ -306,8 +306,12 @@ candidates.forEach((row, index) => {
   if (!verificationStatuses.has(row.verification_status)) {
     errors.push(`candidate-venues.csv:${line} invalid verification_status=${row.verification_status}`);
   }
-  if (!/^https:\/\//.test(row.official_url)) {
-    errors.push(`candidate-venues.csv:${line} non-https official_url`);
+  if (!/^https?:\/\//.test(row.official_url)) {
+    errors.push(`candidate-venues.csv:${line} invalid official_url`);
+  } else if (!/^https:\/\//.test(row.official_url)) {
+    // 公式サイトがhttpのみで運用されている施設がある。到達確認済みのhttpを
+    // httpsへ書き換えると根拠へ戻れなくなるため、エラーではなく可視化に留める。
+    warnings.push(`candidate-venues.csv:${line} http-only official_url`);
   }
 });
 
@@ -478,8 +482,10 @@ venueDetails.forEach((row, index) => {
       `venue-details.csv:${line} invalid verification_status=${row.verification_status}`,
     );
   }
-  if (!/^https:\/\//.test(row.source_url)) {
-    errors.push(`venue-details.csv:${line} non-https source_url`);
+  if (!/^https?:\/\//.test(row.source_url)) {
+    errors.push(`venue-details.csv:${line} invalid source_url`);
+  } else if (!/^https:\/\//.test(row.source_url)) {
+    warnings.push(`venue-details.csv:${line} http-only source_url`);
   }
   if (!/^\d{4}-\d{2}-\d{2}$/.test(row.observed_at)) {
     errors.push(`venue-details.csv:${line} invalid observed_at=${row.observed_at}`);

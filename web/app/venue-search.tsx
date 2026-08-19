@@ -4,21 +4,11 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { venueData } from "./generated-data";
 import { publication } from "./publication";
 
-type SortKey =
-  | "evidence"
-  | "capacity"
-  | "capacity_small"
-  | "area"
-  | "booking";
+type SortKey = "evidence" | "capacity" | "capacity_small" | "area" | "booking";
 type FeeClass = "all" | "nonprofit" | "commercial";
 type PriceDayType = "all" | "weekday" | "weekend_holiday";
 type VenueRole =
-  | "event_space"
-  | "stage"
-  | "sports"
-  | "meeting"
-  | "exhibition"
-  | "lodging";
+  "event_space" | "stage" | "sports" | "meeting" | "exhibition" | "lodging";
 type VenueRoleSource = {
   category: string;
   spaces: ReadonlyArray<{
@@ -28,25 +18,6 @@ type VenueRoleSource = {
 };
 type VenueSpace = (typeof venueData.venues)[number]["spaces"][number];
 type VenueRecord = (typeof venueData.venues)[number];
-type SmallTheaterLedgerItem = {
-  id: string;
-  indexName: string;
-  indexUrl: string;
-  indexedPrefecture: string | null;
-  officialName: string | null;
-  officialUrl: string | null;
-  officialStatus: string | null;
-  capacity: number | null;
-  area: number | null;
-  priceUrl: string | null;
-  accessUrl: string | null;
-  conditionsUrl: string | null;
-  observedAt: string | null;
-  verificationStatus: string;
-  note: string | null;
-};
-const smallTheaterCsvUrl = `/data/${venueData.stats.smallTheaterCensus.assets.csv}`;
-const smallTheaterLedgerUrl = `/data/${venueData.stats.smallTheaterCensus.assets.ledger}`;
 
 const venueRoles: ReadonlyArray<{ id: VenueRole; label: string }> = [
   { id: "event_space", label: "イベントスペース" },
@@ -136,9 +107,7 @@ function rolesForVenue(venue: VenueRoleSource): VenueRole[] {
   if (
     hasCategory("stage", "theater", "culture") ||
     hasSpace("stage", "stage_hall", "theater", "black_box") ||
-    venue.spaces.some(
-      (space) => !["none", "unknown"].includes(space.stageType),
-    )
+    venue.spaces.some((space) => !["none", "unknown"].includes(space.stageType))
   ) {
     roles.push("stage");
   }
@@ -168,10 +137,7 @@ function rolesForVenue(venue: VenueRoleSource): VenueRole[] {
   ) {
     roles.push("meeting");
   }
-  if (
-    hasCategory("exhibition", "gallery") ||
-    hasSpace("exhibition")
-  ) {
+  if (hasCategory("exhibition", "gallery") || hasSpace("exhibition")) {
     roles.push("exhibition");
   }
   if (hasCategory("lodging", "resort", "onsite")) {
@@ -253,21 +219,6 @@ const useCaseLabels: Record<string, string> = {
   setup_teardown: "設営・撤去",
 };
 
-const smallTheaterVerificationLabels: Record<string, string> = {
-  verified_primary: "公式確認済み",
-  primary_partial: "公式一部確認",
-  official_not_found: "公式未発見",
-  ambiguous: "同定保留",
-  blocked: "取得保留",
-};
-
-const smallTheaterOfficialStatusLabels: Record<string, string> = {
-  current: "現行（公式確認）",
-  closed: "閉館（公式確認）",
-  renamed: "改称（公式確認）",
-  unknown: "現行性要確認",
-};
-
 const largeVehicleLabels: Record<string, string> = {
   yes: "可",
   conditional: "条件付き",
@@ -305,8 +256,10 @@ function spaceCapacityLabel(space: VenueSpace) {
     }
     return `最大${yen.format(space.capacityTheater)}席・固定${yen.format(space.capacityFixed)}席`;
   }
-  if (space.capacityTheater !== null) return `最大${yen.format(space.capacityTheater)}席`;
-  if (space.capacityFixed !== null) return `固定${yen.format(space.capacityFixed)}席`;
+  if (space.capacityTheater !== null)
+    return `最大${yen.format(space.capacityTheater)}席`;
+  if (space.capacityFixed !== null)
+    return `固定${yen.format(space.capacityFixed)}席`;
   return "未確認";
 }
 
@@ -451,6 +404,24 @@ function numberParam(params: URLSearchParams, key: string, max: number) {
   return Number.isFinite(value) && value > 0 ? Math.min(value, max) : 0;
 }
 
+// 施設タグと区画タグを合わせて扱う。小劇場は大箱の中の一区画であることがあり、
+// 施設タグだけで判定すると「大ホールを持つ文化会館＝小劇場」になってしまう。
+function venueTags(venue: VenueRecord) {
+  const tags = new Set<string>(venue.tags);
+  venue.spaces.forEach((space) => {
+    space.tags.forEach((tag) => tags.add(tag));
+  });
+  return tags;
+}
+
+const validTags = new Set(["small_theater"]);
+
+const evidenceTierLabels: Record<string, string> = {
+  detailed: "料金確認済み",
+  partial: "料金未確認",
+  ledger_only: "施設情報のみ",
+};
+
 function regionGroupLabel(region: string) {
   if (["甲信越", "北陸", "東海", "中部"].includes(region)) return "中部";
   if (["九州", "沖縄", "九州・沖縄"].includes(region)) return "九州・沖縄";
@@ -460,6 +431,7 @@ function regionGroupLabel(region: string) {
 export function VenueSearch() {
   const [selectedVenueRoles, setSelectedVenueRoles] = useState<VenueRole[]>([]);
   const [selectedPrefectures, setSelectedPrefectures] = useState<string[]>([]);
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [keyword, setKeyword] = useState("");
   const [capacity, setCapacity] = useState(0);
   const [capacityMax, setCapacityMax] = useState(0);
@@ -475,12 +447,6 @@ export function VenueSearch() {
   const [keepUnknown, setKeepUnknown] = useState(false);
   const [sortKey, setSortKey] = useState<SortKey>("evidence");
   const [showAllVenues, setShowAllVenues] = useState(false);
-  const [smallTheaterPrefecture, setSmallTheaterPrefecture] = useState("全国");
-  const [smallTheaterStatus, setSmallTheaterStatus] = useState("all");
-  const [smallTheaterQuery, setSmallTheaterQuery] = useState("");
-  const [smallTheaterCapacity, setSmallTheaterCapacity] = useState(0);
-  const [showAllSmallTheaters, setShowAllSmallTheaters] = useState(false);
-  const [smallTheaters, setSmallTheaters] = useState<SmallTheaterLedgerItem[]>([]);
   const [selectedVenueIds, setSelectedVenueIds] = useState<string[]>([]);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const [regionModalOpen, setRegionModalOpen] = useState(false);
@@ -488,9 +454,6 @@ export function VenueSearch() {
   const [urlReady, setUrlReady] = useState(false);
   const regionTriggerRef = useRef<HTMLButtonElement>(null);
   const regionCloseRef = useRef<HTMLButtonElement>(null);
-  const [smallTheaterLoadState, setSmallTheaterLoadState] = useState<
-    "loading" | "ready" | "failed"
-  >("loading");
 
   useEffect(() => {
     const frame = window.requestAnimationFrame(() => {
@@ -500,17 +463,18 @@ export function VenueSearch() {
         .filter((role): role is VenueRole =>
           validVenueRoles.has(role as VenueRole),
         );
+      const nextTags = (params.get("tags") ?? "")
+        .split(",")
+        .filter((tag) => validTags.has(tag));
       if (
-        nextVenueRoles.length === 0 &&
+        nextTags.length === 0 &&
         (params.get("preset") === "small_theater" ||
           params.get("type") === "small_theater")
       ) {
-        nextVenueRoles.push("event_space", "stage");
+        nextTags.push("small_theater");
       }
-      if (
-        nextVenueRoles.length === 0 &&
-        params.get("preset") === "gymnasium"
-      ) {
+      setSelectedTags(nextTags);
+      if (nextVenueRoles.length === 0 && params.get("preset") === "gymnasium") {
         nextVenueRoles.push("sports");
       }
       const validPrefectures = new Set(
@@ -554,9 +518,7 @@ export function VenueSearch() {
       setCeiling(numberParam(params, "ceiling", 100));
       const feeParam = params.get("fee") as FeeClass | null;
       const priceDayParam = params.get("price_day") as PriceDayType | null;
-      setFeeClass(
-        feeParam && validFeeClasses.has(feeParam) ? feeParam : "all",
-      );
+      setFeeClass(feeParam && validFeeClasses.has(feeParam) ? feeParam : "all");
       setPriceDayType(
         priceDayParam && validPriceDayTypes.has(priceDayParam)
           ? priceDayParam
@@ -580,9 +542,7 @@ export function VenueSearch() {
           ? sortParam
           : "evidence",
       );
-      const validVenueIds = new Set(
-        venueData.venues.map((venue) => venue.id),
-      );
+      const validVenueIds = new Set(venueData.venues.map((venue) => venue.id));
       setSelectedVenueIds(
         (params.get("compare") ?? "")
           .split(",")
@@ -592,26 +552,6 @@ export function VenueSearch() {
       setUrlReady(true);
     });
     return () => window.cancelAnimationFrame(frame);
-  }, []);
-
-  useEffect(() => {
-    let active = true;
-    fetch(smallTheaterLedgerUrl)
-      .then((response) => {
-        if (!response.ok) throw new Error("small theater ledger unavailable");
-        return response.json() as Promise<SmallTheaterLedgerItem[]>;
-      })
-      .then((payload) => {
-        if (!active || !Array.isArray(payload)) return;
-        setSmallTheaters(payload);
-        setSmallTheaterLoadState("ready");
-      })
-      .catch(() => {
-        if (active) setSmallTheaterLoadState("failed");
-      });
-    return () => {
-      active = false;
-    };
   }, []);
 
   useEffect(() => {
@@ -660,285 +600,255 @@ export function VenueSearch() {
       (a, b) => groupOrder.indexOf(a.region) - groupOrder.indexOf(b.region),
     );
   }, []);
-  const smallTheaterPrefectures = useMemo(
-    () =>
-      Array.from(
-        new Set(
-          smallTheaters
-            .map((theater) => theater.indexedPrefecture)
-            .filter((prefecture): prefecture is string => prefecture !== null),
-        ),
-      ).sort((a, b) => a.localeCompare(b, "ja")),
-    [smallTheaters],
-  );
-  const smallTheaterResults = useMemo(() => {
-    const normalized = smallTheaterQuery.trim().toLocaleLowerCase("ja");
-    return [...smallTheaters]
-      .filter(
-        (theater) =>
-          smallTheaterPrefecture === "全国" ||
-          theater.indexedPrefecture === smallTheaterPrefecture,
-      )
-      .filter(
-        (theater) =>
-          smallTheaterStatus === "all" ||
-          theater.verificationStatus === smallTheaterStatus,
-      )
-      .filter(
-        (theater) =>
-          smallTheaterCapacity <= 0 ||
-          (theater.capacity !== null && theater.capacity >= smallTheaterCapacity),
-      )
-      .filter((theater) => {
-        if (!normalized) return true;
-        return [
-          theater.indexName,
-          theater.officialName ?? "",
-          theater.indexedPrefecture ?? "",
-          theater.note ?? "",
-        ]
-          .join(" ")
-          .toLocaleLowerCase("ja")
-          .includes(normalized);
-      })
-      .sort(
-        (a, b) =>
-          Number(b.verificationStatus === "verified_primary") -
-            Number(a.verificationStatus === "verified_primary") ||
-          a.indexName.localeCompare(b.indexName, "ja"),
-      );
-  }, [
-    smallTheaterCapacity,
-    smallTheaters,
-    smallTheaterPrefecture,
-    smallTheaterQuery,
-    smallTheaterStatus,
-  ]);
-  const visibleSmallTheaters = showAllSmallTheaters
-    ? smallTheaterResults
-    : smallTheaterResults.slice(0, 40);
 
-  const results = useMemo(() => {
+  const resultSet = useMemo(() => {
     const searchTerms = keyword
       .trim()
       .toLocaleLowerCase("ja")
       .split(/\s+/)
       .filter(Boolean);
-    return venueData.venues
-      .map((venue) => {
-        const hasSpaceCondition =
-          capacity > 0 ||
-          capacityMax > 0 ||
-          area > 0 ||
-          ceiling > 0 ||
-          fixedStage ||
-          practice;
-        const matchingSpaces = venue.spaces.filter((space) => {
-          const observedCapacity = Math.max(
-            space.capacityTheater ?? -1,
-            space.capacityFixed ?? -1,
+    // 「未確認も残す」は区画の判定内部でも効くため、評価全体を
+    // allowUnknown の関数にして、現在の設定と全緩和の2通りを比べられるようにする。
+    const evaluate = (allowUnknown: boolean) =>
+      venueData.venues
+        .map((venue) => {
+          const hasSpaceCondition =
+            capacity > 0 ||
+            capacityMax > 0 ||
+            area > 0 ||
+            ceiling > 0 ||
+            fixedStage ||
+            practice;
+          const matchingSpaces = venue.spaces.filter((space) => {
+            const observedCapacity = Math.max(
+              space.capacityTheater ?? -1,
+              space.capacityFixed ?? -1,
+            );
+            if (
+              capacity > 0 &&
+              observedCapacity >= 0 &&
+              observedCapacity < capacity
+            ) {
+              return false;
+            }
+            if (capacity > 0 && observedCapacity < 0 && !allowUnknown)
+              return false;
+            if (
+              capacityMax > 0 &&
+              observedCapacity >= 0 &&
+              observedCapacity > capacityMax
+            ) {
+              return false;
+            }
+            if (capacityMax > 0 && observedCapacity < 0 && !allowUnknown) {
+              return false;
+            }
+            if (area > 0 && space.area !== null && space.area < area)
+              return false;
+            if (area > 0 && space.area === null && !allowUnknown) return false;
+            if (
+              ceiling > 0 &&
+              space.ceiling !== null &&
+              space.ceiling < ceiling
+            ) {
+              return false;
+            }
+            if (ceiling > 0 && space.ceiling === null && !allowUnknown)
+              return false;
+            if (
+              fixedStage &&
+              space.stageType !== "fixed" &&
+              !(allowUnknown && space.stageType === "unknown")
+            ) {
+              return false;
+            }
+            if (
+              practice &&
+              space.practiceUse !== "yes" &&
+              space.practiceUse !== "conditional" &&
+              !(allowUnknown && space.practiceUse === "unknown")
+            ) {
+              return false;
+            }
+            return true;
+          });
+          const matchingSpaceIds = new Set(
+            matchingSpaces.map((space) => space.id),
           );
-          if (
-            capacity > 0 &&
-            observedCapacity >= 0 &&
-            observedCapacity < capacity
-          ) {
-            return false;
-          }
-          if (capacity > 0 && observedCapacity < 0 && !keepUnknown) return false;
-          if (
-            capacityMax > 0 &&
-            observedCapacity >= 0 &&
-            observedCapacity > capacityMax
-          ) {
-            return false;
-          }
-          if (capacityMax > 0 && observedCapacity < 0 && !keepUnknown) {
-            return false;
-          }
-          if (area > 0 && space.area !== null && space.area < area) return false;
-          if (area > 0 && space.area === null && !keepUnknown) return false;
-          if (ceiling > 0 && space.ceiling !== null && space.ceiling < ceiling) {
-            return false;
-          }
-          if (ceiling > 0 && space.ceiling === null && !keepUnknown) return false;
-          if (
-            fixedStage &&
-            space.stageType !== "fixed" &&
-            !(keepUnknown && space.stageType === "unknown")
-          ) {
-            return false;
-          }
-          if (
-            practice &&
-            space.practiceUse !== "yes" &&
-            space.practiceUse !== "conditional" &&
-            !(keepUnknown && space.practiceUse === "unknown")
-          ) {
-            return false;
-          }
-          return true;
+          const compatibleDailyPrices = venue.priceObservations
+            .filter(
+              (price) =>
+                price.category === "facility" &&
+                price.unit === "per_day" &&
+                !price.useCase.includes("setup") &&
+                priceMatchesConditions(
+                  price.useCase,
+                  price.dayType,
+                  feeClass,
+                  priceDayType,
+                ) &&
+                (!hasSpaceCondition || matchingSpaceIds.has(price.spaceId)),
+            )
+            .map((price) => ({
+              amount: price.amount,
+              kind: "official_daily" as const,
+            }))
+            .filter(
+              (price): price is { amount: number; kind: "official_daily" } =>
+                price.amount !== null,
+            );
+          const compatibleScenarioPrices = venue.budgetScenarios
+            .filter(
+              (scenario) =>
+                priceMatchesConditions(
+                  scenario.useCase,
+                  scenario.dayType,
+                  feeClass,
+                  priceDayType,
+                ) &&
+                (!hasSpaceCondition || matchingSpaceIds.has(scenario.spaceId)),
+            )
+            .map((scenario) => ({
+              amount: scenario.amount,
+              kind: "derived_scenario" as const,
+              derivationMethod: scenario.derivationMethod,
+            }))
+            .filter(
+              (
+                price,
+              ): price is {
+                amount: number;
+                kind: "derived_scenario";
+                derivationMethod: string;
+              } => price.amount !== null,
+            );
+          const compatiblePrices = [
+            ...compatibleDailyPrices,
+            ...compatibleScenarioPrices,
+          ].sort((a, b) => a.amount - b.amount);
+          const searchPrice = compatiblePrices[0]?.amount ?? null;
+          const hasPriceCondition =
+            feeClass !== "all" || priceDayType !== "all" || maxDailyPrice > 0;
+          return {
+            ...venue,
+            spaceConditionActive: hasSpaceCondition,
+            spaceMatched: matchingSpaces.length > 0,
+            spaceDataMissing: venue.spaces.length === 0,
+            priceConditionActive: hasPriceCondition,
+            priceMatched: searchPrice !== null,
+            priceWithinBudget:
+              maxDailyPrice <= 0 ||
+              searchPrice === null ||
+              searchPrice <= maxDailyPrice,
+            searchPrice,
+            searchPriceKind: compatiblePrices[0]?.kind ?? null,
+            searchPriceDerivation:
+              compatiblePrices[0]?.kind === "derived_scenario"
+                ? compatiblePrices[0].derivationMethod
+                : null,
+          };
+        })
+        .filter(
+          (venue) =>
+            selectedPrefectures.length === 0 ||
+            selectedPrefectures.includes(venue.prefecture),
+        )
+        .filter((venue) => {
+          const venueRoleSet = new Set(rolesForVenue(venue));
+          return selectedVenueRoles.every((role) => venueRoleSet.has(role));
+        })
+        .filter((venue) => {
+          if (searchTerms.length === 0) return true;
+          const searchableText = [
+            venue.name,
+            venue.region,
+            venue.city,
+            venue.prefecture,
+            venue.strengths,
+            venue.cautions,
+            venue.bestSpace?.name ?? "",
+            ...venue.spaces.map((space) => space.name),
+          ]
+            .join(" ")
+            .toLocaleLowerCase("ja");
+          return searchTerms.every((term) => searchableText.includes(term));
+        })
+        .filter((venue) =>
+          selectedTags.every((tag) => venueTags(venue).has(tag)),
+        )
+        .filter(
+          (venue) =>
+            !venue.spaceConditionActive ||
+            venue.spaceMatched ||
+            (venue.spaceDataMissing && allowUnknown),
+        )
+        .filter(
+          (venue) =>
+            !venue.priceConditionActive ||
+            (venue.priceMatched && venue.priceWithinBudget) ||
+            (!venue.priceMatched && allowUnknown),
+        )
+        .filter((venue) => {
+          if (!largeVehicleOnly) return true;
+          const access = venue.operation?.largeVehicleAccess;
+          if (!access || access === "unknown") return allowUnknown;
+          return access === "yes" || access === "conditional";
+        })
+        .filter((venue) => {
+          if (!historicalOnly) return true;
+          return venue.historicalCompletedCount > 0;
         });
-        const matchingSpaceIds = new Set(matchingSpaces.map((space) => space.id));
-        const compatibleDailyPrices = venue.priceObservations
-          .filter(
-            (price) =>
-              price.category === "facility" &&
-              price.unit === "per_day" &&
-              !price.useCase.includes("setup") &&
-              priceMatchesConditions(
-                price.useCase,
-                price.dayType,
-                feeClass,
-                priceDayType,
-              ) &&
-              (!hasSpaceCondition || matchingSpaceIds.has(price.spaceId)),
-          )
-          .map((price) => ({
-            amount: price.amount,
-            kind: "official_daily" as const,
-          }))
-          .filter(
-            (
-              price,
-            ): price is { amount: number; kind: "official_daily" } =>
-              price.amount !== null,
-          );
-        const compatibleScenarioPrices = venue.budgetScenarios
-          .filter(
-            (scenario) =>
-              priceMatchesConditions(
-                scenario.useCase,
-                scenario.dayType,
-                feeClass,
-                priceDayType,
-              ) &&
-              (!hasSpaceCondition || matchingSpaceIds.has(scenario.spaceId)),
-          )
-          .map((scenario) => ({
-            amount: scenario.amount,
-            kind: "derived_scenario" as const,
-            derivationMethod: scenario.derivationMethod,
-          }))
-          .filter(
-            (
-              price,
-            ): price is {
-              amount: number;
-              kind: "derived_scenario";
-              derivationMethod: string;
-            } => price.amount !== null,
-          );
-        const compatiblePrices = [
-          ...compatibleDailyPrices,
-          ...compatibleScenarioPrices,
-        ].sort(
-          (a, b) => a.amount - b.amount,
+
+    const list = [...evaluate(keepUnknown)].sort((a, b) => {
+      if (sortKey === "capacity") {
+        return (
+          (b.maxCapacity ?? -1) - (a.maxCapacity ?? -1) ||
+          a.name.localeCompare(b.name, "ja")
         );
-        const searchPrice = compatiblePrices[0]?.amount ?? null;
-        const hasPriceCondition =
-          feeClass !== "all" || priceDayType !== "all" || maxDailyPrice > 0;
-        return {
-          ...venue,
-          spaceKnownMatch:
-            !hasSpaceCondition ||
-            matchingSpaces.length > 0 ||
-            (venue.spaces.length === 0 && keepUnknown),
-          priceKnownMatch: !hasPriceCondition || searchPrice !== null,
-          priceWithinBudget:
-            maxDailyPrice <= 0 ||
-            searchPrice === null ||
-            searchPrice <= maxDailyPrice,
-          searchPrice,
-          searchPriceKind: compatiblePrices[0]?.kind ?? null,
-          searchPriceDerivation:
-            compatiblePrices[0]?.kind === "derived_scenario"
-              ? compatiblePrices[0].derivationMethod
-              : null,
-        };
-      })
-      .filter(
-        (venue) =>
-          selectedPrefectures.length === 0 ||
-          selectedPrefectures.includes(venue.prefecture),
-      )
-      .filter((venue) => {
-        const venueRoleSet = new Set(rolesForVenue(venue));
-        return selectedVenueRoles.every((role) => venueRoleSet.has(role));
-      })
-      .filter((venue) => {
-        if (searchTerms.length === 0) return true;
-        const searchableText = [
-          venue.name,
-          venue.region,
-          venue.city,
-          venue.prefecture,
-          venue.strengths,
-          venue.cautions,
-          venue.bestSpace?.name ?? "",
-          ...venue.spaces.map((space) => space.name),
-        ]
-          .join(" ")
-          .toLocaleLowerCase("ja");
-        return searchTerms.every((term) => searchableText.includes(term));
-      })
-      .filter((venue) => venue.spaceKnownMatch)
-      .filter(
-        (venue) =>
-          (venue.priceKnownMatch && venue.priceWithinBudget) ||
-          (!venue.priceKnownMatch && keepUnknown),
-      )
-      .filter((venue) => {
-        if (!largeVehicleOnly) return true;
-        const access = venue.operation?.largeVehicleAccess;
-        if (!access || access === "unknown") return keepUnknown;
-        return access === "yes" || access === "conditional";
-      })
-      .filter((venue) => {
-        if (!historicalOnly) return true;
-        return venue.historicalCompletedCount > 0;
-      })
-      .sort((a, b) => {
-        if (sortKey === "capacity") {
-          return (
-            (b.maxCapacity ?? -1) - (a.maxCapacity ?? -1) ||
-            a.name.localeCompare(b.name, "ja")
-          );
-        }
-        if (sortKey === "capacity_small") {
-          return (
-            (a.maxCapacity ?? Number.POSITIVE_INFINITY) -
-              (b.maxCapacity ?? Number.POSITIVE_INFINITY) ||
-            a.name.localeCompare(b.name, "ja")
-          );
-        }
-        if (sortKey === "area") {
-          return (
-            (b.maxArea ?? -1) - (a.maxArea ?? -1) ||
-            a.name.localeCompare(b.name, "ja")
-          );
-        }
-        if (sortKey === "booking") {
-          return (
-            (b.operation?.bookingOpenMonths ?? -1) -
-              (a.operation?.bookingOpenMonths ?? -1) ||
-            a.name.localeCompare(b.name, "ja")
-          );
-        }
-        const aKnown =
-          Number(a.detailCount > 0) +
-          Number(a.priceCount > 0) +
-          Number(a.operationCount > 0) +
-          Number(a.historicalCompletedCount > 0);
-        const bKnown =
-          Number(b.detailCount > 0) +
-          Number(b.priceCount > 0) +
-          Number(b.operationCount > 0) +
-          Number(b.historicalCompletedCount > 0);
-        if (aKnown !== bKnown) return bKnown - aKnown;
-        if (a.fitLevel !== b.fitLevel) return a.fitLevel.localeCompare(b.fitLevel);
-        return a.name.localeCompare(b.name, "ja");
-      });
+      }
+      if (sortKey === "capacity_small") {
+        return (
+          (a.maxCapacity ?? Number.POSITIVE_INFINITY) -
+            (b.maxCapacity ?? Number.POSITIVE_INFINITY) ||
+          a.name.localeCompare(b.name, "ja")
+        );
+      }
+      if (sortKey === "area") {
+        return (
+          (b.maxArea ?? -1) - (a.maxArea ?? -1) ||
+          a.name.localeCompare(b.name, "ja")
+        );
+      }
+      if (sortKey === "booking") {
+        return (
+          (b.operation?.bookingOpenMonths ?? -1) -
+            (a.operation?.bookingOpenMonths ?? -1) ||
+          a.name.localeCompare(b.name, "ja")
+        );
+      }
+      const aKnown =
+        Number(a.detailCount > 0) +
+        Number(a.priceCount > 0) +
+        Number(a.operationCount > 0) +
+        Number(a.historicalCompletedCount > 0);
+      const bKnown =
+        Number(b.detailCount > 0) +
+        Number(b.priceCount > 0) +
+        Number(b.operationCount > 0) +
+        Number(b.historicalCompletedCount > 0);
+      if (aKnown !== bKnown) return bKnown - aKnown;
+      if (a.fitLevel !== b.fitLevel)
+        return a.fitLevel.localeCompare(b.fitLevel);
+      return a.name.localeCompare(b.name, "ja");
+    });
+
+    // 同じ条件で「未確認も残す」にした場合との差が、
+    // 値が未確認であるために表に出てこない候補数。
+    const unknownExcludedCount = keepUnknown
+      ? 0
+      : evaluate(true).length - list.length;
+
+    return { list, unknownExcludedCount };
   }, [
     area,
     capacity,
@@ -954,9 +864,13 @@ export function VenueSearch() {
     priceDayType,
     practice,
     selectedPrefectures,
+    selectedTags,
     selectedVenueRoles,
     sortKey,
   ]);
+
+  const results = resultSet.list;
+  const unknownExcludedCount = resultSet.unknownExcludedCount;
 
   const selectedVenues = useMemo(
     () =>
@@ -976,6 +890,7 @@ export function VenueSearch() {
     if (selectedPrefectures.length) {
       params.set("prefectures", selectedPrefectures.join(","));
     }
+    if (selectedTags.length) params.set("tags", selectedTags.join(","));
     if (keyword.trim()) params.set("q", keyword.trim());
     if (capacity > 0) params.set("min", String(capacity));
     if (capacityMax > 0) params.set("max", String(capacityMax));
@@ -1011,6 +926,7 @@ export function VenueSearch() {
     practice,
     priceDayType,
     selectedPrefectures,
+    selectedTags,
     selectedVenueRoles,
     selectedVenueIds,
     sortKey,
@@ -1071,6 +987,7 @@ export function VenueSearch() {
   function reset() {
     setSelectedVenueRoles([]);
     setSelectedPrefectures([]);
+    setSelectedTags([]);
     setKeyword("");
     setCapacity(0);
     setCapacityMax(0);
@@ -1095,7 +1012,11 @@ export function VenueSearch() {
 
       <header className="site-header site-rail" aria-label="サイト案内">
         <div className="site-header-main">
-          <a className="rail-brand" href="#top" aria-label="会場ものさし ホーム">
+          <a
+            className="rail-brand"
+            href="#top"
+            aria-label="会場ものさし ホーム"
+          >
             <span className="rail-symbol" aria-hidden="true">
               目
             </span>
@@ -1117,10 +1038,6 @@ export function VenueSearch() {
               <span aria-hidden="true">⌕</span>
               条件で探す
             </a>
-            <a href="#small-theater-ledger">
-              <span aria-hidden="true">⌘</span>
-              小劇場台帳
-            </a>
             <a href="#method">
               <span aria-hidden="true">↳</span>
               読み方
@@ -1138,13 +1055,29 @@ export function VenueSearch() {
             <span aria-hidden="true">↗</span>
           </summary>
           <div className="rail-sister-menu" aria-label="姉妹サイト">
-            <a href="https://koubo.art-monosashi.com" target="_blank" rel="noreferrer">
+            <a
+              href="https://koubo.art-monosashi.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               公募ものさし
               <small>koubo.art-monosashi.com</small>
             </a>
-            <a href="https://joseikin.art-monosashi.com" target="_blank" rel="noreferrer">
+            <a
+              href="https://joseikin.art-monosashi.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               助成ものさし
               <small>joseikin.art-monosashi.com</small>
+            </a>
+            <a
+              href="https://mesure.art-monosashi.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              MESURE（海外版）
+              <small>mesure.art-monosashi.com</small>
             </a>
           </div>
         </details>
@@ -1158,7 +1091,8 @@ export function VenueSearch() {
               <span className="edition">{publication.edition}</span>
             </div>
             <div className="masthead-note">
-              最終一次情報観測 {displayDate(venueData.stats.freshness.latestObservedAt)}
+              最終一次情報観測{" "}
+              {displayDate(venueData.stats.freshness.latestObservedAt)}
               <br />
               公開版更新 {displayDate(publication.updatedAt)}
             </div>
@@ -1185,8 +1119,8 @@ export function VenueSearch() {
           <div className="hero-visual">
             <p className="eyebrow">EVENT VENUE FIELD GUIDE</p>
             <h1 id="hero-title">
-              <span className="hero-title-primary">会場を、名前でなく</span>
-              <span className="hero-title-accent">条件で測る。</span>
+              <span className="hero-title-primary">あなたに必要な</span>
+              <span className="hero-title-accent">イベント会場を測る。</span>
             </h1>
             <div className="hero-drawing" aria-hidden="true">
               <span className="drawing-label">SPACE / COST / ACCESS</span>
@@ -1208,628 +1142,716 @@ export function VenueSearch() {
 
         <div className="measure" aria-hidden="true" />
 
-      <section className="workspace" id="search" aria-label="会場検索">
-        <aside className="filters">
-          <h2>条件を置く</h2>
-          <button
-            aria-controls="venue-filter-body"
-            aria-expanded={mobileFiltersOpen}
-            className="mobile-filter-toggle"
-            onClick={() => setMobileFiltersOpen((current) => !current)}
-            type="button"
-          >
-            {mobileFiltersOpen ? "絞り込みを閉じる" : "絞り込みを開く"}
-            <span aria-hidden="true">{mobileFiltersOpen ? "−" : "+"}</span>
-          </button>
-          <p className="filter-caption">
-            数値が未公開の施設を残すかどうかで、検索の厳しさを変えられます。
-          </p>
-
-          <div
-            className="filter-body"
-            data-mobile-open={mobileFiltersOpen}
-            id="venue-filter-body"
-          >
-            <div className="field venue-role-field">
-              <span className="field-label">
-                会場の型
-                <output>
-                  {selectedVenueRoles.length
-                    ? `${selectedVenueRoles.length}件選択`
-                    : "指定なし"}
-                </output>
-              </span>
-              <p className="field-help">
-                複数選択できます。選んだ型をすべて持つ会場を表示します。
-              </p>
-              <div
-                aria-label="会場の型（複数選択）"
-                className="venue-role-tags"
-                role="group"
-              >
-                {venueRoles.map((role) => (
-                  <button
-                    aria-pressed={selectedVenueRoles.includes(role.id)}
-                    className="venue-role-tag"
-                    data-active={selectedVenueRoles.includes(role.id)}
-                    key={role.id}
-                    onClick={() => toggleVenueRole(role.id)}
-                    type="button"
-                  >
-                    {role.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="field prefecture-field">
-              <span className="field-label">
-                地域
-                <output>
-                  {selectedPrefectures.length
-                    ? `${selectedPrefectures.length}件選択`
-                    : "全国"}
-                </output>
-              </span>
-              <p className="field-help">
-                都道府県を複数選び、いずれかにある会場を表示します（OR検索）。
-              </p>
-              <button
-                aria-controls="region-filter-dialog"
-                aria-expanded={regionModalOpen}
-                aria-haspopup="dialog"
-                className="region-modal-trigger"
-                onClick={() => setRegionModalOpen(true)}
-                ref={regionTriggerRef}
-                type="button"
-              >
-                <span>地域を選ぶ</span>
-                <strong>
-                  {selectedPrefectures.length
-                    ? `${selectedPrefectures.length}件選択`
-                    : "全国"}
-                </strong>
-              </button>
-              {selectedPrefectures.length > 0 && (
-                <div
-                  aria-label="選択中の地域"
-                  className="selected-prefecture-summary"
-                >
-                  {selectedPrefectures.slice(0, 3).map((prefecture) => (
-                    <span key={prefecture}>{prefecture}</span>
-                  ))}
-                  {selectedPrefectures.length > 3 && (
-                    <span>ほか{selectedPrefectures.length - 3}件</span>
-                  )}
-                </div>
-              )}
-            </div>
-
-            <label className="field free-search-field">
-              <span className="field-label">フリー検索</span>
-              <span className="field-help">
-                会場名・地域・特徴・貸出区画を横断します。空白区切りで複数語を指定できます。
-              </span>
-              <input
-                type="search"
-                placeholder="例：東京 平土間、駅直結、配信"
-                value={keyword}
-                onChange={(event) => setKeyword(event.target.value)}
-              />
-            </label>
-
-            <section className="filter-section" aria-labelledby="venue-size-filter-title">
-              <div className="filter-section-head">
-                <h3 id="venue-size-filter-title">会場規模</h3>
-                <span>
-                  面積 {venueData.stats.candidateCoverage.area} / {venueData.stats.venues}会場
-                  <br />
-                  収容 {venueData.stats.candidateCoverage.capacity} / {venueData.stats.venues}会場
-                  <br />
-                  天井下限 {venueData.stats.candidateCoverage.ceiling} / {venueData.stats.venues}会場
-                </span>
-              </div>
-              <p className="filter-section-copy">
-                公開値がある貸出区画を、面積・収容人数・確認済みの天井下限で照合します。
-              </p>
-
-              <label className="field compact-field">
-                <span className="field-label">必要な面積</span>
-                <span className="unit-input">
-                  <input
-                    aria-label="最低面積"
-                    inputMode="numeric"
-                    max="10000"
-                    min="0"
-                    placeholder="指定なし"
-                    step="100"
-                    type="number"
-                    value={area || ""}
-                    onChange={(event) =>
-                      setArea(Math.max(0, Number(event.target.value) || 0))
-                    }
-                  />
-                  <span>㎡以上</span>
-                </span>
-              </label>
-
-              <fieldset className="field capacity-range">
-                <legend className="field-label">収容人数</legend>
-                <div className="capacity-range-grid">
-                  <label>
-                    <span>下限</span>
-                    <span className="unit-input">
-                      <input
-                        aria-label="収容人数の下限"
-                        inputMode="numeric"
-                        max="20000"
-                        min="0"
-                        placeholder="指定なし"
-                        step="50"
-                        type="number"
-                        value={capacity || ""}
-                        onChange={(event) => {
-                          const next = Math.max(
-                            0,
-                            Number(event.target.value) || 0,
-                          );
-                          setCapacity(next);
-                          if (capacityMax > 0 && next > capacityMax) {
-                            setCapacityMax(next);
-                          }
-                        }}
-                      />
-                      <span>人以上</span>
-                    </span>
-                  </label>
-                  <label>
-                    <span>上限</span>
-                    <span className="unit-input">
-                      <input
-                        aria-label="収容人数の上限"
-                        inputMode="numeric"
-                        max="20000"
-                        min="0"
-                        placeholder="指定なし"
-                        step="50"
-                        type="number"
-                        value={capacityMax || ""}
-                        onChange={(event) => {
-                          const next = Math.max(
-                            0,
-                            Number(event.target.value) || 0,
-                          );
-                          setCapacityMax(next);
-                          if (next > 0 && capacity > next) {
-                            setCapacity(next);
-                          }
-                        }}
-                      />
-                      <span>人以下</span>
-                    </span>
-                  </label>
-                </div>
-              </fieldset>
-
-              <label className="field compact-field">
-                <span className="field-label">確認済み天井高の下限</span>
-                <span className="field-help">
-                  公式情報から下限・有効高・単一の公表高と判断できた
-                  {venueData.stats.spaceCoverage.ceiling}区画のみ検索します。最高部・中央高・舞台開口は除外しています。
-                </span>
-                <span className="unit-input">
-                  <input
-                    aria-label="確認済み天井高の下限"
-                    inputMode="decimal"
-                    max="100"
-                    min="0"
-                    placeholder="指定なし"
-                    step="0.5"
-                    type="number"
-                    value={ceiling || ""}
-                    onChange={(event) =>
-                      setCeiling(Math.max(0, Number(event.target.value) || 0))
-                    }
-                  />
-                  <span>m以上</span>
-                </span>
-              </label>
-
-              <p className="filter-precision-note">
-                面積・収容人数・天井下限・舞台条件は、同じ貸出区画で判定します。
-              </p>
-
-              <label className="check-field unknown-policy">
-                <input
-                  checked={keepUnknown}
-                  onChange={(event) => setKeepUnknown(event.target.checked)}
-                  type="checkbox"
-                />
-                <span>
-                  未確認の会場も候補に残す
-                  <small>条件一致は未確認のため「要問い合わせ」と表示します。</small>
-                </span>
-              </label>
-            </section>
-
-            <section className="filter-section" aria-labelledby="price-filter-title">
-              <div className="filter-section-head">
-                <h3 id="price-filter-title">料金条件</h3>
-                <span>確認済みの日額・区分合計のみ</span>
-              </div>
-              <p className="filter-section-copy">
-                営利性と曜日を明記した同じ貸出区画の料金で照合します。付帯設備・技術人員・空調等は含まれない場合があります。
-              </p>
-
-              <label className="field compact-field">
-                <span className="field-label">利用区分</span>
-                <select
-                  aria-label="料金の利用区分"
-                  value={feeClass}
-                  onChange={(event) => setFeeClass(event.target.value as FeeClass)}
-                >
-                  <option value="all">指定なし</option>
-                  <option value="nonprofit">非営利・公益目的</option>
-                  <option value="commercial">営利・宣伝目的</option>
-                </select>
-              </label>
-
-              <label className="field compact-field">
-                <span className="field-label">利用日</span>
-                <select
-                  aria-label="料金の利用日"
-                  value={priceDayType}
-                  onChange={(event) =>
-                    setPriceDayType(event.target.value as PriceDayType)
-                  }
-                >
-                  <option value="all">指定なし</option>
-                  <option value="weekday">平日</option>
-                  <option value="weekend_holiday">土日祝</option>
-                </select>
-              </label>
-
-              <label className="field compact-field">
-                <span className="field-label">確認済み日額の上限</span>
-                <span className="unit-input">
-                  <input
-                    aria-label="確認済み日額の上限"
-                    inputMode="numeric"
-                    max="100000000"
-                    min="0"
-                    placeholder="指定なし"
-                    step="10000"
-                    type="number"
-                    value={maxDailyPrice || ""}
-                    onChange={(event) =>
-                      setMaxDailyPrice(
-                        Math.max(0, Number(event.target.value) || 0),
-                      )
-                    }
-                  />
-                  <span>円以下</span>
-                </span>
-              </label>
-            </section>
-
-            <details className="filter-advanced">
-              <summary>
-                設備・利用条件
-                <span>4項目</span>
-              </summary>
-              <div className="filter-advanced-body">
-                <label className="check-field">
-                  <input
-                    checked={fixedStage}
-                    onChange={(event) => setFixedStage(event.target.checked)}
-                    type="checkbox"
-                  />
-                  <span>固定舞台が確認できる</span>
-                </label>
-
-                <label className="check-field">
-                  <input
-                    checked={practice}
-                    onChange={(event) => setPractice(event.target.checked)}
-                    type="checkbox"
-                  />
-                  <span>競技・練習利用が可能または条件付き</span>
-                </label>
-
-                <label className="check-field">
-                  <input
-                    checked={largeVehicleOnly}
-                    onChange={(event) =>
-                      setLargeVehicleOnly(event.target.checked)
-                    }
-                    type="checkbox"
-                  />
-                  <span>大型車搬入が可能または条件付き</span>
-                </label>
-
-                <label className="check-field">
-                  <input
-                    checked={historicalOnly}
-                    onChange={(event) => setHistoricalOnly(event.target.checked)}
-                    type="checkbox"
-                  />
-                  <span>収録大会の開催実績と照合済み</span>
-                </label>
-              </div>
-            </details>
-
-            <button className="reset-button" onClick={reset} type="button">
-              条件をすべて外す
+        <section className="workspace" id="search" aria-label="会場検索">
+          <aside className="filters">
+            <h2>条件を置く</h2>
+            <button
+              aria-controls="venue-filter-body"
+              aria-expanded={mobileFiltersOpen}
+              className="mobile-filter-toggle"
+              onClick={() => setMobileFiltersOpen((current) => !current)}
+              type="button"
+            >
+              {mobileFiltersOpen ? "絞り込みを閉じる" : "絞り込みを開く"}
+              <span aria-hidden="true">{mobileFiltersOpen ? "−" : "+"}</span>
             </button>
-          </div>
-        </aside>
+            <p className="filter-caption">
+              数値が未公開の施設を残すかどうかで、検索の厳しさを変えられます。
+            </p>
 
-        <div className="results" aria-live="polite">
-          <div className="results-head">
-            <div>
-              <p className="eyebrow">MEASURED RESULTS</p>
-              <h2>同じ目盛りで見る</h2>
-            </div>
-            <div className="results-count">
-              <label className="sort-field">
-                <span>並べ替え</span>
-                <select
-                  value={sortKey}
-                  onChange={(event) => setSortKey(event.target.value as SortKey)}
+            <div
+              className="filter-body"
+              data-mobile-open={mobileFiltersOpen}
+              id="venue-filter-body"
+            >
+              <div className="field venue-role-field">
+                <span className="field-label">
+                  会場の型
+                  <output>
+                    {selectedVenueRoles.length
+                      ? `${selectedVenueRoles.length}件選択`
+                      : "指定なし"}
+                  </output>
+                </span>
+                <p className="field-help">
+                  複数選択できます。選んだ型をすべて持つ会場を表示します。
+                </p>
+                <div
+                  aria-label="会場の型（複数選択）"
+                  className="venue-role-tags"
+                  role="group"
                 >
-                  <option value="evidence">観測の厚さ</option>
-                  <option value="capacity">収容が大きい順</option>
-                  <option value="capacity_small">収容が小さい順</option>
-                  <option value="area">面積が大きい順</option>
-                  <option value="booking">予約開始が早い順</option>
-                </select>
-              </label>
-              <span>
-                <strong>{results.length}</strong> / {venueData.stats.venues}施設
-              </span>
-              <button
-                className="share-button"
-                onClick={copyShareUrl}
-                type="button"
-              >
-                条件を共有
-              </button>
-            </div>
-          </div>
-
-          <p aria-live="polite" className="action-message">
-            {actionMessage}
-          </p>
-
-          {selectedVenues.length > 0 && (
-            <section className="comparison-panel" aria-labelledby="comparison-title">
-              <div className="comparison-head">
-                <div>
-                  <p className="eyebrow">SHORTLIST</p>
-                  <h3 id="comparison-title">候補を並べて比較</h3>
-                </div>
-                <span>{selectedVenues.length} / 3施設</span>
-              </div>
-              <div className="comparison-grid">
-                {selectedVenues.map((venue) => (
-                  <article className="comparison-card" key={venue.id}>
+                  {venueRoles.map((role) => (
                     <button
-                      aria-label={`${venue.name}を比較から外す`}
-                      onClick={() => toggleComparison(venue.id)}
+                      aria-pressed={selectedVenueRoles.includes(role.id)}
+                      className="venue-role-tag"
+                      data-active={selectedVenueRoles.includes(role.id)}
+                      key={role.id}
+                      onClick={() => toggleVenueRole(role.id)}
                       type="button"
                     >
-                      ×
+                      {role.label}
                     </button>
-                    <h4>{venue.name}</h4>
-                    <p>{venue.prefecture} {venue.city}</p>
-                    <dl>
-                      <div>
-                        <dt>最大観測面積</dt>
-                        <dd>{numberLabel(venue.maxArea, "㎡")}</dd>
-                      </div>
-                      <div>
-                        <dt>最大観測収容</dt>
-                        <dd>{numberLabel(venue.maxCapacity, "人")}</dd>
-                      </div>
-                      <div>
-                        <dt>最大確認済み天井下限</dt>
-                        <dd>{numberLabel(venue.maxCeiling, "m")}</dd>
-                      </div>
-                      <div>
-                        <dt>候補内最小日額</dt>
-                        <dd>{priceLabel(venue.minDailyFacilityPrice)}</dd>
-                      </div>
-                      <div>
-                        <dt>一次情報観測</dt>
-                        <dd>{displayDate(venue.observedAt)}</dd>
-                      </div>
-                    </dl>
-                    <a href={venue.sourceUrl} rel="noreferrer" target="_blank">
-                      公式情報 ↗
-                    </a>
-                  </article>
-                ))}
+                  ))}
+                </div>
               </div>
-              {selectedVenues.length === 1 && (
-                <p className="comparison-hint">
-                  もう1〜2施設を追加すると違いを横並びで確認できます。
+
+              <div className="field prefecture-field">
+                <span className="field-label">
+                  地域
+                  <output>
+                    {selectedPrefectures.length
+                      ? `${selectedPrefectures.length}件選択`
+                      : "全国"}
+                  </output>
+                </span>
+                <p className="field-help">
+                  都道府県を複数選び、いずれかにある会場を表示します（OR検索）。
                 </p>
-              )}
-            </section>
-          )}
+                <button
+                  aria-controls="region-filter-dialog"
+                  aria-expanded={regionModalOpen}
+                  aria-haspopup="dialog"
+                  className="region-modal-trigger"
+                  onClick={() => setRegionModalOpen(true)}
+                  ref={regionTriggerRef}
+                  type="button"
+                >
+                  <span>地域を選ぶ</span>
+                  <strong>
+                    {selectedPrefectures.length
+                      ? `${selectedPrefectures.length}件選択`
+                      : "全国"}
+                  </strong>
+                </button>
+                {selectedPrefectures.length > 0 && (
+                  <div
+                    aria-label="選択中の地域"
+                    className="selected-prefecture-summary"
+                  >
+                    {selectedPrefectures.slice(0, 3).map((prefecture) => (
+                      <span key={prefecture}>{prefecture}</span>
+                    ))}
+                    {selectedPrefectures.length > 3 && (
+                      <span>ほか{selectedPrefectures.length - 3}件</span>
+                    )}
+                  </div>
+                )}
+              </div>
 
-          {results.length ? (
-            <div className="venue-list">
-              {visibleResults.map((venue, index) => (
-                <article className="venue-card" key={venue.id}>
-                  <div className="rank">{String(index + 1).padStart(2, "0")}</div>
-                  <div className="venue-main">
-                    <div className="venue-title-row">
-                      <div>
-                        <h3 className="venue-title">{venue.name}</h3>
-                        <p className="venue-place">
-                          {venue.prefecture} {venue.city}
-                        </p>
-                        <ul
-                          aria-label={`${venue.name}の会場の型`}
-                          className="venue-category-tags"
-                        >
-                          {rolesForVenue(venue).map((role) => (
-                            <li className="venue-category-tag" key={role}>
-                              {venueRoleLabel(role)}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div className="venue-actions">
-                        <button
-                          aria-pressed={selectedVenueIds.includes(venue.id)}
-                          className="compare-button"
-                          data-selected={selectedVenueIds.includes(venue.id)}
-                          onClick={() => toggleComparison(venue.id)}
-                          type="button"
-                        >
-                          {selectedVenueIds.includes(venue.id)
-                            ? "比較中"
-                            : "比較に追加"}
-                        </button>
-                        <span className="fit-mark">基準 {venue.fitLevel}</span>
-                      </div>
+              <label className="field free-search-field">
+                <span className="field-label">フリー検索</span>
+                <span className="field-help">
+                  会場名・地域・特徴・貸出区画を横断します。空白区切りで複数語を指定できます。
+                </span>
+                <input
+                  type="search"
+                  placeholder="例：東京 平土間、駅直結、配信"
+                  value={keyword}
+                  onChange={(event) => setKeyword(event.target.value)}
+                />
+              </label>
+
+              <section
+                className="filter-section"
+                aria-labelledby="venue-size-filter-title"
+              >
+                <div className="filter-section-head">
+                  <h3 id="venue-size-filter-title">会場規模</h3>
+                  <span>
+                    面積 {venueData.stats.candidateCoverage.area} /{" "}
+                    {venueData.stats.venues}会場
+                    <br />
+                    収容 {venueData.stats.candidateCoverage.capacity} /{" "}
+                    {venueData.stats.venues}会場
+                    <br />
+                    天井下限 {venueData.stats.candidateCoverage.ceiling} /{" "}
+                    {venueData.stats.venues}会場
+                  </span>
+                </div>
+                <p className="filter-section-copy">
+                  公開値がある貸出区画を、面積・収容人数・確認済みの天井下限で照合します。
+                </p>
+
+                <label className="field compact-field">
+                  <span className="field-label">必要な面積</span>
+                  <span className="unit-input">
+                    <input
+                      aria-label="最低面積"
+                      inputMode="numeric"
+                      max="10000"
+                      min="0"
+                      placeholder="指定なし"
+                      step="100"
+                      type="number"
+                      value={area || ""}
+                      onChange={(event) =>
+                        setArea(Math.max(0, Number(event.target.value) || 0))
+                      }
+                    />
+                    <span>㎡以上</span>
+                  </span>
+                </label>
+
+                <fieldset className="field capacity-range">
+                  <legend className="field-label">収容人数</legend>
+                  <div className="capacity-range-grid">
+                    <label>
+                      <span>下限</span>
+                      <span className="unit-input">
+                        <input
+                          aria-label="収容人数の下限"
+                          inputMode="numeric"
+                          max="20000"
+                          min="0"
+                          placeholder="指定なし"
+                          step="50"
+                          type="number"
+                          value={capacity || ""}
+                          onChange={(event) => {
+                            const next = Math.max(
+                              0,
+                              Number(event.target.value) || 0,
+                            );
+                            setCapacity(next);
+                            if (capacityMax > 0 && next > capacityMax) {
+                              setCapacityMax(next);
+                            }
+                          }}
+                        />
+                        <span>人以上</span>
+                      </span>
+                    </label>
+                    <label>
+                      <span>上限</span>
+                      <span className="unit-input">
+                        <input
+                          aria-label="収容人数の上限"
+                          inputMode="numeric"
+                          max="20000"
+                          min="0"
+                          placeholder="指定なし"
+                          step="50"
+                          type="number"
+                          value={capacityMax || ""}
+                          onChange={(event) => {
+                            const next = Math.max(
+                              0,
+                              Number(event.target.value) || 0,
+                            );
+                            setCapacityMax(next);
+                            if (next > 0 && capacity > next) {
+                              setCapacity(next);
+                            }
+                          }}
+                        />
+                        <span>人以下</span>
+                      </span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <label className="field compact-field">
+                  <span className="field-label">確認済み天井高の下限</span>
+                  <span className="field-help">
+                    公式情報から下限・有効高・単一の公表高と判断できた
+                    {venueData.stats.spaceCoverage.ceiling}
+                    区画のみ検索します。最高部・中央高・舞台開口は除外しています。
+                  </span>
+                  <span className="unit-input">
+                    <input
+                      aria-label="確認済み天井高の下限"
+                      inputMode="decimal"
+                      max="100"
+                      min="0"
+                      placeholder="指定なし"
+                      step="0.5"
+                      type="number"
+                      value={ceiling || ""}
+                      onChange={(event) =>
+                        setCeiling(Math.max(0, Number(event.target.value) || 0))
+                      }
+                    />
+                    <span>m以上</span>
+                  </span>
+                </label>
+
+                <label className="check-field">
+                  <input
+                    checked={selectedTags.includes("small_theater")}
+                    onChange={(event) =>
+                      setSelectedTags(
+                        event.target.checked ? ["small_theater"] : [],
+                      )
+                    }
+                    type="checkbox"
+                  />
+                  <span>
+                    小劇場だけを見る
+                    <small>
+                      {`${venueData.stats.smallTheaterTaggedCount}件。大きな施設の中の小劇場は、その区画を持つ施設として出ます。`}
+                    </small>
+                  </span>
+                </label>
+
+                <p className="filter-precision-note">
+                  面積・収容人数・天井下限・舞台条件は、同じ貸出区画で判定します。
+                </p>
+
+                <label className="check-field unknown-policy">
+                  <input
+                    checked={keepUnknown}
+                    onChange={(event) => setKeepUnknown(event.target.checked)}
+                    type="checkbox"
+                  />
+                  <span>
+                    未確認の会場も候補に残す
+                    <small>
+                      条件一致は未確認のため「要問い合わせ」と表示します。
+                    </small>
+                  </span>
+                </label>
+              </section>
+
+              <section
+                className="filter-section"
+                aria-labelledby="price-filter-title"
+              >
+                <div className="filter-section-head">
+                  <h3 id="price-filter-title">料金条件</h3>
+                  <span>確認済みの日額・区分合計のみ</span>
+                </div>
+                <p className="filter-section-copy">
+                  営利性と曜日を明記した同じ貸出区画の料金で照合します。付帯設備・技術人員・空調等は含まれない場合があります。
+                </p>
+
+                <label className="field compact-field">
+                  <span className="field-label">利用区分</span>
+                  <select
+                    aria-label="料金の利用区分"
+                    value={feeClass}
+                    onChange={(event) =>
+                      setFeeClass(event.target.value as FeeClass)
+                    }
+                  >
+                    <option value="all">指定なし</option>
+                    <option value="nonprofit">非営利・公益目的</option>
+                    <option value="commercial">営利・宣伝目的</option>
+                  </select>
+                </label>
+
+                <label className="field compact-field">
+                  <span className="field-label">利用日</span>
+                  <select
+                    aria-label="料金の利用日"
+                    value={priceDayType}
+                    onChange={(event) =>
+                      setPriceDayType(event.target.value as PriceDayType)
+                    }
+                  >
+                    <option value="all">指定なし</option>
+                    <option value="weekday">平日</option>
+                    <option value="weekend_holiday">土日祝</option>
+                  </select>
+                </label>
+
+                <label className="field compact-field">
+                  <span className="field-label">確認済み日額の上限</span>
+                  <span className="unit-input">
+                    <input
+                      aria-label="確認済み日額の上限"
+                      inputMode="numeric"
+                      max="100000000"
+                      min="0"
+                      placeholder="指定なし"
+                      step="10000"
+                      type="number"
+                      value={maxDailyPrice || ""}
+                      onChange={(event) =>
+                        setMaxDailyPrice(
+                          Math.max(0, Number(event.target.value) || 0),
+                        )
+                      }
+                    />
+                    <span>円以下</span>
+                  </span>
+                </label>
+              </section>
+
+              <details className="filter-advanced">
+                <summary>
+                  設備・利用条件
+                  <span>4項目</span>
+                </summary>
+                <div className="filter-advanced-body">
+                  <label className="check-field">
+                    <input
+                      checked={fixedStage}
+                      onChange={(event) => setFixedStage(event.target.checked)}
+                      type="checkbox"
+                    />
+                    <span>固定舞台が確認できる</span>
+                  </label>
+
+                  <label className="check-field">
+                    <input
+                      checked={practice}
+                      onChange={(event) => setPractice(event.target.checked)}
+                      type="checkbox"
+                    />
+                    <span>競技・練習利用が可能または条件付き</span>
+                  </label>
+
+                  <label className="check-field">
+                    <input
+                      checked={largeVehicleOnly}
+                      onChange={(event) =>
+                        setLargeVehicleOnly(event.target.checked)
+                      }
+                      type="checkbox"
+                    />
+                    <span>大型車搬入が可能または条件付き</span>
+                  </label>
+
+                  <label className="check-field">
+                    <input
+                      checked={historicalOnly}
+                      onChange={(event) =>
+                        setHistoricalOnly(event.target.checked)
+                      }
+                      type="checkbox"
+                    />
+                    <span>収録大会の開催実績と照合済み</span>
+                  </label>
+                </div>
+              </details>
+
+              <button className="reset-button" onClick={reset} type="button">
+                条件をすべて外す
+              </button>
+            </div>
+          </aside>
+
+          <div className="results" aria-live="polite">
+            <div className="results-head">
+              <div>
+                <p className="eyebrow">MEASURED RESULTS</p>
+                <h2>同じ目盛りで見る</h2>
+              </div>
+              <div className="results-count">
+                <label className="sort-field">
+                  <span>並べ替え</span>
+                  <select
+                    value={sortKey}
+                    onChange={(event) =>
+                      setSortKey(event.target.value as SortKey)
+                    }
+                  >
+                    <option value="evidence">観測の厚さ</option>
+                    <option value="capacity">収容が大きい順</option>
+                    <option value="capacity_small">収容が小さい順</option>
+                    <option value="area">面積が大きい順</option>
+                    <option value="booking">予約開始が早い順</option>
+                  </select>
+                </label>
+                <span>
+                  <strong>{results.length}</strong> / {venueData.stats.venues}
+                  施設
+                </span>
+                {unknownExcludedCount > 0 ? (
+                  <span className="excluded-note">
+                    値が未確認のため{unknownExcludedCount}
+                    施設が表に出ていません。
+                    <button
+                      className="excluded-note-action"
+                      onClick={() => setKeepUnknown(true)}
+                      type="button"
+                    >
+                      未確認も残す
+                    </button>
+                  </span>
+                ) : null}
+                <button
+                  className="share-button"
+                  onClick={copyShareUrl}
+                  type="button"
+                >
+                  条件を共有
+                </button>
+              </div>
+            </div>
+
+            <p aria-live="polite" className="action-message">
+              {actionMessage}
+            </p>
+
+            {selectedVenues.length > 0 && (
+              <section
+                className="comparison-panel"
+                aria-labelledby="comparison-title"
+              >
+                <div className="comparison-head">
+                  <div>
+                    <p className="eyebrow">SHORTLIST</p>
+                    <h3 id="comparison-title">候補を並べて比較</h3>
+                  </div>
+                  <span>{selectedVenues.length} / 3施設</span>
+                </div>
+                <div className="comparison-grid">
+                  {selectedVenues.map((venue) => (
+                    <article className="comparison-card" key={venue.id}>
+                      <button
+                        aria-label={`${venue.name}を比較から外す`}
+                        onClick={() => toggleComparison(venue.id)}
+                        type="button"
+                      >
+                        ×
+                      </button>
+                      <h4>{venue.name}</h4>
+                      <p>
+                        {venue.prefecture} {venue.city}
+                      </p>
+                      <dl>
+                        <div>
+                          <dt>最大観測面積</dt>
+                          <dd>{numberLabel(venue.maxArea, "㎡")}</dd>
+                        </div>
+                        <div>
+                          <dt>最大観測収容</dt>
+                          <dd>{numberLabel(venue.maxCapacity, "人")}</dd>
+                        </div>
+                        <div>
+                          <dt>最大確認済み天井下限</dt>
+                          <dd>{numberLabel(venue.maxCeiling, "m")}</dd>
+                        </div>
+                        <div>
+                          <dt>候補内最小日額</dt>
+                          <dd>{priceLabel(venue.minDailyFacilityPrice)}</dd>
+                        </div>
+                        <div>
+                          <dt>一次情報観測</dt>
+                          <dd>{displayDate(venue.observedAt)}</dd>
+                        </div>
+                      </dl>
+                      <a
+                        href={venue.sourceUrl}
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        公式情報 ↗
+                      </a>
+                    </article>
+                  ))}
+                </div>
+                {selectedVenues.length === 1 && (
+                  <p className="comparison-hint">
+                    もう1〜2施設を追加すると違いを横並びで確認できます。
+                  </p>
+                )}
+              </section>
+            )}
+
+            {results.length ? (
+              <div className="venue-list">
+                {visibleResults.map((venue, index) => (
+                  <article className="venue-card" key={venue.id}>
+                    <div className="rank">
+                      {String(index + 1).padStart(2, "0")}
                     </div>
+                    <div className="venue-main">
+                      <div className="venue-title-row">
+                        <div>
+                          <h3 className="venue-title">{venue.name}</h3>
+                          <p className="venue-place">
+                            {venue.prefecture} {venue.city}
+                          </p>
+                          <ul
+                            aria-label={`${venue.name}の会場の型`}
+                            className="venue-category-tags"
+                          >
+                            {rolesForVenue(venue).map((role) => (
+                              <li className="venue-category-tag" key={role}>
+                                {venueRoleLabel(role)}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div className="venue-actions">
+                          <button
+                            aria-pressed={selectedVenueIds.includes(venue.id)}
+                            className="compare-button"
+                            data-selected={selectedVenueIds.includes(venue.id)}
+                            onClick={() => toggleComparison(venue.id)}
+                            type="button"
+                          >
+                            {selectedVenueIds.includes(venue.id)
+                              ? "比較中"
+                              : "比較に追加"}
+                          </button>
+                          <span className="fit-mark">
+                            基準 {venue.fitLevel}
+                          </span>
+                          {venue.evidenceTier !== "detailed" ? (
+                            <span
+                              className={`evidence-mark evidence-${venue.evidenceTier}`}
+                              title={
+                                venue.evidenceTier === "ledger_only"
+                                  ? "区画寸法と料金金額は未収録。公式情報へのリンクのみ確認しています"
+                                  : "区画情報はありますが、料金金額は未収録です"
+                              }
+                            >
+                              {evidenceTierLabels[venue.evidenceTier]}
+                            </span>
+                          ) : null}
+                        </div>
+                      </div>
 
-                    <p className="venue-summary">{venue.strengths}</p>
+                      <p className="venue-summary">{venue.strengths}</p>
 
-                    <div className="metrics">
-                      <div className="metric">
-                        <span className="metric-label">代表区画</span>
-                        <span
-                          className={`metric-value ${venue.bestSpace ? "" : "unknown"}`}
-                        >
-                          {venue.bestSpace?.name ?? "区画未調査"}
-                        </span>
+                      <div className="metrics">
+                        <div className="metric">
+                          <span className="metric-label">代表区画</span>
+                          <span
+                            className={`metric-value ${venue.bestSpace ? "" : "unknown"}`}
+                          >
+                            {venue.bestSpace?.name ?? "区画未調査"}
+                          </span>
+                        </div>
+                        <div className="metric">
+                          <span className="metric-label">最大観測面積</span>
+                          <span
+                            className={`metric-value ${venue.maxArea === null ? "unknown" : ""}`}
+                          >
+                            {numberLabel(venue.maxArea, "㎡")}
+                          </span>
+                        </div>
+                        <div className="metric">
+                          <span className="metric-label">最大観測収容</span>
+                          <span
+                            className={`metric-value ${venue.maxCapacity === null ? "unknown" : ""}`}
+                          >
+                            {numberLabel(venue.maxCapacity, "人")}
+                          </span>
+                        </div>
+                        <div className="metric">
+                          <span className="metric-label">
+                            最大確認済み天井下限
+                          </span>
+                          <span
+                            className={`metric-value ${venue.maxCeiling === null ? "unknown" : ""}`}
+                          >
+                            {numberLabel(venue.maxCeiling, "m")}
+                          </span>
+                        </div>
+                        <div className="metric">
+                          <span className="metric-label">
+                            確認済み日額の最小値
+                          </span>
+                          <span
+                            className={`metric-value ${venue.searchPrice === null ? "unknown" : ""}`}
+                          >
+                            {priceLabel(venue.searchPrice)}
+                            {venue.searchPriceKind === "derived_scenario" && (
+                              <small>
+                                {derivationLabels[
+                                  venue.searchPriceDerivation ?? ""
+                                ] ?? "参考日額"}
+                              </small>
+                            )}
+                          </span>
+                        </div>
                       </div>
-                      <div className="metric">
-                        <span className="metric-label">最大観測面積</span>
-                        <span
-                          className={`metric-value ${venue.maxArea === null ? "unknown" : ""}`}
-                        >
-                          {numberLabel(venue.maxArea, "㎡")}
-                        </span>
-                      </div>
-                      <div className="metric">
-                        <span className="metric-label">最大観測収容</span>
-                        <span
-                          className={`metric-value ${venue.maxCapacity === null ? "unknown" : ""}`}
-                        >
-                          {numberLabel(venue.maxCapacity, "人")}
-                        </span>
-                      </div>
-                      <div className="metric">
-                        <span className="metric-label">最大確認済み天井下限</span>
-                        <span
-                          className={`metric-value ${venue.maxCeiling === null ? "unknown" : ""}`}
-                        >
-                          {numberLabel(venue.maxCeiling, "m")}
-                        </span>
-                      </div>
-                      <div className="metric">
-                        <span className="metric-label">確認済み日額の最小値</span>
-                        <span
-                          className={`metric-value ${venue.searchPrice === null ? "unknown" : ""}`}
-                        >
-                          {priceLabel(venue.searchPrice)}
-                          {venue.searchPriceKind === "derived_scenario" && (
-                            <small>
-                              {derivationLabels[
-                                venue.searchPriceDerivation ?? ""
-                              ] ?? "参考日額"}
-                            </small>
+
+                      <div className="venue-foot">
+                        <div className="status-line">
+                          <span className="status">一次情報あり</span>
+                          <span
+                            className={`status freshness ${observationAge(venue.observedAt)}`}
+                          >
+                            {observationLabel(venue.observedAt)}
+                          </span>
+                          {venue.detailCount === 0 && (
+                            <span className="status warn">区画値 未観測</span>
                           )}
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="venue-foot">
-                      <div className="status-line">
-                        <span className="status">一次情報あり</span>
-                        <span
-                          className={`status freshness ${observationAge(venue.observedAt)}`}
-                        >
-                          {observationLabel(venue.observedAt)}
-                        </span>
-                        {venue.detailCount === 0 && (
-                          <span className="status warn">区画値 未観測</span>
-                        )}
-                        {venue.priceCount === 0 && (
-                          <span className="status warn">料金 未観測</span>
-                        )}
-                        {venue.priceCount > 0 && (
-                          <span className="status warn">付帯費は別確認</span>
-                        )}
-                        {venue.historicalCompletedCount > 0 && (
-                          <span className="status">
-                            過去実績 {venue.historicalCompletedCount}件
-                            {venue.historicalPlannedCount > 0
-                              ? ` ＋予定${venue.historicalPlannedCount}件`
-                              : ""}
-                          </span>
-                        )}
-                        {venue.detailCount > 1 && (
-                          <span className="status warn">数値は別区画を含む</span>
-                        )}
-                        {venue.maxCeiling === null && venue.ceilingReferenceCount > 0 && (
-                          <span className="status warn">
-                            天井参考値 {venue.ceilingReferenceCount}区画・意味を精査中
-                          </span>
-                        )}
-                        {venue.operation?.largeVehicleAccess && (
-                          <span className="status">
-                            大型搬入{" "}
-                            {largeVehicleLabels[
-                              venue.operation.largeVehicleAccess
-                            ] ?? venue.operation.largeVehicleAccess}
-                          </span>
-                        )}
-                      </div>
-                      <div className="venue-links">
-                        <a
-                          className="source-link"
-                          href={venue.sourceUrl}
-                          rel="noreferrer"
-                          target="_blank"
-                        >
-                          公式情報を確認 ↗
-                        </a>
-                        {venue.officialLinks.map((link) => (
+                          {venue.priceCount === 0 && (
+                            <span className="status warn">料金 未観測</span>
+                          )}
+                          {venue.priceCount > 0 && (
+                            <span className="status warn">付帯費は別確認</span>
+                          )}
+                          {venue.historicalCompletedCount > 0 && (
+                            <span className="status">
+                              過去実績 {venue.historicalCompletedCount}件
+                              {venue.historicalPlannedCount > 0
+                                ? ` ＋予定${venue.historicalPlannedCount}件`
+                                : ""}
+                            </span>
+                          )}
+                          {venue.detailCount > 1 && (
+                            <span className="status warn">
+                              数値は別区画を含む
+                            </span>
+                          )}
+                          {venue.maxCeiling === null &&
+                            venue.ceilingReferenceCount > 0 && (
+                              <span className="status warn">
+                                天井参考値 {venue.ceilingReferenceCount}
+                                区画・意味を精査中
+                              </span>
+                            )}
+                          {venue.operation?.largeVehicleAccess && (
+                            <span className="status">
+                              大型搬入{" "}
+                              {largeVehicleLabels[
+                                venue.operation.largeVehicleAccess
+                              ] ?? venue.operation.largeVehicleAccess}
+                            </span>
+                          )}
+                        </div>
+                        <div className="venue-links">
                           <a
-                            key={link.url}
                             className="source-link"
-                            href={link.url}
+                            href={venue.sourceUrl}
                             rel="noreferrer"
                             target="_blank"
                           >
-                            公式情報（{link.label}）↗
+                            公式情報を確認 ↗
                           </a>
-                        ))}
-                        {venue.websiteUrl && (
-                          <a
-                            className="source-link"
-                            href={venue.websiteUrl}
-                            rel="noreferrer"
-                            target="_blank"
-                          >
-                            ウェブサイト ↗
-                          </a>
-                        )}
+                          {venue.officialLinks.map((link) => (
+                            <a
+                              key={link.url}
+                              className="source-link"
+                              href={link.url}
+                              rel="noreferrer"
+                              target="_blank"
+                            >
+                              公式情報（{link.label}）↗
+                            </a>
+                          ))}
+                          {venue.websiteUrl && (
+                            <a
+                              className="source-link"
+                              href={venue.websiteUrl}
+                              rel="noreferrer"
+                              target="_blank"
+                            >
+                              ウェブサイト ↗
+                            </a>
+                          )}
+                        </div>
                       </div>
-                    </div>
 
-                    <details className="evidence-drawer space-drawer">
+                      <details className="evidence-drawer space-drawer">
                         <summary>
                           <span>区画ごとの情報を見る</span>
                           <span className="drawer-count">
                             {venue.spaces.length}区画 / 天井検索対象
-                            {venue.spaces.filter((space) => space.ceiling !== null).length}区画
+                            {
+                              venue.spaces.filter(
+                                (space) => space.ceiling !== null,
+                              ).length
+                            }
+                            区画
                           </span>
                         </summary>
                         <div className="price-table-wrap">
@@ -1859,7 +1881,8 @@ export function VenueSearch() {
                                       <td>
                                         <strong>{space.name}</strong>
                                         <small>
-                                          {spaceTypeLabels[space.type] ?? space.type}
+                                          {spaceTypeLabels[space.type] ??
+                                            space.type}
                                         </small>
                                       </td>
                                       <td className="amount">
@@ -1870,14 +1893,22 @@ export function VenueSearch() {
                                         {height.value}
                                         <small>{height.kind}</small>
                                       </td>
-                                      <td className={`amount ${price.known ? "" : "unknown"}`}>
+                                      <td
+                                        className={`amount ${price.known ? "" : "unknown"}`}
+                                      >
                                         {price.value}
                                         <small>{price.note}</small>
                                       </td>
                                       <td>
-                                        <small>{space.note ?? "補足情報は要確認"}</small>
                                         <small>
-                                          <a href={space.sourceUrl} rel="noreferrer" target="_blank">
+                                          {space.note ?? "補足情報は要確認"}
+                                        </small>
+                                        <small>
+                                          <a
+                                            href={space.sourceUrl}
+                                            rel="noreferrer"
+                                            target="_blank"
+                                          >
                                             区画の公式情報 ↗
                                           </a>
                                         </small>
@@ -1896,9 +1927,15 @@ export function VenueSearch() {
                                   <td className="amount unknown">要確認</td>
                                   <td className="amount unknown">要確認</td>
                                   <td>
-                                    <small>公式施設案内・図面・料金表を要確認</small>
                                     <small>
-                                      <a href={venue.sourceUrl} rel="noreferrer" target="_blank">
+                                      公式施設案内・図面・料金表を要確認
+                                    </small>
+                                    <small>
+                                      <a
+                                        href={venue.sourceUrl}
+                                        rel="noreferrer"
+                                        target="_blank"
+                                      >
                                         施設の公式情報 ↗
                                       </a>
                                     </small>
@@ -1910,7 +1947,7 @@ export function VenueSearch() {
                         </div>
                       </details>
 
-                    <details className="evidence-drawer">
+                      <details className="evidence-drawer">
                         <summary>
                           <span>観測した料金・運用を確認</span>
                           <span className="drawer-count">
@@ -1920,8 +1957,8 @@ export function VenueSearch() {
                           </span>
                         </summary>
 
-                        {(venue.priceObservations.length > 0 ||
-                          venue.budgetScenarios.length > 0) ? (
+                        {venue.priceObservations.length > 0 ||
+                        venue.budgetScenarios.length > 0 ? (
                           <div className="price-table-wrap">
                             <table className="price-table">
                               <thead>
@@ -1959,7 +1996,10 @@ export function VenueSearch() {
                                       <small>
                                         {useCaseLabels[price.useCase] ??
                                           price.useCase}{" "}
-                                        · {dayTypeLabels[price.dayType] ?? price.dayType} / {price.timeBand}
+                                        ·{" "}
+                                        {dayTypeLabels[price.dayType] ??
+                                          price.dayType}{" "}
+                                        / {price.timeBand}
                                       </small>
                                     </td>
                                     <td>{price.exclusions || "記載なし"}</td>
@@ -1990,7 +2030,9 @@ export function VenueSearch() {
                                     <td>
                                       {scenario.label}
                                       <small>
-                                        {dayTypeLabels[scenario.dayType] ?? scenario.dayType} / {scenario.timeSpan}
+                                        {dayTypeLabels[scenario.dayType] ??
+                                          scenario.dayType}{" "}
+                                        / {scenario.timeSpan}
                                         {" · "}
                                         {scenario.componentPriceIds
                                           .map(
@@ -2016,513 +2058,377 @@ export function VenueSearch() {
                         )}
 
                         <div className="operation-grid">
-                            <div>
-                              <span>駅・徒歩</span>
-                              <strong>
-                                {textOrConfirm(venue.operation?.station)}
-                                {venue.operation?.walkMinutes !== null &&
-                                venue.operation?.walkMinutes !== undefined
-                                  ? `　約${venue.operation.walkMinutes}分`
-                                  : ""}
-                              </strong>
-                            </div>
-                            <div>
-                              <span>空港・広域交通</span>
-                              <strong>
-                                {textOrConfirm(venue.operation?.airportAccess)}
-                              </strong>
-                            </div>
-                            <div>
-                              <span>駐車</span>
-                              <strong>
-                                {venue.operation?.parkingSpaces !== null &&
-                                venue.operation?.parkingSpaces !== undefined
-                                  ? `${yen.format(venue.operation.parkingSpaces)}台`
-                                  : "要確認"}
-                              </strong>
-                            </div>
-                            <div>
-                              <span>予約開始</span>
-                              <strong>
-                                {venue.operation?.bookingOpenMonths !== null &&
-                                venue.operation?.bookingOpenMonths !== undefined
-                                  ? `${venue.operation.bookingOpenMonths}か月前`
-                                  : "区画・用途別に要確認"}
-                              </strong>
-                            </div>
-                            <div>
-                              <span>搬入</span>
-                              <strong>
-                                {textOrConfirm(venue.operation?.loadingAccess)}
-                              </strong>
-                            </div>
-                            <div>
-                              <span>通信</span>
-                              <strong>
-                                {textOrConfirm(venue.operation?.networkPolicy)}
-                              </strong>
-                            </div>
+                          <div>
+                            <span>駅・徒歩</span>
+                            <strong>
+                              {textOrConfirm(venue.operation?.station)}
+                              {venue.operation?.walkMinutes !== null &&
+                              venue.operation?.walkMinutes !== undefined
+                                ? `　約${venue.operation.walkMinutes}分`
+                                : ""}
+                            </strong>
                           </div>
+                          <div>
+                            <span>空港・広域交通</span>
+                            <strong>
+                              {textOrConfirm(venue.operation?.airportAccess)}
+                            </strong>
+                          </div>
+                          <div>
+                            <span>駐車</span>
+                            <strong>
+                              {venue.operation?.parkingSpaces !== null &&
+                              venue.operation?.parkingSpaces !== undefined
+                                ? `${yen.format(venue.operation.parkingSpaces)}台`
+                                : "要確認"}
+                            </strong>
+                          </div>
+                          <div>
+                            <span>予約開始</span>
+                            <strong>
+                              {venue.operation?.bookingOpenMonths !== null &&
+                              venue.operation?.bookingOpenMonths !== undefined
+                                ? `${venue.operation.bookingOpenMonths}か月前`
+                                : "区画・用途別に要確認"}
+                            </strong>
+                          </div>
+                          <div>
+                            <span>搬入</span>
+                            <strong>
+                              {textOrConfirm(venue.operation?.loadingAccess)}
+                            </strong>
+                          </div>
+                          <div>
+                            <span>通信</span>
+                            <strong>
+                              {textOrConfirm(venue.operation?.networkPolicy)}
+                            </strong>
+                          </div>
+                        </div>
                       </details>
-                  </div>
-                </article>
-              ))}
-              {results.length > 40 && (
-                <button
-                  className="venue-more"
-                  onClick={() => setShowAllVenues((current) => !current)}
-                  type="button"
-                >
-                  {showAllVenues
-                    ? "先頭40施設に戻す"
-                    : `残り${results.length - 40}施設も表示`}
-                </button>
-              )}
-            </div>
-          ) : (
-            <div className="empty">
-              <h3>この条件では候補が出ませんでした</h3>
-              <p>
-                「未確認の会場も候補に残す」をオンにするか、面積・収容人数の条件を少し広げてください。
-              </p>
-            </div>
-          )}
-        </div>
-      </section>
-
-      <details
-        className="archive-section archive-disclosure"
-        id="small-theater-ledger"
-        aria-labelledby="small-theater-ledger-title"
-      >
-        <summary className="archive-summary">
-          <span className="archive-summary-heading">
-            <span className="eyebrow">SMALL THEATER RESEARCH LEDGER</span>
-            <span
-              aria-level={2}
-              className="section-title archive-summary-title"
-              id="small-theater-ledger-title"
-              role="heading"
-            >
-              <span aria-hidden="true" className="section-title-index">03</span>
-              <span>小劇場台帳から探す</span>
-            </span>
-          </span>
-          <span aria-hidden="true" className="archive-summary-action">
-            <span className="archive-summary-open">開く ＋</span>
-            <span className="archive-summary-close">閉じる −</span>
-          </span>
-        </summary>
-
-        <div className="archive-disclosure-content">
-          <div className="archive-head archive-disclosure-intro">
-            <p>
-              594件を候補発見情報と公式確認情報に分けて検索します。客席数・面積・料金・アクセス・利用条件は、公式URLがある行だけに表示します。
-              索引に載っていても、現行性や公式情報を確認できない行は、その状態のまま残します。
-            </p>
-            <div className="archive-total">
-              <strong>
-                {smallTheaterLoadState === "ready"
-                  ? smallTheaterResults.length
-                  : "—"}
-              </strong>
-              <span> / {venueData.stats.smallTheaterCensus.total}件</span>
-            </div>
-          </div>
-
-          <div className="archive-controls">
-          <label className="field">
-            <span className="field-label">索引上の都道府県</span>
-            <select
-              value={smallTheaterPrefecture}
-              onChange={(event) => {
-                setSmallTheaterPrefecture(event.target.value);
-                setShowAllSmallTheaters(false);
-              }}
-            >
-              <option value="全国">全国</option>
-              {smallTheaterPrefectures.map((prefecture) => (
-                <option key={prefecture} value={prefecture}>
-                  {prefecture}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="field">
-            <span className="field-label">確認状態</span>
-            <select
-              value={smallTheaterStatus}
-              onChange={(event) => {
-                setSmallTheaterStatus(event.target.value);
-                setShowAllSmallTheaters(false);
-              }}
-            >
-              <option value="all">すべて</option>
-              {Object.entries(smallTheaterVerificationLabels).map(
-                ([value, label]) => (
-                  <option key={value} value={value}>
-                    {label}
-                  </option>
-                ),
-              )}
-            </select>
-          </label>
-          <label className="field">
-            <span className="field-label">公式確認済みの最低客席数</span>
-            <input
-              min="0"
-              placeholder="例：80"
-              type="number"
-              value={smallTheaterCapacity || ""}
-              onChange={(event) => {
-                setSmallTheaterCapacity(Number(event.target.value) || 0);
-                setShowAllSmallTheaters(false);
-              }}
-            />
-          </label>
-          <label className="field">
-            <span className="field-label">劇場名・メモ</span>
-            <input
-              type="search"
-              placeholder="例：ブラックボックス、横浜、ダンス"
-              value={smallTheaterQuery}
-              onChange={(event) => {
-                setSmallTheaterQuery(event.target.value);
-                setShowAllSmallTheaters(false);
-              }}
-            />
-          </label>
-          </div>
-
-          <div className="archive-table-wrap" aria-live="polite">
-          <table className="archive-table">
-            <thead>
-              <tr>
-                <th>劇場</th>
-                <th>索引上の地域</th>
-                <th>公式確認済みの規模</th>
-                <th>確認状態</th>
-                <th>一次情報</th>
-              </tr>
-            </thead>
-            <tbody>
-              {visibleSmallTheaters.map((theater) => {
-                const verificationLabel =
-                  smallTheaterVerificationLabels[theater.verificationStatus] ??
-                  theater.verificationStatus;
-                const officialStatusLabel = theater.officialStatus
-                  ? (smallTheaterOfficialStatusLabels[theater.officialStatus] ??
-                    theater.officialStatus)
-                  : null;
-                return (
-                  <tr key={theater.id}>
-                    <td>
-                      <strong>{theater.officialName ?? theater.indexName}</strong>
-                      {theater.officialName &&
-                        theater.officialName !== theater.indexName && (
-                          <small>索引名：{theater.indexName}</small>
-                        )}
-                      {theater.observedAt && (
-                        <small className={`observation-date ${observationAge(theater.observedAt)}`}>
-                          公式確認日：{theater.observedAt}
-                          {observationAge(theater.observedAt) === "stale"
-                            ? "・再確認推奨"
-                            : ""}
-                        </small>
-                      )}
-                    </td>
-                    <td>{theater.indexedPrefecture ?? "索引記載なし"}</td>
-                    <td>
-                      <strong>{numberLabel(theater.capacity, "席")}</strong>
-                      <small>面積：{numberLabel(theater.area, "㎡")}</small>
-                    </td>
-                    <td>
-                      <span
-                        className={`archive-status ${
-                          theater.verificationStatus === "verified_primary"
-                            ? ""
-                            : "unverified"
-                        }`}
-                      >
-                        {verificationLabel}
-                      </span>
-                      {officialStatusLabel && <small>{officialStatusLabel}</small>}
-                    </td>
-                    <td>
-                      {theater.officialUrl ? (
-                        <a
-                          href={theater.officialUrl}
-                          rel="noreferrer"
-                          target="_blank"
-                        >
-                          公式 ↗
-                        </a>
-                      ) : (
-                        <span>公式URL未確認</span>
-                      )}
-                      {theater.priceUrl && (
-                        <small>
-                          <a href={theater.priceUrl} rel="noreferrer" target="_blank">
-                            料金 ↗
-                          </a>
-                        </small>
-                      )}
-                      {theater.accessUrl && (
-                        <small>
-                          <a href={theater.accessUrl} rel="noreferrer" target="_blank">
-                            アクセス ↗
-                          </a>
-                        </small>
-                      )}
-                      {theater.conditionsUrl && (
-                        <small>
-                          <a
-                            href={theater.conditionsUrl}
-                            rel="noreferrer"
-                            target="_blank"
-                          >
-                            利用条件 ↗
-                          </a>
-                        </small>
-                      )}
-                      <small>
-                        <a href={theater.indexUrl} rel="noreferrer" target="_blank">
-                          索引 ↗
-                        </a>
-                      </small>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-          {smallTheaterLoadState === "loading" && (
-            <div className="archive-empty">台帳を読み込んでいます。</div>
-          )}
-          {smallTheaterLoadState === "failed" && (
-            <div className="archive-empty">
-              台帳を読み込めませんでした。<a href={smallTheaterCsvUrl}>CSVを直接開く</a>
-            </div>
-          )}
-          {smallTheaterLoadState === "ready" &&
-            smallTheaterResults.length === 0 && (
-            <div className="archive-empty">一致する小劇場はありません。</div>
-          )}
-          </div>
-
-          {smallTheaterLoadState === "ready" &&
-            smallTheaterResults.length > 40 && (
-            <button
-              className="archive-more"
-              type="button"
-              onClick={() => setShowAllSmallTheaters((current) => !current)}
-            >
-              {showAllSmallTheaters
-                ? "先頭40件に戻す"
-                : `残り${smallTheaterResults.length - 40}件も表示`}
-            </button>
-          )}
-        </div>
-      </details>
-
-      <section className="updates-section" id="updates" aria-labelledby="updates-title">
-        <div className="updates-copy">
-          <p className="eyebrow">PUBLICATION NOTES</p>
-          <h2 className="section-title" id="updates-title">
-            <span aria-hidden="true" className="section-title-index">04</span>
-            <span>更新と訂正</span>
-          </h2>
-          <p>
-            公開情報は観測時点の記録です。料金改定、改称、閉館、施設条件の変更を見つけた場合は、
-            その内容が確認できる公式ページと一緒に訂正候補を送れます。
-          </p>
-          <div className="updates-actions">
-            <a href={publication.correctionUrl} rel="noreferrer" target="_blank">
-              訂正候補を送る ↗
-            </a>
-            <a href={publication.repositoryUrl} rel="noreferrer" target="_blank">
-              調査データを見る ↗
-            </a>
-          </div>
-          <small>
-            送信先はGitHub Issuesです。氏名・電話番号などの個人情報は記載せず、公開済みの一次情報URLを添えてください。
-          </small>
-        </div>
-        <ol className="changelog" aria-label="更新履歴">
-          {publication.changelog.map((entry) => (
-            <li key={entry.date}>
-              <time dateTime={entry.date}>{displayDate(entry.date)}</time>
-              <div>
-                <strong>{entry.title}</strong>
-                <p>{entry.detail}</p>
+                    </div>
+                  </article>
+                ))}
+                {results.length > 40 && (
+                  <button
+                    className="venue-more"
+                    onClick={() => setShowAllVenues((current) => !current)}
+                    type="button"
+                  >
+                    {showAllVenues
+                      ? "先頭40施設に戻す"
+                      : `残り${results.length - 40}施設も表示`}
+                  </button>
+                )}
               </div>
-            </li>
-          ))}
-        </ol>
-      </section>
-
-      <section
-        className="method-note"
-        id="method"
-        aria-label="検索結果の読み方"
-      >
-        <div className="method-inner">
-          <div className="method-item">
-            <strong>01　0円にしない</strong>
-            <p>
-              未公開の冷暖房・警備・清掃・設営費は、無料ではなく未確認として残しています。
-            </p>
-          </div>
-          <div className="method-item">
-            <strong>02　点数で隠さない</strong>
-            <p>
-              条件一致、要問い合わせ、条件外を分け、総合点だけで候補を落としません。
-            </p>
-          </div>
-          <div className="method-item">
-            <strong>03　会場セットで考える</strong>
-            <p>
-              JJF型では練習空間と舞台空間が別施設になる場合もあるため、将来は徒歩圏の組合せも検索します。
-            </p>
-          </div>
-          <div className="method-item">
-            <strong>04　候補発見と確認を分ける</strong>
-            <p>
-              LaSens等の索引で小劇場を見つけ、面積・客席・料金は各劇場や運営団体の公式情報へ戻って確認します。
-              現在の594件の確認台帳は、CSVとして公開しています。
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="freshness-strip" aria-label="データの鮮度と公開状態">
-        <div>
-          <span>LAST OBSERVED</span>
-          <strong>{displayDate(venueData.stats.freshness.latestObservedAt)}</strong>
-          <small>収録一次情報の最終観測日</small>
-        </div>
-        <div>
-          <span>VENUE OBSERVATIONS</span>
-          <strong>{yen.format(venueData.stats.freshness.venueObservationCount)}</strong>
-          <small>区画・料金・運用・参考額の観測</small>
-        </div>
-        <div>
-          <span>SMALL THEATER DATES</span>
-          <strong>
-            {yen.format(venueData.stats.freshness.smallTheaterObservationCount)}
-          </strong>
-          <small>公式確認日を記録した小劇場</small>
-        </div>
-        <div>
-          <span>PUBLIC EDITION</span>
-          <strong>{displayDate(publication.updatedAt)}</strong>
-          <small>サイト更新日。空き状況の保証日ではありません</small>
-        </div>
-      </section>
-
-      {regionModalOpen && (
-        <div
-          className="region-modal-backdrop"
-          onMouseDown={(event) => {
-            if (event.target === event.currentTarget) setRegionModalOpen(false);
-          }}
-        >
-          <section
-            aria-labelledby="region-filter-title"
-            aria-modal="true"
-            className="region-modal"
-            id="region-filter-dialog"
-            role="dialog"
-          >
-            <header className="region-modal-head">
-              <div>
-                <p className="eyebrow">REGION FILTER</p>
-                <h2 id="region-filter-title">地域を選ぶ</h2>
+            ) : (
+              <div className="empty">
+                <h3>この条件では候補が出ませんでした</h3>
                 <p>
-                  複数選択はOR検索です。選んだ都道府県のいずれかにある会場を表示します。
+                  「未確認の会場も候補に残す」をオンにするか、面積・収容人数の条件を少し広げてください。
                 </p>
               </div>
-              <button
-                aria-label="地域選択を閉じる"
-                className="region-modal-close"
-                onClick={() => setRegionModalOpen(false)}
-                ref={regionCloseRef}
-                type="button"
-              >
-                ×
-              </button>
-            </header>
+            )}
+          </div>
+        </section>
 
-            <div className="region-modal-body">
-              <button
-                aria-pressed={selectedPrefectures.length === 0}
-                className="prefecture-tag prefecture-all"
-                data-active={selectedPrefectures.length === 0}
-                onClick={() => setSelectedPrefectures([])}
-                type="button"
+        <section
+          className="updates-section"
+          id="updates"
+          aria-labelledby="updates-title"
+        >
+          <div className="updates-copy">
+            <p className="eyebrow">PUBLICATION NOTES</p>
+            <h2 className="section-title" id="updates-title">
+              <span aria-hidden="true" className="section-title-index">
+                04
+              </span>
+              <span>更新と訂正</span>
+            </h2>
+            <p>
+              公開情報は観測時点の記録です。料金改定、改称、閉館、施設条件の変更を見つけた場合は、
+              その内容が確認できる公式ページと一緒に訂正候補を送れます。
+            </p>
+            <div className="updates-actions">
+              <a
+                href={publication.correctionUrl}
+                rel="noreferrer"
+                target="_blank"
               >
-                全国
-              </button>
-              <div
-                aria-label="地域（都道府県・複数選択）"
-                className="prefecture-groups"
+                訂正候補を送る ↗
+              </a>
+              <a
+                href={publication.repositoryUrl}
+                rel="noreferrer"
+                target="_blank"
               >
-                {prefectureGroups.map((group) => (
-                  <div className="prefecture-group" key={group.region}>
-                    <span className="prefecture-group-label">
-                      {group.region}
-                    </span>
-                    <div
-                      aria-label={`${group.region}の都道府県`}
-                      className="prefecture-tags"
-                      role="group"
-                    >
-                      {group.prefectures.map((prefecture) => (
-                        <button
-                          aria-pressed={selectedPrefectures.includes(prefecture)}
-                          className="prefecture-tag"
-                          data-active={selectedPrefectures.includes(prefecture)}
-                          key={prefecture}
-                          onClick={() => togglePrefecture(prefecture)}
-                          type="button"
-                        >
-                          {prefecture}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
+                調査データを見る ↗
+              </a>
             </div>
+            <small>
+              送信先はGitHub
+              Issuesです。氏名・電話番号などの個人情報は記載せず、公開済みの一次情報URLを添えてください。
+            </small>
+          </div>
+          <ol className="changelog" aria-label="更新履歴">
+            {publication.changelog.map((entry) => (
+              <li key={entry.date}>
+                <time dateTime={entry.date}>{displayDate(entry.date)}</time>
+                <div>
+                  <strong>{entry.title}</strong>
+                  <p>{entry.detail}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
 
-            <footer className="region-modal-actions">
-              <button
-                className="region-modal-clear"
-                onClick={() => setSelectedPrefectures([])}
-                type="button"
-              >
-                全国に戻す
-              </button>
-              <button
-                className="region-modal-apply"
-                onClick={() => setRegionModalOpen(false)}
-                type="button"
-              >
-                選択を反映
-              </button>
-            </footer>
-          </section>
-        </div>
-      )}
+        <section
+          className="method-note"
+          id="method"
+          aria-label="検索結果の読み方"
+        >
+          <div className="method-inner">
+            <div className="method-item">
+              <strong>01　0円にしない</strong>
+              <p>
+                未公開の冷暖房・警備・清掃・設営費は、無料ではなく未確認として残しています。
+              </p>
+            </div>
+            <div className="method-item">
+              <strong>02　点数で隠さない</strong>
+              <p>
+                条件一致、要問い合わせ、条件外を分け、総合点だけで候補を落としません。
+              </p>
+            </div>
+            <div className="method-item">
+              <strong>03　会場セットで考える</strong>
+              <p>
+                JJF型では練習空間と舞台空間が別施設になる場合もあるため、将来は徒歩圏の組合せも検索します。
+              </p>
+            </div>
+            <div className="method-item">
+              <strong>04　候補発見と確認を分ける</strong>
+              <p>
+                LaSens等の索引で小劇場を見つけ、面積・客席・料金は各劇場や運営団体の公式情報へ戻って確認します。
+                公式確認が済み現在も運営している施設だけを候補に入れ、閉館が確認できたものは含めません。
+              </p>
+            </div>
+          </div>
+        </section>
 
-      <footer className="site-footer">
-        <div className="site-footer-inner">
-          <span>会場ものさし — {publication.edition}</span>
-          <span>
-            開催可否、空き状況、正式見積は各施設への確認が必要です
-          </span>
-        </div>
-      </footer>
+        <section
+          className="freshness-strip"
+          aria-label="データの鮮度と公開状態"
+        >
+          <div>
+            <span>LAST OBSERVED</span>
+            <strong>
+              {displayDate(venueData.stats.freshness.latestObservedAt)}
+            </strong>
+            <small>収録一次情報の最終観測日</small>
+          </div>
+          <div>
+            <span>VENUE OBSERVATIONS</span>
+            <strong>
+              {yen.format(venueData.stats.freshness.venueObservationCount)}
+            </strong>
+            <small>区画・料金・運用・参考額の観測</small>
+          </div>
+          <div>
+            <span>SMALL THEATERS</span>
+            <strong>
+              {yen.format(venueData.stats.smallTheaterTaggedCount)}
+            </strong>
+            <small>小劇場タグを付けた候補</small>
+          </div>
+          <div>
+            <span>PUBLIC EDITION</span>
+            <strong>{displayDate(publication.updatedAt)}</strong>
+            <small>サイト更新日。空き状況の保証日ではありません</small>
+          </div>
+        </section>
+
+        {regionModalOpen && (
+          <div
+            className="region-modal-backdrop"
+            onMouseDown={(event) => {
+              if (event.target === event.currentTarget)
+                setRegionModalOpen(false);
+            }}
+          >
+            <section
+              aria-labelledby="region-filter-title"
+              aria-modal="true"
+              className="region-modal"
+              id="region-filter-dialog"
+              role="dialog"
+            >
+              <header className="region-modal-head">
+                <div>
+                  <p className="eyebrow">REGION FILTER</p>
+                  <h2 id="region-filter-title">地域を選ぶ</h2>
+                  <p>
+                    複数選択はOR検索です。選んだ都道府県のいずれかにある会場を表示します。
+                  </p>
+                </div>
+                <button
+                  aria-label="地域選択を閉じる"
+                  className="region-modal-close"
+                  onClick={() => setRegionModalOpen(false)}
+                  ref={regionCloseRef}
+                  type="button"
+                >
+                  ×
+                </button>
+              </header>
+
+              <div className="region-modal-body">
+                <button
+                  aria-pressed={selectedPrefectures.length === 0}
+                  className="prefecture-tag prefecture-all"
+                  data-active={selectedPrefectures.length === 0}
+                  onClick={() => setSelectedPrefectures([])}
+                  type="button"
+                >
+                  全国
+                </button>
+                <div
+                  aria-label="地域（都道府県・複数選択）"
+                  className="prefecture-groups"
+                >
+                  {prefectureGroups.map((group) => (
+                    <div className="prefecture-group" key={group.region}>
+                      <span className="prefecture-group-label">
+                        {group.region}
+                      </span>
+                      <div
+                        aria-label={`${group.region}の都道府県`}
+                        className="prefecture-tags"
+                        role="group"
+                      >
+                        {group.prefectures.map((prefecture) => (
+                          <button
+                            aria-pressed={selectedPrefectures.includes(
+                              prefecture,
+                            )}
+                            className="prefecture-tag"
+                            data-active={selectedPrefectures.includes(
+                              prefecture,
+                            )}
+                            key={prefecture}
+                            onClick={() => togglePrefecture(prefecture)}
+                            type="button"
+                          >
+                            {prefecture}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <footer className="region-modal-actions">
+                <button
+                  className="region-modal-clear"
+                  onClick={() => setSelectedPrefectures([])}
+                  type="button"
+                >
+                  全国に戻す
+                </button>
+                <button
+                  className="region-modal-apply"
+                  onClick={() => setRegionModalOpen(false)}
+                  type="button"
+                >
+                  選択を反映
+                </button>
+              </footer>
+            </section>
+          </div>
+        )}
+
+        <footer className="site-footer">
+          <nav className="series" aria-label="ものさしシリーズ">
+            <div className="series-in">
+              <p className="series-head">
+                <span className="series-title">ものさしシリーズ</span>
+                <span className="series-lede">
+                  名前や印象ではなく、条件と根拠で比べる。
+                </span>
+              </p>
+              <ul className="series-list">
+                <li>
+                  <a
+                    className="series-card"
+                    href="https://koubo.art-monosashi.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="series-name">
+                      身体芸術・公募ものさし
+                      <span className="series-arrow" aria-hidden="true">
+                        ↗
+                      </span>
+                    </span>
+                    <span className="series-desc">
+                      出演・出展・滞在制作の公募を、お金の向きつきで探す
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="series-card"
+                    href="https://joseikin.art-monosashi.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="series-name">
+                      助成ものさし
+                      <span className="series-arrow" aria-hidden="true">
+                        ↗
+                      </span>
+                    </span>
+                    <span className="series-desc">
+                      文化芸術の助成金を、対象・締切の根拠つきで探す
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <span className="series-card is-current" aria-current="page">
+                    <span className="series-name">
+                      会場ものさし
+                      <span className="series-here">表示中</span>
+                    </span>
+                    <span className="series-desc">
+                      全国のイベント会場を、面積・客席・料金で見比べる
+                    </span>
+                  </span>
+                </li>
+              </ul>
+              <p className="series-abroad">
+                <a
+                  href="https://mesure.art-monosashi.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  MESURE（海外版）
+                  <span className="series-arrow" aria-hidden="true">
+                    ↗
+                  </span>
+                </a>
+                <span>
+                  カナダ・米国の公募と助成を扱う姉妹サイト。仏語主表示（英語・日本語に切替可）。
+                </span>
+              </p>
+            </div>
+          </nav>
+          <div className="site-footer-inner">
+            <span>会場ものさし — {publication.edition}</span>
+            <span>開催可否、空き状況、正式見積は各施設への確認が必要です</span>
+          </div>
+        </footer>
       </div>
     </main>
   );
