@@ -129,6 +129,7 @@ const [
   historicalVenueAliases,
   budgetScenarios,
   venueWebsites,
+  urlAudit,
 ] = await Promise.all([
   load("candidate-venues.csv"),
   load("venue-details.csv"),
@@ -138,6 +139,24 @@ const [
   load("historical-venue-aliases.csv"),
   load("budget-scenarios.csv"),
   load("venue-websites.csv"),
+  load("url-audit.csv"),
+]);
+
+// 出典URLの到達結果。開けない出典を「更新情報がありません」として画面に出すために使う。
+const urlCheckStatusByUrl = new Map(
+  urlAudit.map((row) => [row.url, row.check_status]),
+);
+const urlAuditCheckedAt =
+  urlAudit
+    .map((row) => (row.checked_at ?? "").slice(0, 10))
+    .filter((value) => /^\d{4}-\d{2}-\d{2}$/.test(value))
+    .sort()
+    .at(-1) ?? null;
+const unreachableStatuses = new Set([
+  "client_error",
+  "server_error",
+  "network_error",
+  "timeout",
 ]);
 
 const websitesByCandidateId = new Map();
@@ -292,6 +311,8 @@ const venues = candidates.map((candidate) => {
     strengths: candidate.verified_public_facts,
     cautions: candidate.inference_or_risk,
     sourceUrl: candidate.official_url,
+    verificationStatus: candidate.verification_status,
+    sourceCheckStatus: urlCheckStatusByUrl.get(candidate.official_url) ?? null,
     tags: (candidate.tags ?? "").split("|").filter(Boolean),
     sourceIndex: candidate.source_index || null,
     evidenceTier,
@@ -469,6 +490,12 @@ const payload = (
       freshness,
       // 検索側と同じ判定にする。施設タグだけで数えると、
       // 大きな施設の中の小劇場区画を持つ候補が抜けて件数が食い違う。
+      urlAuditCheckedAt,
+      unreachableSourceCount: venues.filter(
+        (venue) =>
+          venue.sourceCheckStatus !== null &&
+          unreachableStatuses.has(venue.sourceCheckStatus),
+      ).length,
       smallTheaterTaggedCount: venues.filter(
         (venue) =>
           venue.tags.includes("small_theater") ||

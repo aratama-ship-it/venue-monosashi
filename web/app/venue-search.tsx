@@ -422,6 +422,22 @@ const evidenceTierLabels: Record<string, string> = {
   ledger_only: "施設情報のみ",
 };
 
+// 出典URLが監査時点で開けなかった会場。掲載値そのものは過去の観測として残すが、
+// 「一次情報あり」とは表示しない。
+const unreachableSourceStatuses = new Set([
+  "client_error",
+  "server_error",
+  "network_error",
+  "timeout",
+]);
+
+function sourceUnreachable(venue: VenueRecord) {
+  return (
+    venue.sourceCheckStatus !== null &&
+    unreachableSourceStatuses.has(venue.sourceCheckStatus)
+  );
+}
+
 function regionGroupLabel(region: string) {
   if (["甲信越", "北陸", "東海", "中部"].includes(region)) return "中部";
   if (["九州", "沖縄", "九州・沖縄"].includes(region)) return "九州・沖縄";
@@ -1764,7 +1780,26 @@ export function VenueSearch() {
 
                       <div className="venue-foot">
                         <div className="status-line">
-                          <span className="status">一次情報あり</span>
+                          {sourceUnreachable(venue) ? (
+                            <span
+                              className="status warn"
+                              title={`出典の公式ページを${displayDate(
+                                venueData.stats.urlAuditCheckedAt,
+                              )}時点で開けませんでした。掲載値は過去の観測であり、最新の料金・空き状況は施設へ直接ご確認ください`}
+                            >
+                              更新情報がありません
+                            </span>
+                          ) : (
+                            <span className="status">一次情報あり</span>
+                          )}
+                          {venue.verificationStatus === "needs_check" && (
+                            <span
+                              className="status warn"
+                              title="休館・改修・掲載値の再取得など、確認が必要な事項が残っています"
+                            >
+                              要確認
+                            </span>
+                          )}
                           <span
                             className={`status freshness ${observationAge(venue.observedAt)}`}
                           >
@@ -2212,6 +2247,8 @@ export function VenueSearch() {
               <p>
                 LaSens等の索引で小劇場を見つけ、面積・客席・料金は各劇場や運営団体の公式情報へ戻って確認します。
                 公式確認が済み現在も運営している施設だけを候補に入れ、閉館が確認できたものは含めません。
+                出典の公式ページは定期的に開き直し、開けなくなっていた会場には「更新情報がありません」と表示します。
+                掲載値は消さずに観測日とともに残すので、いつ時点の情報かを見たうえで施設へご確認ください。
               </p>
             </div>
           </div>
