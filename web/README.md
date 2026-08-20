@@ -6,7 +6,7 @@
 
 - JJF型、国内ヨーヨー大会型、世界大会型、ディアボロ型、けん玉大会型、小劇場型のプリセット
 - 都道府県、キーワード、最低・最大収容人数、最低天井高
-- 小劇場・ブラックボックスの会場タイプ
+- 小劇場タグでの絞り込み（365件）と、出典が開けない会場の「更新情報がありません」表示
 - 確認済み施設基本料の上限
 - 数値が未公開の施設を「要問い合わせ」として候補に残すか
 - 検索条件を含む共有URLと最大3施設の比較
@@ -38,16 +38,16 @@ node --test tests/rendered-html.test.mjs
 
 ## 状態
 
-- ChatGPT Sitesで一般公開。`art-monosashi.com`配下への移行は未実施
+- ChatGPT Sitesで一般公開。独自ドメイン https://venue.art-monosashi.com/ で配信中
 - 空き状況、予約可否、正式見積は未確認
-- 収録一次情報の最終観測日は2026-08-04
-- 公開版の更新日は2026-08-05
+- 収録一次情報の最終観測日は2026-08-20
+- 公開版の更新日は2026-08-20
 
 ## シリーズ運用
 
 - GitHub: `aratama-ship-it/venue-monosashi`
-- 現在の段階: `PUBLIC_PREVIEW`
-- 公開確認先: ChatGPT Sites
+- 現在の段階: `PUBLIC`
+- 公開確認先: https://venue.art-monosashi.com/ （配信は `git push sites main`。手順は `docs/DEPLOYMENT.md`）
 - シリーズ台帳: `aratama-ship-it/monosashi-series`
 
 GitHubへのpushと`art-monosashi.com`配下への移行は分けて扱います。独自ドメイン・DNS変更は、開発者の明示確認後に行います。

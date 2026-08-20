@@ -6,20 +6,27 @@ the repository-root `dist/` is not the current Venue Monosashi application.
 Before publishing, run `npm run validate` from the repository root. The Sites
 archive must be created from `web/dist/` with `web/.openai/hosting.json`.
 
-## web/dist はビルド成果物であり、Gitでは追跡しない（2026-08-20 決定）
+## web/dist は配信物そのものであり、Gitで追跡する
 
-`web/dist/` は `npm run build` が毎回作り直す成果物で、`.gitignore` の対象である。
-配布アーカイブは、その時点でビルドし直した `web/dist/` から作る。Git上のコピーを
-配布に使う経路は無く、CIも `npm test` の中で自前にビルドする。
+`sites` リモート（ChatGPT Sites）へpushしたリポジトリの内容がそのまま配信される。
+プラットフォームが最初に作った雛形リポジトリにも `web/dist/`（`web/dist/.openai/hosting.json`
+を含む）が入っており、**ビルド成果物をコミットしていないと配信されるアプリが無くなる。**
 
-以前は `Rebuild web/dist for deploy` のように成果物をコミットしていたが、
-`.gitignore` に `/web/dist/` が入った後は、既に追跡済みのファイルだけが残り、
-新しいハッシュ名のファイルは追加できない状態になっていた。この状態でコミットすると、
-**削除と更新だけが記録されて配布物が壊れる。** そのため 2026-08-20 に
-`git rm -r --cached web/dist` で追跡を外した（ローカルのファイルはそのまま）。
+`.gitignore` に `/web/dist/` があるのは、日常の作業で誤ってコミットしないための保険である。
+配信時は `git add -f web/dist` で明示的に追加する。
 
-デプロイ手順:
+2026-08-20 に一度 `git rm -r --cached web/dist` で追跡を外したが、これは誤りだった
+（`docs/DEPLOYMENT.md` とCIしか見ておらず、`sites` リモートの実体を確認していなかった）。
+同日中に元へ戻している。
+
+## 手順
 
 1. `npm run validate`（監査・lint・テスト）
 2. `npm --prefix web run build`
-3. できた `web/dist/` と `web/.openai/hosting.json` からSitesアーカイブを作る
+3. `git add -f web/dist` してコミットする
+4. `git push origin main`（GitHub。CIが通ることを確認）
+5. `git push sites main`（**これが配信**。ChatGPT Sitesが受け取って公開する）
+6. 公開URL https://venue.art-monosashi.com/ で版表記・件数・主要検索を確認する
+
+`sites` へのpushは対話的な資格情報の入力を伴うため、エージェントからは実行できない。
+直近の配信は 2026-08-19 20:46（390d3cf）。
