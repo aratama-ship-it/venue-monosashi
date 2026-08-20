@@ -290036,7 +290036,7 @@
       "fitLevel": "B",
       "strengths": "公式予約予定ページで継続する公演予定、1年前からの仮予約、正式予約とキャンセル料の条件を確認。公式客席数・面積・料金・独立したアクセス案内は確認できず空欄",
       "cautions": "小劇場台帳からの統合。料金は公式料金表URLのみ確認で金額は未構造化。空き状況・利用条件は要確認",
-      "sourceUrl": "https://sendard.jp/qst/yotei.html",
+      "sourceUrl": "http://sendard.jp/qst/yotei.html",
       "tags": [
         "small_theater"
       ],
@@ -290044,8 +290044,8 @@
       "evidenceTier": "ledger_only",
       "priceUrl": null,
       "accessUrl": null,
-      "conditionsUrl": "https://sendard.jp/qst/yotei.html",
-      "websiteUrl": "https://sendard.jp/",
+      "conditionsUrl": "http://sendard.jp/qst/yotei.html",
+      "websiteUrl": "http://sendard.jp/",
       "officialLinks": [],
       "observedAt": "2026-08-04",
       "detailCount": 0,
@@ -292001,16 +292001,16 @@
       "fitLevel": "B",
       "strengths": "運営会社公式サイトで2026年2月の両国・Air studio公演、会場名・住所、JR両国駅西口徒歩1分等のアクセスを確認。貸館料金・利用条件・客席・面積の公式公開値は未確認のため空欄",
       "cautions": "小劇場台帳からの統合。料金は公式料金表URLのみ確認で金額は未構造化。空き状況・利用条件は要確認",
-      "sourceUrl": "https://www.airstudio.jp/company.html",
+      "sourceUrl": "http://www.airstudio.jp/company.html",
       "tags": [
         "small_theater"
       ],
       "sourceIndex": "lasens",
       "evidenceTier": "ledger_only",
       "priceUrl": null,
-      "accessUrl": "https://www.airstudio.jp/mobile/studiomap.html",
+      "accessUrl": "http://www.airstudio.jp/mobile/studiomap.html",
       "conditionsUrl": null,
-      "websiteUrl": "https://www.airstudio.jp/",
+      "websiteUrl": "http://www.airstudio.jp/",
       "officialLinks": [],
       "observedAt": "2026-08-04",
       "detailCount": 0,
@@ -293321,7 +293321,7 @@
       "fitLevel": "B",
       "strengths": "運営施設公式サイトで147席、舞台128㎡・客席117㎡、料金、利用手引き、2026年4月～9月利用予約抽選、2026年度公演、アクセスを確認。単一面積欄では舞台と客席を合算せず空欄とした。貸室ページ本文の予約期限表示は2025年3月末のままのため最新予約PDFを優先",
       "cautions": "小劇場台帳からの統合。料金は公式料金表URLのみ確認で金額は未構造化。空き状況・利用条件は要確認",
-      "sourceUrl": "https://www.doll-museum.jp/%E8%B2%B8%E5%AE%A4%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85",
+      "sourceUrl": "https://www.doll-museum.jp/rental-room",
       "tags": [
         "small_theater"
       ],
@@ -293716,16 +293716,16 @@
       "fitLevel": "B",
       "strengths": "運営者公式で固定17席とベンチ7席の舞台形式約24席、折り畳み椅子追加時28〜30席、約40平方メートル、貸出手順とキャンセル条件を確認。公式主催者情報で2026年公演も確認し、LaSensの26席は転記していない",
       "cautions": "小劇場台帳からの統合。料金は公式料金表URLのみ確認で金額は未構造化。空き状況・利用条件は要確認",
-      "sourceUrl": "https://tokyocinemaunion.jp/special/rental2024/",
+      "sourceUrl": "http://tokyocinemaunion.jp/special/rental2024/",
       "tags": [
         "small_theater"
       ],
       "sourceIndex": "lasens",
       "evidenceTier": "partial",
-      "priceUrl": "https://tokyocinemaunion.jp/special/rental2024/",
-      "accessUrl": "https://tokyocinemaunion.jp/2016/03/27/access/",
-      "conditionsUrl": "https://tokyocinemaunion.jp/special/rental2024/",
-      "websiteUrl": "https://tokyocinemaunion.jp/",
+      "priceUrl": "http://tokyocinemaunion.jp/special/rental2024/",
+      "accessUrl": "http://tokyocinemaunion.jp/2016/03/27/access/",
+      "conditionsUrl": "http://tokyocinemaunion.jp/special/rental2024/",
+      "websiteUrl": "http://tokyocinemaunion.jp/",
       "officialLinks": [],
       "observedAt": "2026-07-31",
       "detailCount": 1,
@@ -293765,7 +293765,7 @@
           "capacityFixed": 24,
           "stageType": "",
           "practiceUse": "",
-          "sourceUrl": "https://tokyocinemaunion.jp/special/rental2024/",
+          "sourceUrl": "http://tokyocinemaunion.jp/special/rental2024/",
           "observedAt": "2026-07-31",
           "note": "小劇場台帳から統合。天井高・搬入・舞台寸法は未確認"
         }
@@ -293926,15 +293926,15 @@
       "fitLevel": "B",
       "strengths": "施設公式でひな壇100席、ロールバック可能、貸館料金・条件、アクセスと2026年公演を確認。料金ページは2019年9月施行表記のため予約時の現行確認が必要",
       "cautions": "小劇場台帳からの統合。料金は公式料金表URLのみ確認で金額は未構造化。空き状況・利用条件は要確認",
-      "sourceUrl": "https://www.a-to-kobe.jp/",
+      "sourceUrl": "http://www.a-to-kobe.jp/",
       "tags": [
         "small_theater"
       ],
       "sourceIndex": "lasens",
       "evidenceTier": "partial",
-      "priceUrl": "https://www.a-to-kobe.jp/rent2",
-      "accessUrl": "https://www.a-to-kobe.jp/access",
-      "conditionsUrl": "https://www.a-to-kobe.jp/rent2",
+      "priceUrl": "http://www.a-to-kobe.jp/rent2",
+      "accessUrl": "http://www.a-to-kobe.jp/access",
+      "conditionsUrl": "http://www.a-to-kobe.jp/rent2",
       "websiteUrl": null,
       "officialLinks": [],
       "observedAt": "2026-07-31",
@@ -293975,7 +293975,7 @@
           "capacityFixed": 100,
           "stageType": "",
           "practiceUse": "",
-          "sourceUrl": "https://www.a-to-kobe.jp/",
+          "sourceUrl": "http://www.a-to-kobe.jp/",
           "observedAt": "2026-07-31",
           "note": "小劇場台帳から統合。天井高・搬入・舞台寸法は未確認"
         }
@@ -296456,7 +296456,7 @@
       "fitLevel": "B",
       "strengths": "施設公式で現行施設、定員84名、2025年の主催公演案内と料金改定告知、拠点劇団公式で2026年時点の活動拠点・所在地を確認。現行の料金表、面積、詳しいアクセス、利用条件は公開確認できず空欄とし、LaSensの60席は転記していない",
       "cautions": "小劇場台帳からの統合。料金は公式料金表URLのみ確認で金額は未構造化。空き状況・利用条件は要確認",
-      "sourceUrl": "https://plaza-kantoukan.jp/",
+      "sourceUrl": "http://plaza-kantoukan.jp/",
       "tags": [
         "small_theater"
       ],
@@ -296505,7 +296505,7 @@
           "capacityFixed": 84,
           "stageType": "",
           "practiceUse": "",
-          "sourceUrl": "https://plaza-kantoukan.jp/",
+          "sourceUrl": "http://plaza-kantoukan.jp/",
           "observedAt": "2026-07-31",
           "note": "小劇場台帳から統合。天井高・搬入・舞台寸法は未確認"
         }
@@ -300510,7 +300510,7 @@
       "category": "small_theater",
       "fitLevel": "B",
       "strengths": "豊島区公式の2025観光ガイドが劇場・ホールとして同名・同住所・電話を現行掲載し、区公式の文化施策資料で112席を確認。旧施設公式Geocitiesは終了案内へ転送されるため料金・利用条件は空欄。LaSensの閉館表示は採用していない",
-      "cautions": "小劇場台帳からの統合。料金は公式料金表URLのみ確認で金額は未構造化。空き状況・利用条件は要確認",
+      "cautions": "小劇場台帳からの統合。根拠にしていた豊島区の案内PDFが2026-08-20時点で404のため、現行の公式一次情報を再取得するまで要確認とする。料金・空き状況・利用条件は未確認",
       "sourceUrl": "https://www.city.toshima.lg.jp/documents/2608/guruttotoshima2025.pdf",
       "tags": [
         "small_theater"
@@ -305838,16 +305838,16 @@
       "fitLevel": "B",
       "strengths": "運営会社公式で同住所・約10m×6mのフリースペース・客席構成により約90名・南阿佐ヶ谷駅徒歩5分・用途を確認し運営公式ブログの現行問い合わせ更新も確認。ブログ見出しの約50人との表記差があるため構成確認が必要",
       "cautions": "小劇場台帳からの統合。料金は公式料金表URLのみ確認で金額は未構造化。空き状況・利用条件は要確認",
-      "sourceUrl": "https://vector7.info/about.html",
+      "sourceUrl": "http://vector7.info/about.html",
       "tags": [
         "small_theater"
       ],
       "sourceIndex": "lasens",
       "evidenceTier": "partial",
       "priceUrl": null,
-      "accessUrl": "https://vector7.info/about.html",
-      "conditionsUrl": "https://vector7.info/about.html",
-      "websiteUrl": "https://vector7.info/",
+      "accessUrl": "http://vector7.info/about.html",
+      "conditionsUrl": "http://vector7.info/about.html",
+      "websiteUrl": "http://vector7.info/",
       "officialLinks": [],
       "observedAt": "2026-08-01",
       "detailCount": 1,
@@ -305887,7 +305887,7 @@
           "capacityFixed": 90,
           "stageType": "",
           "practiceUse": "",
-          "sourceUrl": "https://vector7.info/about.html",
+          "sourceUrl": "http://vector7.info/about.html",
           "observedAt": "2026-08-01",
           "note": "小劇場台帳から統合。天井高・搬入・舞台寸法は未確認"
         }
@@ -309007,7 +309007,7 @@
       "fitLevel": "B",
       "strengths": "劇場公式サイトが現行の劇場として情報を掲載。客席・面積・料金・アクセス・利用条件は確認できる公式資料を得られず空欄",
       "cautions": "小劇場台帳からの統合。料金は公式料金表URLのみ確認で金額は未構造化。空き状況・利用条件は要確認",
-      "sourceUrl": "https://tricolore-theater.com/",
+      "sourceUrl": "http://tricolore-theater.com/",
       "tags": [
         "small_theater"
       ],

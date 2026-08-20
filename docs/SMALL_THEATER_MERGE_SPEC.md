@@ -294,3 +294,23 @@ t-minerva.com、halfmoonhall.com、wanekaze.com/forest。
 構文解析は再帰的でスタックを使い切るが、JSONは `JSON.parse` で読まれるため起きない。
 本番ビルド・SSRテスト・実ブラウザ表示はいずれも変更前後で通っている。
 JSONは差分が読めるよう2スペース整形で書き出す。
+
+## 追記: 統合後のURL監査（2026-08-20）
+
+`npm run audit-urls` を3,551URLに対して実行した。到達3,338、client_error 98、
+network_error 88、access_limited 14、timeout 8、server_error 5。
+
+小劇場タグを持つ候補365件に紐づく不達は13件で、内訳と対処は次のとおり。
+
+- **HTTPS証明書の検証に失敗する7サイト**（plaza-kantoukan.jp、sendard.jp、
+  tokyocinemaunion.jp、tricolore-theater.com、vector7.info、www.a-to-kobe.jp、
+  www.airstudio.jp）。いずれもhttpでは200を返す。台帳の記録が当初からhttpsだったもので、
+  到達確認のうえhttpへ直した（候補17セル・区画4セル・台帳17セル）。監査のhttp-only警告は28件になる。
+- **あかいくつ劇場**: 公式の貸室ページが `/貸室のご案内` から `/rental-room` へ移転していた。
+  移転先に施設名の記載があることを確認して差し替えた。
+- **アートスペースサンライズホール（CAND-1704）**: 根拠にしていた豊島区の案内PDFが404。
+  2026年版・2024年版の同名パスも404で、公式の代替が見つからない。二次情報（チケット販売、
+  索引サイト）で代用せず、候補と区画を `needs_check` にして再取得待ちとした。
+- **早稲田クローバースタジオ**: 403（`access_limited`）。ホスティング側のbot遮断であり、
+  リンク切れとは区別して扱う。
+- 再実行で200を返した3件（tenbusukan.jp、ezuko.com、zhall.or.jp）は一時的な失敗として据え置く。
