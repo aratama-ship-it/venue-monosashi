@@ -311,7 +311,9 @@ function spacePriceSummary(
           priceDayType,
         ),
     )
-    .map((price) => ({ amount: price.amount, kind: "公式日額" }));
+    .flatMap((price) =>
+      price.amount === null ? [] : [{ amount: price.amount, kind: "公式日額" }],
+    );
   const derivedDaily = venue.budgetScenarios
     .filter(
       (scenario) =>
@@ -324,10 +326,16 @@ function spacePriceSummary(
           priceDayType,
         ),
     )
-    .map((scenario) => ({
-      amount: scenario.amount,
-      kind: derivationLabels[scenario.derivationMethod] ?? "参考日額",
-    }));
+    .flatMap((scenario) =>
+      scenario.amount === null
+        ? []
+        : [
+            {
+              amount: scenario.amount,
+              kind: derivationLabels[scenario.derivationMethod] ?? "参考日額",
+            },
+          ],
+    );
   const daily = [...officialDaily, ...derivedDaily].sort(
     (a, b) => a.amount - b.amount,
   )[0];

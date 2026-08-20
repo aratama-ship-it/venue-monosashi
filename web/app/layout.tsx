@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: publication.description,
   applicationName: publication.siteName,
   icons: { icon: "/favicon.svg" },
-  keywords: publication.keywords,
+  keywords: [...publication.keywords],
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -50,7 +50,7 @@ const structuredData = {
   inLanguage: "ja",
   dateModified: publication.updatedAt,
   isAccessibleForFree: true,
-  keywords: publication.keywords,
+  keywords: [...publication.keywords],
 };
 
 const cloudflareAnalyticsToken =

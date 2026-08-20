@@ -3,7 +3,14 @@ export const publication = {
   title: "会場ものさし｜全国のイベント会場を条件で比較",
   description:
     "イベント会場候補を地域・面積・天井・客席・予算・搬入・アクセスで見比べます。 150席以下の小劇場も、平土間・公演料金・利用条件から探せます。",
-  url: "https://venue.art-monosashi.com/",
+  // GitHub Pagesの検証時は NEXT_PUBLIC_SITE_URL で上書きする。
+  // 未設定なら本番の独自ドメインを使う。
+  // 末尾のスラッシュを必ず付ける。付いていないと、robots等の相対URL解決で
+  // サブパス（GitHub Pagesの /venue-monosashi）が落ちる。
+  url: `${(
+    process.env.NEXT_PUBLIC_SITE_URL?.trim() ||
+    "https://venue.art-monosashi.com"
+  ).replace(/\/+$/, "")}/`,
   edition: "全国公開調査版 0.3",
   updatedAt: "2026-08-20",
   keywords: [

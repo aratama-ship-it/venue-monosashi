@@ -1,0 +1,65 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# 同じブランチへ連続でpushしたとき、古い配信を打ち切って最後の1回だけ残す。
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22.13.0
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - run: npm ci
+        working-directory: web
+
+      # macOSで生成した package-lock.json では、Linux用のネイティブバイナリが
+      # optional依存として記録されていても npm ci が拾わないことがある。
+      # validate.yml と同じ理由で無条件に入れる。
+      - name: Install Linux native binaries that npm ci may skip
+        run: npm install --no-save --no-package-lock lightningcss-linux-x64-gnu @rolldown/binding-linux-x64-gnu
+        working-directory: web
+
+      - name: Audit source data
+        run: npm run audit
+
+      - name: Build static site
+        run: npm run build:pages
+        working-directory: web
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: web/out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -311149,7 +311149,7 @@ var publication = {
 	siteName: "会場ものさし",
 	title: "会場ものさし｜全国のイベント会場を条件で比較",
 	description: "イベント会場候補を地域・面積・天井・客席・予算・搬入・アクセスで見比べます。 150席以下の小劇場も、平土間・公演料金・利用条件から探せます。",
-	url: "https://venue.art-monosashi.com/",
+	url: `${(process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://venue.art-monosashi.com").replace(/\/+$/, "")}/`,
 	edition: "全国公開調査版 0.3",
 	updatedAt: "2026-08-20",
 	keywords: [
@@ -311374,14 +311374,14 @@ function priceLabel(value) {
 	return `¥${yen.format(value)}〜`;
 }
 function spacePriceSummary(venue, spaceId, feeClass, priceDayType) {
-	const officialDaily = venue.priceObservations.filter((price) => price.spaceId === spaceId && price.category === "facility" && price.unit === "per_day" && price.amount !== null && !price.useCase.includes("setup") && priceMatchesConditions(price.useCase, price.dayType, feeClass, priceDayType)).map((price) => ({
+	const officialDaily = venue.priceObservations.filter((price) => price.spaceId === spaceId && price.category === "facility" && price.unit === "per_day" && price.amount !== null && !price.useCase.includes("setup") && priceMatchesConditions(price.useCase, price.dayType, feeClass, priceDayType)).flatMap((price) => price.amount === null ? [] : [{
 		amount: price.amount,
 		kind: "公式日額"
-	}));
-	const derivedDaily = venue.budgetScenarios.filter((scenario) => scenario.spaceId === spaceId && scenario.amount !== null && priceMatchesConditions(scenario.useCase, scenario.dayType, feeClass, priceDayType)).map((scenario) => ({
+	}]);
+	const derivedDaily = venue.budgetScenarios.filter((scenario) => scenario.spaceId === spaceId && scenario.amount !== null && priceMatchesConditions(scenario.useCase, scenario.dayType, feeClass, priceDayType)).flatMap((scenario) => scenario.amount === null ? [] : [{
 		amount: scenario.amount,
 		kind: derivationLabels[scenario.derivationMethod] ?? "参考日額"
-	}));
+	}]);
 	const daily = [...officialDaily, ...derivedDaily].sort((a, b) => a.amount - b.amount)[0];
 	if (daily) return {
 		value: priceLabel(daily.amount),
