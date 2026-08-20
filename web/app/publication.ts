@@ -4,8 +4,8 @@ export const publication = {
   description:
     "イベント会場候補を地域・面積・天井・客席・予算・搬入・アクセスで見比べます。 150席以下の小劇場も、平土間・公演料金・利用条件から探せます。",
   url: "https://venue.art-monosashi.com/",
-  edition: "全国公開調査版 0.2",
-  updatedAt: "2026-08-05",
+  edition: "全国公開調査版 0.3",
+  updatedAt: "2026-08-20",
   keywords: [
     "イベント会場",
     "会場検索",
@@ -20,6 +20,12 @@ export const publication = {
   correctionUrl:
     "https://github.com/aratama-ship-it/venue-monosashi/issues/new?title=%E4%BC%9A%E5%A0%B4%E6%83%85%E5%A0%B1%E3%81%AE%E8%A8%82%E6%AD%A3%E6%8F%90%E6%A1%88&body=%E4%BC%9A%E5%A0%B4%E5%90%8D%EF%BC%9A%0A%E8%A8%82%E6%AD%A3%E7%AE%87%E6%89%80%EF%BC%9A%0A%E4%B8%80%E6%AC%A1%E6%83%85%E5%A0%B1URL%EF%BC%9A%0A%E8%A3%9C%E8%B6%B3%EF%BC%9A",
   changelog: [
+    {
+      date: "2026-08-20",
+      title: "小劇場を会場候補へ統合",
+      detail:
+        "公式確認済みで現在も運営している小劇場369件を候補データへ入れ、独立していた小劇場台帳を廃止。小劇場タグでの絞り込み、料金の確認状況の表示、条件で絞ったときに未確認のため表に出ない件数の明示を追加。候補は1,838施設。",
+    },
     {
       date: "2026-08-05",
       title: "共有・比較・鮮度表示を追加",

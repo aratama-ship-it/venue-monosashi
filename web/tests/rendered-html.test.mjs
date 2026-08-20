@@ -171,7 +171,7 @@ test("server-renders the venue search shell", async () => {
   assert.match(html, /絞り込みを開く/);
   assert.match(html, /更新と訂正/);
   assert.match(html, /訂正候補を送る/);
-  assert.match(html, /全国公開調査版 0\.2/);
+  assert.match(html, /全国公開調査版 0\.3/);
   assert.match(html, /過去実績[\s\S]{0,40}21[\s\S]{0,40}件/);
   assert.doesNotMatch(html, /確認済み日額が低い順/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);

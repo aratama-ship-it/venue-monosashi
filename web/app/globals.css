@@ -1293,3 +1293,19 @@ a {
   border-color: var(--rust);
   color: var(--rust);
 }
+
+/* 除外件数の注記を足すと、狭い画面では結果見出しの1行に4要素が並んで
+   件数まで縦積みに潰れる。折り返して注記を独立した行に置く。 */
+@media (max-width: 720px) {
+  .results-count {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .excluded-note {
+    order: 3;
+    flex: 1 0 100%;
+    max-width: none;
+    margin-top: 4px;
+  }
+}
