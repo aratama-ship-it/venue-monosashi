@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">会場ものさし</title>
+  <desc id="desc">全国のイベント会場を、過去大会と予算を基準に比較する公開調査版</desc>
+  <rect width="1200" height="630" fill="#242422"/>
+  <g stroke="#fff45b" stroke-opacity="0.14">
+    <path d="M0 70H1200M0 140H1200M0 210H1200M0 280H1200M0 350H1200M0 420H1200M0 490H1200M0 560H1200"/>
+    <path d="M70 0V630M140 0V630M210 0V630M280 0V630M350 0V630M420 0V630M490 0V630M560 0V630M630 0V630M700 0V630M770 0V630M840 0V630M910 0V630M980 0V630M1050 0V630M1120 0V630"/>
+  </g>
+  <g transform="translate(815 105) rotate(-10)" fill="none" stroke="#fff45b">
+    <rect width="285" height="205"/>
+    <rect x="34" y="34" width="217" height="137" stroke-opacity="0.65"/>
+    <path d="M0 205H285M285 0V205" stroke-width="3"/>
+  </g>
+  <text x="72" y="86" fill="#fff45b" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="5">EVENT VENUE FIELD GUIDE</text>
+  <text x="70" y="245" fill="#ffffff" font-family="Hiragino Sans, Yu Gothic, sans-serif" font-size="92" font-weight="800" letter-spacing="-5">会場ものさし</text>
+  <text x="73" y="328" fill="#fff45b" font-family="Hiragino Sans, Yu Gothic, sans-serif" font-size="42" font-weight="700">名前でなく、条件で測る。</text>
+  <text x="75" y="438" fill="#dadad4" font-family="Hiragino Sans, Yu Gothic, sans-serif" font-size="25">過去大会 × 規模 × 天井 × 予算 × 搬入 × アクセス</text>
+  <g transform="translate(72 505)" font-family="Arial, sans-serif" font-size="21" font-weight="700">
+    <rect width="145" height="48" rx="4" fill="#fff45b"/>
+    <text x="22" y="32" fill="#242422">174 VENUES</text>
+    <text x="180" y="32" fill="#ffffff">225 EVENT RECORDS</text>
+    <text x="442" y="32" fill="#ffffff">594 SMALL THEATERS</text>
+  </g>
+</svg>

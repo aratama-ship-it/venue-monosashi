@@ -2,12 +2,26 @@
   "name": "venue-monosashi",
   "private": true,
   "type": "module",
+  "workspaces": [
+    "web"
+  ],
+  "optionalDependencies": {
+    "@rolldown/binding-linux-x64-gnu": "1.0.1"
+  },
   "scripts": {
     "audit": "node scripts/audit-data.mjs",
+    "depth-report": "node scripts/report-prefecture-depth.mjs",
+    "depth-report:write": "node scripts/report-prefecture-depth.mjs --write",
+    "price-coverage": "node scripts/report-price-coverage.mjs",
+    "price-coverage:write": "node scripts/report-price-coverage.mjs --write",
+    "audit-small-theaters": "node scripts/small-theater-research.mjs audit",
+    "build": "npm --prefix web run build && rm -rf dist && cp -R web/dist dist",
+    "next-small-theaters": "node scripts/small-theater-research.mjs next --limit 8",
     "audit-urls": "node scripts/audit-urls.mjs",
     "rebuild-db": "sh scripts/rebuild-sqlite.sh",
     "web:lint": "npm --prefix web run lint",
     "web:test": "npm --prefix web test",
-    "validate": "npm run audit && npm run web:lint && npm run web:test"
+    "validate": "npm run audit && npm run web:lint && npm run web:test",
+    "next-ids": "node scripts/next-ids.mjs"
   }
 }

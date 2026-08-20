@@ -151,10 +151,11 @@ a {
 
 .hero-copy {
   margin: 26px 0 0;
-  max-width: 620px;
+  max-width: none;
   color: #3f4843;
   font-size: clamp(0.96rem, 1.25vw, 1.08rem);
   line-height: 1.9;
+  text-wrap: pretty;
 }
 
 .reference-block {
@@ -280,35 +281,202 @@ a {
 
 .field input:focus,
 .field select:focus,
-.preset-button:focus-visible,
+.venue-role-tag:focus-visible,
+.prefecture-tag:focus-visible,
+.region-modal-trigger:focus-visible,
+.region-modal-close:focus-visible,
+.region-modal-clear:focus-visible,
+.region-modal-apply:focus-visible,
 .reset-button:focus-visible,
 .source-link:focus-visible {
   outline: 3px solid var(--mustard);
   outline-offset: 2px;
 }
 
-.preset-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5px;
+.field-help {
+  display: block;
+  margin: 0 0 9px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.5;
 }
 
-.preset-button {
-  min-height: 42px;
+.venue-role-tags,
+.prefecture-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.venue-role-tag,
+.prefecture-tag {
+  min-height: 36px;
   border: 1px solid var(--line);
-  border-radius: 0;
+  border-radius: 999px;
   background: transparent;
   color: var(--ink);
   cursor: pointer;
-  font-size: 0.72rem;
-  text-align: left;
-  padding: 8px;
+  font-size: 0.76rem;
+  padding: 7px 11px;
 }
 
-.preset-button[data-active="true"] {
+.venue-role-tag[data-active="true"],
+.prefecture-tag[data-active="true"] {
   border-color: var(--ink);
   background: var(--ink);
   color: var(--paper);
+}
+
+.prefecture-all {
+  margin-bottom: 10px;
+}
+
+.prefecture-groups {
+  display: grid;
+  gap: 11px;
+}
+
+.prefecture-group {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+}
+
+.prefecture-group-label {
+  padding-top: 7px;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.prefecture-tag {
+  min-height: 30px;
+  font-size: 0.68rem;
+  padding: 5px 8px;
+}
+
+.region-modal-trigger {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  background: var(--white);
+  color: var(--ink);
+  cursor: pointer;
+  padding: 9px 11px;
+  text-align: left;
+}
+
+.region-modal-trigger strong {
+  color: var(--rust);
+  font-size: 0.7rem;
+}
+
+.selected-prefecture-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.selected-prefecture-summary span {
+  border: 1px solid var(--line-light);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.64rem;
+  padding: 4px 7px;
+}
+
+.region-modal-backdrop {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+  background: rgba(20, 20, 18, 0.58);
+}
+
+.region-modal {
+  width: min(820px, 100%);
+  max-height: calc(100vh - 40px);
+  overflow: hidden;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  background: var(--white);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+}
+
+.region-modal-head {
+  padding: 24px 26px 18px;
+  border-bottom: 1px solid var(--line-light);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: start;
+}
+
+.region-modal-head h2 {
+  margin: 3px 0 5px;
+  font-size: 1.45rem;
+}
+
+.region-modal-head p:not(.eyebrow) {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.55;
+}
+
+.region-modal-close {
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.region-modal-body {
+  padding: 20px 26px 26px;
+  overflow-y: auto;
+}
+
+.region-modal-actions {
+  padding: 14px 26px;
+  border-top: 1px solid var(--line-light);
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  background: var(--paper);
+}
+
+.region-modal-actions button {
+  min-height: 42px;
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 16px;
+  font-weight: 700;
+}
+
+.region-modal-clear {
+  background: transparent;
+  color: var(--ink);
+}
+
+.region-modal-apply {
+  background: var(--ink);
+  color: var(--white);
 }
 
 .range {
@@ -440,6 +608,24 @@ a {
   font-size: 0.74rem;
 }
 
+.venue-category-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.venue-category-tag {
+  border: 1px solid var(--line-light);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.66rem;
+  line-height: 1;
+  padding: 5px 7px;
+}
+
 .fit-mark {
   flex: 0 0 auto;
   min-width: 34px;
@@ -460,7 +646,7 @@ a {
 
 .metrics {
   display: grid;
-  grid-template-columns: repeat(4, minmax(105px, 1fr));
+  grid-template-columns: repeat(5, minmax(105px, 1fr));
   border-top: 1px solid var(--line-light);
   border-left: 1px solid var(--line-light);
 }
@@ -497,6 +683,14 @@ a {
   gap: 20px;
   align-items: center;
   margin-top: 14px;
+}
+
+.venue-links {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px 14px;
 }
 
 .status-line {
@@ -607,6 +801,41 @@ a {
   white-space: nowrap;
   font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
   font-weight: 700;
+}
+
+.price-table .amount.unknown,
+.price-table .unknown {
+  color: var(--rust);
+}
+
+.price-table .unknown-row td {
+  background: rgba(182, 63, 40, 0.035);
+}
+
+.drawer-empty {
+  margin: 0;
+  padding: 12px;
+  border: 1px solid var(--line-light);
+  background: rgba(182, 63, 40, 0.035);
+  color: var(--rust);
+  font-size: 0.68rem;
+  font-weight: 650;
+  line-height: 1.65;
+}
+
+.space-table {
+  min-width: 960px;
+}
+
+.space-table td:first-child {
+  min-width: 180px;
+}
+
+.space-table a {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .operation-grid {
@@ -811,7 +1040,7 @@ a {
 
 .method-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   border: 1px solid var(--ink);
   background: var(--white);
 }
@@ -883,7 +1112,8 @@ a {
     gap: 0 14px;
   }
 
-  .preset-field,
+  .venue-role-field,
+  .prefecture-field,
   .check-field,
   .reset-button {
     grid-column: 1 / -1;
@@ -925,7 +1155,8 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .preset-field,
+  .venue-role-field,
+  .prefecture-field,
   .check-field,
   .reset-button {
     grid-column: auto;
@@ -961,6 +1192,10 @@ a {
     flex-direction: column;
   }
 
+  .venue-links {
+    justify-content: flex-start;
+  }
+
   .method-inner {
     grid-template-columns: 1fr;
   }
@@ -989,5 +1224,88 @@ a {
 
   .site-footer-inner {
     flex-direction: column;
+  }
+
+  .region-modal-backdrop {
+    padding: 0;
+    align-items: end;
+  }
+
+  .region-modal {
+    max-height: 92vh;
+    border-radius: 14px 14px 0 0;
+  }
+
+  .region-modal-head,
+  .region-modal-body,
+  .region-modal-actions {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .prefecture-group {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .prefecture-group-label {
+    padding-top: 0;
+  }
+}
+
+.excluded-note {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  max-width: 32ch;
+  border-left: 2px solid var(--rust);
+  padding-left: 8px;
+  color: var(--muted);
+  font-size: 0.68rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.excluded-note-action {
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  background: none;
+  padding: 0;
+  color: var(--rust);
+  font-size: 0.68rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.evidence-mark {
+  flex: 0 0 auto;
+  align-self: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 8px;
+  color: var(--muted);
+  font-size: 0.62rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.evidence-ledger_only {
+  border-color: var(--rust);
+  color: var(--rust);
+}
+
+/* 除外件数の注記を足すと、狭い画面では結果見出しの1行に4要素が並んで
+   件数まで縦積みに潰れる。折り返して注記を独立した行に置く。 */
+@media (max-width: 720px) {
+  .results-count {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .excluded-note {
+    order: 3;
+    flex: 1 0 100%;
+    max-width: none;
+    margin-top: 4px;
   }
 }

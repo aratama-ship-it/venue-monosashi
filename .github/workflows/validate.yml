@@ -6,6 +6,13 @@ on:
   pull_request:
   workflow_dispatch:
 
+# 同じブランチへ連続でpushしたとき、古い実行を打ち切って最後の1回だけ残す。
+# データ収録のwaveでは1日に何十回もpushするため、これがないと落ちるたびに
+# 通知が飛ぶ（2026-08-10に実際に発生した）。
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
@@ -24,6 +31,15 @@ jobs:
       - run: npm ci
         working-directory: web
 
+      # macOSで生成した package-lock.json では、Linux用のネイティブバイナリが
+      # optional依存として記録されていても npm ci が拾わないことがある。
+      # 拾えていれば再インストールは一瞬で終わるので、無条件に入れておく。
+      # これがないと vinext build が
+      # 「Cannot find module '../lightningcss.linux-x64-gnu.node'」で落ちる。
+      - name: Install Linux native binaries that npm ci may skip
+        run: npm install --no-save --no-package-lock lightningcss-linux-x64-gnu @rolldown/binding-linux-x64-gnu
+        working-directory: web
+
       - run: npm run audit
 
       - run: npm run lint
@@ -32,5 +48,7 @@ jobs:
       - run: npm test
         working-directory: web
 
+      # 検索データの本体は generated-data.json にある。.ts だけを見ていると、
+      # CSVを更新してJSONを再生成し忘れても検査を素通りする。
       - name: Confirm generated search data is current
-        run: git diff --exit-code -- web/app/generated-data.ts
+        run: git diff --exit-code -- web/app/generated-data.ts web/app/generated-data.json

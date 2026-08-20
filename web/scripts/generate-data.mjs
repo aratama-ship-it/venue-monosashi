@@ -55,6 +55,71 @@ function nullableNumber(value) {
   return Number.isFinite(number) ? number : null;
 }
 
+function nullableUrl(value) {
+  return value || null;
+}
+
+function websiteUrl(sourceUrl, explicitUrl) {
+  const officialUrl = nullableUrl(sourceUrl);
+  const verifiedWebsiteUrl = nullableUrl(explicitUrl);
+
+  if (verifiedWebsiteUrl && verifiedWebsiteUrl !== officialUrl) return verifiedWebsiteUrl;
+  if (!officialUrl) return null;
+
+  try {
+    const source = new URL(officialUrl);
+    const host = source.hostname.toLowerCase();
+    const isGovernmentHost =
+      host.endsWith(".lg.jp") ||
+      host.endsWith(".go.jp") ||
+      /(^|\.)(city|town|village|pref|prefecture)\./.test(host);
+    if (isGovernmentHost) return null;
+
+    const homepage = `${source.protocol}//${source.host}/`;
+    return homepage === source.href ? null : homepage;
+  } catch {
+    return null;
+  }
+}
+
+function officialLinks(candidate, venueDetails, candidateWebsites = []) {
+  if (!candidate.facility_name.includes("＋")) return [];
+
+  const mainUrl = nullableUrl(candidate.official_url);
+  const seen = new Set(mainUrl ? [mainUrl] : []);
+  const links = [];
+  const parts = candidate.facility_name
+    .split("＋")
+    .map((part) => part.replace(/^.*（/, "").replace(/）.*$/, "").trim())
+    .filter(Boolean);
+
+  for (const part of parts) {
+    const match = venueDetails.find(
+      (detail) =>
+        detail.space_name.startsWith(part) &&
+        nullableUrl(detail.source_url) &&
+        !seen.has(detail.source_url),
+    );
+    if (match) {
+      seen.add(match.source_url);
+      links.push({ label: part, url: match.source_url });
+      continue;
+    }
+    const websiteMatch = candidateWebsites.find(
+      (website) =>
+        (website.note || "").includes(part) &&
+        nullableUrl(website.website_url) &&
+        !seen.has(website.website_url),
+    );
+    if (websiteMatch) {
+      seen.add(websiteMatch.website_url);
+      links.push({ label: part, url: websiteMatch.website_url });
+    }
+  }
+
+  return links;
+}
+
 const [
   candidates,
   details,
@@ -63,6 +128,7 @@ const [
   historical,
   historicalVenueAliases,
   budgetScenarios,
+  venueWebsites,
 ] = await Promise.all([
   load("candidate-venues.csv"),
   load("venue-details.csv"),
@@ -71,7 +137,35 @@ const [
   load("historical-events.csv"),
   load("historical-venue-aliases.csv"),
   load("budget-scenarios.csv"),
+  load("venue-websites.csv"),
 ]);
+
+const websitesByCandidateId = new Map();
+for (const website of venueWebsites) {
+  const list = websitesByCandidateId.get(website.candidate_id) ?? [];
+  list.push(website);
+  websitesByCandidateId.set(website.candidate_id, list);
+}
+
+const observationDates = [
+  ...details.map((item) => item.observed_at),
+  ...prices.map((item) => item.observed_at),
+  ...operations.map((item) => item.observed_at),
+  ...budgetScenarios.map((item) => item.observed_at),
+  ...candidates.map((item) => item.observed_at ?? ""),
+  ...venueWebsites.map((item) => item.observed_at),
+].filter((value) => /^\d{4}-\d{2}-\d{2}$/.test(value));
+const sortedObservationDates = [...new Set(observationDates)].sort();
+const freshness = {
+  firstObservedAt: sortedObservationDates[0] ?? null,
+  latestObservedAt: sortedObservationDates.at(-1) ?? null,
+  observationCount: observationDates.length,
+  venueObservationCount:
+    details.filter((item) => item.observed_at).length +
+    prices.filter((item) => item.observed_at).length +
+    operations.filter((item) => item.observed_at).length +
+    budgetScenarios.filter((item) => item.observed_at).length,
+};
 
 const venues = candidates.map((candidate) => {
   const venueDetails = details.filter(
@@ -89,6 +183,14 @@ const venues = candidates.map((candidate) => {
   const venueBudgetScenarios = budgetScenarios.filter(
     (scenario) => scenario.candidate_id === candidate.candidate_id,
   );
+  const venueObservationDates = [
+    ...venueDetails.map((item) => item.observed_at),
+    ...venuePrices.map((item) => item.observed_at),
+    ...venueOperations.map((item) => item.observed_at),
+    ...venueBudgetScenarios.map((item) => item.observed_at),
+  ]
+    .filter((value) => /^\d{4}-\d{2}-\d{2}$/.test(value))
+    .sort();
   const linkedHistoricalEvents = historical.filter((event) =>
     venueAliases.some((alias) =>
       event.venue_names.includes(alias.venue_name_contains),
@@ -121,7 +223,7 @@ const venues = candidates.map((candidate) => {
     .map((detail) => nullableNumber(detail.area_m2))
     .filter((value) => value !== null);
   const ceilingValues = venueDetails
-    .map((detail) => nullableNumber(detail.ceiling_height_m))
+    .map((detail) => nullableNumber(detail.clear_height_min_m))
     .filter((value) => value !== null);
   const floorLoadValues = venueDetails
     .map((detail) => nullableNumber(detail.floor_load_kg_m2))
@@ -154,6 +256,31 @@ const venues = candidates.map((candidate) => {
       (nullableNumber(b.area_m2) ?? 0) - (nullableNumber(a.area_m2) ?? 0),
   )[0];
 
+  const candidateWebsites =
+    websitesByCandidateId.get(candidate.candidate_id) ?? [];
+  const setOfficialLinks = officialLinks(
+    candidate,
+    venueDetails,
+    candidateWebsites,
+  );
+  const primaryWebsiteUrl = websiteUrl(
+    candidate.official_url,
+    candidateWebsites[0]?.website_url,
+  );
+
+  const pricedObservationCount = venuePrices.filter(
+    (price) => nullableNumber(price.amount_jpy) !== null,
+  ).length;
+  // 情報量の区別。料金金額が構造化されているかで分ける。
+  // detailed: 金額付き料金観測あり / partial: 区画情報はあるが金額なし /
+  // ledger_only: 区画情報も金額もなく、施設単位の一次情報だけがある
+  const evidenceTier =
+    pricedObservationCount > 0
+      ? "detailed"
+      : venueDetails.length > 0
+        ? "partial"
+        : "ledger_only";
+
   return {
     id: candidate.candidate_id,
     region: candidate.region,
@@ -165,6 +292,18 @@ const venues = candidates.map((candidate) => {
     strengths: candidate.verified_public_facts,
     cautions: candidate.inference_or_risk,
     sourceUrl: candidate.official_url,
+    tags: (candidate.tags ?? "").split("|").filter(Boolean),
+    sourceIndex: candidate.source_index || null,
+    evidenceTier,
+    priceUrl: nullableUrl(candidate.price_url ?? ""),
+    accessUrl: nullableUrl(candidate.access_url ?? ""),
+    conditionsUrl: nullableUrl(candidate.conditions_url ?? ""),
+    websiteUrl: setOfficialLinks.some((link) => link.url === primaryWebsiteUrl)
+      ? null
+      : primaryWebsiteUrl,
+    officialLinks: setOfficialLinks,
+    observedAt:
+      venueObservationDates.at(-1) ?? (candidate.observed_at || null),
     detailCount: venueDetails.length,
     priceCount: venuePrices.length,
     operationCount: venueOperations.length,
@@ -177,6 +316,12 @@ const venues = candidates.map((candidate) => {
     maxCapacity: capacityValues.length ? Math.max(...capacityValues) : null,
     maxArea: areaValues.length ? Math.max(...areaValues) : null,
     maxCeiling: ceilingValues.length ? Math.max(...ceilingValues) : null,
+    ceilingReferenceCount: venueDetails.filter(
+      (detail) => nullableNumber(detail.ceiling_height_m) !== null,
+    ).length,
+    filterableCeilingCount: venueDetails.filter(
+      (detail) => nullableNumber(detail.clear_height_min_m) !== null,
+    ).length,
     maxFloorLoad: floorLoadValues.length ? Math.max(...floorLoadValues) : null,
     hasFixedStage,
     practiceUse,
@@ -209,6 +354,7 @@ const venues = candidates.map((candidate) => {
       timeSpan: scenario.time_span,
       amount: nullableNumber(scenario.total_amount_jpy),
       taxStatus: scenario.tax_status,
+      derivationMethod: scenario.derivation_method,
       componentPriceIds: scenario.component_price_ids.split("|"),
       componentQuantities: scenario.component_quantities.split("|").map(Number),
       validFrom: scenario.valid_from || null,
@@ -240,12 +386,19 @@ const venues = candidates.map((candidate) => {
       id: detail.space_id,
       name: detail.space_name,
       type: detail.space_type,
+      tags: (detail.tags ?? "").split("|").filter(Boolean),
       area: nullableNumber(detail.area_m2),
-      ceiling: nullableNumber(detail.ceiling_height_m),
+      ceiling: nullableNumber(detail.clear_height_min_m),
+      ceilingReference: nullableNumber(detail.ceiling_height_m),
+      ceilingType: detail.ceiling_height_type,
+      overheadUseStatus: detail.overhead_use_status,
       capacityTheater: nullableNumber(detail.capacity_theater),
       capacityFixed: nullableNumber(detail.capacity_fixed),
       stageType: detail.stage_type,
       practiceUse: detail.sports_or_practice_use,
+      sourceUrl: detail.source_url,
+      observedAt: detail.observed_at || null,
+      note: detail.note || null,
     })),
     bestSpace: bestSpace
       ? {
@@ -271,9 +424,38 @@ const historicalEvents = historical.map((event) => ({
   note: event.note,
 }));
 
-const output = `// Generated from ../data/*.csv by scripts/generate-data.mjs.
-// Do not edit this file by hand.
-export const venueData = ${JSON.stringify(
+const candidateCoverage = {
+  area: new Set(
+    details
+      .filter((detail) => nullableNumber(detail.area_m2) !== null)
+      .map((detail) => detail.candidate_id),
+  ).size,
+  capacity: new Set(
+    details
+      .filter(
+        (detail) =>
+          nullableNumber(detail.capacity_theater) !== null ||
+          nullableNumber(detail.capacity_fixed) !== null,
+      )
+      .map((detail) => detail.candidate_id),
+  ).size,
+  ceiling: new Set(
+    details
+      .filter((detail) => nullableNumber(detail.clear_height_min_m) !== null)
+      .map((detail) => detail.candidate_id),
+  ).size,
+};
+
+const spaceCoverage = {
+  ceiling: details.filter(
+    (detail) => nullableNumber(detail.clear_height_min_m) !== null,
+  ).length,
+  ceilingReference: details.filter(
+    (detail) => nullableNumber(detail.ceiling_height_m) !== null,
+  ).length,
+};
+
+const payload = (
   {
     stats: {
       historical: historical.length,
@@ -282,16 +464,37 @@ export const venueData = ${JSON.stringify(
       prices: prices.length,
       operations: operations.length,
       budgetScenarios: budgetScenarios.length,
+      candidateCoverage,
+      spaceCoverage,
+      freshness,
+      // 検索側と同じ判定にする。施設タグだけで数えると、
+      // 大きな施設の中の小劇場区画を持つ候補が抜けて件数が食い違う。
+      smallTheaterTaggedCount: venues.filter(
+        (venue) =>
+          venue.tags.includes("small_theater") ||
+          venue.spaces.some((space) => space.tags.includes("small_theater")),
+      ).length,
     },
     venues,
     historicalEvents,
-  },
-  null,
-  2,
-)} as const;
-`;
+});
 
-await writeFile(resolve(scriptDir, "..", "app", "generated-data.ts"), output);
+// データ本体はJSONとして書き出す。12MB級のオブジェクトリテラルをTSに埋め込むと、
+// Vite/Miniflareの開発サーバーがモジュール読み込み時にスタックを使い切って起動できない
+// （2026-08-20に発生）。JSONならJSON.parseで読まれるため、この問題を避けられる。
+await writeFile(
+  resolve(scriptDir, "..", "app", "generated-data.json"),
+  `${JSON.stringify(payload, null, 2)}\n`,
+);
+await writeFile(
+  resolve(scriptDir, "..", "app", "generated-data.ts"),
+  `// Generated from ../data/*.csv by scripts/generate-data.mjs.
+// Do not edit this file by hand. Data itself lives in generated-data.json.
+import data from "./generated-data.json";
+
+export const venueData = data;
+`,
+);
 console.log(
   `generated app/generated-data.ts: ${venues.length} venues, ${prices.length} prices`,
 );

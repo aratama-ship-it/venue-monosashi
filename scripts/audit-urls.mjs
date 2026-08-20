@@ -64,6 +64,10 @@ for (const row of loadCsv("data/historical-events.csv")) {
 for (const row of loadCsv("data/candidate-venues.csv")) {
   addReference(urls, row.official_url, "candidate-venues.csv", row.candidate_id);
 }
+for (const row of loadCsv("data/venue-websites.csv")) {
+  addReference(urls, row.website_url, "venue-websites.csv", row.website_id);
+  addReference(urls, row.source_url, "venue-websites.csv", `${row.website_id}:source_url`);
+}
 for (const row of loadCsv("data/venue-details.csv")) {
   addReference(urls, row.source_url, "venue-details.csv", row.detail_id);
 }

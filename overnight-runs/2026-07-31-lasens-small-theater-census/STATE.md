@@ -1,0 +1,411 @@
+# Overnight Run State
+
+## Status
+
+- Status: PARTIAL
+- Last updated: 2026-08-01T09:30:47+09:00
+- Current wave: 最終監査（完了）
+
+## Baseline
+
+- Git root: `/Users/arata/Library/Mobile Documents/com~apple~CloudDocs/claude code files/app-dev/venue-monosashi`
+- Branch: `agent/add-competition-and-small-theater-coverage`
+- Commit: `1bebbfc030f421ed311ee60b9ba3f4fd58c54f27`
+- Pre-existing dirty files: なし
+- `data/candidate-venues.csv`: `f70cfe2b683045e40d30518e92e6066d6e318ccaa20928bb44d961e23ea7dfcc`
+- `data/venue-details.csv`: `6e632ad0c25a260df2d79bce3806757323df0a47399ae67d1815d6801d44b66c`
+- `data/price-observations.csv`: `5bd0875ef2d7847ba48fd52ee9f85d8b352de365a15a18ca9c81d00b28eb622d`
+- `data/venue-operations.csv`: `dd7031005f32764fc60dc59c1749aa262fa79ecdf8db377a9dab7298ab6dd340`
+- `docs/COMPETITION_AND_SMALL_THEATER_SCOPE.md`: `7c65a35dfd0fd12717ac668f56a2d29378b9b7325b944a87756b3e7461e3a0bb`
+- `scripts/audit-data.mjs`: `678a4fb87e9f01931731cd86d8aa4e2bcb79717961b00bc9d68d9c3503d80282`
+- Baseline data audit: candidate 74、details 116、prices 311、operations 56、budget scenarios 13、warnings 1、errors 0
+
+## Completed Waves
+
+- Run ledgerを作成し、一次情報境界、禁止事項、最終処理時刻を固定した。
+- LaSens検索APIの現在値が全594件で、掲載中448件・閉館表示146件であることを観測した。
+- `data/small-theater-research.csv`へ594件を取り込み、47都道府県を巡回する`queue_order`、二次索引値、公式情報欄、検証状態を分離した。
+- 再取得しても公式確認欄を保持する`small-theater-research.mjs sync`、台帳監査、次の未確認8件を選ぶコマンドを追加した。
+- 手動テスト波でBLOCH、スペースBEN、風のスタジオ、Quarter Studio、アートボックス卸町、La MaMa Odaka、百景社アトリエ、アトリエほんまるの8件を公式運営サイトまで確認し、`primary_partial`へ更新した。
+- La MaMa Odakaは同住所の公式サイトにRain Theatreを確認したが、同一性・改称関係を断定せず`official_status=unknown`にした。
+- Wave 1 verification: `npm run audit-small-theaters`はrows 594、primary_partial 8、pending 586、errors 0。`npm run audit`は既存データerrors 0。run ledger validationは`OK (active)`。
+- Wave 2では`LASENS-339`、`LASENS-591`、`LASENS-579`、`LASENS-269`、`LASENS-2426`、`LASENS-3993`、`LASENS-4313`、`LASENS-3539`の8件を処理した。
+- 指定管理者・運営者の公式サイトで、イコス上尾、柏Studio WUU、みんなのMINAKURU、可児市文化創造センター ala 小劇場〈虹のホール〉を`verified_primary / current`と確認した。
+- 新潟古町えんとつシアターは公式サイトの2026年4月告知により`verified_primary / closed`と確認した。閉館後の再整備構想は旧施設の現行営業と混同していない。
+- B-club studioは同住所の公式ページを確認したが更新日がなく現行営業を断定できないため`primary_partial / unknown`、ヴィオロンは住所差異を解けず`ambiguous`、Charlie's Studioは運営者公式情報を確認できず`official_not_found`とした。
+- Wave 2で確認した一次情報は、`ageo-kousya.or.jp`、`wuu.co.jp`、`sound.jp/b-club`、`xn--r8jwcl5o.com`、`minakuru-saku.com`、`kpac.or.jp`。LaSens値や検索スニペットを公式欄へ転記していない。
+- Wave 2 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 2 verification: `npm run audit-small-theaters`はrows 594、verified_primary 5、primary_partial 9、official_not_found 1、ambiguous 1、pending 578、errors 0。`npm run audit`は既存データerrors 0。`git diff --check`は問題なし。
+- Wave 3では`LASENS-2816`、`LASENS-2468`、`LASENS-3444`、`LASENS-3300`、`LASENS-249`、`LASENS-332`、`LASENS-3252`、`LASENS-3869`の8件を処理した。
+- あそviva!劇場、新江州シアター（滋賀県立文化産業交流会館）、アートコンプレックス1928、HEP HALLを`verified_primary / current`と確認した。アートコンプレックス1928は一般貸館施設とせず、公式に確認できるギア専用劇場の状態を注記した。
+- アイホール（伊丹市立演劇ホール）は公式サイトが2026年3月30日閉館と明記しているため`verified_primary / closed`とし、旧イベントホールの面積・客席・料金・アクセス資料を履歴として保持した。
+- G/PITとThéâtre de Bellevilleは公式サイトを確認したが更新鮮度が不足するため`primary_partial / unknown`、和歌浦小劇場は運営者の公式サイト・公式PDFを確認できず`official_not_found`とした。和歌浦小劇場は二次報道だけで閉館を確定していない。
+- Wave 3で確認した一次情報は、`asovivatheater.com`、`gpit.jimdosite.com`、`theatre-de-belleville.tumblr.com`、`s-bunsan.jp`、`artcomplex.net`、`gear.ac`、`hephall.jp`、`aihall.com`。LaSens値や検索スニペットを公式欄へ転記していない。
+- Wave 3 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 3 verification: `npm run audit-small-theaters`はrows 594、verified_primary 10、primary_partial 11、official_not_found 2、ambiguous 1、pending 570、errors 0。`npm run audit`は既存データerrors 0。`git diff --check`は問題なし。
+- Wave 4では`LASENS-2820`、`LASENS-2818`、`LASENS-2555`、`LASENS-695`、`LASENS-3614`、`LASENS-2438`、`LASENS-2854`、`LASENS-2893`の8件を処理した。
+- 森の劇場 しいの実シアター、小劇場 THEATER NEST、アトリエ銘苅ベース、MsmileBOX渋谷を`verified_primary / current`と確認し、客席、面積、料金、アクセス、利用条件を公式公開情報の範囲で記録した。
+- スタジオイマイチ、アトリエPentA、cube gardenは現行運営と貸館情報を公式サイトで確認したが、客席・面積等の比較項目が不足するため`primary_partial / current`とした。H732シアターは旧公式候補ドメインがDNS解決できず`blocked`とし、閉館を推測していない。
+- Wave 4で確認した一次情報は、`forest.ashibue.jp`、`studioimaichi.localinfo.jp`、`art-village-toon.jp`、`atelierpenta.jp`、`m-base.okinawa`、`shibuya2.com`、`cube-garden.com`。LaSens値や二次情報の値を公式欄へ転記していない。
+- Wave 4 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 4 verification: `npm run audit-small-theaters`はrows 594、verified_primary 14、primary_partial 14、official_not_found 2、ambiguous 1、blocked 1、pending 562、errors 0。`npm run audit`は既存データerrors 0。`git diff --check`は問題なし。
+- Wave 5では`LASENS-2790`、`LASENS-2794`、`LASENS-4069`、`LASENS-2722`、`LASENS-596`、`LASENS-625`、`LASENS-221`、`LASENS-423`の8件を処理した。
+- BLACKBOX、わらび劇場、GSユアサいわき小劇場、さいたま市産業文化センター ホール、浦安市文化会館 小ホールを`verified_primary / current`、プルヌスホールを`verified_primary / closed`と確認した。
+- えずこホール平土間ホールは現行運営とアクセスを公式サイトで確認したが比較項目が不足するため`primary_partial / current`とした。ABC会館は朝日放送公式資料で建設と2005年の東京支社移転を確認したが、ホール閉館を一次情報で確定できないため`primary_partial / unknown`とした。
+- Wave 5で確認した一次情報は、`blackboxaomori.wixsite.com`、`ezuko.com`、`warabi.or.jp`、`iwaki-alios.jp`、`saitama-sbc.com`、`urayasu-zaidan.or.jp`、`corp.asahi.co.jp`、`obirin.ac.jp`。LaSens値や二次情報の値を公式欄へ転記していない。
+- Wave 5 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 5 verification: `npm run audit-small-theaters`はrows 594、verified_primary 20、primary_partial 16、official_not_found 2、ambiguous 1、blocked 1、pending 554、errors 0。`npm run audit`は既存データerrors 0。`git diff --check`は問題なし。
+- Wave 6では`LASENS-664`、`LASENS-622`、`LASENS-2876`、`LASENS-2470`、`LASENS-2480`、`LASENS-2484`、`LASENS-2434`、`LASENS-347`の8件を処理した。
+- りゅーとぴあ スタジオB、NEONHALL、うりんこ劇場、in→dependent theatre 1stを`verified_primary / current`、人宿町やどりぎ座と四天王寺スクエアを`verified_primary / closed`と確認した。うりんこ劇場は2027年3月末の閉館予定と新規貸館申込終了を注記し、現時点の状態を閉館扱いにはしていない。
+- 新利賀山房は施設公式ページの250人と県公式施設評価資料の400人が一致しないため`primary_partial / current`、シアターウルは運営者公式サイトを確認したが現行営業を確定できないため`primary_partial / unknown`とし、閉館を推測していない。
+- Wave 6で確認した一次情報は、`ryutopia.or.jp`、`togapk.net`、`pref.toyama.jp`、`neonhall.com`、`yadorigiza.info`、`urinko.jp`、`akebonoza.net`、`theatre-uru.amebaownd.com`、`itheatre.jp`。LaSens値や二次情報の値を公式欄へ転記していない。
+- Wave 6 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 6 verification: `npm run audit-small-theaters`はrows 594、verified_primary 26、primary_partial 18、official_not_found 2、ambiguous 1、blocked 1、pending 546、errors 0。`npm run audit`は既存データerrors 0。`git diff --check`は問題なし。
+- Wave 7では`LASENS-3322`、`LASENS-3502`、`LASENS-2369`、`LASENS-613`、`LASENS-2444`、`LASENS-3446`、`LASENS-3923`、`LASENS-505`の8件を処理した。
+- Art Theater dB Kobe、山口情報芸術センター スタジオB、ひめゆりピースホールを`verified_primary / current`、シアターねこを`verified_primary / closed`と確認した。シアターねこは運営協力団体公式サイトが2024年8月31日閉館を明記している。
+- アトリエPentAは既確認の別LaSens行と同一施設として`primary_partial / current`、ジグスタは運営劇団公式サイトで2026年の更新と住所・アクセスを確認して`primary_partial / current`とした。Studio Labo.は公式サイトの2018年公演と住所まで確認したが現行・閉館を確定できず`primary_partial / unknown`、NRCCホールは公式サイト・運営者を特定できず`official_not_found`とした。
+- Wave 7で確認した一次情報は、`db-dancebox.org`、`ycam.jp`、`tne-ehime.org`、`atelierpenta.jp`、`himeyuri.or.jp`、`peace-hall.jimdofree.com`、`zigzigstrong.com`、`unitlabo6.wixsite.com`。LaSens値や検索スニペットを公式欄へ転記していない。
+- Wave 7 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 7 verification: `npm run audit-small-theaters`はrows 594、verified_primary 30、primary_partial 21、official_not_found 3、ambiguous 1、blocked 1、pending 538、errors 0。`npm run audit`は既存データerrors 0。
+- Wave 8では`LASENS-3440`、`LASENS-659`、`LASENS-3595`、`LASENS-439`、`LASENS-584`、`LASENS-227`、`LASENS-2573`、`LASENS-2419`の8件を処理した。
+- エル・パーク仙台 スタジオホール、あきた芸術村 小劇場、パストラルかぞ 小ホール、浦安市民プラザWave101 多目的小ホール、月潟稽古場を`verified_primary / current`と確認した。浦安市民プラザは旧ページの概数ではなく2026年1月改訂公式利用案内の133.97平方メートルを記録した。
+- 渡辺源四郎商店しんまち本店2階稽古場と両国・エアースタジオは2026年公演を公式情報で確認したが貸館比較項目が不足するため`primary_partial / current`とした。スペース・オルタは運営者公式サイトで現行貸出とキャパ120を確認したが、専用公式URLがサーバー初期画面になっているため`primary_partial / current`とし、LaSensの167席は転記していない。
+- Wave 8で確認した一次情報は、`nabegen.com`、`sendai-l.jp`、`warabi.or.jp`、`city.kazo.lg.jp`、`urayasu-zaidan.or.jp`、`airstudio.jp`、`kanagawa.seikatsuclub.coop`、`nakajimadrive.wixsite.com`、`niigata-kankou.or.jp`。LaSens値や検索スニペットを公式欄へ転記していない。
+- Wave 8 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 8 verification: `npm run audit-small-theaters`はrows 594、verified_primary 35、primary_partial 24、official_not_found 3、ambiguous 1、blocked 1、pending 530、errors 0。`npm run audit`は既存データerrors 0。
+- Wave 9では`LASENS-619`、`LASENS-2476`、`LASENS-2478`、`LASENS-4092`、`LASENS-2482`、`LASENS-2547`、`LASENS-348`、`LASENS-2436`の8件を処理した。
+- 犀の角、シアターココ、津あけぼの座、朗読専用劇場rLabo.、in→dependent theatre 2ndを`verified_primary / current`、白子ノ劇場と狂夏の市場劇場を`verified_primary / closed`と確認した。白子ノ劇場は運営団体公式サイトの「最後の公演」と新拠点移行、狂夏の市場劇場は主宰者公式サイトの2024年3月末閉館表記を根拠にした。
+- 利賀創造交流館は施設公式サイトと県公式管理評価で現行施設を確認したが、LaSensの「創造交流館練習ホール」に対応する個別名称・客席・面積・料金・利用条件を特定できないため`primary_partial / current`とした。
+- Wave 9で確認した一次情報は、`togapk.net`、`pref.toyama.jp`、`sainotsuno.org`、`uniquepoint.org`、`shirokono.org`、`theaterkoko.amebaownd.com`、`akebonoza.net`、`rlabo.jp`、`itheatre.jp`、`kyoukanoichiba.jimdofree.com`。LaSens値や検索スニペットを公式欄へ転記していない。
+- Wave 9 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 9 verification: `npm run audit-small-theaters`はrows 594、verified_primary 42、primary_partial 25、official_not_found 3、ambiguous 1、blocked 1、pending 522、errors 0。`npm run audit`は既存データerrors 0。`git diff --check`は問題なし。
+- Wave 10では`LASENS-223`、`LASENS-2633`、`LASENS-2740`、`LASENS-2587`、`LASENS-262`、`LASENS-3249`、`LASENS-4078`、`LASENS-3959`の8件を処理した。
+- アクロス福岡 円形ホール、諫早独楽（コマ）劇場、沖縄市民小劇場あしびなー、アートコミュニティスペースKAIKA、八戸ポータルミュージアム はっち シアター2、THEATERえびすを`verified_primary / current`、キンダースペースアトリエを`verified_primary / closed`と確認した。
+- KAIKAは運営団体公式施設情報に加え、京都大学公式の2026年度催事で同名称・同住所の現行利用を確認した。キンダースペースアトリエは運営劇団公式記事が西川口の同住所施設を2025年末で閉鎖すると明記している。
+- アトリエ阿呆船は運営劇団公式サイトで同住所を活動拠点とする記載と2025年公演を確認したが、2026年の阿呆船での催事または閉館告知を確認できないため`primary_partial / unknown`とし、LaSensの閉館表示を転記していない。
+- Wave 10で確認した一次情報は、`acros.or.jp`、`komagekijou.com`、`koza-ashibina.com`、`ftas.info`、`gsm.kyoto-u.ac.jp`、`fushokuijingai.wixsite.com`、`hacchi.jp`、`tohokuebisu.com`、`kinderspacecom.wordpress.com`。LaSens値や検索スニペットを公式欄へ転記していない。
+- Wave 10 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 10 verification: `npm run audit-small-theaters`はrows 594、verified_primary 49、primary_partial 26、official_not_found 3、ambiguous 1、blocked 1、pending 514、errors 0。`npm run audit`は既存データerrors 0。`git diff --check`は問題なし。run ledger validationは`OK (active)`。
+- Wave 11では`LASENS-583`、`LASENS-611`、`LASENS-501`、`LASENS-568`、`LASENS-2440`、`LASENS-592`、`LASENS-2365`、`LASENS-2442`の8件を処理した。
+- 浦安市民プラザ Wave101 多目的大ホール、APOCシアター、STスポット、富山県民小劇場ORBIS、上土劇場、野外劇場「有度」、THEATRE E9 KYOTOを`verified_primary / current`、ナビロフトを`verified_primary / closed`と確認した。
+- Wave101は2026年1月改訂の公式利用案内にある298.81平方メートル・最大300人、ORBISは公式施設案内の舞台・客席約200平方メートル・最大200人と2026年7月の料金改定、ナビロフトは運営者公式の2021年閉館・設備撤去・建物返却の記載を根拠にした。野外劇場「有度」は公式施設情報で400席を確認したが、一般貸館の料金・利用条件は公開確認できず空欄にした。
+- Wave 11で確認した一次情報は、`urayasu-zaidan.or.jp`、`apoc-theater.com`、`stspot.jp`、`bunka-toyama.jp`、`age-geki.jp`、`spac.or.jp`、`naviloft1994.wixsite.com`、`askyoto.or.jp`。LaSens値や検索スニペットを公式欄へ転記していない。
+- Wave 11 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 11 verification: `npm run audit-small-theaters`はrows 594、verified_primary 57、primary_partial 26、official_not_found 3、ambiguous 1、blocked 1、pending 506、errors 0。`npm run audit`は既存データerrors 0。`git diff --check`は問題なし。run ledger validationは`OK (active)`。
+- Wave 12では`LASENS-374`、`LASENS-2466`、`LASENS-228`、`LASENS-3297`、`LASENS-3931`、`LASENS-2539`、`LASENS-658`、`LASENS-665`の8件を処理した。
+- KOKO PLAZA エクスプレス・ココ200、江原河畔劇場、あじびホール、国立劇場おきなわ 小劇場、新世界ZAZA POCKETS、せんだい演劇工房10-BOX box-1、彩の国さいたま芸術劇場 小ホールを`verified_primary / current`、サンピアザ劇場を`verified_primary / closed`と確認した。
+- 江原河畔劇場はLaSensの「湖畔」表記を公式名称へ訂正した。あじびホールは公式施設概要の通常100席と現行設営資料の最大120席を分離し、10-BOX box-1は2026年4月更新の公式利用案内にある117平方メートルと60・80席構成を記録した。サンピアザ劇場は運営会社公式の2022年3月31日営業終了・当面休館を根拠にし、再開を推測していない。
+- Wave 12で確認した一次情報は、`kokoplaza.net`、`ebara-riverside.com`、`faam.city.fukuoka.lg.jp`、`nt-okinawa.or.jp`、`vitalartbox.com`、`arc-city.com`、`gekito.jp`、`ssbj.jp`、`saf.or.jp`。LaSens値や検索スニペットを公式欄へ転記していない。
+- Wave 12 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 12 verification: `npm run audit-small-theaters`はrows 594、verified_primary 65、primary_partial 26、official_not_found 3、ambiguous 1、blocked 1、pending 498、errors 0。`npm run audit`は既存データerrors 0。`git diff --check`は問題なし。run ledger validationは`OK (active)`。
+- Wave 13では`LASENS-358`、`LASENS-4335`、`LASENS-231`、`LASENS-621`、`LASENS-2363`、`LASENS-257`、`LASENS-388`、`LASENS-3436`の8件を処理した。
+- Asagiri Mist Theater、あかいくつ劇場、富山県利賀芸術公園 野外劇場、ナンジャーレ、ラブリーホール 小ホールを`verified_primary / current`、京北ホールとアトリエ劇研を`verified_primary / closed`と確認した。京北ホールは永久閉館ではなく2026年4月1日から当面の一時休業・再開未定として記録した。
+- あかいくつ劇場は公式PDFの147席、舞台128平方メートル・客席117平方メートル、2026年の予約抽選と公演を確認したが、単一面積欄へ合算しなかった。ナンジャーレは公式に大小計80脚の椅子を確認したが収容定員の明記ではないためLaSensの70席を転記していない。
+- 芸術文化観光専門職大学 実習棟小劇場「そぞろ座」は大学公式の2026年催事で現行施設を確認したが、一般貸館の可否・料金・利用条件・客席・面積を確認できないため`primary_partial / current`とした。
+- Wave 13で確認した一次情報は、`k-nw.com`、`mist-theater.com`、`doll-museum.jp`、`togapk.net`、`scot-suzukicompany.com`、`nanjare-nagoya.com`、`askyoto.or.jp`、`tsukuru-kyoto.city.kyoto.lg.jp`、`lovelyhall.com`、`at-hyogo.jp`。LaSens値や検索スニペットを公式欄へ転記していない。
+- Wave 13 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 13 verification: `npm run audit-small-theaters`はrows 594、verified_primary 72、primary_partial 27、official_not_found 3、ambiguous 1、blocked 1、pending 490、errors 0。`npm run audit`は既存データerrors 0。
+- Wave 14では`LASENS-340`、`LASENS-636`、`LASENS-615`、`LASENS-3438`、`LASENS-669`、`LASENS-412`、`LASENS-2963`、`LASENS-250`の8件を処理した。
+- 森下文化センター 多目的ホール、ジョブキタ北八劇場、仙台銀行ホール イズミティ21 小ホール、成田公民館 市民ホール、新宿 at THEATRE、川崎市アートセンター アルテリオ小劇場を`verified_primary / current`、イムズホールを`verified_primary / closed`と確認した。
+- シアター8・1サッポロ（仮称）は完成後の公式名称・住所を採用した。イズミティ21は403席と車椅子スペース5台分、成田市民ホールは206席と車椅子スペース2席分、新宿 at THEATREは通常約24席と追加時28〜30席を分離して記録し、LaSens値をそのまま転記していない。
+- 小劇場アトリエ游は施設名・住所・電話で運営者、石垣市、自治体関連公開情報を探索したが現行・閉館を確定できる公式情報を確認できず`official_not_found / unknown`とした。LaSensの閉館表示や旧二次掲載から閉館を推測していない。
+- Wave 14で確認した一次情報は、`mec.co.jp`、`kcf.or.jp`、`kita8theater.com`、`izumity21.jp`、`city.narita.chiba.jp`、`tokyocinemaunion.jp`、`kawasaki-ac.jp`。LaSens値、検索スニペット、八重山観光系の旧掲載を公式欄へ転記していない。
+- Wave 14 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 14 verification: `npm run audit-small-theaters`はrows 594、verified_primary 79、primary_partial 27、official_not_found 4、ambiguous 1、blocked 1、pending 482、errors 0。`npm run audit`は既存データerrors 0。`git diff --check`は問題なし。run ledger validationは`OK (active)`。基準6ファイルのSHA-256、branch、HEADは開始時記録から不変。
+- Wave 15では`LASENS-559`、`LASENS-3428`、`LASENS-508`、`LASENS-614`、`LASENS-2372`、`LASENS-645`、`LASENS-3344`、`LASENS-3940`の8件を処理した。
+- 利賀スタジオ、パティオ池鯉鮒 花しょうぶホール、神戸三宮シアター・エートー、北九州市ウェルとばた 中ホール、てんぶす那覇 テンブスホール、ジョブキタ北八劇場を`verified_primary / current`、MOVE FACTORYを`verified_primary / closed`と確認した。
+- 利賀スタジオは富山県公式の令和6年度指定管理評価表から377.20平方メートル・150名、花しょうぶホールは可変244〜293席、テンブスホールは通常246席・スタンディング330名・294.2平方メートルを記録した。ジョブキタ北八劇場は`LASENS-3438`と同一施設の重複索引として分離した。
+- スタジオVARIEは運営者公式サイトに名称・住所・貸出導線があるが最新日程が2018年のため`primary_partial / unknown`とし、現行・閉館を推測していない。MOVE FACTORYは施設公式Xアカウントの2026年3月末閉館・閉業告知を一次情報として採用した。
+- Wave 15で確認した一次情報は、`togapk.net`、`pref.toyama.jp`、`patio-chiryu.com`、`benriticket.wixsite.com`、`x.com/movefactory_st`、`a-to-kobe.jp`、`wel-tobata.jp`、`tenbusukan.jp`、`kita8theater.com`。LaSens値や検索スニペットを公式欄へ転記していない。
+- Wave 15 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 15 verification: `npm run audit-small-theaters`はrows 594、verified_primary 86、primary_partial 28、official_not_found 4、ambiguous 1、blocked 1、pending 474、errors 0。`npm run audit`は既存データerrors 0。`git diff --check`は問題なし。run ledger validationは`OK (active)`。基準6ファイルのSHA-256、branch、HEADは開始時記録から不変。
+- Wave 16では停止日付を2026-07-31と誤読して実行した最終処理を取り消し、PLANどおり2026-08-01 09:15 JSTまで`ACTIVE`を継続する状態へ補正した。新規施設調査・台帳データ変更は行っていない。
+- Wave 16 verification: 594件の台帳に重複source_idなし、確認済み120件、未確認474件。`verified_primary` 86、`primary_partial` 28、`official_not_found` 4、`ambiguous` 1、`blocked` 1。`npm run audit-small-theaters`と`npm run audit`はerrors 0、`git diff --check`は問題なし。
+- Wave 16 baseline comparison: branch `agent/add-competition-and-small-theater-coverage`、HEAD `1bebbfc030f421ed311ee60b9ba3f4fd58c54f27`、基準6ファイルのSHA-256は開始時記録から不変。既存会場データへは追加していない。
+- Wave 17では`LASENS-673`、`LASENS-395`、`LASENS-676`、`LASENS-550`、`LASENS-3744`、`LASENS-495`、`LASENS-461`、`LASENS-3537`の8件を処理した。
+- トークネットホール仙台 小ホール、千葉市美浜文化ホール メインホール、テアトルフォンテ ホール、メニコン シアターAoiを`verified_primary / current`と確認した。固定席・車椅子席・親子室、通常時・可変最大席を区別し、単一値へ誤って均していない。
+- スペース・イサンは同住所の現名称SPACE LFANと2026年度利用、町劇Akashi bbは2025年4月の移転後施設と2026年催事を公式運営・主催情報で確認し`primary_partial / current`とした。atelier SENTIOとOVAL THEATERは運営団体の現行公式情報まで探索したが旧施設の閉館または営業継続を一次情報で確定できず`primary_partial / unknown`とした。
+- Wave 17で確認した一次情報は、`tohoku-kyoritz.co.jp`、`city.sendai.jp`、`chiba-aw.jp`、`city.chiba.jp`、`dainanagekijo.tumblr.com`、`theatrefonte.com`、`meniconart.or.jp`、`askyoto.or.jp`、`choreographers.jcdn.org`、`thekio.co.jp`、`matigeki-akashi-solaseed.com`。LaSens値や検索スニペットを公式欄へ転記していない。
+- Wave 17 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 17 verification: `npm run audit-small-theaters`はrows 594、verified_primary 90、primary_partial 32、official_not_found 4、ambiguous 1、blocked 1、pending 466、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 18では`LASENS-538`、`LASENS-3418`、`LASENS-378`、`LASENS-2759`、`LASENS-396`、`LASENS-649`、`LASENS-328`、`LASENS-3415`の8件を処理した。
+- 那覇文化芸術劇場なはーと 小劇場、ターミナルプラザことにパトス 多目的ホール、誰も知らない劇場、千葉市美浜文化ホール 音楽ホール、Atelier Kanon B1F Atelierを`verified_primary / current`、ハーモニーホール座間 小ホールを`verified_primary / closed`と確認した。ハーモニーホール座間は永久閉館ではなく、2026年10月31日までの大規模改修による一時休館として記録した。
+- パトスは公式最大99名、誰も知らない劇場は154席と現住所、美浜文化ホール 音楽ホールは固定150席と車椅子スペース2席、Atelier Kanonは約50平方メートルを公式値として記録した。LaSensの異なる客席値、旧住所、公式にない収容数は転記していない。
+- 円頓寺Les Piliersは施設公式Facebookと2025・2026年の公演利用を確認したが、公式Facebookの取得制限により比較項目を確定できず`primary_partial / current`とした。シアターポケットは運営者公式・閉館一次情報を確認できず`official_not_found`とし、LaSensの閉館表示から閉館を推測していない。
+- Wave 18で確認した一次情報は、`nahart.jp`、`patos.concarino.or.jp`、`edward.co.jp`、`chiba-aw.jp`、`city.chiba.jp`、`gut.co.jp`、`harmony.zamashi.jp`、`facebook.com/endojilespiliers`、`bunka758.or.jp`。LaSens値や検索スニペットを公式欄へ転記していない。
+- Wave 18 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 18 verification: `npm run audit-small-theaters`はrows 594、verified_primary 96、primary_partial 33、official_not_found 5、ambiguous 1、blocked 1、pending 458、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 19では`LASENS-382`、`LASENS-356`、`LASENS-4010`、`LASENS-551`、`LASENS-279`、`LASENS-2792`、`LASENS-686`、`LASENS-3598`の8件を処理した。
+- 京都芸術センター フリースペース、豊岡ミリオン座、札幌市生涯学習センター ちえりあホール、水の里ホール・Abebisou（登米祝祭劇場）小ホール、ヨコスカ・ベイサイド・ポケットを`verified_primary / current`と確認した。
+- 京都芸術センターは一般貸館ではなくCo-programの公募・審査による原則無料提供、豊岡ミリオン座は50席と平日・休日・連続利用料金、ちえりあホールは436席と時間帯別料金、登米祝祭劇場小ホールは舞台構成時約200人、ベイサイド・ポケットは可変200〜574席と総定員850人を分けて記録した。
+- テアトルはこざきは福岡市公式の2011年基準資料で50席を確認したが、同資料の閉館注記は別施設を対象としており、現在状態を確定せず`primary_partial / unknown`とした。OZCカラビンカとBar COREDOは公式候補URLの本文取得がタイムアウトまたは502となったため`blocked`とし、LaSensの閉館表示・客席値を転記していない。
+- Wave 19で確認した一次情報は、`kac.or.jp`、`toyookamillionza.com`、`city.fukuoka.lg.jp`、`chieria.slp.or.jp`、`tome-syukusai.or.jp`、`yokosuka-arts.or.jp`。取得できなかった公式候補は`blog.livedoor.jp/ozcschool`、`barcoredo.com`として再確認対象へ残した。
+- Wave 19 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 19 verification: `npm run audit-small-theaters`はrows 594、verified_primary 101、primary_partial 34、official_not_found 5、ambiguous 1、blocked 3、pending 450、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 20では`LASENS-2361`、`LASENS-380`、`LASENS-3886`、`LASENS-436`、`LASENS-2367`、`LASENS-662`、`LASENS-270`、`LASENS-458`の8件を処理した。
+- 七ツ寺共同スタジオ、SPACE14、福岡市千代音楽・演劇練習場（パピオビールーム）大練習室、富良野演劇工場、ラゾーナ川崎プラザソルを`verified_primary / current`と確認した。七ツ寺共同スタジオは公式HTTPSの自己署名証明書エラーを確認し、同じ公式サーバーのHTTPページで貸館条件・料金を読み取った。
+- SPACE14は最大277席・客席284.3平方メートルと会場・専属技術スタッフ料金、パピオビールームは339平方メートル・約300名と用途制限、富良野演劇工場は客席302席・親子室5席と複数の区画面積、プラザソルは可動式200席と入場料・用途別料金を公式情報の単位を保って記録した。
+- 京都大学西部講堂は大学公式の現行キャンパスマップと西部講堂連絡協議会を確認したが、一般貸館情報が不足するため`primary_partial / current`とした。白鳥ホールとシアターBeフリーは公式運営者・自治体による現行・閉館情報を確認できず`official_not_found`とし、LaSensの掲載状態・客席値を転記していない。
+- Wave 20で確認した一次情報は、`nanatsudera.com`、`kyoto-u.ac.jp`、`shinsaibashi.parco.jp`、`bee-room.jp`、`engeki.furano.jp`、`plazasol.jp`。白鳥ホールは劇団公式の2010年利用、Beフリーは神戸大学震災文庫の1998年チラシまでを履歴確認に限定した。
+- Wave 20 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 20 verification: `npm run audit-small-theaters`はrows 594、verified_primary 106、primary_partial 35、official_not_found 7、ambiguous 1、blocked 3、pending 442、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 21では`LASENS-657`、`LASENS-381`、`LASENS-647`、`LASENS-301`、`LASENS-449`、`LASENS-273`、`LASENS-2545`、`LASENS-668`の8件を処理した。
+- 港文化小劇場、京都府立文化芸術会館、小劇場＋Bar「ステージプラス」、ふくふくホール、ポルトホール、横浜市磯子区民文化センター 杉田劇場、守山文化小劇場を`verified_primary / current`と確認した。
+- ふくふくホールは公式の固定席230席と車椅子席8〜10席から最大240席、守山文化小劇場は400席と車椅子席3席から合計403席を記録した。STAGE+PLUSは公式で客席数を確認できないためLaSensの50席を転記せず、ポルトホールは公開料金表が見つからないため料金欄を空欄にした。
+- Brick-oneは東京都公式の文化施設一覧で名称・住所・連絡先・公式候補URL・100人未満区分まで確認したが、施設公式サイト本文を取得できず、現行状態・正確な客席・料金等を確定しない`primary_partial / unknown`とした。LaSensの60席や検索結果の料金は公式欄へ転記していない。
+- Wave 21で確認した一次情報は、`bunka758.or.jp`、`pref.kyoto.jp`、`bungei.jp`、`stageplus.net`、`fukufukuplaza.jp`、`hokusho-u.ac.jp`、`seikatubunka.metro.tokyo.lg.jp`、`sugigeki.jp`。LaSens値や検索スニペットを公式欄へ転記していない。
+- Wave 21 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 21 verification: `npm run audit-small-theaters`はrows 594、verified_primary 113、primary_partial 36、official_not_found 7、ambiguous 1、blocked 3、pending 434、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 22では`LASENS-333`、`LASENS-517`、`LASENS-448`、`LASENS-2891`、`LASENS-274`、`LASENS-594`、`LASENS-2584`、`LASENS-3836`の8件を処理した。
+- 京都市東山青少年活動センター 創造活動室、Ｔ・Ｂホール、ぽんプラザホール、横浜にぎわい座 芸能ホール、瑞穂文化小劇場、TEMPO HARBOR THEATERを`verified_primary / current`と確認した。
+- 東山青少年活動センターは9.7m×15mと椅子100脚を面積・定員へ推計せず、横浜にぎわい座は指定管理者公式の391席と横浜市公式の410席の不一致を保持して現行座席表の391席を比較値にした。瑞穂文化小劇場は通常349席と車椅子席2席から合計351席、TEMPO HARBOR THEATERは客席436席と車椅子6席から合計442席を記録した。
+- マルチスペース エフは札幌市公式資料で2022年度から2023年初頭の利用履歴まで確認したが、旧公式候補URLが404で閉館一次情報を確認できないため`primary_partial / unknown`とした。ブローダーハウスは世田谷区公式観光資料の施設名・住所・定員52名を記録した一方、旧公式候補ドメインの転用後に運営者一次情報を確認できないため`primary_partial / unknown`とした。
+- Wave 22で確認した一次情報は、`ys-kyoto.org`、`takarabelmont.co.jp`、`pomplazahall.jp`、`city.sapporo.jp`、世田谷区公式観光資料、`nigiwaiza.yafjp.org`、`city.yokohama.lg.jp`、`bunka758.or.jp`、`tempo-harbor-theater.com`。LaSens値や検索スニペットを公式欄へ転記していない。
+- Wave 22 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 22 verification: `npm run audit-small-theaters`はrows 594、verified_primary 119、primary_partial 38、official_not_found 7、ambiguous 1、blocked 3、pending 426、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 23では`LASENS-422`、`LASENS-391`、`LASENS-3442`、`LASENS-595`、`LASENS-656`、`LASENS-556`、`LASENS-355`、`LASENS-457`の8件を処理した。
+- BUoY、横浜にぎわい座 のげシャーレ、西文化小劇場、甘棠館Show劇場を`verified_primary / current`、旧NTT夢天神ホールに対応する現レソラホールと旧TH HALLに対応する現TH-R HALLを`verified_primary / renamed`として確認した。
+- レソラホールは旧索引住所と異なる現住所、基本252席・条件付き最大304席、285平方メートルを記録し、TH-R HALLは運営会社公式の2020年旧施設閉店・2021年復活、最大350人、客席床117平方メートルを根拠にした。TH-R HALLの椅子席は公式ページ内で160席と80席が不一致のため比較値に採用していない。
+- メディアMIXホールはNTT公式の2007年開催資料と現入居企業の同建物利用まで確認したが、施設運営・閉館の一次情報を確定できず`primary_partial / unknown`とした。ラグリグラ劇場は公式サイト・公式PDFを特定できず`official_not_found / unknown`とし、LaSensの閉館・掲載状態、客席、面積、アクセスを転記していない。
+- Wave 23で確認した一次情報は、`resolatenjin.jp`、`group.ntt`、`sweb.co.jp`、`buoy.or.jp`、`nigiwaiza.yafjp.org`、`bunka758.or.jp`、`ldandk.com`、`thrhall.jp`、`plaza-kantoukan.jp`、`showman.jp`。LaSens値や検索スニペットを公式欄へ転記していない。
+- Wave 23 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 23 verification: `npm run audit-small-theaters`はrows 594、verified_primary 125、primary_partial 39、official_not_found 8、ambiguous 1、blocked 3、pending 418、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 24では`LASENS-3310`、`LASENS-616`、`LASENS-637`、`LASENS-3763`、`LASENS-3024`、`LASENS-459`、`LASENS-2139`、`LASENS-383`の8件を処理した。
+- Rental Space 88、横浜市開港記念会館 講堂、千種文化小劇場、アカルスタジオ Aスタジオ、枝光本町商店街 アイアンシアター、レッドベリースタジオ、cafe&bar 木星劇場、急な坂スタジオ ホールを`verified_primary`と確認した。旧Cafe&Diner Offzaは同住所のRental Space 88への改称として`renamed`、残る7件は`current`とした。
+- Offzaの旧公式と新公式で2026年の改称後貸出、開港記念会館の481名・582平方メートル、千種文化小劇場の車椅子席を含む251席、アカルスタジオの公演時75席・最大アクティングエリア70平方メートル、木星劇場の40〜55人、急な坂スタジオの50人・240平方メートルを確認した。アイアンシアターは常設客席なし、レッドベリースタジオは固定客席なし・30〜60名として、可変客席を固定席数へ読み替えていない。
+- Wave 24で確認した一次情報は、`rental-space88.com`、`offza-musical.com`、`kaikokinenkaikan.com`、`bunka758.or.jp`、`akaru-project.co.jp`、`r.goope.jp/irontheater`、`akai-mi.com`、`mokusei-cafe.com`、`kyunasaka.jp`。LaSens値や検索スニペットを公式欄へ転記していない。
+- Wave 24 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 24 verification: `npm run audit-small-theaters`はrows 594、verified_primary 133、primary_partial 39、official_not_found 8、ambiguous 1、blocked 3、pending 410、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 25では`LASENS-678`、`LASENS-2428`、`LASENS-418`、`LASENS-4361`、`LASENS-1990`、`LASENS-265`、`LASENS-638`、`LASENS-589`の8件を処理した。
+- 名古屋市中川文化小劇場、西鉄ホール、CBGKシブゲキ!!、厚木市文化会館 小ホール、名古屋市中村文化小劇場、ウイングフィールドを`verified_primary / current`と確認した。中川文化小劇場は車椅子席4席を含む446席、西鉄ホールはロールバック席286席と補助席181席の最大467席、CBGKは242席と車椅子スペース2席から比較値244、厚木市文化会館は376席と車椅子席6席から382席、中村文化小劇場は車椅子席2席を含む350席、ウイングフィールドは公式の約100名を記録した。
+- 旭川銀座小劇場シアターロビンは施設公式Xと運営劇団の2026年公演情報から現行利用を確認したが、客席・面積・料金・アクセス・利用条件を施設一次情報で確定できないため`primary_partial / current`とした。アトリエ S-paceは旧公式候補URLが利用できず、現行施設公式または運営者公式情報を特定できないため`official_not_found / unknown`とし、二次情報の客席値を転記していない。
+- Wave 25で確認した一次情報は、`bunka758.or.jp`、`inf.nishitetsu.jp`、`x.com/teater_robin`、`shiberiakichi.com`、`cbgk.jp`、`atsugi-bunka.jp`、`wing-f.main.jp`。LaSens値や検索スニペットを公式欄へ転記していない。
+- Wave 25 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 25 verification: `npm run audit-small-theaters`はrows 594、verified_primary 139、primary_partial 40、official_not_found 9、ambiguous 1、blocked 3、pending 402、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 26では`LASENS-239`、`LASENS-593`、`LASENS-282`、`LASENS-2002`、`LASENS-663`、`LASENS-573`、`LASENS-302`、`LASENS-470`の8件を処理した。
+- 福岡市男女共同参画推進センター・アミカス ホール、札幌市こどもの劇場やまびこ座 ホール、溝ノ口劇場、天白文化小劇場、札幌市教育文化会館 小ホールを`verified_primary / current`、うめだ花月と福岡市民会館 小ホールを`verified_primary / closed`と確認した。
+- アミカスは304名・376.8平方メートル、やまびこ座は収容300人と車椅子スペース10台、溝ノ口劇場は椅子席最大80席・立見最大120名、天白文化小劇場は車椅子席4席を含む350席、教育文化会館小ホールは360席を公式値として記録した。うめだ花月は運営会社公式の2003年開場・2008年終了、福岡市民会館は福岡市公式の354席・2025年3月23日閉館を根拠にした。
+- CoredoはLaSensの南麻布住所、現行Bar COREDO公式の赤坂住所、旧Theater&Company COREDOの公演住所が一致せず、運営者一次情報から同一性・移転・閉館関係を解けないため`ambiguous / unknown`とし、LaSensの閉館表示を転記していない。
+- Wave 26で確認した一次情報は、`city.fukuoka.lg.jp`、`koguyama.jp`、`mizogeki.com`、`bunka758.or.jp`、`yoshimoto.co.jp`、`kyobun.org`。LaSens値や検索スニペットを公式欄へ転記していない。
+- Wave 26 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 26 verification: `npm run audit-small-theaters`はrows 594、verified_primary 146、primary_partial 40、official_not_found 9、ambiguous 2、blocked 3、pending 394、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 27では`LASENS-286`、`LASENS-1619`、`LASENS-675`、`LASENS-652`、`LASENS-2738`、`LASENS-3397`、`LASENS-2530`、`LASENS-232`の8件を処理した。
+- WAKABACHO WHARF、名古屋市東文化小劇場、北九州芸術劇場 小劇場、札幌市民交流プラザ クリエイティブスタジオ、横浜赤レンガ倉庫1号館 3Fホールの現行利用と、d-倉庫、ウルトラマーケットの閉館を運営者・自治体・指定管理者の公式情報で確認した。
+- 札幌市民交流プラザはシアター形式約300人と移動観覧席175席・貸出椅子最大228脚、横浜赤レンガ倉庫は最大444人と椅子150〜350脚、閉壁時376平方メートルと開壁時428平方メートルを単一値へ均さず注記した。DDD AOYAMA CROSS THEATERは運営ブランド公式の2026年公演で現行利用を確認したが、会場公式サイトへ到達できず比較項目を確認できないため`primary_partial / current`とした。
+- Wave 27で確認した一次情報は、`d-1986.com`、`wharf-site.amebaownd.com`、`bunka758.or.jp`、`banzai-ichiza.com`、`city.osaka.lg.jp`、`q-geki.jp`、`sapporo-community-plaza.jp`、`ddd-dance.com`、`akarenga.yafjp.org`。LaSens値や検索スニペットを公式欄へ転記していない。
+- Wave 27 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 27 verification: `npm run audit-small-theaters`はrows 594、verified_primary 153、primary_partial 41、official_not_found 9、ambiguous 2、blocked 3、pending 386、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 28では`LASENS-655`、`LASENS-699`、`LASENS-2878`、`LASENS-2549`、`LASENS-654`、`LASENS-331`、`LASENS-677`、`LASENS-3602`の8件を処理した。
+- 南文化小劇場、湾岸劇場 博多扇貝、市民劇場ヲタル座、熱田文化小劇場を`verified_primary / current`、旧オーバルシアターに対応するLOXODONTA BLACKを`verified_primary / renamed`、DRESS AKIBA HALLの後継Akihabara MARZを`verified_primary / closed`として確認した。
+- ヲタル座は126席と立見50名の計176名・244.04平方メートルを区別して記録した。博多扇貝は最大長14.5m・最大幅7.3mと座布団80枚を確認したが、不整形空間の面積や定員へ推計していない。川崎H&Bシアターは川崎市の市民活動ポータルで運営劇団の過去活動まで確認したが現行・閉館一次情報を確定できず`primary_partial / unknown`、シアターYOROKOBIは公式Instagram告知候補の本文取得制限により`blocked / unknown`とした。
+- Wave 28で確認した一次情報は、`bunka758.or.jp`、`thekio.co.jp`、`shop.thekio.co.jp`、`hakataohgai.com`、`wingbay-otaru.co.jp`、`dress-tokyo.com`、`ouennavi-kawasaki.com`、施設運営者公式Instagram。LaSens値、検索スニペット、二次サイトの閉館・客席値を公式欄へ転記していない。
+- Wave 28 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 28 verification: `npm run audit-small-theaters`はrows 594、verified_primary 159、primary_partial 42、official_not_found 9、ambiguous 2、blocked 4、pending 378、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 29では`LASENS-281`、`LASENS-288`、`LASENS-491`、`LASENS-672`、`LASENS-537`、`LASENS-547`、`LASENS-289`、`LASENS-2999`の8件を処理した。
+- コンカリーニョ、北文化小劇場、シアターZOO、相模女子大学グリーンホール 多目的ホールを`verified_primary / current`、相鉄本多劇場を`verified_primary / closed`と確認した。コンカリーニョは通常173席・最大242席・約225平方メートル、北文化小劇場は固定297席と車椅子席2席、シアターZOOは90席、グリーンホール多目的ホールは基本240名・最大300名・350平方メートルを、公式の構成差を保って記録した。
+- Duo STAGE BBsは旧公式サイトが応答するものの現況を確定できず、シアターぷらっつ江坂は旧運営者の現拠点が別住所で閉館明記を確認できず、East Gallery旧B1Fは現公式フロア案内との関係を解けないため、いずれも`primary_partial / unknown`とした。LaSensの閉館表示、旧BFの面積、二次サイトの客席値を公式欄へ転記していない。
+- Wave 29で確認した一次情報は、`concarino.or.jp`、`djdj.co.jp`、`sotetsu.co.jp`、`bunka758.or.jp`、`himawari.net`、`h-paf.ne.jp`、`eastgallery.co.jp`、`hall-net.or.jp`。検索スニペットは候補発見だけに用い、台帳値は各公式ページ・公式PDFの本文確認範囲に限定した。
+- Wave 29 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 29 verification: `npm run audit-small-theaters`はrows 594、verified_primary 164、primary_partial 45、official_not_found 9、ambiguous 2、blocked 4、pending 370、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 30では`LASENS-667`、`LASENS-283`、`LASENS-2987`、`LASENS-692`、`LASENS-3564`、`LASENS-674`、`LASENS-444`、`LASENS-3896`の8件を処理した。
+- 名東文化小劇場、苫小牧演劇堂、緑文化小劇場、平原通り小劇場を`verified_primary / current`、プラネットホール（大阪府立青少年会館）を`verified_primary / closed`と確認した。名東は356席、苫小牧演劇堂はフリースペース200名・小劇場70名、緑は446席、旧プラネットホールは140名を公式施設・自治体資料から記録した。
+- 長者スタジオは公式サイトで40人・約42平方メートル、料金、アクセス、利用条件を確認したが、更新日とコロナ禍特別料金の適用年が不明なため`primary_partial / current`とした。デビューファクトリーとEggman tokyo eastは運営者公式の現況・閉館一次情報を確認できず`official_not_found`とし、LaSensの閉館表示、出演者サイト、二次索引だけで閉館を確定していない。
+- Wave 30で確認した一次情報は、`bunka758.or.jp`、`tomakomaiengekido.jimdofree.com`、`choja.info`、`pref.osaka.lg.jp`、`tokachino.com`。検索スニペットは候補発見だけに用い、台帳値は各公式ページ・公式PDFの本文確認範囲に限定した。
+- Wave 30 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 30 verification: `npm run audit-small-theaters`はrows 594、verified_primary 169、primary_partial 46、official_not_found 11、ambiguous 2、blocked 4、pending 362、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 31では`LASENS-300`、`LASENS-373`、`LASENS-299`、`LASENS-3394`、`LASENS-599`、`LASENS-671`、`LASENS-580`、`LASENS-2711`の8件を処理した。
+- 糀ホールと池袋西口公園野外劇場 グローバルリング シアターを`verified_primary / current`、ワッハホールを`verified_primary / closed`と確認した。糀ホールは公式利用案内の標準142席、グローバルリングは舞台約85平方メートル・料金・アクセス・利用規程、ワッハホールは大阪府公式の平成22年度廃止と307席を記録した。
+- from scratchとよしもとrise-1シアターは運営会社・よしもとの公式発行情報で過去の施設名・客席を確認したが現況を確定できず`primary_partial / unknown`とした。Free Space カンバスは旧公式候補へ到達できず`blocked`、フラワー劇場とGEKI地下リバティは運営者公式一次情報を確認できず`official_not_found`とし、LaSensの閉館表示を確定値にしていない。
+- Wave 31で確認した一次情報は、`mmjp.or.jp/kouji-ya/cozyhall`、`atpress.ne.jp/news/282358`（株式会社グラフィアーレ発行）、`lpm.yoshimoto.co.jp`、`pref.osaka.lg.jp`、`globalring-theatre.com`。検索結果と第三者サイトは候補発見・反証確認だけに用い、公式欄へ転記していない。
+- Wave 31 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 31 verification: `npm run audit-small-theaters`はrows 594、verified_primary 172、primary_partial 48、official_not_found 13、ambiguous 2、blocked 5、pending 354、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 32では`LASENS-291`、`LASENS-3515`、`LASENS-222`、`LASENS-3413`、`LASENS-341`、`LASENS-2014`、`LASENS-2895`、`LASENS-697`の8件を処理した。
+- 大阪市立阿倍野区民センター 小ホール、一心寺シアター倶楽、音太小屋 2階「でん」を`verified_primary / current`、Hall Mixaを`verified_primary / closed`と確認した。阿倍野区民センターは公式302名、音太小屋は約60平方メートル・現行料金と予約条件、Hall Mixaは公式閉館日2026年1月18日と講談社公式記事の144席を記録した。一心寺シアター倶楽はトライアウト利用の60席程度を通常劇場定員へ流用せず、LaSensの278席も転記していない。
+- GO GO Theater、jagaimo劇場、JOYJOYSTATIONは同住所の現行公式施設を確認したが、各旧名称との改称・承継・2劇場の対応関係を一次情報で解けないため`ambiguous`とした。ゑびす座はサミー戎プラザと運営会社公式IRまで探索したが劇場の公式閉館告知を特定できず`official_not_found`とし、LaSensの閉館表示を確定値にしていない。
+- Wave 32で確認した一次情報は、`abeno-cc.net`、`mixalivetokyo.com`、`cstation.kodansha.co.jp`、`isshinji.net`、`nanashi.tokyo`、`eonet.ne.jp/~netagoya`、`page.line.me/329udwal`、`segasammy.co.jp`。検索結果と第三者記事は候補発見・反証確認だけに用い、公式欄へ転記していない。
+- Wave 32 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 32 verification: `npm run audit-small-theaters`はrows 594、verified_primary 176、primary_partial 48、official_not_found 14、ambiguous 5、blocked 5、pending 346、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 33では`LASENS-624`、`LASENS-384`、`LASENS-365`、`LASENS-385`、`LASENS-364`、`LASENS-386`、`LASENS-314`、`LASENS-387`の8件を処理した。
+- 渋谷La.mama、近鉄アート館、B1F LIVE SPACE HALOT、LE DECO 3F・5Fを`verified_primary / current`、京橋花月と近鉄小劇場を`verified_primary / closed`と確認した。La.mamaは最大スタンディング230名、近鉄アート館は三面舞台約322席・約324平方メートル、HALOTは着席100名・82平方メートル、LE DECO 3F・5Fは各103.72平方メートルを公式情報から記録した。
+- 劇場マジックランプは大阪21世紀協会の公式事業ページでNPO法人名を確認したが、現行案内または閉館告知を確認できないため`primary_partial / unknown`とした。LaSensの閉館表示や第三者サイトの貸出停止記述は公式欄へ転記していない。
+- Wave 33で確認した一次情報は、`yoshimoto.co.jp`、`news.yoshimoto.co.jp`、`lamama.net`、`kintetsuartkan.jp`、`kintetsu-g-hd.co.jp`、`lapin-et.com`、`ledeco.net`、`osaka21.or.jp`。検索結果とLaSens値は候補発見・差異確認だけに用い、台帳値は各公式ページ・公式PDFの本文確認範囲に限定した。
+- Wave 33 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 33 verification: `npm run audit-small-theaters`はrows 594、verified_primary 183、primary_partial 49、official_not_found 14、ambiguous 5、blocked 5、pending 338、errors 0。`npm run audit`は既存データerrors 0。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 34では`LASENS-693`、`LASENS-2022`、`LASENS-467`、`LASENS-691`、`LASENS-554`、`LASENS-633`、`LASENS-623`、`LASENS-648`の8件を処理した。
+- LEFKADA新宿と吹田市文化会館 メイシアター 中ホールを`verified_primary / current`、堺市民会館 小ホールを`verified_primary / closed`と確認した。LEFKADAは座席80人・スタンディング120人、メイシアター中ホールは通常492席・アリーナ最大622席、旧堺市民会館小ホールは256席を公式情報から記録した。
+- 浄土宗應典院 本堂は寺院公式で2026年の主催催事を確認したが、2020年6月から一般利用を終了しているため`primary_partial / current`とし、一般貸館候補としては利用不可と注記した。江坂スペース・シアター、Live theater 間～まほろ～、MAKOTOシアター銀座、MODAPOLITICA 2Fは運営者公式の現行案内・閉館告知を確認できず`official_not_found`とし、LaSensの閉館表示を確定値にしていない。
+- Wave 34で確認した一次情報は、`lefkada.jp`、`city.sakai.lg.jp`、`outenin.com`、`maytheater.jp`、`city.suita.osaka.jp`、`city.minato.tokyo.jp`。検索結果と第三者記事は候補発見・反証確認だけに用い、台帳値は各公式ページ・公式PDFの本文確認範囲に限定した。
+- Wave 34 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 34 verification: `npm run audit-small-theaters`はrows 594、verified_primary 186、primary_partial 50、official_not_found 18、ambiguous 5、blocked 5、pending 330、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 35では`LASENS-390`、`LASENS-3306`、`LASENS-644`、`LASENS-425`、`LASENS-473`、`LASENS-2020`、`LASENS-3612`、`LASENS-431`の8件を処理した。
+- 吹田市文化会館 メイシアター 小ホール、nakano f、世界館、OFF・OFFシアター、聖天通劇場を`verified_primary / current`と確認した。メイシアター小ホール156席、nakano fの公演時40人・47.07平方メートル、世界館の固定120席・移動84席を合わせた204席、聖天通劇場29人を公式情報から記録し、料金・アクセス・利用条件URLも確認した。OFF・OFFシアターは2026年8月以降の公演と2025年8月改訂使用規定を確認したが、公式客席定員を確認できないためLaSensの100席を転記していない。
+- 精華小劇場は大阪市公式資料で旧校舎内の劇場整備と現敷地の取り壊し予定を確認して`primary_partial / closed`としたが、閉館日と200席は一次資料で確認できず空欄を維持した。ONE'S STUDIOは劇団公式のアトリエ案内までを`primary_partial / unknown`、ORIBE HALLは旧公式候補ドメインに期限切れドメインSEO文言が混在し運営者一次情報で閉館・改称関係を解けないため`ambiguous / unknown`とした。
+- Wave 35で確認した一次情報は、`maytheater.jp`、`nakanof.jp`、`theater-sekaikan.com`、`honda-geki.com`、`city.osaka.lg.jp`、`gekidan-ichinokai.com`、`shoutendori-theater.com`。LaSens値、検索結果スニペット、第三者サイトの閉館表記は公式欄へ転記していない。
+- Wave 35 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 35 verification: `npm run audit-small-theaters`はrows 594、verified_primary 191、primary_partial 52、official_not_found 18、ambiguous 6、blocked 5、pending 322、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 36では`LASENS-3769`、`LASENS-434`、`LASENS-689`、`LASENS-4046`、`LASENS-305`、`LASENS-441`、`LASENS-562`、`LASENS-443`の8件を処理した。
+- 扇町ミュージアムキューブ、Paperback Studio、大阪市立芸術創造館 大練習室を`verified_primary / current`、船場サザンシアターを`verified_primary / closed`と確認した。扇町ミュージアムキューブは最大のCUBE01について251席・約257.4平方メートル、Paperback Studioは35.64平方メートル、大阪市立芸術創造館 大練習室は最大126席・180.2平方メートルを公式情報から記録した。
+- pit北／区域は運営団体名義で更新された外部プロフィールの2015年12月31日閉館表記まで確認したが運営者公式サイトを取得できないため`primary_partial / closed`、plan-Bは2027年再開予定ながら現時点は休止中・一般貸出再開予定なしのため`primary_partial / current`とした。pamplemousseと都住創センターは運営者による現行案内・閉館告知を特定できず`official_not_found`とし、LaSensの閉館表示や客席を確定値にしていない。
+- Wave 36で確認した一次情報は、`omcube.jp`、`sembasazan.exblog.jp`（運営者公式ブログ）、`paperbackstd.com`、`geijutsusozokan.jp`、`city.osaka.lg.jp`、`unnameablespace-planb.com`。`stage.corich.jp`のpit北／区域ページは東京バビロン名義更新の補助資料として扱い、`verified_primary`にはしていない。
+- Wave 36 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 36 verification: `npm run audit-small-theaters`はrows 594、verified_primary 195、primary_partial 54、official_not_found 20、ambiguous 6、blocked 5、pending 314、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 37では`LASENS-2430`、`LASENS-462`、`LASENS-2432`、`LASENS-455`、`LASENS-4105`、`LASENS-553`、`LASENS-414`、`LASENS-2004`の8件を処理した。
+- R’sアートコート、日本橋Pollux Theater、SCOOLを`verified_primary / current`、難波サザンシアターを`verified_primary / closed`、旧てあとるらぽうから改称したRoute Theaterを`verified_primary / renamed`と確認した。R’sアートコートは最大170名と2026年施行料金・使用規則、Route Theaterは通常60席・補助席込み最大85席、Pollux Theaterは着席70名・立見120名を公式情報から記録した。
+- RAFTは施設公式サイト本文が502で取得できなかったが、公式ショーケースサイトの2026年開催と同住所・連絡先、東京都公式文化施設一覧の公式URL・100人未満区分を確認し`primary_partial / current`とした。道頓堀ZAZA HOUSEとPOCKET'Sは運営者公式URLが現住所の新世界ZAZAへ更新されている一方、旧道頓堀住所との閉館・移転・改称関係を現行公式本文だけで確定できないため`ambiguous / unknown`とし、二次記事の閉館日や旧客席数を公式欄へ転記していない。
+- Wave 37で確認した一次情報は、`ro-on.tokyo`、`raftweb.info`、`raftball.info`、東京都生活文化局公式資料、`sembasazan.exblog.jp`、`route-theater.com`、`pollux-theater.com`、`scool.jp`、`vitalartbox.com/zaza`。LaSens値や検索スニペットを公式欄へ転記していない。
+- Wave 37 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 37 verification: `npm run audit-small-theaters`はrows 594、verified_primary 200、primary_partial 55、official_not_found 20、ambiguous 8、blocked 5、pending 306、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 38では`LASENS-394`、`LASENS-476`、`LASENS-293`、`LASENS-219`、`LASENS-496`、`LASENS-707`、`LASENS-1998`、`LASENS-504`の8件を処理した。
+- 神楽坂セッションハウス、space EDGE Space A、SPACE BLANZ B1F、高円寺Studio K スタジオ2を`verified_primary / current`と確認した。神楽坂セッションハウスは100名前後・131平方メートル、Space Aは75平方メートル、Studio Kは公式約100席を採用した。space EDGEは2025年1月から建物工事で貸出一時休止中、再開目途約2年であることを注記した。
+- 未知座小劇場は公式サイトで同住所と過去公演を確認したが現行運営を確定できず`primary_partial / unknown`、SPACE107は運営者公式の閉館告知を特定できず`official_not_found`、SPACE雑遊とSPACE梟門は旧公式候補ドメインが証明書不一致・設定エラーまたは404となるため`blocked`とした。二次索引の閉館表示・客席数は公式欄へ転記していない。
+- Wave 38で確認した一次情報は、`michiza.officez.jp`、`session-house.net`、`space-edge.jp`、`studioblanz.wixsite.com`、`kobayashi-yk.com`。`zatsuyu.com`は公式候補として直接到達を試みたが本文を取得できず、確認不能値を空欄のまま保持した。
+- Wave 38 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 38 verification: `npm run audit-small-theaters`はrows 594、verified_primary 204、primary_partial 56、official_not_found 21、ambiguous 8、blocked 7、pending 298、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 39では`LASENS-571`、`LASENS-1986`、`LASENS-507`、`LASENS-4012`、`LASENS-3801`、`LASENS-514`、`LASENS-4367`、`LASENS-521`の8件を処理した。
+- 中野Studio twl、STUDIO ZAP!、TACCS1179、THEATER BRATSを`verified_primary / current`と確認した。STUDIO ZAP!は補助席込み51席、TACCS1179は約140平方メートル、2026年リニューアル後のTHEATER BRATSは固定71席と通路可動9席の計80席を公式情報から記録した。
+- studio杭とTB STUDIOは2026年更新または現行公式サイトでレンタル利用を確認したが、客席・面積・料金・利用条件の公開値が不足するため`primary_partial / current`、studio 青猫は公式サイトが応答するものの更新が2024年までで旧利用案内も404のため`primary_partial / unknown`とした。STUDIO・TAKATAKABOON!はLaSens掲載の旧公式候補が404で運営者公式の閉館告知にも到達できず`blocked`とし、二次索引の閉館表示・50席を公式欄へ転記していない。
+- Wave 39で確認した一次情報は、`studiotwl.com`、`studio-zap.jimdofree.com`、`studio-kui.tokyo`、`aoneko.tokyo`、`haikyo.co.jp`、`theater-tb.studio.site`、`theaterbrats.com`。`home.interlink.or.jp/~staging/`は旧公式候補として直接到達を試みたが404で、確認不能値を空欄のまま保持した。
+- Wave 39 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 39 verification: `npm run audit-small-theaters`はrows 594、verified_primary 208、primary_partial 59、official_not_found 21、ambiguous 8、blocked 8、pending 290、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 40では`LASENS-3476`、`LASENS-703`、`LASENS-1988`、`LASENS-541`、`LASENS-2006`、`LASENS-552`、`LASENS-666`、`LASENS-578`の8件を処理した。
+- Theater Mixa、THEATER Rrose Sélavy、シアターイワト、VACANT/Harajukuを`verified_primary / closed`、シアターシャインを`verified_primary / current`と確認した。Theater Mixaは301席、シアターシャインは約80名（椅子席60名）を公式情報から記録した。
+- Theater OptionとVIEPLANシアターは施設・運営者の公式一次情報を特定できず`official_not_found`、Theater新宿スターフィールドは公式候補ドメインがDNS解決不能のため`blocked`とした。LaSensの閉館表示・客席数や第三者の現行情報を公式欄へ転記していない。
+- Wave 40で確認した一次情報は、`mixalivetokyo.com`、`rrose-selavy.net`、`theatershine.com`、`btt-tokyo.amebaownd.com`、`vacant.vc`。到達できなかった公式候補は`star-field.tokyo`として再確認対象へ残した。
+- Wave 40 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 40 verification: `npm run audit-small-theaters`はrows 594、verified_primary 213、primary_partial 59、official_not_found 23、ambiguous 8、blocked 9、pending 282、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 41では`LASENS-661`、`LASENS-698`、`LASENS-602`、`LASENS-298`、`LASENS-353`、`LASENS-252`、`LASENS-251`、`LASENS-684`の8件を処理した。
+- WATERRAS COMMON ホール、アートシアター上野小劇場、あさくさ劇亭を`verified_primary / current`、明治大学駿河台校舎11号館2階の旧アートスタジオを`verified_primary / closed`と確認した。WATERRASはシアター形式160席程度・163平方メートル、上野小劇場は公式図面の椅子40席を記録し、あさくさ劇亭は椅子43脚と座布団20枚を最大定員へ読み替えず収容数を空欄にした。
+- WAREHOUSE702は旧公式候補ドメインの2011年コンテンツ再掲まで、Za Hallは同住所の東京山手教会現行公式、ART THEATER かもめ座は東京都公式文化施設一覧まで確認したが、各施設の現行・閉館一次情報を確定できず`primary_partial / unknown`とした。アートグラウンドエウロスは施設・運営者の公式一次情報を特定できず`official_not_found`とし、LaSensの閉館表示や第三者の閉店・閉館情報を確定欄へ転記していない。
+- 明治大学については大学公式の2010年11号館入居施設移転・跡地新棟建設と、現行公式資料の猿楽町校舎アートスタジオを照合し、旧11号館2階の索引行だけをclosedとした。一般貸館条件は確認できず、現施設を一般会場候補として扱っていない。
+- Wave 41で確認した一次情報は、`warehouse702.com`、`waterras.com`、`yasuda-re.co.jp`、`tokyoyamate.com`、`seikatubunka.metro.tokyo.lg.jp`、`em-studio.net`、`meiji.ac.jp`、`asakusa-gekitei.jimdosite.com`。検索結果スニペットとLaSens値は候補発見・差異確認だけに用いた。
+- Wave 41 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 41 verification: `npm run audit-small-theaters`はrows 594、verified_primary 217、primary_partial 62、official_not_found 24、ambiguous 8、blocked 9、pending 274、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 42では`LASENS-512`、`LASENS-450`、`LASENS-247`、`LASENS-253`、`LASENS-226`、`LASENS-254`、`LASENS-256`、`LASENS-263`の8件を処理した。
+- アートスペースサンライズホールと阿佐ヶ谷アートスペースプロットを`verified_primary / current`、アサヒ・アートスクエアとアトリエフォンテーヌを`verified_primary / closed`、旧アートボックスホールから高田馬場ラビネストへの承継を`verified_primary / renamed`と確認した。サンライズホールは豊島区公式の2025観光ガイドと区公式文化施策資料から112席、プロットは施設公式の2026年空き状況・客席60可・料金・アクセス・利用条件を記録した。
+- アスピアホールはLaSens掲載の旧公式候補と同一の運営会社公式ドメインまで確認したが旧施設ページが404で閉館告知を確認できず`primary_partial / unknown`、アールヴィゴとアイピット目白は施設・運営者の公式一次情報を特定できず`official_not_found`とした。LaSensの閉館表示・客席数と第三者の閉館記載は公式欄へ転記していない。
+- Wave 42で確認した一次情報は、`city.toshima.lg.jp`、`artspace-plot.jp`、`motion-gallery.net/projects/rabinest`（現施設運営者RABINEST発行）、`asahiartsquare.org`、`velatec.co.jp`、`allstaff.co.jp`。旧公式候補`aye-pit.com`はDNS解決不能、`geocities.jp/artspace_sunrise`はサービス終了案内への転送、`velatec.co.jp/aspia/`は404であることも直接確認した。
+- Wave 42 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 42 verification: `npm run audit-small-theaters`はrows 594、verified_primary 222、primary_partial 63、official_not_found 26、ambiguous 8、blocked 9、pending 266、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 43では`LASENS-258`、`LASENS-702`、`LASENS-2000`、`LASENS-1810`、`LASENS-259`、`LASENS-4099`、`LASENS-1888`、`LASENS-705`の8件を処理した。
+- アトリエファンファーレ高円寺・東新宿・東池袋とアトリエ三軒茶屋を`verified_primary / current`、アトリエ第Q藝術 1Fホールを`verified_primary / closed`と確認した。ファンファーレ3館は公式客席・料金・アクセス・使用規約、三軒茶屋は公式約24席・時間料金・駅徒歩1分・予約支払方法、第Q藝術は公式の2025年6月8日閉館・旧ホール寸法・料金・利用条件を記録した。
+- アトリエだるま座は劇団公式Xの2026年公演から`primary_partial / current`、アトリエヘリコプターは施設公式の稽古場限定貸出から`primary_partial / current`とした。アトリエ第七秘密基地は旧公式候補まで探索したが運営者による閉館告知を確認できず`official_not_found / unknown`とし、LaSensの閉館表示と第三者の2018年閉館記載を公式欄へ転記していない。
+- Wave 43で確認した一次情報は、`x.com/daruma_kikaku`、`atelier-fanfare.jp`、`gotanndadan.wixsite.com/atelier-helicopter`、`atelier-3c.jp`、`seijoatelierq.com`。`daruma-za.net`はタイムアウト、`ibsenkai.com`旧公式候補は本文へ到達できず、確認不能値を空欄のまま保持した。
+- Wave 43 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 43 verification: `npm run audit-small-theaters`はrows 594、verified_primary 227、primary_partial 65、official_not_found 27、ambiguous 8、blocked 9、pending 258、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 44では`LASENS-260`、`LASENS-224`、`LASENS-243`、`LASENS-245`、`LASENS-440`、`LASENS-1994`、`LASENS-242`、`LASENS-576`の8件を処理した。
+- アルネ543とアレーナホールを`verified_primary / current`、阿佐ヶ谷アルシェを`primary_partial / current`、アトリエ無現を`primary_partial / unknown`と確認した。アルネ543は増設時52席・1日50000円・禁止事項・キャンセル条件、アレーナホールは有効面積381平方メートル・全日385000円平日／638000円土日祝・2026年4月現在の利用規約を公式情報から記録した。
+- アドリブ小劇場は旧公式候補がメンテナンス表示のみで`blocked`、アルスノーバ、アルテ・パティオ、ヴァンテホールは運営者公式の現行案内・閉館告知を確認できず`official_not_found`とした。LaSensの閉館表示・客席数、第三者の閉館・改装記載を公式欄へ転記していない。
+- Wave 44で確認した一次情報は、`labo-mugen.seesaa.net`、`asagaya-arche.com`、`arune543.wixsite.com/mysite-1`、`takashimaya.co.jp/tamagawa/sc/arena`。旧公式候補`moments.jp`はTHEATRE MOMENTSのメンテナンス表示までを直接確認し、施設状態は確定していない。
+- Wave 44 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 44 verification: `npm run audit-small-theaters`はrows 594、verified_primary 229、primary_partial 67、official_not_found 30、ambiguous 8、blocked 10、pending 250、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 45では`LASENS-587`、`LASENS-590`、`LASENS-2359`、`LASENS-1683`、`LASENS-1618`、`LASENS-220`、`LASENS-352`、`LASENS-2357`の8件を処理した。
+- WESTEND STUDIO、ウッディシアター中目黒、オメガ東京、江東区亀戸文化センター カメリアホールを`verified_primary / current`、旧オルタナティブシアターから同一住所・同一階・同一延床面積のI’M A SHOWへの承継を`verified_primary / renamed`、キーノート・シアターを`verified_primary / closed`と確認した。カメリアホールは定員402人・505.99平方メートル・2025年4月以降料金、オメガ東京は最大96席程度・現行料金・利用規定を公式情報から記録した。
+- エリア543は運営名義の公式企画ページと2026年公演主催者の公式案内から現行利用・最大31席を確認したが、一般貸館の現行料金・規約が不足するため`primary_partial / current`とした。カフェテアトロ2つの部屋は豊島区公式1997年広報で過去利用まで確認したが、運営者公式の現行・閉館情報がないため`primary_partial / unknown`とし、LaSensの閉館表示・80席を転記していない。
+- Wave 45で確認した一次情報は、`studio-life.com`、`woodytheatre.com`、`area543j.wixsite.com`、2026年公演主催者公式、`omega-tk.com`、`studio-alta.co.jp`、`imashow.jp`、豊島区公式デジタルアーカイブ、`kcf.or.jp`、`keynote-theater.tokyo`。検索結果とLaSens値は候補発見・差異確認だけに用いた。
+- Wave 45 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 45 verification: `npm run audit-small-theaters`はrows 594、verified_primary 235、primary_partial 69、official_not_found 30、ambiguous 8、blocked 10、pending 242、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 46では`LASENS-361`、`LASENS-363`、`LASENS-631`、`LASENS-379`、`LASENS-368`、`LASENS-277`、`LASENS-1992`、`LASENS-1779`の8件を処理した。
+- キッド・アイラック・アート・ホールと旧所在地のキッド・アイラックホールを`verified_primary / closed`、中目黒キンケロ・シアター、FSXホール、J:COMコール田無 多目的ホールを`verified_primary / current`、旧コフレリオ新宿シアターからAsagiri Mist Theaterへの改称を`verified_primary / renamed`として確認した。キンケロは133席、FSXホールはプロセニアム336席・1階ホール362平方メートル、コール田無は182席・客席179平方メートル・舞台51平方メートル、Asagiri Mist Theaterは最大110席を公式値として記録した。
+- こった創作空間は運営者公式ブログでパイプ椅子30脚とベンチ約10人、舞台寸法、創作発表への貸出を確認したが最終更新が2020年で2026年の現行運営を確定できず`primary_partial / unknown`とした。コア石響は運営者公式サイト・公式閉館告知・自治体資料を特定できず`official_not_found / unknown`とし、LaSensの閉館表示と80席を公式欄へ転記していない。
+- Wave 46で確認した一次情報は、キッド・アイラック・アート・ホール公式ブログ、文化庁アートプラットフォームジャパン、`kinkero-theater.com`、`kuzaidan.or.jp`、西東京市公式、`cotta.exblog.jp`、`mist-theater.com`。検索結果とLaSens値は候補発見・差異確認だけに用いた。
+- Wave 46 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 46 verification: `npm run audit-small-theaters`はrows 594、verified_primary 241、primary_partial 70、official_not_found 31、ambiguous 8、blocked 10、pending 234、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 47では`LASENS-375`、`LASENS-605`、`LASENS-650`、`LASENS-465`、`LASENS-466`、`LASENS-3367`、`LASENS-603`、`LASENS-3342`の8件を処理した。
+- こまばアゴラ劇場を`verified_primary / closed`、ザ・スズナリ、SAiSTUDIOコモネA、すみだパークギャラリーささや、ザムザ阿佐谷、サンガイノリバテイを`verified_primary / current`と確認した。こまばアゴラは運営者公式の閉館案内と収容定員60人、コモネAは223平方メートルと2026年4月改定料金、ギャラリーささやは公式寸法22メートル×11メートル、ザムザは最大129席と2026年割引・料金、サンガイノリバテイは最大40席と現行料金・利用条件を記録した。
+- ザ✩キッチンNAKANOは運営者公式ブログの更新が2015年までで旧公式ドメインも現行確認できないため`primary_partial / unknown`、SAiSTUDIO大山第1は運営会社公式の現行一覧から外れ旧個別URLも404だが同住所の大山ZEROは別フロア・別面積で関係を確定できないため`primary_partial / unknown`とした。LaSensの客席・閉館表示を公式欄へ転記していない。
+- Wave 47で確認した一次情報は、`seinendan.org`、`honda-geki.com`、`r.goope.jp/the-suzunari`、運営者公式StudioVADブログ、`saistudio.net`、`gallery.sasayacafe.com`、`sasayacafe.com`、`laputa-jp.com`、`sangainoliberty.amebaownd.com`。検索結果とLaSens値は候補発見・差異確認だけに用いた。
+- Wave 47 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 47 verification: `npm run audit-small-theaters`はrows 594、verified_primary 247、primary_partial 72、official_not_found 31、ambiguous 8、blocked 10、pending 226、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 48では`LASENS-509`、`LASENS-3535`、`LASENS-526`、`LASENS-563`、`LASENS-548`、`LASENS-523`、`LASENS-3033`、`LASENS-670`の8件を処理した。
+- サンモールスタジオ、シアター・アルファ東京、シアター711を`verified_primary / current`、2005年建て替え前の旧シアターグリーン単館を`verified_primary / closed`と確認した。サンモールスタジオは公式約110名と2026年空き・2027年受付、アルファ東京は201席と現行料金・利用規約、711は2026年公演予定・料金・申込条件を記録した。711の公式備品表にある椅子数は最大定員へ読み替えず、LaSensの90席を転記していない。
+- シアター・バビロンの流れのほとりにては公式HTTPページで料金・住所・利用手続を確認したが公式アーカイブが2020年までで現況を確定できず`primary_partial / unknown`、シアターDは旧公式候補ドメインが空応答で閉館公式本文へ到達できず`official_not_found / unknown`とした。シアターGOOは同住所の現行Stage Bar MOONを自治体公式資料・運営公式Xで確認したが承継関係を解けず`ambiguous / unknown`、シアターKASSAIは旧公式ドメインDNS不能かつ公式X本文取得制限のため`blocked / unknown`とした。
+- Wave 48で確認した一次情報は、`sun-mallstudio.com`、`alpha-tk.com`、`theater-green.com`、`tokyobabylon.org`、`honda-geki.com`、新宿区公式営業許可資料、Stage Bar MOON公式X。`theater-d.com`、`kassaikikaku.co.jp`、シアターKASSAI公式Xは到達・本文取得状態を直接確認し、LaSens値・検索スニペット・二次報道を公式欄へ転記していない。
+- Wave 48 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 48 verification: `npm run audit-small-theaters`はrows 594、verified_primary 251、primary_partial 73、official_not_found 32、ambiguous 9、blocked 11、pending 218、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 49では`LASENS-539`、`LASENS-546`、`LASENS-1928`、`LASENS-1728`、`LASENS-528`、`LASENS-530`、`LASENS-532`、`LASENS-543`の8件を処理した。
+- シアターウィング、シアターグリーンのBOX in BOX THEATER・BIG TREE THEATER・BASE THEATER、シアターサンモールを`verified_primary / current`と確認した。ウィングは公式60席・ホール内80平方メートル・現行パック料金、シアターグリーン3館は104・167・70席と1日148500・209000・82500円、サンモールは2026年7月更新と現行料金PDF・申込手順を記録した。サンモールの客席数は公式本文から確定できず、LaSensの300席を転記していない。
+- TheaterCafe＆Dining Prosceniumは公式サイトの住所・レンタル条件と2025年10月までの更新を確認したが2026年の現行営業を確定できず`primary_partial / unknown`、シアターVアカサカは運営者による公式閉館告知・現行案内を特定できず`official_not_found / unknown`、シアターPOOは同住所のStage Bar MOONとの承継関係を解けず`ambiguous / unknown`とした。LaSensの閉館表示・客席数と第三者会場情報を公式欄へ転記していない。
+- Wave 49で確認した一次情報は、`studio-wing.com`、`cafe-proscenium.shopinfo.jp`、`theater-green.com`、`theatersunmall.server-shared.com`、新宿区公式営業許可資料、Stage Bar MOON公式X。シアターサンモール公式はHTTPSの自己署名証明書を確認したため、実際に到達できたHTTP公式URLを記録した。
+- Wave 49 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 49 verification: `npm run audit-small-theaters`はrows 594、verified_primary 256、primary_partial 74、official_not_found 33、ambiguous 10、blocked 11、pending 210、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 50では`LASENS-545`、`LASENS-2551`、`LASENS-535`、`LASENS-524`、`LASENS-525`、`LASENS-534`、`LASENS-708`、`LASENS-486`の8件を処理した。
+- シアタートラム、シアターミネルヴァ、新宿シアターモリエール、シアター風姿花伝を`verified_primary / current`、しもきたDAWNを`verified_primary / closed`と確認した。トラムは最大248人・舞台面積約240平方メートル・2026年8月以降料金・選考制一般貸出、ミネルヴァは2026年イベント予定・現行料金・キャンセル条件、モリエールは可動186席・現行料金、風姿花伝は客席用椅子105脚・現行料金・利用規約を記録した。
+- シアター代官山とシアターΧは現行利用を確認したが、代官山は公式使用料金・使用規定PDFが404、Χは現行貸出料金・申込条件を公開確認できないため`primary_partial / current`とした。しもきた空間リバティは運営会社公式がサンガイノリバティを後継と明記する一方、旧館の明示的な閉館告知・閉館日を確認できないため`primary_partial / unknown`を維持し、二次索引の閉館表示を確定値にしていない。
+- しもきたDAWNは旧劇場の継続ライブ公式サイトが2025年3月の再開発による閉館と翌月の東池袋移転を明記した一次情報を採用した。旧公式ドメインは無関係な海外ゲームサイトへ変わっているため公式URLに採用せず、LaSensの90席・料金も転記していない。
+- Wave 50で確認した一次情報は、`setagaya-pt.jp`、`t-minerva.com`、`moliere.co.jp`、`himawari.net`、`fuusikaden.com`、`theaterx.jp`、`shimodon.com`、`liberty-feel.co.jp`。検索結果とLaSens値は候補発見・差異確認だけに用いた。
+- Wave 50 changed files: `data/small-theater-research.csv`、`overnight-runs/2026-07-31-lasens-small-theater-census/STATE.md`、`overnight-runs/2026-07-31-lasens-small-theater-census/REPORT.md`。
+- Wave 50 verification: `npm run audit-small-theaters`はrows 594、verified_primary 261、primary_partial 77、official_not_found 33、ambiguous 10、blocked 11、pending 202、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 51では`LASENS-343`、`LASENS-503`、`LASENS-506`、`LASENS-577`、`LASENS-236`、`LASENS-502`、`LASENS-329`、`LASENS-601`の8件を処理した。
+- 中野スタジオあくとれは公式サイトで現行利用・料金・アクセス・利用条件を、アルタスタジオは運営会社の沿革で1980年4月の運営開始から2016年3月の運営終了までを確認し、前者を`verified_primary / current`、後者を`verified_primary / closed`とした。
+- ジャンジャン、スタジオ・ショコラ、スタジオVARIO、スタジオはるか、スタジオゆたかは同住所の現行公式施設まで確認したが旧施設との改称・承継関係を一次情報で解けないため`ambiguous`、スタジオ・スパーク1は旧公式候補ドメインのDNS解決不能と公式閉館情報不在により`official_not_found`として分離した。LaSensの客席・面積は公式欄へ転記していない。
+- Wave 51で確認した一次情報は、`nakano-actre.jp`、`studio-alta.co.jp`、`k-classics.net`、`estudiotres.studio.site`、`crossfit-otsuka.com`、`theatershine.com`、`theater-brats.com`。変更ファイルは調査CSV、STATE、REPORTの3件。
+- Wave 51 verification: `npm run audit-small-theaters`はrows 594、verified_primary 263、primary_partial 77、official_not_found 34、ambiguous 15、blocked 11、pending 194、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 52では`LASENS-704`、`LASENS-445`、`LASENS-3340`、`LASENS-500`、`LASENS-393`、`LASENS-3617`、`LASENS-651`、`LASENS-2032`の8件を処理した。
+- スタジオ空洞、ステージカフェ 下北沢亭、スペースM&Aを`verified_primary / current`、江古田ストアハウスと新橋スタジオ2階を`verified_primary / closed`、旧すみだパークスタジオ倉からすみだパークシアター倉への改称を`verified_primary / renamed`として確認した。下北沢亭は公式50席、シアター倉は151席・258平方メートル、スタジオ空洞は約91平方メートル、新橋スタジオ2階は約70.81平方メートルを記録した。
+- スタジオ赤坂プレイBOXは運営者公式の現行案内・閉館告知を特定できず`official_not_found`、スフィアメックスはLaSens掲載の旧公式候補`db.tennoz.co.jp`がDNS解決不能で公式閉館本文へ到達できないため`blocked`とした。LaSensの閉館表示・客席数は公式欄へ転記していない。
+- Wave 52で確認した一次情報は、`studiokudoh.blogspot.com`、`shimokitazawatei.com`、`storehouse.ne.jp`、`space-ma.com`、`theater.sasayacafe.com`、`sumida-parkplace.com`、`studio.sumuzo.info`。変更ファイルは調査CSV、STATE、REPORTの3件。
+- Wave 52 verification: `npm run audit-small-theaters`はrows 594、verified_primary 269、primary_partial 77、official_not_found 35、ambiguous 15、blocked 12、pending 186、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 53では`LASENS-2034`、`LASENS-266`、`LASENS-635`、`LASENS-237`、`LASENS-608`、`LASENS-518`、`LASENS-557`、`LASENS-520`の8件を処理した。
+- せいせきアウラホール、調布市せんがわ劇場、テアトルBONBON、テルプシコールを`verified_primary / current`、新橋スタジオ4階を2026年7月31日営業終了の`verified_primary / closed`、ティアラこうとう小ホールを大規模改修による2027年10月再開予定の一時休館として`verified_primary / closed`と確認した。アウラホールは330席・333平方メートル、せんがわ劇場は通常121席・約188平方メートル、新橋スタジオ4階は61.44平方メートルを公式情報から記録した。
+- タイニイアリスは旧公式サイト・公式資料まで確認したが現行・閉館を一次情報で確定できず`primary_partial / unknown`、テアトロドソーニョスタジオは施設・運営者の公式一次情報を特定できず`official_not_found / unknown`とした。LaSensの閉館表示・客席数と第三者の閉館記載を公式欄へ転記していない。
+- Wave 53で確認した一次情報は、`studio.sumuzo.info`、`keio-sc.jp`、`chofu-culture-community.org`、`city.chofu.lg.jp`、`tinyalice.net`、`pocketsquare.jp`、`kcf.or.jp`、`studioterpsichore.com`。変更ファイルは調査CSV、STATE、REPORTの3件。
+- Wave 53 verification: `npm run audit-small-theaters`はrows 594、verified_primary 275、primary_partial 78、official_not_found 36、ambiguous 15、blocked 12、pending 178、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 54では`LASENS-653`、`LASENS-410`、`LASENS-2856`、`LASENS-3528`、`LASENS-516`、`LASENS-435`、`LASENS-454`、`LASENS-275`の8件を処理した。
+- テンポラリーコンテンポラリー SPACE A、なかの芸能小劇場、ハーフムーンホール下北沢、バルスタジオ、パルテノン多摩 小ホール、プーク人形劇場、築地本願寺ブディストホールを`verified_primary / current`と確認した。公式公開値としてSPACE A約400平方メートル、なかの芸能小劇場110席、ハーフムーンホール70席・75平方メートル、バルスタジオ約120席、パルテノン多摩小ホール265席、プーク人形劇場106席、ブディストホール164席を記録した。
+- パンセホールは施設・運営者の公式現行案内または公式閉館告知を十分探索しても特定できず`official_not_found / unknown`とし、LaSensの閉館表示・400席と第三者の閉館記載を公式欄へ転記していない。ブディストホールは2027年1月から3月の設備工事予定を現時点の閉館と誤認せず、現行施設として将来休館予定を注記した。
+- Wave 54で確認した一次情報は、`reserva.be/temporarycontemporary`、`naka-lab.jp`、`city.tokyo-nakano.lg.jp`、`halfmoonhall.com`、`bulstudio.jp`、`parthenon.or.jp`、`theatre.puk.jp`、`puk.jp`、`buddhisthall.com`。変更ファイルは調査CSV、STATE、REPORTの3件。
+- Wave 54 verification: `npm run audit-small-theaters`はrows 594、verified_primary 282、primary_partial 78、official_not_found 37、ambiguous 15、blocked 12、pending 170、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 55では`LASENS-2536`、`LASENS-3774`、`LASENS-2919`、`LASENS-452`、`LASENS-271`、`LASENS-398`、`LASENS-567`、`LASENS-405`の8件を処理した。
+- ブルースクエア四谷とムーブ町屋 ムーブホールを`verified_primary / current`、ブレヒトの芝居小屋、ベニサン・ピット、豊島公会堂を`verified_primary / closed`と確認した。ブルースクエア四谷は着席最大105席・スタンディング最大140名と現行料金・アクセス・利用条件、ムーブホールは最大296名・床面積230平方メートルと現行料金・申込条件を公式情報から記録した。
+- プライムシアターは施設・運営者の公式一次情報を特定できず`official_not_found / unknown`、プロトシアターは旧公式候補ページとPDF候補が404、新宿永谷ホールは運営者公式候補URLが接続不能のため`blocked / unknown`とした。LaSensの閉館表示・客席数、第三者掲載値、公式興行主の公演案内だけでは施設状態を確定していない。
+- Wave 55で確認した一次情報は、`blue-sq.jp`、`tee.co.jp`、`ninagawastudio.net`、`city.toshima.lg.jp`、`sunny-move.jp`。旧公式候補`prime-theater.com`、`prototheater.la.coocan.jp`、`ntgp.co.jp`の到達状態も直接確認した。変更ファイルは調査CSV、STATE、REPORTの3件。
+- Wave 55 verification: `npm run audit-small-theaters`はrows 594、verified_primary 287、primary_partial 78、official_not_found 38、ambiguous 15、blocked 14、pending 162、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 56では`LASENS-2008`、`LASENS-640`、`LASENS-357`、`LASENS-3513`、`LASENS-628`、`LASENS-2355`、`LASENS-683`、`LASENS-290`の8件を処理した。
+- 旧メルシアーク神楽坂からエモーシア神楽坂への改称、ラフォーレミュージアム原宿、レパートリーシアターKAZE、新中野ワニズホール、荏原文化センター大ホールの現行利用、ワーサルシアター八幡山劇場の2020年8月末閉館を施設・運営者・自治体公式情報で確認した。エモーシアは座席40〜50席程度、ラフォーレは椅子席約300〜400人・スタンディング600人、KAZEは最大120名、ワニズは50席程度、荏原は椅子席437席・定員500人を記録した。
+- ラフォーレの公式ページ間にホール396.8平方メートルと442平方メートルの不一致があるため施設概要値を採用して注記した。レンタルスペース スターダストは施設名義の公式候補ブログが旧記事のみ、宇宙館は公的施設一覧まで確認したが施設公式本文へ到達できないため、いずれも`primary_partial / unknown`に保ち、第三者掲載とLaSens値を確定欄へ転記していない。
+- Wave 56で確認した一次情報は、`emosia.jp`、`laforet.ne.jp`、`kaze-net.org`、`ameblo.jp/rentalspacestardust`、`worsal.com`、`wanizhall.com`、`hallangel.com`、`city.shinagawa.tokyo.jp`、東京都公式施設一覧、地域公的団体の施設一覧。変更ファイルは調査CSV、STATE、REPORTの3件。
+- Wave 56 verification: `npm run audit-small-theaters`はrows 594、verified_primary 293、primary_partial 80、official_not_found 38、ambiguous 15、blocked 14、pending 154、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 57では`LASENS-295`、`LASENS-463`、`LASENS-432`、`LASENS-427`、`LASENS-248`、`LASENS-2160`、`LASENS-570`、`LASENS-354`の8件を処理した。
+- 駅前劇場、演劇フリースペース・サブテレニアン、絵空箱を`verified_primary / current`、王子小劇場からインディペンデントシアターOjiへの改称を`verified_primary / renamed`、角筈区民ホールを2027年3月31日まで大規模改修休館中の`verified_primary / closed`と確認した。サブテレニアンは客席40〜50、Ojiは可動約80席、絵空箱は公式備品数から椅子60脚、角筈は212席と車椅子スペース2席を記録した。
+- 荻窪小劇場は運営公式の最終更新が2022年で2026年の現況を確定できず`primary_partial / unknown`、荻窪メガバックスシアターは旧公式URLが無関係なランディングページへ転送され公式閉館本文を確認できず`official_not_found / unknown`、環七の穴は旧公式候補ドメインがDNS解決不能のため`blocked / unknown`とした。LaSensの閉館表示・客席数と第三者掲載を公式欄へ転記していない。
+- Wave 57で確認した一次情報は、`honda-geki.com`、`subterranean.jp`、`en-geki.com`、`art-colline.com`、`esorabako.com`、新宿区・指定管理者の角筈区民ホール公式ページと公式PDF。`megaba.com`、`kan7.jp`は到達状態を直接確認した。変更ファイルは調査CSV、STATE、REPORTの3件。
+- Wave 57 verification: `npm run audit-small-theaters`はrows 594、verified_primary 298、primary_partial 81、official_not_found 39、ambiguous 15、blocked 15、pending 146、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 58では`LASENS-2872`、`LASENS-359`、`LASENS-575`、`LASENS-561`、`LASENS-320`、`LASENS-322`、`LASENS-376`、`LASENS-292`の8件を処理した。
+- 吉祥寺シアター、牛込箪笥区民ホール、桐朋学園芸術短期大学 小劇場、東京大学教養学部多目的ホール（駒場小空間）、恵比寿・エコー劇場を`verified_primary / current`と確認した。吉祥寺は189席、牛込箪笥は手並べ150席＋可動242席の計392席、桐朋は約200名・21m×10.5m、駒場は着席最大150名・約16.5m四方、エコーは固定122席＋可動28席の最大150席を公式情報から記録した。
+- 銀座みゆき館劇場は旧公式候補の案内図まで確認したが現行・閉館本文がなく`primary_partial / unknown`、貴種流離シアターと銀座小劇場は旧公式候補ドメインがDNS解決不能のため`blocked / unknown`とした。LaSensの閉館表示・客席数と第三者掲載を公式欄へ転記していない。
+- Wave 58で確認した一次情報は、`kisyuryuri.com`の運営者発行資料、`musashino.or.jp`、`shinjuku.hall-info.jp`、`college.toho.ac.jp`、`latestapollo.com`、`komabashokukan.jp`、東京大学公式、`s-echo.co.jp`、`t-echo.co.jp`。`homepage2.nifty.com/gin-jel/`の到達状態も直接確認した。変更ファイルは調査CSV、STATE、REPORTの3件。
+- Wave 58 verification: `npm run audit-small-theaters`はrows 594、verified_primary 303、primary_partial 82、official_not_found 39、ambiguous 15、blocked 17、pending 138、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 59では`LASENS-317`、`LASENS-610`、`LASENS-399`、`LASENS-315`、`LASENS-2024`、`LASENS-312`、`LASENS-311`、`LASENS-3935`の8件を処理した。
+- 「劇」小劇場、劇場HOPE、劇場MOMO、劇場ビット、元映画館を`verified_primary / current`と確認した。HOPEは約70席、MOMOは約90席、劇場ビットは最大50名を公式値として記録し、「劇」小劇場の備品表56脚と元映画館のLaSens値32席は定員へ読み替えなかった。各施設の料金・アクセス・利用条件も公式公開範囲で記録した。
+- 劇場バイタスは現行運営会社公式まで確認したが旧西新宿施設の状態を確定できず`primary_partial / unknown`、劇団京ホールは現団体への組織承継と同建物住所まで確認したが旧ホールの継続関係を解けず`ambiguous / unknown`、劇団吹きだまりアトリエは旧公式候補404・別候補DNS解決不能のため`blocked / unknown`とした。LaSensの閉館表示・客席数を公式欄へ転記していない。
+- Wave 59で確認した一次情報は、`honda-geki.com`、`pocketsquare.jp`、`vitus.main.jp`、`gekijo-bit.com`、`tokyo-novyi.com`、`moto-eigakan.com`。旧公式候補`www2u.biglobe.ne.jp/~fuki/`、`fukidamari.jp`、`gekijo-bit.jp`の到達状態も直接確認した。変更ファイルは調査CSV、STATE、REPORTの3件。
+- Wave 59 verification: `npm run audit-small-theaters`はrows 594、verified_primary 308、primary_partial 83、official_not_found 39、ambiguous 16、blocked 18、pending 130、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 60では`LASENS-639`、`LASENS-319`、`LASENS-630`、`LASENS-377`、`LASENS-370`、`LASENS-371`、`LASENS-626`、`LASENS-679`の8件を処理した。
+- 現代座ホール、江東区深川江戸資料館 小劇場、座・高円寺1を`verified_primary / current`、高円寺会館を`verified_primary / closed`と確認した。現代座ホールは80人、深川江戸資料館は定員300人・383.4平方メートル、座・高円寺1は詳細ページの238席・440平方メートルを公式値として記録した。座・高円寺1は公式ページ内に233席と238席の不一致があるため、詳細施設欄の238席を採用して注記した。
+- 原宿リトルモア地下と戸野廣浩司記念劇場は運営者公式の同住所・過去活動まで確認したが現行・閉館を確定できず`primary_partial / unknown`、高田馬場ラビネストは2026年更新の公式ページと現行利用を確認したが比較項目が不足するため`primary_partial / current`、高円寺カフェは旧公式候補URLがタイムアウトしたため`blocked / unknown`とした。LaSensの閉館表示・客席数と第三者の閉館記載を公式欄へ転記していない。
+- Wave 60で確認した一次情報は、`littlemore.co.jp`、`gendaiza.org`、`lohas-ent.com`、`kcf.or.jp`、`city.suginami.tokyo.jp`、`rabinest.com`、`za-koenji.jp`。旧公式候補`www3.plala.or.jp/koenjicafe/`の到達状態も直接確認した。変更ファイルは調査CSV、STATE、REPORTの3件。
+- Wave 60 verification: `npm run audit-small-theaters`はrows 594、verified_primary 312、primary_partial 86、official_not_found 39、ambiguous 16、blocked 19、pending 122、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 61では`LASENS-680`、`LASENS-471`、`LASENS-498`、`LASENS-618`、`LASENS-468`、`LASENS-569`、`LASENS-687`、`LASENS-469`の8件を処理した。
+- 座・高円寺2、三鷹市芸術文化センター星のホール・風のホール、参宮橋トランスミッション、大森山王FORESTを`verified_primary / current`、三百人劇場と杉並区立産業商工会館 講堂を`verified_primary / closed`と確認した。座・高円寺2は最大298席、星のホールは250席・客席167平方メートル、風のホールは通常625席、参宮橋トランスミッションは60席＋αを公式値として記録した。
+- 三百人劇場は現代演劇協会デジタルアーカイヴと劇団昴公式沿革の2006年末閉館、産業商工会館講堂は杉並区公式の2015年条例改正議案にある講堂廃止を根拠にした。笹塚ファクトリーは旧公式候補が現在ランダーページのみで運営者公式の閉館本文を特定できず`official_not_found / unknown`とし、第三者の2016年閉館記事とLaSens値を確定欄へ転記していない。
+- Wave 61で確認した一次情報は、`za-koenji.jp`、`mitaka-sportsandculture.or.jp`、`onceuponatimedarts.com`、`theatercompany-subaru.com`、`trance-mission.jp`、`wanekaze.com`、`city.suginami.tokyo.jp`。変更ファイルは調査CSV、STATE、REPORTの3件。
+- Wave 61 verification: `npm run audit-small-theaters`はrows 594、verified_primary 319、primary_partial 86、official_not_found 40、ambiguous 16、blocked 19、pending 114、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- Wave 62では`LASENS-3504`、`LASENS-600`、`LASENS-344`、`LASENS-2721`、`LASENS-3562`、`LASENS-477`、`LASENS-646`、`LASENS-483`の8件を処理した。
+- 四谷区民ホール、時事通信ホール、渋谷 ばぐちか、小金井フラワーホール、小劇場ひつじ座を`verified_primary / current`と確認した。四谷区民ホールは392席＋車いす2席、時事通信ホールは最大320席・262平方メートル、ばぐちかは立席100名・着席80名・130平方メートル、小金井フラワーホールは約80人、ひつじ座は構成により約90名を公式情報から記録した。
+- 四谷3丁目ドリームシアターは運営者公式の旧名称・住所・アクセスと現在の大塚会場を確認したが旧施設の現況を確定できず`primary_partial / unknown`、十色庵は公式・自治体情報の北区住所とLaSensの亀有住所の関係を解けず`ambiguous / unknown`、渋谷BOXXは旧公式に到達できず運営者の閉館一次情報も特定できないため`official_not_found / unknown`とした。LaSens値は公式欄へ転記していない。
+- Wave 62で確認した一次情報は、`otsukadreamshow.com`、`shinjuku.hall-info.jp`、`jiji.com`、`hall.jiji.com`、`toiroan.tumblr.com`、`bugchika.com`、東京都ロケーションボックス、小金井フラワーホール公式、`vector7.co.jp`、ひつじ座公式ブログ。変更ファイルは調査CSV、STATE、REPORTの3件。
+- Wave 62 verification: `npm run audit-small-theaters`はrows 594、verified_primary 324、primary_partial 87、official_not_found 41、ambiguous 17、blocked 19、pending 106、errors 0。`npm run audit`は既存データerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (active)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+- 2026-08-01 09:15 JST以降は新規調査を停止し、全監査と基準比較を実施した。594件中488件（82.2%）を確認済みとし、106件を推測で埋めず`pending`のまま保持したため、run状態を`PARTIAL`で確定した。
+- 最終監査では調査台帳rows 594、重複source_idなし、verified_primary 324、primary_partial 87、official_not_found 41、ambiguous 17、blocked 19、pending 106、errors 0を確認した。既存会場データ監査もerrors 0、`git diff --check`は問題なし、run ledger validationは`OK (final)`。branch、HEAD、基準6ファイルのSHA-256は開始時記録から不変。
+
+## Current Wave
+
+- 最終監査を完了。確認済み488件、pending 106件。台帳・既存会場データの監査エラーは0で、基準branch・HEAD・6ファイルのSHA-256に予期しない変更はない。
+
+## Next Action
+
+- このrunでは以後変更しない。調査を再開する場合は新しいrunを作り、`LASENS-706`、`LASENS-485`、`LASENS-346`、`LASENS-682`、`LASENS-642`、`LASENS-481`、`LASENS-324`、`LASENS-511`から一次情報確認を継続する。
+
+## Blockers
+
+- なし。

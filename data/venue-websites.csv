@@ -1,0 +1,5 @@
+website_id,candidate_id,website_url,observed_at,verification_status,source_url,note
+VWEB-001,CAND-1176,https://prismhall.jp/,2026-08-09,verified,https://prismhall.jp/shisetsu,指定管理者公式サイト
+VWEB-002,CAND-1177,https://minoh-bunka.com/maple/,2026-08-09,verified,https://minoh-bunka.com/maple/,指定管理者公式サイト
+VWEB-003,CAND-1178,https://cosmostheater.or.jp/,2026-08-09,verified,https://cosmostheater.or.jp/,指定管理者公式サイト
+VWEB-004,CAND-001,https://www.zaidan-hakodate.com/kaikan/,2026-08-09,verified,https://www.city.hakodate.hokkaido.jp/docs/2014010800107/,函館市民会館（函館サーモン・まるなまホール）の運営財団公式サイト。函館市施設ページから公式リンクとして確認

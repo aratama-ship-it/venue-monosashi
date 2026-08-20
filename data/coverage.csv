@@ -4,3 +4,7 @@ JYYF_NATIONAL,"JYYF全国大会と前身大会","1999-2026","complete_years","�
 JYYF_REGIONAL,"JYYF地区大会と前身地域大会","2007-2026","complete_jyyf_era","2001-2006のUTYJ・JYCC地域大会の施設名","前身団体の保存ページ・一次資料を追加探索"
 JYYF_JUNIOR,"全ジュニア大会","2018-2026","complete_from_first_edition","2026年は開催予定","開催後に2026年の実施結果を更新"
 WYYC,"World Yo-Yo Contest全開催年","1999-2026","complete_years_one_venue_gap","1999年ホノルルの正確な施設名","HPK・Bandai関連の当時資料と現地公文書・新聞アーカイブを照合"
+DIABOLO_AJDC,"日本ディアボロ協会の全日本大会","2013-2019;2021-2026","partial_official_archive","2012年の正確な会場、2020年の開催状態","公式結果アーカイブと保存大会要項を追加照合"
+DIABOLO_OIDC,"日本ディアボロ協会の大阪国際大会","2017-2019;2023-2026","partial_official_archive","2020-2022年の開催状態","公式結果アーカイブと保存大会要項を追加照合"
+KENDAMA_KWC,"けん玉ワールドカップ","2015;2022-2025","partial_official_archive","2014年と2016-2021年の正確な会場表記","GLOKEN公式の各年大会概要・結果記事を追加照合"
+KENDAMA_JKA_YOUTH,"全日本少年少女けん玉道選手権大会","2025","initial_verified_sample","第1回から2024年までの会場台帳","日本けん玉協会の大会結果・事業報告を年次で追加照合"

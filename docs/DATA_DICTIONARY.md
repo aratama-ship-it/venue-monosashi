@@ -14,7 +14,12 @@
 | space_name | 公式の区画名 |
 | space_type | exhibition / arena / theater / flat_hall / conference / meeting / outdoor等 |
 | area_m2 | 公開された貸出面積。推定値は入れない |
-| ceiling_height_m | 公開された天井高 |
+| ceiling_height_m | 公式情報に掲載された高さの原値。最高部・中央高・舞台開口を含み得るため、検索には直接使わない |
+| clear_height_min_m | 公式情報から最低高・有効高・公表された単一の室内高・範囲下限と判定できた値。天井高検索に使う唯一の列 |
+| ceiling_height_type | `minimum_clear` / `published_clear` / `range_minimum` / `highest_point` / `stage_opening` / `stage_clearance` / `nominal_review` / `unknown` |
+| overhead_use_status | 高投げ等の頭上空間利用可否。`verified` / `conditional` / `prohibited` / `unknown`。天井高だけから推定しない |
+
+天井高の再確認結果は `ceiling-recheck-ledger.csv` に、判定前後の型、検索採用値、確認した公式URL、確認日、人力確認事項を記録する。`resolved_filterable` は検索採用、`resolved_excluded` は値の意味が判明したうえで検索対象外、`human_review` は公式資料だけでは解決できず人力確認を残した状態を表す。
 | capacity_theater | シアター形式最大収容数 |
 | capacity_fixed | 固定席数 |
 | floor_load_kg_m2 | 床荷重。t/㎡はkg/㎡へ換算した場合に注記 |
@@ -25,6 +30,7 @@
 | source_url | 数値・条件を確認した公式URL |
 | observed_at | 情報を取得した日 |
 | verification_status | verified / needs_check |
+| tags | 分類タグ。パイプ区切り。現在は `small_theater` のみ。区画に付けるのは、施設は大箱でも小劇場はその中の一区画であることがあるため |
 | note | 単位換算、制限、追加確認点 |
 
 ## price-observations.csv
@@ -42,7 +48,7 @@
 | time_band | 公式の時間区分 |
 | amount_jpy | 公式表記の金額。概算総額ではない |
 | tax_status | included / excluded / not_stated |
-| unit | per_slot / per_day / per_hour / per_use等 |
+| unit | per_slot / per_day / per_hour / per_use等。判定は下記「per_day の判定基準」に従う |
 | basis | 入場料条件、全面・半面、営利条件など |
 | valid_from | 料金表に明記された適用開始日 |
 | observed_at | 調査日 |
@@ -50,6 +56,22 @@
 | source_url | 公式料金表URL |
 | exclusions | 冷暖房、設備、設営、警備など含まれない費用 |
 | note | 改定、割引、予約日による旧料金適用など |
+
+### per_day の判定基準（2026-08-10 決定）
+
+予算検索は `unit=per_day` だけを日額として扱うため、単位の付け方が公開挙動を直接変える。
+**時間数ではなく「施設がその区分を1日として売っているか」で決める。**
+
+- **per_day にする**: 施設が1日の利用単位として公表しているもの。
+  「8〜23時のうち任意の連続12時間」「連続15時間まで」のように時間幅が固定でなくてもよい。
+  判定の手掛かりは、超過分が延長料金（per_hour）として別に定められていること、
+  その区分より広い「全日」区分が同じ料金表に無いこと。
+  時間幅の文言は必ず `basis` に残す（例: `メインアリーナ・本番・平日・任意の連続12時間`）。
+- **per_N_hours のままにする**: 同じ区画に別途「全日」区分がある時間区分
+  （例: 昼間9-17時／昼夜13-21時に対して全日9-21時がある場合）。
+  これを日額扱いすると、予算検索の最低日額が実際より安く出る。
+- **per_day にしない**: 台帳側が時間料金や区分料金を合算した参考額。
+  これは観測ではなく派生なので `budget-scenarios.csv` へ入れる（下記「予算検索の扱い」）。
 
 ## 予算検索の扱い
 
@@ -138,3 +160,21 @@
 | timeout / network_error | 応答時間超過または通信失敗。施設ページの不存在を意味しない |
 
 `final_url`はリダイレクト後のURL、`references`はそのURLを参照している行IDである。HTTP到達だけで`verification_status`を`verified`へ昇格させない。
+
+
+## candidate-venues.csv（2026-08-19 追加列）
+
+| 列 | 意味 |
+| --- | --- |
+| tags | 施設単位の分類タグ。パイプ区切り。`small_theater` は施設全体が小劇場である場合だけ付ける。大きな施設の中の小劇場は、施設ではなく `venue-details.csv` の区画側に付ける |
+| source_index | 候補を発見した索引名。`lasens` 等。一次情報は各施設の公式サイトであり、索引の掲載値は転記しない |
+| price_url | 公式料金表のURL。金額は未構造化のため、料金の絞り込みには使わない |
+| access_url | 公式アクセス案内のURL |
+| conditions_url | 公式利用条件のURL |
+| observed_at | 施設単位の公式確認日。区画・料金の観測日が無い候補の鮮度表示に使う |
+
+`evidence_tier` はCSVに持たず、`web/scripts/generate-data.mjs` が導出する。
+`detailed` は金額付き料金観測がある候補、`partial` は区画情報はあるが金額が無い候補、
+`ledger_only` は区画情報も金額も無く施設単位の一次情報だけがある候補。
+検索画面では `detailed` 以外にバッジを出し、面積・料金・天井で絞ったときは
+値が未確認で表に出ていない件数を明示する。

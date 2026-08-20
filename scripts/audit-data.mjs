@@ -4,7 +4,12 @@ import { fileURLToPath } from "node:url";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
-function parseCsv(text) {
+// 列数の不一致はここに溜めて、errors が用意できた時点で流し込む。
+// note の中に引用符なしのカンマを書くと列が1つ増えるが、パーサはヘッダー数を超えた
+// 値を黙って捨てるため、これを見ないと気づけない（2026-08-10にCAND-187の12行で発生）。
+const columnCountIssues = [];
+
+function parseCsv(text, dataset) {
   const rows = [];
   let row = [];
   let field = "";
@@ -36,25 +41,57 @@ function parseCsv(text) {
   }
 
   const [headers, ...values] = rows;
+  values.forEach((valuesRow, index) => {
+    if (valuesRow.length !== headers.length) {
+      columnCountIssues.push(
+        `${dataset}:${index + 2} column count ${valuesRow.length} != header ${headers.length}` +
+          (valuesRow.length > headers.length
+            ? `（note等に引用符なしのカンマが入っていないか確認する。余った値: ${JSON.stringify(
+                valuesRow.slice(headers.length),
+              )}）`
+            : ""),
+      );
+    }
+  });
   return values.map((valuesRow) =>
     Object.fromEntries(headers.map((header, index) => [header, valuesRow[index] ?? ""])),
   );
 }
 
 function loadCsv(relativePath) {
-  return parseCsv(fs.readFileSync(path.join(projectRoot, relativePath), "utf8"));
+  return parseCsv(fs.readFileSync(path.join(projectRoot, relativePath), "utf8"), relativePath.replace(/^data\//, ""));
 }
 
 const historical = loadCsv("data/historical-events.csv");
 const candidates = loadCsv("data/candidate-venues.csv");
 const prefectureCoverage = loadCsv("data/prefecture-coverage.csv");
 const venueDetails = loadCsv("data/venue-details.csv");
+const ceilingRechecks = loadCsv("data/ceiling-recheck-ledger.csv");
 const priceObservations = loadCsv("data/price-observations.csv");
 const venueOperations = loadCsv("data/venue-operations.csv");
 const historicalVenueAliases = loadCsv("data/historical-venue-aliases.csv");
 const budgetScenarios = loadCsv("data/budget-scenarios.csv");
+// 検索画面 web/app/venue-search.tsx の PriceDayType と必ず一致させること。
+// ここに無い値を入れると、平日／土日祝で絞ったとき予算検索から静かに消える。
+const DAY_TYPES = new Set(["all", "weekday", "weekend_holiday"]);
+// 「施設が区切った予約単位」であればよい。台帳では同じ意味の単位が複数の名前で入っている。
+// per_8_hours 等の長い区分も、施設が1コマとして売っている以上ここに含める。
+const SLOT_COMPONENT_UNITS = new Set([
+  "per_slot",
+  "per_time_band",
+  "per_3_hours",
+  "per_4_hours",
+  "per_5_hours",
+  "per_8_hours",
+  "per_9_hours",
+  "per_half_day",
+]);
+const venueWebsites = loadCsv("data/venue-websites.csv");
 const errors = [];
 const warnings = [];
+
+// 読み込み時に見つけた列数の不一致を最初に積む。
+errors.push(...columnCountIssues);
 
 function requireFields(rows, fields, dataset) {
   rows.forEach((row, index) => {
@@ -111,11 +148,29 @@ requireFields(
     "space_id",
     "space_name",
     "space_type",
+    "ceiling_height_type",
+    "overhead_use_status",
     "source_url",
     "observed_at",
     "verification_status",
   ],
   "venue-details.csv",
+);
+requireFields(
+  ceilingRechecks,
+  [
+    "review_id",
+    "detail_id",
+    "candidate_id",
+    "space_name",
+    "raw_height_m",
+    "previous_type",
+    "resolution",
+    "ceiling_height_type",
+    "evidence_url",
+    "reviewed_at",
+  ],
+  "ceiling-recheck-ledger.csv",
 );
 requireFields(
   priceObservations,
@@ -176,23 +231,40 @@ requireFields(
   ],
   "budget-scenarios.csv",
 );
+requireFields(
+  venueWebsites,
+  [
+    "website_id",
+    "candidate_id",
+    "website_url",
+    "observed_at",
+    "verification_status",
+    "source_url",
+  ],
+  "venue-websites.csv",
+);
 checkUnique(historical, "event_id", "historical-events.csv");
 checkUnique(candidates, "candidate_id", "candidate-venues.csv");
 checkUnique(prefectureCoverage, "prefecture", "prefecture-coverage.csv");
 checkUnique(venueDetails, "detail_id", "venue-details.csv");
+checkUnique(ceilingRechecks, "review_id", "ceiling-recheck-ledger.csv");
 checkUnique(priceObservations, "price_id", "price-observations.csv");
 checkUnique(venueOperations, "operation_id", "venue-operations.csv");
 checkUnique(historicalVenueAliases, "alias_id", "historical-venue-aliases.csv");
 checkUnique(budgetScenarios, "scenario_id", "budget-scenarios.csv");
+checkUnique(venueWebsites, "website_id", "venue-websites.csv");
+checkUnique(venueWebsites, "candidate_id", "venue-websites.csv");
 [
   ["historical-events.csv", historical],
   ["candidate-venues.csv", candidates],
   ["prefecture-coverage.csv", prefectureCoverage],
   ["venue-details.csv", venueDetails],
+  ["ceiling-recheck-ledger.csv", ceilingRechecks],
   ["price-observations.csv", priceObservations],
   ["venue-operations.csv", venueOperations],
   ["historical-venue-aliases.csv", historicalVenueAliases],
   ["budget-scenarios.csv", budgetScenarios],
+  ["venue-websites.csv", venueWebsites],
 ].forEach(([dataset, rows]) => checkWhitespaceOnly(rows, dataset));
 
 const eventStatuses = new Set([
@@ -234,12 +306,36 @@ candidates.forEach((row, index) => {
   if (!verificationStatuses.has(row.verification_status)) {
     errors.push(`candidate-venues.csv:${line} invalid verification_status=${row.verification_status}`);
   }
-  if (!/^https:\/\//.test(row.official_url)) {
-    errors.push(`candidate-venues.csv:${line} non-https official_url`);
+  if (!/^https?:\/\//.test(row.official_url)) {
+    errors.push(`candidate-venues.csv:${line} invalid official_url`);
+  } else if (!/^https:\/\//.test(row.official_url)) {
+    // 公式サイトがhttpのみで運用されている施設がある。到達確認済みのhttpを
+    // httpsへ書き換えると根拠へ戻れなくなるため、エラーではなく可視化に留める。
+    warnings.push(`candidate-venues.csv:${line} http-only official_url`);
   }
 });
 
 const candidateIds = new Set(candidates.map((row) => row.candidate_id));
+venueWebsites.forEach((row, index) => {
+  const line = index + 2;
+  if (!candidateIds.has(row.candidate_id)) {
+    errors.push(`venue-websites.csv:${line} unknown candidate_id=${row.candidate_id}`);
+  }
+  if (!/^https:\/\//.test(row.website_url)) {
+    errors.push(`venue-websites.csv:${line} non-https website_url`);
+  }
+  if (!/^https:\/\//.test(row.source_url)) {
+    errors.push(`venue-websites.csv:${line} non-https source_url`);
+  }
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(row.observed_at)) {
+    errors.push(`venue-websites.csv:${line} invalid observed_at=${row.observed_at}`);
+  }
+  if (!verificationStatuses.has(row.verification_status)) {
+    errors.push(
+      `venue-websites.csv:${line} invalid verification_status=${row.verification_status}`,
+    );
+  }
+});
 const japanesePrefectures = [
   "北海道",
   "青森県",
@@ -349,10 +445,32 @@ const taxStatuses = new Set(["included", "excluded", "not_stated"]);
 const numericDetailFields = [
   "area_m2",
   "ceiling_height_m",
+  "clear_height_min_m",
   "capacity_theater",
   "capacity_fixed",
   "floor_load_kg_m2",
 ];
+const ceilingHeightTypes = new Set([
+  "minimum_clear",
+  "published_clear",
+  "range_minimum",
+  "highest_point",
+  "stage_opening",
+  "stage_clearance",
+  "nominal_review",
+  "unknown",
+]);
+const filterableCeilingTypes = new Set([
+  "minimum_clear",
+  "published_clear",
+  "range_minimum",
+]);
+const overheadUseStatuses = new Set([
+  "verified",
+  "conditional",
+  "prohibited",
+  "unknown",
+]);
 
 venueDetails.forEach((row, index) => {
   const line = index + 2;
@@ -364,8 +482,10 @@ venueDetails.forEach((row, index) => {
       `venue-details.csv:${line} invalid verification_status=${row.verification_status}`,
     );
   }
-  if (!/^https:\/\//.test(row.source_url)) {
-    errors.push(`venue-details.csv:${line} non-https source_url`);
+  if (!/^https?:\/\//.test(row.source_url)) {
+    errors.push(`venue-details.csv:${line} invalid source_url`);
+  } else if (!/^https:\/\//.test(row.source_url)) {
+    warnings.push(`venue-details.csv:${line} http-only source_url`);
   }
   if (!/^\d{4}-\d{2}-\d{2}$/.test(row.observed_at)) {
     errors.push(`venue-details.csv:${line} invalid observed_at=${row.observed_at}`);
@@ -375,6 +495,74 @@ venueDetails.forEach((row, index) => {
       errors.push(`venue-details.csv:${line} invalid ${field}=${row[field]}`);
     }
   });
+  if (row.ceiling_height_m !== "" && Number(row.ceiling_height_m) > 100) {
+    errors.push(
+      `venue-details.csv:${line} implausible ceiling_height_m=${row.ceiling_height_m}`,
+    );
+  }
+  if (!ceilingHeightTypes.has(row.ceiling_height_type)) {
+    errors.push(
+      `venue-details.csv:${line} invalid ceiling_height_type=${row.ceiling_height_type}`,
+    );
+  }
+  if (!overheadUseStatuses.has(row.overhead_use_status)) {
+    errors.push(
+      `venue-details.csv:${line} invalid overhead_use_status=${row.overhead_use_status}`,
+    );
+  }
+  if (row.ceiling_height_m && row.ceiling_height_type === "unknown") {
+    errors.push(`venue-details.csv:${line} raw ceiling has unknown type`);
+  }
+  if (row.clear_height_min_m && !filterableCeilingTypes.has(row.ceiling_height_type)) {
+    errors.push(
+      `venue-details.csv:${line} non-filterable type has clear_height_min_m=${row.ceiling_height_type}`,
+    );
+  }
+  if (!row.clear_height_min_m && filterableCeilingTypes.has(row.ceiling_height_type)) {
+    errors.push(
+      `venue-details.csv:${line} filterable type missing clear_height_min_m=${row.ceiling_height_type}`,
+    );
+  }
+  if (
+    row.clear_height_min_m &&
+    row.ceiling_height_m &&
+    Number(row.clear_height_min_m) > Number(row.ceiling_height_m)
+  ) {
+    errors.push(
+      `venue-details.csv:${line} clear height exceeds raw ceiling=${row.clear_height_min_m}>${row.ceiling_height_m}`,
+    );
+  }
+});
+
+const detailById = new Map(venueDetails.map((row) => [row.detail_id, row]));
+ceilingRechecks.forEach((row, index) => {
+  const line = index + 2;
+  const detail = detailById.get(row.detail_id);
+  if (!detail) {
+    errors.push(`ceiling-recheck-ledger.csv:${line} unknown detail_id=${row.detail_id}`);
+    return;
+  }
+  if (detail.candidate_id !== row.candidate_id || detail.space_name !== row.space_name) {
+    errors.push(`ceiling-recheck-ledger.csv:${line} detail snapshot mismatch=${row.detail_id}`);
+  }
+  if (!new Set(["resolved_filterable", "resolved_excluded", "human_review"]).has(row.resolution)) {
+    errors.push(`ceiling-recheck-ledger.csv:${line} invalid resolution=${row.resolution}`);
+  }
+  if (!/^https:\/\//.test(row.evidence_url)) {
+    errors.push(`ceiling-recheck-ledger.csv:${line} non-https evidence_url`);
+  }
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(row.reviewed_at)) {
+    errors.push(`ceiling-recheck-ledger.csv:${line} invalid reviewed_at=${row.reviewed_at}`);
+  }
+  if (
+    detail.clear_height_min_m !== row.clear_height_min_m ||
+    detail.ceiling_height_type !== row.ceiling_height_type
+  ) {
+    errors.push(`ceiling-recheck-ledger.csv:${line} resolution drift=${row.detail_id}`);
+  }
+  if (row.resolution === "human_review" && !row.human_action) {
+    errors.push(`ceiling-recheck-ledger.csv:${line} human review missing action=${row.detail_id}`);
+  }
 });
 
 priceObservations.forEach((row, index) => {
@@ -392,6 +580,9 @@ priceObservations.forEach((row, index) => {
   }
   if (!taxStatuses.has(row.tax_status)) {
     errors.push(`price-observations.csv:${line} invalid tax_status=${row.tax_status}`);
+  }
+  if (!DAY_TYPES.has(row.day_type)) {
+    errors.push(`price-observations.csv:${line} invalid day_type=${row.day_type}`);
   }
   if (!priceVerificationStatuses.has(row.verification_status)) {
     errors.push(
@@ -485,8 +676,14 @@ budgetScenarios.forEach((row, index) => {
   if (!Number.isFinite(amount) || amount < 0) {
     errors.push(`budget-scenarios.csv:${line} invalid total_amount_jpy=${row.total_amount_jpy}`);
   }
-  if (row.derivation_method !== "sum_verified_components") {
+  if (
+    row.derivation_method !== "sum_verified_components" &&
+    row.derivation_method !== "hourly_rate_times_published_hours"
+  ) {
     errors.push(`budget-scenarios.csv:${line} invalid derivation_method=${row.derivation_method}`);
+  }
+  if (!DAY_TYPES.has(row.day_type)) {
+    errors.push(`budget-scenarios.csv:${line} invalid day_type=${row.day_type}`);
   }
   if (row.verification_status !== "derived_from_verified_components") {
     errors.push(
@@ -501,14 +698,55 @@ budgetScenarios.forEach((row, index) => {
     errors.push(`budget-scenarios.csv:${line} missing component price ids`);
   }
   const components = componentIds.map((priceId) => priceById.get(priceId));
+  const validComponentQuantities =
+    row.derivation_method === "sum_verified_components"
+      ? componentQuantities.every(
+          (quantity) => Number.isInteger(quantity) && quantity >= 1,
+        )
+      : row.derivation_method === "hourly_rate_times_published_hours"
+        ? componentQuantities.every(
+            (quantity) => Number.isFinite(quantity) && quantity > 0,
+          )
+        : false;
   if (
     componentQuantities.length !== componentIds.length ||
-    componentQuantities.some(
-      (quantity) => !Number.isInteger(quantity) || quantity < 1,
-    )
+    !validComponentQuantities
   ) {
     errors.push(`budget-scenarios.csv:${line} invalid component_quantities`);
   }
+  if (row.derivation_method === "hourly_rate_times_published_hours") {
+    const timeSpanMatch = row.time_span.match(/^(\d{2}):(\d{2})-(\d{2}):(\d{2})$/);
+    if (!timeSpanMatch) {
+      errors.push(`budget-scenarios.csv:${line} invalid time_span=${row.time_span}`);
+    } else {
+      const [, startHour, startMinute, endHour, endMinute] = timeSpanMatch;
+      const timeSpanHours =
+        (Number(endHour) * 60 +
+          Number(endMinute) -
+          (Number(startHour) * 60 + Number(startMinute))) /
+        60;
+      const quantitySum = componentQuantities.reduce(
+        (sum, quantity) => sum + quantity,
+        0,
+      );
+      // time_span より多くの時間を積むことは許さない（想定利用時間を勝手に伸ばせないようにする）。
+      // 逆に少ないのは正当: 午前8:30-12:30／午後13:00-17:00 のように区分の間に空き時間があると、
+      // 課金対象の合計時間は施設の営業時間より短くなる。
+      if (quantitySum > timeSpanHours) {
+        errors.push(
+          `budget-scenarios.csv:${line} quantity sum ${quantitySum} exceeds time_span hours ${timeSpanHours}`,
+        );
+      }
+    }
+  }
+  // 区分合算の構成要素は「施設が区切った予約単位」であればよい。台帳では同じ意味の単位が
+  // per_slot / per_time_band / per_3_hours / per_4_hours / per_half_day に分かれて入っている。
+  const expectedComponentUnits =
+    row.derivation_method === "sum_verified_components"
+      ? SLOT_COMPONENT_UNITS
+      : row.derivation_method === "hourly_rate_times_published_hours"
+        ? new Set(["per_hour"])
+        : new Set();
   componentIds.forEach((priceId, componentIndex) => {
     const component = components[componentIndex];
     if (!component) {
@@ -519,7 +757,7 @@ budgetScenarios.forEach((row, index) => {
       component.candidate_id !== row.candidate_id ||
       component.space_id !== row.space_id ||
       component.charge_category !== "facility" ||
-      component.unit !== "per_slot" ||
+      !expectedComponentUnits.has(component.unit) ||
       component.verification_status !== "verified"
     ) {
       errors.push(`budget-scenarios.csv:${line} incompatible component_price_id=${priceId}`);
@@ -535,7 +773,7 @@ budgetScenarios.forEach((row, index) => {
         Number(component.amount_jpy) * componentQuantities[componentIndex],
       0,
     );
-    if (componentTotal !== amount) {
+    if (!(Math.abs(componentTotal - amount) < 0.5)) {
       errors.push(
         `budget-scenarios.csv:${line} component sum ${componentTotal} != ${amount}`,
       );
@@ -553,6 +791,8 @@ const historicalBySeries = Object.groupBy(historical, (row) => row.series);
 const verifiedHistorical = historical.filter((row) => row.verification_status === "verified").length;
 const candidateRegions = new Set(candidates.map((row) => row.region));
 const candidatePrefectures = new Set(candidates.map((row) => row.prefecture));
+const rawCeilingDetails = venueDetails.filter((row) => row.ceiling_height_m);
+const filterableCeilingDetails = venueDetails.filter((row) => row.clear_height_min_m);
 
 console.log("Venue Monosashi data audit");
 console.log(`historical_rows=${historical.length}`);
@@ -567,10 +807,24 @@ console.log(`candidate_prefectures=${candidatePrefectures.size}`);
 console.log(`candidate_missing_prefectures=${missingPrefectures.length}`);
 console.log(`prefecture_coverage_rows=${prefectureCoverage.length}`);
 console.log(`venue_detail_rows=${venueDetails.length}`);
+console.log(`ceiling_recheck_rows=${ceilingRechecks.length}`);
+console.log(
+  `ceiling_recheck_human=${ceilingRechecks.filter((row) => row.resolution === "human_review").length}`,
+);
+console.log(`ceiling_raw_spaces=${rawCeilingDetails.length}`);
+console.log(
+  `ceiling_raw_candidates=${new Set(rawCeilingDetails.map((row) => row.candidate_id)).size}`,
+);
+console.log(`ceiling_filterable_spaces=${filterableCeilingDetails.length}`);
+console.log(
+  `ceiling_filterable_candidates=${new Set(filterableCeilingDetails.map((row) => row.candidate_id)).size}`,
+);
+console.log(`ceiling_quarantined_spaces=${rawCeilingDetails.length - filterableCeilingDetails.length}`);
 console.log(`price_observation_rows=${priceObservations.length}`);
 console.log(`venue_operation_rows=${venueOperations.length}`);
 console.log(`historical_venue_alias_rows=${historicalVenueAliases.length}`);
 console.log(`budget_scenario_rows=${budgetScenarios.length}`);
+console.log(`venue_website_rows=${venueWebsites.length}`);
 console.log(`warnings=${warnings.length}`);
 warnings.forEach((warning) => console.log(`WARN ${warning}`));
 console.log(`errors=${errors.length}`);
