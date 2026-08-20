@@ -29,7 +29,7 @@ test("server-renders the venue search shell", async () => {
     "utf8",
   );
   const generatedData = await readFile(
-    new URL("../app/generated-data.ts", import.meta.url),
+    new URL("../app/generated-data.json", import.meta.url),
     "utf8",
   );
   const venueSearchSource = await readFile(

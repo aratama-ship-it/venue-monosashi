@@ -280,3 +280,17 @@ httpsへ書き換えていた。**11件はhttpsで到達できず（curlで接�
 到達確認日: 2026-08-19。対象: ftas.info/kaika、nanatsudera.com、bungei.jp、akai-mi.com、
 raftweb.info、kobayashi-yk.com、sun-mallstudio.com、theatersunmall.server-shared.com、
 t-minerva.com、halfmoonhall.com、wanekaze.com/forest。
+
+## 追記: generated-data の分離（2026-08-20）
+
+統合で候補が1,838件へ増えた結果、`web/app/generated-data.ts` が12MBに達し、
+`npm run dev` が起動しなくなった（Vite/Miniflareがモジュール読み込み中に
+`Maximum call stack size exceeded`）。80件へ減らすと起動することを確認し、
+データ量が原因であることを切り分けた。統合前のHEADでも既に11.2MBあり、
+統合が引き金にはなったが、以前からの限界に達していたものである。
+
+対処として、データ本体を `web/app/generated-data.json` へ書き出し、
+`generated-data.ts` はそれをimportするだけの5行にした。巨大なオブジェクトリテラルの
+構文解析は再帰的でスタックを使い切るが、JSONは `JSON.parse` で読まれるため起きない。
+本番ビルド・SSRテスト・実ブラウザ表示はいずれも変更前後で通っている。
+JSONは差分が読めるよう2スペース整形で書き出す。
