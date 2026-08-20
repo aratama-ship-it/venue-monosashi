@@ -47,7 +47,9 @@ node --test tests/rendered-html.test.mjs
 
 - GitHub: `aratama-ship-it/venue-monosashi`
 - 現在の段階: `PUBLIC`
-- 公開確認先: https://venue.art-monosashi.com/ （配信は `git push sites main`。手順は `docs/DEPLOYMENT.md`）
+- 公開確認先: https://venue.art-monosashi.com/ （ChatGPT Sites。`git push sites main`）
+- 移行先: https://aratama-ship-it.github.io/venue-monosashi/ （GitHub Pages。`main` へのpushで自動配信）
+- 手順は `docs/DEPLOYMENT.md`
 - シリーズ台帳: `aratama-ship-it/monosashi-series`
 
 GitHubへのpushと`art-monosashi.com`配下への移行は分けて扱います。独自ドメイン・DNS変更は、開発者の明示確認後に行います。
