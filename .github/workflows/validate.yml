@@ -48,5 +48,7 @@ jobs:
       - run: npm test
         working-directory: web
 
+      # 検索データの本体は generated-data.json にある。.ts だけを見ていると、
+      # CSVを更新してJSONを再生成し忘れても検査を素通りする。
       - name: Confirm generated search data is current
-        run: git diff --exit-code -- web/app/generated-data.ts
+        run: git diff --exit-code -- web/app/generated-data.ts web/app/generated-data.json
