@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: publication.title,
   description: publication.description,
   applicationName: publication.siteName,
-  icons: { icon: "/favicon.svg" },
+  icons: { icon: "/favicon.svg", apple: "/apple-touch-icon.png" },
   keywords: [...publication.keywords],
   alternates: { canonical: "/" },
   openGraph: {
