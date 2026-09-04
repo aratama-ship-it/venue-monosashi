@@ -81,6 +81,10 @@ test("server-renders the venue search shell", async () => {
   );
   assert.match(html, /条件を置く/);
   assert.match(html, /同じ目盛りで見る/);
+  assert.doesNotMatch(
+    html,
+    /href="#method"|id="method"|検索結果の読み方|0円にしない|点数で隠さない|会場セットで考える|候補発見と確認を分ける|LaSens等の索引で小劇場を見つけ/,
+  );
   assert.match(html, /<header class="site-header site-rail"/);
   assert.doesNotMatch(html, /<aside class="site-rail"/);
   assert.doesNotMatch(html, /いま載っている目盛り|class="reference-block"/);
@@ -110,6 +114,11 @@ test("server-renders the venue search shell", async () => {
   assert.match(generatedData, /"websiteUrl": "https:\/\/prismhall\.jp\/"/);
   assert.match(venueSearchSource, /ウェブサイト ↗/);
   assert.match(editorialCss, /\.hero-copy\s*\{[\s\S]*?max-width:\s*none;/);
+  assert.match(editorialCss, /\.hero h1\s*\{[\s\S]*?max-width:\s*none;/);
+  assert.match(
+    editorialCss,
+    /@media \(min-width: 601px\)[\s\S]*?\.hero h1 \.hero-title-accent\s*\{[\s\S]*?white-space:\s*nowrap;/,
+  );
   assert.match(html, /区画ごとの情報を見る/);
   assert.equal([...html.matchAll(/区画ごとの情報を見る/g)].length, 40);
   assert.equal([...html.matchAll(/観測した料金・運用を確認/g)].length, 40);
@@ -152,7 +161,6 @@ test("server-renders the venue search shell", async () => {
   assert.match(html, /確認済み日額の最小値/);
   assert.doesNotMatch(html, /id="past-venues"/);
   assert.doesNotMatch(html, /過去会場台帳をたどる/);
-  assert.match(html, /LaSens等の索引で小劇場を見つけ/);
   // 小劇場は候補データへ統合したため、独立した台帳セクションは持たない
   assert.doesNotMatch(html, /小劇場台帳から探す/);
   assert.doesNotMatch(html, /id="small-theater-ledger"/);

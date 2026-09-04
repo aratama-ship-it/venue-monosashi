@@ -1062,10 +1062,6 @@ export function VenueSearch() {
               <span aria-hidden="true">⌕</span>
               条件で探す
             </a>
-            <a href="#method">
-              <span aria-hidden="true">↳</span>
-              読み方
-            </a>
             <a href="#updates">
               <span aria-hidden="true">↻</span>
               更新と訂正
@@ -2224,42 +2220,6 @@ export function VenueSearch() {
               </li>
             ))}
           </ol>
-        </section>
-
-        <section
-          className="method-note"
-          id="method"
-          aria-label="検索結果の読み方"
-        >
-          <div className="method-inner">
-            <div className="method-item">
-              <strong>01　0円にしない</strong>
-              <p>
-                未公開の冷暖房・警備・清掃・設営費は、無料ではなく未確認として残しています。
-              </p>
-            </div>
-            <div className="method-item">
-              <strong>02　点数で隠さない</strong>
-              <p>
-                条件一致、要問い合わせ、条件外を分け、総合点だけで候補を落としません。
-              </p>
-            </div>
-            <div className="method-item">
-              <strong>03　会場セットで考える</strong>
-              <p>
-                JJF型では練習空間と舞台空間が別施設になる場合もあるため、将来は徒歩圏の組合せも検索します。
-              </p>
-            </div>
-            <div className="method-item">
-              <strong>04　候補発見と確認を分ける</strong>
-              <p>
-                LaSens等の索引で小劇場を見つけ、面積・客席・料金は各劇場や運営団体の公式情報へ戻って確認します。
-                公式確認が済み現在も運営している施設だけを候補に入れ、閉館が確認できたものは含めません。
-                出典の公式ページは定期的に開き直し、開けなくなっていた会場には「更新情報がありません」と表示します。
-                掲載値は消さずに観測日とともに残すので、いつ時点の情報かを見たうえで施設へご確認ください。
-              </p>
-            </div>
-          </div>
         </section>
 
         <section

@@ -24,3 +24,10 @@
 
 # iCloudの同期競合コピー(「app 2.js」等)は追跡しない
 * [0-9].*
+
+# 作業スクラッチ・成果物（配信物ではない）
+/node_modules
+/outputs
+/tmp
+/overnight-runs
+/web-projects

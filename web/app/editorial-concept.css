@@ -371,7 +371,7 @@ body {
 .hero h1 {
   position: relative;
   z-index: 2;
-  max-width: 900px;
+  max-width: none;
   margin-top: clamp(36px, 7vh, 78px);
   color: white;
   font-family: inherit;
@@ -397,6 +397,12 @@ body {
   margin-top: 0.06em;
   margin-left: 1.4em;
   color: var(--signal);
+}
+
+@media (min-width: 601px) {
+  .hero h1 .hero-title-accent {
+    white-space: nowrap;
+  }
 }
 
 .hero-drawing {
